@@ -1,0 +1,125 @@
+{
+  "purpose": "Open-source product comparison; no historical content imported.",
+  "sources": [
+    {
+      "title": "OpenHistoricalMap embeddable map",
+      "url": "https://github.com/OpenHistoricalMap/openhistoricalmap-embed",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "Chronas API: historical dimensions and licenses",
+      "url": "https://github.com/Chronasorg/chronas-api",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "Palladio official tutorials",
+      "url": "https://hdlab.stanford.edu/palladio/help/",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "TimelineJS3 API",
+      "url": "https://github.com/NUKnightLab/TimelineJS3/blob/master/API.md",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "StoryMapJS README",
+      "url": "https://github.com/NUKnightLab/StoryMapJS/blob/master/README.md",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "World Historical Gazetteer platform",
+      "url": "https://whgazetteer.org/",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "World Historical Gazetteer open source repository",
+      "url": "https://github.com/WorldHistoricalGazetteer/website",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "Allmaps open source repository",
+      "url": "https://github.com/allmaps/allmaps",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "Neatline official introduction",
+      "url": "https://www.neatline.org/about/",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "Atlas data packs and editorial limitations",
+      "url": "https://github.com/daiyip/atlas",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "ChronoAtlas features and roadmap",
+      "url": "https://github.com/Leto-cmd/chronoatlas",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    },
+    {
+      "title": "TimeMapper authoring",
+      "url": "https://timemapper.okfnlabs.org/create",
+      "references": [
+        {
+          "kind": "product-research",
+          "id": "2026-10-07-product-review"
+        }
+      ]
+    }
+  ]
+}

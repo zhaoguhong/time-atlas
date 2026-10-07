@@ -1,0 +1,51 @@
+{
+  "name": "time-atlas",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run data:prepare",
+    "dev": "vite --host 127.0.0.1",
+    "prebuild": "npm run data:prepare",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "pretest": "npm run data:prepare",
+    "test": "vitest run && node --test scripts/map-packs.test.mjs",
+    "test:e2e": "playwright test",
+    "data:build": "python3 scripts/build_maps.py && npm run data:pack",
+    "data:pack": "node scripts/pack-maps.mjs",
+    "data:prepare": "node scripts/prepare-maps.mjs",
+    "predata:check": "npm run data:prepare",
+    "data:check": "node scripts/check-data.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "data:people": "python3 scripts/import_people.py",
+    "data:audit": "node scripts/audit-content.mjs",
+    "data:references": "node scripts/index-research.mjs && python3 scripts/collect-references.py && node scripts/index-research.mjs",
+    "data:audit:ci": "node scripts/audit-content.mjs --metadata-only --check",
+    "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^1.52.0",
+    "maplibre-gl": "^6.12.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "prettier": "^3.9.9",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "description": "山河纪 · Time Atlas — 在地图上读历史，在时间中看山河。",
+  "license": "(MIT AND CC-BY-4.0)"
+}

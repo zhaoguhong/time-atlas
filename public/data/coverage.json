@@ -1,0 +1,299 @@
+{
+  "generatedAt": "2026-10-07T07:11:23.265Z",
+  "mapRange": {
+    "from": -10000,
+    "to": 1912
+  },
+  "people": {
+    "total": 673,
+    "importedSnapshot": 591,
+    "curatedIntroductions": 229,
+    "basicRecords": 444,
+    "unknownBirth": 191,
+    "unknownDeath": 138,
+    "noLinkedEvents": 371,
+    "oneLinkedEvent": 187,
+    "outsideMapRange": 0
+  },
+  "events": {
+    "total": 460,
+    "byCategory": {
+      "政治": 168,
+      "战争": 131,
+      "文化": 70,
+      "交流": 32,
+      "社会": 59
+    }
+  },
+  "dynasties": {
+    "total": 53
+  },
+  "topics": {
+    "total": 13,
+    "chapters": 97
+  },
+  "journeys": {
+    "people": 3,
+    "nodes": 52,
+    "records": [
+      {
+        "person": "苏轼",
+        "nodes": 31,
+        "from": 1037,
+        "to": 1101
+      },
+      {
+        "person": "康熙帝",
+        "nodes": 15,
+        "from": 1654,
+        "to": 1722
+      },
+      {
+        "person": "诸葛亮",
+        "nodes": 6,
+        "from": 207,
+        "to": 234
+      }
+    ]
+  },
+  "periods": [
+    {
+      "id": "prehistory",
+      "name": "史前聚落",
+      "events": 15,
+      "people": 0
+    },
+    {
+      "id": "early-civilizations",
+      "name": "早期文明",
+      "events": 20,
+      "people": 0
+    },
+    {
+      "id": "xia",
+      "name": "夏",
+      "events": 2,
+      "people": 1
+    },
+    {
+      "id": "shang",
+      "name": "商",
+      "events": 4,
+      "people": 2
+    },
+    {
+      "id": "western-zhou",
+      "name": "西周",
+      "events": 5,
+      "people": 2
+    },
+    {
+      "id": "spring",
+      "name": "春秋",
+      "events": 9,
+      "people": 4
+    },
+    {
+      "id": "warring",
+      "name": "战国",
+      "events": 26,
+      "people": 51
+    },
+    {
+      "id": "qin",
+      "name": "秦",
+      "events": 9,
+      "people": 16
+    },
+    {
+      "id": "han",
+      "name": "两汉",
+      "events": 49,
+      "people": 90
+    },
+    {
+      "id": "three",
+      "name": "三国",
+      "events": 16,
+      "people": 48
+    },
+    {
+      "id": "jin",
+      "name": "两晋 · 十六国",
+      "events": 16,
+      "people": 32
+    },
+    {
+      "id": "north-south",
+      "name": "南北朝",
+      "events": 20,
+      "people": 41
+    },
+    {
+      "id": "sui",
+      "name": "隋",
+      "events": 10,
+      "people": 34
+    },
+    {
+      "id": "tang",
+      "name": "唐",
+      "events": 33,
+      "people": 112
+    },
+    {
+      "id": "five",
+      "name": "五代十国",
+      "events": 21,
+      "people": 29
+    },
+    {
+      "id": "song",
+      "name": "宋 · 辽 · 金 · 西夏",
+      "events": 65,
+      "people": 119
+    },
+    {
+      "id": "yuan",
+      "name": "元",
+      "events": 14,
+      "people": 45
+    },
+    {
+      "id": "ming",
+      "name": "明",
+      "events": 35,
+      "people": 90
+    },
+    {
+      "id": "qing",
+      "name": "清",
+      "events": 91,
+      "people": 135
+    }
+  ],
+  "checkedMajorPeople": [
+    "孔子",
+    "孟子",
+    "墨子",
+    "屈原",
+    "秦始皇",
+    "刘邦",
+    "汉武帝",
+    "张骞",
+    "司马迁",
+    "曹操",
+    "刘备",
+    "孙权",
+    "诸葛亮",
+    "王羲之",
+    "陶渊明",
+    "祖冲之",
+    "杨坚",
+    "杨广",
+    "李世民",
+    "武则天",
+    "玄奘",
+    "李白",
+    "杜甫",
+    "韩愈",
+    "赵匡胤",
+    "包拯",
+    "范仲淹",
+    "苏轼",
+    "王安石",
+    "司马光",
+    "李清照",
+    "岳飞",
+    "辛弃疾",
+    "朱熹",
+    "成吉思汗",
+    "忽必烈",
+    "朱元璋",
+    "朱棣",
+    "郑和",
+    "王守仁",
+    "戚继光",
+    "李时珍",
+    "徐霞客",
+    "张居正",
+    "郑成功",
+    "康熙帝",
+    "雍正帝",
+    "乾隆帝",
+    "曹雪芹",
+    "林则徐",
+    "洪秀全",
+    "曾国藩",
+    "李鸿章",
+    "孙中山"
+  ],
+  "posthumousRelations": [
+    {
+      "person": "祖冲之",
+      "personId": "q227444",
+      "event": "梁朝颁行祖冲之新历",
+      "eventId": "zu-calendar-adoption",
+      "eventYear": 510,
+      "deathYear": 500,
+      "explanation": "祖冲之于500年去世；此处关联的是其历法在梁代的身后采用，祖暅推动检验。"
+    },
+    {
+      "person": "李时珍",
+      "personId": "q698925",
+      "event": "金陵版本草纲目问世",
+      "eventId": "materia-medica-publication",
+      "eventYear": 1596,
+      "deathYear": 1593,
+      "explanation": "李时珍是著者，1593年已去世；1596年是身后版本刊行。"
+    },
+    {
+      "person": "张玉书",
+      "personId": "q11068801",
+      "event": "康熙字典编成",
+      "eventId": "kangxi-dictionary",
+      "eventYear": 1716,
+      "deathYear": 1711,
+      "explanation": "张玉书参与前期主持编纂，1711年去世；1716年刊成时已不在世。"
+    }
+  ],
+  "sourceRetention": {
+    "references": 356,
+    "retained": 347,
+    "failed": 9,
+    "detailedAudit": "data/research/content-audit.json"
+  },
+  "importUnresolved": [
+    {
+      "name": "赵胜",
+      "availableEditorialRecord": true
+    },
+    {
+      "name": "王翰",
+      "availableEditorialRecord": true
+    },
+    {
+      "name": "李顺",
+      "availableEditorialRecord": true
+    },
+    {
+      "name": "刘崇",
+      "availableEditorialRecord": true
+    },
+    {
+      "name": "王坚",
+      "availableEditorialRecord": true
+    },
+    {
+      "name": "费扬古",
+      "availableEditorialRecord": true
+    }
+  ],
+  "notes": [
+    "数量表示当前覆盖范围，不能据此声明中国历史资料完整。",
+    "基础人物档案有身份简介和出处；详细年谱只对已核对记录的三人提供。",
+    "箭头表示记录的先后顺序，省略中间行程。相关事件地点不构成个人到访证明。",
+    "时间轴延伸至约前10000年，史前遗址以考古区间表示，不据此虚构疆域。",
+    "事件与朝代介绍为有出处的整理稿，仍需持续核对文献与争议。"
+  ]
+}

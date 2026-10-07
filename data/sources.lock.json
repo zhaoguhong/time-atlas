@@ -1,0 +1,25 @@
+{
+  "acquiredAt": "2026-10-06",
+  "sources": [
+    {
+      "filename": "cliopatria.geojson.zip",
+      "url": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/5f433377139a6eeaeacbdc894b70f8805b72c8b5/cliopatria.geojson.zip",
+      "sha256": "e10a4e429fca708788ff9e7572a95fce801fae55852d217cffabc1c59cd4eed4"
+    },
+    {
+      "filename": "ne_50m_land.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_land.geojson",
+      "sha256": "e874b27a51d146452be360cafb3cc50c86001074a67d534113e6534682f9826b"
+    },
+    {
+      "filename": "ne_50m_lakes.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson",
+      "sha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52"
+    },
+    {
+      "filename": "ne_50m_rivers_lake_centerlines.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+      "sha256": "f286e0ce978fde999ca2d7a78c764be08542e19b63cded52b05c12d5173ccc51"
+    }
+  ]
+}

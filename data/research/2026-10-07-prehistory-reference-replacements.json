@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-10-07 07:00:54 UTC",
+  "sources": [
+    {
+      "url": "https://www.dpm.org.cn/journal_detail/370638.html",
+      "title": "故宫博物院 · 文明先锋——凌家滩文化玉器展",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mct.gov.cn/whzx/qgwhxxlb/ah/202305/t20230509_943627.htm",
+      "title": "文化和旅游部 · 凌家滩国家考古遗址公园",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
+      "title": "故宫博物院 · 凌家滩玉器展单元与墓葬说明",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242190.html",
+      "title": "故宫博物院 · 凌家滩墓葬",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "url": "https://hznews.hangzhou.com.cn/wghz/content/2026-05/18/content_9224937.htm",
+      "title": "杭州文物遗产与历史建筑保护中心 · 跨湖桥遗址博物馆（杭州网刊载）",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kuahuqiao-canoe"
+        }
+      ]
+    }
+  ],
+  "replaces": [
+    {
+      "url": "https://www.mct.gov.cn/whzx/qgwhxxlb/ah/202305/t20230509_943627.htm",
+      "reason": "HTTP 403 during collection; retain failed attempt and prefer Palace Museum pages for the published reading."
+    },
+    {
+      "url": "https://www.gov.cn/xinwen/2020-06/08/content_5518046.htm",
+      "reason": "HTTP 404 in current collection; original attempt and indexed search evidence retained."
+    },
+    {
+      "url": "https://www.xiaoshan.gov.cn/col/col1311593/",
+      "reason": "HTTP 404 in current collection; replace with current heritage institution article."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: 程序问题
+description: 报告地图、阅读、搜索或播放等功能异常
+title: '[Bug] '
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤与分享链接
+      description: 请说明操作顺序，并粘贴可复现的站内分享链接。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期表现与实际表现
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 设备、浏览器与屏幕尺寸
+      placeholder: 例如 Windows / Chrome / 1440×900
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图或错误信息
+      description: 请先遮盖私人信息；无需上传完整浏览器 trace。

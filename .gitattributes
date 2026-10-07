@@ -1,0 +1,5 @@
+# Preserve checksummed data and scripts across Windows/macOS/Linux checkouts.
+* text=auto eol=lf
+
+# Compressed map packs must never undergo text conversion or text merging.
+data/map-packs/*.br binary

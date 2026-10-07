@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "title": "埃及旅游与文物部 · Early Dynastic Period",
+      "url": "https://egymonuments.gov.eg/en/historical-periods/early-dynastic-period",
+      "references": [
+        {
+          "kind": "event",
+          "id": "egypt-unification"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 摩亨佐达罗考古遗址",
+      "url": "https://whc.unesco.org/en/list/138/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "moenjodaro-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 恰塔霍裕克新石器时代遗址",
+      "url": "https://whc.unesco.org/en/list/1405/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "catalhoyuk"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 哥贝克力石阵",
+      "url": "https://whc.unesco.org/en/list/1572/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gobekli-tepe"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 良渚古城遗址",
+      "url": "https://whc.unesco.org/en/list/1592/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liangzhu-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 多拉维拉：哈拉帕文明古城",
+      "url": "https://whc.unesco.org/en/list/1645/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dholavira-city"
+        }
+      ]
+    },
+    {
+      "title": "河南博物院 · 贾湖遗址刻符龟甲",
+      "url": "https://www.chnmus.net/ch/collection/appraise/details.html?id=512158961319772606",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiahu-settlement"
+        }
+      ]
+    },
+    {
+      "title": "河南博物院 · 仰韶文化与彩陶",
+      "url": "https://www.chnmus.net/clzl/2015-12/28/content_234646.htm",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yangshao-culture"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 浙江上山文化考古特展",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/202111sswhkg/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shangshan-culture"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Uruk: The First City",
+      "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
+      "references": [
+        {
+          "kind": "event",
+          "id": "uruk-city"
+        }
+      ]
+    }
+  ]
+}

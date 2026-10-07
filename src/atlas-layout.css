@@ -1,0 +1,560 @@
+/* One period navigator, next to the clock. Reading remains outside the canvas. */
+.map-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 46px;
+  padding: 6px 16px;
+}
+.map-context,
+.map-context-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.map-title h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+.map-context-date {
+  font-size: 12px;
+  color: #68776b;
+  white-space: nowrap;
+}
+.map-context-scope {
+  font-size: 11px;
+  color: #68776b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.map-context-actions {
+  flex-shrink: 0;
+  gap: 8px;
+}
+.map-context-actions button {
+  min-height: 32px;
+  font-size: 11px;
+}
+.map-title .period-context-link {
+  color: #496651;
+}
+.map-legend {
+  display: none;
+}
+.dynasty-strip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 35px;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 6px;
+}
+.dynasty-strip button {
+  flex: 1 0 auto;
+  min-width: 34px;
+  height: 29px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #687764;
+  white-space: nowrap;
+}
+.dynasty-strip button:hover {
+  background: #f0f3e9;
+}
+.dynasty-strip [aria-current='true'] {
+  color: #294d37;
+  background: #e5eddc;
+  font-weight: 600;
+}
+.era-band {
+  display: none;
+}
+.time-rail {
+  margin-top: 12px;
+  height: 78px;
+}
+.rail-label {
+  position: absolute;
+  top: 24px;
+  height: 36px;
+  z-index: 2;
+  padding: 3px 4px;
+  color: #52674f;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+}
+.rail-label::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  height: 8px;
+  left: var(--pin-offset);
+  border-left: 1px solid #b8c5aa;
+  pointer-events: none;
+}
+.rail-label strong {
+  display: block;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rail-label strong span {
+  font-weight: 600;
+  color: #7d895f;
+}
+.rail-label small {
+  display: block;
+  color: #75826d;
+  font-size: 9px;
+  margin-top: 1px;
+}
+.rail-label.selected,
+.rail-label:hover {
+  background: #edf2e4;
+  color: #274d38;
+}
+.time-ticks {
+  top: 64px;
+}
+.rail-event {
+  transition:
+    background 0.18s,
+    box-shadow 0.18s;
+}
+.map-annotation {
+  max-width: calc(100% - 100px);
+  font-size: 10px;
+}
+.early-map-note {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  z-index: 5;
+  max-width: calc(100% - 78px);
+  font-size: 11px;
+  color: #766044;
+  background: #fff9ebee;
+  border: 1px solid #e2d4b9;
+  border-radius: 5px;
+}
+.early-map-note summary {
+  cursor: pointer;
+  padding: 7px 10px;
+}
+.early-map-note p {
+  max-width: 350px;
+  padding: 0 10px 10px;
+  line-height: 1.75;
+}
+@media (min-width: 701px) and (min-height: 541px), (min-width: 1001px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    grid-template-columns: minmax(0, 1fr) clamp(340px, 29vw, 430px);
+    grid-template-rows: 64px minmax(0, 1fr) 186px;
+    min-height: 0;
+  }
+  .map-shell {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .story-panel {
+    grid-column: 2;
+    grid-row: 2 / 4;
+  }
+  .timeline {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 4px 22px 0;
+  }
+  .timeline-top {
+    gap: 12px;
+    min-height: 43px;
+  }
+  .time-readout {
+    gap: 10px;
+  }
+  .time-readout > .eyebrow,
+  .keyboard-hint {
+    display: none;
+  }
+  .year-title {
+    font-size: 21px;
+    white-space: nowrap;
+  }
+  .timeline-period-select {
+    max-width: 125px;
+  }
+  .timeline-zoom {
+    gap: 0;
+  }
+  .timeline-zoom > button span {
+    display: none;
+  }
+  .play-controls {
+    gap: 3px;
+  }
+  .play-controls > select {
+    width: 75px;
+  }
+  .topbar {
+    padding-inline: 20px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+  .map-context-date,
+  .map-context-scope,
+  .map-context-actions button span {
+    display: none;
+  }
+  .timeline {
+    padding-inline: 12px;
+  }
+  .timeline-top {
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+  .time-readout {
+    flex-basis: 100%;
+  }
+  .timeline-zoom {
+    margin-left: auto;
+  }
+  .play-controls {
+    position: absolute;
+    right: 10px;
+    top: 42px;
+  }
+  .timeline-period-select {
+    width: 85px;
+  }
+  .year-title {
+    font-size: 17px;
+  }
+  .timeline-zoom {
+    position: absolute;
+    right: 12px;
+    top: 80px;
+  }
+  .time-readout {
+    max-width: calc(100% - 163px);
+    display: block;
+  }
+  .time-rail {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .dynasty-strip {
+    display: none;
+  }
+  .map-title {
+    min-height: 36px;
+    height: 36px;
+    padding: 3px 12px;
+    gap: 5px;
+  }
+  .map-title h1 {
+    font-size: 15px;
+  }
+  .map-context {
+    gap: 8px;
+  }
+  .map-context-date {
+    font-size: 10px;
+  }
+  .map-context-scope,
+  .map-context-actions button span {
+    display: none;
+  }
+  .map-context-actions {
+    gap: 5px;
+  }
+  .map-context-actions button {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 5px;
+    justify-content: center;
+  }
+  .time-rail {
+    margin-top: 9px;
+    height: 75px;
+  }
+  .rail-label {
+    top: 20px;
+    height: 32px;
+    font-size: 10px;
+  }
+  .time-ticks {
+    top: 55px;
+  }
+  .early-map-note {
+    top: 8px;
+    left: 10px;
+    font-size: 10px;
+  }
+  .early-map-note summary {
+    padding: 5px 7px;
+  }
+  .map-annotation {
+    font-size: 9px;
+  }
+}
+@media (max-width: 1000px) and (max-height: 540px) {
+  .time-rail {
+    margin-top: 3px;
+  }
+  .timeline-top {
+    min-height: 36px;
+  }
+  .rail-label {
+    top: 17px;
+    height: 26px;
+  }
+  .rail-label small {
+    display: none;
+  }
+  .time-ticks {
+    top: 46px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rail-label,
+  .rail-event {
+    transition: none;
+  }
+}
+
+.journey-traveler[data-phase='rest'] .traveler-body,
+.journey-traveler[data-phase='arrived'] .traveler-body,
+.journey-traveler[data-phase='rest'] .traveler-leg,
+.journey-traveler[data-phase='arrived'] .traveler-leg {
+  animation-play-state: paused;
+}
+.traveler-name {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  border-radius: 10px;
+  padding: 3px 7px;
+}
+.journey-traveler[data-phase='arrived'] .traveler-halo {
+  background: #c7a65455;
+  border-color: #a47932;
+}
+/* Pins stay on the year rail; captions sit below it on their own row. */
+.rail-event {
+  top: 4px;
+}
+.rail-event.grouped {
+  top: 0;
+}
+.rail-label {
+  top: 27px;
+}
+.rail-label::before {
+  top: -13px;
+  height: 13px;
+}
+.rail-label small {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .rail-label {
+    top: 24px;
+  }
+}
+@media (max-width: 1000px) and (max-height: 540px) {
+  .rail-label {
+    top: 21px;
+  }
+}
+
+/* Playback keeps a stable map and a readable, optional companion panel. */
+.named-event {
+  display: grid;
+  grid-template-columns: 12px auto;
+  gap: 3px 7px;
+  max-width: 196px;
+  padding: 7px 9px;
+  border: 1px solid #cbd6c3;
+  border-radius: 7px;
+  background: #fffdf7f5;
+  text-align: left;
+  box-shadow: 0 2px 6px #31452b14;
+}
+.named-event .event-marker-dot {
+  width: 9px;
+  height: 9px;
+  border: 0;
+  box-shadow: none;
+  font-size: 0;
+  grid-row: 1 / 3;
+  align-self: center;
+  margin: 0;
+}
+.named-event > small {
+  background: transparent;
+  padding: 0;
+  font-size: 9px;
+  color: #65745d;
+  white-space: nowrap;
+}
+.named-event-title {
+  grid-column: 2;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #354e38;
+}
+.named-event.selected {
+  border-color: #85986c;
+  background: #f4f8e9;
+}
+.named-event.selected .event-marker-dot {
+  background: #66824c;
+}
+.playback-reading-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 22px;
+  border-bottom: 1px solid var(--line);
+  color: #637259;
+  font-size: 11px;
+  background: #f5f7ef;
+}
+.playback-reading-toggle button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 11px;
+}
+.live-reading h2 {
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.55;
+  margin: 20px 0 12px;
+}
+.live-reading p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #525f50;
+}
+.live-reading .live-date {
+  font-size: 11px;
+  color: #7b8775;
+}
+.live-reading h3 {
+  font-size: 13px;
+  margin: 24px 0 12px;
+}
+.live-read-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  margin: 15px 0 24px;
+  background: #eaf0df;
+  border-radius: 5px;
+  font-size: 12px;
+}
+@media (min-width: 1001px), (min-width: 701px) and (min-height: 541px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    grid-template-rows: 64px minmax(0, 1fr) 140px;
+  }
+  .atlas-app[data-reader-collapsed='true'] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .atlas-app[data-reader-collapsed='true'] .story-panel {
+    display: none;
+  }
+  .dynasty-strip {
+    height: 29px;
+    margin-bottom: 2px;
+    border-bottom-color: #e3e7dc;
+  }
+  .dynasty-strip button {
+    height: 25px;
+    font-size: 11px;
+  }
+  .timeline {
+    padding-inline: 20px;
+    background: #fbfcf7;
+  }
+  .timeline-top {
+    min-height: 34px;
+  }
+  .time-rail {
+    margin-top: 4px;
+    height: 60px;
+  }
+  .rail-label {
+    top: 23px;
+    height: 29px;
+    padding: 1px 4px;
+  }
+  .rail-label small {
+    margin-top: 0;
+  }
+  .time-ticks {
+    top: 55px;
+  }
+  .year-title {
+    font-size: 19px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    grid-template-rows: 64px minmax(0, 1fr) 155px;
+  }
+  .play-controls {
+    top: 36px;
+  }
+  .timeline-zoom {
+    top: 67px;
+  }
+  .time-rail {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .reader-toggle {
+    display: none !important;
+  }
+  .named-event {
+    max-width: 168px;
+    padding: 5px 7px;
+  }
+  .named-event-title {
+    font-size: 11px;
+  }
+  .live-reading h2 {
+    font-size: 21px;
+    margin-top: 12px;
+  }
+  .playback-reading-toggle {
+    padding: 6px 14px;
+  }
+}

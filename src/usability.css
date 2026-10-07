@@ -1,0 +1,521 @@
+/* Shared readable controls; the map retains the existing paper and sage palette. */
+:root {
+  --muted: #657365;
+  --sans: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+}
+.mobile-workspace {
+  display: none;
+}
+.eyebrow,
+.panel-tab-note,
+.panel-footer,
+.list-description,
+.event-card-meta,
+.event-card-bottom,
+.search-results small,
+.period-button small,
+.people-time-note,
+.catalog-count {
+  color: #657365;
+}
+.event-card p,
+.panel-intro,
+.detail-section p,
+.reference-list a {
+  color: #596657;
+}
+.main-nav button,
+.panel-tabs button {
+  color: #626e60;
+}
+.event-card p {
+  font-size: 12px;
+  line-height: 1.85;
+}
+.event-card h3 {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.panel-tabs button,
+.main-nav button {
+  font-size: 12px;
+}
+.detail-section p,
+.person-biography p,
+.event-narrative p,
+.dynasty-reading-section p {
+  font-size: 14px;
+}
+.period-button strong {
+  font-size: 12px;
+}
+.period-button small {
+  font-size: 10px;
+}
+.search-results {
+  max-height: min(480px, calc(100dvh - 145px));
+  min-width: 310px;
+}
+.search-results .search-active {
+  background: #e6eddf;
+  box-shadow: inset 3px 0 #345b48;
+}
+.search-clear {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+}
+.search-results .search-more {
+  justify-content: center;
+  color: var(--green);
+  border-top: 1px solid var(--line);
+}
+.people-depth-filter {
+  display: flex;
+  gap: 5px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+.people-depth-filter button {
+  font-size: 11px;
+  padding: 8px 10px;
+  border: 1px solid #d8dfd1;
+  border-radius: 5px;
+}
+.people-depth-filter button[aria-pressed='true'] {
+  background: #e6eddf;
+  color: #345b48;
+  border-color: #9bad94;
+}
+.person-depth {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 6px;
+  font-size: 10px;
+  color: #506449;
+  background: #eef2e8;
+  border-radius: 4px;
+}
+.layers-popover {
+  max-height: min(430px, calc(100dvh - 340px));
+  overflow-y: auto;
+}
+.layer-polities {
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 6px;
+}
+.layer-polities button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 0;
+  text-align: left;
+  font-size: 11px;
+}
+.layer-polities button > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.layer-polities i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.layer-polities [aria-pressed='false'] {
+  opacity: 0.55;
+}
+@media (min-width: 1101px) {
+  .atlas-app {
+    grid-template-columns: 174px minmax(0, 1fr) clamp(370px, 28vw, 460px);
+  }
+}
+@media (min-width: 701px) and (max-height: 740px) {
+  .atlas-app {
+    min-height: 0;
+    grid-template-rows: 60px minmax(0, 1fr) 160px;
+  }
+  .sidebar-footer {
+    display: none;
+  }
+}
+/* Mobile keeps the clock on screen; reading and map can each use the full workspace. */
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    min-height: 0;
+    height: 100dvh;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 60px 38px minmax(240px, 38dvh) minmax(0, 1fr) 155px;
+  }
+  .period-sidebar {
+    display: none;
+  }
+  .mobile-workspace {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    background: #fffefb;
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-workspace button {
+    height: 34px;
+    padding: 0 11px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #63725b;
+    font-size: 11px;
+  }
+  .mobile-workspace [aria-pressed='true'] {
+    background: #e7eddf;
+    color: #294c38;
+    font-weight: 600;
+  }
+  .map-shell {
+    grid-row: 3;
+    grid-column: 1;
+    min-height: 0;
+  }
+  .story-panel {
+    grid-row: 4;
+    grid-column: 1;
+    min-width: 0;
+  }
+  .timeline {
+    grid-row: 5;
+    grid-column: 1 / -1;
+  }
+  .atlas-app[data-mobile-view='reading'],
+  .atlas-app[data-mobile-view='map'] {
+    grid-template-rows: 60px 38px minmax(0, 1fr) 155px;
+  }
+  .atlas-app[data-mobile-view='reading'] .map-shell {
+    display: none;
+  }
+  .atlas-app[data-mobile-view='reading'] .story-panel {
+    grid-row: 3;
+  }
+  .atlas-app[data-mobile-view='map'] .story-panel {
+    display: none;
+  }
+  .atlas-app[data-mobile-view='map'] .timeline,
+  .atlas-app[data-mobile-view='reading'] .timeline {
+    grid-row: 4;
+  }
+  .panel-footer {
+    display: none;
+  }
+  .panel-tabs {
+    gap: 22px;
+  }
+  .panel-tabs button {
+    min-height: 36px;
+    font-size: 12px;
+  }
+  .panel-scroll {
+    padding: 14px 16px;
+  }
+  .panel-toolbar {
+    height: 38px;
+    padding: 0 16px;
+  }
+  .topbar {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .main-nav {
+    gap: 10px;
+  }
+  .main-nav button {
+    font-size: 10px;
+  }
+  .top-search:is(:focus-within, [data-search-open='true']) input {
+    font-size: 16px;
+  }
+  .top-search:not(:focus-within):not([data-search-open='true']) .search-clear {
+    display: none;
+  }
+  .search-results {
+    min-width: 0;
+    max-height: calc(100dvh - 160px);
+  }
+  .search-results strong {
+    font-size: 14px;
+  }
+  .search-results small {
+    font-size: 12px;
+  }
+  .top-search:is(:focus-within, [data-search-open='true']) {
+    top: 62px;
+  }
+  .map-legend {
+    display: none;
+  }
+  .map-bottom-left {
+    right: auto;
+    bottom: 30px;
+  }
+  .layers-button {
+    min-height: 34px;
+    font-size: 10px;
+    gap: 5px;
+  }
+  .layers-popover {
+    width: min(280px, calc(100vw - 75px));
+    max-height: calc(100dvh - 215px);
+    position: fixed;
+    left: 14px;
+    bottom: 170px;
+    z-index: 50;
+  }
+  .map-controls button {
+    width: 32px;
+    height: 32px;
+  }
+  .map-controls {
+    right: 10px;
+    bottom: 32px;
+  }
+  .map-compass {
+    display: none;
+  }
+  .event-card p,
+  .detail-lead,
+  .detail-section p {
+    font-size: 13px;
+  }
+  .event-card h3 {
+    font-size: 14px;
+  }
+  .category-filters button,
+  .event-scope button {
+    font-size: 11px;
+    min-height: 30px;
+  }
+  .event-card-meta,
+  .event-card-bottom,
+  .list-description {
+    font-size: 10px;
+  }
+  .people-catalog-controls input,
+  .dynasty-event-filter,
+  .time-readout input {
+    font-size: 16px;
+  }
+  .timeline {
+    padding: 9px 14px 0;
+  }
+  .timeline-top {
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .time-readout {
+    max-width: calc(100% - 164px);
+  }
+  .year-title {
+    font-size: 19px;
+  }
+  .play-controls {
+    gap: 2px;
+    margin-top: 0;
+  }
+  .play-controls > button {
+    width: 28px;
+    height: 34px;
+  }
+  .play-controls > .play-button {
+    width: 34px;
+    height: 34px;
+  }
+  .play-controls > select {
+    width: 66px;
+    max-width: none;
+    height: 34px;
+    font-size: 11px;
+  }
+  .timeline-period-select {
+    font-size: 10px;
+    height: 25px;
+  }
+  .timeline-zoom {
+    position: absolute;
+    right: 15px;
+    top: 49px;
+    border: 0;
+  }
+  .time-rail {
+    margin-top: 10px;
+    height: 63px;
+  }
+}
+@media (max-width: 365px) {
+  .brand > span:last-child {
+    font-size: 14px;
+  }
+  .brand-mark {
+    width: 25px;
+    height: 25px;
+  }
+  .brand small {
+    display: none;
+  }
+  .topbar {
+    gap: 4px;
+  }
+  .header-actions > .icon-button {
+    width: 24px;
+  }
+  .year-title {
+    font-size: 17px;
+  }
+  .mobile-workspace {
+    gap: 3px;
+  }
+}
+@media (max-width: 1000px) and (max-height: 540px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 42%);
+    grid-template-rows: 52px 36px minmax(0, 1fr) 118px;
+  }
+  .atlas-app[data-mobile-view='reading'],
+  .atlas-app[data-mobile-view='map'] {
+    grid-template-rows: 52px 36px minmax(0, 1fr) 118px;
+  }
+  .topbar {
+    grid-column: 1 / -1;
+  }
+  .map-shell {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .story-panel {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .atlas-app[data-mobile-view='map'] .map-shell,
+  .atlas-app[data-mobile-view='reading'] .story-panel {
+    grid-column: 1 / -1;
+  }
+  .timeline {
+    grid-row: 4;
+    padding-top: 5px;
+  }
+  .time-readout {
+    flex-direction: row;
+    max-width: 60%;
+  }
+  .time-readout > .eyebrow {
+    display: none;
+  }
+  .time-rail {
+    height: 55px;
+    margin-top: 6px;
+  }
+  .timeline-zoom {
+    right: 195px;
+    top: 9px;
+  }
+  .keyboard-hint {
+    display: none;
+  }
+  .map-title {
+    padding: 5px 12px;
+  }
+  .map-heading-meta {
+    display: none;
+  }
+  .map-title h1 {
+    font-size: 18px;
+  }
+  .map-title h1 > span {
+    display: none;
+  }
+  .layers-popover {
+    bottom: 128px;
+    max-height: calc(100dvh - 190px);
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 540px) {
+  .person-detail:not(.journey-open) .person-hero {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 3px 10px;
+    padding: 0 0 10px;
+    margin: 0;
+    text-align: left;
+  }
+  .person-detail:not(.journey-open) .person-hero .avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    margin: 0;
+    grid-row: 1 / 3;
+  }
+  .person-detail:not(.journey-open) .person-hero > .eyebrow {
+    display: none;
+  }
+  .person-detail:not(.journey-open) .person-hero h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .person-detail:not(.journey-open) .person-hero p {
+    grid-column: 2;
+    font-size: 10px;
+  }
+  .person-detail:not(.journey-open) .person-hero h2 small {
+    display: inline;
+    margin-left: 8px;
+    font-size: 11px;
+  }
+  .detail-navigation {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+}
+
+.mobile-event-filters {
+  display: none;
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .events-panel > .category-filters,
+  .event-list-controls > .event-scope {
+    display: none;
+  }
+  .mobile-event-filters {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+    min-width: 0;
+  }
+  .mobile-event-filters select {
+    min-width: 0;
+    height: 32px;
+    max-width: 130px;
+    border: 1px solid #d8dfd1;
+    border-radius: 4px;
+    background: #f5f7ee;
+    padding: 4px 7px;
+    font-size: 11px;
+    color: #405738;
+  }
+  .event-list-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .event-list-heading {
+    margin: 0;
+  }
+}

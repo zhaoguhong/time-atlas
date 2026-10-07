@@ -1,0 +1,3286 @@
+{
+  "version": 1,
+  "provenanceSha256": "327cf720e682123bd4a65c23e5faedaa300c5f6e00cc4553b35f342c42e1300a",
+  "packs": [
+    {
+      "file": "prehistory.br",
+      "bytes": 510,
+      "sha256": "ac16a9e152d2cab682974205f462ab2a139131f1be382ab0abe210627afd8656",
+      "unpackedBytes": 24892,
+      "files": [
+        {
+          "path": "maps/prehistory.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/0.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/1.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/2.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/3.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/4.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/5.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/6.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/7.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/8.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/9.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/10.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/11.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/12.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/13.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/14.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/15.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/16.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/17.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/18.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/19.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/20.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/21.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/22.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/23.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/24.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/25.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/26.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/27.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/28.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/29.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/30.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/31.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/32.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/33.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/34.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/35.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/36.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/37.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/38.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/39.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/40.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/41.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/42.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/43.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/44.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/45.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/46.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/47.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/48.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/49.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/50.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/51.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/52.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/53.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/54.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/55.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/56.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/57.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/58.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/59.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/60.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/61.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/62.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/63.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/64.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/65.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/66.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/67.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/68.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/69.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/70.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/71.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/72.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/73.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/74.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/75.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/76.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/77.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/78.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/79.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/80.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/81.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/82.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/83.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/84.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/85.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/86.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/87.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/88.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/89.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/90.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/91.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/92.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/93.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/94.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/95.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/96.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/97.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/98.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/99.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/100.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/101.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/102.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/103.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/104.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/105.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/106.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/107.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/108.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/109.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/110.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/111.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/112.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/113.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/114.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/115.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/116.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/117.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/118.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/119.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/120.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/121.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/122.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/123.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/124.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/125.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/126.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/127.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/128.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/129.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/130.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/131.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/132.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/133.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/134.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/135.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/136.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/137.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/138.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/139.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/140.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/141.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/142.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/143.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/144.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/145.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/146.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/147.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/148.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/149.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/150.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/151.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/152.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/153.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/154.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/155.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/156.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/157.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/158.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/159.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/160.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/161.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/162.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/163.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/164.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/165.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/166.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/167.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/168.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/169.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/170.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/171.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/172.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/173.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/174.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/175.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/176.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/177.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/178.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/179.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/180.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/181.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/182.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/183.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/184.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/185.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/186.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/187.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/188.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/189.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/190.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/191.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/192.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/193.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/194.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/195.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/196.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/197.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/198.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/199.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/200.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/201.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/202.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/203.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/204.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/205.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/206.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/207.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/208.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/209.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/210.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/211.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/212.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/213.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/214.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/215.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/216.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/217.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/218.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/219.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/220.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/221.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/222.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/223.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/224.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/225.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/226.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/227.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/228.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/229.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/230.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/231.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/232.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/233.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/234.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/235.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/236.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/237.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/238.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/239.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/240.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/241.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/242.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/243.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/244.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/245.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/246.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/247.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/248.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/249.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/250.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/251.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/252.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/253.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/254.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/255.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/256.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/257.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/258.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/259.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/260.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/261.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/262.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/263.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/264.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/265.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/266.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/267.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/268.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/269.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/270.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/271.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/272.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/273.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/274.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/275.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/276.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/277.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/278.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/279.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/280.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/281.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/282.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/283.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/284.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/285.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/286.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/287.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/288.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/289.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/290.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/291.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/292.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/293.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/294.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/295.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/296.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/297.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/298.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/prehistory/299.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        }
+      ]
+    },
+    {
+      "file": "early-civilizations.br",
+      "bytes": 6532,
+      "sha256": "e7fa685ef4d3a5ef979e4f9fc44c2eb3fa0d5ded369f8d6e1ec6a33ae3ba542d",
+      "unpackedBytes": 310678,
+      "files": [
+        {
+          "path": "maps/early-civilizations.geojson",
+          "bytes": 35389,
+          "sha256": "f61146e8e226b1f0a9092b5a3248d390e3993d05d1e9ef906bce6a7edef61aec"
+        },
+        {
+          "path": "maps/early-civilizations/0.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/1.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/2.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/3.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/4.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/5.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/6.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/7.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/8.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/9.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/10.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/11.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/12.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/13.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/14.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/15.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/16.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/17.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/18.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/19.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/20.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/21.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/22.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/23.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/24.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/25.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/26.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/27.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/28.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/29.geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+        },
+        {
+          "path": "maps/early-civilizations/30.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/31.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/32.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/33.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/34.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/35.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/36.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/37.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/38.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/39.geojson",
+          "bytes": 896,
+          "sha256": "22a05d9ecd93744fb65b555bb8599a5ccb91c85b0776a442be82b3af46ec6d99"
+        },
+        {
+          "path": "maps/early-civilizations/40.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/41.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/42.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/43.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/44.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/45.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/46.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/47.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/48.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/49.geojson",
+          "bytes": 1475,
+          "sha256": "10aa7089fb9eb1fa38867f010ef7a404ba12002df220708df688a38f19a7c243"
+        },
+        {
+          "path": "maps/early-civilizations/50.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/51.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/52.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/53.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/54.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/55.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/56.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/57.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/58.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/59.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/60.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/61.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/62.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/63.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/64.geojson",
+          "bytes": 3263,
+          "sha256": "3a0adc856e3f50e03a1b174a73fc3a44ae82d6c3954eb81dad17a6e20f6b47f2"
+        },
+        {
+          "path": "maps/early-civilizations/65.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/66.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/67.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/68.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/69.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/70.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/71.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/72.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/73.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/74.geojson",
+          "bytes": 3480,
+          "sha256": "af96806ca62f1b6df1649cbd576e93f8ae3ce491e388e7d790c7fc9930bc9920"
+        },
+        {
+          "path": "maps/early-civilizations/75.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/76.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/77.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/78.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/79.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/80.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/81.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/82.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/83.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/84.geojson",
+          "bytes": 5035,
+          "sha256": "e03c4e6935fdc2ac9338dd5ff9cfda445e41aa5b71f816dda51e173a74798551"
+        },
+        {
+          "path": "maps/early-civilizations/85.geojson",
+          "bytes": 7352,
+          "sha256": "4eb94aa1ee2efe06a4a58413e62bf1739b6195dc31b5e5349c0766d2db726b3a"
+        },
+        {
+          "path": "maps/early-civilizations/86.geojson",
+          "bytes": 7352,
+          "sha256": "4eb94aa1ee2efe06a4a58413e62bf1739b6195dc31b5e5349c0766d2db726b3a"
+        },
+        {
+          "path": "maps/early-civilizations/87.geojson",
+          "bytes": 12565,
+          "sha256": "b3e8775d42cb565c18a2568690f90dc0536684d663ea86fe4bdb03c1a961633d"
+        },
+        {
+          "path": "maps/early-civilizations/88.geojson",
+          "bytes": 8305,
+          "sha256": "f2875d1d06a3448bd4e05ddbc3e199b96cfa163092b28057353666b00bf973c0"
+        },
+        {
+          "path": "maps/early-civilizations/89.geojson",
+          "bytes": 8305,
+          "sha256": "f2875d1d06a3448bd4e05ddbc3e199b96cfa163092b28057353666b00bf973c0"
+        },
+        {
+          "path": "maps/early-civilizations/90.geojson",
+          "bytes": 7915,
+          "sha256": "ea139671e8da176b85e9e2a642c7c2230b89b7da30b4634b8b28f2b5763d0890"
+        },
+        {
+          "path": "maps/early-civilizations/91.geojson",
+          "bytes": 7915,
+          "sha256": "ea139671e8da176b85e9e2a642c7c2230b89b7da30b4634b8b28f2b5763d0890"
+        },
+        {
+          "path": "maps/early-civilizations/92.geojson",
+          "bytes": 7915,
+          "sha256": "ea139671e8da176b85e9e2a642c7c2230b89b7da30b4634b8b28f2b5763d0890"
+        },
+        {
+          "path": "maps/early-civilizations/93.geojson",
+          "bytes": 7915,
+          "sha256": "ea139671e8da176b85e9e2a642c7c2230b89b7da30b4634b8b28f2b5763d0890"
+        },
+        {
+          "path": "maps/early-civilizations/94.geojson",
+          "bytes": 7915,
+          "sha256": "ea139671e8da176b85e9e2a642c7c2230b89b7da30b4634b8b28f2b5763d0890"
+        },
+        {
+          "path": "maps/early-civilizations/95.geojson",
+          "bytes": 7661,
+          "sha256": "653d268cd211276012fdcb0f184c5a993432ee8a92128c7419d724cd35b95786"
+        },
+        {
+          "path": "maps/early-civilizations/96.geojson",
+          "bytes": 7661,
+          "sha256": "653d268cd211276012fdcb0f184c5a993432ee8a92128c7419d724cd35b95786"
+        }
+      ]
+    },
+    {
+      "file": "xia.br",
+      "bytes": 6331,
+      "sha256": "4126e72f404bf361e1628d471fe91093d5144d6b524a26e8ac208b95400f50d1",
+      "unpackedBytes": 244842,
+      "files": [
+        {
+          "path": "maps/xia.geojson",
+          "bytes": 36769,
+          "sha256": "666b61de2157f3d0e486d69d97210419b145092d7b1ed1dc5d81420aa3cb258f"
+        },
+        {
+          "path": "maps/xia/0.geojson",
+          "bytes": 7661,
+          "sha256": "653d268cd211276012fdcb0f184c5a993432ee8a92128c7419d724cd35b95786"
+        },
+        {
+          "path": "maps/xia/1.geojson",
+          "bytes": 7661,
+          "sha256": "653d268cd211276012fdcb0f184c5a993432ee8a92128c7419d724cd35b95786"
+        },
+        {
+          "path": "maps/xia/2.geojson",
+          "bytes": 7661,
+          "sha256": "653d268cd211276012fdcb0f184c5a993432ee8a92128c7419d724cd35b95786"
+        },
+        {
+          "path": "maps/xia/3.geojson",
+          "bytes": 14531,
+          "sha256": "977140c74245a7174c0e8671b307b6f8524c919a650e0315c1b9744b64789221"
+        },
+        {
+          "path": "maps/xia/4.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/5.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/6.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/7.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/8.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/9.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/10.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/11.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/12.geojson",
+          "bytes": 6911,
+          "sha256": "72b41c4b162e4fc5545e2c11e584771e829962b3b94ecb04de79f458b4c51741"
+        },
+        {
+          "path": "maps/xia/13.geojson",
+          "bytes": 15806,
+          "sha256": "2c4521e9b518c7e6f06097f58b461411194e77195b243a41b965131536d92723"
+        },
+        {
+          "path": "maps/xia/14.geojson",
+          "bytes": 8936,
+          "sha256": "19f03b6e48b48b2db1568dfa584bc140d4747d678db7226951b0a8e30deba9b2"
+        },
+        {
+          "path": "maps/xia/15.geojson",
+          "bytes": 14236,
+          "sha256": "9d33273d3039a8863632466fc4bbf0fbb1eec7fc03350c41c9ea4cc1be2f3dc6"
+        },
+        {
+          "path": "maps/xia/16.geojson",
+          "bytes": 7628,
+          "sha256": "bcaa3460c204a63a8cee5004615ee36111a7bb3346f6320e8a0ace8993417eb9"
+        },
+        {
+          "path": "maps/xia/17.geojson",
+          "bytes": 7628,
+          "sha256": "bcaa3460c204a63a8cee5004615ee36111a7bb3346f6320e8a0ace8993417eb9"
+        },
+        {
+          "path": "maps/xia/18.geojson",
+          "bytes": 12555,
+          "sha256": "1be4ebce733c1167c76ef810298557a8676a1d556dcc229f9b76f78d20e5b939"
+        },
+        {
+          "path": "maps/xia/19.geojson",
+          "bytes": 6268,
+          "sha256": "093dd036cb0dba424dddcd578b6a097358826f356e7418ccdff4498d97cdf450"
+        },
+        {
+          "path": "maps/xia/20.geojson",
+          "bytes": 6268,
+          "sha256": "093dd036cb0dba424dddcd578b6a097358826f356e7418ccdff4498d97cdf450"
+        },
+        {
+          "path": "maps/xia/21.geojson",
+          "bytes": 6268,
+          "sha256": "093dd036cb0dba424dddcd578b6a097358826f356e7418ccdff4498d97cdf450"
+        },
+        {
+          "path": "maps/xia/22.geojson",
+          "bytes": 6268,
+          "sha256": "093dd036cb0dba424dddcd578b6a097358826f356e7418ccdff4498d97cdf450"
+        },
+        {
+          "path": "maps/xia/23.geojson",
+          "bytes": 6268,
+          "sha256": "093dd036cb0dba424dddcd578b6a097358826f356e7418ccdff4498d97cdf450"
+        }
+      ]
+    },
+    {
+      "file": "shang.br",
+      "bytes": 10013,
+      "sha256": "cfdaa0ce40c86f139651e42a4eca540a25584db3b5101d0219dede27cbf1f3e4",
+      "unpackedBytes": 440922,
+      "files": [
+        {
+          "path": "maps/shang.geojson",
+          "bytes": 86004,
+          "sha256": "f85cc0b26380ba347f69c1055377bbfc361f0ea14f1f86c05d728b1ab603d9e4"
+        },
+        {
+          "path": "maps/shang/0.geojson",
+          "bytes": 10089,
+          "sha256": "aa93d55a70af55d72d89984ba99bb058b6b0842a08b2f4131e203047c0976456"
+        },
+        {
+          "path": "maps/shang/1.geojson",
+          "bytes": 10089,
+          "sha256": "aa93d55a70af55d72d89984ba99bb058b6b0842a08b2f4131e203047c0976456"
+        },
+        {
+          "path": "maps/shang/2.geojson",
+          "bytes": 10089,
+          "sha256": "aa93d55a70af55d72d89984ba99bb058b6b0842a08b2f4131e203047c0976456"
+        },
+        {
+          "path": "maps/shang/3.geojson",
+          "bytes": 10089,
+          "sha256": "aa93d55a70af55d72d89984ba99bb058b6b0842a08b2f4131e203047c0976456"
+        },
+        {
+          "path": "maps/shang/4.geojson",
+          "bytes": 10089,
+          "sha256": "aa93d55a70af55d72d89984ba99bb058b6b0842a08b2f4131e203047c0976456"
+        },
+        {
+          "path": "maps/shang/5.geojson",
+          "bytes": 12014,
+          "sha256": "f53cf5208c06ba56b58aa8b516558feded6d6dc1bcaa96d8b9e650a42424d2d5"
+        },
+        {
+          "path": "maps/shang/6.geojson",
+          "bytes": 12014,
+          "sha256": "f53cf5208c06ba56b58aa8b516558feded6d6dc1bcaa96d8b9e650a42424d2d5"
+        },
+        {
+          "path": "maps/shang/7.geojson",
+          "bytes": 12014,
+          "sha256": "f53cf5208c06ba56b58aa8b516558feded6d6dc1bcaa96d8b9e650a42424d2d5"
+        },
+        {
+          "path": "maps/shang/8.geojson",
+          "bytes": 12014,
+          "sha256": "f53cf5208c06ba56b58aa8b516558feded6d6dc1bcaa96d8b9e650a42424d2d5"
+        },
+        {
+          "path": "maps/shang/9.geojson",
+          "bytes": 12014,
+          "sha256": "f53cf5208c06ba56b58aa8b516558feded6d6dc1bcaa96d8b9e650a42424d2d5"
+        },
+        {
+          "path": "maps/shang/10.geojson",
+          "bytes": 11604,
+          "sha256": "a940c1f2d1f285925943a2b128155bafa274daefb851a5c36ecbda25972bc673"
+        },
+        {
+          "path": "maps/shang/11.geojson",
+          "bytes": 11604,
+          "sha256": "a940c1f2d1f285925943a2b128155bafa274daefb851a5c36ecbda25972bc673"
+        },
+        {
+          "path": "maps/shang/12.geojson",
+          "bytes": 11604,
+          "sha256": "a940c1f2d1f285925943a2b128155bafa274daefb851a5c36ecbda25972bc673"
+        },
+        {
+          "path": "maps/shang/13.geojson",
+          "bytes": 11604,
+          "sha256": "a940c1f2d1f285925943a2b128155bafa274daefb851a5c36ecbda25972bc673"
+        },
+        {
+          "path": "maps/shang/14.geojson",
+          "bytes": 11604,
+          "sha256": "a940c1f2d1f285925943a2b128155bafa274daefb851a5c36ecbda25972bc673"
+        },
+        {
+          "path": "maps/shang/15.geojson",
+          "bytes": 12606,
+          "sha256": "987f568e1aed476c4601f861f60208c2c205d210d8ba0d766529df7767496993"
+        },
+        {
+          "path": "maps/shang/16.geojson",
+          "bytes": 12606,
+          "sha256": "987f568e1aed476c4601f861f60208c2c205d210d8ba0d766529df7767496993"
+        },
+        {
+          "path": "maps/shang/17.geojson",
+          "bytes": 12606,
+          "sha256": "987f568e1aed476c4601f861f60208c2c205d210d8ba0d766529df7767496993"
+        },
+        {
+          "path": "maps/shang/18.geojson",
+          "bytes": 12288,
+          "sha256": "f6a96bfcae4e7c20103d2da991ca0fb8d755071221afe0c8c133d2450f421830"
+        },
+        {
+          "path": "maps/shang/19.geojson",
+          "bytes": 11847,
+          "sha256": "653e25a8e34b0bc27012e0231bb133e2e8272be5fdee4b581a086a0ce27808ca"
+        },
+        {
+          "path": "maps/shang/20.geojson",
+          "bytes": 12719,
+          "sha256": "ad3e2fe685c7145e6033a6228b9afa7ac64f44a5dc40c9eb4c5162f535fc3c7c"
+        },
+        {
+          "path": "maps/shang/21.geojson",
+          "bytes": 12719,
+          "sha256": "ad3e2fe685c7145e6033a6228b9afa7ac64f44a5dc40c9eb4c5162f535fc3c7c"
+        },
+        {
+          "path": "maps/shang/22.geojson",
+          "bytes": 22781,
+          "sha256": "3f91921d79af2f0c2985d1190517926ead0cd3624adc5401300f20735c16c27f"
+        },
+        {
+          "path": "maps/shang/23.geojson",
+          "bytes": 11193,
+          "sha256": "347c9357d3bc7232f50020d6d834b40ccf186d47e76fc3105c817cc08b40578a"
+        },
+        {
+          "path": "maps/shang/24.geojson",
+          "bytes": 11193,
+          "sha256": "347c9357d3bc7232f50020d6d834b40ccf186d47e76fc3105c817cc08b40578a"
+        },
+        {
+          "path": "maps/shang/25.geojson",
+          "bytes": 11768,
+          "sha256": "28a8ca9d068c2380f373fcf41ac6288ce1b70458be62b0ab90eb6ef0ec9865de"
+        },
+        {
+          "path": "maps/shang/26.geojson",
+          "bytes": 11768,
+          "sha256": "28a8ca9d068c2380f373fcf41ac6288ce1b70458be62b0ab90eb6ef0ec9865de"
+        },
+        {
+          "path": "maps/shang/27.geojson",
+          "bytes": 11768,
+          "sha256": "28a8ca9d068c2380f373fcf41ac6288ce1b70458be62b0ab90eb6ef0ec9865de"
+        }
+      ]
+    },
+    {
+      "file": "western-zhou.br",
+      "bytes": 9169,
+      "sha256": "076bc2548ca61488d56bc9269d0b7e8fec8329b2b85c19cd13076b4a43fe5657",
+      "unpackedBytes": 302843,
+      "files": [
+        {
+          "path": "maps/western-zhou.geojson",
+          "bytes": 53242,
+          "sha256": "62474a64295591ddb849f299d6a294f6f0ee8e15f7cc0baa63b2a1594b87b300"
+        },
+        {
+          "path": "maps/western-zhou/0.geojson",
+          "bytes": 11768,
+          "sha256": "28a8ca9d068c2380f373fcf41ac6288ce1b70458be62b0ab90eb6ef0ec9865de"
+        },
+        {
+          "path": "maps/western-zhou/1.geojson",
+          "bytes": 11768,
+          "sha256": "28a8ca9d068c2380f373fcf41ac6288ce1b70458be62b0ab90eb6ef0ec9865de"
+        },
+        {
+          "path": "maps/western-zhou/2.geojson",
+          "bytes": 23725,
+          "sha256": "c79e730276e56753523f5904dadc4e43fba5665fb6bd2ff552d93fa5f0be2bb7"
+        },
+        {
+          "path": "maps/western-zhou/3.geojson",
+          "bytes": 11998,
+          "sha256": "2ce14ec17aebc0bda879214c321d85f05a2bdfc667e0c832b5fb9cba04b4b700"
+        },
+        {
+          "path": "maps/western-zhou/4.geojson",
+          "bytes": 11998,
+          "sha256": "2ce14ec17aebc0bda879214c321d85f05a2bdfc667e0c832b5fb9cba04b4b700"
+        },
+        {
+          "path": "maps/western-zhou/5.geojson",
+          "bytes": 11998,
+          "sha256": "2ce14ec17aebc0bda879214c321d85f05a2bdfc667e0c832b5fb9cba04b4b700"
+        },
+        {
+          "path": "maps/western-zhou/6.geojson",
+          "bytes": 11998,
+          "sha256": "2ce14ec17aebc0bda879214c321d85f05a2bdfc667e0c832b5fb9cba04b4b700"
+        },
+        {
+          "path": "maps/western-zhou/7.geojson",
+          "bytes": 24073,
+          "sha256": "f5fc30141a2ca91bf0139d3781596d79b8d4fde284fa1ce09407f7af153c6f9f"
+        },
+        {
+          "path": "maps/western-zhou/8.geojson",
+          "bytes": 15752,
+          "sha256": "26f611d27d756a1fdaabb6351e9210970eaa04e0f5d12e2dd8d2261835126f9c"
+        },
+        {
+          "path": "maps/western-zhou/9.geojson",
+          "bytes": 15752,
+          "sha256": "26f611d27d756a1fdaabb6351e9210970eaa04e0f5d12e2dd8d2261835126f9c"
+        },
+        {
+          "path": "maps/western-zhou/10.geojson",
+          "bytes": 15752,
+          "sha256": "26f611d27d756a1fdaabb6351e9210970eaa04e0f5d12e2dd8d2261835126f9c"
+        },
+        {
+          "path": "maps/western-zhou/11.geojson",
+          "bytes": 15752,
+          "sha256": "26f611d27d756a1fdaabb6351e9210970eaa04e0f5d12e2dd8d2261835126f9c"
+        },
+        {
+          "path": "maps/western-zhou/12.geojson",
+          "bytes": 33194,
+          "sha256": "f4222f91b9bef4366d5fe77786f649e45f0b2e417c529eb57943e0a90d196714"
+        },
+        {
+          "path": "maps/western-zhou/13.geojson",
+          "bytes": 18907,
+          "sha256": "b5a9ce528bfae93233c8d8f16f8c1f1ab228023f8a625f4093e5457ee8c4845c"
+        }
+      ]
+    },
+    {
+      "file": "spring.br",
+      "bytes": 32631,
+      "sha256": "efaebdcd76adc49a9ec426f2057932ff7ddab1f65607e74fd9a3bd4000752588",
+      "unpackedBytes": 1353401,
+      "files": [
+        {
+          "path": "maps/spring.geojson",
+          "bytes": 359246,
+          "sha256": "da870ce6510691247b7103c6d73e499bbd59193800f6882a4f0971abbb0c11ef"
+        },
+        {
+          "path": "maps/spring/0.geojson",
+          "bytes": 18907,
+          "sha256": "b5a9ce528bfae93233c8d8f16f8c1f1ab228023f8a625f4093e5457ee8c4845c"
+        },
+        {
+          "path": "maps/spring/1.geojson",
+          "bytes": 37238,
+          "sha256": "59d66608bd89306c147e84001083fb1a111b4408102e41cd8499e15ffe4174f2"
+        },
+        {
+          "path": "maps/spring/2.geojson",
+          "bytes": 37238,
+          "sha256": "59d66608bd89306c147e84001083fb1a111b4408102e41cd8499e15ffe4174f2"
+        },
+        {
+          "path": "maps/spring/3.geojson",
+          "bytes": 58203,
+          "sha256": "1cfaf96893935cacbca41fccd71db9b0455735398b21b00fc05909bb22dc13b8"
+        },
+        {
+          "path": "maps/spring/4.geojson",
+          "bytes": 59282,
+          "sha256": "cc45fc4afbb43ff7cd68252a183bfd0774f6fa40b7a70934e26e94dfb831c0d0"
+        },
+        {
+          "path": "maps/spring/5.geojson",
+          "bytes": 39916,
+          "sha256": "dffc561537f505946813c8a31be1fd01b33f41eb30539020dda281c90561ab1f"
+        },
+        {
+          "path": "maps/spring/6.geojson",
+          "bytes": 51860,
+          "sha256": "0764080cc3bb71fc529ada5986e5e1e322f5ab0588e5a384a3b924022acf0292"
+        },
+        {
+          "path": "maps/spring/7.geojson",
+          "bytes": 76472,
+          "sha256": "4f2e6fc4fa66816444d73da59846609ef0ec2049fe32a46043272b3b9b80b6a5"
+        },
+        {
+          "path": "maps/spring/8.geojson",
+          "bytes": 85988,
+          "sha256": "8b10412af117190d9bf410fb6cd7862df9c4e2a955dd836da05e0c74e4eb414a"
+        },
+        {
+          "path": "maps/spring/9.geojson",
+          "bytes": 64855,
+          "sha256": "d4279758df8d55f92e8192069996fafd4eb36df0299f81995f5352fad90753ea"
+        },
+        {
+          "path": "maps/spring/10.geojson",
+          "bytes": 64855,
+          "sha256": "d4279758df8d55f92e8192069996fafd4eb36df0299f81995f5352fad90753ea"
+        },
+        {
+          "path": "maps/spring/11.geojson",
+          "bytes": 86699,
+          "sha256": "5ed279954022bbca341fa28322a4ffa1e01336a1d8d4c54cfe64f9b13843bb39"
+        },
+        {
+          "path": "maps/spring/12.geojson",
+          "bytes": 61947,
+          "sha256": "f28b89cead62e5098c996647033f7a3bc9313102335ec01474c980e5dc4f685e"
+        },
+        {
+          "path": "maps/spring/13.geojson",
+          "bytes": 96882,
+          "sha256": "3ef98a83da23b13d699791edcbd7584d768286698a45923287dfdb3bb471680b"
+        },
+        {
+          "path": "maps/spring/14.geojson",
+          "bytes": 104951,
+          "sha256": "b159cc1d4b25589bc26ac6e81c7783c8c9add6c7785c8ac8d6d42649d8415e16"
+        }
+      ]
+    },
+    {
+      "file": "warring.br",
+      "bytes": 61270,
+      "sha256": "eaf61189a9408edd86012f325edcb25e9cb2dfbe499b30d9e000d122d43e2b20",
+      "unpackedBytes": 2818291,
+      "files": [
+        {
+          "path": "maps/warring.geojson",
+          "bytes": 1026042,
+          "sha256": "a5ee595592a3413b7cea1437647d1a96488b7a1aa47829c30e6d3de2664962fd"
+        },
+        {
+          "path": "maps/warring/0.geojson",
+          "bytes": 58922,
+          "sha256": "c760ee7f8570264cc925b6fe0d8212092d4c18b4ee572f731df7f0b7a9d328c4"
+        },
+        {
+          "path": "maps/warring/1.geojson",
+          "bytes": 107158,
+          "sha256": "0f77976c49b252347827f2e4f32fd7e158c43f63a2fee37d1c3804331e82d26f"
+        },
+        {
+          "path": "maps/warring/2.geojson",
+          "bytes": 53776,
+          "sha256": "737e68f5bbc27e865633d88a21f6c757cb45d99baea65fa1f46acbab7fc3c62d"
+        },
+        {
+          "path": "maps/warring/3.geojson",
+          "bytes": 105930,
+          "sha256": "5198b3d2c26195fcb1bff372aaf1444bedd7977d02ca36550757f022a5864246"
+        },
+        {
+          "path": "maps/warring/4.geojson",
+          "bytes": 94466,
+          "sha256": "5a3008078dc8a5b9b366a2957ccca2983d39e5e01a285555a026edb4a3fa8108"
+        },
+        {
+          "path": "maps/warring/5.geojson",
+          "bytes": 97043,
+          "sha256": "98e53f835be59c2a8adb942f7f6e6e4eedb1f00019c1731b17cfa7e41a8b4a90"
+        },
+        {
+          "path": "maps/warring/6.geojson",
+          "bytes": 137351,
+          "sha256": "e16b4482bdcdb6d99aa3f4ba1ec5949862af3f4fed3b058c85a52e46d515f45f"
+        },
+        {
+          "path": "maps/warring/7.geojson",
+          "bytes": 218642,
+          "sha256": "a07b6cf0f225cc3108c1a01fbfc561c9694247c4a0863ec7157a7ee7bf54bdb6"
+        },
+        {
+          "path": "maps/warring/8.geojson",
+          "bytes": 142664,
+          "sha256": "fc77df2b15aae631955b493b2100b34fc4971bd6073bf1fd77b297fe3192e4b2"
+        },
+        {
+          "path": "maps/warring/9.geojson",
+          "bytes": 219037,
+          "sha256": "cd9e8381baf05bda14e17f6e526e3c9d62317c5c2ae9227c45b01b3c3c58142c"
+        },
+        {
+          "path": "maps/warring/10.geojson",
+          "bytes": 162648,
+          "sha256": "964cc27b093a5291ad5ca3d81562983d8b51aa396ee0c08ce64f9bf9c9bde875"
+        },
+        {
+          "path": "maps/warring/11.geojson",
+          "bytes": 143566,
+          "sha256": "f004d124d3877af525ae151c4e607d0920445905246e5577bc9e7fc3efe1124a"
+        },
+        {
+          "path": "maps/warring/12.geojson",
+          "bytes": 177564,
+          "sha256": "2f0608487e21de71b7ea2c8b1ba38d74e419aa4e9e84f5b4317d86c2b53bfc13"
+        }
+      ]
+    },
+    {
+      "file": "qin.br",
+      "bytes": 27280,
+      "sha256": "fe557da25d1db55373dc566dee94dd9c4bb3540b235da466935d4fd2b50273b6",
+      "unpackedBytes": 455131,
+      "files": [
+        {
+          "path": "maps/qin.geojson",
+          "bytes": 222447,
+          "sha256": "62c3be18c91b1a2999725f99fd8b1877d896eef1218ac5ddbf6b080ba39393ff"
+        },
+        {
+          "path": "maps/qin/0.geojson",
+          "bytes": 222447,
+          "sha256": "62c3be18c91b1a2999725f99fd8b1877d896eef1218ac5ddbf6b080ba39393ff"
+        }
+      ]
+    },
+    {
+      "file": "han.br",
+      "bytes": 95195,
+      "sha256": "9323f710429c74fb70e8a6de5d6b879604bf22f88cebd5b3dde4be371d347f3b",
+      "unpackedBytes": 6049012,
+      "files": [
+        {
+          "path": "maps/han.geojson",
+          "bytes": 2208028,
+          "sha256": "93f3623fa833f882d16df7f85318539a04099638f5108a86dec25bd00d0146df"
+        },
+        {
+          "path": "maps/han/0.geojson",
+          "bytes": 233220,
+          "sha256": "f88d5b3feafc3724725b82b03f3e2c92806372657b20c2c073451b49ce33d562"
+        },
+        {
+          "path": "maps/han/1.geojson",
+          "bytes": 120471,
+          "sha256": "8606d28e97f01d69aa46bbc84081b2c87db864e5b95dc01023d170ec633e8ab7"
+        },
+        {
+          "path": "maps/han/2.geojson",
+          "bytes": 115416,
+          "sha256": "ec833ee362c1db3b63e2137bc3ce6e23378b544622ffec48d7b1531f6d11555f"
+        },
+        {
+          "path": "maps/han/3.geojson",
+          "bytes": 115551,
+          "sha256": "3df39bee36c9638c841094a1ad704a306671ccac27f7f3fcd16fef03fc822662"
+        },
+        {
+          "path": "maps/han/4.geojson",
+          "bytes": 128334,
+          "sha256": "80d572f8413998350d054349372f2ecedcb0b1bb2f9f71c0473226041dc014bd"
+        },
+        {
+          "path": "maps/han/5.geojson",
+          "bytes": 160460,
+          "sha256": "293530da53129dd38a5c52767e76bb838d70b17f2c06b89bc987a171158a07d4"
+        },
+        {
+          "path": "maps/han/6.geojson",
+          "bytes": 115095,
+          "sha256": "ebba800fb0d776bac12de6ae728622b9bbdac444f3209393bcf1e61c3a26cdf5"
+        },
+        {
+          "path": "maps/han/7.geojson",
+          "bytes": 209942,
+          "sha256": "afe252b81dccf0847a970ad7976ab27c62794af7da46186dc75c144156dfe313"
+        },
+        {
+          "path": "maps/han/8.geojson",
+          "bytes": 308016,
+          "sha256": "8fdf757f4cc2a7bde82dd95c2a6f0f84e8651320e8c534345f910548f8962d9e"
+        },
+        {
+          "path": "maps/han/9.geojson",
+          "bytes": 161041,
+          "sha256": "b975df9c34a2fbac72c77816255d11bd1ad41119cd9131b55db3e1e0d01e5b1d"
+        },
+        {
+          "path": "maps/han/10.geojson",
+          "bytes": 223634,
+          "sha256": "5897b75ea48b025278ab5ffb43c559484af4353530a6318a33625404cd3ed84f"
+        },
+        {
+          "path": "maps/han/11.geojson",
+          "bytes": 133146,
+          "sha256": "4a2e3fcaab8f521d3054e495afeb9f2c1789a6590e8bee63fc9dd026872c8821"
+        },
+        {
+          "path": "maps/han/12.geojson",
+          "bytes": 185639,
+          "sha256": "de6777bf47aecadd2030a9aedf46dd399119d23bcc2f2dde09d38930eaf0c02a"
+        },
+        {
+          "path": "maps/han/13.geojson",
+          "bytes": 176207,
+          "sha256": "c5aea330d90f13aec37c2b73f1e590febe2a0d41448053f5444ebed66aa8c275"
+        },
+        {
+          "path": "maps/han/14.geojson",
+          "bytes": 225030,
+          "sha256": "6595e5f72ac0707014dccc353693276f67079557321c2727dffa1eb2ffec79d8"
+        },
+        {
+          "path": "maps/han/15.geojson",
+          "bytes": 170290,
+          "sha256": "6671c69a70a406cf542c4d295cca4e7a23b4ca4d53fd1e83755de2e72931a5fe"
+        },
+        {
+          "path": "maps/han/16.geojson",
+          "bytes": 180143,
+          "sha256": "7dc221de7e94b27400ea6ca30e1b36e3af9dd1d5a8b65fc160e44aeea90b3f55"
+        },
+        {
+          "path": "maps/han/17.geojson",
+          "bytes": 149465,
+          "sha256": "738d3a24eca300c45078c7b3e41a3b50eeb681c124e63cc3769ee41a35a13274"
+        },
+        {
+          "path": "maps/han/18.geojson",
+          "bytes": 201927,
+          "sha256": "4edc2233f11487087156674d882f9ae68c4d831b3e25436d8b015ac688b8e1b5"
+        },
+        {
+          "path": "maps/han/19.geojson",
+          "bytes": 139807,
+          "sha256": "5744a2fc6600dc3a4e3caf8dbfa067ecfc762b37c87745ba78f803abd4348f3e"
+        },
+        {
+          "path": "maps/han/20.geojson",
+          "bytes": 194623,
+          "sha256": "642aa2e7ac10812ab9c57b804ed686d779d079257bac979a49a890b2dea9de78"
+        },
+        {
+          "path": "maps/han/21.geojson",
+          "bytes": 88160,
+          "sha256": "dc330f02de8da9c5dcaf9676e1b194fe9ef495e15ddec548163d6aa7ccbd7eae"
+        }
+      ]
+    },
+    {
+      "file": "three.br",
+      "bytes": 36843,
+      "sha256": "b081eb9dc381b63e766a5d00a546a8e8b49d71875f707b883214841478cac5c9",
+      "unpackedBytes": 988539,
+      "files": [
+        {
+          "path": "maps/three.geojson",
+          "bytes": 383165,
+          "sha256": "8ddf9acdba40c9419ce44895a41f5d487672ff7f1916a757322d45d6e2e99d83"
+        },
+        {
+          "path": "maps/three/0.geojson",
+          "bytes": 175063,
+          "sha256": "f1351bffcb8112f7e268812f3632bc977322991541ee157dc596bf9f02fd0008"
+        },
+        {
+          "path": "maps/three/1.geojson",
+          "bytes": 112309,
+          "sha256": "bf760adfd461cf0f1c2ce55cbb43141c2e042738e4316c3852bd4f147f041539"
+        },
+        {
+          "path": "maps/three/2.geojson",
+          "bytes": 216911,
+          "sha256": "0190cd954cdcda4f47aef0b970be9efdb532e5e80c8fa944344c1a0630044459"
+        },
+        {
+          "path": "maps/three/3.geojson",
+          "bytes": 83296,
+          "sha256": "8bd71bd6d42fbfa7914659330dc51445630dd8ff441a2dc6bb5ccbd38a554510"
+        }
+      ]
+    },
+    {
+      "file": "jin.br",
+      "bytes": 60452,
+      "sha256": "26b3ac2c43fa2632b24f21b9151e5ae22988cb54ccac66b6f306746f15160ead",
+      "unpackedBytes": 3302982,
+      "files": [
+        {
+          "path": "maps/jin.geojson",
+          "bytes": 1351243,
+          "sha256": "83452b18cff3abe8118f0395b6df58dd96b54702f6e2101072bc38abcb498b1b"
+        },
+        {
+          "path": "maps/jin/0.geojson",
+          "bytes": 213458,
+          "sha256": "45e7e50301621d113e2faab196a73078da71df5b89b58dc621fdb8cfe484906c"
+        },
+        {
+          "path": "maps/jin/1.geojson",
+          "bytes": 261226,
+          "sha256": "5023a13b5a6c1f69e1521b10f478005d7dae58d0253d3cdf87f43c1d9ca70376"
+        },
+        {
+          "path": "maps/jin/2.geojson",
+          "bytes": 199188,
+          "sha256": "3024c77671b8b98556130f0d032bd6c6c2239c1b9930f545c8cf62e20bc1014c"
+        },
+        {
+          "path": "maps/jin/3.geojson",
+          "bytes": 232904,
+          "sha256": "1e0640bb88fe96947ff8d028729dfc6062a2e484433a426405185867009c6cf2"
+        },
+        {
+          "path": "maps/jin/4.geojson",
+          "bytes": 240402,
+          "sha256": "95c7a00d1000ef068d15614c342931fe94a5782204a66a150775d9cba3537e55"
+        },
+        {
+          "path": "maps/jin/5.geojson",
+          "bytes": 426395,
+          "sha256": "6e8cc4d2ea07dca16c71ee089a94c2416f8f94d8385dd4c5c082158aa2439b6c"
+        },
+        {
+          "path": "maps/jin/6.geojson",
+          "bytes": 326751,
+          "sha256": "5956aef410a7e27803827d733e257b7d86ad731914a02bd2cfb2d3ca788aebdf"
+        }
+      ]
+    },
+    {
+      "file": "north-south.br",
+      "bytes": 75759,
+      "sha256": "59d9b2cbbc8ccfc4a07e66aa4893d523046d2d8d2c49a5b1a7de8ce95b480acc",
+      "unpackedBytes": 3228216,
+      "files": [
+        {
+          "path": "maps/north-south.geojson",
+          "bytes": 1252326,
+          "sha256": "04fed1f5c8d364a6c4f994b4d199a033b774132c3c7e6100cced97ad58e45648"
+        },
+        {
+          "path": "maps/north-south/0.geojson",
+          "bytes": 204177,
+          "sha256": "d1785e75e954b8a576a81f2c6e672cf146689e550de3792409deb5c5b57b5ebf"
+        },
+        {
+          "path": "maps/north-south/1.geojson",
+          "bytes": 293062,
+          "sha256": "593ca6b5b727fdb1350c448ff82c0297fec91eb9f3eb3aa7b0276906ff5f7902"
+        },
+        {
+          "path": "maps/north-south/2.geojson",
+          "bytes": 215139,
+          "sha256": "43af8acd858189ea88638ebbcff08934fc98b26e1f63e9dd9721a4bcfb4a3286"
+        },
+        {
+          "path": "maps/north-south/3.geojson",
+          "bytes": 179692,
+          "sha256": "28a1c05be084f8ee224f7073737b612fe9774542060f2fdaa57ad90bc971c6ec"
+        },
+        {
+          "path": "maps/north-south/4.geojson",
+          "bytes": 155471,
+          "sha256": "893c6c17a89a6d1c015c199e55c2f7aa9095b2f1fb3b718a67555e1966d0c59a"
+        },
+        {
+          "path": "maps/north-south/5.geojson",
+          "bytes": 322145,
+          "sha256": "cba1c4bc98038f48b6cc9c557fec657cc2a6556e3276f3213739a7932ddb1629"
+        },
+        {
+          "path": "maps/north-south/6.geojson",
+          "bytes": 264114,
+          "sha256": "06f7a1a5ae81d01932d106414d05b9ece27d6535b1af1c2b7321ff2df98fddae"
+        },
+        {
+          "path": "maps/north-south/7.geojson",
+          "bytes": 270159,
+          "sha256": "d403ba2826c1de9b25bf3a0eae40ba3f5f11d016ddd5475a8a3957e6a86052c2"
+        }
+      ]
+    },
+    {
+      "file": "sui.br",
+      "bytes": 47317,
+      "sha256": "da5e890c39c4051c9c247bd0c37e48e22739d185b914d3cd833b82a762bda0ec",
+      "unpackedBytes": 1075459,
+      "files": [
+        {
+          "path": "maps/sui.geojson",
+          "bytes": 460819,
+          "sha256": "51fea7c018ffb090b9dd7e61bc384932f630a813e8b934f580f6661979140f39"
+        },
+        {
+          "path": "maps/sui/0.geojson",
+          "bytes": 260181,
+          "sha256": "fc44ce94b0c70bc8a1f9ad2d06a86d488ff831d0e18aa6feb41e5aca71b006cd"
+        },
+        {
+          "path": "maps/sui/1.geojson",
+          "bytes": 329880,
+          "sha256": "b7e0590942804694ddf698d8e118881dfe843ea60facfc9a274f16d5b222d15d"
+        }
+      ]
+    },
+    {
+      "file": "tang.br",
+      "bytes": 216493,
+      "sha256": "bedc5a4bf52761dc790fbab5fa8997c42f10541b6911b3c1190170e6996906c3",
+      "unpackedBytes": 8648953,
+      "files": [
+        {
+          "path": "maps/tang.geojson",
+          "bytes": 3404057,
+          "sha256": "2a06d36fc092be5546532c166404701f4a3d4cd5336f91117d97ed00b48af9d8"
+        },
+        {
+          "path": "maps/tang/0.geojson",
+          "bytes": 577394,
+          "sha256": "1fe3cbbaee0fde56075a2f45b8d24108372f99536acd1dd8cde9e05e34c2c7c8"
+        },
+        {
+          "path": "maps/tang/1.geojson",
+          "bytes": 359545,
+          "sha256": "bfe4e5864552f47a8ab4c6a84d45c3529e6f5e04be2331faf447682c5da1ea7d"
+        },
+        {
+          "path": "maps/tang/2.geojson",
+          "bytes": 320965,
+          "sha256": "bfb41d6d235a4c09bd773c16d76d05a0e1581fd66167e285fbc2e0e0ac74e2d1"
+        },
+        {
+          "path": "maps/tang/3.geojson",
+          "bytes": 265468,
+          "sha256": "de2767e0fed211b8c932aea1fc79d0ff95f703f3d33080bbab06ec09c9d99d99"
+        },
+        {
+          "path": "maps/tang/4.geojson",
+          "bytes": 233070,
+          "sha256": "f20946d15b30ef8bdfaab4a21eb5401f004e996172e3b2e591c37f08470317c8"
+        },
+        {
+          "path": "maps/tang/5.geojson",
+          "bytes": 239705,
+          "sha256": "5ccfb8ab69b5126f1f8468f59f4f5bcc543351eb9cbfba3701e26c74692f82e0"
+        },
+        {
+          "path": "maps/tang/6.geojson",
+          "bytes": 424308,
+          "sha256": "a2aea928025176bf60e3741a28e1fbf191317c71e4bac9ef0bcd6895a1208a73"
+        },
+        {
+          "path": "maps/tang/7.geojson",
+          "bytes": 279030,
+          "sha256": "ba625bb7147e46ff92a392021cdb60da3412d3d7a7be2aca4b300e9f01e5229e"
+        },
+        {
+          "path": "maps/tang/8.geojson",
+          "bytes": 287071,
+          "sha256": "eccc837aa20779da5c1b8771ec951841ebe3fd4f5b89a00b559b47a1fb6a829d"
+        },
+        {
+          "path": "maps/tang/9.geojson",
+          "bytes": 287188,
+          "sha256": "71ecf64061a8e8888486f9d7d9909d586b22ab5dd7809baecff376d1bf266c6a"
+        },
+        {
+          "path": "maps/tang/10.geojson",
+          "bytes": 256041,
+          "sha256": "c65b5eb0a2472032f35af0185839c4976b441a7ca5779dc70ff977559cc9baee"
+        },
+        {
+          "path": "maps/tang/11.geojson",
+          "bytes": 298518,
+          "sha256": "c62a66f8b1da07b2a2013ccebb588468b55667222fd5e24dee618ac63d135e1d"
+        },
+        {
+          "path": "maps/tang/12.geojson",
+          "bytes": 519486,
+          "sha256": "a7bc8146ea166ede93a320d4393d4b516a1876c38f2e212f8a51dac9ab52a9a7"
+        },
+        {
+          "path": "maps/tang/13.geojson",
+          "bytes": 452074,
+          "sha256": "4df3bd1fd736cdd8c6c10d6798baacbfb0424431df54324bb07aa69da138eaef"
+        },
+        {
+          "path": "maps/tang/14.geojson",
+          "bytes": 247865,
+          "sha256": "9fee0a298e9c78d9f6180b80f6fd4fd386155a10443d03df2fe2ad8d56686dd8"
+        }
+      ]
+    },
+    {
+      "file": "five.br",
+      "bytes": 67168,
+      "sha256": "345e750711d972b57a2c5c5db060327627147f03233b3cb5daefd625e1f81fbc",
+      "unpackedBytes": 1555095,
+      "files": [
+        {
+          "path": "maps/five.geojson",
+          "bytes": 619939,
+          "sha256": "c549f4be060217626989ec061837c528bf0a7454b482b437dc038e9ec80f7d2f"
+        },
+        {
+          "path": "maps/five/0.geojson",
+          "bytes": 432997,
+          "sha256": "e6e689a04d9cdfd4c4a657ac666b2f9c07912bc834d26e8c37dd4110fbe7534f"
+        },
+        {
+          "path": "maps/five/1.geojson",
+          "bytes": 270905,
+          "sha256": "349babfac88f6a56bfc9a6b36091be347e6ea1a63b4db2911e4dfef26c2a377a"
+        },
+        {
+          "path": "maps/five/2.geojson",
+          "bytes": 182447,
+          "sha256": "c605ef4763c95dade8f6448b16802261a41a4aa6c68647f6f43bc12e3b47ae81"
+        }
+      ]
+    },
+    {
+      "file": "song.br",
+      "bytes": 296532,
+      "sha256": "817c2d787d68c83557b11ea7a9439b15912c62deba3447fddba078a74317650e",
+      "unpackedBytes": 9484663,
+      "files": [
+        {
+          "path": "maps/song.geojson",
+          "bytes": 3357172,
+          "sha256": "34566dbbf74fbb4fbcddec08d0d3aa91b3a979975c1e49958112cb52c8f7d91e"
+        },
+        {
+          "path": "maps/song/0.geojson",
+          "bytes": 340853,
+          "sha256": "56ac62fb8de7e1adf5ebdf78bc5a7a9d07ae6a0b7e82b15b296653be0d96f799"
+        },
+        {
+          "path": "maps/song/1.geojson",
+          "bytes": 269100,
+          "sha256": "66597233f827618cbff9825dda580815e82cb62ee536f63d0898b8c1f70750fa"
+        },
+        {
+          "path": "maps/song/2.geojson",
+          "bytes": 397282,
+          "sha256": "cb7e2d5debffa343331e3e49b48de722649303b97c16babae07d3cf6090ab7b2"
+        },
+        {
+          "path": "maps/song/3.geojson",
+          "bytes": 328371,
+          "sha256": "3fccf8938f826dfb057c94b9cc625429ed4d7cf15eb0e3332510dc6d1e097ff2"
+        },
+        {
+          "path": "maps/song/4.geojson",
+          "bytes": 373593,
+          "sha256": "df54170295d49e64d5790a5491e7d250a19a4ed8807e91823c6abff7249ba7e9"
+        },
+        {
+          "path": "maps/song/5.geojson",
+          "bytes": 366208,
+          "sha256": "4e0f03c14caea618d592b251a6373a4180f40f3aaac549ab59bd5cdc4ae92b4b"
+        },
+        {
+          "path": "maps/song/6.geojson",
+          "bytes": 390253,
+          "sha256": "a2c9935d83101f2a9d4348b8aa0a663fb852ca35b80a8f44d332027d07aa2658"
+        },
+        {
+          "path": "maps/song/7.geojson",
+          "bytes": 254919,
+          "sha256": "64cd7a37c7a3f593fed40834ca546e8165750dc8361464483fb12d31ceffb7bf"
+        },
+        {
+          "path": "maps/song/8.geojson",
+          "bytes": 356546,
+          "sha256": "03296c99b2c7d5f452596312eaa0259e88e689f4859a95e1e8097b0bfa33b55c"
+        },
+        {
+          "path": "maps/song/9.geojson",
+          "bytes": 353769,
+          "sha256": "9cf91b8f837ee526cce76e7848590211c0b52cfeab01f681d6abb6129b4cc214"
+        },
+        {
+          "path": "maps/song/10.geojson",
+          "bytes": 342562,
+          "sha256": "537bff7278c87bbe0ec10d3efca21d953ffdbceb34deea7450728ef749675c0f"
+        },
+        {
+          "path": "maps/song/11.geojson",
+          "bytes": 360873,
+          "sha256": "4cdb69276dd0a93cb65096e5a5efa849d7cc961cc437d98bef8f1d73e142a15a"
+        },
+        {
+          "path": "maps/song/12.geojson",
+          "bytes": 555991,
+          "sha256": "7613d265bb8c5b0244f9f1a494208026c3fedd53243dfe5c7c82013a536eb9d9"
+        },
+        {
+          "path": "maps/song/13.geojson",
+          "bytes": 412945,
+          "sha256": "019ebd50b5ee3e2259d25964c7dddea8dfe2587353ae55c9b8e7a3524c9bb23b"
+        },
+        {
+          "path": "maps/song/14.geojson",
+          "bytes": 405149,
+          "sha256": "79b605a815062b67216946e2a4d12ab21f24a63534a69b753a854091fa1ee1c1"
+        },
+        {
+          "path": "maps/song/15.geojson",
+          "bytes": 297027,
+          "sha256": "4a15df1339003089d01dbd2a4a4cb88038b78fa90a8dcc9a833dcc478b5ee40d"
+        }
+      ]
+    },
+    {
+      "file": "yuan.br",
+      "bytes": 110046,
+      "sha256": "9fab134c52326563c6b204a8e61e52dffb48bb19cbac979423577b1c17219891",
+      "unpackedBytes": 3633219,
+      "files": [
+        {
+          "path": "maps/yuan.geojson",
+          "bytes": 1321063,
+          "sha256": "ab9f06a311092bd78082f0d759c0348c2664f571cdf2d2a81d34d9e3f2254628"
+        },
+        {
+          "path": "maps/yuan/0.geojson",
+          "bytes": 435044,
+          "sha256": "d58c9c6bcfbb9857d426ce2c2b179bd0273f23ee40abec3a613643328ef2c3be"
+        },
+        {
+          "path": "maps/yuan/1.geojson",
+          "bytes": 417948,
+          "sha256": "d233095ba4dc04ad79acfcf2839af77214bae492316294cf46fdec46e6dd16da"
+        },
+        {
+          "path": "maps/yuan/2.geojson",
+          "bytes": 464044,
+          "sha256": "96bec355560b1f93c24c8aa4690b564b8ac735d948f506c9e2f8648a901c0b98"
+        },
+        {
+          "path": "maps/yuan/3.geojson",
+          "bytes": 499640,
+          "sha256": "593983f81ecf1a3281e0b6a9999fe72cce05cbd6764ee616d7dee636553c7d39"
+        },
+        {
+          "path": "maps/yuan/4.geojson",
+          "bytes": 382725,
+          "sha256": "2fe557d09047fefc8c86d2ec159a8799a4f66debcd2e2e59be16f7bb9072bf89"
+        }
+      ]
+    },
+    {
+      "file": "ming.br",
+      "bytes": 561201,
+      "sha256": "21a4ee964e89e5da817e99aa8d63d23768368c7149d49701351d3fe136eb6803",
+      "unpackedBytes": 19257139,
+      "files": [
+        {
+          "path": "maps/ming.geojson",
+          "bytes": 7851569,
+          "sha256": "4593ec4fd0981582ae16659ec2dae7a97e1a28a34a2de637963ff87aaf4bacee"
+        },
+        {
+          "path": "maps/ming/0.geojson",
+          "bytes": 522769,
+          "sha256": "f956c94e713a30f2b3790fa46584fd9e9291570060ec85c48c1d68eb871ffba2"
+        },
+        {
+          "path": "maps/ming/1.geojson",
+          "bytes": 634990,
+          "sha256": "7aa24d8f47ef9ab6518278523b567300f8e945e27d45859db99583f79f8e2869"
+        },
+        {
+          "path": "maps/ming/2.geojson",
+          "bytes": 511822,
+          "sha256": "7fa5ab544c0cd61bd3dd59db36cefea0a2ffee0f31a1cd8339f78cd5fe5c84de"
+        },
+        {
+          "path": "maps/ming/3.geojson",
+          "bytes": 557243,
+          "sha256": "f745767c4d064d45dabb7a459594b2381faa30b7f5255105004c7f7e1d1227fa"
+        },
+        {
+          "path": "maps/ming/4.geojson",
+          "bytes": 704206,
+          "sha256": "43dcd5d65aba07c5d530cc64022fb54bfb07678b7147c4a531be1402bad309a3"
+        },
+        {
+          "path": "maps/ming/5.geojson",
+          "bytes": 659385,
+          "sha256": "bb5ee09527e1ea2488bf7b33003a626cf0871fc2771dc4358221990c54e098ea"
+        },
+        {
+          "path": "maps/ming/6.geojson",
+          "bytes": 712341,
+          "sha256": "79295af6c22ff39743bbf8413461eb023182b700f8bcb91cefa4f38569853c30"
+        },
+        {
+          "path": "maps/ming/7.geojson",
+          "bytes": 891846,
+          "sha256": "aaadc11f7e8b81e8af96120c1bb50583d736f8682255d897aceb1ad1bde44952"
+        },
+        {
+          "path": "maps/ming/8.geojson",
+          "bytes": 844956,
+          "sha256": "8024a549e10db9ea00a3c089424ce98951d173ec34a43ab2a1019ee7df5aada6"
+        },
+        {
+          "path": "maps/ming/9.geojson",
+          "bytes": 811894,
+          "sha256": "754f53ddd05956101afc283ad7cc476485fe722bfde98a744d3dd4fd1aca0e85"
+        },
+        {
+          "path": "maps/ming/10.geojson",
+          "bytes": 839281,
+          "sha256": "d6004d96435114a36674eccf41e89db657d91b89c1452c69bb3bfcbe617d16f7"
+        },
+        {
+          "path": "maps/ming/11.geojson",
+          "bytes": 852520,
+          "sha256": "bf4f2d479d27620f870a0a8f852535845a38b9c3a982c3334c1c432bdae7a67e"
+        },
+        {
+          "path": "maps/ming/12.geojson",
+          "bytes": 1183714,
+          "sha256": "198b143c55bf399558e1fe5cb06b0d3b2c763f17588753f03d5366882ce6fa06"
+        },
+        {
+          "path": "maps/ming/13.geojson",
+          "bytes": 1332483,
+          "sha256": "9915c9bd4d2d901be0819a355eb5f5e755731a00fd9e769d0836636597d2e9f7"
+        }
+      ]
+    },
+    {
+      "file": "qing.br",
+      "bytes": 1155456,
+      "sha256": "f2f640694b25b0e45a4e54519b83282d5cf13fbf7afa4f5d963f132b2bb36d45",
+      "unpackedBytes": 54712535,
+      "files": [
+        {
+          "path": "maps/qing.geojson",
+          "bytes": 24710408,
+          "sha256": "890ad2d64607bc54d4d60c103d3b2b5a1a03e67e5901d32ddec15d322024d312"
+        },
+        {
+          "path": "maps/qing/0.geojson",
+          "bytes": 1287037,
+          "sha256": "2641a90cb8600fd270c972c609acdab5d302ea05befe07dc91b435f4b1399f9b"
+        },
+        {
+          "path": "maps/qing/1.geojson",
+          "bytes": 1333705,
+          "sha256": "7031d262bde457ffe4c7acc5c0d0ea8672c43b4c7980129c98abbb64f351e1e3"
+        },
+        {
+          "path": "maps/qing/2.geojson",
+          "bytes": 1560645,
+          "sha256": "4162f09bb65d39fa0fdb814ce64319ebecd414ab1ba422a5c03013e2c48c2ad8"
+        },
+        {
+          "path": "maps/qing/3.geojson",
+          "bytes": 1677395,
+          "sha256": "47b7f95e55d0f8ef277bfb2785c5e63141c9c44d4b5e4efadb0e96719fbad094"
+        },
+        {
+          "path": "maps/qing/4.geojson",
+          "bytes": 1367722,
+          "sha256": "f9597e50e18c2cc251228eddbde50d5ef106ac6f85a2bd5c7ac574792906f9ae"
+        },
+        {
+          "path": "maps/qing/5.geojson",
+          "bytes": 1802210,
+          "sha256": "20bceaad58666ca696813ebc2c4a2d694cdc7bbfc1e2c726d50ddc199b5c3be2"
+        },
+        {
+          "path": "maps/qing/6.geojson",
+          "bytes": 2161137,
+          "sha256": "5ac970405d2f4b846c9d5d3f533314f5596e8448f3b32b739d2118c29120aa20"
+        },
+        {
+          "path": "maps/qing/7.geojson",
+          "bytes": 2819523,
+          "sha256": "07859da31683f7d05791066d80c3a45ab827397cf74f4a7ac84bf371680cfcd0"
+        },
+        {
+          "path": "maps/qing/8.geojson",
+          "bytes": 3339277,
+          "sha256": "a7e62d2e8ed5fe8e34ed54bf1fcba6254b12468c24e51f98a8e38ae0e3aaac45"
+        },
+        {
+          "path": "maps/qing/9.geojson",
+          "bytes": 2100555,
+          "sha256": "76be8feaad519722e9c49d39e9c7f453a94f98ed45258e861440cc0cd94f4efa"
+        },
+        {
+          "path": "maps/qing/10.geojson",
+          "bytes": 3247506,
+          "sha256": "49bebd4a427bb47705349e2c000f7e088f61f0d93d9d6d3bbd5c3947e0a3294f"
+        },
+        {
+          "path": "maps/qing/11.geojson",
+          "bytes": 2619207,
+          "sha256": "c0606331666bbef2c8aeb9378d096531de72a0ba29b57c74dd9824d5dcd0ebb7"
+        },
+        {
+          "path": "maps/qing/12.geojson",
+          "bytes": 2441338,
+          "sha256": "768476f6c9837cfe0d5919c054f72e971587c41a01dc76fc441431ce947ddbe5"
+        },
+        {
+          "path": "maps/qing/13.geojson",
+          "bytes": 1775846,
+          "sha256": "d04f5ac36e14717e16febe596945ef2745c701342400f1b9fae9fbc83ff3c84c"
+        }
+      ]
+    },
+    {
+      "file": "geography.br",
+      "bytes": 304089,
+      "sha256": "624e0dc427bf30c499ba52386109a4c8f70175343aefa7c56fd5f1de67ab0dd6",
+      "unpackedBytes": 1013424,
+      "files": [
+        {
+          "path": "land.geojson",
+          "bytes": 613743,
+          "sha256": "c5b1b70a7effb83b53dff846ebbae306b13d7db5a4533571d7289a3026a216b9"
+        },
+        {
+          "path": "lakes.geojson",
+          "bytes": 148736,
+          "sha256": "9b7b40d84127931e9e8c857d82afc92dbba09ea8a253e47d2b6c4dd270dee76f"
+        },
+        {
+          "path": "rivers_lake_centerlines.geojson",
+          "bytes": 218722,
+          "sha256": "a80598f7a79dc3c71f0ae3eabee95c16435b9a76d039aa68d4603639d82ef562"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+.detail-lead p,
+.dynasty-reading-section p,
+.topic-introduction > p,
+.topic-chapter-context p,
+.topic-conclusion p {
+  line-height: 1.95;
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+.event-narrative p,
+.person-biography p {
+  font-size: 13px;
+  line-height: 1.95;
+  margin: 0 0 14px;
+}
+.dynasty-reading-section {
+  margin: 20px 0;
+  font-size: 13px;
+}
+.dynasty-chronology {
+  margin: 26px 0;
+}
+.dynasty-chronology h3 small {
+  font: 11px var(--sans);
+  color: #847565;
+}
+.dynasty-chronology ol,
+.topic-chapter-list {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+}
+.dynasty-chronology button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid #e8e1d5;
+  background: transparent;
+}
+.dynasty-chronology button > span {
+  font: 12px var(--sans);
+  width: 42px;
+  flex-shrink: 0;
+  color: #847357;
+}
+.dynasty-chronology button > div {
+  flex: 1;
+  min-width: 0;
+}
+.dynasty-chronology small,
+.topic-chapter-list small {
+  display: block;
+  font-size: 10px;
+  color: #867b6c;
+  margin-bottom: 5px;
+}
+.dynasty-chronology strong {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.dynasty-chronology button:hover,
+.topic-chapter-list button:hover {
+  background: #f0eee3;
+}
+.topic-introduction > p {
+  font-size: 13px;
+}
+.topic-question {
+  padding: 15px;
+  background: #ecefe4;
+  color: #52624d;
+  border-left: 3px solid #7c926c;
+  font-size: 15px !important;
+}
+.topic-reading-help {
+  color: #827766;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.topic-chapter-list button {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid #e5ded2;
+  background: transparent;
+  text-align: left;
+}
+.topic-chapter-list button > span {
+  font: 16px var(--sans);
+  color: #9c8a65;
+  flex-shrink: 0;
+}
+.topic-chapter-list button > div {
+  flex: 1;
+  min-width: 0;
+}
+.topic-chapter-list strong {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.topic-chapter-list p {
+  color: #786f61;
+  font-size: 12px;
+  line-height: 1.85;
+  margin: 8px 0 0;
+}
+.topic-chapter-list svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.topic-conclusion {
+  padding: 15px;
+  background: #f0ecdf;
+  margin: 24px 0;
+  font-size: 13px;
+}
+.topic-chapter-context {
+  margin: 0 0 25px;
+  border: 1px solid #dce3d1;
+  background: #f4f5eb;
+  border-radius: 6px;
+  padding: 15px;
+}
+.topic-chapter-context h3 {
+  font-size: 16px;
+  margin: 9px 0 12px;
+}
+.topic-chapter-context p {
+  font-size: 12px;
+}
+.topic-map-reading {
+  border-top: 1px solid #dedfce;
+  padding-top: 12px;
+}
+.topic-map-reading strong {
+  display: block;
+  font-size: 11px;
+  color: #687b60;
+  margin-bottom: 5px;
+}
+.topic-chapter-links {
+  display: flex;
+  gap: 8px;
+}
+.topic-chapter-links button {
+  font-size: 11px;
+  padding: 6px 8px;
+  color: #647659;
+  background: #fffef8;
+  border: 1px solid #d4dacb;
+  border-radius: 4px;
+}
+.event-reading-links {
+  margin: 24px 0;
+  border-top: 1px solid #e2ded4;
+  padding-top: 14px;
+}
+.event-reading-links button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 10px 0;
+  color: #687b60;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.journey-marker {
+  display: grid;
+  grid-template-columns: 23px auto;
+  gap: 2px 6px;
+  padding: 6px 8px;
+  border: 1px solid #d9cedf;
+  background: #fffdf5ed;
+  border-radius: 6px;
+  box-shadow: 0 2px 9px #49345515;
+  text-align: left;
+  max-width: 174px;
+}
+.journey-marker .event-marker-dot {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: center;
+  margin: 0;
+}
+.journey-marker > small {
+  grid-column: 2;
+  grid-row: 1;
+  background: transparent;
+  white-space: nowrap;
+  padding: 0;
+  font-size: 9px;
+}
+.journey-node-label {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.journey-node-label strong {
+  font-size: 11px;
+  line-height: 1.35;
+  color: #60546b;
+}
+.journey-node-label > span {
+  font-size: 9px;
+  color: #85768c;
+  line-height: 1.4;
+}
+.journey-marker.selected {
+  border-color: #bda072;
+  background: #fff8e6;
+}
+.topic-marker {
+  display: grid;
+  grid-template-columns: 23px auto;
+  gap: 3px 5px;
+  padding: 5px 7px;
+  border: 1px solid #d9dfcf;
+  border-radius: 5px;
+  background: #fffdf5f2;
+  max-width: 165px;
+  text-align: left;
+}
+.topic-marker .event-marker-dot {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+.topic-marker small {
+  grid-column: 2;
+  background: transparent;
+  padding: 0;
+}
+.topic-marker-label {
+  grid-column: 2;
+  font-size: 10px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #586b4c;
+}
+.topic-marker.selected {
+  background: #fff7df;
+  border-color: #c6a973;
+}
+.journey-biography p {
+  font-size: 13px;
+  line-height: 1.95;
+}
+.dynasty-jump {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  background: #edf0e6;
+  color: #667d55;
+  border: 0;
+  padding: 9px 11px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+.dynasty-event-filter {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 11px;
+  border: 1px solid #ddd7c9;
+  border-radius: 4px;
+  background: #fffdf6;
+  font: 12px var(--sans);
+  color: #5e574c;
+}
+.dynasty-filter-count {
+  display: flex;
+  justify-content: space-between;
+  color: #877d6b;
+  font-size: 11px;
+}
+.dynasty-filter-count button {
+  border: 0;
+  background: transparent;
+  color: #677f55;
+  font-size: 11px;
+}
+@media (max-width: 700px) {
+  .story-panel:has(.event-detail) .detail-navigation {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .event-detail .detail-kicker {
+    margin-bottom: 6px;
+  }
+  .event-detail h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    margin: 6px 0 8px;
+  }
+  .event-detail .detail-location {
+    margin: 6px 0;
+  }
+  .event-detail .detail-rule {
+    margin: 12px 0;
+  }
+  .event-detail > .detail-lead {
+    line-height: 1.8;
+    margin: 10px 0 18px;
+  }
+  .journey-marker {
+    max-width: 130px;
+    padding: 4px 6px;
+    gap: 2px 4px;
+  }
+  .journey-node-label strong {
+    font-size: 10px;
+  }
+  .topic-chapter-context {
+    padding: 12px;
+  }
+}

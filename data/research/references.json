@@ -1,0 +1,5994 @@
+{
+  "generatedAt": "2026-10-07T07:11:22.777Z",
+  "sources": [
+    {
+      "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024，第17页）",
+      "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "title": "陕西省地方志 · 半坡类型仰韶文化年代",
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "埃及旅游与文物部 · Early Dynastic Period",
+      "url": "https://egymonuments.gov.eg/en/historical-periods/early-dynastic-period",
+      "references": [
+        {
+          "kind": "event",
+          "id": "egypt-unification"
+        }
+      ]
+    },
+    {
+      "title": "埃及旅游与文物部 · 左塞尔阶梯金字塔",
+      "url": "https://egymonuments.gov.eg/en/news/a-virtual-tour-through-the-step-pyramid-complex-of-djoser",
+      "references": [
+        {
+          "kind": "event",
+          "id": "djoser-step-pyramid"
+        }
+      ]
+    },
+    {
+      "title": "埃及旅游与文物部 · 胡夫大金字塔",
+      "url": "https://egymonuments.gov.eg/monuments/the-great-pyramid/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "khufu-pyramid"
+        }
+      ]
+    },
+    {
+      "title": "平顶山学院 · 苏轼年谱简编",
+      "url": "https://fns.pdsu.edu.cn/info/1062/1655.htm",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wutai-poetry"
+        },
+        {
+          "kind": "event",
+          "id": "sushi-red-cliff"
+        },
+        {
+          "kind": "event",
+          "id": "sudi"
+        },
+        {
+          "kind": "person",
+          "id": "sushi"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-birth"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-exam"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-mourning"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-fengxiang"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-court-1065"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-father-mourning"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-court-1069"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-hangzhou-first"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-mizhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-xuzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-huzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-prison"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-huangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-red-cliff"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-lushan"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-jinling"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-changzhou-1085"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-dengzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-court-1086"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-hangzhou-second"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-sudi"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-court-1091"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-yingzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-yangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-court-1092"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-dingzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-huizhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-danzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-yingzhou-return"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-qianzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-death"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 凌家滩玉器展单元与墓葬说明",
+      "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "title": "杭州文物遗产与历史建筑保护中心 · 跨湖桥遗址博物馆（杭州网刊载）",
+      "url": "https://hznews.hangzhou.com.cn/wghz/content/2026-05/18/content_9224937.htm",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kuahuqiao-canoe"
+        }
+      ]
+    },
+    {
+      "title": "英国图书馆 · The Diamond Sutra",
+      "url": "https://idp.bl.uk/references/DiamondSutra/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "diamond-sutra"
+        }
+      ]
+    },
+    {
+      "title": "湖北考古年度报告 · 屈家岭遗址中心坐标（第32页）",
+      "url": "https://img.cjyun.org.cn/a/10695/202303/76adee32725a5022b1ed8a5e15c15640.pdf?202102191717216666=",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "title": "日本绳文遗址官方门户 · 三内丸山遗址",
+      "url": "https://jomon-japan.jp/en/learn/jomon-sites/sannai-maruyama",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sannai-maruyama"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学院考古研究所 · 陶寺考古队领队谈遗址年代",
+      "url": "https://kaogu.cssn.cn/xwzx/bszx/xsjz/202301/t20230106_5963427.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taosi-city"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学院考古研究所 · 陶寺考古报告与城址布局",
+      "url": "https://kaogu.cssn.cn/xwzx/kgdt/201512/t20151215_5943668.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taosi-city"
+        }
+      ]
+    },
+    {
+      "title": "湖北省文物考古研究院 · 石家河文化序列",
+      "url": "https://m-www.hbkgy.com/kgcz/p/10746.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shijiahe-city"
+        }
+      ]
+    },
+    {
+      "title": "湖北省文物考古研究院 · 熊家岭史前水利系统",
+      "url": "https://m-www.hbkgy.com/kgcz/p/9440.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "title": "教育部 · 子产铸刑书",
+      "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "title": "山东地情档案 · 大汶口遗址",
+      "url": "https://shandong-chorography.org/database/a/section/70/article/24/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dawenkou-burials"
+        }
+      ]
+    },
+    {
+      "title": "山东地情档案 · 城子崖遗址",
+      "url": "https://shandong-chorography.org/database/a/section/70/article/39/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chengziya-longshan"
+        }
+      ]
+    },
+    {
+      "title": "山东地情档案 · 孟子志 · 生卒年月与游梁考证",
+      "url": "https://shandong-chorography.org/database/zzmj/section/19/article/9/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "mencius-liang"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-梁惠王"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 青城山与都江堰",
+      "url": "https://whc.unesco.org/en/list/1001/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dujiangyan"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 殷墟",
+      "url": "https://whc.unesco.org/en/list/1114/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 卡拉尔—苏佩圣城",
+      "url": "https://whc.unesco.org/en/list/1269/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "caral-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 杭州西湖文化景观",
+      "url": "https://whc.unesco.org/en/list/1334/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sudi"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 摩亨佐达罗考古遗址",
+      "url": "https://whc.unesco.org/en/list/138/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "moenjodaro-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 恰塔霍裕克新石器时代遗址",
+      "url": "https://whc.unesco.org/en/list/1405/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "catalhoyuk"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 长安—天山廊道",
+      "url": "https://whc.unesco.org/en/list/1442/",
+      "note": "丝路节点与历史联系参考，示意线不代表精确行程。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhangqian"
+        },
+        {
+          "kind": "event",
+          "id": "hexi"
+        },
+        {
+          "kind": "event",
+          "id": "zhangqian-second"
+        },
+        {
+          "kind": "event",
+          "id": "western-regions"
+        },
+        {
+          "kind": "event",
+          "id": "ban-chao"
+        },
+        {
+          "kind": "event",
+          "id": "xuanzang"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 大运河",
+      "url": "https://whc.unesco.org/en/list/1443/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huitong-canal"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 宋元中国的世界海洋商贸中心泉州",
+      "url": "https://whc.unesco.org/en/list/1561/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "quanzhou-office"
+        },
+        {
+          "kind": "topic",
+          "id": "song-learning"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 哥贝克力石阵",
+      "url": "https://whc.unesco.org/en/list/1572/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gobekli-tepe"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 良渚古城遗址",
+      "url": "https://whc.unesco.org/en/list/1592/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liangzhu-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 多拉维拉：哈拉帕文明古城",
+      "url": "https://whc.unesco.org/en/list/1645/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dholavira-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 古代杰里科/苏丹丘",
+      "url": "https://whc.unesco.org/en/list/1687/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jericho-neolithic"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 奥克尼新石器时代遗址",
+      "url": "https://whc.unesco.org/en/list/514/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 乔伊鲁科蒂亚",
+      "url": "https://whc.unesco.org/en/list/848/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "choirokoitia-village"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 古都奈良的历史遗迹（含唐招提寺）",
+      "url": "https://whc.unesco.org/en/list/870/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jianzhen"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 库克早期农业遗址",
+      "url": "https://whc.unesco.org/en/list/887/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kuk-early-farming"
+        }
+      ]
+    },
+    {
+      "title": "湖北省文旅厅 · 李时珍纪念馆所述本草纲目编撰与出版",
+      "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "materia-medica-draft"
+        },
+        {
+          "kind": "event",
+          "id": "materia-medica-publication"
+        },
+        {
+          "kind": "person",
+          "id": "q698925"
+        }
+      ]
+    },
+    {
+      "title": "郑州市文物局 · 裴李岗遗址考古新发现",
+      "url": "https://wwj.zhengzhou.gov.cn/wwyw/9992327.jhtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "peiligang-settlement"
+        }
+      ]
+    },
+    {
+      "title": "西安半坡博物馆 · 遗址与功能分区",
+      "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学院 · 兴隆沟聚落与旱作农业",
+      "url": "https://www.cass.cn/xueshuchengguo/wenzhexuebulishixuebu/201707/t20170720_3585032.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinglonggou-millet"
+        }
+      ]
+    },
+    {
+      "title": "朝阳市人民政府 · 牛河梁遗址概述",
+      "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "niuheliang-ritual"
+        }
+      ]
+    },
+    {
+      "title": "河南博物院 · 贾湖遗址刻符龟甲",
+      "url": "https://www.chnmus.net/ch/collection/appraise/details.html?id=512158961319772606",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiahu-settlement"
+        }
+      ]
+    },
+    {
+      "title": "河南博物院 · 仰韶文化与彩陶",
+      "url": "https://www.chnmus.net/clzl/2015-12/28/content_234646.htm",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yangshao-culture"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 丝路孔道：大地湾文化",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/20190516slkd/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dadiwan-settlement"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 中国古代钱币展",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/202102gdqianbi/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wuzhu-currency"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 浙江上山文化考古特展",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/202111sswhkg/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shangshan-culture"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 秦汉时期",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/gudai/detail4.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qin-standardization"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 马家窑彩陶与制陶工艺",
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/nmcinthesky/test/wwlist.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "majiayao-pottery"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 江南制造局造船清单",
+      "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "self-strengthening-course"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 人面鱼纹彩陶盆",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202008/t20200824_247218.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 林家遗址青铜刀",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202107/t20210722_250778.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "linjia-bronze"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 商前期原始瓷尊",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202107/t20210728_250886.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "early-porcelain"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 利簋与武王克商",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202108/t20210802_250931.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "muye"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学网 · 石峁遗址的考古发现与研究综述",
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shimao-city"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 ·《康熙字典》",
+      "url": "https://www.dpm.org.cn/ancient/hall/165349.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kangxi-dictionary"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 几何原本",
+      "url": "https://www.dpm.org.cn/ancient/mingqing/142246.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "euclid-chinese"
+        },
+        {
+          "kind": "person",
+          "id": "depth-ricci"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 营造法式",
+      "url": "https://www.dpm.org.cn/ancient/mingqing/149329.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yingzao-fashi"
+        },
+        {
+          "kind": "person",
+          "id": "q1822568"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 同治中兴与洋务",
+      "url": "https://www.dpm.org.cn/court/event/161110.html",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "self-strengthening-course"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 道光皇帝大事年表",
+      "url": "https://www.dpm.org.cn/court/lineage/226239.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "humen-battle"
+        },
+        {
+          "kind": "event",
+          "id": "sanyuanli"
+        },
+        {
+          "kind": "event",
+          "id": "humen-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "wangxia-huangpu"
+        },
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 咸丰皇帝大事年表",
+      "url": "https://www.dpm.org.cn/court/lineage/226247.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taiping-nanjing"
+        },
+        {
+          "kind": "event",
+          "id": "aigun-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "tianjin-treaties"
+        },
+        {
+          "kind": "event",
+          "id": "dagu-1859"
+        },
+        {
+          "kind": "event",
+          "id": "beijing-treaties"
+        },
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 同治皇帝大事年表",
+      "url": "https://www.dpm.org.cn/court/lineage/226248.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zongli-yamen"
+        },
+        {
+          "kind": "event",
+          "id": "xinyou-coup"
+        },
+        {
+          "kind": "event",
+          "id": "tongwen-college"
+        },
+        {
+          "kind": "event",
+          "id": "fuzhou-shipyard"
+        },
+        {
+          "kind": "event",
+          "id": "students-abroad"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 光绪皇帝大事年表",
+      "url": "https://www.dpm.org.cn/court/lineage/226254.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinjiang-campaign"
+        },
+        {
+          "kind": "event",
+          "id": "ili-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "mawei-battle"
+        },
+        {
+          "kind": "event",
+          "id": "taiwan-province"
+        },
+        {
+          "kind": "event",
+          "id": "beiyang-fleet"
+        },
+        {
+          "kind": "event",
+          "id": "pyongyang-1894"
+        },
+        {
+          "kind": "event",
+          "id": "yellow-sea-1894"
+        },
+        {
+          "kind": "event",
+          "id": "lushun-1894"
+        },
+        {
+          "kind": "event",
+          "id": "weihai-1895"
+        },
+        {
+          "kind": "event",
+          "id": "wuxu-coup"
+        },
+        {
+          "kind": "event",
+          "id": "imperial-university"
+        },
+        {
+          "kind": "event",
+          "id": "late-qing-new-policies"
+        },
+        {
+          "kind": "event",
+          "id": "guimao-schools"
+        },
+        {
+          "kind": "event",
+          "id": "constitutional-outline"
+        },
+        {
+          "kind": "topic",
+          "id": "first-sino-japanese"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 康熙皇帝生平与大事年表",
+      "url": "https://www.dpm.org.cn/court/lineage/226256.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kangxi-accession"
+        },
+        {
+          "kind": "event",
+          "id": "zheng-taiwan"
+        },
+        {
+          "kind": "event",
+          "id": "aobai"
+        },
+        {
+          "kind": "event",
+          "id": "three-feudatories"
+        },
+        {
+          "kind": "event",
+          "id": "three-feudatories-end"
+        },
+        {
+          "kind": "event",
+          "id": "kangxi-south"
+        },
+        {
+          "kind": "event",
+          "id": "duolun"
+        },
+        {
+          "kind": "event",
+          "id": "zhaomodo"
+        },
+        {
+          "kind": "event",
+          "id": "yongzheng"
+        },
+        {
+          "kind": "person",
+          "id": "kangxi"
+        },
+        {
+          "kind": "person",
+          "id": "zhengchenggong"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-birth"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-accession"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-shengjing"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-nanjing-1684"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-qufu"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-shaoxing"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-nanjing-1689"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-duolun"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-ningxia"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-wutai-1698"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-shengjing-1698"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-hangzhou-1699"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-nanjing-1699"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-wutai-1710"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-death"
+        },
+        {
+          "kind": "topic",
+          "id": "qing-state"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 军机处",
+      "url": "https://www.dpm.org.cn/court/system/236360.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "grand-council-origins"
+        },
+        {
+          "kind": "person",
+          "id": "q317839"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 文明先锋——凌家滩文化玉器展",
+      "url": "https://www.dpm.org.cn/journal_detail/370638.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 利玛窦",
+      "url": "https://www.dpm.org.cn/lemmas/240156.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-ricci"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 张旭",
+      "url": "https://www.dpm.org.cn/lemmas/241546.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q717343"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 李诫",
+      "url": "https://www.dpm.org.cn/lemmas/244533.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1822568"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 曹雪芹",
+      "url": "https://www.dpm.org.cn/lemmas/245565.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dream-red-chamber-jiaxu"
+        },
+        {
+          "kind": "person",
+          "id": "q182874"
+        }
+      ]
+    },
+    {
+      "title": "二里头遗址 · 考古发现与许宏访谈",
+      "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
+      "note": "以约前1800—前1500年的概括区间介绍遗址，不主张所有阶段均属夏，也不从遗址推断国界。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "erlitou-centre"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        }
+      ]
+    },
+    {
+      "title": "湖北省文物考古研究院 · 石家河遗址与中华文明",
+      "url": "https://www.hbkgy.com/yjy_mtbd/p/8895.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shijiahe-city"
+        }
+      ]
+    },
+    {
+      "title": "湖北省文物考古研究院 · 屈家岭遗址参评资料",
+      "url": "https://www.hbkgy.com/yjy_mtbd/p/9557.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
+      "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 书写的起源",
+      "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+      "references": [
+        {
+          "kind": "event",
+          "id": "uruk-writing"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Uruk: The First City",
+      "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
+      "references": [
+        {
+          "kind": "event",
+          "id": "uruk-city"
+        }
+      ]
+    },
+    {
+      "title": "宁波博物院 · 河姆渡文化考古成果特展",
+      "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "title": "宁波博物院 · 远古江南·海陆山河",
+      "url": "https://www.nbmuseum.cn/art/2025/4/15/art_20679_163.html",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "title": "国家民委 · 夏商周纪年与武王克商的考定",
+      "url": "https://www.neac.gov.cn/seac/c103391/202306/1164738.shtml",
+      "note": "采用常见年代框架，不把前841年之前的争议年代当作无争议的精确纪年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xia-tradition"
+        },
+        {
+          "kind": "event",
+          "id": "shang-begins"
+        },
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "event",
+          "id": "muye"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "泉州市政府 · 市舶司遗址",
+      "url": "https://www.quanzhou.gov.cn/gastronomy/en/about/unesco-heritage/202412/t20241228_3123995.htm",
+      "references": [
+        {
+          "kind": "event",
+          "id": "quanzhou-office"
+        }
+      ]
+    },
+    {
+      "title": "珠海博物馆 · 容闳",
+      "url": "https://www.zhmuseum.org.cn/yanjiu/mrgsInfo?id=7",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-ronghong"
+        }
+      ]
+    },
+    {
+      "title": "中山市文化广电旅游局 · 容闳",
+      "url": "https://www.zs.gov.cn/zjzs/zsmr/content/post_220052.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-ronghong"
+        }
+      ]
+    },
+    {
+      "title": "林语堂 · 平心论高鹗（中研院史语所保存）",
+      "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/4184hnGgNFN.pdf",
+      "note": "此处仅参考甲戌本年代资料，不采用论文中有争议的续作判断。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dream-red-chamber-jiaxu"
+        }
+      ]
+    },
+    {
+      "title": "山东艺术学院 · 荆浩与《笔法记》",
+      "url": "https://ysglxy.sdca.edu.cn/info/1049/1316.htm",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2665475"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/三國志",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "dynasty",
+          "id": "wei"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "wu"
+        },
+        {
+          "kind": "topic",
+          "id": "three-kingdoms"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷1",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷01",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yellow-turbans"
+        },
+        {
+          "kind": "event",
+          "id": "dongzhuo"
+        },
+        {
+          "kind": "event",
+          "id": "xuchang"
+        },
+        {
+          "kind": "event",
+          "id": "cao-tuntian"
+        },
+        {
+          "kind": "event",
+          "id": "guandu"
+        },
+        {
+          "kind": "event",
+          "id": "chibi"
+        },
+        {
+          "kind": "event",
+          "id": "hanzhong"
+        },
+        {
+          "kind": "person",
+          "id": "yuanshao"
+        },
+        {
+          "kind": "person",
+          "id": "caocao"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷2",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷02",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wei-founded"
+        },
+        {
+          "kind": "person",
+          "id": "caopi"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷8",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷08",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sima-liaodong"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-公孙渊"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷22",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷22",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-rank"
+        },
+        {
+          "kind": "person",
+          "id": "depth-chenqun"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷28",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷28",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shu-falls"
+        },
+        {
+          "kind": "person",
+          "id": "dengai"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷32",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷32",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chibi"
+        },
+        {
+          "kind": "event",
+          "id": "yizhou"
+        },
+        {
+          "kind": "event",
+          "id": "hanzhong"
+        },
+        {
+          "kind": "event",
+          "id": "shu-founded"
+        },
+        {
+          "kind": "event",
+          "id": "yiling"
+        },
+        {
+          "kind": "person",
+          "id": "liubei"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷33",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷33",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shu-falls"
+        },
+        {
+          "kind": "person",
+          "id": "liushan"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷35",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷35",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chushibiao"
+        },
+        {
+          "kind": "event",
+          "id": "northern-expedition"
+        },
+        {
+          "kind": "event",
+          "id": "wuzhang"
+        },
+        {
+          "kind": "person",
+          "id": "zhugeliang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-longzhong"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-chaisang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-chengdu"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-yongan"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-hanzhong"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-wuzhang"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷36",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷36",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yanzhou-guan"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷46",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷46",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sunce-jiangdong"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-刘繇"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷47",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷47",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wu-emperor"
+        },
+        {
+          "kind": "person",
+          "id": "sunquan"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷54",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷54",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chibi"
+        },
+        {
+          "kind": "event",
+          "id": "chibi"
+        },
+        {
+          "kind": "person",
+          "id": "zhouyu"
+        }
+      ]
+    },
+    {
+      "title": "《三國志》卷58",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷58",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yiling"
+        },
+        {
+          "kind": "event",
+          "id": "shiting"
+        },
+        {
+          "kind": "person",
+          "id": "luxun"
+        }
+      ]
+    },
+    {
+      "title": "《九章算术》· 刘徽注序与正文",
+      "url": "https://zh.wikisource.org/wiki/九章算術",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liuhui"
+        }
+      ]
+    },
+    {
+      "title": "《元史》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/元史",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q10918378"
+        },
+        {
+          "kind": "dynasty",
+          "id": "mongol"
+        },
+        {
+          "kind": "dynasty",
+          "id": "yuan"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷1",
+      "url": "https://zh.wikisource.org/wiki/元史/卷001",
+      "references": [
+        {
+          "kind": "person",
+          "id": "genghis"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷3",
+      "url": "https://zh.wikisource.org/wiki/元史/卷003",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "diaoyu"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷4",
+      "url": "https://zh.wikisource.org/wiki/元史/卷004",
+      "references": [
+        {
+          "kind": "person",
+          "id": "kublai"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷7",
+      "url": "https://zh.wikisource.org/wiki/元史/卷007",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-capital-dadu"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-刘秉忠"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷8",
+      "url": "https://zh.wikisource.org/wiki/元史/卷008",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xiangyang-falls"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷18",
+      "url": "https://zh.wikisource.org/wiki/元史/卷018",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "temur-accession"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷28",
+      "url": "https://zh.wikisource.org/wiki/元史/卷028",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-nanpo-coup"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-元英宗"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-拜住"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-铁失"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷38",
+      "url": "https://zh.wikisource.org/wiki/元史/卷038",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-huizong"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷42",
+      "url": "https://zh.wikisource.org/wiki/元史/卷042",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "red-turbans"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷64",
+      "url": "https://zh.wikisource.org/wiki/元史/卷064",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huitong-canal"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷81",
+      "url": "https://zh.wikisource.org/wiki/元史/卷081",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-exams"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷93",
+      "url": "https://zh.wikisource.org/wiki/元史/卷093",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-maritime-grain"
+        },
+        {
+          "kind": "event",
+          "id": "yuan-paper-currency"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷157",
+      "url": "https://zh.wikisource.org/wiki/元史/卷157",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-capital-dadu"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-刘秉忠"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷164",
+      "url": "https://zh.wikisource.org/wiki/元史/卷164",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shoushi-calendar"
+        },
+        {
+          "kind": "person",
+          "id": "guoshoujing"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷187",
+      "url": "https://zh.wikisource.org/wiki/元史/卷187",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jialu-river-work"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-贾鲁"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-脱脱"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷208",
+      "url": "https://zh.wikisource.org/wiki/元史/卷208",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuan-japan-expedition"
+        }
+      ]
+    },
+    {
+      "title": "《北史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/北史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-eastern-wei"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-western-wei"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-wei"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-wei"
+        }
+      ]
+    },
+    {
+      "title": "《北齊書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/北齊書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-northern-qi"
+        },
+        {
+          "kind": "person",
+          "id": "q712338"
+        },
+        {
+          "kind": "dynasty",
+          "id": "northern-qi"
+        }
+      ]
+    },
+    {
+      "title": "《南齊書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/南齊書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "dynasty",
+          "id": "southern-qi"
+        }
+      ]
+    },
+    {
+      "title": "《南齊書》卷1",
+      "url": "https://zh.wikisource.org/wiki/南齊書/卷1",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "southern-qi-founded"
+        }
+      ]
+    },
+    {
+      "title": "《南齊書》卷52",
+      "url": "https://zh.wikisource.org/wiki/南齊書/卷52",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zu-chongzhi-calendar"
+        },
+        {
+          "kind": "person",
+          "id": "q227444"
+        }
+      ]
+    },
+    {
+      "title": "《史記》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/史記",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1368034"
+        },
+        {
+          "kind": "person",
+          "id": "q382816"
+        },
+        {
+          "kind": "person",
+          "id": "q574498"
+        },
+        {
+          "kind": "person",
+          "id": "q126832"
+        },
+        {
+          "kind": "person",
+          "id": "q227022"
+        },
+        {
+          "kind": "person",
+          "id": "q10916673"
+        },
+        {
+          "kind": "person",
+          "id": "pingyuanjun"
+        },
+        {
+          "kind": "dynasty",
+          "id": "qin-state"
+        },
+        {
+          "kind": "dynasty",
+          "id": "qin"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-unification"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 夏本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷002",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xia-tradition"
+        },
+        {
+          "kind": "person",
+          "id": "early-yu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 殷本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷003",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shang-begins"
+        },
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "person",
+          "id": "early-tang"
+        },
+        {
+          "kind": "person",
+          "id": "early-wuding"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 周本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷004",
+      "references": [
+        {
+          "kind": "event",
+          "id": "muye"
+        },
+        {
+          "kind": "event",
+          "id": "zhougong-east"
+        },
+        {
+          "kind": "event",
+          "id": "gonghe"
+        },
+        {
+          "kind": "event",
+          "id": "xuan-restoration"
+        },
+        {
+          "kind": "event",
+          "id": "western-zhou-falls"
+        },
+        {
+          "kind": "event",
+          "id": "zhou-east"
+        },
+        {
+          "kind": "event",
+          "id": "zhou-ends"
+        },
+        {
+          "kind": "person",
+          "id": "early-wuwang"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-zhou"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷5",
+      "url": "https://zh.wikisource.org/wiki/史記/卷005",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qin-bashu"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷6",
+      "url": "https://zh.wikisource.org/wiki/史記/卷006",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ying-falls"
+        },
+        {
+          "kind": "event",
+          "id": "qin-han-state"
+        },
+        {
+          "kind": "event",
+          "id": "qin-zhao"
+        },
+        {
+          "kind": "event",
+          "id": "qin-wei"
+        },
+        {
+          "kind": "event",
+          "id": "qin-chu"
+        },
+        {
+          "kind": "event",
+          "id": "qin-yan-dai"
+        },
+        {
+          "kind": "event",
+          "id": "qin-unifies"
+        },
+        {
+          "kind": "event",
+          "id": "qin-standardization"
+        },
+        {
+          "kind": "event",
+          "id": "qin-south"
+        },
+        {
+          "kind": "event",
+          "id": "books"
+        },
+        {
+          "kind": "event",
+          "id": "qin-death"
+        },
+        {
+          "kind": "person",
+          "id": "yingzheng"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷7",
+      "url": "https://zh.wikisource.org/wiki/史記/卷007",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "julu"
+        },
+        {
+          "kind": "event",
+          "id": "hongmen"
+        },
+        {
+          "kind": "event",
+          "id": "gaixia"
+        },
+        {
+          "kind": "person",
+          "id": "xiangyu"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷8",
+      "url": "https://zh.wikisource.org/wiki/史記/卷008",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-founded"
+        },
+        {
+          "kind": "person",
+          "id": "liubang"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷10",
+      "url": "https://zh.wikisource.org/wiki/史記/卷010",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-wendi"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷12",
+      "url": "https://zh.wikisource.org/wiki/史記/卷012",
+      "references": [
+        {
+          "kind": "person",
+          "id": "hanwudi"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 十二诸侯年表",
+      "url": "https://zh.wikisource.org/wiki/史記/卷014",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gonghe"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷26",
+      "url": "https://zh.wikisource.org/wiki/史記/卷026",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "calendar"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷29",
+      "url": "https://zh.wikisource.org/wiki/史記/卷029",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dujiangyan"
+        },
+        {
+          "kind": "event",
+          "id": "zhengguo-canal"
+        },
+        {
+          "kind": "person",
+          "id": "depth-zhengguo"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷30",
+      "url": "https://zh.wikisource.org/wiki/史記/卷030",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "salt-iron"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 吴太伯世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷031",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wu-enters-ying"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 齐太公世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷032",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qihuan-guanzhong"
+        },
+        {
+          "kind": "event",
+          "id": "kuiqiu"
+        },
+        {
+          "kind": "person",
+          "id": "early-qihuan"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 鲁周公世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷033",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhougong-east"
+        },
+        {
+          "kind": "event",
+          "id": "lu-land-tax"
+        },
+        {
+          "kind": "person",
+          "id": "early-zhougong"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 晋世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷039",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chengpu"
+        },
+        {
+          "kind": "event",
+          "id": "bi-battle"
+        },
+        {
+          "kind": "event",
+          "id": "three-jin"
+        },
+        {
+          "kind": "person",
+          "id": "early-jinwen"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 楚世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷040",
+      "references": [
+        {
+          "kind": "event",
+          "id": "bi-battle"
+        },
+        {
+          "kind": "event",
+          "id": "wu-enters-ying"
+        },
+        {
+          "kind": "event",
+          "id": "chu-huai-captured"
+        },
+        {
+          "kind": "person",
+          "id": "q313330"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-楚怀王"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 越王勾践世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷041",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yue-defeats-wu"
+        },
+        {
+          "kind": "person",
+          "id": "early-goujian"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 郑世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷042",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷43",
+      "url": "https://zh.wikisource.org/wiki/史記/卷043",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hufu"
+        },
+        {
+          "kind": "event",
+          "id": "shaqiu-crisis"
+        },
+        {
+          "kind": "person",
+          "id": "zhaowuling"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵惠文王"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 孔子世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷047",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kongzi-teaching"
+        },
+        {
+          "kind": "person",
+          "id": "confucius"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷48",
+      "url": "https://zh.wikisource.org/wiki/史記/卷048",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dazexiang"
+        },
+        {
+          "kind": "person",
+          "id": "chensheng"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷53",
+      "url": "https://zh.wikisource.org/wiki/史記/卷053",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xiaohe-recommends-hanxin"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷54",
+      "url": "https://zh.wikisource.org/wiki/史記/卷054",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "caocan-chancellor"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-汉惠帝"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 管晏列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷062",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qihuan-guanzhong"
+        },
+        {
+          "kind": "person",
+          "id": "early-guanzhong"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷65",
+      "url": "https://zh.wikisource.org/wiki/史記/卷065",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "guiling"
+        },
+        {
+          "kind": "event",
+          "id": "maling"
+        },
+        {
+          "kind": "person",
+          "id": "sunbin"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷68",
+      "url": "https://zh.wikisource.org/wiki/史記/卷068",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shangyang"
+        },
+        {
+          "kind": "event",
+          "id": "shangyang-second"
+        },
+        {
+          "kind": "event",
+          "id": "shangyang-death"
+        },
+        {
+          "kind": "person",
+          "id": "shangyang"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-秦孝公"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-秦惠文王"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷73",
+      "url": "https://zh.wikisource.org/wiki/史記/卷073",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "changping"
+        },
+        {
+          "kind": "person",
+          "id": "baiqi"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷74",
+      "url": "https://zh.wikisource.org/wiki/史記/卷074",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "mencius-liang"
+        },
+        {
+          "kind": "person",
+          "id": "mozi"
+        },
+        {
+          "kind": "person",
+          "id": "mengzi"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-梁惠王"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷76",
+      "url": "https://zh.wikisource.org/wiki/史記/卷076",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "handan-relief"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷77",
+      "url": "https://zh.wikisource.org/wiki/史記/卷077",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "handan-relief"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷80",
+      "url": "https://zh.wikisource.org/wiki/史記/卷080",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yueyi-qi"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷84",
+      "url": "https://zh.wikisource.org/wiki/史記/卷084",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chu-huai-captured"
+        },
+        {
+          "kind": "person",
+          "id": "q313330"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-楚怀王"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷85",
+      "url": "https://zh.wikisource.org/wiki/史記/卷085",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lushi-chunqiu"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷86",
+      "url": "https://zh.wikisource.org/wiki/史記/卷086",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jingke-mission"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷87",
+      "url": "https://zh.wikisource.org/wiki/史記/卷087",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "lisi"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷88",
+      "url": "https://zh.wikisource.org/wiki/史記/卷088",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "mengtian-north"
+        },
+        {
+          "kind": "event",
+          "id": "qin-straight-road"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷92",
+      "url": "https://zh.wikisource.org/wiki/史記/卷092",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xiaohe-recommends-hanxin"
+        },
+        {
+          "kind": "event",
+          "id": "jingxing-battle"
+        },
+        {
+          "kind": "event",
+          "id": "hanxin-execution"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-陈余"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵歇"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷106",
+      "url": "https://zh.wikisource.org/wiki/史記/卷106",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "seven-states"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷110",
+      "url": "https://zh.wikisource.org/wiki/史記/卷110",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "baideng"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷111",
+      "url": "https://zh.wikisource.org/wiki/史記/卷111",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hexi"
+        },
+        {
+          "kind": "event",
+          "id": "mobei"
+        },
+        {
+          "kind": "person",
+          "id": "huoqubing"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷123",
+      "url": "https://zh.wikisource.org/wiki/史記/卷123",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhangqian"
+        },
+        {
+          "kind": "event",
+          "id": "zhangqian-first-return"
+        },
+        {
+          "kind": "event",
+          "id": "zhangqian-second"
+        },
+        {
+          "kind": "person",
+          "id": "zhangqian"
+        }
+      ]
+    },
+    {
+      "title": "《史記》卷130",
+      "url": "https://zh.wikisource.org/wiki/史記/卷130",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "simaqian"
+        }
+      ]
+    },
+    {
+      "title": "孙中山 ·《中国同盟会革命方略》",
+      "url": "https://zh.wikisource.org/wiki/同盟會革命方略",
+      "note": "1908年的革命纲领，用于说明同盟会理念；1905年成立纪年另见成立史料。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tongmenghui"
+        }
+      ]
+    },
+    {
+      "title": "《周書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/周書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-northern-zhou"
+        },
+        {
+          "kind": "person",
+          "id": "q1149222"
+        },
+        {
+          "kind": "dynasty",
+          "id": "northern-zhou"
+        },
+        {
+          "kind": "topic",
+          "id": "north-south-unification"
+        }
+      ]
+    },
+    {
+      "title": "《周書》卷1",
+      "url": "https://zh.wikisource.org/wiki/周書/卷01",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shayuan"
+        }
+      ]
+    },
+    {
+      "title": "《周書》卷5",
+      "url": "https://zh.wikisource.org/wiki/周書/卷05",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhou-buddhism-suppression"
+        }
+      ]
+    },
+    {
+      "title": "《周書》卷6",
+      "url": "https://zh.wikisource.org/wiki/周書/卷06",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "north-qi-falls"
+        }
+      ]
+    },
+    {
+      "title": "《夢溪筆談》",
+      "url": "https://zh.wikisource.org/wiki/夢溪筆談",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "mengxi-bitang"
+        }
+      ]
+    },
+    {
+      "title": "《夢溪筆談》卷18",
+      "url": "https://zh.wikisource.org/wiki/夢溪筆談/卷18",
+      "references": [
+        {
+          "kind": "person",
+          "id": "bisheng"
+        }
+      ]
+    },
+    {
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xuanzang-return"
+        },
+        {
+          "kind": "person",
+          "id": "xuanzang"
+        }
+      ]
+    },
+    {
+      "title": "《大唐西域記》",
+      "url": "https://zh.wikisource.org/wiki/大唐西域記",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "great-tang-western-records"
+        }
+      ]
+    },
+    {
+      "title": "宋应星 ·《天工开物》序与正文",
+      "url": "https://zh.wikisource.org/wiki/天工開物",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tiangong-kaiwu"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/宋史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-xia"
+        },
+        {
+          "kind": "person",
+          "id": "q381822"
+        },
+        {
+          "kind": "person",
+          "id": "q337805"
+        },
+        {
+          "kind": "person",
+          "id": "q10954250"
+        },
+        {
+          "kind": "person",
+          "id": "q708637"
+        },
+        {
+          "kind": "person",
+          "id": "wangjian-diaoyu"
+        },
+        {
+          "kind": "person",
+          "id": "lishun-song"
+        },
+        {
+          "kind": "dynasty",
+          "id": "northern-song"
+        },
+        {
+          "kind": "dynasty",
+          "id": "southern-song"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia"
+        },
+        {
+          "kind": "topic",
+          "id": "song-learning"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷1",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷001",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gaoping-954"
+        },
+        {
+          "kind": "event",
+          "id": "song-military-offices"
+        },
+        {
+          "kind": "event",
+          "id": "song-jinghu"
+        },
+        {
+          "kind": "event",
+          "id": "song-criminal-code"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-石守信"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵普"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-慕容延钊"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-窦仪"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷2",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷002",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "song-later-shu"
+        },
+        {
+          "kind": "event",
+          "id": "song-southern-han"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-王全斌"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-孟昶"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-曹彬"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-潘美"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-刘鋹"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷3",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷003",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "song-taizu-north-han"
+        },
+        {
+          "kind": "event",
+          "id": "song-palace-exams"
+        },
+        {
+          "kind": "event",
+          "id": "song-southern-tang"
+        },
+        {
+          "kind": "event",
+          "id": "song-taizu-death"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-曹彬"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-潘美"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-钱俶"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷4",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷004",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wuyue-submission"
+        },
+        {
+          "kind": "event",
+          "id": "north-han-falls"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-钱俶"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷5",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷005",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lishun-uprising"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷22",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷022",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sea-alliance"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷24",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷024",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "southern-song-founded"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷29",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷029",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "linan-court"
+        },
+        {
+          "kind": "event",
+          "id": "shaoxing-peace"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷37",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷037",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jia-ding"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷181",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷181",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "official-jiaozi"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷186",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷186",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "quanzhou-office"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷199",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷199",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "song-criminal-code"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-窦仪"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷250",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷250",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "song-military-offices"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-石守信"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵普"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷314",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷314",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "fanzhongyan-yan"
+        },
+        {
+          "kind": "event",
+          "id": "qingli"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-韩琦"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷316",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷316",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "baozheng-duanzhou"
+        },
+        {
+          "kind": "event",
+          "id": "baozheng-kaifeng"
+        },
+        {
+          "kind": "event",
+          "id": "baozheng-privy"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷319",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷319",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ouyang-exam-1057"
+        },
+        {
+          "kind": "event",
+          "id": "new-tang-history"
+        },
+        {
+          "kind": "person",
+          "id": "ouyangxiu"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-宋祁"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷327",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷327",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wanganshi-second-resignation"
+        },
+        {
+          "kind": "person",
+          "id": "wanganshi"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷331",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷331",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shenkuo-liao-mission"
+        },
+        {
+          "kind": "person",
+          "id": "shenkuo"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷336",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷336",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "simaguang-tongzhi"
+        },
+        {
+          "kind": "event",
+          "id": "zizhi-tongjian"
+        },
+        {
+          "kind": "person",
+          "id": "simaguang"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-宋英宗"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷338",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷338",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ouyang-exam-1057"
+        },
+        {
+          "kind": "person",
+          "id": "sushi"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷365",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷365",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yuefei-death"
+        },
+        {
+          "kind": "person",
+          "id": "yuefei"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷383",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷383",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "caishi"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷395",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷395",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "luyou-nanzheng"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-王炎"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷401",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷401",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinqiji-returns-song"
+        },
+        {
+          "kind": "event",
+          "id": "flying-tiger-army"
+        },
+        {
+          "kind": "person",
+          "id": "xinqiji"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-耿京"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷429",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷429",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "goose-lake-meeting"
+        },
+        {
+          "kind": "event",
+          "id": "zhuxi-nankang"
+        },
+        {
+          "kind": "event",
+          "id": "white-deer-academy"
+        },
+        {
+          "kind": "event",
+          "id": "qingyuan-faction-ban"
+        },
+        {
+          "kind": "person",
+          "id": "zhuxi"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵汝愚"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷474",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷474",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qingyuan-faction-ban"
+        },
+        {
+          "kind": "event",
+          "id": "kaixi-northern-campaign"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵汝愚"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-宋宁宗"
+        }
+      ]
+    },
+    {
+      "title": "《宋書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/宋書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "dynasty",
+          "id": "liu-song"
+        }
+      ]
+    },
+    {
+      "title": "《宋書》卷2",
+      "url": "https://zh.wikisource.org/wiki/宋書/卷2",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liu-yu-changan"
+        }
+      ]
+    },
+    {
+      "title": "《宋書》卷93",
+      "url": "https://zh.wikisource.org/wiki/宋書/卷93",
+      "note": "古籍传记参考；以下简介为现代中文整理。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "taoyuanming"
+        }
+      ]
+    },
+    {
+      "title": "范仲淹 · 岳阳楼记",
+      "url": "https://zh.wikisource.org/wiki/岳陽樓記",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yueyang-tower-essay"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-滕宗谅"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/後漢書",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q315678"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-han"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷1上",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷1上",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kunyang"
+        },
+        {
+          "kind": "event",
+          "id": "eastern-han"
+        },
+        {
+          "kind": "person",
+          "id": "liuxiu"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷1下",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷1下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "guangwu-land-survey"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷47",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷47",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ban-chao"
+        },
+        {
+          "kind": "event",
+          "id": "banchao-protector"
+        },
+        {
+          "kind": "person",
+          "id": "banchao"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-汉和帝"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷59",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷59",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhangheng"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷67",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷67",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "party-prohibitions"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷69",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷69",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-palace-crisis"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷71",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷71",
+      "references": [
+        {
+          "kind": "person",
+          "id": "zhangjiao"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷72",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷72",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dongzhuo-death"
+        },
+        {
+          "kind": "person",
+          "id": "dongzhuo"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-王允"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷78",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷78",
+      "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "paper"
+        },
+        {
+          "kind": "person",
+          "id": "cailun"
+        }
+      ]
+    },
+    {
+      "title": "《後漢書》卷88",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷88",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ganying"
+        }
+      ]
+    },
+    {
+      "title": "《徐霞客游记》· 游天台山日记",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xuxiake-diary"
+        },
+        {
+          "kind": "event",
+          "id": "xuxiake-southwest"
+        },
+        {
+          "kind": "person",
+          "id": "xuxiake"
+        }
+      ]
+    },
+    {
+      "title": "《新五代史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/新五代史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-wuyue"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-former-shu"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-southern-han"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-later-shu"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-southern-tang"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-northern-han"
+        },
+        {
+          "kind": "person",
+          "id": "q708651"
+        },
+        {
+          "kind": "person",
+          "id": "q1149186"
+        },
+        {
+          "kind": "person",
+          "id": "q717972"
+        },
+        {
+          "kind": "person",
+          "id": "q711844"
+        },
+        {
+          "kind": "person",
+          "id": "liuchong"
+        },
+        {
+          "kind": "dynasty",
+          "id": "southern-tang"
+        },
+        {
+          "kind": "dynasty",
+          "id": "wuyue"
+        },
+        {
+          "kind": "dynasty",
+          "id": "former-shu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-shu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "southern-wu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "southern-han"
+        },
+        {
+          "kind": "dynasty",
+          "id": "min"
+        },
+        {
+          "kind": "dynasty",
+          "id": "chu-ten"
+        },
+        {
+          "kind": "dynasty",
+          "id": "jingnan"
+        },
+        {
+          "kind": "dynasty",
+          "id": "northern-han"
+        }
+      ]
+    },
+    {
+      "title": "《新唐書》· 专题相关本纪、列传与制度志",
+      "url": "https://zh.wikisource.org/wiki/新唐書",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tang-turning-point"
+        }
+      ]
+    },
+    {
+      "title": "《新唐書》卷51",
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷051",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "two-tax"
+        }
+      ]
+    },
+    {
+      "title": "《新唐書》卷202",
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-leaves-court"
+        }
+      ]
+    },
+    {
+      "title": "《明史》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/明史",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q11099138"
+        },
+        {
+          "kind": "person",
+          "id": "q3492967"
+        },
+        {
+          "kind": "person",
+          "id": "q9961"
+        },
+        {
+          "kind": "person",
+          "id": "q187550"
+        },
+        {
+          "kind": "person",
+          "id": "q712027"
+        },
+        {
+          "kind": "dynasty",
+          "id": "ming"
+        },
+        {
+          "kind": "dynasty",
+          "id": "southern-ming"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷1",
+      "url": "https://zh.wikisource.org/wiki/明史/卷1",
+      "references": [
+        {
+          "kind": "person",
+          "id": "zhuyuanzhang"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷12",
+      "url": "https://zh.wikisource.org/wiki/明史/卷12",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "duomen-coup"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷132",
+      "url": "https://zh.wikisource.org/wiki/明史/卷132",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lanyu-case"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷147",
+      "url": "https://zh.wikisource.org/wiki/明史/卷147",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yongle-encyclopedia"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷170",
+      "url": "https://zh.wikisource.org/wiki/明史/卷170",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "beijing-defense"
+        },
+        {
+          "kind": "person",
+          "id": "q706876"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷195",
+      "url": "https://zh.wikisource.org/wiki/明史/卷195",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wangyangming-longchang"
+        },
+        {
+          "kind": "event",
+          "id": "wangyangming-ning"
+        },
+        {
+          "kind": "person",
+          "id": "wangyangming"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-朱宸濠"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷212",
+      "url": "https://zh.wikisource.org/wiki/明史/卷212",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qijiguang"
+        },
+        {
+          "kind": "event",
+          "id": "qijiguang-jizhen"
+        },
+        {
+          "kind": "person",
+          "id": "q439768"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷213",
+      "url": "https://zh.wikisource.org/wiki/明史/卷213",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhangjuzheng-chief"
+        },
+        {
+          "kind": "event",
+          "id": "zhangjuzheng-kaocheng"
+        },
+        {
+          "kind": "person",
+          "id": "zhangjuzheng"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷24",
+      "url": "https://zh.wikisource.org/wiki/明史/卷24",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chongzhen-lizicheng"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷251",
+      "url": "https://zh.wikisource.org/wiki/明史/卷251",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "euclid-chinese"
+        },
+        {
+          "kind": "event",
+          "id": "chongzhen-calendar"
+        },
+        {
+          "kind": "person",
+          "id": "q420427"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷260",
+      "url": "https://zh.wikisource.org/wiki/明史/卷260",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "songjin-battle"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷274",
+      "url": "https://zh.wikisource.org/wiki/明史/卷274",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yangzhou-1645"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷3",
+      "url": "https://zh.wikisource.org/wiki/明史/卷3",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huweiyong-case"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-胡惟庸"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷304",
+      "url": "https://zh.wikisource.org/wiki/明史/卷304",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhenghe"
+        },
+        {
+          "kind": "event",
+          "id": "zhenghe-seventh-voyage"
+        },
+        {
+          "kind": "person",
+          "id": "zhenghe"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷320",
+      "url": "https://zh.wikisource.org/wiki/明史/卷320",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "imjin"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷4",
+      "url": "https://zh.wikisource.org/wiki/明史/卷4",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jianwen-accession"
+        },
+        {
+          "kind": "person",
+          "id": "q9961"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷5",
+      "url": "https://zh.wikisource.org/wiki/明史/卷5",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jingnan"
+        },
+        {
+          "kind": "event",
+          "id": "yongle-accession"
+        },
+        {
+          "kind": "person",
+          "id": "zhudi"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷77",
+      "url": "https://zh.wikisource.org/wiki/明史/卷77",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yellow-registers"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷81",
+      "url": "https://zh.wikisource.org/wiki/明史/卷81",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "longqing-opening"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/晉書",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q468890"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-jin"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-jin"
+        },
+        {
+          "kind": "dynasty",
+          "id": "former-qin"
+        },
+        {
+          "kind": "topic",
+          "id": "three-kingdoms"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷1",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷001",
+      "references": [
+        {
+          "kind": "person",
+          "id": "simayi"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷3",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷003",
+      "references": [
+        {
+          "kind": "person",
+          "id": "simayan"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷51",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷051",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jizhong-books"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷62",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷062",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zuti-northern-campaign"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷79",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷079",
+      "references": [
+        {
+          "kind": "person",
+          "id": "xiean"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷80",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷080",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wangxizhi-retirement"
+        },
+        {
+          "kind": "person",
+          "id": "wangxizhi"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-王述"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷82",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷082",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chen-shou-history"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷98",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷098",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huanwen-shu"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷101",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷101",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-zhao-founded"
+        },
+        {
+          "kind": "person",
+          "id": "depth-liuyuan"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷104",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷104",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-zhao-founded"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷113",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷113",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "former-qin-north"
+        }
+      ]
+    },
+    {
+      "title": "《晉書》卷114",
+      "url": "https://zh.wikisource.org/wiki/晉書/卷114",
+      "references": [
+        {
+          "kind": "person",
+          "id": "fujian"
+        }
+      ]
+    },
+    {
+      "title": "《梁書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/梁書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-liang"
+        },
+        {
+          "kind": "person",
+          "id": "q890338"
+        },
+        {
+          "kind": "dynasty",
+          "id": "liang"
+        }
+      ]
+    },
+    {
+      "title": "《梁書》卷3",
+      "url": "https://zh.wikisource.org/wiki/梁書/卷03",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiankang-549"
+        }
+      ]
+    },
+    {
+      "title": "《梁書》卷56",
+      "url": "https://zh.wikisource.org/wiki/梁書/卷56",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "houjing"
+        }
+      ]
+    },
+    {
+      "title": "钦定宪法大纲",
+      "url": "https://zh.wikisource.org/wiki/欽定憲法大綱",
+      "references": [
+        {
+          "kind": "event",
+          "id": "constitutional-outline"
+        },
+        {
+          "kind": "topic",
+          "id": "late-qing-transition"
+        }
+      ]
+    },
+    {
+      "title": "陶渊明 ·《归去来兮辞》并序",
+      "url": "https://zh.wikisource.org/wiki/歸去來兮辭",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tao-retire"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》",
+      "url": "https://zh.wikisource.org/wiki/清史稿",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sarhu"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-qing"
+        },
+        {
+          "kind": "event",
+          "id": "qianlong"
+        },
+        {
+          "kind": "event",
+          "id": "siku"
+        },
+        {
+          "kind": "event",
+          "id": "second-opium"
+        },
+        {
+          "kind": "event",
+          "id": "yuanmingyuan"
+        },
+        {
+          "kind": "event",
+          "id": "tianjing-falls"
+        },
+        {
+          "kind": "event",
+          "id": "merchant-steam"
+        },
+        {
+          "kind": "event",
+          "id": "xinjiang-province"
+        },
+        {
+          "kind": "event",
+          "id": "france-peace"
+        },
+        {
+          "kind": "event",
+          "id": "shimonoseki"
+        },
+        {
+          "kind": "event",
+          "id": "eight-nations"
+        },
+        {
+          "kind": "event",
+          "id": "boxer-protocol"
+        },
+        {
+          "kind": "event",
+          "id": "exams-end"
+        },
+        {
+          "kind": "event",
+          "id": "railway-protection"
+        },
+        {
+          "kind": "person",
+          "id": "q468701"
+        },
+        {
+          "kind": "person",
+          "id": "q11068801"
+        },
+        {
+          "kind": "person",
+          "id": "q1395045"
+        },
+        {
+          "kind": "person",
+          "id": "q1015420"
+        },
+        {
+          "kind": "person",
+          "id": "q1204208"
+        },
+        {
+          "kind": "person",
+          "id": "q10898035"
+        },
+        {
+          "kind": "person",
+          "id": "q197432"
+        },
+        {
+          "kind": "person",
+          "id": "q11621297"
+        },
+        {
+          "kind": "person",
+          "id": "feiyanggu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-jin-jurchen"
+        },
+        {
+          "kind": "dynasty",
+          "id": "qing"
+        },
+        {
+          "kind": "topic",
+          "id": "qing-state"
+        },
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        },
+        {
+          "kind": "topic",
+          "id": "self-strengthening-course"
+        },
+        {
+          "kind": "topic",
+          "id": "first-sino-japanese"
+        },
+        {
+          "kind": "topic",
+          "id": "late-qing-transition"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷1",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷1",
+      "references": [
+        {
+          "kind": "person",
+          "id": "nurhaci"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷10",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷10",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qing-dzungar-1755"
+        },
+        {
+          "kind": "person",
+          "id": "qianlong"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷11",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷11",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qing-south-xinjiang"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷121",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷121",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yongzheng-tax-integration"
+        },
+        {
+          "kind": "person",
+          "id": "q317839"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷16",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷16",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "white-lotus"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷18",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷18",
+      "references": [
+        {
+          "kind": "event",
+          "id": "humen"
+        },
+        {
+          "kind": "event",
+          "id": "opium-war"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷19",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷19",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nanjing-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "humen-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "wangxia-huangpu"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷2",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷2",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huangtaiji-accession"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷20",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷20",
+      "references": [
+        {
+          "kind": "event",
+          "id": "second-opium"
+        },
+        {
+          "kind": "event",
+          "id": "aigun-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "tianjin-treaties"
+        },
+        {
+          "kind": "event",
+          "id": "dagu-1859"
+        },
+        {
+          "kind": "event",
+          "id": "yuanmingyuan"
+        },
+        {
+          "kind": "event",
+          "id": "beijing-treaties"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷21",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷21",
+      "references": [
+        {
+          "kind": "event",
+          "id": "self-strengthening"
+        },
+        {
+          "kind": "event",
+          "id": "zongli-yamen"
+        },
+        {
+          "kind": "event",
+          "id": "xinyou-coup"
+        },
+        {
+          "kind": "event",
+          "id": "tongwen-college"
+        },
+        {
+          "kind": "event",
+          "id": "fuzhou-shipyard"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷214",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷214",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47842"
+        },
+        {
+          "kind": "person",
+          "id": "depth-cian"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷22",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷22",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "students-abroad"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷221",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷221",
+      "note": "古籍原文参考；介绍为本项目撰写的现代整理稿。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-yixin"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷224",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷224",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhengchenggong-nanjing"
+        },
+        {
+          "kind": "person",
+          "id": "zhengchenggong"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷23",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷23",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinjiang-campaign"
+        },
+        {
+          "kind": "event",
+          "id": "ili-treaty"
+        },
+        {
+          "kind": "event",
+          "id": "mawei-battle"
+        },
+        {
+          "kind": "event",
+          "id": "taiwan-province"
+        },
+        {
+          "kind": "event",
+          "id": "beiyang-fleet"
+        },
+        {
+          "kind": "event",
+          "id": "sino-japanese"
+        },
+        {
+          "kind": "event",
+          "id": "pyongyang-1894"
+        },
+        {
+          "kind": "event",
+          "id": "yellow-sea-1894"
+        },
+        {
+          "kind": "event",
+          "id": "lushun-1894"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷24",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷24",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shimonoseki"
+        },
+        {
+          "kind": "event",
+          "id": "weihai-1895"
+        },
+        {
+          "kind": "event",
+          "id": "hundred-days"
+        },
+        {
+          "kind": "event",
+          "id": "wuxu-coup"
+        },
+        {
+          "kind": "event",
+          "id": "imperial-university"
+        },
+        {
+          "kind": "event",
+          "id": "late-qing-new-policies"
+        },
+        {
+          "kind": "event",
+          "id": "guimao-schools"
+        },
+        {
+          "kind": "event",
+          "id": "late-qing-constitution"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-载泽"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷25",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷25",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "puyi-accession"
+        },
+        {
+          "kind": "event",
+          "id": "provincial-assemblies"
+        },
+        {
+          "kind": "event",
+          "id": "huanghuagang"
+        },
+        {
+          "kind": "event",
+          "id": "royal-cabinet"
+        },
+        {
+          "kind": "person",
+          "id": "puyi"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷288",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷288",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gaitu-guiliu"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷369",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷369",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "linzexu-xinjiang"
+        },
+        {
+          "kind": "person",
+          "id": "linzexu"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷372",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷372",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "humen-battle"
+        },
+        {
+          "kind": "event",
+          "id": "sanyuanli"
+        },
+        {
+          "kind": "person",
+          "id": "depth-guantianpei"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷4",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷4",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yangzhou-1645"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷405",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷405",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zeng-xiang-army"
+        },
+        {
+          "kind": "person",
+          "id": "zengguofan"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷411",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷411",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
+        {
+          "kind": "person",
+          "id": "lihongzhang"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷412",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷412",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q230200"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷413",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷413",
+      "note": "古籍原文参考；介绍为本项目撰写的现代整理稿。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-shenbaozhen"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷446",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷446",
+      "note": "古籍原文参考；介绍为本项目撰写的现代整理稿。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-zengjize"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷460",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷460",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q259375"
+        },
+        {
+          "kind": "person",
+          "id": "q716227"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷464",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷464",
+      "references": [
+        {
+          "kind": "person",
+          "id": "kangyouwei"
+        },
+        {
+          "kind": "person",
+          "id": "liangqichao"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷474",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷474",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wusangui-shanhai"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷475",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷475",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taiping-nanjing"
+        },
+        {
+          "kind": "event",
+          "id": "tianjing-incident"
+        },
+        {
+          "kind": "person",
+          "id": "hongxiuquan"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷7",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷7",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qing-maritime-customs"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷8",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷8",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qing-tibet-1720"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/漢書",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q718024"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-han"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xin"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-unification"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷6",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷006",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-wudi-accession"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷24下",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷024下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wuzhu-currency"
+        },
+        {
+          "kind": "event",
+          "id": "wangmang-currency"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷54",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷054",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liling-affair"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-李陵"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷62",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷062",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liling-affair"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-李陵"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷63",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷063",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wugu"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷64上",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷064上",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tui-en"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷88",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷088",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "han-taixue"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷94下",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷094下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhaojun-marriage"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷96下",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷096下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "luntai"
+        }
+      ]
+    },
+    {
+      "title": "《漢書》卷99",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷099上",
+      "references": [
+        {
+          "kind": "person",
+          "id": "wangmang"
+        }
+      ]
+    },
+    {
+      "title": "《王禎農書》",
+      "url": "https://zh.wikisource.org/wiki/王禎農書",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wangzhen-agricultural-book"
+        }
+      ]
+    },
+    {
+      "title": "《临时大总统宣言书》",
+      "url": "https://zh.wikisource.org/wiki/臨時大總統宣言書",
+      "references": [
+        {
+          "kind": "event",
+          "id": "republic"
+        }
+      ]
+    },
+    {
+      "title": "孙中山 · 兴中会章程",
+      "url": "https://zh.wikisource.org/wiki/興中會章程",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xingzhonghui"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/舊五代史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-later-liang"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-later-tang"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-later-jin"
+        },
+        {
+          "kind": "event",
+          "id": "yanyun"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-later-han"
+        },
+        {
+          "kind": "event",
+          "id": "foundation-later-zhou"
+        },
+        {
+          "kind": "person",
+          "id": "q703646"
+        },
+        {
+          "kind": "person",
+          "id": "q706815"
+        },
+        {
+          "kind": "person",
+          "id": "q1189495"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-liang"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-tang"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-jin"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-han"
+        },
+        {
+          "kind": "dynasty",
+          "id": "later-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷114",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷114",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gaoping-954"
+        },
+        {
+          "kind": "person",
+          "id": "zhaokuangyin"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷115",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷115",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-zhou-reforms"
+        },
+        {
+          "kind": "event",
+          "id": "later-zhou-huainan"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷119",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷119",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-zhou-north"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷143",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷143",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷35",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷35",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-tang-mingzong"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/舊唐書",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1038892"
+        },
+        {
+          "kind": "person",
+          "id": "q4844228"
+        },
+        {
+          "kind": "person",
+          "id": "q708460"
+        },
+        {
+          "kind": "person",
+          "id": "q5370024"
+        },
+        {
+          "kind": "person",
+          "id": "q9717"
+        },
+        {
+          "kind": "person",
+          "id": "wanghan"
+        },
+        {
+          "kind": "dynasty",
+          "id": "tang"
+        },
+        {
+          "kind": "dynasty",
+          "id": "wu-zhou"
+        },
+        {
+          "kind": "topic",
+          "id": "north-south-unification"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-turning-point"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷1",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷1",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jinyang-uprising"
+        },
+        {
+          "kind": "person",
+          "id": "liyuan"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-裴寂"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷12",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷12",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jingyuan-crisis"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷135",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷135",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yongzhen-reform"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-王叔文"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-唐顺宗"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷15",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷15",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tang-huaixi"
+        },
+        {
+          "kind": "person",
+          "id": "q318998"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-裴度"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-李愬"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-吴元济"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-唐宪宗"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷160",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷160",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tang-huaixi"
+        },
+        {
+          "kind": "event",
+          "id": "han-yu-buddha-bone"
+        },
+        {
+          "kind": "person",
+          "id": "q318998"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-裴度"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-李愬"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-吴元济"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-唐宪宗"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷166",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷166",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "bai-juyi-jiangzhou"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷18上",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷18上",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huichang-buddhism"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷190下",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷190下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-changan"
+        },
+        {
+          "kind": "event",
+          "id": "libai-yongwang"
+        },
+        {
+          "kind": "event",
+          "id": "dufu-chengdu"
+        },
+        {
+          "kind": "person",
+          "id": "dufu"
+        },
+        {
+          "kind": "person",
+          "id": "libai"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-永王李璘"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷196",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷196上",
+      "references": [
+        {
+          "kind": "person",
+          "id": "wencheng"
+        },
+        {
+          "kind": "person",
+          "id": "songtsen"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷199上",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷199上",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "goguryeo-falls"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷2",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷2",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhen-guan"
+        },
+        {
+          "kind": "person",
+          "id": "lishimin"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷200上",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷200上",
+      "references": [
+        {
+          "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "person",
+          "id": "anlushan"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷200下",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷200下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "huangchao"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷20下",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷20下",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "luoyang-904"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷4",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷4",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wu-empress"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷6",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷6",
+      "references": [
+        {
+          "kind": "person",
+          "id": "wuzetian"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷67",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷67",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-turk"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷69",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷69",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gaochang"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷7",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷7",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shenlong"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷8",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷8",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kaiyuan"
+        },
+        {
+          "kind": "person",
+          "id": "lilongji"
+        }
+      ]
+    },
+    {
+      "title": "《舊唐書》卷83",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷83",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tang-west-turk"
+        }
+      ]
+    },
+    {
+      "title": "王羲之 ·《兰亭集序》",
+      "url": "https://zh.wikisource.org/wiki/蘭亭集序",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lanting"
+        }
+      ]
+    },
+    {
+      "title": "冯自由 · 记上海志士与革命运动",
+      "url": "https://zh.wikisource.org/wiki/記上海志士與革命運動",
+      "note": "参与者的后出回忆，需与报刊本身、同时期材料对读。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shiwu-newspaper"
+        }
+      ]
+    },
+    {
+      "title": "《遼史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/遼史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-liao"
+        },
+        {
+          "kind": "event",
+          "id": "liao-falls"
+        },
+        {
+          "kind": "person",
+          "id": "q4989"
+        },
+        {
+          "kind": "dynasty",
+          "id": "liao"
+        }
+      ]
+    },
+    {
+      "title": "《遼史》卷2",
+      "url": "https://zh.wikisource.org/wiki/遼史/卷2",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liao-bohai"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-耶律倍"
+        }
+      ]
+    },
+    {
+      "title": "《金史》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/金史",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-jurchen-jin"
+        },
+        {
+          "kind": "person",
+          "id": "q613587"
+        },
+        {
+          "kind": "person",
+          "id": "q5081"
+        },
+        {
+          "kind": "dynasty",
+          "id": "jurchen-jin"
+        }
+      ]
+    },
+    {
+      "title": "《金史》卷14",
+      "url": "https://zh.wikisource.org/wiki/金史/卷14",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhongdu-falls"
+        }
+      ]
+    },
+    {
+      "title": "《金史》卷18",
+      "url": "https://zh.wikisource.org/wiki/金史/卷18",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jin-falls"
+        }
+      ]
+    },
+    {
+      "title": "李清照 · 金石录后序",
+      "url": "https://zh.wikisource.org/wiki/金石錄後序_(李清照)",
+      "references": [
+        {
+          "kind": "event",
+          "id": "liqingzhao-jinshi-study"
+        },
+        {
+          "kind": "event",
+          "id": "liqingzhao-south"
+        },
+        {
+          "kind": "event",
+          "id": "zhao-mingcheng-death"
+        },
+        {
+          "kind": "person",
+          "id": "liqingzhao"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-赵明诚"
+        }
+      ]
+    },
+    {
+      "title": "《陳書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/陳書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-chen"
+        },
+        {
+          "kind": "dynasty",
+          "id": "chen"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》· 相关本纪、列传",
+      "url": "https://zh.wikisource.org/wiki/隋書",
+      "note": "现代中文身份简介；有确定生卒纪年的资料优先采用结构化来源，无可靠纪年时保留未知。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q841385"
+        },
+        {
+          "kind": "dynasty",
+          "id": "sui"
+        },
+        {
+          "kind": "topic",
+          "id": "north-south-unification"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷1",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷01",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "daxing-city"
+        },
+        {
+          "kind": "person",
+          "id": "yangjian"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷3",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷03",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sui-east-capital"
+        },
+        {
+          "kind": "event",
+          "id": "sui-tuyuhun"
+        },
+        {
+          "kind": "person",
+          "id": "yangguang"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷4",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷04",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sui-goguryeo"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷17",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷17",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zu-calendar-adoption"
+        },
+        {
+          "kind": "person",
+          "id": "q227444"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-祖暅"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷25",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷25",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kaihuang-code"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-苏威"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-牛弘"
+        }
+      ]
+    },
+    {
+      "title": "《隋書》卷70",
+      "url": "https://zh.wikisource.org/wiki/隋書/卷70",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wagang"
+        }
+      ]
+    },
+    {
+      "title": "《魏書》· 本纪与相关传记",
+      "url": "https://zh.wikisource.org/wiki/魏書",
+      "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "foundation-northern-wei"
+        },
+        {
+          "kind": "person",
+          "id": "q1149178"
+        },
+        {
+          "kind": "dynasty",
+          "id": "northern-wei"
+        },
+        {
+          "kind": "topic",
+          "id": "north-south-unification"
+        }
+      ]
+    },
+    {
+      "title": "《魏書》卷110",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷110",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "equal-field"
+        }
+      ]
+    },
+    {
+      "title": "《魏書》卷74",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷74",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "he-yin-massacre"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-尔朱荣"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-孝庄帝"
+        },
+        {
+          "kind": "person",
+          "id": "reviewed-胡太后"
+        }
+      ]
+    },
+    {
+      "title": "《魏書》卷7",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷7下",
+      "references": [
+        {
+          "kind": "person",
+          "id": "xiaowen"
+        }
+      ]
+    },
+    {
+      "title": "《魏書》卷9",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷9",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "six-garrisons"
+        }
+      ]
+    }
+  ]
+}

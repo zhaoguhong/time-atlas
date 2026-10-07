@@ -1,0 +1,27 @@
+node_modules
+dist
+data/raw
+public/data
+test-results
+playwright-report
+data/research/verification/**/error-context.md
+data/research/verification/**/.last-run.json
+.venv
+package-lock.json
+*.tsbuildinfo
+
+src/data/generated
+data/people*.json
+
+# Generated research manifests and append-only request history.
+data/research/fetches.json
+data/research/fetch-history.jsonl
+data/research/source-inventory.json
+data/research/references.json
+data/research/content-audit.json
+.local
+.cache
+data/map-packs
+# Evidence is retained verbatim locally, not reformatted or published.
+data/research/verification
+data/research/searches

@@ -1,0 +1,345 @@
+{
+  "generatedAt": "2026-10-07 06:33:29 UTC",
+  "sources": [
+    {
+      "url": "https://whc.unesco.org/en/list/1687/",
+      "title": "UNESCO · 古代杰里科/苏丹丘",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jericho-neolithic"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/848/",
+      "title": "UNESCO · 乔伊鲁科蒂亚",
+      "references": [
+        {
+          "kind": "event",
+          "id": "choirokoitia-village"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/887/",
+      "title": "UNESCO · 库克早期农业遗址",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kuk-early-farming"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cass.cn/xueshuchengguo/wenzhexuebulishixuebu/201707/t20170720_3585032.shtml",
+      "title": "中国社会科学院 · 兴隆沟聚落与旱作农业",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinglonggou-millet"
+        }
+      ]
+    },
+    {
+      "url": "https://wwj.zhengzhou.gov.cn/wwyw/9992327.jhtml",
+      "title": "郑州市文物局 · 裴李岗遗址考古新发现",
+      "references": [
+        {
+          "kind": "event",
+          "id": "peiligang-settlement"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/20190516slkd/",
+      "title": "中国国家博物馆 · 丝路孔道：大地湾文化",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dadiwan-settlement"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xiaoshan.gov.cn/col/col1311593/",
+      "title": "萧山区人民政府 · 跨湖桥遗址博物馆",
+      "references": [
+        {
+          "kind": "event",
+          "id": "kuahuqiao-canoe"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
+      "title": "宁波博物院 · 河姆渡文化考古成果特展",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nbmuseum.cn/art/2025/4/15/art_20679_163.html",
+      "title": "宁波博物院 · 远古江南·海陆山河",
+      "references": [
+        {
+          "kind": "event",
+          "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
+      "title": "西安半坡博物馆 · 遗址与功能分区",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
+      "title": "陕西省地方志 · 半坡类型仰韶文化年代",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202008/t20200824_247218.shtml",
+      "title": "中国国家博物馆 · 人面鱼纹彩陶盆",
+      "references": [
+        {
+          "kind": "event",
+          "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "url": "https://shandong-chorography.org/database/a/section/70/article/24/",
+      "title": "山东地情档案 · 大汶口遗址",
+      "references": [
+        {
+          "kind": "event",
+          "id": "dawenkou-burials"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.cn/xinwen/2020-06/08/content_5518046.htm",
+      "title": "安徽省文旅考古项目 · 凌家滩测年与玉器（中国政府网报道）",
+      "references": [
+        {
+          "kind": "event",
+          "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
+      "title": "朝阳市人民政府 · 牛河梁遗址概述",
+      "references": [
+        {
+          "kind": "event",
+          "id": "niuheliang-ritual"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chnmuseum.cn/portals/0/web/zt/nmcinthesky/test/wwlist.html",
+      "title": "中国国家博物馆 · 马家窑彩陶与制陶工艺",
+      "references": [
+        {
+          "kind": "event",
+          "id": "majiayao-pottery"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202107/t20210722_250778.shtml",
+      "title": "中国国家博物馆 · 林家遗址青铜刀",
+      "references": [
+        {
+          "kind": "event",
+          "id": "linjia-bronze"
+        }
+      ]
+    },
+    {
+      "url": "https://m-www.hbkgy.com/kgcz/p/9440.html",
+      "title": "湖北省文物考古研究院 · 熊家岭史前水利系统",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hbkgy.com/yjy_mtbd/p/9557.html",
+      "title": "湖北省文物考古研究院 · 屈家岭遗址参评资料",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hbkgy.com/yjy_mtbd/p/8895.html",
+      "title": "湖北省文物考古研究院 · 石家河遗址与中华文明",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shijiahe-city"
+        }
+      ]
+    },
+    {
+      "url": "https://m-www.hbkgy.com/kgcz/p/10746.html",
+      "title": "湖北省文物考古研究院 · 石家河文化序列",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shijiahe-city"
+        }
+      ]
+    },
+    {
+      "url": "https://shandong-chorography.org/database/a/section/70/article/39/",
+      "title": "山东地情档案 · 城子崖遗址",
+      "references": [
+        {
+          "kind": "event",
+          "id": "chengziya-longshan"
+        }
+      ]
+    },
+    {
+      "url": "https://kaogu.cssn.cn/xwzx/kgdt/201512/t20151215_5943668.shtml",
+      "title": "中国社会科学院考古研究所 · 陶寺考古报告与城址布局",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taosi-city"
+        }
+      ]
+    },
+    {
+      "url": "https://kaogu.cssn.cn/xwzx/bszx/xsjz/202301/t20230106_5963427.shtml",
+      "title": "中国社会科学院考古研究所 · 陶寺考古队领队谈遗址年代",
+      "references": [
+        {
+          "kind": "event",
+          "id": "taosi-city"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
+      "title": "中国社会科学网 · 石峁遗址的考古发现与研究综述",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shimao-city"
+        }
+      ]
+    },
+    {
+      "url": "https://jomon-japan.jp/en/learn/jomon-sites/sannai-maruyama",
+      "title": "日本绳文遗址官方门户 · 三内丸山遗址",
+      "references": [
+        {
+          "kind": "event",
+          "id": "sannai-maruyama"
+        }
+      ]
+    },
+    {
+      "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
+      "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/514/",
+      "title": "UNESCO · 奥克尼新石器时代遗址",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1269/",
+      "title": "UNESCO · 卡拉尔—苏佩圣城",
+      "references": [
+        {
+          "kind": "event",
+          "id": "caral-city"
+        }
+      ]
+    },
+    {
+      "url": "https://egymonuments.gov.eg/en/news/a-virtual-tour-through-the-step-pyramid-complex-of-djoser",
+      "title": "埃及旅游与文物部 · 左塞尔阶梯金字塔",
+      "references": [
+        {
+          "kind": "event",
+          "id": "djoser-step-pyramid"
+        }
+      ]
+    },
+    {
+      "url": "https://egymonuments.gov.eg/monuments/the-great-pyramid/",
+      "title": "埃及旅游与文物部 · 胡夫大金字塔",
+      "references": [
+        {
+          "kind": "event",
+          "id": "khufu-pyramid"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+      "title": "大都会艺术博物馆 · 书写的起源",
+      "references": [
+        {
+          "kind": "event",
+          "id": "uruk-writing"
+        }
+      ]
+    },
+    {
+      "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
+      "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024）",
+      "references": [
+        {
+          "kind": "event",
+          "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "url": "https://img.cjyun.org.cn/a/10695/202303/76adee32725a5022b1ed8a5e15c15640.pdf?202102191717216666=",
+      "title": "湖北考古年度报告 · 屈家岭遗址中心坐标",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qujialing-water"
+        }
+      ]
+    }
+  ]
+}

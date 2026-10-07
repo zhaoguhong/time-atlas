@@ -1,0 +1,51 @@
+# Dependencies and build output
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+coverage/
+.cache/
+
+# Restored losslessly from data/map-packs by the npm lifecycle commands
+/public/data/maps/
+/public/data/land.geojson
+/public/data/lakes.geojson
+/public/data/rivers_lake_centerlines.geojson
+
+# Private local tools, deployment configuration and backups
+.local/
+.env*
+.npmrc
+.pypirc
+.netrc
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.log
+*.bak
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Raw source caches and local research evidence
+data/raw/
+data/research/searches/
+data/research/verification/
+data/research/.fetch.lock
+
+# Browser test output
+playwright-report/
+test-results/
+
+# Operating system metadata
+.DS_Store
+._*
+Thumbs.db

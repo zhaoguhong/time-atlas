@@ -1,0 +1,639 @@
+/* Reading tools share the existing paper palette and stay outside the map. */
+.map-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.panel-toolbar .reader-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  color: #52715b;
+}
+.panel-toolbar .reader-toggle:hover {
+  background: #edf1e7;
+}
+.timeline-zoom > button {
+  min-width: 30px;
+  min-height: 30px;
+  justify-content: center;
+}
+.timeline-zoom .timeline-context-action {
+  border-radius: 4px;
+  font-size: 11px;
+  color: #486342;
+}
+.timeline-zoom .timeline-context-action:hover,
+.timeline-zoom .timeline-context-action[aria-pressed='true'] {
+  background: #e7edde;
+}
+.timeline-zoom .timeline-context-action svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 1400px) {
+  .timeline-zoom .timeline-context-action span {
+    display: inline;
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
+  .timeline-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 29px 29px;
+    gap: 2px 8px;
+  }
+  .time-readout {
+    display: contents;
+  }
+  .time-readout .year-title,
+  .time-readout form {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .timeline-period-select {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .play-controls,
+  .timeline-zoom {
+    position: static;
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .play-controls {
+    grid-row: 1;
+    justify-content: flex-end;
+  }
+  .play-controls > button,
+  .play-controls > select {
+    height: 29px;
+  }
+  .timeline-zoom {
+    grid-row: 2;
+  }
+  .timeline-zoom > button,
+  .timeline-zoom > select {
+    min-height: 28px;
+    height: 28px;
+  }
+  .timeline .time-rail {
+    margin-top: 3px;
+    height: 55px;
+  }
+  .timeline .rail-label {
+    top: 20px;
+    height: 24px;
+    line-height: 12px;
+  }
+  .timeline .time-ticks {
+    top: 45px;
+    height: 10px;
+  }
+  .time-ticks > span {
+    line-height: 10px;
+  }
+}
+@media (max-width: 700px) and (min-height: 541px) {
+  .atlas-app,
+  .atlas-app:has(.journey-toolbar) {
+    --mobile-timeline-height: calc(132px + env(safe-area-inset-bottom, 0px));
+    grid-template-rows: 60px 42px clamp(160px, 26dvh, 270px) minmax(0, 1fr) var(
+        --mobile-timeline-height
+      );
+  }
+  .atlas-app[data-mobile-view='reading'],
+  .atlas-app[data-mobile-view='map'] {
+    grid-template-rows: 60px 42px minmax(0, 1fr) var(--mobile-timeline-height);
+  }
+  .mobile-workspace button {
+    min-height: 38px;
+  }
+  .timeline {
+    padding: 5px 12px env(safe-area-inset-bottom, 0px);
+  }
+  .timeline .timeline-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 34px 28px;
+    min-height: 64px;
+    gap: 2px 6px;
+  }
+  .time-readout {
+    display: contents;
+  }
+  .time-readout .year-title,
+  .time-readout form {
+    grid-column: 1;
+    grid-row: 1;
+    white-space: nowrap;
+  }
+  .timeline-period-select {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 135px;
+    height: 28px;
+  }
+  .timeline .play-controls,
+  .timeline .timeline-zoom {
+    position: static;
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    justify-content: flex-end;
+  }
+  .timeline .play-controls {
+    grid-row: 1;
+  }
+  .timeline .timeline-zoom {
+    grid-row: 2;
+    gap: 4px;
+  }
+  .timeline-zoom > button,
+  .timeline-zoom > select {
+    min-height: 28px;
+    height: 28px;
+  }
+  .timeline .time-rail {
+    margin-top: 3px;
+    height: 56px;
+  }
+  .timeline .rail-label {
+    top: 20px;
+    height: 28px;
+    line-height: 12px;
+  }
+  .timeline .time-ticks {
+    top: 49px;
+    height: 10px;
+  }
+  .time-ticks > span {
+    line-height: 10px;
+  }
+  .atlas-app[data-mobile-view='split'] .panel-scroll {
+    padding: 10px 14px;
+  }
+  .atlas-app[data-mobile-view='split'] .event-card {
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .timeline-zoom > button span {
+    display: none;
+  }
+  .timeline-zoom > button {
+    padding: 4px;
+    min-width: 30px;
+  }
+}
+.playback-mode {
+  border: 1px solid #dbe1d0;
+  border-radius: 4px;
+  padding: 5px 2px;
+  background: #f6f8ef;
+  color: #45633c;
+  font-size: 11px;
+  max-width: 80px;
+}
+.timeline-zoom {
+  gap: 6px;
+}
+.header-more {
+  display: none;
+}
+.place-detail p,
+.places-panel > p,
+.comparison-reading p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #586653;
+}
+.place-detail h2,
+.places-panel h2,
+.comparison-reading h2 {
+  font-size: 25px;
+  margin: 14px 0;
+}
+.place-detail h3,
+.comparison-reading h3 {
+  margin: 26px 0 12px;
+  font-size: 16px;
+}
+.place-directory,
+.archive-event-list {
+  display: grid;
+  gap: 12px;
+}
+.place-directory > button,
+.archive-event-list > button {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid #dce1d4;
+  border-radius: 7px;
+  text-align: left;
+  background: #fffefb;
+}
+.place-directory > button:hover,
+.archive-event-list > button:hover {
+  border-color: #91a183;
+  background: #f2f5ec;
+}
+.archive-event-list strong {
+  font-size: 15px;
+}
+.archive-event-list span {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #586653;
+}
+.archive-event-list small,
+.place-directory small,
+.place-directory span {
+  color: #62735c;
+  font-size: 11px;
+}
+.place-directory svg {
+  justify-self: end;
+}
+.place-names {
+  margin: 20px 0;
+  padding: 12px;
+  border: 1px solid #dce1d4;
+  border-radius: 6px;
+}
+.place-names summary,
+.exploration-filters summary {
+  cursor: pointer;
+  color: #345b48;
+  font-size: 12px;
+}
+.archive-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.archive-heading select,
+.exploration-filters select,
+.exploration-filters input {
+  min-width: 0;
+  border: 1px solid #ced8c4;
+  background: #fffefb;
+  border-radius: 4px;
+  padding: 8px;
+  color: #345b48;
+}
+.place-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.place-people button,
+.comparison-years button {
+  padding: 9px 12px;
+  background: #edf2e5;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.place-visits > div {
+  padding: 15px 0;
+  border-bottom: 1px solid #dce1d4;
+}
+.place-visits strong,
+.place-visits small,
+.place-visits a {
+  display: block;
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.place-visits button,
+.place-visits a {
+  color: #345b48;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.exploration-filters {
+  margin: 8px 0 14px;
+}
+.exploration-filters summary {
+  min-height: 28px;
+  line-height: 28px;
+}
+.exploration-filters > div {
+  padding: 12px;
+  background: #f2f5ed;
+  border: 1px solid #dce1d4;
+  border-radius: 6px;
+}
+.exploration-filters label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+}
+.exploration-filters form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+.exploration-filters form button {
+  grid-column: 1 / -1;
+}
+.exploration-filters button,
+.city-archive-link,
+.comparison-read-button {
+  min-height: 34px;
+  padding: 6px 8px;
+  color: #345b48;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.exploration-filters p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.comparison-years {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.comparison-years section {
+  border: 1px solid #dce1d4;
+  border-radius: 6px;
+  padding: 10px;
+}
+.comparison-years h3 {
+  margin: 0;
+}
+.comparison-years button {
+  margin: 3px;
+}
+.polity-timebands {
+  display: grid;
+  gap: 6px;
+}
+.polity-timebands button {
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  min-height: 42px;
+  font-size: 12px;
+}
+.polity-timebands small {
+  display: block;
+  color: #67775e;
+  font-size: 10px;
+}
+.polity-timeband {
+  height: 16px;
+  background: #f0f2e9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.polity-timeband i {
+  position: absolute;
+  height: 100%;
+  background: #829876;
+  border-radius: 3px;
+}
+.check-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 14px 0;
+  font-size: 12px;
+  min-height: 34px;
+}
+.resume-reading {
+  padding: 14px;
+  border: 1px solid #d4dec8;
+  background: #f2f5e9;
+  border-radius: 6px;
+  margin: 0 0 20px;
+}
+.resume-reading h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+.resume-reading p {
+  color: #627057;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.resume-reading button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  min-height: 44px;
+  font-size: 13px;
+  color: #345b48;
+  border-bottom: 1px solid #dce4d3;
+}
+.resume-reading button:last-child {
+  border: 0;
+}
+.topic-reading-progress,
+.chapter-read-mark {
+  color: #345b48;
+  font-size: 11px;
+}
+.chapter-read-mark {
+  margin-left: 8px;
+}
+.topic-chapter-links {
+  flex-wrap: wrap;
+}
+.chapter-read[aria-pressed='true'] {
+  background: #e6eddc;
+}
+.panel-tabs {
+  gap: 12px;
+}
+.panel-tabs button {
+  white-space: nowrap;
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .topbar {
+    gap: 4px;
+  }
+  .main-nav {
+    margin-left: auto;
+    gap: 6px;
+  }
+  .main-nav button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .top-search:not(:focus-within):not([data-search-open='true']) {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+  .top-search:not(:focus-within):not([data-search-open='true']) input {
+    width: 44px;
+    height: 44px;
+  }
+  .top-search:not(:focus-within):not([data-search-open='true']) > svg {
+    left: 14px;
+  }
+  .header-more {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    color: #45623a;
+  }
+  .header-actions {
+    display: none;
+  }
+  .header-actions.mobile-open {
+    position: absolute;
+    top: 56px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 110;
+    padding: 8px;
+    background: #fffefb;
+    border: 1px solid #d7dfcf;
+    box-shadow: 0 8px 24px #283d2929;
+    border-radius: 6px;
+  }
+  .header-actions.mobile-open .icon-button,
+  .header-actions.mobile-open .share-button {
+    width: 150px;
+    height: 44px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .header-actions.mobile-open .icon-button::after {
+    content: attr(aria-label);
+    font-size: 12px;
+  }
+  .header-actions.mobile-open .share-button span {
+    display: inline;
+  }
+  .header-actions .header-separator {
+    display: none;
+  }
+  .panel-tabs {
+    gap: 18px;
+  }
+  .panel-tab-note {
+    display: none;
+  }
+  .panel-tabs button {
+    min-height: 38px;
+  }
+  .atlas-app[data-mobile-view='reading'] .tour-card {
+    display: block;
+  }
+  .atlas-app[data-mobile-view='reading'] .tour-card-art {
+    display: none;
+  }
+  .atlas-app[data-mobile-view='reading'] .tour-card-body {
+    padding: 16px;
+  }
+  .atlas-app[data-mobile-view='reading'] .tour-card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .atlas-app[data-mobile-view='reading'] .panel-intro {
+    margin-bottom: 16px;
+  }
+  .place-directory > button {
+    padding: 12px;
+  }
+  .exploration-filters input,
+  .exploration-filters select {
+    font-size: 16px;
+  }
+  .comparison-years {
+    gap: 8px;
+  }
+}
+@media (max-width: 380px) {
+  .brand small {
+    display: none;
+  }
+  .brand {
+    gap: 5px;
+  }
+  .brand > span:last-child {
+    font-size: 15px;
+  }
+  .main-nav button {
+    font-size: 10px;
+  }
+}
+
+.place-focus-label {
+  background: #385b47;
+  color: #fffef8;
+  border: 2px solid #fffef8;
+  border-radius: 7px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px #243c3733;
+  min-width: 88px;
+  text-align: center;
+  z-index: 10;
+}
+.place-focus-label small,
+.place-focus-label strong {
+  display: block;
+}
+.place-focus-label small {
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+.place-focus-label strong {
+  font-size: 13px;
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .panel-tab-note {
+    display: none;
+  }
+}
+
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .atlas-app[data-mobile-view='split'] .period-brief {
+    /* The timeline already opens the period overview; keep this extra entry
+       in focused reading and give the split view's first event more room. */
+    display: none;
+  }
+  .atlas-app[data-mobile-view='split'] .list-description {
+    display: none;
+  }
+  .atlas-app[data-mobile-view='split'] .exploration-filters:not([open]) {
+    margin: 0 0 8px;
+  }
+}

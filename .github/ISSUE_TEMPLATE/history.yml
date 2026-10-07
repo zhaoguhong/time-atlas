@@ -1,0 +1,25 @@
+name: 史实纠错与来源补充
+description: 指出记录中的年代、地点、人物关联或叙述问题
+title: '[史料] '
+body:
+  - type: input
+    id: record
+    attributes:
+      label: 对应记录与分享链接
+      description: 事件、人物、政权或专题名称；有记录 ID 时请一并提供。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 问题与建议修正
+      description: 请区分可确认的错误与仍有争议的解释。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 依据与出处
+      description: 提供链接及具体卷次、页码、段落或机构说明；无需复制整篇原文。
+    validations:
+      required: true

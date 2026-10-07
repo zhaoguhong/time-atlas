@@ -1,0 +1,258 @@
+{
+  "sources": [
+    {
+      "title": "UNESCO · 殷墟",
+      "url": "https://whc.unesco.org/en/list/1114/",
+      "references": [
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 商前期原始瓷尊",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202107/t20210728_250886.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "early-porcelain"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 利簋与武王克商",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202108/t20210802_250931.shtml",
+      "references": [
+        {
+          "kind": "event",
+          "id": "muye"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "二里头遗址 · 考古发现与许宏访谈",
+      "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
+      "note": "以约前1800—前1500年的概括区间介绍遗址，不主张所有阶段均属夏，也不从遗址推断国界。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "erlitou-centre"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        }
+      ]
+    },
+    {
+      "title": "国家民委 · 夏商周纪年与武王克商的考定",
+      "url": "https://www.neac.gov.cn/seac/c103391/202306/1164738.shtml",
+      "note": "采用常见年代框架，不把前841年之前的争议年代当作无争议的精确纪年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xia-tradition"
+        },
+        {
+          "kind": "event",
+          "id": "shang-begins"
+        },
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "event",
+          "id": "muye"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        },
+        {
+          "kind": "dynasty",
+          "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 夏本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷002",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xia-tradition"
+        },
+        {
+          "kind": "person",
+          "id": "early-yu"
+        },
+        {
+          "kind": "dynasty",
+          "id": "xia-early"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 殷本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷003",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shang-begins"
+        },
+        {
+          "kind": "event",
+          "id": "pan-geng-yin"
+        },
+        {
+          "kind": "event",
+          "id": "wuding-era"
+        },
+        {
+          "kind": "person",
+          "id": "early-tang"
+        },
+        {
+          "kind": "person",
+          "id": "early-wuding"
+        },
+        {
+          "kind": "dynasty",
+          "id": "shang-early"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 十二诸侯年表",
+      "url": "https://zh.wikisource.org/wiki/史記/卷014",
+      "references": [
+        {
+          "kind": "event",
+          "id": "gonghe"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 吴太伯世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷031",
+      "references": [
+        {
+          "kind": "event",
+          "id": "wu-enters-ying"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 齐太公世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷032",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qihuan-guanzhong"
+        },
+        {
+          "kind": "event",
+          "id": "kuiqiu"
+        },
+        {
+          "kind": "person",
+          "id": "early-qihuan"
+        },
+        {
+          "kind": "dynasty",
+          "id": "eastern-zhou"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 鲁周公世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷033",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhougong-east"
+        },
+        {
+          "kind": "event",
+          "id": "lu-land-tax"
+        },
+        {
+          "kind": "person",
+          "id": "early-zhougong"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 越王勾践世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷041",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yue-defeats-wu"
+        },
+        {
+          "kind": "person",
+          "id": "early-goujian"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 郑世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷042",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "title": "《史记》· 管晏列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷062",
+      "references": [
+        {
+          "kind": "event",
+          "id": "qihuan-guanzhong"
+        },
+        {
+          "kind": "person",
+          "id": "early-guanzhong"
+        }
+      ]
+    },
+    {
+      "url": "https://maplibre.org/maplibre-gl-js/docs/examples/animate-a-point-along-a-route/",
+      "title": "MapLibre route animation reference"
+    },
+    {
+      "url": "https://docs.mapbox.com/mapbox-gl-js/example/scroll-fly-to/",
+      "title": "Mapbox chapter camera reference"
+    },
+    {
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+      "title": "Cliopatria global coverage documentation"
+    }
+  ]
+}

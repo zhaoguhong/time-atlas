@@ -1,0 +1,27 @@
+{
+  "generatedAt": {
+    "current_time": "2026-10-07 06:49:31 UTC"
+  },
+  "sources": [
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Q18383757&oldid=2372668882",
+      "title": "Wikidata · 兴隆沟遗址定位（修订2372668882）",
+      "references": [
+        {
+          "kind": "event",
+          "id": "xinglonggou-millet"
+        }
+      ]
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Q17033400&oldid=2515983805",
+      "title": "Wikidata · 马家窑遗址定位（修订2515983805）",
+      "references": [
+        {
+          "kind": "event",
+          "id": "majiayao-pottery"
+        }
+      ]
+    }
+  ]
+}

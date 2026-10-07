@@ -1,0 +1,16 @@
+name: 功能建议
+description: 描述希望改善的学习或探索体验
+title: '[建议] '
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景与困难
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 希望如何改善
+    validations:
+      required: true
