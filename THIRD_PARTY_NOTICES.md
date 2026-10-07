@@ -58,4 +58,6 @@ The website publishes project-authored summaries, source links and a metadata-on
 
 ## Software dependencies
 
+The GitHub repository links use the Octicons `mark-github` icon from [primer/octicons](https://github.com/primer/octicons/blob/1dafaa68a1cef892168aa0fe3d16f0b406715c15/icons/mark-github-16.svg), copyright © 2026 GitHub Inc., under [MIT](LICENSES/Octicons-MIT.txt). Its original path is retained in `src/components/GitHubIcon.tsx`; only the React wrapper, display size and inherited color are adapted.
+
 React, Vite, TypeScript, MapLibre GL JS, Lucide, Playwright, Vitest, Prettier and Shapely remain subject to their respective upstream licenses. Installed package license files accompany the development dependencies; package versions are recorded in `package-lock.json` and `scripts/requirements.txt`.

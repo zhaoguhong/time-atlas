@@ -215,6 +215,24 @@
 .header-more {
   display: none;
 }
+
+.open-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: #edf1e7;
+  color: var(--green);
+  font-size: 12px;
+}
+
+.open-source-link:hover {
+  background: #e3eadc;
+}
 .place-detail p,
 .places-panel > p,
 .comparison-reading p {

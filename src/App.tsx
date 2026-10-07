@@ -41,6 +41,7 @@ import type { Camera } from './components/HistoryMap'
 const HistoryMap = lazy(() => import('./components/HistoryMap'))
 import Timeline from './components/Timeline'
 import MobileSheetHandle from './components/MobileSheetHandle'
+import GitHubIcon from './components/GitHubIcon'
 import JourneyPanel from './components/JourneyPanel'
 import DynastyPanel, { DynastyIntroduction } from './components/DynastyPanel'
 import ReadingText from './components/ReadingText'
@@ -109,6 +110,7 @@ import {
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
 const allTours = [...tours, ...periodCourses]
+const projectRepositoryUrl = 'https://github.com/zhaoguhong/time-atlas'
 const categories: ('全部' | Category)[] = ['全部', '战争', '政治', '文化', '交流', '社会']
 const categoryColors: Record<string, string> = {
   战争: '#a76f58',
@@ -1550,6 +1552,17 @@ export default function App() {
           >
             <Info size={18} />
           </button>
+          <a
+            className="icon-button"
+            href={projectRepositoryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub 开源项目（新标签页打开）"
+            aria-label="GitHub 开源项目"
+            onClick={() => setMoreOpen(false)}
+          >
+            <GitHubIcon />
+          </a>
           <span className="header-separator" />
           <button
             className="share-button"
@@ -2906,6 +2919,16 @@ export default function App() {
             <p className="dialog-intro">
               在地图上读历史，在时间中看山河。这是一份以中国历史为主、持续整理的交互历史地图。地图来源与内容参考分开标注，帮助你理解资料所能支持的范围。
             </p>
+            <a
+              className="open-source-link"
+              href={projectRepositoryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon size={16} />
+              <span>项目已开源 · 查看 GitHub</span>
+              <ExternalLink size={13} />
+            </a>
             <div className="source-grid">
               <a
                 href="https://github.com/Seshat-Global-History-Databank/cliopatria"
