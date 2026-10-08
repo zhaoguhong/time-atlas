@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data/raw/people'
 OUT = ROOT / 'src/data/generated/people.json'
+READING_LINKS = ROOT / 'src/data/generated/person-reading-links.json'
 LOCK = ROOT / 'data/people.sources.json'
 API = 'https://www.wikidata.org/w/api.php'
 WIKI_API = 'https://zh.wikipedia.org/w/api.php'
@@ -62,6 +63,16 @@ def year(claims):
             number = int(match[2]) * (-1 if match[1] == '-' else 1)
             if number: years.add(number)
     return next(iter(years)) if len(years) == 1 else None
+
+def write_reading_links(people, entities):
+    links = {}
+    for person in people:
+        entity = entities.get(person['wikidata'], {})
+        title = entity.get('sitelinks', {}).get('zhwiki', {}).get('title')
+        revision = entity.get('lastrevid')
+        if title and isinstance(revision, int) and revision == person['revision']:
+            links[person['wikidata']] = {'title': title, 'revision': revision}
+    READING_LINKS.write_text(json.dumps(dict(sorted(links.items())), ensure_ascii=False, indent=2)+'\n')
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--refresh',action='store_true'); args=parser.parse_args()
@@ -153,6 +164,7 @@ def main():
             collected[qid]={'id':legacy.get(name,special.get(name,qid.lower())),'name':name,'birth':birth,'death':death,'role':role,'summary':summary,'biography':summary,'color':['#6b8a82','#9c865e','#8b8197','#698996'][ord(name[0])%4],'aliases':aliases,'era':matched['era'],'recordKind':'catalog','wikidata':qid,'revision':revision,'sources':[{'title':f'Wikidata · {name} ({qid})','url':f'https://www.wikidata.org/w/index.php?title={qid}&oldid={revision}' if revision else f'https://www.wikidata.org/wiki/{qid}','note':'CC0 结构化基础资料；简介采用中文身份描述或职业字段。未知或有多种纪年的生卒年不填单一值。'}]}
     output=sorted(collected.values(),key=lambda p:(p['era'],p['birth'] or 0,p['name']))
     OUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
+    write_reading_links(output, entities)
     missing=[i['name'] for i in items if not any(p['name']==i['name'] or i['name'] in p['aliases'] for p in output)]
     manifest={'source':'Wikidata','license':'CC0','generatedAt':datetime.now(timezone.utc).isoformat(),'seedFiles':[{'file':file,'sha256':hashlib.sha256((ROOT/'data'/file).read_bytes()).hexdigest()} for file in ['people-seeds.json','people-extra-seeds.json']],'count':len(output),'requested':len(items),'unresolved':missing,'rejected':rejected,'requests':records,'outputSha256':hashlib.sha256(OUT.read_bytes()).hexdigest()}
     LOCK.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')

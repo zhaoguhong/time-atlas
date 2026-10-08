@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:11:23.265Z",
+  "generatedAt": "2026-10-08T14:26:47.974Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -260,6 +260,7 @@
   "sourceRetention": {
     "references": 356,
     "retained": 347,
+    "unavailable": 0,
     "failed": 9,
     "detailedAudit": "data/research/content-audit.json"
   },

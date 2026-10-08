@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:11:23.265Z",
+  "generatedAt": "2026-10-08T14:26:47.974Z",
   "validation": {
     "allIntroductionsAndSources": true,
     "datesAndCoordinates": true,
@@ -7,6 +7,7 @@
     "posthumousExplanations": true,
     "journeyChronology": true,
     "retainedSourceHashes": true,
+    "missingSnapshotFiles": 0,
     "topicChaptersAndChronology": true
   },
   "scope": "Structural and chronological validation of every record; editorial gaps are retained, not filled with guessed associations. This is not expert certification of all historical claims.",

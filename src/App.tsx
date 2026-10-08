@@ -45,6 +45,7 @@ import GitHubIcon from './components/GitHubIcon'
 import JourneyPanel from './components/JourneyPanel'
 import DynastyPanel, { DynastyIntroduction } from './components/DynastyPanel'
 import ReadingText from './components/ReadingText'
+import PersonFurtherReading from './components/PersonFurtherReading'
 import TopicPanel from './components/TopicPanel'
 import PlacePanel from './components/PlacePanel'
 import ComparisonPanel from './components/ComparisonPanel'
@@ -2132,6 +2133,7 @@ export default function App() {
                       text={selectedPerson.biography}
                     />
                   )}
+                  <PersonFurtherReading person={selectedPerson} />
                   {journeyByPerson.has(selectedPerson.id) &&
                   !(trail?.personId === selectedPerson.id) ? (
                     <>
