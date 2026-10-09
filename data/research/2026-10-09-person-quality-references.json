@@ -1,0 +1,87 @@
+{
+  "purpose": "Source retention for a five-person editorial pass; no dates or routes inferred from narrative scenes.",
+  "sources": [
+    {
+      "title": "《旧五代史》卷43 · 长兴三年刻印九经奏请",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷43",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    },
+    {
+      "title": "《旧五代史》卷126 · 冯道传",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷126",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1131595"
+        },
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    },
+    {
+      "title": "《旧五代史》卷116 · 显德三年淮南战事",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷116",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1319646"
+        },
+        {
+          "kind": "event",
+          "id": "later-zhou-huainan"
+        }
+      ]
+    },
+    {
+      "title": "《墨子》· 公输",
+      "url": "https://zh.wikisource.org/wiki/墨子/公輸",
+      "references": [
+        {
+          "kind": "person",
+          "id": "mozi"
+        }
+      ]
+    },
+    {
+      "title": "《笔法记》· 传为荆浩所撰",
+      "url": "https://zh.wikisource.org/wiki/筆法記",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2665475"
+        }
+      ]
+    },
+    {
+      "title": "容闳 · My Life in China and America，第十三至十五章",
+      "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "depth-ronghong"
+        },
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        }
+      ]
+    },
+    {
+      "title": "《五代会要》卷八 · 经籍",
+      "url": "https://zh.wikisource.org/wiki/五代會要/卷八",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    }
+  ]
+}

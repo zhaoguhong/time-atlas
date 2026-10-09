@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T07:11:22.777Z",
+  "generatedAt": "2026-10-08T18:16:24.242Z",
   "sources": [
     {
       "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024，第17页）",
@@ -288,6 +288,17 @@
       ]
     },
     {
+      "title": "吉林铁路博物馆 · 第一条国有铁路干线",
+      "url": "https://museum.jty.edu.cn/Home/Content/20227",
+      "note": "核对分段施工、关沟地形、人字形线路与隧道开挖方法；不将线路自动转换为个人逐日行踪。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
+        }
+      ]
+    },
+    {
       "title": "教育部 · 子产铸刑书",
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "references": [
@@ -328,6 +339,17 @@
         {
           "kind": "person",
           "id": "reviewed-梁惠王"
+        }
+      ]
+    },
+    {
+      "title": "国家铁路局 · 百年京张 世纪经典",
+      "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
+      "note": "核对1905—1909年京张建设、詹天佑主持及中国自主勘测设计施工管理的范围。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
         }
       ]
     },
@@ -675,9 +697,13 @@
       ]
     },
     {
-      "title": "中国国家博物馆 · 江南制造局造船清单",
+      "title": "中国国家博物馆 · 江南制造局造船清单与创办背景",
       "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
       "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
         {
           "kind": "topic",
           "id": "self-strengthening-course"
@@ -1083,12 +1109,56 @@
       ]
     },
     {
+      "title": "故宫博物院 · 瘦金书",
+      "url": "https://www.dpm.org.cn/lemmas/240221.html",
+      "note": "机构条目支持瘦金书归于宋徽宗赵佶，以及褚遂良、薛曜、薛稷等书风来源。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q7486"
+        }
+      ]
+    },
+    {
       "title": "故宫博物院 · 张旭",
       "url": "https://www.dpm.org.cn/lemmas/241546.html",
       "references": [
         {
           "kind": "person",
           "id": "q717343"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 郑燮",
+      "url": "https://www.dpm.org.cn/lemmas/242338.html",
+      "note": "用于科举仕宦、扬州卖画与书画风格；机构词条标卒年1765，所引Wikidata记录为1766，卒年尚需另核历法与史料。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q712007"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 唐寅",
+      "url": "https://www.dpm.org.cn/lemmas/242652.html",
+      "note": "用于科举牵连、生活经历与绘画风格；机构词条标卒年1523，所引Wikidata记录为1524，卒年尚需另核历法与史料。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2248916"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 文徵明",
+      "url": "https://www.dpm.org.cn/lemmas/242658.html",
+      "note": "核对师承、屡试乡试、翰林待诏、辞归及粗细两种绘画面貌和吴门传承。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q306673"
         }
       ]
     },
@@ -1113,6 +1183,32 @@
         {
           "kind": "person",
           "id": "q182874"
+        }
+      ]
+    },
+    {
+      "title": "福州市人民政府 · 严复",
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
+      "note": "用于船政与英国海军教育、归国教学和天演论译介；页面生年与基础身份纪年不同，部分童年年龄叙述也不自洽，不用于校订生卒日期或沿用宣传性评价。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "title": "容闳 · My Life in China and America，第十三至十五章",
+      "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
+      "note": "自述中的机器采购与运送记载，和机构创办、后续生产分别理解。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
+        {
+          "kind": "person",
+          "id": "depth-ronghong"
         }
       ]
     },
@@ -1247,6 +1343,17 @@
         {
           "kind": "event",
           "id": "quanzhou-office"
+        }
+      ]
+    },
+    {
+      "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
+      "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
+      "note": "用于该书政治、经济、军事、历史和地理内容及数字说明的概述。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
         }
       ]
     },
@@ -7621,6 +7728,10 @@
       "url": "https://www.zs.gov.cn/zjzs/zsmr/content/post_220052.html",
       "references": [
         {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
+        {
           "kind": "person",
           "id": "depth-ronghong"
         }
@@ -8686,6 +8797,17 @@
       ]
     },
     {
+      "title": "《三国志》卷29 · 方技传华佗",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷29",
+      "note": "核对华佗医术、麻沸散的古史记载、导引五禽戏与吴普樊阿师承、为曹操治病及死于狱；不把神异病例当作现代医学验证。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31749"
+        }
+      ]
+    },
+    {
       "title": "《三國志》卷32",
       "url": "https://zh.wikisource.org/wiki/三國志/卷32",
       "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
@@ -8863,6 +8985,53 @@
         {
           "kind": "event",
           "id": "liuhui"
+        },
+        {
+          "kind": "person",
+          "id": "q316304"
+        }
+      ]
+    },
+    {
+      "title": "《五代会要》卷八 · 经籍",
+      "url": "https://zh.wikisource.org/wiki/五代會要/卷八",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    },
+    {
+      "title": "法显 ·《佛国记》",
+      "url": "https://zh.wikisource.org/wiki/佛國記",
+      "note": "核对求取戒律、西行与海路归返、僧团及地域观察；开篇年号与干支存在校读问题，不能直接换算成精确纪年或地图路线。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q312978"
+        }
+      ]
+    },
+    {
+      "title": "《备急千金要方》卷一 · 大医习业、大医精诚",
+      "url": "https://zh.wikisource.org/wiki/備急千金要方/第一",
+      "note": "原文支持医家广学、审慎救治和贵贱一视同仁的伦理讨论；古代医方不构成现代疗效证明。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q981193"
+        }
+      ]
+    },
+    {
+      "title": "《伤寒杂病论序》及林亿等宋校《伤寒论》序",
+      "url": "https://zh.wikisource.org/wiki/傷寒雜病論序",
+      "note": "核对传世自序的著述动机、采集古训与辨证，以及王叔和整理、宋代校刊；姓名、南阳籍及长沙太守为宋校序转引后出《名医录》，不作同时代履历证明。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
         }
       ]
     },
@@ -9413,6 +9582,10 @@
         {
           "kind": "person",
           "id": "xiangyu"
+        },
+        {
+          "kind": "person",
+          "id": "q701326"
         }
       ]
     },
@@ -9432,13 +9605,17 @@
       ]
     },
     {
-      "title": "《史記》卷10",
+      "title": "《史记》卷10 · 孝文本纪",
       "url": "https://zh.wikisource.org/wiki/史記/卷010",
-      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "note": "核对刘恒由代王入继帝位、宽政、刑制改革及其具体局限；不把后世文景评价当作每项政令的即时结果。",
       "references": [
         {
           "kind": "event",
           "id": "han-wendi"
+        },
+        {
+          "kind": "person",
+          "id": "q7221"
         }
       ]
     },
@@ -9708,6 +9885,36 @@
       ]
     },
     {
+      "title": "《史记》卷55 · 留侯世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷055",
+      "note": "核对张良韩相家世、刺秦、从刘邦、入关筹划、封留侯和定都建议；圯上授书按传记故事处理。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q701326"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷56 · 陈丞相世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷056",
+      "note": "核对陈平改事刘邦、反间筹策、白登解围、与周勃迎立文帝和宰相职分；白登计策原文明确不详。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "baideng"
+        },
+        {
+          "kind": "event",
+          "id": "han-wendi"
+        },
+        {
+          "kind": "person",
+          "id": "q707658"
+        }
+      ]
+    },
+    {
       "title": "《史记》· 管晏列传",
       "url": "https://zh.wikisource.org/wiki/史記/卷062",
       "references": [
@@ -9718,6 +9925,25 @@
         {
           "kind": "person",
           "id": "early-guanzhong"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷63 · 老子韩非列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷063",
+      "note": "《老子韩非列传》庄子段；核对名周、漆园吏、时代范围及拒聘叙事，不将寓言人物与文学场景转为活动年表。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47739"
+        },
+        {
+          "kind": "person",
+          "id": "q9333"
+        },
+        {
+          "kind": "person",
+          "id": "q28959"
         }
       ]
     },
@@ -9737,6 +9963,10 @@
         {
           "kind": "person",
           "id": "sunbin"
+        },
+        {
+          "kind": "person",
+          "id": "q37151"
         }
       ]
     },
@@ -9805,6 +10035,10 @@
         },
         {
           "kind": "person",
+          "id": "q216072"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-梁惠王"
         }
       ]
@@ -9853,6 +10087,10 @@
         },
         {
           "kind": "person",
+          "id": "q301650"
+        },
+        {
+          "kind": "person",
           "id": "q313330"
         },
         {
@@ -9895,9 +10133,9 @@
       ]
     },
     {
-      "title": "《史記》卷88",
+      "title": "《史记》卷88 · 蒙恬列传",
       "url": "https://zh.wikisource.org/wiki/史記/卷088",
-      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "note": "核对攻齐、北击匈奴、长城和九原至甘泉通道的统军及工程职责，以及秦末赐死；原文说通道未就。",
       "references": [
         {
           "kind": "event",
@@ -9906,6 +10144,10 @@
         {
           "kind": "event",
           "id": "qin-straight-road"
+        },
+        {
+          "kind": "person",
+          "id": "q1151702"
         }
       ]
     },
@@ -10135,6 +10377,65 @@
       ]
     },
     {
+      "title": "《天工开物》· 乃粒第一",
+      "url": "https://zh.wikisource.org/wiki/天工開物/乃粒第一",
+      "note": "核对乃粒第一页面开篇宋子曰中五谷民生、种性、水土与农民劳动的论述，不视为全部农业工序的证据。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "title": "《天工开物》· 自序",
+      "url": "https://zh.wikisource.org/wiki/天工開物/自序",
+      "note": "序末署崇祯丁丑孟夏月，即1637年；可核作序时间、编书旨趣及友人资助，不单凭序文断定印成月份。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tiangong-kaiwu"
+        },
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "title": "《天工开物》· 造竹纸",
+      "url": "https://zh.wikisource.org/wiki/天工開物/造竹紙",
+      "note": "核对造纸工序及废纸再造；生产地区说明不用于推定作者行踪。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "title": "《天演论》· 译例言",
+      "url": "https://zh.wikisource.org/wiki/天演論/譯例言",
+      "note": "依据译例言的信、达、雅与句法调整说明；原著、译文和译者解释分别阅读。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "title": "《孙子兵法》· 始计、作战、谋攻",
+      "url": "https://zh.wikisource.org/wiki/孫子兵法",
+      "note": "核对战前比较、战争成本、慎攻城与谋略制胜；传世书的归名与成书问题分别处理。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q37151"
+        }
+      ]
+    },
+    {
       "title": "《宋史》· 本纪与相关传记",
       "url": "https://zh.wikisource.org/wiki/宋史",
       "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
@@ -10341,13 +10642,32 @@
       ]
     },
     {
-      "title": "《宋史》卷22",
+      "title": "《宋史》卷19 · 徽宗一",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷019",
+      "note": "核对赵佶继位及早期政治任用；本纪史论的总体评价与具体事实分开。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q7486"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷22 · 徽宗四",
       "url": "https://zh.wikisource.org/wiki/宋史/卷022",
-      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "note": "核对宣和二年先后遣赵良嗣、马政使金，后续对辽金政策、禅位及靖康后被金人胁迫北行。",
       "references": [
         {
           "kind": "event",
           "id": "sea-alliance"
+        },
+        {
+          "kind": "event",
+          "id": "jingkang"
+        },
+        {
+          "kind": "person",
+          "id": "q7486"
         }
       ]
     },
@@ -10618,6 +10938,10 @@
         },
         {
           "kind": "person",
+          "id": "q1069914"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-王炎"
         }
       ]
@@ -10642,6 +10966,21 @@
         {
           "kind": "person",
           "id": "reviewed-耿京"
+        }
+      ]
+    },
+    {
+      "title": "《宋史》卷418 · 文天祥",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷418",
+      "note": "据文天祥本传核对勤王、出使被拘与逃归、被俘后随张弘范入崖山及拒写招降书、燕京拒降；不将同卷他人的舟船记载移用于文天祥。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yashan"
+        },
+        {
+          "kind": "person",
+          "id": "q575900"
         }
       ]
     },
@@ -10796,6 +11135,17 @@
       ]
     },
     {
+      "title": "《后汉书》卷40上 · 班彪班固列传",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷40上",
+      "note": "核对班固接续父亲史业、修《汉书》、受诏著史和《两都赋》。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q439681"
+        }
+      ]
+    },
+    {
       "title": "《後漢書》卷47",
       "url": "https://zh.wikisource.org/wiki/後漢書/卷47",
       "note": "原典参考；本站介绍为现代中文编写，未复制原文。",
@@ -10826,6 +11176,10 @@
         {
           "kind": "event",
           "id": "zhangheng"
+        },
+        {
+          "kind": "person",
+          "id": "q197206"
         }
       ]
     },
@@ -10892,6 +11246,21 @@
         {
           "kind": "person",
           "id": "cailun"
+        }
+      ]
+    },
+    {
+      "title": "《后汉书》卷84 · 列女传班昭",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
+      "note": "《班昭传》记班固死时八表及天文志未竟，班昭奉诏续作，后来马续继续成之；用于说明《汉书》多人接续的成书过程。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q439681"
+        },
+        {
+          "kind": "person",
+          "id": "q177081"
         }
       ]
     },
@@ -11037,6 +11406,17 @@
       ]
     },
     {
+      "title": "《新唐书》卷196 · 陆羽",
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷196",
+      "note": "核对字鸿渐、苕溪隐居、茶经著述与传播；早年身世中的「或言」不作确证。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
       "title": "《新唐書》卷202",
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -11101,13 +11481,47 @@
       ]
     },
     {
-      "title": "《明史》卷12",
+      "title": "《明史》卷10 · 英宗前纪",
+      "url": "https://zh.wikisource.org/wiki/明史/卷10",
+      "note": "正统十四年条记载亲征、土木败退和皇帝被俘；不采用其中未经另行核对的伤亡数字。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tumu"
+        },
+        {
+          "kind": "person",
+          "id": "q9983"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷12 · 英宗后纪",
       "url": "https://zh.wikisource.org/wiki/明史/卷12",
-      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "note": "天顺元年条记载迎帝南宫、复位及于谦遇害；天顺八年条记载遗诏罢宫妃殉葬。",
       "references": [
         {
           "kind": "event",
           "id": "duomen-coup"
+        },
+        {
+          "kind": "person",
+          "id": "q9983"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷125 · 徐达传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷125",
+      "note": "记载从军、北伐、洪武元年攻入元大都及整肃军纪；北伐关联不等于南京称帝现场记录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ming-founded"
+        },
+        {
+          "kind": "person",
+          "id": "q1355886"
         }
       ]
     },
@@ -11210,6 +11624,28 @@
       ]
     },
     {
+      "title": "《明史》卷226 · 海瑞传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷226",
+      "note": "核对任官、上疏入狱及应天巡抚治水、退田；传文同时记载拥护和争议，保留两方面。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q934891"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷230 · 汤显祖传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷230",
+      "note": "核对登第、南京任职、上疏、贬谪、遂昌任官与辞官。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
       "title": "《明史》卷24",
       "url": "https://zh.wikisource.org/wiki/明史/卷24",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -11251,13 +11687,17 @@
       ]
     },
     {
-      "title": "《明史》卷274",
+      "title": "《明史》卷274 · 史可法传",
       "url": "https://zh.wikisource.org/wiki/明史/卷274",
-      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "note": "记载弘光朝军政、督师淮扬和扬州守城，城破后自尽未遂、被执遇害；不据此推算屠城人数。",
       "references": [
         {
           "kind": "event",
           "id": "yangzhou-1645"
+        },
+        {
+          "kind": "person",
+          "id": "q3274611"
         }
       ]
     },
@@ -11358,6 +11798,17 @@
         {
           "kind": "event",
           "id": "longqing-opening"
+        }
+      ]
+    },
+    {
+      "title": "《明夷待访录》· 原君、原臣、学校",
+      "url": "https://zh.wikisource.org/wiki/明夷待訪錄",
+      "note": "依据原君、原臣与学校篇概述公共利益、君臣责任和学校议政；不将后来的制度直接归给作者。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
         }
       ]
     },
@@ -11467,6 +11918,10 @@
         {
           "kind": "event",
           "id": "chen-shou-history"
+        },
+        {
+          "kind": "person",
+          "id": "q468890"
         }
       ]
     },
@@ -11590,6 +12045,39 @@
         {
           "kind": "event",
           "id": "tao-retire"
+        }
+      ]
+    },
+    {
+      "title": "郦道元 ·《水经注》原序",
+      "url": "https://zh.wikisource.org/wiki/水經注/原序",
+      "note": "核对扩充考订旧经、河道地名随时代改变与材料限度；不把全部水道记述当作本人实地行程。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6538730"
+        }
+      ]
+    },
+    {
+      "title": "宋慈 ·《洗冤集录》序与目录",
+      "url": "https://zh.wikisource.org/wiki/洗冤集錄",
+      "note": "核对司法检验责任、采诸书并增己见、初检覆检与疑难问题分类、刊于湖南宪治；古代检验经验不全部等同现代法医学。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q709231"
+        }
+      ]
+    },
+    {
+      "title": "《海国图志》· 原叙",
+      "url": "https://zh.wikisource.org/wiki/海國圖志/原敘",
+      "note": "核对四洲志及中外史志图文的来源、编书目的；道光壬寅嘉平的署时不直接换作印成日期。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
         }
       ]
     },
@@ -12225,6 +12713,32 @@
       ]
     },
     {
+      "title": "《清史稿》卷480 · 黄宗羲、王夫之传",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷480",
+      "note": "分别核对黄宗羲传的师承、南明经历、学案著述，与王夫之传的仕履、经学和遗书传播；不将二人的经历混用。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
+        },
+        {
+          "kind": "person",
+          "id": "q714374"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷481 · 顾炎武传",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷481",
+      "note": "核对明清之际经历、关塞访问与携书对勘、地方文献和音学著述；概括性游历不用于生成逐年路线。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1195906"
+        }
+      ]
+    },
+    {
       "title": "《清史稿》卷7",
       "url": "https://zh.wikisource.org/wiki/清史稿/卷7",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -12306,7 +12820,22 @@
         },
         {
           "kind": "person",
+          "id": "q1280148"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-李陵"
+        }
+      ]
+    },
+    {
+      "title": "《汉书》卷56 · 董仲舒传",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷056",
+      "note": "核对《春秋》教学、贤良对策、天人灾异政治解释、江都及胶西相任职、归居著述与学校建议；不称其亲自创办前124年太学。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q445626"
         }
       ]
     },
@@ -12391,6 +12920,17 @@
       ]
     },
     {
+      "title": "《牡丹亭题词》· 汤显祖",
+      "url": "https://zh.wikisource.org/wiki/牡丹亭題詞",
+      "note": "作者对情、理、梦和故事改编的说明，作为文学思想材料阅读。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
       "title": "《王禎農書》",
       "url": "https://zh.wikisource.org/wiki/王禎農書",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -12398,6 +12938,50 @@
         {
           "kind": "event",
           "id": "wangzhen-agricultural-book"
+        }
+      ]
+    },
+    {
+      "title": "《笔法记》· 传为荆浩所撰",
+      "url": "https://zh.wikisource.org/wiki/筆法記",
+      "note": "画论原文参考；叙事中的相对时间与洪谷场景不作为定年或个人路线证据。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2665475"
+        }
+      ]
+    },
+    {
+      "title": "《老子》汇校版 · 第二十五、三十七、七十八章",
+      "url": "https://zh.wikisource.org/wiki/老子_(匯校版)",
+      "note": "用于道法自然、无为及柔弱与刚强关系的思想介绍，不据版本条文反推作者年代。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9333"
+        }
+      ]
+    },
+    {
+      "title": "《聊斋志异》· 作者小传",
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者小傳",
+      "note": "用于姓名、童子试、诗文交往与传阅背景；不采用网页元数据作为整部作品完成年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
+        }
+      ]
+    },
+    {
+      "title": "《聊斋志异》· 作者自志",
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者自志",
+      "note": "作者自述搜集异闻、友人寄稿及写作情感；自志署时不等于全书定稿或出版时间。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
         }
       ]
     },
@@ -12496,6 +13080,10 @@
         {
           "kind": "person",
           "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
@@ -12511,6 +13099,25 @@
         {
           "kind": "event",
           "id": "later-zhou-huainan"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷116",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷116",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-zhou-huainan"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
@@ -12522,17 +13129,25 @@
         {
           "kind": "event",
           "id": "later-zhou-north"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
     {
-      "title": "《舊五代史》卷143",
-      "url": "https://zh.wikisource.org/wiki/舊五代史/卷143",
+      "title": "《舊五代史》卷126",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷126",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
       "references": [
         {
           "kind": "event",
           "id": "nine-classics-printing"
+        },
+        {
+          "kind": "person",
+          "id": "q1131595"
         }
       ]
     },
@@ -12544,6 +13159,21 @@
         {
           "kind": "event",
           "id": "later-tang-mingzong"
+        }
+      ]
+    },
+    {
+      "title": "《舊五代史》卷43",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷43",
+      "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        },
+        {
+          "kind": "person",
+          "id": "q1131595"
         }
       ]
     },
@@ -12625,6 +13255,36 @@
       ]
     },
     {
+      "title": "《旧唐书》卷120 · 郭子仪",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷120",
+      "note": "核对朔方军任职、安史战争及收复两京、朝廷关系、吐蕃入长安后的军事行动；区别战争各阶段与起始年份。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "person",
+          "id": "q1290765"
+        }
+      ]
+    },
+    {
+      "title": "《旧唐书》卷128 · 颜真卿",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷128",
+      "note": "核对平原组织抵抗、仕宦与书法身份、奉使李希烈后被拘遇害；遇害纪年有文献差异，须分别核对。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "person",
+          "id": "q758566"
+        }
+      ]
+    },
+    {
       "title": "《舊唐書》卷135",
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷135",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -12693,6 +13353,10 @@
         },
         {
           "kind": "person",
+          "id": "q337773"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-裴度"
         },
         {
@@ -12717,6 +13381,10 @@
         {
           "kind": "event",
           "id": "bai-juyi-jiangzhou"
+        },
+        {
+          "kind": "person",
+          "id": "q313324"
         }
       ]
     },
@@ -12742,6 +13410,10 @@
         },
         {
           "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "event",
           "id": "libai-yongwang"
         },
         {
@@ -12754,11 +13426,26 @@
         },
         {
           "kind": "person",
+          "id": "q313605"
+        },
+        {
+          "kind": "person",
           "id": "libai"
         },
         {
           "kind": "person",
           "id": "reviewed-永王李璘"
+        }
+      ]
+    },
+    {
+      "title": "《旧唐书》卷191 · 孙思邈",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷191",
+      "note": "核对医方著述、儒释道阅读、辞官和士人交游；长寿与预言记载不用于反推生卒纪年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q981193"
         }
       ]
     },
@@ -12893,6 +13580,21 @@
       ]
     },
     {
+      "title": "《旧唐书》卷71 · 魏征",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷71",
+      "note": "核对先仕李密、李建成及太宗任用，贞观谏政、反对封禅与身后评价变化。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhen-guan"
+        },
+        {
+          "kind": "person",
+          "id": "q378356"
+        }
+      ]
+    },
+    {
       "title": "《舊唐書》卷8",
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷8",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -12915,6 +13617,61 @@
         {
           "kind": "event",
           "id": "tang-west-turk"
+        }
+      ]
+    },
+    {
+      "title": "《茶经》· 目录与原文",
+      "url": "https://zh.wikisource.org/wiki/茶經",
+      "note": "核对十篇的主题范围；产地和文献名单并不证明陆羽逐处到访。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
+      "title": "《茶经》卷上 · 一之源、二之具、三之造",
+      "url": "https://zh.wikisource.org/wiki/茶經/卷上",
+      "note": "核对茶树环境、采制器具与加工流程；其中的古代医疗观念不作为当代饮茶功效结论。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
+      "title": "《荀子》· 劝学篇",
+      "url": "https://zh.wikisource.org/wiki/荀子/勸學篇",
+      "note": "核对学习积累、师友和礼义实践的论述。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "title": "《荀子》· 性恶篇",
+      "url": "https://zh.wikisource.org/wiki/荀子/性惡篇",
+      "note": "用于解释性恶论强调后天人为、学习教化与礼义，并非不可改变的道德判决。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "title": "《庄子》· 逍遥游",
+      "url": "https://zh.wikisource.org/wiki/莊子/逍遙遊",
+      "note": "核对鲲鹏寓言、知识视角及超越功名和外在依赖的论述；文学场景不视为作者实际行踪。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47739"
         }
       ]
     },
@@ -12974,6 +13731,17 @@
         {
           "kind": "person",
           "id": "reviewed-耶律倍"
+        }
+      ]
+    },
+    {
+      "title": "《金匮要略方论》四部丛刊本 · 序",
+      "url": "https://zh.wikisource.org/wiki/金匱要略方論_(四部叢刊本)/序",
+      "note": "核对王洙发现残本、宋臣校订并调整方证编次的流传过程；现存篇章并非东汉手稿原貌。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
         }
       ]
     },
@@ -13181,6 +13949,17 @@
       ]
     },
     {
+      "title": "《韩非子》· 五蠹",
+      "url": "https://zh.wikisource.org/wiki/韓非子/五蠹",
+      "note": "核对因时代调整治理、重法令和赏罚、农战的政治论述。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q28959"
+        }
+      ]
+    },
+    {
       "title": "《魏書》· 本纪与相关传记",
       "url": "https://zh.wikisource.org/wiki/魏書",
       "note": "存续纪年和简介为现代中文整理；导航分期与疆域数据的原始分组另行说明。",
@@ -13248,6 +14027,17 @@
       ]
     },
     {
+      "title": "《魏书》卷89 · 郦道元",
+      "url": "https://zh.wikisource.org/wiki/魏書/卷89",
+      "note": "核对行政司法职任、治理争议、注水经四十卷及奉使遇害；现存卷89校勘记提示补卷问题，不将其全部视为魏收原本。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6538730"
+        }
+      ]
+    },
+    {
       "title": "《魏書》卷9",
       "url": "https://zh.wikisource.org/wiki/魏書/卷9",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -13255,6 +14045,28 @@
         {
           "kind": "event",
           "id": "six-garrisons"
+        }
+      ]
+    },
+    {
+      "title": "《墨子》· 公输",
+      "url": "https://zh.wikisource.org/wiki/墨子/公輸",
+      "note": "用于阅读止楚攻宋与模拟攻守的叙事；篇中没有可独立核定的绝对纪年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "mozi"
+        }
+      ]
+    },
+    {
+      "title": "贾思勰 ·《齐民要术》自序",
+      "url": "https://zh.wikisource.org/wiki/齊民要術/自序",
+      "note": "核对采经传、询之老成、验之行事、九十二篇十卷及收录范围；与南宋李焘所作序分开，不推算作者生卒或全书完成年份。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6697537"
         }
       ]
     }

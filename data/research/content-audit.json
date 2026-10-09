@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T14:26:47.974Z",
+  "generatedAt": "2026-10-08T18:16:24.753Z",
   "validation": {
     "allIntroductionsAndSources": true,
     "datesAndCoordinates": true,
@@ -1422,8 +1422,8 @@
       "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 2,
-      "biographyCharacters": 81,
+      "sourceCount": 3,
+      "biographyCharacters": 225,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -1478,15 +1478,17 @@
     {
       "id": "q1131595",
       "name": "冯道",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 882,
       "death": 954,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 3,
+      "biographyCharacters": 225,
+      "eventCount": 1,
+      "eventIds": [
+        "nine-classics-printing"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q706815",
@@ -1637,17 +1639,20 @@
     {
       "id": "q1319646",
       "name": "柴荣",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 921,
       "death": 959,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 1,
+      "sourceCount": 5,
+      "biographyCharacters": 240,
+      "eventCount": 4,
       "eventIds": [
-        "gaoping-954"
+        "gaoping-954",
+        "later-zhou-reforms",
+        "later-zhou-huainan",
+        "later-zhou-north"
       ],
       "journeyNodes": 0,
-      "coverage": "one-linked-event"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "q378528",
@@ -1680,15 +1685,17 @@
     {
       "id": "q701326",
       "name": "张良",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -262,
       "death": -186,
-      "sourceCount": 1,
-      "biographyCharacters": 16,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 3,
+      "biographyCharacters": 236,
+      "eventCount": 1,
+      "eventIds": [
+        "hongmen"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q1368034",
@@ -1756,15 +1763,17 @@
     {
       "id": "q7221",
       "name": "汉文帝",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -203,
       "death": -157,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 242,
+      "eventCount": 1,
+      "eventIds": [
+        "han-wendi"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q1185798",
@@ -1782,11 +1791,11 @@
     {
       "id": "q301650",
       "name": "贾谊",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -200,
       "death": -168,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 2,
+      "biographyCharacters": 240,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -1834,11 +1843,11 @@
     {
       "id": "q445626",
       "name": "董仲舒",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -179,
       "death": -104,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 260,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -1847,11 +1856,11 @@
     {
       "id": "q1280148",
       "name": "苏武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -140,
       "death": -60,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 2,
+      "biographyCharacters": 243,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -1996,11 +2005,11 @@
     {
       "id": "q31749",
       "name": "华佗",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 208,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 247,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2109,15 +2118,18 @@
     {
       "id": "q707658",
       "name": "陈平",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": -178,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 234,
+      "eventCount": 2,
+      "eventIds": [
+        "baideng",
+        "han-wendi"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "q319329",
@@ -2135,11 +2147,11 @@
     {
       "id": "q439681",
       "name": "班固",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 32,
       "death": 92,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 3,
+      "biographyCharacters": 242,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2148,11 +2160,11 @@
     {
       "id": "q177081",
       "name": "班昭",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 45,
       "death": 116,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
+      "sourceCount": 2,
+      "biographyCharacters": 246,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2161,11 +2173,11 @@
     {
       "id": "q197206",
       "name": "张衡",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 78,
       "death": 139,
-      "sourceCount": 1,
-      "biographyCharacters": 19,
+      "sourceCount": 2,
+      "biographyCharacters": 256,
       "eventCount": 1,
       "eventIds": [
         "zhangheng"
@@ -2202,11 +2214,11 @@
     {
       "id": "q197350",
       "name": "张仲景",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 150,
       "death": 219,
-      "sourceCount": 1,
-      "biographyCharacters": 4,
+      "sourceCount": 3,
+      "biographyCharacters": 262,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2336,11 +2348,11 @@
     {
       "id": "q312978",
       "name": "法显",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 422,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 217,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2756,15 +2768,17 @@
     {
       "id": "q1355886",
       "name": "徐达",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1332,
       "death": 1385,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 257,
+      "eventCount": 1,
+      "eventIds": [
+        "ming-founded"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q10943311",
@@ -2846,15 +2860,18 @@
     {
       "id": "q9983",
       "name": "明英宗",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1427,
       "death": 1464,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 3,
+      "biographyCharacters": 252,
+      "eventCount": 2,
+      "eventIds": [
+        "tumu",
+        "duomen-coup"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "q558863",
@@ -2885,11 +2902,11 @@
     {
       "id": "q2248916",
       "name": "唐寅",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1470,
       "death": 1524,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 269,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -2898,11 +2915,11 @@
     {
       "id": "q306673",
       "name": "文征明",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1470,
       "death": 1559,
-      "sourceCount": 1,
-      "biographyCharacters": 19,
+      "sourceCount": 2,
+      "biographyCharacters": 272,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3005,11 +3022,11 @@
     {
       "id": "q934891",
       "name": "海瑞",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1514,
       "death": 1587,
-      "sourceCount": 1,
-      "biographyCharacters": 6,
+      "sourceCount": 2,
+      "biographyCharacters": 267,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3106,11 +3123,11 @@
     {
       "id": "q945333",
       "name": "汤显祖",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1550,
       "death": 1616,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 3,
+      "biographyCharacters": 261,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3256,11 +3273,11 @@
     {
       "id": "q716217",
       "name": "宋应星",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1587,
       "death": 1666,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 4,
+      "biographyCharacters": 285,
       "eventCount": 1,
       "eventIds": [
         "tiangong-kaiwu"
@@ -3329,15 +3346,17 @@
     {
       "id": "q3274611",
       "name": "史可法",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1601,
       "death": 1645,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 260,
+      "eventCount": 1,
+      "eventIds": [
+        "yangzhou-1645"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q652211",
@@ -3469,11 +3488,11 @@
     {
       "id": "q6697537",
       "name": "贾思勰",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 13,
+      "sourceCount": 2,
+      "biographyCharacters": 219,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3482,11 +3501,11 @@
     {
       "id": "q6538730",
       "name": "郦道元",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 527,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 3,
+      "biographyCharacters": 211,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3859,15 +3878,18 @@
     {
       "id": "q1151702",
       "name": "蒙恬",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": -210,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 248,
+      "eventCount": 2,
+      "eventIds": [
+        "mengtian-north",
+        "qin-straight-road"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "q197436",
@@ -3952,11 +3974,11 @@
     {
       "id": "q31754",
       "name": "黄宗羲",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1610,
       "death": 1695,
-      "sourceCount": 1,
-      "biographyCharacters": 23,
+      "sourceCount": 3,
+      "biographyCharacters": 272,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -3994,11 +4016,11 @@
     {
       "id": "q1195906",
       "name": "顾炎武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1613,
       "death": 1682,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 266,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -4007,11 +4029,11 @@
     {
       "id": "q714374",
       "name": "王夫之",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1619,
       "death": 1692,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 289,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -4150,11 +4172,11 @@
     {
       "id": "q318406",
       "name": "蒲松龄",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1640,
       "death": 1715,
-      "sourceCount": 1,
-      "biographyCharacters": 17,
+      "sourceCount": 3,
+      "biographyCharacters": 268,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -4342,11 +4364,11 @@
     {
       "id": "q712007",
       "name": "郑燮",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1693,
       "death": 1766,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 2,
+      "biographyCharacters": 281,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -4580,11 +4602,11 @@
     {
       "id": "q597003",
       "name": "魏源",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1794,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 23,
+      "sourceCount": 3,
+      "biographyCharacters": 285,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -5003,11 +5025,11 @@
     {
       "id": "q559957",
       "name": "严复",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1854,
       "death": 1921,
-      "sourceCount": 1,
-      "biographyCharacters": 21,
+      "sourceCount": 3,
+      "biographyCharacters": 284,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -5084,11 +5106,11 @@
     {
       "id": "q1397430",
       "name": "詹天佑",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1861,
       "death": 1919,
-      "sourceCount": 1,
-      "biographyCharacters": 39,
+      "sourceCount": 3,
+      "biographyCharacters": 279,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -5881,15 +5903,18 @@
     {
       "id": "q7486",
       "name": "宋徽宗",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1082,
       "death": 1135,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 4,
+      "biographyCharacters": 218,
+      "eventCount": 2,
+      "eventIds": [
+        "sea-alliance",
+        "jingkang"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "liqingzhao",
@@ -6040,11 +6065,11 @@
     {
       "id": "q1069914",
       "name": "陆游",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1125,
       "death": 1210,
-      "sourceCount": 1,
-      "biographyCharacters": 20,
+      "sourceCount": 2,
+      "biographyCharacters": 227,
       "eventCount": 1,
       "eventIds": [
         "luyou-nanzheng"
@@ -6183,11 +6208,11 @@
     {
       "id": "q709231",
       "name": "宋慈",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1186,
       "death": 1249,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 224,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -6278,15 +6303,17 @@
     {
       "id": "q575900",
       "name": "文天祥",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1236,
       "death": 1283,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 222,
+      "eventCount": 1,
+      "eventIds": [
+        "yashan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q2738615",
@@ -6680,24 +6707,26 @@
     {
       "id": "q378356",
       "name": "魏征",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 580,
       "death": 643,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 217,
+      "eventCount": 1,
+      "eventIds": [
+        "zhen-guan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q981193",
       "name": "孙思邈",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 581,
       "death": 682,
-      "sourceCount": 1,
-      "biographyCharacters": 16,
+      "sourceCount": 3,
+      "biographyCharacters": 212,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -7082,15 +7111,17 @@
     {
       "id": "q1290765",
       "name": "郭子仪",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 697,
       "death": 781,
-      "sourceCount": 1,
-      "biographyCharacters": 18,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 216,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q704344",
@@ -7108,15 +7139,17 @@
     {
       "id": "q313605",
       "name": "王维",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 699,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 202,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "libai",
@@ -7177,15 +7210,17 @@
     {
       "id": "q758566",
       "name": "颜真卿",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 709,
       "death": 785,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 206,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q3274331",
@@ -7229,11 +7264,11 @@
     {
       "id": "q948270",
       "name": "陆羽",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 733,
       "death": 804,
-      "sourceCount": 1,
-      "biographyCharacters": 14,
+      "sourceCount": 4,
+      "biographyCharacters": 221,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -7338,11 +7373,11 @@
     {
       "id": "q313324",
       "name": "白居易",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 772,
       "death": 846,
-      "sourceCount": 1,
-      "biographyCharacters": 6,
+      "sourceCount": 2,
+      "biographyCharacters": 211,
       "eventCount": 1,
       "eventIds": [
         "bai-juyi-jiangzhou"
@@ -7353,11 +7388,11 @@
     {
       "id": "q337773",
       "name": "柳宗元",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 773,
       "death": 819,
-      "sourceCount": 1,
-      "biographyCharacters": 14,
+      "sourceCount": 2,
+      "biographyCharacters": 209,
       "eventCount": 1,
       "eventIds": [
         "yongzhen-reform"
@@ -7474,11 +7509,11 @@
     {
       "id": "q316304",
       "name": "刘徽",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 2,
+      "biographyCharacters": 221,
       "eventCount": 1,
       "eventIds": [
         "liuhui"
@@ -7715,8 +7750,8 @@
       "recordKind": "curated",
       "birth": 233,
       "death": 297,
-      "sourceCount": 2,
-      "biographyCharacters": 34,
+      "sourceCount": 3,
+      "biographyCharacters": 215,
       "eventCount": 1,
       "eventIds": [
         "chen-shou-history"
@@ -7743,8 +7778,8 @@
       "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 192,
+      "sourceCount": 2,
+      "biographyCharacters": 238,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -7906,11 +7941,11 @@
     {
       "id": "q37151",
       "name": "孙武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 3,
+      "biographyCharacters": 249,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -7934,11 +7969,11 @@
     {
       "id": "q47739",
       "name": "庄子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 227,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -8055,11 +8090,11 @@
     {
       "id": "q9333",
       "name": "老子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 221,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -8094,11 +8129,11 @@
     {
       "id": "q216072",
       "name": "荀子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 12,
+      "sourceCount": 4,
+      "biographyCharacters": 239,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -8135,11 +8170,11 @@
     {
       "id": "q28959",
       "name": "韩非",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": -233,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 245,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -9618,14 +9653,15 @@
       "recordKind": "curated",
       "birth": 1828,
       "death": 1912,
-      "sourceCount": 2,
-      "biographyCharacters": 199,
-      "eventCount": 1,
+      "sourceCount": 3,
+      "biographyCharacters": 296,
+      "eventCount": 2,
       "eventIds": [
+        "jiangnan-arsenal",
         "students-abroad"
       ],
       "journeyNodes": 0,
-      "coverage": "one-linked-event"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "depth-ricci",
@@ -10552,10 +10588,14 @@
       "title": "蒙恬北击匈奴、经营河套",
       "year": -215,
       "people": [
-        "yingzheng"
+        "yingzheng",
+        "q1151702"
       ],
       "sourceCount": 1,
       "locationNote": "黄河河套的区域性战事，以今包头附近作参照。",
+      "peopleNotes": {
+        "q1151702": "蒙恬受命统军北击匈奴、取得河南地，随后负责北部边防及长城亭障工程。"
+      },
       "readingCharacters": 242
     },
     {
@@ -10585,11 +10625,15 @@
       "title": "秦直道工程启动",
       "year": -212,
       "people": [
-        "yingzheng"
+        "yingzheng",
+        "q1151702"
       ],
       "sourceCount": 1,
       "dateNote": "采用始皇三十五年的开工节点，不表示全线竣工。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q1151702": "秦始皇命蒙恬开通九原至甘泉的道路，由他承担工程任务；《史记》注明道未就，关联并不表示全线已经竣工。"
+      },
       "readingCharacters": 228
     },
     {
@@ -10631,9 +10675,13 @@
       "year": -206,
       "people": [
         "xiangyu",
-        "liubang"
+        "liubang",
+        "q701326"
       ],
       "sourceCount": 1,
+      "peopleNotes": {
+        "q701326": "张良在宴前转达项伯告警，席间联络樊哙，刘邦离开后留下致谢献礼；《项羽本纪》直接记载其在场。"
+      },
       "readingCharacters": 186
     },
     {
@@ -10691,10 +10739,14 @@
       "year": -200,
       "people": [
         "liubang",
-        "q382816"
+        "q382816",
+        "q707658"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q707658": "陈平随刘邦至平城受围，刘邦采用其奇计使包围得以解开；《史记》明说具体计策保密、世人不知，办法仍应留缺。"
+      },
       "readingCharacters": 146
     },
     {
@@ -10731,12 +10783,16 @@
       "title": "吕氏势力败亡、汉文帝即位",
       "year": -180,
       "people": [
-        "q298039"
+        "q298039",
+        "q707658",
+        "q7221"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
-        "q298039": "吕后去世引发后续权力与继承变化，不是本人参加清除吕氏和迎立文帝。"
+        "q298039": "吕后去世引发后续权力与继承变化，不是本人参加清除吕氏和迎立文帝。",
+        "q707658": "吕后死后，陈平与周勃合谋诛诸吕、迎立刘恒，在文帝继位中承担筹划与支持角色。",
+        "q7221": "刘恒以代王身份被大臣迎立，审慎确认朝廷局势后即皇帝位，是这一继位事件的当事人。"
       },
       "readingCharacters": 244
     },
@@ -11906,10 +11962,14 @@
       "title": "贞观时期开始",
       "year": 627,
       "people": [
-        "lishimin"
+        "lishimin",
+        "q378356"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q378356": "魏征在贞观朝担任谏官及政务职任，讨论用人、民力和皇帝决策。关联指贞观时期的持续政治活动，627年是时期起点，不是所有谏议的发生年。"
+      },
       "readingCharacters": 268
     },
     {
@@ -12101,9 +12161,17 @@
       "people": [
         "anlushan",
         "lilongji",
-        "dufu"
+        "dufu",
+        "q313605",
+        "q758566",
+        "q1290765"
       ],
-      "sourceCount": 2,
+      "sourceCount": 5,
+      "peopleNotes": {
+        "q313605": "王维在安史之乱期间陷于叛军控制，被拘并授以伪职，此后受唐廷追究。这是战争后续阶段的经历；755年是事件起始纪年，并非其被俘年份，也不表示他在范阳起兵现场。",
+        "q758566": "颜真卿以平原太守身份组织当地兵粮，与河北诸郡抵抗安禄山。关联指平原及河北的抵抗行动，不能把事件地图的范阳起兵位置作为他的所在地点。",
+        "q1290765": "郭子仪在安禄山反叛后受命统领朔方军，后来参与收复长安、洛阳。关联涵盖战争不同阶段，755年只是起始纪年，不把后来的两京收复写作当年行动，也不表示他在范阳。"
+      },
       "readingCharacters": 213
     },
     {
@@ -12354,11 +12422,16 @@
       "id": "nine-classics-printing",
       "title": "后唐启动国子监雕印九经",
       "year": 932,
-      "people": [],
-      "sourceCount": 1,
-      "dateNote": "932年是启动节点，953年前后为工程完成阶段。",
+      "people": [
+        "q1131595"
+      ],
+      "sourceCount": 3,
+      "dateNote": "932年为启动节点，953年田敏进呈印本为完成阶段，不是全套经典在932年即已刊成。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
-      "readingCharacters": 239
+      "peopleNotes": {
+        "q1131595": "与李愚倡议并委学官校勘、雕印，属于组织者；不表示本人完成全部刻印。"
+      },
+      "readingCharacters": 249
     },
     {
       "id": "foundation-later-shu",
@@ -12456,9 +12529,14 @@
       "id": "later-zhou-reforms",
       "title": "后周世宗限制寺院、调整资源",
       "year": 955,
-      "people": [],
+      "people": [
+        "q1319646"
+      ],
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q1319646": "后周世宗为政策发布者，诏令与地方执行需要分别理解。"
+      },
       "readingCharacters": 243
     },
     {
@@ -12466,10 +12544,14 @@
       "title": "后周进攻南唐淮南地区",
       "year": 956,
       "people": [
+        "q1319646",
         "zhaokuangyin"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q1319646": "《旧五代史》记显德三年车驾渡淮、至寿州城下；这里只关联这一阶段，不补为完整路线。"
+      },
       "readingCharacters": 242
     },
     {
@@ -12477,10 +12559,14 @@
       "title": "后周世宗北伐、夺取关南部分地区",
       "year": 959,
       "people": [
+        "q1319646",
         "zhaokuangyin"
       ],
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q1319646": "后周世宗亲自北征，取得关南部分地区；各将领行动与个人完整行程不同。"
+      },
       "readingCharacters": 225
     },
     {
@@ -12944,9 +13030,14 @@
       "id": "sea-alliance",
       "title": "宋金订立海上之盟",
       "year": 1120,
-      "people": [],
+      "people": [
+        "q7486"
+      ],
       "sourceCount": 1,
       "locationNote": "以辽东海路联系区域作参照，非唯一会谈地点。",
+      "peopleNotes": {
+        "q7486": "徽宗朝在宣和二年先后遣赵良嗣、马政使金，推进宋金交涉及联合对辽的朝廷政策。关联指其作为皇帝的政治责任，并不表示赵佶本人赴海上会谈或位于事件地图参照点。"
+      },
       "readingCharacters": 243
     },
     {
@@ -12964,8 +13055,13 @@
       "id": "jingkang",
       "title": "靖康之变",
       "year": 1127,
-      "people": [],
-      "sourceCount": 1,
+      "people": [
+        "q7486"
+      ],
+      "sourceCount": 2,
+      "peopleNotes": {
+        "q7486": "宋徽宗已禅位为太上皇，靖康二年仍被金人胁迫北行，是皇室被俘的直接当事人；应区别其退位前决策与钦宗朝的危机。"
+      },
       "readingCharacters": 192
     },
     {
@@ -13258,10 +13354,14 @@
       "title": "崖山之战",
       "year": 1279,
       "people": [
-        "kublai"
+        "kublai",
+        "q575900"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "战场大致位置。",
+      "peopleNotes": {
+        "q575900": "文天祥被俘后随张弘范被带至崖山，拒绝写信招降张世杰。关联体现俘虏处境，并非宋军海战将领或参战者；本传不支持指定其所在船只或精确位置。"
+      },
       "readingCharacters": 190
     },
     {
@@ -13416,9 +13516,13 @@
       "title": "朱元璋建立明朝",
       "year": 1368,
       "people": [
-        "zhuyuanzhang"
+        "zhuyuanzhang",
+        "q1355886"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
+      "peopleNotes": {
+        "q1355886": "关联指1368年徐达率北伐军攻入元大都这一建国军事阶段；事件的南京称帝坐标不表示徐达在当地亲历称帝。"
+      },
       "readingCharacters": 195
     },
     {
@@ -13543,8 +13647,13 @@
       "id": "tumu",
       "title": "土木之变",
       "year": 1449,
-      "people": [],
-      "sourceCount": 1,
+      "people": [
+        "q9983"
+      ],
+      "sourceCount": 2,
+      "peopleNotes": {
+        "q9983": "明英宗亲征瓦剌，明军回师途中在土木败溃，英宗本人被俘，是此事件的直接当事人。"
+      },
       "readingCharacters": 208
     },
     {
@@ -13563,10 +13672,14 @@
       "title": "夺门之变、明英宗复位",
       "year": 1457,
       "people": [
-        "q706876"
+        "q706876",
+        "q9983"
       ],
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q9983": "石亨、徐有贞等以兵迎英宗出南宫，英宗重新即位、改元天顺；关联指复位当事人。"
+      },
       "readingCharacters": 236
     },
     {
@@ -13801,8 +13914,9 @@
       "people": [
         "q716217"
       ],
-      "sourceCount": 1,
+      "sourceCount": 2,
       "locationNote": "以江西地区为作者活动区域参照，不能当作全书唯一编写或刊刻地点。",
+      "peopleNotes": {},
       "readingCharacters": 160
     },
     {
@@ -13852,9 +13966,14 @@
       "id": "yangzhou-1645",
       "title": "清军攻陷扬州、史可法殉难",
       "year": 1645,
-      "people": [],
+      "people": [
+        "q3274611"
+      ],
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
+      "peopleNotes": {
+        "q3274611": "史可法督师淮扬并组织扬州守城，城破后自尽未遂、被执遇害，是守城与殉难的直接当事人。"
+      },
       "readingCharacters": 234
     },
     {
@@ -14414,11 +14533,15 @@
       "year": 1865,
       "people": [
         "lihongzhang",
-        "zengguofan"
+        "zengguofan",
+        "depth-ronghong"
       ],
-      "sourceCount": 1,
+      "sourceCount": 4,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
-      "readingCharacters": 174
+      "peopleNotes": {
+        "depth-ronghong": "1863年受曾国藩委派赴美采购机器，关联1865年的机构创办是前期筹备关系，不据机构坐标认定其当年在上海亲临。"
+      },
+      "readingCharacters": 209
     },
     {
       "id": "fuzhou-shipyard",
@@ -15706,6 +15829,19 @@
       ]
     },
     {
+      "url": "https://museum.jty.edu.cn/Home/Content/20227",
+      "title": "吉林铁路博物馆 · 第一条国有铁路干线",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:12.660129+00:00",
+      "sha256": "6273a737cb11749384698c5c38a3ac07e3f9242975264a5b5ef30e16af86c123",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
+        }
+      ]
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "status": "retained-and-hash-verified",
@@ -15758,6 +15894,19 @@
         {
           "kind": "person",
           "id": "reviewed-梁惠王"
+        }
+      ]
+    },
+    {
+      "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
+      "title": "国家铁路局 · 百年京张 世纪经典",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:12.381878+00:00",
+      "sha256": "048324480ad36936b40ff7bd60d1ceab66d957139e9ce32abf36d7cc999ad3b7",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
         }
       ]
     },
@@ -16192,11 +16341,15 @@
     },
     {
       "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
-      "title": "中国国家博物馆 · 江南制造局造船清单",
+      "title": "中国国家博物馆 · 江南制造局造船清单与创办背景",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T16:18:38.823473+00:00",
       "sha256": "ada7bd27f697fa515736fd9be5d20f361b758d041abdf401668166430b02e146",
       "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
         {
           "kind": "topic",
           "id": "self-strengthening-course"
@@ -16653,6 +16806,19 @@
       ]
     },
     {
+      "url": "https://www.dpm.org.cn/lemmas/240221.html",
+      "title": "故宫博物院 · 瘦金书",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:53.145750+00:00",
+      "sha256": "116f81a1f9f85cd0ef67016eb204e2f949a5d096ad01fd1f21bd9471074bed49",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q7486"
+        }
+      ]
+    },
+    {
       "url": "https://www.dpm.org.cn/lemmas/241546.html",
       "title": "故宫博物院 · 张旭",
       "status": "retained-and-hash-verified",
@@ -16662,6 +16828,45 @@
         {
           "kind": "person",
           "id": "q717343"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242338.html",
+      "title": "故宫博物院 · 郑燮",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:12.626981+00:00",
+      "sha256": "006bdcedf28d5995974c37578e6ddc998e67c372569453bb4d44bc2fd03d972b",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q712007"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242652.html",
+      "title": "故宫博物院 · 唐寅",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:09.025900+00:00",
+      "sha256": "aa75f031c01cc0ed7daaf86da209956e449e64346e0d48e684ce6aa6a9c9cd54",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2248916"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242658.html",
+      "title": "故宫博物院 · 文徵明",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:09.276344+00:00",
+      "sha256": "0236851625f7d7c339a5399db8f057e8ec877a551f1d3849fec60f8be89b4a28",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q306673"
         }
       ]
     },
@@ -16692,6 +16897,36 @@
         {
           "kind": "person",
           "id": "q182874"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
+      "title": "福州市人民政府 · 严复",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.747620+00:00",
+      "sha256": "469f65b254811bcc934b6abe4ae79f14c365e695547731efd1edac17ad447d98",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
+      "title": "容闳 · My Life in China and America，第十三至十五章",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:25:10.424524+00:00",
+      "sha256": "a6f6f2aab4f43c683025ffc580fb7cd0930449ec1122abf22e2fe48a8c7aa851",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
+        {
+          "kind": "person",
+          "id": "depth-ronghong"
         }
       ]
     },
@@ -16858,6 +17093,19 @@
       ]
     },
     {
+      "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
+      "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.501891+00:00",
+      "sha256": "fd96425fe1567a41d22a7dec86020f687f4daae0b0b9a8bb47af11192bc5d3d7",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
+        }
+      ]
+    },
+    {
       "url": "https://www.zhmuseum.org.cn/yanjiu/mrgsInfo?id=7",
       "title": "珠海博物馆 · 容闳",
       "status": "request-failed",
@@ -16877,6 +17125,10 @@
       "retrievedAt": "2026-10-06T16:18:44.737100+00:00",
       "sha256": "90e1a136f8e700810c4ee1b4c664facf38a3fccbf3c2fc05a659699ca6168d74",
       "references": [
+        {
+          "kind": "event",
+          "id": "jiangnan-arsenal"
+        },
         {
           "kind": "person",
           "id": "depth-ronghong"
@@ -17044,6 +17296,19 @@
         {
           "kind": "person",
           "id": "dengai"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/三國志/卷29",
+      "title": "《三国志》卷29 · 方技传华佗",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:07.290262+00:00",
+      "sha256": "499d2230784870c2112fc8a495bd0a5b17a0afef90ae278cd0bf9c8e58bc4ae9",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31749"
         }
       ]
     },
@@ -17245,6 +17510,62 @@
         {
           "kind": "event",
           "id": "liuhui"
+        },
+        {
+          "kind": "person",
+          "id": "q316304"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/五代會要/卷八",
+      "title": "《五代会要》卷八 · 经籍",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:27:38.880061+00:00",
+      "sha256": "a283cbb637b39696226404d4803f71788acb6cf9a45f294d3bb41a75fe225449",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/佛國記",
+      "title": "法显 ·《佛国记》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:43.273457+00:00",
+      "sha256": "4b32f699f2208af16b6514b8030bc30c785b7ad5b381aed901643e8a924bfefe",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q312978"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/備急千金要方/第一",
+      "title": "《备急千金要方》卷一 · 大医习业、大医精诚",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:53.315955+00:00",
+      "sha256": "173271698bcfa83639df6f6ea1c543b0ceacfd5623d5f2a62369f6052a66234c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q981193"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/傷寒雜病論序",
+      "title": "《伤寒杂病论序》及林亿等宋校《伤寒论》序",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:07.995310+00:00",
+      "sha256": "ba5daaa9e0c36a9e47223896fb158c5a85fec438d2b450e856e65ad2cbdd4e08",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
         }
       ]
     },
@@ -17858,6 +18179,10 @@
         {
           "kind": "person",
           "id": "xiangyu"
+        },
+        {
+          "kind": "person",
+          "id": "q701326"
         }
       ]
     },
@@ -17880,7 +18205,7 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/史記/卷010",
-      "title": "《史記》卷10",
+      "title": "《史记》卷10 · 孝文本纪",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T15:43:37.802759+00:00",
       "sha256": "e2112ddff3b90f4ba8ac99f8d8e1ba17660406b4bee3394332d760097fb67504",
@@ -17888,6 +18213,10 @@
         {
           "kind": "event",
           "id": "han-wendi"
+        },
+        {
+          "kind": "person",
+          "id": "q7221"
         }
       ]
     },
@@ -18201,6 +18530,40 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/史記/卷055",
+      "title": "《史记》卷55 · 留侯世家",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.660490+00:00",
+      "sha256": "dd37b94582e3fdc8e4284460bf5bfa03352a5fa0528d69f8884fd2d25d2fb38c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q701326"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/史記/卷056",
+      "title": "《史记》卷56 · 陈丞相世家",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.858195+00:00",
+      "sha256": "539f984a5f548dfc91bf09c1eec63288e9e264dc319990e95c59b8e1d3dd8db3",
+      "references": [
+        {
+          "kind": "event",
+          "id": "baideng"
+        },
+        {
+          "kind": "event",
+          "id": "han-wendi"
+        },
+        {
+          "kind": "person",
+          "id": "q707658"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/史記/卷062",
       "title": "《史记》· 管晏列传",
       "status": "retained-and-hash-verified",
@@ -18214,6 +18577,27 @@
         {
           "kind": "person",
           "id": "early-guanzhong"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/史記/卷063",
+      "title": "《史记》卷63 · 老子韩非列传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:04.494654+00:00",
+      "sha256": "a58f709e327563170b605bbb1f1d25a43c442e34ead6b3028e6e1a224e9f3b2b",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47739"
+        },
+        {
+          "kind": "person",
+          "id": "q9333"
+        },
+        {
+          "kind": "person",
+          "id": "q28959"
         }
       ]
     },
@@ -18235,6 +18619,10 @@
         {
           "kind": "person",
           "id": "sunbin"
+        },
+        {
+          "kind": "person",
+          "id": "q37151"
         }
       ]
     },
@@ -18309,6 +18697,10 @@
         },
         {
           "kind": "person",
+          "id": "q216072"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-梁惠王"
         }
       ]
@@ -18365,6 +18757,10 @@
         },
         {
           "kind": "person",
+          "id": "q301650"
+        },
+        {
+          "kind": "person",
           "id": "q313330"
         },
         {
@@ -18414,7 +18810,7 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/史記/卷088",
-      "title": "《史記》卷88",
+      "title": "《史记》卷88 · 蒙恬列传",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T15:43:39.938230+00:00",
       "sha256": "c50afeb2626a75261eaf7ebb90ab097468c3b72d557c54318ff68bf27ced961d",
@@ -18426,6 +18822,10 @@
         {
           "kind": "event",
           "id": "qin-straight-road"
+        },
+        {
+          "kind": "person",
+          "id": "q1151702"
         }
       ]
     },
@@ -18690,6 +19090,75 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/天工開物/乃粒第一",
+      "title": "《天工开物》· 乃粒第一",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:08.016982+00:00",
+      "sha256": "8b874776c10bc86b329aecd25f127f62e68fa3798aadb850c73b99ec95e35f05",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天工開物/自序",
+      "title": "《天工开物》· 自序",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:08.427648+00:00",
+      "sha256": "86639a499d3ccd618001fdc7d1cc0c52f5e56ef078cd887e9c73b0bf393df187",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tiangong-kaiwu"
+        },
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天工開物/造竹紙",
+      "title": "《天工开物》· 造竹纸",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:08.758454+00:00",
+      "sha256": "4f8ab6e0df6ec6cd4625237a86be1cd1e4e1c6dfd8b275a8c76d16a233c22b78",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天演論/譯例言",
+      "title": "《天演论》· 译例言",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:12.721793+00:00",
+      "sha256": "fe5e348484f09a941576973e2d7ea86d38e4bc72ef04c0bb95bb1922a3556728",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/孫子兵法",
+      "title": "《孙子兵法》· 始计、作战、谋攻",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.702773+00:00",
+      "sha256": "39e3d934010b7871cd2551b069bda9a5db212518b677972aa64a5082dc56ea76",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q37151"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/宋史",
       "title": "《宋史》· 本纪与相关传记",
       "status": "retained-and-hash-verified",
@@ -18908,8 +19377,21 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷019",
+      "title": "《宋史》卷19 · 徽宗一",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:44.098539+00:00",
+      "sha256": "71b4057f521c9ccaec96c4cb10d3b9d4be3b5f8f6e156641bb064334c8844321",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q7486"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/宋史/卷022",
-      "title": "《宋史》卷22",
+      "title": "《宋史》卷22 · 徽宗四",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T15:43:41.206628+00:00",
       "sha256": "f002a85d8bc8e733f3215f9c27db21328aa098dd63f1f43a52d61db5dd28fbd1",
@@ -18917,6 +19399,14 @@
         {
           "kind": "event",
           "id": "sea-alliance"
+        },
+        {
+          "kind": "event",
+          "id": "jingkang"
+        },
+        {
+          "kind": "person",
+          "id": "q7486"
         }
       ]
     },
@@ -19221,6 +19711,10 @@
         },
         {
           "kind": "person",
+          "id": "q1069914"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-王炎"
         }
       ]
@@ -19247,6 +19741,23 @@
         {
           "kind": "person",
           "id": "reviewed-耿京"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷418",
+      "title": "《宋史》卷418 · 文天祥",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:45.855980+00:00",
+      "sha256": "5f87bda72d9dc65c64b67fd860af3bfe711095d5562e0152f78ac5600d4a7270",
+      "references": [
+        {
+          "kind": "event",
+          "id": "yashan"
+        },
+        {
+          "kind": "person",
+          "id": "q575900"
         }
       ]
     },
@@ -19420,6 +19931,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷40上",
+      "title": "《后汉书》卷40上 · 班彪班固列传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:06.121515+00:00",
+      "sha256": "4f70eaa901377ed5e382e3b62b0398750cb9d5b11244eaa34f9700898edab670",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q439681"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/後漢書/卷47",
       "title": "《後漢書》卷47",
       "status": "retained-and-hash-verified",
@@ -19454,6 +19978,10 @@
         {
           "kind": "event",
           "id": "zhangheng"
+        },
+        {
+          "kind": "person",
+          "id": "q197206"
         }
       ]
     },
@@ -19531,6 +20059,23 @@
         {
           "kind": "person",
           "id": "cailun"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
+      "title": "《后汉书》卷84 · 列女传班昭",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:07.125874+00:00",
+      "sha256": "b047c20728bf589304d66dc182d23917eb071718452ffc8c210c9c77365d5294",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q439681"
+        },
+        {
+          "kind": "person",
+          "id": "q177081"
         }
       ]
     },
@@ -19688,6 +20233,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷196",
+      "title": "《新唐书》卷196 · 陆羽",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:43.235351+00:00",
+      "sha256": "9b3c20c0bb74eea231796b1f974f3e75fc33c8228875bc7ff31851e28fca06b8",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
       "title": "《新唐書》卷202",
       "status": "retained-and-hash-verified",
@@ -19759,8 +20317,25 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明史/卷10",
+      "title": "《明史》卷10 · 英宗前纪",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:07.240145+00:00",
+      "sha256": "b1569d32736612eee5aafcc5492e31b9ceea025bef4d9cea9770f350a7fd2a54",
+      "references": [
+        {
+          "kind": "event",
+          "id": "tumu"
+        },
+        {
+          "kind": "person",
+          "id": "q9983"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/明史/卷12",
-      "title": "《明史》卷12",
+      "title": "《明史》卷12 · 英宗后纪",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T15:43:46.586527+00:00",
       "sha256": "9d6f13ef8cdc866ff516c338f04721dfc4c516f0a6646ed21dc65844c851961b",
@@ -19768,6 +20343,27 @@
         {
           "kind": "event",
           "id": "duomen-coup"
+        },
+        {
+          "kind": "person",
+          "id": "q9983"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷125",
+      "title": "《明史》卷125 · 徐达传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:08.016789+00:00",
+      "sha256": "93e4681afc13ab630ebd54630b4cf77ef22513eb484e7a21043e2bd64bd5386a",
+      "references": [
+        {
+          "kind": "event",
+          "id": "ming-founded"
+        },
+        {
+          "kind": "person",
+          "id": "q1355886"
         }
       ]
     },
@@ -19882,6 +20478,32 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明史/卷226",
+      "title": "《明史》卷226 · 海瑞传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:07.265312+00:00",
+      "sha256": "61a02d2d59e2c524641b0262319fc6e273bf46b6935ab5e15bc920fbb477c079",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q934891"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷230",
+      "title": "《明史》卷230 · 汤显祖传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:09.382076+00:00",
+      "sha256": "c4ded3bec71b1ffdafd5fd1d8d72841f38135ddd5c7660deb0e8998fcdd35924",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/明史/卷24",
       "title": "《明史》卷24",
       "status": "retained-and-hash-verified",
@@ -19930,7 +20552,7 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/明史/卷274",
-      "title": "《明史》卷274",
+      "title": "《明史》卷274 · 史可法传",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T15:43:50.183728+00:00",
       "sha256": "21334f8f2dffcec6b7061c076d84d6ba5970704de23cb9aef2c2b778096cac06",
@@ -19938,6 +20560,10 @@
         {
           "kind": "event",
           "id": "yangzhou-1645"
+        },
+        {
+          "kind": "person",
+          "id": "q3274611"
         }
       ]
     },
@@ -20053,6 +20679,19 @@
         {
           "kind": "event",
           "id": "longqing-opening"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明夷待訪錄",
+      "title": "《明夷待访录》· 原君、原臣、学校",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:10.246316+00:00",
+      "sha256": "ca28a61b35b7b83beebfe127bd19d5ad6e7481a44458c221626a00958faeee61",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
         }
       ]
     },
@@ -20181,6 +20820,10 @@
         {
           "kind": "event",
           "id": "chen-shou-history"
+        },
+        {
+          "kind": "person",
+          "id": "q468890"
         }
       ]
     },
@@ -20327,6 +20970,45 @@
         {
           "kind": "event",
           "id": "tao-retire"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/水經注/原序",
+      "title": "郦道元 ·《水经注》原序",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:52.951876+00:00",
+      "sha256": "179c7fa4688131a4ef02ec954311f1b4a14f9794e59796f0b37df3b0ed58667b",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6538730"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/洗冤集錄",
+      "title": "宋慈 ·《洗冤集录》序与目录",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:45.230027+00:00",
+      "sha256": "bf921d20179b65cbd7ed4851d614c7b0e670cedc82c754560e58ba39b0ab5685",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q709231"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/海國圖志/原敘",
+      "title": "《海国图志》· 原叙",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.956471+00:00",
+      "sha256": "a0ba734714533ba2e3d62230eebc40a1fe91bbb00ec126618a25af6bb61bb576",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
         }
       ]
     },
@@ -21034,6 +21716,36 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷480",
+      "title": "《清史稿》卷480 · 黄宗羲、王夫之传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:10.756576+00:00",
+      "sha256": "e44e861244f0817c842cb9ef623a181e679fcdd921afaaa5cc3e8003461071f4",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
+        },
+        {
+          "kind": "person",
+          "id": "q714374"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷481",
+      "title": "《清史稿》卷481 · 顾炎武传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.121943+00:00",
+      "sha256": "e357d081a6afbcdf5f1519a838ea12b5788bdf1ce3edbdce9532d385fd8da8e8",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1195906"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/清史稿/卷7",
       "title": "《清史稿》卷7",
       "status": "retained-and-hash-verified",
@@ -21127,7 +21839,24 @@
         },
         {
           "kind": "person",
+          "id": "q1280148"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-李陵"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/漢書/卷056",
+      "title": "《汉书》卷56 · 董仲舒传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:06.894246+00:00",
+      "sha256": "505fb8ffaca63690baa3cf83daabe167a1e55b082eb2ce75b7229a60fb4fc127",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q445626"
         }
       ]
     },
@@ -21227,6 +21956,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/牡丹亭題詞",
+      "title": "《牡丹亭题词》· 汤显祖",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:09.580184+00:00",
+      "sha256": "4c4e387ed29fc91041b55bfdffe5035a410c5b8ac9a680b6fe3ce6cf845325d5",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/王禎農書",
       "title": "《王禎農書》",
       "status": "retained-and-hash-verified",
@@ -21236,6 +21978,58 @@
         {
           "kind": "event",
           "id": "wangzhen-agricultural-book"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/筆法記",
+      "title": "《笔法记》· 传为荆浩所撰",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:25:08.748762+00:00",
+      "sha256": "fc099b6f294d57c98a8d67b28d71c67f9193cecb2f1c71ca379c313c6a0ca65c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2665475"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/老子_(匯校版)",
+      "title": "《老子》汇校版 · 第二十五、三十七、七十八章",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:04.209172+00:00",
+      "sha256": "687719e572d9815bbaad55405b752f11c32191ffc92254650b2381d577dad4cb",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9333"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者小傳",
+      "title": "《聊斋志异》· 作者小传",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.026517+00:00",
+      "sha256": "5987f9ed1d3b00092341a92ef9f2a374b36e544bcd3a428867c5ffd3fb315d89",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者自志",
+      "title": "《聊斋志异》· 作者自志",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:03:11.899549+00:00",
+      "sha256": "c12051188869e4fa36b76038664d9b550340239f10396f4b47b0e0d1c0d5d873",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
         }
       ]
     },
@@ -21344,6 +22138,10 @@
         {
           "kind": "person",
           "id": "zhaokuangyin"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
@@ -21361,6 +22159,27 @@
         {
           "kind": "event",
           "id": "later-zhou-huainan"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷116",
+      "title": "《舊五代史》卷116",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:25:08.069861+00:00",
+      "sha256": "86d74ce555f2c4342508ee856d9a86e502b7a2dcabf13e7a2e037f71e581010b",
+      "references": [
+        {
+          "kind": "event",
+          "id": "later-zhou-huainan"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
@@ -21374,19 +22193,27 @@
         {
           "kind": "event",
           "id": "later-zhou-north"
+        },
+        {
+          "kind": "person",
+          "id": "q1319646"
         }
       ]
     },
     {
-      "url": "https://zh.wikisource.org/wiki/舊五代史/卷143",
-      "title": "《舊五代史》卷143",
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷126",
+      "title": "《舊五代史》卷126",
       "status": "retained-and-hash-verified",
-      "retrievedAt": "2026-10-06T15:44:17.223051+00:00",
-      "sha256": "c4bd49f9b4b662668e3386fa31628db94e8a5f8b682ac7d149c528bbe697b989",
+      "retrievedAt": "2026-10-08T17:25:07.573570+00:00",
+      "sha256": "30099e8fefe7213b9d641fdc4b38b10d2ca314a36e0c61b64381fea6c0d16a57",
       "references": [
         {
           "kind": "event",
           "id": "nine-classics-printing"
+        },
+        {
+          "kind": "person",
+          "id": "q1131595"
         }
       ]
     },
@@ -21400,6 +22227,23 @@
         {
           "kind": "event",
           "id": "later-tang-mingzong"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷43",
+      "title": "《舊五代史》卷43",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:25:08.351588+00:00",
+      "sha256": "4be550442220365a8078f4700f8c33869ae235153f40d5036bd3b75fee4fa0f7",
+      "references": [
+        {
+          "kind": "event",
+          "id": "nine-classics-printing"
+        },
+        {
+          "kind": "person",
+          "id": "q1131595"
         }
       ]
     },
@@ -21487,6 +22331,40 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷120",
+      "title": "《旧唐书》卷120 · 郭子仪",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:41.810808+00:00",
+      "sha256": "7a67ad9f14b5909728d65a17099d1c4608ce2ce2d7de49b5f717b6819b6222b9",
+      "references": [
+        {
+          "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "person",
+          "id": "q1290765"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷128",
+      "title": "《旧唐书》卷128 · 颜真卿",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:42.361998+00:00",
+      "sha256": "518bfc65e24dd8639c529500ecc267d7579dd39ef1967154eb6839e164efa8b0",
+      "references": [
+        {
+          "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "person",
+          "id": "q758566"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷135",
       "title": "《舊唐書》卷135",
       "status": "retained-and-hash-verified",
@@ -21561,6 +22439,10 @@
         },
         {
           "kind": "person",
+          "id": "q337773"
+        },
+        {
+          "kind": "person",
           "id": "reviewed-裴度"
         },
         {
@@ -21587,6 +22469,10 @@
         {
           "kind": "event",
           "id": "bai-juyi-jiangzhou"
+        },
+        {
+          "kind": "person",
+          "id": "q313324"
         }
       ]
     },
@@ -21616,6 +22502,10 @@
         },
         {
           "kind": "event",
+          "id": "an-lushan"
+        },
+        {
+          "kind": "event",
           "id": "libai-yongwang"
         },
         {
@@ -21628,11 +22518,28 @@
         },
         {
           "kind": "person",
+          "id": "q313605"
+        },
+        {
+          "kind": "person",
           "id": "libai"
         },
         {
           "kind": "person",
           "id": "reviewed-永王李璘"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷191",
+      "title": "《旧唐书》卷191 · 孙思邈",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:42.828671+00:00",
+      "sha256": "cd08d11489f5b537616e09899288d4c60001a20bde91dfd330c2758de569976e",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q981193"
         }
       ]
     },
@@ -21792,6 +22699,23 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷71",
+      "title": "《旧唐书》卷71 · 魏征",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:42.267799+00:00",
+      "sha256": "138658cd7b93f386acefb8a88ae5e3548efbdc3bfc124f4d99ed951c19ca9ae5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "zhen-guan"
+        },
+        {
+          "kind": "person",
+          "id": "q378356"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷8",
       "title": "《舊唐書》卷8",
       "status": "retained-and-hash-verified",
@@ -21818,6 +22742,71 @@
         {
           "kind": "event",
           "id": "tang-west-turk"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經",
+      "title": "《茶经》· 目录与原文",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:43.318635+00:00",
+      "sha256": "d26e9c81acfa3f30eee7f0b8d7d9ebd2f05dfb72214032d8ff98ff6972a9b33c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經/卷上",
+      "title": "《茶经》卷上 · 一之源、二之具、三之造",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:52.886436+00:00",
+      "sha256": "eaf0118ba5f666bdebf605081b7b469ffc90d121e4caebdcd5d7f0b90d1c3c11",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q948270"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/荀子/勸學篇",
+      "title": "《荀子》· 劝学篇",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.282545+00:00",
+      "sha256": "7131a37aded681247c7e01a4ea458cb39e4ac4514d02024380a418b665450d8c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/荀子/性惡篇",
+      "title": "《荀子》· 性恶篇",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.391212+00:00",
+      "sha256": "db3463693de628580aad88f78d57e74495b662d94a7c4df66e12b54e80625f9d",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/莊子/逍遙遊",
+      "title": "《庄子》· 逍遥游",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:04.104582+00:00",
+      "sha256": "ea10626c5b1709aa4dd706158dd168f2e53313f41e2cf55fd391e502291834eb",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47739"
         }
       ]
     },
@@ -21886,6 +22875,19 @@
         {
           "kind": "person",
           "id": "reviewed-耶律倍"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/金匱要略方論_(四部叢刊本)/序",
+      "title": "《金匮要略方论》四部丛刊本 · 序",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:08.035679+00:00",
+      "sha256": "13cf7d98c1e5f343142b6109bcad074eedd857db2d87d1e9aa01d56e61e07a5b",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
         }
       ]
     },
@@ -22118,6 +23120,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/韓非子/五蠹",
+      "title": "《韩非子》· 五蠹",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T18:04:05.241645+00:00",
+      "sha256": "a63f693dee2d522cf1a2126e13e117442518e98d9217d117a247108fd51942e9",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q28959"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/魏書",
       "title": "《魏書》· 本纪与相关传记",
       "status": "retained-and-hash-verified",
@@ -22194,6 +23209,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/魏書/卷89",
+      "title": "《魏书》卷89 · 郦道元",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:44.474416+00:00",
+      "sha256": "18ea63bcbc86c81bdb69fe41bc5924d903c08a40925a37c1684b20c9a6b40f7a",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6538730"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/魏書/卷9",
       "title": "《魏書》卷9",
       "status": "retained-and-hash-verified",
@@ -22203,6 +23231,32 @@
         {
           "kind": "event",
           "id": "six-garrisons"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/墨子/公輸",
+      "title": "《墨子》· 公输",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:25:07.999878+00:00",
+      "sha256": "a4d1e53972995e7c738a28d6a09bac3d005bd8b37b83e722d1a6e6aa7aafec64",
+      "references": [
+        {
+          "kind": "person",
+          "id": "mozi"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/齊民要術/自序",
+      "title": "贾思勰 ·《齐民要术》自序",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-08T17:58:44.346724+00:00",
+      "sha256": "2a43dc45959ba37a97d1bc630a8d807f4d49b8d238c3ac204afbf2cd4752707c",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q6697537"
         }
       ]
     }
@@ -22510,8 +23564,8 @@
       "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 2,
-      "biographyCharacters": 81,
+      "sourceCount": 3,
+      "biographyCharacters": 225,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -22550,15 +23604,17 @@
     {
       "id": "q1131595",
       "name": "冯道",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 882,
       "death": 954,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 3,
+      "biographyCharacters": 225,
+      "eventCount": 1,
+      "eventIds": [
+        "nine-classics-printing"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q717972",
@@ -22675,21 +23731,6 @@
       "coverage": "no-linked-events"
     },
     {
-      "id": "q1319646",
-      "name": "柴荣",
-      "recordKind": "catalog",
-      "birth": 921,
-      "death": 959,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 1,
-      "eventIds": [
-        "gaoping-954"
-      ],
-      "journeyNodes": 0,
-      "coverage": "one-linked-event"
-    },
-    {
       "id": "q378528",
       "name": "李煜",
       "recordKind": "catalog",
@@ -22720,15 +23761,17 @@
     {
       "id": "q701326",
       "name": "张良",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -262,
       "death": -186,
-      "sourceCount": 1,
-      "biographyCharacters": 16,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 3,
+      "biographyCharacters": 236,
+      "eventCount": 1,
+      "eventIds": [
+        "hongmen"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q382816",
@@ -22761,15 +23804,17 @@
     {
       "id": "q7221",
       "name": "汉文帝",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -203,
       "death": -157,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 242,
+      "eventCount": 1,
+      "eventIds": [
+        "han-wendi"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q1185798",
@@ -22787,11 +23832,11 @@
     {
       "id": "q301650",
       "name": "贾谊",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -200,
       "death": -168,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 2,
+      "biographyCharacters": 240,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -22839,11 +23884,11 @@
     {
       "id": "q445626",
       "name": "董仲舒",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -179,
       "death": -104,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 260,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -22852,11 +23897,11 @@
     {
       "id": "q1280148",
       "name": "苏武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": -140,
       "death": -60,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 2,
+      "biographyCharacters": 243,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23001,11 +24046,11 @@
     {
       "id": "q31749",
       "name": "华佗",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 208,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 247,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23096,19 +24141,6 @@
       "coverage": "no-linked-events"
     },
     {
-      "id": "q707658",
-      "name": "陈平",
-      "recordKind": "catalog",
-      "birth": null,
-      "death": -178,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
-      "journeyNodes": 0,
-      "coverage": "no-linked-events"
-    },
-    {
       "id": "q319329",
       "name": "王充",
       "recordKind": "catalog",
@@ -23124,11 +24156,11 @@
     {
       "id": "q439681",
       "name": "班固",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 32,
       "death": 92,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 3,
+      "biographyCharacters": 242,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23137,11 +24169,11 @@
     {
       "id": "q177081",
       "name": "班昭",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 45,
       "death": 116,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
+      "sourceCount": 2,
+      "biographyCharacters": 246,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23150,11 +24182,11 @@
     {
       "id": "q197206",
       "name": "张衡",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 78,
       "death": 139,
-      "sourceCount": 1,
-      "biographyCharacters": 19,
+      "sourceCount": 2,
+      "biographyCharacters": 256,
       "eventCount": 1,
       "eventIds": [
         "zhangheng"
@@ -23191,11 +24223,11 @@
     {
       "id": "q197350",
       "name": "张仲景",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 150,
       "death": 219,
-      "sourceCount": 1,
-      "biographyCharacters": 4,
+      "sourceCount": 3,
+      "biographyCharacters": 262,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23325,11 +24357,11 @@
     {
       "id": "q312978",
       "name": "法显",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 422,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
+      "sourceCount": 2,
+      "biographyCharacters": 217,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23729,15 +24761,17 @@
     {
       "id": "q1355886",
       "name": "徐达",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1332,
       "death": 1385,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 257,
+      "eventCount": 1,
+      "eventIds": [
+        "ming-founded"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q10943311",
@@ -23785,19 +24819,6 @@
       "coverage": "one-linked-event"
     },
     {
-      "id": "q9983",
-      "name": "明英宗",
-      "recordKind": "catalog",
-      "birth": 1427,
-      "death": 1464,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
-      "eventCount": 0,
-      "eventIds": [],
-      "journeyNodes": 0,
-      "coverage": "no-linked-events"
-    },
-    {
       "id": "q558863",
       "name": "沈周",
       "recordKind": "catalog",
@@ -23826,11 +24847,11 @@
     {
       "id": "q2248916",
       "name": "唐寅",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1470,
       "death": 1524,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 269,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23839,11 +24860,11 @@
     {
       "id": "q306673",
       "name": "文征明",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1470,
       "death": 1559,
-      "sourceCount": 1,
-      "biographyCharacters": 19,
+      "sourceCount": 2,
+      "biographyCharacters": 272,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23930,11 +24951,11 @@
     {
       "id": "q934891",
       "name": "海瑞",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1514,
       "death": 1587,
-      "sourceCount": 1,
-      "biographyCharacters": 6,
+      "sourceCount": 2,
+      "biographyCharacters": 267,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -23999,11 +25020,11 @@
     {
       "id": "q945333",
       "name": "汤显祖",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1550,
       "death": 1616,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 3,
+      "biographyCharacters": 261,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24116,11 +25137,11 @@
     {
       "id": "q716217",
       "name": "宋应星",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1587,
       "death": 1666,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 4,
+      "biographyCharacters": 285,
       "eventCount": 1,
       "eventIds": [
         "tiangong-kaiwu"
@@ -24157,15 +25178,17 @@
     {
       "id": "q3274611",
       "name": "史可法",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1601,
       "death": 1645,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 260,
+      "eventCount": 1,
+      "eventIds": [
+        "yangzhou-1645"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q652211",
@@ -24265,11 +25288,11 @@
     {
       "id": "q6697537",
       "name": "贾思勰",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 13,
+      "sourceCount": 2,
+      "biographyCharacters": 219,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24278,11 +25301,11 @@
     {
       "id": "q6538730",
       "name": "郦道元",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": 527,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 3,
+      "biographyCharacters": 211,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24572,19 +25595,6 @@
       "coverage": "no-linked-events"
     },
     {
-      "id": "q1151702",
-      "name": "蒙恬",
-      "recordKind": "catalog",
-      "birth": null,
-      "death": -210,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
-      "eventCount": 0,
-      "eventIds": [],
-      "journeyNodes": 0,
-      "coverage": "no-linked-events"
-    },
-    {
       "id": "q197436",
       "name": "赵高",
       "recordKind": "catalog",
@@ -24667,11 +25677,11 @@
     {
       "id": "q31754",
       "name": "黄宗羲",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1610,
       "death": 1695,
-      "sourceCount": 1,
-      "biographyCharacters": 23,
+      "sourceCount": 3,
+      "biographyCharacters": 272,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24693,11 +25703,11 @@
     {
       "id": "q1195906",
       "name": "顾炎武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1613,
       "death": 1682,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 266,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24706,11 +25716,11 @@
     {
       "id": "q714374",
       "name": "王夫之",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1619,
       "death": 1692,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 289,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -24849,11 +25859,11 @@
     {
       "id": "q318406",
       "name": "蒲松龄",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1640,
       "death": 1715,
-      "sourceCount": 1,
-      "biographyCharacters": 17,
+      "sourceCount": 3,
+      "biographyCharacters": 268,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -25022,11 +26032,11 @@
     {
       "id": "q712007",
       "name": "郑燮",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1693,
       "death": 1766,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 2,
+      "biographyCharacters": 281,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -25260,11 +26270,11 @@
     {
       "id": "q597003",
       "name": "魏源",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1794,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 23,
+      "sourceCount": 3,
+      "biographyCharacters": 285,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -25629,11 +26639,11 @@
     {
       "id": "q559957",
       "name": "严复",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1854,
       "death": 1921,
-      "sourceCount": 1,
-      "biographyCharacters": 21,
+      "sourceCount": 3,
+      "biographyCharacters": 284,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -25694,11 +26704,11 @@
     {
       "id": "q1397430",
       "name": "詹天佑",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1861,
       "death": 1919,
-      "sourceCount": 1,
-      "biographyCharacters": 39,
+      "sourceCount": 3,
+      "biographyCharacters": 279,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -26353,19 +27363,6 @@
       "coverage": "one-linked-event"
     },
     {
-      "id": "q7486",
-      "name": "宋徽宗",
-      "recordKind": "catalog",
-      "birth": 1082,
-      "death": 1135,
-      "sourceCount": 1,
-      "biographyCharacters": 5,
-      "eventCount": 0,
-      "eventIds": [],
-      "journeyNodes": 0,
-      "coverage": "no-linked-events"
-    },
-    {
       "id": "q197342",
       "name": "张择端",
       "recordKind": "catalog",
@@ -26463,11 +27460,11 @@
     {
       "id": "q1069914",
       "name": "陆游",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1125,
       "death": 1210,
-      "sourceCount": 1,
-      "biographyCharacters": 20,
+      "sourceCount": 2,
+      "biographyCharacters": 227,
       "eventCount": 1,
       "eventIds": [
         "luyou-nanzheng"
@@ -26556,11 +27553,11 @@
     {
       "id": "q709231",
       "name": "宋慈",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1186,
       "death": 1249,
-      "sourceCount": 1,
-      "biographyCharacters": 11,
+      "sourceCount": 2,
+      "biographyCharacters": 224,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -26651,15 +27648,17 @@
     {
       "id": "q575900",
       "name": "文天祥",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 1236,
       "death": 1283,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 222,
+      "eventCount": 1,
+      "eventIds": [
+        "yashan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q2738615",
@@ -27053,24 +28052,26 @@
     {
       "id": "q378356",
       "name": "魏征",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 580,
       "death": 643,
-      "sourceCount": 1,
-      "biographyCharacters": 9,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 217,
+      "eventCount": 1,
+      "eventIds": [
+        "zhen-guan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q981193",
       "name": "孙思邈",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 581,
       "death": 682,
-      "sourceCount": 1,
-      "biographyCharacters": 16,
+      "sourceCount": 3,
+      "biographyCharacters": 212,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -27455,15 +28456,17 @@
     {
       "id": "q1290765",
       "name": "郭子仪",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 697,
       "death": 781,
-      "sourceCount": 1,
-      "biographyCharacters": 18,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 216,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q704344",
@@ -27481,15 +28484,17 @@
     {
       "id": "q313605",
       "name": "王维",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 699,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 202,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q1328480",
@@ -27533,15 +28538,17 @@
     {
       "id": "q758566",
       "name": "颜真卿",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 709,
       "death": 785,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
-      "eventCount": 0,
-      "eventIds": [],
+      "sourceCount": 2,
+      "biographyCharacters": 206,
+      "eventCount": 1,
+      "eventIds": [
+        "an-lushan"
+      ],
       "journeyNodes": 0,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "q3274331",
@@ -27585,11 +28592,11 @@
     {
       "id": "q948270",
       "name": "陆羽",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 733,
       "death": 804,
-      "sourceCount": 1,
-      "biographyCharacters": 14,
+      "sourceCount": 4,
+      "biographyCharacters": 221,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -27678,11 +28685,11 @@
     {
       "id": "q313324",
       "name": "白居易",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 772,
       "death": 846,
-      "sourceCount": 1,
-      "biographyCharacters": 6,
+      "sourceCount": 2,
+      "biographyCharacters": 211,
       "eventCount": 1,
       "eventIds": [
         "bai-juyi-jiangzhou"
@@ -27693,11 +28700,11 @@
     {
       "id": "q337773",
       "name": "柳宗元",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": 773,
       "death": 819,
-      "sourceCount": 1,
-      "biographyCharacters": 14,
+      "sourceCount": 2,
+      "biographyCharacters": 209,
       "eventCount": 1,
       "eventIds": [
         "yongzhen-reform"
@@ -27814,11 +28821,11 @@
     {
       "id": "q316304",
       "name": "刘徽",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 7,
+      "sourceCount": 2,
+      "biographyCharacters": 221,
       "eventCount": 1,
       "eventIds": [
         "liuhui"
@@ -28055,8 +29062,8 @@
       "recordKind": "curated",
       "birth": 233,
       "death": 297,
-      "sourceCount": 2,
-      "biographyCharacters": 34,
+      "sourceCount": 3,
+      "biographyCharacters": 215,
       "eventCount": 1,
       "eventIds": [
         "chen-shou-history"
@@ -28083,8 +29090,8 @@
       "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 192,
+      "sourceCount": 2,
+      "biographyCharacters": 238,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -28246,11 +29253,11 @@
     {
       "id": "q37151",
       "name": "孙武",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 8,
+      "sourceCount": 3,
+      "biographyCharacters": 249,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -28274,11 +29281,11 @@
     {
       "id": "q47739",
       "name": "庄子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 227,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -28395,11 +29402,11 @@
     {
       "id": "q9333",
       "name": "老子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 221,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -28434,11 +29441,11 @@
     {
       "id": "q216072",
       "name": "荀子",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 12,
+      "sourceCount": 4,
+      "biographyCharacters": 239,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -28475,11 +29482,11 @@
     {
       "id": "q28959",
       "name": "韩非",
-      "recordKind": "catalog",
+      "recordKind": "curated",
       "birth": null,
       "death": -233,
-      "sourceCount": 1,
-      "biographyCharacters": 10,
+      "sourceCount": 3,
+      "biographyCharacters": 245,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,
@@ -29807,21 +30814,6 @@
       "coverage": "one-linked-event"
     },
     {
-      "id": "depth-ronghong",
-      "name": "容闳",
-      "recordKind": "curated",
-      "birth": 1828,
-      "death": 1912,
-      "sourceCount": 2,
-      "biographyCharacters": 199,
-      "eventCount": 1,
-      "eventIds": [
-        "students-abroad"
-      ],
-      "journeyNodes": 0,
-      "coverage": "one-linked-event"
-    },
-    {
       "id": "depth-ricci",
       "name": "利玛窦",
       "recordKind": "curated",
@@ -29874,8 +30866,8 @@
       "recordKind": "curated",
       "birth": null,
       "death": null,
-      "sourceCount": 1,
-      "biographyCharacters": 192,
+      "sourceCount": 2,
+      "biographyCharacters": 238,
       "eventCount": 0,
       "eventIds": [],
       "journeyNodes": 0,

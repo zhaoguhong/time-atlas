@@ -1450,11 +1450,26 @@ export const reviewedEventDrafts = [
     '社会',
     '上海',
     [121.47, 31.23],
-    '李鸿章等推动设立江南制造总局，发展机器制造、军工及翻译活动。',
+    '李鸿章、曾国藩等推动设立江南制造总局，容闳此前受委派赴美采购机器，设备成为创办时的资源之一。机构此后发展机器制造、军工及翻译活动。',
     '洋务时期试图通过新式技术增强军事与生产能力。',
     '成为晚清技术、工业与翻译知识的重要机构。',
-    ['李鸿章', '曾国藩'],
-    book('清史稿', '411'),
+    ['李鸿章', '曾国藩', '容闳'],
+    [
+      book('清史稿', '411'),
+      {
+        title: '中山市文化广电旅游局 · 容闳',
+        url: 'https://www.zs.gov.cn/zjzs/zsmr/content/post_220052.html',
+      },
+      {
+        title: '容闳 · My Life in China and America，第十三至十五章',
+        url: 'https://www.gutenberg.org/cache/epub/54635/pg54635-images.html',
+        note: '自述中的机器采购与运送记载，和机构创办、后续生产分别理解。',
+      },
+      {
+        title: '中国国家博物馆 · 江南制造局造船清单与创办背景',
+        url: 'https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml',
+      },
+    ],
     4,
   ),
   e(
@@ -1522,6 +1537,23 @@ export function reviewEventRelations(events: HistoryEvent[], people: Person[]): 
   const id = (name: string) =>
     people.find((person) => person.name === name || person.aliases?.includes(name))!.id
   const notes: Record<string, Record<string, string>> = {
+    'nine-classics-printing': {
+      [id('冯道')]: '与李愚倡议并委学官校勘、雕印，属于组织者；不表示本人完成全部刻印。',
+    },
+    'later-zhou-reforms': {
+      [id('柴荣')]: '后周世宗为政策发布者，诏令与地方执行需要分别理解。',
+    },
+    'later-zhou-huainan': {
+      [id('柴荣')]:
+        '《旧五代史》记显德三年车驾渡淮、至寿州城下；这里只关联这一阶段，不补为完整路线。',
+    },
+    'later-zhou-north': {
+      [id('柴荣')]: '后周世宗亲自北征，取得关南部分地区；各将领行动与个人完整行程不同。',
+    },
+    'jiangnan-arsenal': {
+      [id('容闳')]:
+        '1863年受曾国藩委派赴美采购机器，关联1865年的机构创办是前期筹备关系，不据机构坐标认定其当年在上海亲临。',
+    },
     'wei-founded': {
       [id('曹操')]: '曹操为魏政权奠基者，在曹丕称帝前已去世；不是此次称帝的参与者。',
     },

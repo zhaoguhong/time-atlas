@@ -1,0 +1,298 @@
+{
+  "purpose": "17 ancient-person biographies and six documented associations to existing events; preserve imported dates and unresolved traditions.",
+  "sources": [
+    {
+      "title": "《史记》卷63 · 老子韩非列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷063",
+      "note": "核对老子身份的并列异说、庄周生平叙述及韩非求学、著述、入秦遇害；传记异说和寓言不转成确定纪年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9333"
+        },
+        {
+          "kind": "person",
+          "id": "q47739"
+        },
+        {
+          "kind": "person",
+          "id": "q28959"
+        }
+      ]
+    },
+    {
+      "title": "《老子》汇校版 · 第二十五、三十七、七十八章",
+      "url": "https://zh.wikisource.org/wiki/老子_(匯校版)",
+      "note": "用于道法自然、无为及柔弱与刚强关系的思想介绍，不据版本条文反推作者年代。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9333"
+        }
+      ]
+    },
+    {
+      "title": "《庄子》· 逍遥游",
+      "url": "https://zh.wikisource.org/wiki/莊子/逍遙遊",
+      "note": "核对鲲鹏寓言、知识视角及超越功名和外在依赖的论述；文学场景不视为作者实际行踪。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q47739"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷74 · 孟子荀卿列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷074",
+      "note": "核对荀卿在齐、楚的传记记载、兰陵令任职及李斯师承；不增补活动年份。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "title": "《荀子》· 劝学篇",
+      "url": "https://zh.wikisource.org/wiki/荀子/勸學篇",
+      "note": "核对学习积累、师友和礼义实践的论述。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "title": "《荀子》· 性恶篇",
+      "url": "https://zh.wikisource.org/wiki/荀子/性惡篇",
+      "note": "用于解释性恶论强调后天人为、学习教化与礼义，并非不可改变的道德判决。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q216072"
+        }
+      ]
+    },
+    {
+      "title": "《韩非子》· 五蠹",
+      "url": "https://zh.wikisource.org/wiki/韓非子/五蠹",
+      "note": "核对因时代调整治理、重法令和赏罚、农战的政治论述。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q28959"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷65 · 孙子吴起列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷065",
+      "note": "核对传统孙武传记、以十三篇见吴王阖闾及孙武与孙膑的区分；不据此补成确定生卒年或单篇写定年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q37151"
+        }
+      ]
+    },
+    {
+      "title": "《孙子兵法》· 始计、作战、谋攻",
+      "url": "https://zh.wikisource.org/wiki/孫子兵法",
+      "note": "核对战前比较、战争成本、慎攻城与谋略制胜；传世书的归名与成书问题分别处理。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q37151"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷88 · 蒙恬列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷088",
+      "note": "核对攻齐、北击匈奴、长城和九原至甘泉通道的统军及工程职责，以及秦末赐死；原文说通道未就。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1151702"
+        },
+        {
+          "kind": "event",
+          "id": "mengtian-north"
+        },
+        {
+          "kind": "event",
+          "id": "qin-straight-road"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷55 · 留侯世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷055",
+      "note": "核对张良韩相家世、刺秦、从刘邦、入关筹划、封留侯和定都建议；圯上授书按传记故事处理。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q701326"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷7 · 项羽本纪鸿门叙事",
+      "url": "https://zh.wikisource.org/wiki/史記/卷007",
+      "note": "核对张良转告项伯消息、席间与樊哙联络及刘邦离开后留谢的直接在场角色。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q701326"
+        },
+        {
+          "kind": "event",
+          "id": "hongmen"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷56 · 陈丞相世家",
+      "url": "https://zh.wikisource.org/wiki/史記/卷056",
+      "note": "核对陈平改事刘邦、反间筹策、白登解围、与周勃迎立文帝和宰相职分；白登计策原文明确不详。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q707658"
+        },
+        {
+          "kind": "event",
+          "id": "baideng"
+        },
+        {
+          "kind": "event",
+          "id": "han-wendi"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷10 · 孝文本纪",
+      "url": "https://zh.wikisource.org/wiki/史記/卷010",
+      "note": "核对刘恒由代王入继帝位、宽政、刑制改革及其具体局限；不把后世文景评价当作每项政令的即时结果。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q7221"
+        },
+        {
+          "kind": "event",
+          "id": "han-wendi"
+        }
+      ]
+    },
+    {
+      "title": "《史记》卷84 · 屈原贾生列传",
+      "url": "https://zh.wikisource.org/wiki/史記/卷084",
+      "note": "核对贾谊为博士、太中大夫、长沙王和梁怀王太傅的经历，以及《吊屈原赋》《鵩鸟赋》和政事建议。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q301650"
+        }
+      ]
+    },
+    {
+      "title": "《汉书》卷56 · 董仲舒传",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷056",
+      "note": "核对《春秋》教学、贤良对策、天人灾异政治解释、江都及胶西相任职、归居著述与学校建议；不称其亲自创办前124年太学。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q445626"
+        }
+      ]
+    },
+    {
+      "title": "《汉书》卷54 · 苏武传",
+      "url": "https://zh.wikisource.org/wiki/漢書/卷054",
+      "note": "核对奉使匈奴、被留不降、北海牧羊、归汉任典属国；不从劝降对话猜定李陵见苏武的年份。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1280148"
+        }
+      ]
+    },
+    {
+      "title": "《后汉书》卷40上 · 班彪班固列传",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷40上",
+      "note": "核对班固接续父亲史业、修《汉书》、受诏著史和《两都赋》。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q439681"
+        }
+      ]
+    },
+    {
+      "title": "《后汉书》卷84 · 列女传班昭",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
+      "note": "核对班昭奉诏续《汉书》、宫廷授学、参与邓太后政务和《女诫》；传记还记马续后来续成，避免将全书完稿归于一人。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q177081"
+        },
+        {
+          "kind": "person",
+          "id": "q439681"
+        }
+      ]
+    },
+    {
+      "title": "《三国志》卷29 · 方技传华佗",
+      "url": "https://zh.wikisource.org/wiki/三國志/卷29",
+      "note": "核对华佗医术、麻沸散的古史记载、导引五禽戏与吴普樊阿师承、为曹操治病及死于狱；不把神异病例当作现代医学验证。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31749"
+        }
+      ]
+    },
+    {
+      "title": "《伤寒杂病论序》及林亿等宋校《伤寒论》序",
+      "url": "https://zh.wikisource.org/wiki/傷寒雜病論序",
+      "note": "核对传世自序的著述动机、采集古训与辨证，以及王叔和整理、宋代校刊；姓名、南阳籍及长沙太守为宋校序转引后出《名医录》，不作同时代履历证明。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
+        }
+      ]
+    },
+    {
+      "title": "《金匮要略方论》四部丛刊本 · 序",
+      "url": "https://zh.wikisource.org/wiki/金匱要略方論_(四部叢刊本)/序",
+      "note": "核对王洙发现残本、宋臣校订并调整方证编次的流传过程；现存篇章并非东汉手稿原貌。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197350"
+        }
+      ]
+    },
+    {
+      "title": "《后汉书》卷59 · 张衡列传",
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷59",
+      "note": "核对张衡文学、太史令任职、浑天仪及候风地动仪、河间相经历；地动仪按史书记述介绍，不假定复原模型就是原器。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q197206"
+        },
+        {
+          "kind": "event",
+          "id": "zhangheng"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-09",
+  "scope": "person-expansion-medieval",
+  "verification": "Original primary texts opened with web.run and supporting passages checked in retained original-text caches. The Palace Museum search result initially supported the entry but web.open failed internally; the subsequently retained official page was independently read and confirms Zhao Ji, the named calligraphic models and the slender-gold style. Open/find errors and variant retries remain in actual-UTC request records. Wei89 textual supplementation is disclosed rather than treated as Wei Shou's wholly surviving original. No new dates, events, journey nodes or map geometry.",
+  "sources": [
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷190下",
+      "title": "《旧唐书》卷190下 · 王维",
+      "people": ["q313605"],
+      "supports": "仕宦、安史之乱中的被俘与追究、辋川交游及诗画、作品散失与汇编"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷166",
+      "title": "《旧唐书》卷166 · 白居易",
+      "people": ["q313324"],
+      "supports": "讽谕与谏官职任、元稹交游、815年贬江州及此后任职"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷160",
+      "title": "《旧唐书》卷160 · 柳宗元",
+      "people": ["q337773"],
+      "supports": "永贞革新参与及贬永州、柳州治理、赎回质钱者、师友与写作"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷128",
+      "title": "《旧唐书》卷128 · 颜真卿",
+      "people": ["q758566"],
+      "supports": "平原太守组织抵抗安禄山、书法身份、奉使李希烈并遇害"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷120",
+      "title": "《旧唐书》卷120 · 郭子仪",
+      "people": ["q1290765"],
+      "supports": "安史战争军事组织与757年收复两京；吐蕃入长安后整合军力；功业与朝廷关系"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷71",
+      "title": "《旧唐书》卷71 · 魏征",
+      "people": ["q378356"],
+      "supports": "先仕李密及李建成、太宗任用、贞观谏政与反对封禅；保留死亡后政治评价变化"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷191",
+      "title": "《旧唐书》卷191 · 孙思邈",
+      "people": ["q981193"],
+      "supports": "医方著述、儒释道阅读、谢绝官职与士人交游；不按传说推算寿命"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷196",
+      "title": "《新唐书》卷196 · 陆羽",
+      "people": ["q948270"],
+      "supports": "字鸿渐、苕溪隐居、著书与茶业传播；早年故事须作为传记记载"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經",
+      "title": "《茶经》· 目录与原文入口",
+      "people": ["q948270"],
+      "supports": "茶的生产、器具、煮饮、地域与既有文献知识；不得将产地清单转为旅行"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/九章算術",
+      "title": "《九章算术》· 刘徽注序与方田注",
+      "people": ["q316304"],
+      "supports": "幼习九章、推理与图解、圆面积割圆计算、重差测量；区分原文、刘徽注及唐代复注"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/佛國記",
+      "title": "法显 ·《佛国记》",
+      "people": ["q312978"],
+      "supports": "求律目标、西域南亚及海路归返、地域与僧团观察；纪年和古地名不直接等于精确路线"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/晉書/卷082",
+      "title": "《晋书》卷82 · 陈寿",
+      "people": ["q468890"],
+      "supports": "字承祚、师谯周、仕蜀及入晋、著作郎、三国志65篇、去世后录取遗书"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/魏書/卷89",
+      "title": "《魏书》卷89 · 郦道元",
+      "people": ["q6538730"],
+      "supports": "字善长、行政与司法职任、严猛治理的争议、注水经40卷、奉使遇害；现存卷89校勘记揭示后世补卷问题"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/齊民要術/自序",
+      "title": "贾思勰 ·《齐民要术》自序",
+      "people": ["q6697537"],
+      "supports": "采经传、询之老成、验之行事与篇卷范围；北魏高阳太守题记；生卒及完成年份不推算"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷019",
+      "title": "《宋史》卷19 · 徽宗一",
+      "people": ["q7486"],
+      "supports": "继位与蔡京等任用、政治及制度活动"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷418",
+      "title": "《宋史》卷418 · 文天祥",
+      "people": ["q575900"],
+      "supports": "勤王与出使、逃归及组织抵抗、被俘后随张弘范入崖山并拒写招降张世杰书、拒降及就义；不推定船只与坐标"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷395",
+      "title": "《宋史》卷395 · 陆游",
+      "people": ["q1069914"],
+      "supports": "仕宦及军幕筹划、江西赈灾、史书编修与诗文；军事意见不能等同实际作战"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/洗冤集錄",
+      "title": "宋慈 ·《洗冤集录》序与目录",
+      "people": ["q709231"],
+      "supports": "司法检验责任、采诸书并增己见、初检覆检与疑难问题分类、刊于湖南宪治"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/備急千金要方/第一",
+      "title": "《备急千金要方》卷一 · 大医习业与大医精诚",
+      "people": ["q981193"],
+      "supports": "医家广学、贵贱一视同仁与审慎救治等伦理；不作现代疗效主张"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經/卷上",
+      "title": "《茶经》卷上 · 一之源、二之具、三之造",
+      "people": ["q948270"],
+      "supports": "茶树环境、采制工具与加工流程；地域记述不是个人旅行证据"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/水經注/原序",
+      "title": "郦道元 ·《水经注》原序",
+      "people": ["q6538730"],
+      "supports": "扩充考订旧经、川流地名随时代改变与材料局限；不把全部水道视为亲历"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷022",
+      "title": "《宋史》卷22 · 徽宗四",
+      "people": ["q7486"],
+      "supports": "宣和二年遣赵良嗣与马政使金、后续对辽金政策、金军来袭与禅位、靖康后被迫北行"
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/240221.html",
+      "title": "故宫博物院 · 瘦金书",
+      "people": ["q7486"],
+      "supports": "瘦金书归属宋徽宗赵佶及褚遂良、薛曜、薛稷书风来源；已独立读到保留的完整机构条目，初次web.open内部失败仍保留"
+    }
+  ],
+  "requestRecords": "data/research/searches/2026-10-09-expansion-medieval-01.json through -13.json"
+}

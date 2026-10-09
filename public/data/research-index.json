@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-07T07:11:22.777Z",
-  "totalSourceLinks": 1020,
-  "referenceDocuments": 356,
-  "successfulSnapshots": 347,
+  "generatedAt": "2026-10-08T18:16:24.242Z",
+  "totalSourceLinks": 1079,
+  "referenceDocuments": 415,
+  "successfulSnapshots": 406,
   "unavailable": [
     {
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
@@ -161,6 +161,14 @@
       "revisionId": null
     },
     {
+      "url": "https://museum.jty.edu.cn/Home/Content/20227",
+      "title": "吉林铁路博物馆 · 第一条国有铁路干线",
+      "retrievedAt": "2026-10-08T18:03:12.660129+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.617181+00:00",
+      "sha256": "6273a737cb11749384698c5c38a3ac07e3f9242975264a5b5ef30e16af86c123",
+      "revisionId": null
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "retrievedAt": "2026-10-06T17:45:55.335171+00:00",
@@ -189,6 +197,14 @@
       "retrievedAt": "2026-10-06T12:34:24.678908+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:22.912134+00:00",
       "sha256": "8034f07629681557f05b69b3f31d3912f7ac546e14a84b5fc77174feecbf458a",
+      "revisionId": null
+    },
+    {
+      "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
+      "title": "国家铁路局 · 百年京张 世纪经典",
+      "retrievedAt": "2026-10-08T18:03:12.381878+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.617099+00:00",
+      "sha256": "048324480ad36936b40ff7bd60d1ceab66d957139e9ce32abf36d7cc999ad3b7",
       "revisionId": null
     },
     {
@@ -555,11 +571,43 @@
       "revisionId": null
     },
     {
+      "url": "https://www.dpm.org.cn/lemmas/240221.html",
+      "title": "故宫博物院 · 瘦金书",
+      "retrievedAt": "2026-10-08T18:04:53.145750+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.616788+00:00",
+      "sha256": "116f81a1f9f85cd0ef67016eb204e2f949a5d096ad01fd1f21bd9471074bed49",
+      "revisionId": null
+    },
+    {
       "url": "https://www.dpm.org.cn/lemmas/241546.html",
       "title": "故宫博物院 · 张旭",
       "retrievedAt": "2026-10-06T12:10:29.911871+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:23.009121+00:00",
       "sha256": "5e0561bb9ae0a44fc7dedeedb8aec868f576d85be795351564decea70c744029",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242338.html",
+      "title": "故宫博物院 · 郑燮",
+      "retrievedAt": "2026-10-08T18:03:12.626981+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.624020+00:00",
+      "sha256": "006bdcedf28d5995974c37578e6ddc998e67c372569453bb4d44bc2fd03d972b",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242652.html",
+      "title": "故宫博物院 · 唐寅",
+      "retrievedAt": "2026-10-08T18:03:09.025900+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.630488+00:00",
+      "sha256": "aa75f031c01cc0ed7daaf86da209956e449e64346e0d48e684ce6aa6a9c9cd54",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dpm.org.cn/lemmas/242658.html",
+      "title": "故宫博物院 · 文徵明",
+      "retrievedAt": "2026-10-08T18:03:09.276344+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.630557+00:00",
+      "sha256": "0236851625f7d7c339a5399db8f057e8ec877a551f1d3849fec60f8be89b4a28",
       "revisionId": null
     },
     {
@@ -576,6 +624,22 @@
       "retrievedAt": "2026-10-06T12:10:23.453943+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:23.017618+00:00",
       "sha256": "7d76c444304e732a54d98498da2079e1d7d8a9f0f77fd09d687819b720934ade",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
+      "title": "福州市人民政府 · 严复",
+      "retrievedAt": "2026-10-08T18:03:11.747620+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.636790+00:00",
+      "sha256": "469f65b254811bcc934b6abe4ae79f14c365e695547731efd1edac17ad447d98",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
+      "title": "容闳 · My Life in China and America，第十三至十五章",
+      "retrievedAt": "2026-10-08T17:25:10.424524+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.169526+00:00",
+      "sha256": "a6f6f2aab4f43c683025ffc580fb7cd0930449ec1122abf22e2fe48a8c7aa851",
       "revisionId": null
     },
     {
@@ -650,6 +714,14 @@
       "retrievedAt": "2026-10-06T15:43:32.281151+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:23.021779+00:00",
       "sha256": "e8062bf64cf472e61f6257bb0c222c1b793124ebe586c544fd2e3d8defaabee5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
+      "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
+      "retrievedAt": "2026-10-08T18:03:11.501891+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.637191+00:00",
+      "sha256": "fd96425fe1567a41d22a7dec86020f687f4daae0b0b9a8bb47af11192bc5d3d7",
       "revisionId": null
     },
     {
@@ -729,6 +801,14 @@
       "revisionId": 2386518
     },
     {
+      "url": "https://zh.wikisource.org/wiki/三國志/卷29",
+      "title": "《三国志》卷29 · 方技传华佗",
+      "retrievedAt": "2026-10-08T18:04:07.290262+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.649514+00:00",
+      "sha256": "499d2230784870c2112fc8a495bd0a5b17a0afef90ae278cd0bf9c8e58bc4ae9",
+      "revisionId": 10048966
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/三國志/卷32",
       "title": "《三國志》卷32",
       "retrievedAt": "2026-10-06T12:09:20.078866+00:00",
@@ -796,9 +876,40 @@
       "url": "https://zh.wikisource.org/wiki/九章算術",
       "title": "《九章算术》· 刘徽注序与正文",
       "retrievedAt": "2026-10-06T12:09:25.855947+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:30.121421+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.649478+00:00",
       "sha256": "cfbbab6e448dcbdb5d4487ddd1e4cbaf4a43e9450955fa5c28187190b71a27a8",
       "revisionId": 2245505
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/五代會要/卷八",
+      "title": "《五代会要》卷八 · 经籍",
+      "retrievedAt": "2026-10-08T17:27:38.880061+00:00",
+      "sha256": "a283cbb637b39696226404d4803f71788acb6cf9a45f294d3bb41a75fe225449",
+      "revisionId": 2265751
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/佛國記",
+      "title": "法显 ·《佛国记》",
+      "retrievedAt": "2026-10-08T17:58:43.273457+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.649839+00:00",
+      "sha256": "4b32f699f2208af16b6514b8030bc30c785b7ad5b381aed901643e8a924bfefe",
+      "revisionId": 1340427
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/備急千金要方/第一",
+      "title": "《备急千金要方》卷一 · 大医习业与大医精诚",
+      "retrievedAt": "2026-10-08T18:04:53.315955+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.668134+00:00",
+      "sha256": "173271698bcfa83639df6f6ea1c543b0ceacfd5623d5f2a62369f6052a66234c",
+      "revisionId": 2689759
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/傷寒雜病論序",
+      "title": "《伤寒杂病论序》及林亿等宋校《伤寒论》序",
+      "retrievedAt": "2026-10-08T18:04:07.995310+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.674344+00:00",
+      "sha256": "ba5daaa9e0c36a9e47223896fb158c5a85fec438d2b450e856e65ad2cbdd4e08",
+      "revisionId": 1788904
     },
     {
       "url": "https://zh.wikisource.org/wiki/元史",
@@ -1024,7 +1135,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷007",
       "title": "《史記》卷7",
       "retrievedAt": "2026-10-06T12:09:06.426144+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.940824+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.674408+00:00",
       "sha256": "0544ac71df4d7b2a429e2c5128c04d6b152fe272c1bf131cace3c1c4712c8074",
       "revisionId": 5978360
     },
@@ -1040,7 +1151,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷010",
       "title": "《史記》卷10",
       "retrievedAt": "2026-10-06T15:43:37.802759+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.949345+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.692604+00:00",
       "sha256": "e2112ddff3b90f4ba8ac99f8d8e1ba17660406b4bee3394332d760097fb67504",
       "revisionId": 2599229
     },
@@ -1174,6 +1285,22 @@
       "revisionId": 1490182
     },
     {
+      "url": "https://zh.wikisource.org/wiki/史記/卷055",
+      "title": "《史记》卷55 · 留侯世家",
+      "retrievedAt": "2026-10-08T18:04:05.660490+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.686754+00:00",
+      "sha256": "dd37b94582e3fdc8e4284460bf5bfa03352a5fa0528d69f8884fd2d25d2fb38c",
+      "revisionId": 2666612
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/史記/卷056",
+      "title": "《史记》卷56 · 陈丞相世家",
+      "retrievedAt": "2026-10-08T18:04:05.858195+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.698995+00:00",
+      "sha256": "539f984a5f548dfc91bf09c1eec63288e9e264dc319990e95c59b8e1d3dd8db3",
+      "revisionId": 1961615
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/史記/卷062",
       "title": "《史记》· 管晏列传",
       "retrievedAt": "2026-10-06T17:35:50.476840+00:00",
@@ -1181,10 +1308,18 @@
       "revisionId": 7903600
     },
     {
+      "url": "https://zh.wikisource.org/wiki/史記/卷063",
+      "title": "《史记》卷63 · 老子韩非列传",
+      "retrievedAt": "2026-10-08T18:04:04.494654+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.705182+00:00",
+      "sha256": "a58f709e327563170b605bbb1f1d25a43c442e34ead6b3028e6e1a224e9f3b2b",
+      "revisionId": 7903601
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/史記/卷065",
       "title": "《史記》卷65",
       "retrievedAt": "2026-10-06T12:09:02.659081+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.679196+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.711185+00:00",
       "sha256": "4219db3d28dbbd14484c6ddd719ad55c911c64790f53420ce096416fc655b149",
       "revisionId": 2567048
     },
@@ -1208,7 +1343,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷074",
       "title": "《史記》卷74",
       "retrievedAt": "2026-10-06T12:10:30.947903+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.692882+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.711636+00:00",
       "sha256": "3a502479ff80c71117dd460ac0ff30155fcad6b01aa49f32473851a4e64ea7cd",
       "revisionId": 7908177
     },
@@ -1240,7 +1375,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷084",
       "title": "《史記》卷84",
       "retrievedAt": "2026-10-06T12:34:31.355756+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.710961+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.717526+00:00",
       "sha256": "331ef9b23e2023f6645ce5b066b915fd1702709b1f80ce809bd7c0daea41430c",
       "revisionId": 1568305
     },
@@ -1272,7 +1407,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷088",
       "title": "《史記》卷88",
       "retrievedAt": "2026-10-06T15:43:39.938230+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.727919+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.724062+00:00",
       "sha256": "c50afeb2626a75261eaf7ebb90ab097468c3b72d557c54318ff68bf27ced961d",
       "revisionId": 1965690
     },
@@ -1365,6 +1500,14 @@
       "revisionId": 2589015
     },
     {
+      "url": "https://zh.wikisource.org/wiki/墨子/公輸",
+      "title": "《墨子》· 公输",
+      "retrievedAt": "2026-10-08T17:25:07.999878+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.162875+00:00",
+      "sha256": "a4d1e53972995e7c738a28d6a09bac3d005bd8b37b83e722d1a6e6aa7aafec64",
+      "revisionId": 2637063
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/夢溪筆談",
       "title": "《夢溪筆談》",
       "retrievedAt": "2026-10-06T12:20:04.686379+00:00",
@@ -1402,6 +1545,46 @@
       "lastCacheCheckAt": "2026-10-06T16:20:36.134288+00:00",
       "sha256": "f410758d656548a837656ffdb0a3badde4e0881350d3ab2938547a6aef75aa8c",
       "revisionId": 2177026
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天工開物/乃粒第一",
+      "title": "《天工开物》· 乃粒第一",
+      "retrievedAt": "2026-10-08T18:03:08.016982+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.730318+00:00",
+      "sha256": "8b874776c10bc86b329aecd25f127f62e68fa3798aadb850c73b99ec95e35f05",
+      "revisionId": 7904386
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天工開物/自序",
+      "title": "《天工开物》· 自序",
+      "retrievedAt": "2026-10-08T18:03:08.427648+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.742094+00:00",
+      "sha256": "86639a499d3ccd618001fdc7d1cc0c52f5e56ef078cd887e9c73b0bf393df187",
+      "revisionId": 2174121
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天工開物/造竹紙",
+      "title": "《天工开物》· 造竹纸",
+      "retrievedAt": "2026-10-08T18:03:08.758454+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.748676+00:00",
+      "sha256": "4f8ab6e0df6ec6cd4625237a86be1cd1e4e1c6dfd8b275a8c76d16a233c22b78",
+      "revisionId": 459986
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天演論/譯例言",
+      "title": "《天演论》· 译例言",
+      "retrievedAt": "2026-10-08T18:03:12.721793+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.748611+00:00",
+      "sha256": "fe5e348484f09a941576973e2d7ea86d38e4bc72ef04c0bb95bb1922a3556728",
+      "revisionId": 106489
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/孫子兵法",
+      "title": "《孙子兵法》· 始计、作战、谋攻",
+      "retrievedAt": "2026-10-08T18:04:05.702773+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.754613+00:00",
+      "sha256": "39e3d934010b7871cd2551b069bda9a5db212518b677972aa64a5082dc56ea76",
+      "revisionId": 7906064
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史",
@@ -1452,10 +1635,18 @@
       "revisionId": 2285025
     },
     {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷019",
+      "title": "《宋史》卷19 · 徽宗一",
+      "retrievedAt": "2026-10-08T17:58:44.098539+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.772714+00:00",
+      "sha256": "71b4057f521c9ccaec96c4cb10d3b9d4be3b5f8f6e156641bb064334c8844321",
+      "revisionId": 2521137
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/宋史/卷022",
       "title": "《宋史》卷22",
       "retrievedAt": "2026-10-06T15:43:41.206628+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.172847+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.766958+00:00",
       "sha256": "f002a85d8bc8e733f3215f9c27db21328aa098dd63f1f43a52d61db5dd28fbd1",
       "revisionId": 2315056
     },
@@ -1591,7 +1782,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷395",
       "title": "《宋史》卷395",
       "retrievedAt": "2026-10-06T12:20:06.405485+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.247633+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.772683+00:00",
       "sha256": "c361f5444a587342738c8b118f9c9edc2d205e51a49876c7777c7620da7b37b7",
       "revisionId": 1478042
     },
@@ -1602,6 +1793,14 @@
       "lastCacheCheckAt": "2026-10-06T16:20:36.251843+00:00",
       "sha256": "c9d7f4af8d26a75c799dbc11622d6718a03fe9e01542d226bad4fb937f59b0ac",
       "revisionId": 2293949
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷418",
+      "title": "《宋史》卷418 · 文天祥",
+      "retrievedAt": "2026-10-08T17:58:45.855980+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.785142+00:00",
+      "sha256": "5f87bda72d9dc65c64b67fd860af3bfe711095d5562e0152f78ac5600d4a7270",
+      "revisionId": 2606176
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史/卷429",
@@ -1676,6 +1875,14 @@
       "revisionId": 2457360
     },
     {
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷40上",
+      "title": "《后汉书》卷40上 · 班彪班固列传",
+      "retrievedAt": "2026-10-08T18:04:06.121515+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.790540+00:00",
+      "sha256": "4f70eaa901377ed5e382e3b62b0398750cb9d5b11244eaa34f9700898edab670",
+      "revisionId": 1761071
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/後漢書/卷47",
       "title": "《後漢書》卷47",
       "retrievedAt": "2026-10-06T12:09:10.985982+00:00",
@@ -1687,7 +1894,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷59",
       "title": "《後漢書》卷59",
       "retrievedAt": "2026-10-06T12:19:37.177181+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.299113+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.790873+00:00",
       "sha256": "2a60676862963cc1327340333d1cbe14fd56a21f463833a4a7e03f7225e2a7a6",
       "revisionId": 7904834
     },
@@ -1731,6 +1938,14 @@
       "revisionId": 2008116
     },
     {
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
+      "title": "《后汉书》卷84 · 列女传班昭",
+      "retrievedAt": "2026-10-08T18:04:07.125874+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.809317+00:00",
+      "sha256": "b047c20728bf589304d66dc182d23917eb071718452ffc8c210c9c77365d5294",
+      "revisionId": 2621158
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/後漢書/卷88",
       "title": "《後漢書》卷88",
       "retrievedAt": "2026-10-06T12:19:36.915159+00:00",
@@ -1771,6 +1986,14 @@
       "revisionId": 2017600
     },
     {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷196",
+      "title": "《新唐书》卷196 · 陆羽",
+      "retrievedAt": "2026-10-08T17:58:43.235351+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.809687+00:00",
+      "sha256": "9b3c20c0bb74eea231796b1f974f3e75fc33c8228875bc7ff31851e28fca06b8",
+      "revisionId": 2605994
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
       "title": "《新唐書》卷202",
       "retrievedAt": "2026-10-06T12:19:51.262768+00:00",
@@ -1794,12 +2017,28 @@
       "revisionId": 2594614
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明史/卷10",
+      "title": "《明史》卷10 · 英宗前纪",
+      "retrievedAt": "2026-10-08T18:03:07.240145+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.809606+00:00",
+      "sha256": "b1569d32736612eee5aafcc5492e31b9ceea025bef4d9cea9770f350a7fd2a54",
+      "revisionId": 2594623
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/明史/卷12",
       "title": "《明史》卷12",
       "retrievedAt": "2026-10-06T15:43:46.586527+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:39.113747+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.829076+00:00",
       "sha256": "9d6f13ef8cdc866ff516c338f04721dfc4c516f0a6646ed21dc65844c851961b",
       "revisionId": 2594665
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷125",
+      "title": "《明史》卷125 · 徐达传",
+      "retrievedAt": "2026-10-08T18:03:08.016789+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.829036+00:00",
+      "sha256": "93e4681afc13ab630ebd54630b4cf77ef22513eb484e7a21043e2bd64bd5386a",
+      "revisionId": 2602117
     },
     {
       "url": "https://zh.wikisource.org/wiki/明史/卷132",
@@ -1850,6 +2089,22 @@
       "revisionId": 2602514
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明史/卷226",
+      "title": "《明史》卷226 · 海瑞传",
+      "retrievedAt": "2026-10-08T18:03:07.265312+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.829177+00:00",
+      "sha256": "61a02d2d59e2c524641b0262319fc6e273bf46b6935ab5e15bc920fbb477c079",
+      "revisionId": 11119346
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷230",
+      "title": "《明史》卷230 · 汤显祖传",
+      "retrievedAt": "2026-10-08T18:03:09.382076+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.846908+00:00",
+      "sha256": "c4ded3bec71b1ffdafd5fd1d8d72841f38135ddd5c7660deb0e8998fcdd35924",
+      "revisionId": 2594858
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/明史/卷24",
       "title": "《明史》卷24",
       "retrievedAt": "2026-10-06T12:20:15.483715+00:00",
@@ -1877,7 +2132,7 @@
       "url": "https://zh.wikisource.org/wiki/明史/卷274",
       "title": "《明史》卷274",
       "retrievedAt": "2026-10-06T15:43:50.183728+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:39.167728+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.841486+00:00",
       "sha256": "21334f8f2dffcec6b7061c076d84d6ba5970704de23cb9aef2c2b778096cac06",
       "revisionId": 11119349
     },
@@ -1938,6 +2193,14 @@
       "revisionId": 2626206
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明夷待訪錄",
+      "title": "《明夷待访录》· 原君、原臣、学校",
+      "retrievedAt": "2026-10-08T18:03:10.246316+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.847282+00:00",
+      "sha256": "ca28a61b35b7b83beebfe127bd19d5ad6e7481a44458c221626a00958faeee61",
+      "revisionId": 2583858
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/晉書",
       "title": "《晉書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:19.298693+00:00",
@@ -1994,7 +2257,7 @@
       "url": "https://zh.wikisource.org/wiki/晉書/卷082",
       "title": "《晉書》卷82",
       "retrievedAt": "2026-10-06T12:19:39.212222+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:42.532224+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.859795+00:00",
       "sha256": "45e3536fe34163c51d000f79bba3238617e273234523b89375d4174ebe3be741",
       "revisionId": 1777407
     },
@@ -2076,6 +2339,30 @@
       "lastCacheCheckAt": "2026-10-06T16:20:44.197162+00:00",
       "sha256": "0769a40f507a5c48264e9f46ab943154849269d659f17491982d09dff8e4a4fc",
       "revisionId": 424048
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/水經注/原序",
+      "title": "郦道元 ·《水经注》原序",
+      "retrievedAt": "2026-10-08T18:04:52.951876+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.865873+00:00",
+      "sha256": "179c7fa4688131a4ef02ec954311f1b4a14f9794e59796f0b37df3b0ed58667b",
+      "revisionId": 2551251
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/洗冤集錄",
+      "title": "宋慈 ·《洗冤集录》序与目录",
+      "retrievedAt": "2026-10-08T17:58:45.230027+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.872127+00:00",
+      "sha256": "bf921d20179b65cbd7ed4851d614c7b0e670cedc82c754560e58ba39b0ab5685",
+      "revisionId": 1514889
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/海國圖志/原敘",
+      "title": "《海国图志》· 原叙",
+      "retrievedAt": "2026-10-08T18:03:11.956471+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.884335+00:00",
+      "sha256": "a0ba734714533ba2e3d62230eebc40a1fe91bbb00ec126618a25af6bb61bb576",
+      "revisionId": 2662426
     },
     {
       "url": "https://zh.wikisource.org/wiki/清史稿",
@@ -2320,6 +2607,22 @@
       "revisionId": 2433539
     },
     {
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷480",
+      "title": "《清史稿》卷480 · 黄宗羲、王夫之传",
+      "retrievedAt": "2026-10-08T18:03:10.756576+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.884457+00:00",
+      "sha256": "e44e861244f0817c842cb9ef623a181e679fcdd921afaaa5cc3e8003461071f4",
+      "revisionId": 1489329
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷481",
+      "title": "《清史稿》卷481 · 顾炎武传",
+      "retrievedAt": "2026-10-08T18:03:11.121943+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.896377+00:00",
+      "sha256": "e357d081a6afbcdf5f1519a838ea12b5788bdf1ce3edbdce9532d385fd8da8e8",
+      "revisionId": 2630072
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/清史稿/卷7",
       "title": "《清史稿》卷7",
       "retrievedAt": "2026-10-06T15:44:10.410018+00:00",
@@ -2363,9 +2666,17 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷054",
       "title": "《漢書》卷54",
       "retrievedAt": "2026-10-06T12:19:36.000320+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:56.128637+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.902569+00:00",
       "sha256": "770669f9fce9d3f0f0646a2608ff137a76f55267fd0560499818b0a98c5bf025",
       "revisionId": 7531358
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/漢書/卷056",
+      "title": "《汉书》卷56 · 董仲舒传",
+      "retrievedAt": "2026-10-08T18:04:06.894246+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.909214+00:00",
+      "sha256": "505fb8ffaca63690baa3cf83daabe167a1e55b082eb2ce75b7229a60fb4fc127",
+      "revisionId": 7913694
     },
     {
       "url": "https://zh.wikisource.org/wiki/漢書/卷062",
@@ -2423,12 +2734,52 @@
       "revisionId": 9458234
     },
     {
+      "url": "https://zh.wikisource.org/wiki/牡丹亭題詞",
+      "title": "《牡丹亭题词》· 汤显祖",
+      "retrievedAt": "2026-10-08T18:03:09.580184+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.915170+00:00",
+      "sha256": "4c4e387ed29fc91041b55bfdffe5035a410c5b8ac9a680b6fe3ce6cf845325d5",
+      "revisionId": 843881
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/王禎農書",
       "title": "《王禎農書》",
       "retrievedAt": "2026-10-06T12:23:19.134466+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:58.385506+00:00",
       "sha256": "3b6e564bf8fdd039e13ca22812ea61d028f0ba1dfd311f0fc2d9503a84855345",
       "revisionId": 463219
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/筆法記",
+      "title": "《笔法记》· 传为荆浩所撰",
+      "retrievedAt": "2026-10-08T17:25:08.748762+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.168300+00:00",
+      "sha256": "fc099b6f294d57c98a8d67b28d71c67f9193cecb2f1c71ca379c313c6a0ca65c",
+      "revisionId": 1389055
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/老子_(匯校版)",
+      "title": "《老子》汇校版 · 第二十五、三十七、七十八章",
+      "retrievedAt": "2026-10-08T18:04:04.209172+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.915540+00:00",
+      "sha256": "687719e572d9815bbaad55405b752f11c32191ffc92254650b2381d577dad4cb",
+      "revisionId": 2604924
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者小傳",
+      "title": "《聊斋志异》· 作者小传",
+      "retrievedAt": "2026-10-08T18:03:11.026517+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.928813+00:00",
+      "sha256": "5987f9ed1d3b00092341a92ef9f2a374b36e544bcd3a428867c5ffd3fb315d89",
+      "revisionId": 2346916
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者自志",
+      "title": "《聊斋志异》· 作者自志",
+      "retrievedAt": "2026-10-08T18:03:11.899549+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.928778+00:00",
+      "sha256": "c12051188869e4fa36b76038664d9b550340239f10396f4b47b0e0d1c0d5d873",
+      "revisionId": 2346917
     },
     {
       "url": "https://zh.wikisource.org/wiki/臨時大總統宣言書",
@@ -2471,6 +2822,14 @@
       "revisionId": 1472342
     },
     {
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷116",
+      "title": "《旧五代史》卷116 · 显德三年淮南战事",
+      "retrievedAt": "2026-10-08T17:25:08.069861+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.156715+00:00",
+      "sha256": "86d74ce555f2c4342508ee856d9a86e502b7a2dcabf13e7a2e037f71e581010b",
+      "revisionId": 2606002
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/舊五代史/卷119",
       "title": "《舊五代史》卷119",
       "retrievedAt": "2026-10-06T15:44:15.979794+00:00",
@@ -2479,12 +2838,12 @@
       "revisionId": 515457
     },
     {
-      "url": "https://zh.wikisource.org/wiki/舊五代史/卷143",
-      "title": "《舊五代史》卷143",
-      "retrievedAt": "2026-10-06T15:44:17.223051+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.430090+00:00",
-      "sha256": "c4bd49f9b4b662668e3386fa31628db94e8a5f8b682ac7d149c528bbe697b989",
-      "revisionId": 2692169
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷126",
+      "title": "《旧五代史》卷126 · 冯道传",
+      "retrievedAt": "2026-10-08T17:25:07.573570+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.156608+00:00",
+      "sha256": "30099e8fefe7213b9d641fdc4b38b10d2ca314a36e0c61b64381fea6c0d16a57",
+      "revisionId": 2549907
     },
     {
       "url": "https://zh.wikisource.org/wiki/舊五代史/卷35",
@@ -2493,6 +2852,14 @@
       "lastCacheCheckAt": "2026-10-06T16:20:58.435847+00:00",
       "sha256": "42cdb82ec691d3ae91246141b54cbedd4c474a35e21073db5c8a7557d42460e8",
       "revisionId": 2602014
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊五代史/卷43",
+      "title": "《旧五代史》卷43 · 长兴三年刻印九经奏请",
+      "retrievedAt": "2026-10-08T17:25:08.351588+00:00",
+      "lastCacheCheckAt": "2026-10-08T17:27:38.156375+00:00",
+      "sha256": "4be550442220365a8078f4700f8c33869ae235153f40d5036bd3b75fee4fa0f7",
+      "revisionId": 1378102
     },
     {
       "url": "https://zh.wikisource.org/wiki/舊唐書",
@@ -2519,6 +2886,22 @@
       "revisionId": 2394697
     },
     {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷120",
+      "title": "《旧唐书》卷120 · 郭子仪",
+      "retrievedAt": "2026-10-08T17:58:41.810808+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.928849+00:00",
+      "sha256": "7a67ad9f14b5909728d65a17099d1c4608ce2ce2d7de49b5f717b6819b6222b9",
+      "revisionId": 2579218
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷128",
+      "title": "《旧唐书》卷128 · 颜真卿",
+      "retrievedAt": "2026-10-08T17:58:42.361998+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.941603+00:00",
+      "sha256": "518bfc65e24dd8639c529500ecc267d7579dd39ef1967154eb6839e164efa8b0",
+      "revisionId": 2511028
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷135",
       "title": "《舊唐書》卷135",
       "retrievedAt": "2026-10-06T12:19:52.519238+00:00",
@@ -2538,7 +2921,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷160",
       "title": "《舊唐書》卷160",
       "retrievedAt": "2026-10-06T12:19:53.042945+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.466460+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.941535+00:00",
       "sha256": "7cbf688f9324d11625e78bf5e80a43ea44d7aa755e86d406be8d59a29cc5689c",
       "revisionId": 2689841
     },
@@ -2546,7 +2929,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷166",
       "title": "《舊唐書》卷166",
       "retrievedAt": "2026-10-06T12:19:53.528654+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.471152+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.947690+00:00",
       "sha256": "7b0fe940737d17b0148679160110bbe5903644853bab9f66a789117e56135ea9",
       "revisionId": 2588799
     },
@@ -2562,9 +2945,17 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷190下",
       "title": "《舊唐書》卷190下",
       "retrievedAt": "2026-10-06T12:09:45.847459+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.480307+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.954441+00:00",
       "sha256": "450896ee644555277a7e30be8240a93a001357ff7f658169370331505be9c776",
       "revisionId": 2636533
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷191",
+      "title": "《旧唐书》卷191 · 孙思邈",
+      "retrievedAt": "2026-10-08T17:58:42.828671+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.960988+00:00",
+      "sha256": "cd08d11489f5b537616e09899288d4c60001a20bde91dfd330c2758de569976e",
+      "revisionId": 2056132
     },
     {
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷196上",
@@ -2652,6 +3043,14 @@
       "revisionId": 2594161
     },
     {
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷71",
+      "title": "《旧唐书》卷71 · 魏征",
+      "retrievedAt": "2026-10-08T17:58:42.267799+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.973246+00:00",
+      "sha256": "138658cd7b93f386acefb8a88ae5e3548efbdc3bfc124f4d99ed951c19ca9ae5",
+      "revisionId": 2020238
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷8",
       "title": "《舊唐書》卷8",
       "retrievedAt": "2026-10-06T12:19:50.444634+00:00",
@@ -2666,6 +3065,46 @@
       "lastCacheCheckAt": "2026-10-06T16:21:03.188858+00:00",
       "sha256": "8f6ee74ca40fea0c70c63b5d279eb24d53fbaa36447356eb77cc629a96c3a8c7",
       "revisionId": 2632780
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經",
+      "title": "《茶经》· 目录与原文入口",
+      "retrievedAt": "2026-10-08T17:58:43.318635+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.973588+00:00",
+      "sha256": "d26e9c81acfa3f30eee7f0b8d7d9ebd2f05dfb72214032d8ff98ff6972a9b33c",
+      "revisionId": 2264059
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/茶經/卷上",
+      "title": "《茶经》卷上 · 一之源、二之具、三之造",
+      "retrievedAt": "2026-10-08T18:04:52.886436+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.986214+00:00",
+      "sha256": "eaf0118ba5f666bdebf605081b7b469ffc90d121e4caebdcd5d7f0b90d1c3c11",
+      "revisionId": 807635
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/荀子/勸學篇",
+      "title": "《荀子》· 劝学篇",
+      "retrievedAt": "2026-10-08T18:04:05.282545+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.992758+00:00",
+      "sha256": "7131a37aded681247c7e01a4ea458cb39e4ac4514d02024380a418b665450d8c",
+      "revisionId": 9869421
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/荀子/性惡篇",
+      "title": "《荀子》· 性恶篇",
+      "retrievedAt": "2026-10-08T18:04:05.391212+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.992794+00:00",
+      "sha256": "db3463693de628580aad88f78d57e74495b662d94a7c4df66e12b54e80625f9d",
+      "revisionId": 382195
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/莊子/逍遙遊",
+      "title": "《庄子》· 逍遥游",
+      "retrievedAt": "2026-10-08T18:04:04.104582+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:49.999441+00:00",
+      "sha256": "ea10626c5b1709aa4dd706158dd168f2e53313f41e2cf55fd391e502291834eb",
+      "revisionId": 11122546
     },
     {
       "url": "https://zh.wikisource.org/wiki/蘭亭集序",
@@ -2698,6 +3137,14 @@
       "lastCacheCheckAt": "2026-10-06T16:21:03.211055+00:00",
       "sha256": "f0fb4b7f803a72b1753d17fb321a561736b438f8f81cd6650841f2e600d0f6af",
       "revisionId": 2325084
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/金匱要略方論_(四部叢刊本)/序",
+      "title": "《金匮要略方论》四部丛刊本 · 序",
+      "retrievedAt": "2026-10-08T18:04:08.035679+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:50.011759+00:00",
+      "sha256": "13cf7d98c1e5f343142b6109bcad074eedd857db2d87d1e9aa01d56e61e07a5b",
+      "revisionId": 2675184
     },
     {
       "url": "https://zh.wikisource.org/wiki/金史",
@@ -2796,6 +3243,14 @@
       "revisionId": 1744319
     },
     {
+      "url": "https://zh.wikisource.org/wiki/韓非子/五蠹",
+      "title": "《韩非子》· 五蠹",
+      "retrievedAt": "2026-10-08T18:04:05.241645+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:50.011803+00:00",
+      "sha256": "a63f693dee2d522cf1a2126e13e117442518e98d9217d117a247108fd51942e9",
+      "revisionId": 2642850
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/魏書",
       "title": "《魏書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:09:26.922825+00:00",
@@ -2827,12 +3282,28 @@
       "revisionId": 2460667
     },
     {
+      "url": "https://zh.wikisource.org/wiki/魏書/卷89",
+      "title": "《魏书》卷89 · 郦道元",
+      "retrievedAt": "2026-10-08T17:58:44.474416+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:50.012062+00:00",
+      "sha256": "18ea63bcbc86c81bdb69fe41bc5924d903c08a40925a37c1684b20c9a6b40f7a",
+      "revisionId": 2294162
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/魏書/卷9",
       "title": "《魏書》卷9",
       "retrievedAt": "2026-10-06T15:44:25.476202+00:00",
       "lastCacheCheckAt": "2026-10-06T16:21:05.384436+00:00",
       "sha256": "cdb1de5683962b69153a171f2a2fabe72d4ebc5132c6a17ab2dd5d489a74b4df",
       "revisionId": 2322629
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/齊民要術/自序",
+      "title": "贾思勰 ·《齐民要术》自序",
+      "retrievedAt": "2026-10-08T17:58:44.346724+00:00",
+      "lastCacheCheckAt": "2026-10-08T18:12:50.025940+00:00",
+      "sha256": "2a43dc45959ba37a97d1bc630a8d807f4d49b8d238c3ac204afbf2cd4752707c",
+      "revisionId": 364607
     }
   ],
   "identitySnapshot": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T14:26:47.974Z",
+  "generatedAt": "2026-10-08T18:16:24.753Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -7,12 +7,12 @@
   "people": {
     "total": 673,
     "importedSnapshot": 591,
-    "curatedIntroductions": 229,
-    "basicRecords": 444,
+    "curatedIntroductions": 280,
+    "basicRecords": 393,
     "unknownBirth": 191,
     "unknownDeath": 138,
-    "noLinkedEvents": 371,
-    "oneLinkedEvent": 187,
+    "noLinkedEvents": 357,
+    "oneLinkedEvent": 195,
     "outsideMapRange": 0
   },
   "events": {
@@ -258,8 +258,8 @@
     }
   ],
   "sourceRetention": {
-    "references": 356,
-    "retained": 347,
+    "references": 415,
+    "retained": 406,
     "unavailable": 0,
     "failed": 9,
     "detailedAudit": "data/research/content-audit.json"

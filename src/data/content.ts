@@ -13,6 +13,7 @@ import { createDepthEvents } from './depth-events'
 import { enrichEventReading } from './event-reading'
 import { enrichPersonReading } from './person-reading'
 import { enrichDepthPeople } from './depth-people'
+import { expandPersonContent, linkExpandedPersonEvents } from './person-expansion'
 
 const book = (name: string, volume: string): Source => ({
   title: `《${name}》${volume ? `卷${Number(volume)}` : ''}`,
@@ -2085,27 +2086,34 @@ for (const record of importedPeople) {
     })
   } else mergedPeople.set(imported.id, imported)
 }
-export const people: Person[] = enrichPersonReading(
-  enrichDepthPeople(
-    enrichReviewedPeople(
-      enrichAdditionalPeople(
-        [...mergedPeople.values()].map((person) => ({ ...person, ...personEnrichment[person.id] })),
+export const people: Person[] = expandPersonContent(
+  enrichPersonReading(
+    enrichDepthPeople(
+      enrichReviewedPeople(
+        enrichAdditionalPeople(
+          [...mergedPeople.values()].map((person) => ({
+            ...person,
+            ...personEnrichment[person.id],
+          })),
+        ),
       ),
     ),
   ),
 ).map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
 
-export const events: HistoryEvent[] = enrichEventReading(
-  reviewEventRelations(
-    [
-      ...coreEvents,
-      ...earlyEvents,
-      ...civilizationEvents,
-      ...createExpandedEvents(people),
-      ...createReviewedEvents(people),
-      ...createDepthEvents(people),
-    ],
-    people,
+export const events: HistoryEvent[] = linkExpandedPersonEvents(
+  enrichEventReading(
+    reviewEventRelations(
+      [
+        ...coreEvents,
+        ...earlyEvents,
+        ...civilizationEvents,
+        ...createExpandedEvents(people),
+        ...createReviewedEvents(people),
+        ...createDepthEvents(people),
+      ],
+      people,
+    ),
   ),
 )
   .map((event) => ({ ...event, sources: canonicalSources(event.sources) }))

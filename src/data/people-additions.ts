@@ -438,13 +438,19 @@ const reviewedDescriptions: Record<string, Partial<Person>> = {
     birth: null,
     death: null,
     role: '唐末五代山水画家',
+    summary: '唐末五代山水画家，传统题为其所撰的《笔法记》讨论观察、笔墨与山水表现。',
     biography:
-      '荆浩是唐末五代山水画的重要人物，传统画论《笔法记》与其相联系。书中讨论笔墨、观察和山水表现，有助于理解这一时期绘画观念的变化。生卒纪年及传世作品归属仍需分别考证。',
+      '荆浩是唐末五代山水画的重要人物。传统题为其所撰的《笔法记》用画者与老者的问答讨论绘画，提出气、韵、思、景、笔、墨六要，把观察、构思、用笔与用墨联系起来。书中区分只得外形的“似”和兼有气质的“真”，并讨论松柏形态、山川层次与云烟变化。\n\n开篇以太行洪谷一带的耕居、观松与写生为场景，但“明年春”等相对时间不能落实为可独立核对的绝对纪年。荆浩生卒、《笔法记》的作者归属与传世作品归属仍需分别考证，本版不增加定年事件，也不把文本场景当作经过核对的个人行迹。',
     recordKind: 'curated',
     sources: [
       {
         title: '山东艺术学院 · 荆浩与《笔法记》',
         url: 'https://ysglxy.sdca.edu.cn/info/1049/1316.htm',
+      },
+      {
+        title: '《笔法记》· 传为荆浩所撰',
+        url: 'https://zh.wikisource.org/wiki/筆法記',
+        note: '画论原文参考；叙事中的相对时间与洪谷场景不作为定年或个人路线证据。',
       },
     ],
   },
@@ -504,7 +510,7 @@ export function enrichAdditionalPeople(people: Person[]): Person[] {
       ? {
           ...person,
           ...reviewed,
-          summary: reviewed.biography ?? person.summary,
+          summary: reviewed.summary ?? reviewed.biography ?? person.summary,
           sources: [...(reviewed.sources ?? []), ...person.sources],
         }
       : person

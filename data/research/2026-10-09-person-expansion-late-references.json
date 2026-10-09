@@ -1,0 +1,269 @@
+{
+  "purpose": "Source retention for sixteen late-imperial person profiles and reuse of existing documented events. No new dates, travel nodes, events or map geometry are inferred. Web search/open attempts, including failures, retain actual UTC timestamps in ignored research searches.",
+  "sources": [
+    {
+      "title": "《明史》卷10 · 英宗前纪",
+      "url": "https://zh.wikisource.org/wiki/明史/卷10",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9983"
+        },
+        {
+          "kind": "event",
+          "id": "tumu"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷12 · 英宗后纪",
+      "url": "https://zh.wikisource.org/wiki/明史/卷12",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q9983"
+        },
+        {
+          "kind": "event",
+          "id": "duomen-coup"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷125 · 徐达传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷125",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1355886"
+        },
+        {
+          "kind": "event",
+          "id": "ming-founded"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷226 · 海瑞传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷226",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q934891"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷274 · 史可法传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷274",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q3274611"
+        },
+        {
+          "kind": "event",
+          "id": "yangzhou-1645"
+        }
+      ]
+    },
+    {
+      "title": "《天工开物》· 自序",
+      "url": "https://zh.wikisource.org/wiki/天工開物/自序",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        },
+        {
+          "kind": "event",
+          "id": "tiangong-kaiwu"
+        }
+      ]
+    },
+    {
+      "title": "《天工开物》· 乃粒第一",
+      "url": "https://zh.wikisource.org/wiki/天工開物/乃粒第一",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "title": "《天工开物》· 造竹纸",
+      "url": "https://zh.wikisource.org/wiki/天工開物/造竹紙",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q716217"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷230 · 汤显祖传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷230",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
+      "title": "《牡丹亭题词》· 汤显祖",
+      "url": "https://zh.wikisource.org/wiki/牡丹亭題詞",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q945333"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 唐寅",
+      "url": "https://www.dpm.org.cn/lemmas/242652.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q2248916"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 文徵明",
+      "url": "https://www.dpm.org.cn/lemmas/242658.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q306673"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷480 · 黄宗羲、王夫之传",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷480",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
+        },
+        {
+          "kind": "person",
+          "id": "q714374"
+        }
+      ]
+    },
+    {
+      "title": "《明夷待访录》· 原君、原臣、学校",
+      "url": "https://zh.wikisource.org/wiki/明夷待訪錄",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q31754"
+        }
+      ]
+    },
+    {
+      "title": "《清史稿》卷481 · 顾炎武传",
+      "url": "https://zh.wikisource.org/wiki/清史稿/卷481",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1195906"
+        }
+      ]
+    },
+    {
+      "title": "《聊斋志异》· 作者小传",
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者小傳",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
+        }
+      ]
+    },
+    {
+      "title": "《聊斋志异》· 作者自志",
+      "url": "https://zh.wikisource.org/wiki/聊齋志異/作者自志",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q318406"
+        }
+      ]
+    },
+    {
+      "title": "《海国图志》· 原叙",
+      "url": "https://zh.wikisource.org/wiki/海國圖志/原敘",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
+        }
+      ]
+    },
+    {
+      "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
+      "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q597003"
+        }
+      ]
+    },
+    {
+      "title": "福州市人民政府 · 严复",
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "title": "《天演论》· 译例言",
+      "url": "https://zh.wikisource.org/wiki/天演論/譯例言",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q559957"
+        }
+      ]
+    },
+    {
+      "title": "国家铁路局 · 百年京张 世纪经典",
+      "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "吉林铁路博物馆 · 第一条国有铁路干线",
+      "url": "https://museum.jty.edu.cn/Home/Content/20227",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "故宫博物院 · 郑燮",
+      "url": "https://www.dpm.org.cn/lemmas/242338.html",
+      "references": [
+        {
+          "kind": "person",
+          "id": "q712007"
+        }
+      ]
+    }
+  ]
+}

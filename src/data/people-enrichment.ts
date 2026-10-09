@@ -55,9 +55,17 @@ export const personEnrichment: Record<string, Partial<Person>> = {
   mozi: {
     role: '春秋战国之际思想家',
     recordKind: 'curated',
+    summary: '墨家代表人物，讨论兼爱、非攻与社会治理；个人生卒和行迹纪年仍有限。',
     biography:
       '墨子名翟，墨家学派的代表人物。墨家讨论兼爱、非攻、尚贤、节用，也重视守城技术和知识论。有关墨子个人的可靠行迹和生卒纪年较少，不以后世故事补成精确路线。',
-    sources: [text('史記', '074')],
+    sources: [
+      text('史記', '074'),
+      {
+        title: '《墨子》· 公输',
+        url: 'https://zh.wikisource.org/wiki/墨子/公輸',
+        note: '用于阅读止楚攻宋与模拟攻守的叙事；篇中没有可独立核定的绝对纪年。',
+      },
+    ],
   },
   wangxizhi: {
     courtesy: '逸少',
