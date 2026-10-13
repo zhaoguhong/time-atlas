@@ -1,9 +1,12 @@
 import { useEffect, useRef, type RefObject } from 'react'
-import { ChevronUp } from 'lucide-react'
+import { BookOpen, ChevronUp, Maximize2, Minimize2, PanelRightClose } from 'lucide-react'
 
 type View = 'map' | 'split' | 'reading'
 const views: View[] = ['map', 'split', 'reading']
 const mobileQuery = '(max-width: 700px), (max-width: 1000px) and (max-height: 540px)'
+// The width floor keeps a portrait phone's keyboard from switching to side-by-side panes.
+const landscapeQuery =
+  '(min-width: 560px) and (max-width: 1000px) and (max-height: 540px) and (orientation: landscape)'
 
 /** Shares the existing reading state/history; only an active drag has a pixel height. */
 export default function MobileSheetHandle({
@@ -25,6 +28,7 @@ export default function MobileSheetHandle({
     const sheet = handle.closest<HTMLElement>('.story-panel')!
     const app = handle.closest<HTMLElement>('.atlas-app')!
     const media = matchMedia(mobileQuery)
+    const landscape = matchMedia(landscapeQuery)
     let gesture: {
       x: number
       y: number
@@ -43,7 +47,7 @@ export default function MobileSheetHandle({
       gesture = null
     }
     const start = (x: number, y: number, fromContent: boolean) => {
-      if (!media.matches) return
+      if (!media.matches || landscape.matches) return
       suppressClick.current = false
       const maximum =
         app.querySelector('.timeline')!.getBoundingClientRect().top -
@@ -89,11 +93,7 @@ export default function MobileSheetHandle({
       if (!gesture) return
       const { dy, claimed, height, maximum } = gesture
       if (claimed && !cancelled) {
-        const splitHeight = matchMedia(
-          '(min-width: 701px) and (max-width: 1000px) and (max-height: 540px)',
-        ).matches
-          ? maximum * 0.56
-          : maximum - Math.max(160, Math.min(maximum * 0.37, 280))
+        const splitHeight = Math.max(44, maximum - Math.max(160, Math.min(maximum * 0.37, 280)))
         const stops = [44, splitHeight, maximum]
         const target = Math.max(44, Math.min(maximum, height - dy))
         let index = stops.reduce(
@@ -173,38 +173,67 @@ export default function MobileSheetHandle({
   }, [view, onView, panelRef])
 
   return (
-    <button
-      ref={handleRef}
-      className="mobile-sheet-handle"
-      aria-label="调整资料面板高度"
-      aria-expanded={view !== 'map'}
-      aria-controls="history-reading-content"
-      aria-describedby="sheet-instructions"
-      onClick={() => onView(views[(views.indexOf(view) + 1) % views.length])}
-      onKeyDown={(event) => {
-        const index = views.indexOf(view)
-        const next =
-          event.key === 'ArrowUp'
-            ? Math.min(2, index + 1)
-            : event.key === 'ArrowDown'
-              ? Math.max(0, index - 1)
-              : event.key === 'Home'
-                ? 0
-                : event.key === 'End'
-                  ? 2
-                  : null
-        if (next !== null) {
-          event.preventDefault()
-          onView(views[next])
-        }
-      }}
-    >
-      <span className="sheet-grip" aria-hidden="true" />
-      <span className="sheet-title">{title}</span>
-      <span id="sheet-instructions" className="sheet-hint">
-        {view === 'map' ? '上拉查看资料' : view === 'split' ? '上拉展开 · 下拉收起' : '下拉收起'}
-      </span>
-      <ChevronUp size={16} aria-hidden="true" />
-    </button>
+    <>
+      <div className="mobile-landscape-controls">
+        <span className="landscape-panel-title" title={title}>
+          {title}
+        </span>
+        {view !== 'map' && (
+          <button
+            className="landscape-reading-toggle"
+            aria-label={view === 'reading' ? '返回地图与资料' : '展开阅读'}
+            title={view === 'reading' ? '返回地图与资料' : '展开阅读'}
+            aria-controls="history-reading-content"
+            onClick={() => onView(view === 'reading' ? 'split' : 'reading')}
+          >
+            {view === 'reading' ? <Minimize2 size={17} /> : <Maximize2 size={17} />}
+          </button>
+        )}
+        <button
+          className="landscape-panel-toggle"
+          aria-label={view === 'map' ? '打开资料面板' : '收起资料面板'}
+          title={view === 'map' ? `打开资料：${title}` : '收起资料面板'}
+          aria-expanded={view !== 'map'}
+          aria-controls="history-reading-content"
+          onClick={() => onView(view === 'map' ? 'split' : 'map')}
+        >
+          {view === 'map' ? <BookOpen size={18} /> : <PanelRightClose size={18} />}
+          {view === 'map' && <span>资料</span>}
+        </button>
+      </div>
+      <button
+        ref={handleRef}
+        className="mobile-sheet-handle"
+        aria-label="调整资料面板高度"
+        aria-expanded={view !== 'map'}
+        aria-controls="history-reading-content"
+        aria-describedby="sheet-instructions"
+        onClick={() => onView(views[(views.indexOf(view) + 1) % views.length])}
+        onKeyDown={(event) => {
+          const index = views.indexOf(view)
+          const next =
+            event.key === 'ArrowUp'
+              ? Math.min(2, index + 1)
+              : event.key === 'ArrowDown'
+                ? Math.max(0, index - 1)
+                : event.key === 'Home'
+                  ? 0
+                  : event.key === 'End'
+                    ? 2
+                    : null
+          if (next !== null) {
+            event.preventDefault()
+            onView(views[next])
+          }
+        }}
+      >
+        <span className="sheet-grip" aria-hidden="true" />
+        <span className="sheet-title">{title}</span>
+        <span id="sheet-instructions" className="sheet-hint">
+          {view === 'map' ? '上拉查看资料' : view === 'split' ? '上拉展开 · 下拉收起' : '下拉收起'}
+        </span>
+        <ChevronUp size={16} aria-hidden="true" />
+      </button>
+    </>
   )
 }

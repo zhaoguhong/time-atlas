@@ -36,11 +36,15 @@ import {
   PanelRightClose,
   Pin,
   MoreHorizontal,
+  PanelTopClose,
+  PanelTopOpen,
 } from 'lucide-react'
 import type { Camera } from './components/HistoryMap'
 const HistoryMap = lazy(() => import('./components/HistoryMap'))
 import Timeline from './components/Timeline'
 import MobileSheetHandle from './components/MobileSheetHandle'
+import DisplayControls from './components/DisplayControls'
+import { useReadingResize } from './hooks/use-reading-resize'
 import GitHubIcon from './components/GitHubIcon'
 import JourneyPanel from './components/JourneyPanel'
 import DynastyPanel, { DynastyIntroduction } from './components/DynastyPanel'
@@ -232,6 +236,11 @@ export default function App() {
   const [archiveFilters, setArchiveFilters] = useState(initial.view.archiveFilters)
   const [progress, setProgress] = useState(readProgress)
   const [moreOpen, setMoreOpen] = useState(false)
+  const [focusMode, setFocusMode] = useState(false)
+  const focusEnterRef = useRef<HTMLButtonElement>(null)
+  const focusExitRef = useRef<HTMLButtonElement>(null)
+  const moreButtonRef = useRef<HTMLButtonElement>(null)
+  const wasFocused = useRef(false)
   const [compareYear, setCompareYear] = useState<number | null>(initial.compare)
   const [compareDraft, setCompareDraft] = useState(String(initial.compare ?? 220))
   const [compareError, setCompareError] = useState('')
@@ -1242,6 +1251,16 @@ export default function App() {
     panelRef.current?.scrollTo({ top: pendingScroll.current ?? 0 })
     pendingScroll.current = null
   }, [selection, mode, tourState?.id, tourState?.step])
+  useReadingResize(panelRef, [
+    selection,
+    mode,
+    tourState?.id,
+    tourState?.step,
+    liveReading,
+    liveReading ? currentYearEvents[0]?.id : null,
+    trail?.personId,
+    trail?.activeId,
+  ])
   useEffect(() => {
     if (liveReading) panelRef.current?.scrollTo({ top: 0 })
   }, [liveReading, currentYearEvents[0]?.id])
@@ -1308,6 +1327,35 @@ export default function App() {
     }
   }, [moreOpen])
 
+  function enterFocusMode() {
+    setMoreOpen(false)
+    setSearchOpen(false)
+    setLayersOpen(false)
+    setFocusMode(true)
+  }
+
+  useLayoutEffect(() => {
+    if (focusMode) focusExitRef.current?.focus({ preventScroll: true })
+    else if (wasFocused.current) {
+      const button = moreButtonRef.current?.getClientRects().length
+        ? moreButtonRef.current
+        : focusEnterRef.current
+      button?.focus({ preventScroll: true })
+    }
+    wasFocused.current = focusMode
+  }, [focusMode])
+
+  useEffect(() => {
+    if (!focusMode) return
+    const exit = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !document.querySelector('dialog[open]')) {
+        setFocusMode(false)
+      }
+    }
+    window.addEventListener('keydown', exit)
+    return () => window.removeEventListener('keydown', exit)
+  }, [focusMode])
+
   async function share() {
     try {
       await navigator.clipboard.writeText(navigation.url())
@@ -1367,8 +1415,20 @@ export default function App() {
       className="atlas-app"
       data-mobile-view={mobileView}
       data-reader-collapsed={readerCollapsed}
+      data-focus-mode={focusMode}
     >
-      <header className="topbar">
+      {focusMode && (
+        <button
+          ref={focusExitRef}
+          className="focus-mode-exit"
+          aria-label="退出专注模式"
+          title="退出专注模式"
+          onClick={() => setFocusMode(false)}
+        >
+          <PanelTopOpen size={20} aria-hidden="true" />
+        </button>
+      )}
+      <header className="topbar" inert={focusMode}>
         <a
           className="brand"
           href="#"
@@ -1525,6 +1585,7 @@ export default function App() {
           )}
         </div>
         <button
+          ref={moreButtonRef}
           className="header-more"
           aria-label="更多操作"
           aria-expanded={moreOpen}
@@ -1533,6 +1594,16 @@ export default function App() {
           <MoreHorizontal size={21} />
         </button>
         <div className={`header-actions ${moreOpen ? 'mobile-open' : ''}`}>
+          <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
+          <button
+            ref={focusEnterRef}
+            className="icon-button focus-mode-enter"
+            title="进入专注模式"
+            aria-label="进入专注模式"
+            onClick={enterFocusMode}
+          >
+            <PanelTopClose size={18} aria-hidden="true" />
+          </button>
           <button
             className={`icon-button ${mode === 'saved' ? 'active' : ''}`}
             title="我的收藏"

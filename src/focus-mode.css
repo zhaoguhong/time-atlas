@@ -1,0 +1,157 @@
+.header-actions .focus-mode-enter {
+  min-width: 44px;
+  min-height: 44px;
+}
+.header-actions.mobile-open > :is(.icon-button, .share-button) {
+  min-height: 44px;
+  flex-shrink: 0;
+}
+
+.focus-mode-exit {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: calc(env(safe-area-inset-left, 0px) + 8px);
+  z-index: 25;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #c8d4bf;
+  border-radius: 8px;
+  background: #fffef9f5;
+  color: #345548;
+  box-shadow: 0 2px 8px #263e3226;
+}
+.focus-mode-exit:hover {
+  background: #edf1e7;
+}
+.focus-mode-exit:focus-visible {
+  outline: 2px solid #345548;
+  outline-offset: 2px;
+}
+
+/* Keep the empty header grid row for safe-area geometry and sheet gestures. */
+.atlas-app[data-focus-mode='true'] > .topbar {
+  visibility: hidden;
+  pointer-events: none;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+.atlas-app[data-focus-mode='true'] .journey-toolbar {
+  padding-left: 62px;
+  min-height: 52px;
+}
+.atlas-app[data-focus-mode='true'] :is(.early-map-note, .comparison-controls, .trail-note) {
+  left: 60px;
+  max-width: calc(100% - 116px);
+}
+.atlas-app[data-focus-mode='true'] .tour-banner {
+  left: 60px;
+  right: 56px;
+}
+
+@media (min-width: 701px) and (min-height: 541px), (min-width: 1001px) {
+  .atlas-app[data-mobile-view] {
+    grid-template-rows: calc(64px + env(safe-area-inset-top, 0px)) minmax(0, 1fr) 140px;
+    padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .topbar {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .atlas-app[data-focus-mode='true'] {
+    grid-template-rows: env(safe-area-inset-top, 0px) minmax(0, 1fr) 140px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
+  .atlas-app[data-mobile-view] {
+    grid-template-rows: calc(64px + env(safe-area-inset-top, 0px)) minmax(0, 1fr) 155px;
+  }
+  .atlas-app[data-focus-mode='true'] {
+    grid-template-rows: env(safe-area-inset-top, 0px) minmax(0, 1fr) 155px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .atlas-app[data-focus-mode='true'] .tour-banner {
+    flex-wrap: wrap;
+  }
+  .atlas-app[data-focus-mode='true'] .tour-navigation {
+    margin-left: auto;
+  }
+  .atlas-app[data-focus-mode='true'] {
+    --mobile-header-height: env(safe-area-inset-top, 0px);
+  }
+  .atlas-app[data-focus-mode='true'][data-mobile-view='reading'] .mobile-sheet-handle {
+    padding-left: 60px;
+  }
+}
+@media (min-width: 560px) and (max-width: 1000px) and (max-height: 540px) and (orientation: landscape) {
+  .header-actions.mobile-open {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 4px 8px;
+  }
+  .atlas-app[data-focus-mode='true'][data-mobile-view='reading'] .mobile-landscape-controls {
+    padding-left: 60px;
+  }
+}
+
+/* A single menu keeps the expanded set of actions usable on tablets and small laptops. */
+@media (min-width: 701px) and (max-width: 1200px) and (min-height: 541px),
+  (min-width: 1001px) and (max-width: 1200px) {
+  .topbar {
+    position: relative;
+    gap: 14px;
+  }
+  .top-search {
+    min-width: 100px;
+    flex-shrink: 1;
+  }
+  .header-more {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    color: #45623a;
+  }
+  .header-actions {
+    display: none;
+  }
+  .header-actions.mobile-open {
+    position: absolute;
+    top: calc(64px + env(safe-area-inset-top, 0px));
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    max-height: calc(
+      100dvh - 76px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+    );
+    overflow-y: auto;
+    z-index: 110;
+    padding: 8px;
+    background: #fffefb;
+    border: 1px solid #d7dfcf;
+    box-shadow: 0 8px 24px #283d2929;
+    border-radius: 6px;
+  }
+  .header-actions.mobile-open :is(.icon-button, .share-button) {
+    width: 150px;
+    height: 44px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .header-actions.mobile-open .icon-button::after {
+    content: attr(aria-label);
+    font-size: 12px;
+  }
+  .header-actions.mobile-open .share-button span {
+    display: inline;
+  }
+  .header-actions .header-separator {
+    display: none;
+  }
+}

@@ -1,0 +1,125 @@
+.display-mode-button.icon-button {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
+}
+
+.display-mode-dialog {
+  width: min(
+    460px,
+    calc(100vw - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px))
+  );
+  max-height: calc(
+    100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+  );
+  margin: auto;
+  padding: 18px 22px 22px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  color: var(--ink);
+  background: #fffef8;
+  border: 1px solid #dce4d2;
+  border-radius: 12px;
+  box-shadow: 0 20px 80px #22352030;
+}
+
+.display-mode-dialog::backdrop {
+  background: #2435256a;
+  backdrop-filter: blur(4px);
+}
+
+.display-mode-dialog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.display-mode-dialog-heading h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.display-mode-close {
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  width: 44px;
+  min-height: 44px;
+  border-radius: 6px;
+  color: #61705e;
+}
+
+.display-mode-close:hover {
+  background: #edf1e7;
+}
+
+.display-mode-dialog p,
+.display-mode-steps {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.display-mode-dialog p + p {
+  margin-top: 10px;
+}
+
+.display-mode-steps {
+  margin: 16px 0;
+  padding-left: 22px;
+}
+
+.display-mode-steps li + li {
+  margin-top: 9px;
+}
+
+.display-mode-dialog .display-mode-note {
+  color: #798174;
+  font-size: 12px;
+}
+
+.display-mode-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.display-mode-dialog-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid #d5dfce;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.display-mode-primary {
+  background: #eaf0e2;
+  color: #355746;
+}
+
+.display-mode-secondary {
+  background: #fffefb;
+  color: #45634e;
+}
+
+@media (max-height: 400px) {
+  .display-mode-dialog {
+    padding-block: 8px 16px;
+  }
+  .display-mode-dialog-heading {
+    margin-bottom: 4px;
+  }
+  .display-mode-dialog-actions {
+    margin-top: 12px;
+  }
+}

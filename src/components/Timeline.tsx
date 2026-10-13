@@ -12,6 +12,7 @@ import {
   BookOpen,
   Layers,
   PanelRightOpen,
+  SlidersHorizontal,
 } from 'lucide-react'
 import { periods } from '../data/periods'
 import type { HistoryEvent } from '../types'
@@ -99,6 +100,9 @@ export default function Timeline({
   const [inputError, setInputError] = useState('')
   const [width, setWidth] = useState(800)
   const [opened, setOpened] = useState<TimelineGroup | null>(null)
+  const [optionsOpen, setOptionsOpen] = useState(false)
+  const optionsRef = useRef<HTMLDivElement>(null)
+  const optionsTrigger = useRef<HTMLButtonElement>(null)
   const railRef = useRef<HTMLDivElement>(null)
   const dynastyRef = useRef<HTMLElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -165,6 +169,29 @@ export default function Timeline({
   useEffect(() => {
     setOpened(null)
   }, [year, overview])
+  useEffect(() => {
+    if (!optionsOpen) return
+    const outside = (event: PointerEvent) => {
+      const target = event.target as Node
+      if (!optionsRef.current?.contains(target) && !optionsTrigger.current?.contains(target))
+        setOptionsOpen(false)
+    }
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOptionsOpen(false)
+        optionsTrigger.current?.focus()
+      }
+    }
+    const resize = () => setOptionsOpen(false)
+    document.addEventListener('pointerdown', outside)
+    document.addEventListener('keydown', escape)
+    window.addEventListener('resize', resize)
+    return () => {
+      document.removeEventListener('pointerdown', outside)
+      document.removeEventListener('keydown', escape)
+      window.removeEventListener('resize', resize)
+    }
+  }, [optionsOpen])
   useEffect(() => {
     if (!opened) return
     menuRef.current?.querySelector('button')?.focus()
@@ -326,7 +353,30 @@ export default function Timeline({
             </option>
           ))}
         </select>
-        <div className="timeline-zoom">
+        <button
+          ref={optionsTrigger}
+          className="timeline-options-toggle"
+          aria-label="时间轴选项"
+          title="时间轴选项"
+          aria-expanded={optionsOpen}
+          aria-controls="timeline-options"
+          onClick={() => setOptionsOpen((open) => !open)}
+        >
+          <SlidersHorizontal size={18} />
+        </button>
+        <div
+          id="timeline-options"
+          ref={optionsRef}
+          className="timeline-zoom"
+          data-open={optionsOpen}
+          onClick={(event) => {
+            if ((event.target as HTMLElement).closest('button')) {
+              setOptionsOpen(false)
+              if (optionsTrigger.current?.getClientRects().length)
+                optionsTrigger.current.focus({ preventScroll: true })
+            }
+          }}
+        >
           {!journey && !topic && (
             <select
               className="playback-mode"

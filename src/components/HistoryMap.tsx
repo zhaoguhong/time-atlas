@@ -495,9 +495,9 @@ export default function HistoryMap(props: Props) {
       const viewport = container.current.getBoundingClientRect()
       const obstacles = [
         ...container.current
-          .closest('.map-shell')!
+          .closest('.atlas-app')!
           .querySelectorAll<HTMLElement>(
-            '.layers-button,.map-legend,.layers-popover,.map-controls,.tour-banner,.comparison-controls,.trail-note,.map-event-popup,.city-popup,.focus-explanation[open] > div,.early-map-note,.maplibregl-ctrl-attrib',
+            '.layers-button,.map-legend,.layers-popover,.map-controls,.tour-banner,.comparison-controls,.trail-note,.map-event-popup,.city-popup,.focus-explanation[open] > div,.early-map-note,.maplibregl-ctrl-attrib,.focus-mode-exit',
           ),
       ]
         .filter((el) => el.offsetWidth > 0)
