@@ -204,6 +204,18 @@
   border-color: #9abacb45;
   box-shadow: none;
 }
+.time-pillar[data-theme='night'] .pillar-settings {
+  color: #233a45;
+  background: #d9bb85;
+  border-color: #d9bb85;
+  box-shadow: none;
+}
+.time-pillar[data-theme='night'] .pillar-settings:hover {
+  background: #ead0a1;
+}
+.time-pillar[data-theme='night'] .pillar-settings[data-filtered='true']::after {
+  background: #36594e;
+}
 .time-pillar[data-theme='night'] .pillar-zoom button:last-child {
   border-color: #9abacb45;
 }

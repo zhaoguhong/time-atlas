@@ -59,7 +59,7 @@ async function compactGeometry(page: Page) {
     const cards = [...document.querySelectorAll('.pillar-card')]
     const controls = [
       ...document.querySelectorAll(
-        '.pillar-zoom, .pillar-footer, [aria-label="探索模式"], .pillar-focus-navigation',
+        '.pillar-controls, .pillar-footer, [aria-label="探索模式"], .pillar-focus-navigation',
       ),
     ].filter((element) => rect(element).width && rect(element).height)
     if (document.documentElement.scrollWidth > innerWidth) issues.push('horizontal overflow')

@@ -11,11 +11,24 @@ import {
   MAX_SPAN,
   pillarMatches,
   pillarTicks,
+  pillarDateLabel,
   pillarWindow,
   relatedReading,
 } from './time-pillar'
 
 describe('time pillar chronology and disclosure', () => {
+  it('keeps primary archaeological dates compact without removing the full reading label', () => {
+    const shangshan = events.find((event) => event.id === 'shangshan-culture')!
+    expect(pillarDateLabel(shangshan)).toBe('距今约10000—8500年')
+    expect(shangshan.dateLabel).toBe('距今约10000—8500年 · 轴上约前8000—前6500年')
+    expect(pillarDateLabel(events.find((event) => event.id === 'liangzhu-city')!)).toBe(
+      '约前3300年—前2300年',
+    )
+    expect(pillarDateLabel(events.find((event) => event.id === 'jericho-neolithic')!)).toBe(
+      '约前第九—第八千纪',
+    )
+    expect(pillarDateLabel({ ...events[0], year: -221, dateLabel: undefined })).toBe('前221年')
+  })
   it('rejects malformed shared filters including inherited object properties', () => {
     for (const region of ['china', '__proto__', 'toString', 'unknown'])
       expect(parseViewParams(`#visual=pillar&region=${region}&span=NaN`).pillarRegion).toBe('all')

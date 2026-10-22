@@ -14,6 +14,7 @@ import {
   Play,
   Plus,
   Search,
+  Settings,
   X,
 } from 'lucide-react'
 import type { Category, HistoryEvent } from '../types'
@@ -33,6 +34,7 @@ import {
   MAX_SPAN,
   MIN_SPAN,
   pillarTicks,
+  pillarDateLabel,
   pillarWindow,
   type PillarSide,
 } from '../lib/time-pillar'
@@ -442,9 +444,7 @@ export default function TimePillar(p: Props) {
               title={`${formatEventDate(c.event)} · ${c.event.title}`}
             >
               <span className="pillar-event-line">
-                <time>
-                  {(c.event.dateLabel ?? `${compactYear(c.event.year)}年`).replace(/\s+/g, '')}
-                </time>
+                <time>{pillarDateLabel(c.event)}</time>
                 <strong>{c.event.title}</strong>
               </span>
               {summaryVisible && <p>{c.event.summary}</p>}
@@ -467,72 +467,78 @@ export default function TimePillar(p: Props) {
             </button>
           </div>
         )}
-        <div className="pillar-zoom" data-pillar-control>
+        <div className="pillar-controls" data-pillar-control>
           <button
-            aria-label="放大时间"
-            disabled={span <= MIN_SPAN}
-            onClick={() => {
-              p.onPause()
-              commit(zoom(0.6))
+            ref={optionsTrigger}
+            className="pillar-settings"
+            aria-label="时空柱筛选与设置"
+            aria-haspopup="dialog"
+            data-filtered={
+              !!(p.range || p.region !== 'all' || p.category !== '全部' || p.hasSpatialFilter)
+            }
+            aria-description={
+              p.range || p.region !== 'all' || p.category !== '全部' || p.hasSpatialFilter
+                ? '已应用筛选'
+                : undefined
+            }
+            title="主题、历史范围、筛选与年份定位"
+            onClick={(event) => {
+              flush()
+              setJump(String(year))
+              openPanel('settings', event.currentTarget)
             }}
           >
-            <Plus size={18} />
+            <Settings size={18} aria-hidden="true" />
+            <span>设置</span>
           </button>
-          <span>{niceSpan(span)}</span>
-          <button
-            aria-label="缩小时间"
-            disabled={span >= MAX_SPAN}
-            onClick={() => {
-              p.onPause()
-              commit(zoom(1.6))
-            }}
-          >
-            <Minus size={18} />
-          </button>
-          <button
-            aria-label="查看历史全貌"
-            title="历史全貌"
-            onClick={() => {
-              p.onPause()
-              commit({
-                year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
-                span: MAX_SPAN,
-              })
-            }}
-          >
-            <Maximize2 size={16} />
-          </button>
+          <div className="pillar-zoom">
+            <button
+              aria-label="放大时间"
+              disabled={span <= MIN_SPAN}
+              onClick={() => {
+                p.onPause()
+                commit(zoom(0.6))
+              }}
+            >
+              <Plus size={18} />
+            </button>
+            <span>{niceSpan(span)}</span>
+            <button
+              aria-label="缩小时间"
+              disabled={span >= MAX_SPAN}
+              onClick={() => {
+                p.onPause()
+                commit(zoom(1.6))
+              }}
+            >
+              <Minus size={18} />
+            </button>
+            <button
+              aria-label="查看历史全貌"
+              title="历史全貌"
+              onClick={() => {
+                p.onPause()
+                commit({
+                  year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
+                  span: MAX_SPAN,
+                })
+              }}
+            >
+              <Maximize2 size={16} />
+            </button>
+          </div>
         </div>
       </div>
       <footer className="pillar-footer">
-        <button
-          ref={optionsTrigger}
-          className="pillar-year"
-          aria-label="时空柱筛选与设置"
-          data-filtered={
-            !!(p.range || p.region !== 'all' || p.category !== '全部' || p.hasSpatialFilter)
-          }
-          aria-description={
-            p.range || p.region !== 'all' || p.category !== '全部' || p.hasSpatialFilter
-              ? '已应用筛选'
-              : undefined
-          }
-          title="切换中外范围、主题、筛选与年份定位"
-          onClick={(event) => {
-            flush()
-            setJump(String(year))
-            openPanel('settings', event.currentTarget)
-          }}
-        >
+        <div className="pillar-year">
           <span>
-            {p.side === 'compare' ? '中外对照' : p.side === 'world' ? '世界历史' : '中国历史'} ·
-            设置
+            {p.side === 'compare' ? '中外对照' : p.side === 'world' ? '世界历史' : '中国历史'}
           </span>
           <strong>
             {compactYear(year)}
             <small>年</small>
           </strong>
-        </button>
+        </div>
         <div className="pillar-play">
           <button aria-label="上一个事件年份" onClick={() => step(-1)}>
             <ArrowDown size={18} />

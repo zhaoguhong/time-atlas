@@ -1,7 +1,14 @@
 import type { HistoryEvent, HistoryRegion } from '../types'
-import { fromOrdinal, MAX_YEAR, MIN_YEAR, toOrdinal } from './history'
+import { compactYear, fromOrdinal, MAX_YEAR, MIN_YEAR, toOrdinal } from './history'
 
 export type PillarSide = 'compare' | 'china' | 'world'
+// Keep the source's primary date; axis-conversion and contextual notes stay in the reader.
+export const pillarDateLabel = (event: HistoryEvent) =>
+  (event.dateLabel ?? `${compactYear(event.year)}年`)
+    .split(/\s*·\s*/)[0]
+    .replace(/\s+/g, '')
+    .replace(/公元前/g, '前')
+
 export const historyRegions: Record<HistoryRegion, string> = {
   china: '中国',
   europe: '欧洲',

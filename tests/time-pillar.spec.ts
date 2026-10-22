@@ -45,7 +45,7 @@ async function geometry(page: Page) {
         if (a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top)
           problems.push('overlapping cards')
       }
-    const zoom = document.querySelector('.pillar-zoom')!.getBoundingClientRect()
+    const zoom = document.querySelector('.pillar-controls')!.getBoundingClientRect()
     for (const card of cards) {
       const r = card.getBoundingClientRect()
       if (r.left < zoom.right && r.right > zoom.left && r.top < zoom.bottom && r.bottom > zoom.top)
@@ -84,7 +84,7 @@ for (const [width, height] of [
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
         width === 390 ? 24 : 16,
       )
-      await expect(page.locator('.pillar-year')).toContainText('中外对照 · 设置')
+      await expect(page.locator('.pillar-year > span')).toHaveText('中外对照')
     }
     if (width === 1440 || width === 844)
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
@@ -363,7 +363,7 @@ for (const [width, height] of [
     await expect(page.locator('.event-detail h2')).toBeVisible()
     await geometry(page)
     const rectangles = await page.evaluate(() =>
-      [...document.querySelectorAll('.pillar-focus-navigation, .pillar-year, .focus-mode-exit')]
+      [...document.querySelectorAll('.pillar-focus-navigation, .pillar-settings, .focus-mode-exit')]
         .filter((el) => el.getBoundingClientRect().width > 0)
         .map((el) => ({ name: el.className, ...el.getBoundingClientRect().toJSON() })),
     )
@@ -498,3 +498,53 @@ test('compact labels are the default, summaries are optional, and years use Chin
   await geometry(page)
   await page.screenshot({ path: info.outputPath('bce-chronology.png') })
 })
+
+for (const [width, height] of [
+  [320, 640],
+  [390, 844],
+  [568, 320],
+]) {
+  test(`mobile dates leave a dedicated readable event name at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    for (const [id, year, core] of [
+      ['liangzhu-city', -3300, '良渚古城'],
+      ['shangshan-culture', -8000, '上山文化'],
+    ] as const) {
+      await ready(page, `year=${year}&span=3000&event=${id}`)
+      await setSheet(page, 'map')
+      const card = page.locator(`.pillar-card[data-event-id="${id}"]`)
+      await expect(card).toBeVisible()
+      await expect(card.locator('strong')).toContainText(core)
+      const issues = await card.evaluate((element) => {
+        const date = element.querySelector('time')!.getBoundingClientRect()
+        const title = element.querySelector('strong')!
+        const bounds = title.getBoundingClientRect()
+        const text = title.firstChild!
+        const range = document.createRange()
+        range.setStart(text, 0)
+        range.setEnd(text, 4)
+        const core = range.getBoundingClientRect()
+        return {
+          separate: bounds.top >= date.bottom + 1,
+          coreVisible: core.left >= bounds.left && core.right <= bounds.right,
+          contained: bounds.bottom <= element.getBoundingClientRect().bottom - 3,
+        }
+      })
+      expect(issues).toEqual({ separate: true, coreVisible: true, contained: true })
+      await expect(card.locator('time')).not.toContainText(' · ')
+      const settingsButton = page.getByRole('button', { name: '时空柱筛选与设置', exact: true })
+      await expect(settingsButton).toHaveText('设置')
+      await expect(settingsButton.locator('svg')).toBeVisible()
+      await settingsButton.click({ trial: true })
+      await geometry(page)
+      await page.screenshot({ path: info.outputPath(`${id}-${width}.png`) })
+      if (id === 'shangshan-culture') {
+        await expect(card.locator('time')).toHaveText('距今约10000—8500年')
+        await card.locator('button').click()
+        await expect(page.locator('.event-detail')).toContainText('轴上约前8000—前6500年')
+      }
+    }
+  })
+}

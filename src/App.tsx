@@ -2144,7 +2144,7 @@ export default function App() {
                   </div>
                 )}
               </div>
-              {visualization === 'map' && (
+              {visualization === 'map' && focusMode && (
                 <div
                   className="visualization-switch map-mode-shortcut"
                   role="group"

@@ -210,7 +210,9 @@
   touch-action: none;
 }
 .pillar-event-line {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   min-width: 0;
   width: 100%;
   font-size: 15px;
@@ -223,12 +225,21 @@
   color: var(--world);
   font-size: 11px;
   font-variant-numeric: tabular-nums;
-  margin-right: 9px;
+  flex: 0 1 auto;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pillar-card.china time {
   color: var(--china);
 }
 .pillar-card strong {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--serif);
   font-size: inherit;
   font-weight: 600;
@@ -242,11 +253,52 @@
   overflow: hidden;
   width: 100%;
 }
-.pillar-zoom {
+.pillar-controls {
   position: absolute;
+  left: 12px;
   right: 12px;
   bottom: 5px;
   z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  pointer-events: none;
+}
+.pillar-controls > * {
+  pointer-events: auto;
+}
+.pillar-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 70px;
+  min-height: 46px;
+  padding: 0 11px;
+  border: 1px solid #294f45;
+  border-radius: 10px;
+  color: #fffef8;
+  background: #36594e;
+  box-shadow: 0 2px 8px #24453c20;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+.pillar-settings:hover {
+  background: #284b40;
+}
+.pillar-settings[data-filtered='true']::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f0d294;
+}
+.pillar-zoom {
   display: flex;
   align-items: center;
   background: #fffefbef;
@@ -641,14 +693,21 @@
 .time-pillar[data-narrow='true'] .pillar-event-line {
   font-size: 13px;
   line-height: 17px;
-  white-space: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
 }
 .time-pillar[data-narrow='true'] .pillar-card time {
   font-size: 10px;
-  margin-right: 6px;
+  line-height: 12px;
+  max-width: 100%;
+  flex: none;
+}
+.time-pillar[data-narrow='true'] .pillar-card strong {
+  display: block;
+  line-height: 18px;
+  flex: none;
 }
 .time-pillar[data-narrow='true'] .pillar-tick {
   font-size: 9px;
@@ -690,7 +749,8 @@
 .time-pillar[data-narrow='true'] .pillar-cluster svg {
   display: none;
 }
-.time-pillar[data-narrow='true'] .pillar-zoom {
+.time-pillar[data-narrow='true'] .pillar-controls {
+  left: 8px;
   right: 8px;
 }
 .time-pillar:not([data-side='compare']) .pillar-card.world,
@@ -857,17 +917,6 @@
 }
 .pillar-year {
   border-radius: 5px;
-}
-.pillar-year[data-filtered='true'] > span {
-  text-decoration: underline dotted;
-  text-underline-offset: 3px;
-  color: var(--world);
-}
-.pillar-year:hover {
-  background: #edf2ed;
-}
-.time-pillar[data-theme='night'] .pillar-year:hover {
-  background: #2b4452;
 }
 .time-pillar[data-narrow='true'] .pillar-year > span {
   font-size: 9px;

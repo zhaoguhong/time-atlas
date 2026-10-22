@@ -107,10 +107,7 @@ for (const [width, height] of [
     }
     await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'true')
     await expectHeaderFit(page)
-    const shortcut = page
-      .locator('.map-mode-shortcut')
-      .getByRole('button', { name: '时空柱', exact: true })
-    await expectTouchControl(shortcut)
+    await expect(page.locator('.map-mode-shortcut')).toHaveCount(0)
     if (mobile) {
       await setSheet(page, 'reading')
       await expect(page.locator('.map-shell')).toBeHidden()
@@ -144,7 +141,7 @@ for (const [width, height] of [
   [390, 844],
   [568, 320],
 ]) {
-  test(`map text shortcut stays usable with overlays and layers at ${width}x${height}`, async ({
+  test(`header view switch stays usable with map overlays and layers at ${width}x${height}`, async ({
     page,
   }, info) => {
     test.setTimeout(90000)
@@ -159,9 +156,8 @@ for (const [width, height] of [
       await mapReady(page, hash)
       if (width > height) await setSheet(page, 'split')
       if (overlay) await expect(page.locator(overlay)).toBeVisible()
-      const shortcut = page
-        .locator('.map-mode-shortcut')
-        .getByRole('button', { name: '时空柱', exact: true })
+      await expect(page.locator('.map-mode-shortcut')).toHaveCount(0)
+      const shortcut = headerMode(page, '时空柱')
       await expectTouchControl(shortcut)
       await shortcut.click({ trial: true, timeout: 5000 })
       if (name === 'plain') {
@@ -295,7 +291,9 @@ test('narrow comparison remains actionable with errors and focus mode', async ({
     await expect(page.locator('.compare-error')).toBeVisible()
     await expect(page.locator('.compare-error')).toBeInViewport({ ratio: 1 })
     await expect(input).toHaveAttribute('aria-invalid', 'true')
-    const shortcut = page.locator('.map-mode-shortcut button')
+    const shortcut = focused
+      ? page.locator('.map-mode-shortcut button')
+      : headerMode(page, '时空柱')
     await shortcut.click({ trial: true, timeout: 5000 })
     await expectTouchControl(shortcut)
     const comparison = (await page.locator('.comparison-controls').boundingBox())!
