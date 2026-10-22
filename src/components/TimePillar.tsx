@@ -110,7 +110,7 @@ export default function TimePillar(p: Props) {
   const radius = single ? 20 : narrow ? 26 : 46
   const padding = 28
   const height = Math.max(48, size.height - padding - 54)
-  const cardHeight = Math.min(size.height < 260 || narrow ? 68 : 78, Math.max(48, height - 6))
+  const cardHeight = Math.min(size.height < 260 ? 66 : narrow ? 68 : 78, Math.max(48, height - 6))
   const summaryVisible = cardHeight >= 78 && !narrow && (single || size.width >= 900)
   const windowRange = pillarWindow(year, span)
   const cards = useMemo(

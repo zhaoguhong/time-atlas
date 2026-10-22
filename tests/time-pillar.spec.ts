@@ -202,6 +202,7 @@ test('mobile reading remains usable through rotation and supports split canvas',
   await setSheet(page, 'split')
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
   await geometry(page)
+  expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(4)
   await page.screenshot({ path: info.outputPath('landscape-reading.png') })
   await page.setViewportSize({ width: 390, height: 844 })
   await setSheet(page, 'reading')
