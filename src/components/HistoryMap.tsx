@@ -1,4 +1,5 @@
 import { formatEventDate, eventDateRelation } from '../lib/history'
+import type { ColorMode } from '../lib/color-mode'
 import { useEffect, useRef, useState } from 'react'
 import * as maplibregl from 'maplibre-gl'
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
@@ -57,6 +58,7 @@ function readingPadding(container: HTMLElement, topic = false) {
   }
 }
 interface Props {
+  colorMode: ColorMode
   year: number
   events: HistoryEvent[]
   showCities: boolean
@@ -81,6 +83,19 @@ interface Props {
   onJourneyNode: (id: string) => void
 }
 const empty: FeatureCollection = { type: 'FeatureCollection', features: [] }
+function applyMapPalette(instance: maplibregl.Map, mode: ColorMode) {
+  const dark = mode === 'dark'
+  if (!instance.getLayer('land')) return
+  instance.setPaintProperty('water', 'background-color', dark ? '#101e29' : '#e3ebeb')
+  instance.setPaintProperty('land', 'fill-color', dark ? '#263336' : '#e8e8df')
+  instance.setPaintProperty('coast', 'line-color', dark ? '#52676c' : '#c0ccc7')
+  instance.setPaintProperty('grid', 'line-color', dark ? '#82989a' : '#afbdb9')
+  instance.setPaintProperty('territories', 'fill-opacity', dark ? 0.44 : 0.73)
+  instance.setPaintProperty('territory-borders', 'line-color', dark ? '#b0c0ba' : '#fffef6')
+  instance.setPaintProperty('territory-selected', 'line-color', dark ? '#ddc38e' : '#426454')
+  instance.setPaintProperty('lakes', 'fill-color', dark ? '#1b3442' : '#c9d8d7')
+  instance.setPaintProperty('rivers', 'line-color', dark ? '#7ca6b1' : '#6e979b')
+}
 const cache = new Map<string, FeatureCollection>()
 const pending = new Map<string, Promise<FeatureCollection>>()
 function mapSlice(year: number) {
@@ -154,6 +169,7 @@ function graticule(): FeatureCollection<LineString> {
 export default function HistoryMap(props: Props) {
   const container = useRef<HTMLDivElement>(null)
   const map = useRef<maplibregl.Map | null>(null)
+  const paletteMode = useRef<ColorMode | null>(null)
   const current = useRef(props)
   current.current = props
   const labels = useRef<MapLabel[]>([])
@@ -204,7 +220,15 @@ export default function HistoryMap(props: Props) {
         style: {
           version: 8,
           sources: {},
-          layers: [{ id: 'water', type: 'background', paint: { 'background-color': '#e3ebeb' } }],
+          layers: [
+            {
+              id: 'water',
+              type: 'background',
+              paint: {
+                'background-color': current.current.colorMode === 'dark' ? '#101e29' : '#e3ebeb',
+              },
+            },
+          ],
         },
       })
     } catch {
@@ -429,6 +453,7 @@ export default function HistoryMap(props: Props) {
       })
       instance.on('idle', () => {
         if (container.current) {
+          container.current.dataset.colorMode = paletteMode.current ?? current.current.colorMode
           container.current.dataset.rendered = String(
             instance.isSourceLoaded('land') &&
               instance.isSourceLoaded('territories') &&
@@ -467,6 +492,8 @@ export default function HistoryMap(props: Props) {
         lat: +center.lat.toFixed(3),
         zoom: +instance.getZoom().toFixed(2),
       })
+      applyMapPalette(instance, current.current.colorMode)
+      paletteMode.current = current.current.colorMode
       setReady(true)
     })
     instance.on('moveend', () => {
@@ -666,6 +693,15 @@ export default function HistoryMap(props: Props) {
       rebuildEvents.current = () => {}
     }
   }, [])
+
+  useEffect(() => {
+    if (ready && map.current && paletteMode.current !== props.colorMode) {
+      if (container.current) container.current.dataset.rendered = 'false'
+      applyMapPalette(map.current, props.colorMode)
+      paletteMode.current = props.colorMode
+      map.current.triggerRepaint()
+    }
+  }, [ready, props.colorMode])
 
   useEffect(() => {
     let cancelled = false

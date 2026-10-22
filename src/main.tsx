@@ -13,6 +13,7 @@ import './exploration.css'
 import './mobile-sheet.css'
 import './focus-mode.css'
 import './time-pillar.css'
+import './color-mode.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

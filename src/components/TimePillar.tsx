@@ -114,7 +114,7 @@ export default function TimePillar(p: Props) {
   const axis = single ? 40 : size.width / 2
   const railGap = narrow ? 29 : 42
   const padding = p.focused ? 78 : 34
-  const height = Math.max(48, size.height - padding - 54)
+  const height = Math.max(48, size.height - padding - 12)
   const cardHeight = Math.min(showSummary ? 76 : 44, height)
   const summaryVisible = showSummary && cardHeight >= 64
   const windowRange = pillarWindow(year, span)
@@ -273,7 +273,7 @@ export default function TimePillar(p: Props) {
         {
           '--axis': `${axis}px`,
           '--pillar-top': `${padding}px`,
-          '--pillar-bottom': '63px',
+          '--pillar-bottom': '12px',
         } as CSSProperties
       }
     >
@@ -401,7 +401,13 @@ export default function TimePillar(p: Props) {
             return (
               <g key={c.event.id} className={`pillar-connector ${c.side}`}>
                 <path
-                  d={`M ${start} ${padding + c.anchorY} C ${end} ${padding + c.anchorY}, ${start} ${padding + c.y}, ${end} ${padding + c.y}`}
+                  d={
+                    theme === 'ribbon'
+                      ? `M ${start} ${padding + c.anchorY} L ${end} ${padding + c.y}`
+                      : theme === 'scroll'
+                        ? `M ${start} ${padding + c.anchorY} L ${start} ${padding + c.y} L ${end} ${padding + c.y}`
+                        : `M ${start} ${padding + c.anchorY} C ${end} ${padding + c.anchorY}, ${start} ${padding + c.y}, ${end} ${padding + c.y}`
+                  }
                   fill="none"
                 />
                 <circle cx={start} cy={padding + c.anchorY} r={2} />
@@ -467,7 +473,13 @@ export default function TimePillar(p: Props) {
             </button>
           </div>
         )}
-        <div className="pillar-controls" data-pillar-control>
+        <div
+          className="pillar-controls"
+          data-pillar-control
+          role="group"
+          aria-label={`时间工具，当前跨度${niceSpan(span)}`}
+          title={`当前时间跨度：${niceSpan(span)}`}
+        >
           <button
             ref={optionsTrigger}
             className="pillar-settings"
@@ -652,6 +664,10 @@ export default function TimePillar(p: Props) {
           </>
         ) : (
           <div className="pillar-options">
+            <p className="pillar-view-window">
+              当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
+              {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
+            </p>
             {p.hasSpatialFilter && (
               <div className="pillar-filter-note">
                 <p>当前还保留着地点或地图视野筛选，可能只显示少数事件。</p>

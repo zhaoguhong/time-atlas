@@ -38,6 +38,8 @@ import {
   MoreHorizontal,
   PanelTopClose,
   PanelTopOpen,
+  Sun,
+  Moon,
 } from 'lucide-react'
 import { pillarMatches, pillarWindow, relatedReading, type PillarSide } from './lib/time-pillar'
 import { Layers3, Map as MapIcon } from 'lucide-react'
@@ -115,6 +117,7 @@ import {
   writePreferences,
 } from './lib/history'
 import './exploration-navigation.css'
+import { useColorMode } from './lib/color-mode'
 
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
@@ -224,6 +227,7 @@ function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large'
 }
 
 export default function App() {
+  const [colorMode, toggleColorMode] = useColorMode()
   const [initial] = useState(initialState)
   const [year, setYear] = useState(initial.year)
   const [visualization, setVisualization] = useState<'map' | 'pillar'>(initial.view.visualization)
@@ -1797,14 +1801,6 @@ export default function App() {
           >
             <BookOpen size={18} />
           </button>
-          <button
-            className="icon-button visualization-action"
-            aria-label={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
-            title={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
-            onClick={() => switchVisualization(visualization === 'map' ? 'pillar' : 'map')}
-          >
-            {visualization === 'map' ? <Layers3 size={18} /> : <MapIcon size={18} />}
-          </button>
           <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
           <button
             ref={focusEnterRef}
@@ -1859,6 +1855,22 @@ export default function App() {
             <span>分享此刻</span>
           </button>
         </div>
+        <button
+          className="color-mode-toggle"
+          aria-label={colorMode === 'light' ? '切换到夜间模式' : '切换到白天模式'}
+          title={colorMode === 'light' ? '切换到夜间模式' : '切换到白天模式'}
+          aria-pressed={colorMode === 'dark'}
+          onClick={() => {
+            setMoreOpen(false)
+            toggleColorMode()
+          }}
+        >
+          {colorMode === 'light' ? (
+            <Moon size={19} aria-hidden="true" />
+          ) : (
+            <Sun size={19} aria-hidden="true" />
+          )}
+        </button>
       </header>
 
       <main className="map-shell">
@@ -1969,6 +1981,7 @@ export default function App() {
               />
             ) : (
               <HistoryMap
+                colorMode={colorMode}
                 year={year}
                 events={mapEvents}
                 showCities={showCities}

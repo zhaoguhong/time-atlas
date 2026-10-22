@@ -1,0 +1,428 @@
+/* Global appearance covers navigation, reading, dialogs and map chrome. */
+.color-mode-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dce4d8;
+  border-radius: 50%;
+  background: #f5f5ec;
+  color: #526951;
+}
+.color-mode-toggle:hover {
+  background: #e9efdf;
+}
+@media (max-width: 420px) {
+  .atlas-app .topbar .brand-mark {
+    display: none;
+  }
+  .atlas-app .topbar {
+    gap: 3px;
+    padding-inline: 8px;
+  }
+}
+@media (max-width: 350px) {
+  .atlas-app .header-view-switch svg {
+    display: none;
+  }
+  .atlas-app .header-view-switch button {
+    padding-inline: 9px;
+  }
+}
+:root[data-color-mode='dark'] {
+  --paper: #111e24;
+  --white: #17272d;
+  --ink: #e1e9e1;
+  --muted: #aebfb6;
+  --green: #b4d1b9;
+  --line: #34484b;
+  --night-raised: #21363b;
+  --night-soft: #283f40;
+  --map-attribution-bg: #17272df5;
+  --map-attribution-ink: #c8ddbd;
+  color: var(--ink);
+  background: var(--paper);
+}
+:root[data-color-mode='dark'] * {
+  border-color: var(--line);
+}
+:root[data-color-mode='dark'] ::selection {
+  background: #4a6559;
+}
+:root[data-color-mode='dark'] ::-webkit-scrollbar-thumb {
+  background: #52675e;
+}
+:root[data-color-mode='dark'] :is(button, a, input, select):focus-visible {
+  outline-color: #c6d9af;
+}
+:root[data-color-mode='dark'] button {
+  transition:
+    opacity 0.2s,
+    box-shadow 0.2s;
+}
+:root[data-color-mode='dark'] .atlas-app :is(input, select, textarea) {
+  background-color: #1c3036;
+  color: var(--ink);
+  border-color: #4c6262;
+}
+:root[data-color-mode='dark'] .atlas-app input::placeholder {
+  color: #9fb2a9;
+}
+:root[data-color-mode='dark'] .atlas-app :is(h1, h2, h3, h4, strong) {
+  color: var(--ink);
+}
+:root[data-color-mode='dark'] .atlas-app .dynasty-facts :is(div, span) {
+  color: #b4c6b7;
+}
+:root[data-color-mode='dark'] .atlas-app :is(p, label, time, small) {
+  color: #b9cbc1;
+}
+:root[data-color-mode='dark'] .atlas-app a {
+  color: #c8ddbd;
+}
+:root[data-color-mode='dark'] .atlas-app summary {
+  color: #c1d5bd;
+}
+:root[data-color-mode='dark'] .atlas-app .sheet-hint {
+  color: #b1c5b8;
+}
+:root[data-color-mode='dark'] .atlas-app .search-result-icon {
+  background: var(--night-soft);
+  color: #c6d9c0;
+}
+:root[data-color-mode='dark'] .atlas-app #timeline-options {
+  background-color: var(--white);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-color-mode='dark'] .atlas-app :is(.map-shell, .map-stage, .map-canvas) {
+  background: #101e29;
+}
+:root[data-color-mode='dark'] .atlas-app :is(button, .icon-button) {
+  color: var(--ink);
+}
+:root[data-color-mode='dark'] .atlas-app :where(button:hover:not(:disabled)) {
+  background-color: var(--night-soft);
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(.event-card-meta, .event-card-bottom, .event-detail-meta, .polity-facts, .tour-card-action) {
+  color: #bbcec1;
+}
+:root[data-color-mode='dark'] .atlas-app .category-badge {
+  filter: brightness(1.5) saturate(0.8);
+}
+:root[data-color-mode='dark'] .atlas-app .tour-card-art {
+  background: linear-gradient(135deg, #355047, #263b37);
+  color: #bcd3b9;
+}
+:root[data-color-mode='dark'] .atlas-app .tour-card-body {
+  background: var(--white);
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .topbar,
+    .story-panel,
+    .period-sidebar,
+    .timeline,
+    .panel-footer,
+    .map-title,
+    .info-dialog,
+    .display-mode-dialog,
+    .search-results,
+    .layers-popover,
+    .timeline-options,
+    .timeline-event-menu,
+    .map-event-popup,
+    .city-popup,
+    .header-actions.mobile-open,
+    .mobile-landscape-controls
+  ) {
+  color: var(--ink);
+  background: var(--white);
+  border-color: var(--line);
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .top-search,
+    .event-card,
+    .place-directory > button,
+    .archive-event-list > button,
+    .period-brief,
+    .period-intro,
+    .event-scope,
+    .people-scope-note,
+    .focus-info,
+    .evidence-note,
+    .source-grid > a,
+    .dialog-note,
+    .person-further-reading,
+    .further-reading-links a,
+    .further-reading-kind,
+    .topic-question,
+    .topic-conclusion,
+    .topic-chapter-context,
+    .topic-chapter-links button,
+    .dynasty-jump,
+    .dynasty-event-filter,
+    .dynasty-facts,
+    .dynasty-date-note,
+    .dynasty-list-card,
+    .person-record-status,
+    .journey-reading-note,
+    .journey-active-card,
+    .journey-active-card .journey-gap,
+    .journey-era-caption,
+    .person-coverage,
+    .resume-reading,
+    .exploration-filters > div,
+    .polity-timeband,
+    .early-map-note,
+    .map-status,
+    .map-error,
+    .comparison-controls,
+    .trail-note,
+    .reference-status,
+    .focus-explanation > div,
+    .named-event,
+    .rail-event,
+    .time-readout form
+  ) {
+  background: var(--night-raised);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .map-controls,
+    .layers-button,
+    .map-legend,
+    .maplibregl-ctrl-attrib,
+    .focus-mode-exit,
+    .pillar-focus-navigation,
+    .map-mode-shortcut,
+    .journey-toolbar,
+    .compare-toggle,
+    .timeline-options-toggle,
+    .timeline-zoom,
+    .playback-speed,
+    .playback-mode,
+    .playback-reading-toggle,
+    .timeline-period-select,
+    .open-source-link,
+    .share-button,
+    .outline-action,
+    .display-mode-secondary,
+    .person-trail-action,
+    .person-depth,
+    .heading-count
+  ) {
+  background: #1d3239f5;
+  color: var(--ink);
+  border-color: #506460;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .eyebrow,
+    .event-meta,
+    .event-heading-meta,
+    .detail-meta,
+    .person-meta,
+    .map-context-date,
+    .map-context-scope,
+    .reading-progress,
+    .timeline-context-action,
+    .source-attribution,
+    .scope-help,
+    .journey-node-list .journey-order
+  ) {
+  color: #b0c4b7;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .icon-button:hover,
+    .icon-button.active,
+    .period-button:hover,
+    .period-button.selected,
+    .category-filters button.active,
+    .event-scope button.active,
+    .chapter-read[aria-pressed='true'],
+    .journey-node-list button.active,
+    .journey-node-list button:hover,
+    .search-results button:hover,
+    .search-results .search-active,
+    .dynasty-strip [aria-current='true'],
+    .rail-label.selected,
+    .named-event.selected,
+    .people-depth-filter button[aria-pressed='true'],
+    .mobile-workspace [aria-pressed='true'],
+    .event-relations button,
+    .place-people button,
+    .comparison-years button,
+    .journey-step-controls button
+  ) {
+  background: var(--night-soft);
+  color: #d7e8d5;
+  border-color: #6a8470;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .category-filters button,
+    .panel-tabs button,
+    .main-nav button,
+    .era-strip button,
+    .dynasty-strip button,
+    .map-year,
+    .year-title,
+    .time-readout,
+    .event-map-link,
+    .live-read-more,
+    .resume-reading button,
+    .topic-reading-progress,
+    .chapter-read-mark,
+    .city-archive-link,
+    .comparison-read-button,
+    .place-visits a
+  ) {
+  color: #c9ddca;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(.rail-label, .rail-label small, .rail-event, .topic-marker, .journey-marker) {
+  color: #d3e1d4;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.rail-track, .rail-progress) {
+  background: #506453;
+}
+:root[data-color-mode='dark'] .atlas-app .panel-tabs {
+  border-color: var(--line);
+}
+:root[data-color-mode='dark'] .atlas-app .header-view-switch {
+  background: #102127;
+  box-shadow: inset 0 0 0 1px #42594e;
+  border-color: #42594e;
+}
+:root[data-color-mode='dark'] .atlas-app .header-view-switch [aria-pressed='true'] {
+  background: #476d5b;
+  color: #f1f3e6;
+}
+:root[data-color-mode='dark'] .atlas-app .header-view-switch [aria-pressed='true']::before {
+  background: #33594b;
+  box-shadow: 0 1px 4px #0003;
+}
+:root[data-color-mode='dark'] .color-mode-toggle {
+  background: #34463d;
+  border-color: #6d8069;
+  color: #eddaaa;
+}
+:root[data-color-mode='dark'] .color-mode-toggle:hover {
+  background: #435347;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.polity-label, .city-label, .place-focus-label) {
+  color: #edf2dc;
+  text-shadow:
+    0 1px 3px #0d1b22,
+    0 0 4px #0d1b22;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.event-marker-dot, .event-marker small) {
+  background: #29433f;
+  color: #e5edcb;
+  border-color: #a9bd91;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.polity-label:hover, .city-label:hover) {
+  background: #21362bd9;
+}
+:root[data-color-mode='dark'] .atlas-app .maplibregl-ctrl-attrib a {
+  color: #b6c8b7;
+}
+:root[data-color-mode='dark'] .atlas-app .maplibregl-ctrl-attrib-button {
+  filter: invert(1);
+  opacity: 0.85;
+}
+:root[data-color-mode='dark'] .atlas-app .switch {
+  background: #53635d;
+}
+:root[data-color-mode='dark'] .atlas-app .switch.on {
+  background: #86a87a;
+}
+:root[data-color-mode='dark'] .atlas-app .switch i {
+  background: #f2f0dd;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.pillar-error, .compare-error, .map-error) {
+  color: #edbaa6;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(.pillar-primary, .display-mode-primary, .play-button, .tour-next) {
+  background: #45664c;
+  color: #f1f3e5;
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(
+    .pillar-options label,
+    .pillar-options legend,
+    .pillar-help,
+    .pillar-filter-note,
+    .pillar-cluster-list p,
+    .pillar-cluster-list time,
+    .pillar-cluster-list button > span
+  ) {
+  color: #b9cbc1;
+}
+:root[data-color-mode='dark'] .atlas-app .pillar-filter-note {
+  background: #3c3d2e;
+}
+:root[data-color-mode='dark'] .atlas-app .pillar-dialog-head {
+  background: var(--pillar-surface);
+  color: var(--pillar-ink);
+  border-color: var(--pillar-rule);
+}
+:root[data-color-mode='dark'] .atlas-app .timeline .play-controls > button:not(.play-button) {
+  background: var(--night-raised);
+  color: var(--ink);
+}
+:root[data-color-mode='dark'] .time-pillar .pillar-play .pillar-play-main {
+  color: #233a45;
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  :root[data-color-mode='dark']
+    .atlas-app
+    .top-search:not([data-search-open='true']):not(:focus-within) {
+    background: transparent;
+  }
+}
+:root[data-color-mode='dark']
+  .atlas-app
+  :is(.pillar-options select, .pillar-options input, .pillar-reset) {
+  background-color: #20363b;
+  color: #dbe8dc;
+  border-color: #4a6261;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.pillar-event, .pillar-event strong) {
+  color: var(--pillar-ink);
+}
+:root[data-color-mode='dark'] .atlas-app .pillar-card.world time {
+  color: var(--world);
+}
+:root[data-color-mode='dark'] .atlas-app .pillar-card.china time {
+  color: var(--china);
+}
+:root[data-color-mode='dark'] .atlas-app :is(.pillar-settings, .pillar-play-main) {
+  color: #233a45;
+}
+:root[data-color-mode='dark'] .atlas-app :is(.pillar-settings, .pillar-play-main) span {
+  color: inherit;
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  :root[data-color-mode='dark'] .atlas-app .header-view-switch [aria-pressed='true'] {
+    background: transparent;
+  }
+}

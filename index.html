@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#f6f4ee" />
+    <script>
+      // Apply the saved appearance before the first paint; migrate the former night pillar.
+      try {
+        var appearanceKey = 'time-atlas:color-mode:v1'
+        var appearanceSaved = localStorage.getItem(appearanceKey)
+        if (
+          appearanceSaved === null &&
+          localStorage.getItem('time-atlas:pillar-theme:v1') === 'night'
+        ) {
+          appearanceSaved = 'dark'
+          localStorage.setItem(appearanceKey, appearanceSaved)
+        }
+      } catch (_) {}
+      var appearanceMode =
+        appearanceSaved === 'light' || appearanceSaved === 'dark'
+          ? appearanceSaved
+          : matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+      document.documentElement.dataset.colorMode = appearanceMode
+      document.documentElement.style.colorScheme = appearanceMode
+      document.querySelector('meta[name="theme-color"]').content =
+        appearanceMode === 'dark' ? '#142127' : '#fffefb'
+    </script>
     <meta name="application-name" content="山河纪" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />

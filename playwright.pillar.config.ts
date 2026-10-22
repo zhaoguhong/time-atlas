@@ -15,6 +15,7 @@ export default defineConfig({
     'time-pillar.spec.ts',
     'pillar-themes.spec.ts',
     'exploration-navigation.spec.ts',
+    'color-mode.spec.ts',
     'smoke.spec.ts',
   ],
   use: { ...base.use, baseURL: externalURL || `http://127.0.0.1:${port}` },

@@ -10,9 +10,21 @@ afterEach(() => vi.unstubAllGlobals())
 
 describe('saved pillar appearance', () => {
   it('treats absent, obsolete and untrusted preferences as the default column', () => {
-    for (const value of [null, undefined, '', 'dark', '__proto__', 'toString', '"night"', {}, 1])
+    for (const value of [
+      null,
+      undefined,
+      '',
+      'dark',
+      'night',
+      '__proto__',
+      'toString',
+      '"night"',
+      {},
+      1,
+    ])
       expect(parsePillarTheme(value)).toBe('column')
-    for (const value of ['column', 'line', 'night']) expect(parsePillarTheme(value)).toBe(value)
+    for (const value of ['column', 'line', 'scroll', 'ribbon'])
+      expect(parsePillarTheme(value)).toBe(value)
   })
 
   it('retains the selected appearance without changing unrelated saved reading data', () => {
@@ -22,8 +34,8 @@ describe('saved pillar appearance', () => {
       setItem: (key: string, value: string) => values.set(key, value),
     })
     expect(readPillarTheme()).toBe('column')
-    writePillarTheme('night')
-    expect(readPillarTheme()).toBe('night')
+    writePillarTheme('ribbon')
+    expect(readPillarTheme()).toBe('ribbon')
     writePillarTheme('line')
     expect(readPillarTheme()).toBe('line')
     expect(values.get('time-atlas:v1')).toBe('{"year":1450}')
@@ -41,7 +53,7 @@ describe('saved pillar appearance', () => {
     expect(readPillarTheme()).toBe('column')
     vi.stubGlobal('localStorage', undefined)
     expect(readPillarTheme()).toBe('column')
-    expect(() => writePillarTheme('night')).not.toThrow()
+    expect(() => writePillarTheme('ribbon')).not.toThrow()
   })
 
   it('does not interrupt browsing if saving a preference reaches the storage quota', () => {
@@ -51,7 +63,7 @@ describe('saved pillar appearance', () => {
         throw new DOMException('Quota reached', 'QuotaExceededError')
       },
     })
-    expect(() => writePillarTheme('night')).not.toThrow()
+    expect(() => writePillarTheme('ribbon')).not.toThrow()
     expect(readPillarTheme()).toBe('line')
   })
 })

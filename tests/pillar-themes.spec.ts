@@ -5,7 +5,8 @@ const storageKey = 'time-atlas:pillar-theme:v1'
 const themes = [
   ['column', '琉璃时柱'],
   ['line', '素笺编年'],
-  ['night', '星夜时柱'],
+  ['scroll', '山河长卷'],
+  ['ribbon', '经纬织带'],
 ] as const
 test.use({ hasTouch: true })
 
@@ -59,7 +60,7 @@ async function compactGeometry(page: Page) {
     const cards = [...document.querySelectorAll('.pillar-card')]
     const controls = [
       ...document.querySelectorAll(
-        '.pillar-controls, .pillar-footer, [aria-label="探索模式"], .pillar-focus-navigation',
+        '.pillar-footer, [aria-label="探索模式"], .pillar-focus-navigation',
       ),
     ].filter((element) => rect(element).width && rect(element).height)
     if (document.documentElement.scrollWidth > innerWidth) issues.push('horizontal overflow')
@@ -155,7 +156,7 @@ for (const [width, height] of [
   [390, 844],
   [568, 320],
 ]) {
-  test(`three themes preserve dense reading and state at ${width}x${height}`, async ({
+  test(`four themes preserve dense reading and state at ${width}x${height}`, async ({
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
@@ -180,10 +181,31 @@ for (const [width, height] of [
           .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-event-id'))),
       ).toEqual(cardIds)
       await compactGeometry(page)
+      if (id === 'column') {
+        const scene = (await page.locator('.pillar-scenery').boundingBox())!
+        const dock = (await page.locator('.pillar-controls').boundingBox())!
+        expect(scene.y + scene.height).toBeGreaterThan(dock.y + 28)
+        const settings = (await page.locator('.pillar-settings').boundingBox())!
+        const zoom = (await page.locator('.pillar-zoom').boundingBox())!
+        expect(settings.x).toBeGreaterThanOrEqual(zoom.x + zoom.width - 0.5)
+      }
       if (id === 'line') await expect(page.locator('.pillar-scenery')).not.toBeVisible()
       else await expect(page.locator('.pillar-scenery')).toBeVisible()
-      if (id === 'night') await nightTextContrast(page)
-      await page.screenshot({ path: info.outputPath(`${id}-${width}x${height}.png`) })
+
+      await page.screenshot({ path: info.outputPath(`${id}-light-${width}x${height}.png`) })
+      await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+      await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'dark')
+      await compactGeometry(page)
+      await nightTextContrast(page)
+      if (id === 'column') {
+        await openSettings(page)
+        await page.screenshot({ path: info.outputPath(`settings-dark-${width}x${height}.png`) })
+        await closeSettings(page)
+      }
+      expect(await readingState(page)).toEqual(state)
+      await page.screenshot({ path: info.outputPath(`${id}-dark-${width}x${height}.png`) })
+      await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+      await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'light')
     }
   })
 }
@@ -195,7 +217,7 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await ready(page, true)
   const state = await readingState(page)
   await openSettings(page)
-  await choose(page, '星夜时柱')
+  await choose(page, '经纬织带')
   await closeSettings(page)
   await page
     .getByRole('group', { name: '探索模式', exact: true })
@@ -206,15 +228,17 @@ test('appearance survives map navigation and reload, and radios support keyboard
     .getByRole('group', { name: '探索模式', exact: true })
     .getByRole('button', { name: '时空柱', exact: true })
     .click()
-  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'night')
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'ribbon')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)
   await page.reload()
-  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'night')
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'ribbon')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)
   await openSettings(page)
-  await page.getByRole('radio', { name: '星夜时柱', exact: true }).focus()
+  await page.getByRole('radio', { name: '经纬织带', exact: true }).focus()
+  await page.keyboard.press('ArrowLeft')
+  await expect(page.getByRole('radio', { name: '山河长卷', exact: true })).toBeChecked()
   await page.keyboard.press('ArrowLeft')
   await expect(page.getByRole('radio', { name: '素笺编年', exact: true })).toBeChecked()
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'line')
@@ -254,9 +278,9 @@ test('unavailable browser storage does not block the default or appearance contr
   await ready(page)
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
   await openSettings(page)
-  await choose(page, '星夜时柱')
+  await choose(page, '经纬织带')
   await closeSettings(page)
-  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'night')
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'ribbon')
   await compactGeometry(page)
   await page.getByRole('button', { name: '放大时间', exact: true }).click()
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '540')
@@ -273,8 +297,8 @@ test('theme preferences follow changes from another open tab without changing ch
   try {
     await ready(another)
     await openSettings(another)
-    await choose(another, '星夜时柱')
-    await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'night')
+    await choose(another, '经纬织带')
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'ribbon')
     expect(await readingState(page)).toEqual(state)
     await another.evaluate((key) => localStorage.removeItem(key), storageKey)
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')

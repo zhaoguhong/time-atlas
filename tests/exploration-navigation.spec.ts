@@ -50,7 +50,7 @@ async function expectHeaderFit(page: Page) {
     const frame = header.getBoundingClientRect()
     const items = [
       ...header.querySelectorAll(
-        '.brand, .header-view-switch, [data-main-topics], .top-search, .header-more, .header-actions',
+        '.brand, .header-view-switch, [data-main-topics], .top-search, .header-more, .header-actions, .color-mode-toggle',
       ),
     ]
       .filter((element) => {
@@ -105,6 +105,8 @@ for (const [width, height] of [
       await expectTouchControl(headerMode(page, name))
       await expect(headerMode(page, name)).toHaveText(name)
     }
+    await expectTouchControl(page.getByRole('button', { name: '切换到夜间模式', exact: true }))
+    await expect(page.locator('.visualization-action')).toHaveCount(0)
     await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'true')
     await expectHeaderFit(page)
     await expect(page.locator('.map-mode-shortcut')).toHaveCount(0)

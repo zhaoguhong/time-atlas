@@ -102,7 +102,7 @@
   position: absolute;
   left: var(--axis);
   top: var(--pillar-top, 34px);
-  bottom: 54px;
+  bottom: 12px;
   width: 1px;
   background: #b9c4be;
   pointer-events: none;
@@ -255,32 +255,37 @@
 }
 .pillar-controls {
   position: absolute;
-  left: 12px;
+  left: auto;
   right: 12px;
   bottom: 5px;
   z-index: 6;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  pointer-events: none;
+  gap: 0;
+  pointer-events: auto;
+  border: 1px solid #d1dce3;
+  border-radius: 10px;
+  background: #fffefb;
+  box-shadow: 0 3px 12px #30493514;
+  overflow: hidden;
 }
 .pillar-controls > * {
   pointer-events: auto;
 }
 .pillar-settings {
+  order: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-width: 70px;
-  min-height: 46px;
-  padding: 0 11px;
-  border: 1px solid #294f45;
-  border-radius: 10px;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 0;
   color: #fffef8;
   background: #36594e;
-  box-shadow: 0 2px 8px #24453c20;
+  box-shadow: none;
   font-size: 12px;
   font-weight: 500;
   position: relative;
@@ -301,10 +306,9 @@
 .pillar-zoom {
   display: flex;
   align-items: center;
-  background: #fffefbef;
-  border: 1px solid #d1dce3;
-  border-radius: 9px;
-  box-shadow: 0 3px 12px #3049350a;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   cursor: default;
 }
 .pillar-zoom button {
@@ -494,6 +498,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.pillar-view-window {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #64796c;
 }
 .pillar-options label {
   font-size: 12px;
@@ -750,8 +759,27 @@
   display: none;
 }
 .time-pillar[data-narrow='true'] .pillar-controls {
-  left: 8px;
+  left: auto;
   right: 8px;
+}
+.time-pillar[data-narrow='true'] .pillar-zoom > span {
+  display: none;
+}
+.time-pillar[data-narrow='true'] .pillar-settings {
+  min-width: 44px;
+  width: 44px;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+}
+.time-pillar[data-narrow='true'] .pillar-settings > span {
+  font-size: 9px;
+  line-height: 11px;
+}
+.time-pillar[data-dragging='true'] .pillar-controls,
+.time-pillar[data-dragging='true'] .pillar-controls > * {
+  opacity: 0;
+  pointer-events: none;
 }
 .time-pillar:not([data-side='compare']) .pillar-card.world,
 .time-pillar:not([data-side='compare']) .pillar-card.china {

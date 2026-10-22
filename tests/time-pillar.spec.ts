@@ -45,12 +45,13 @@ async function geometry(page: Page) {
         if (a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top)
           problems.push('overlapping cards')
       }
-    const zoom = document.querySelector('.pillar-controls')!.getBoundingClientRect()
-    for (const card of cards) {
-      const r = card.getBoundingClientRect()
-      if (r.left < zoom.right && r.right > zoom.left && r.top < zoom.bottom && r.bottom > zoom.top)
-        problems.push('zoom covers card')
-    }
+    const dock = document.querySelector('.pillar-controls')!.getBoundingClientRect()
+    if (
+      dock.right > stage.right + 0.5 ||
+      dock.left < stage.left - 0.5 ||
+      dock.bottom > stage.bottom
+    )
+      problems.push('floating tools outside canvas')
     return problems
   })
   expect(problems).toEqual([])
@@ -313,12 +314,18 @@ test('world-only reading uses the canvas range and header entry remains accessib
   await expect(page.locator('.list-description')).toContainText('当前画布')
   await expect(page.locator('.event-card').filter({ hasText: '哥伦布' })).toBeVisible()
   await expect(page.locator('.event-card').filter({ hasText: '工业革命' })).toHaveCount(0)
-  await page.getByRole('button', { name: '切换到地图', exact: true }).click()
+  await page
+    .getByRole('group', { name: '探索模式', exact: true })
+    .getByRole('button', { name: '地图', exact: true })
+    .click()
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-  await page.getByRole('button', { name: '切换到时空柱', exact: true }).click()
+  await page
+    .getByRole('group', { name: '探索模式', exact: true })
+    .getByRole('button', { name: '时空柱', exact: true })
+    .click()
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
 })
-test('continuous playback stops at 1912 and the mobile menu reveals a switched mode', async ({
+test('continuous playback stops at 1912 and the header reveals a switched mode', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
@@ -331,12 +338,16 @@ test('continuous playback stops at 1912 and the mobile menu reveals a switched m
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1912')
   await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
   await setSheet(page, 'reading')
-  await page.getByRole('button', { name: '更多操作', exact: true }).click()
-  await page.getByRole('button', { name: '切换到地图', exact: true }).click()
+  await page
+    .getByRole('group', { name: '探索模式', exact: true })
+    .getByRole('button', { name: '地图', exact: true })
+    .click()
   await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'split')
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-  await page.getByRole('button', { name: '更多操作', exact: true }).click()
-  await page.getByRole('button', { name: '切换到时空柱', exact: true }).click()
+  await page
+    .getByRole('group', { name: '探索模式', exact: true })
+    .getByRole('button', { name: '时空柱', exact: true })
+    .click()
   await expect(page.locator('.time-pillar')).toBeVisible()
 })
 

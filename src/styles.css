@@ -551,8 +551,8 @@ svg {
 }
 .maplibregl-ctrl-attrib {
   font-size: 8px !important;
-  background: #fffef990 !important;
-  color: #7f8f81 !important;
+  background: var(--map-attribution-bg, #fffef990) !important;
+  color: var(--map-attribution-ink, #7f8f81) !important;
 }
 .maplibregl-ctrl-attrib-button {
   opacity: 0.55;
