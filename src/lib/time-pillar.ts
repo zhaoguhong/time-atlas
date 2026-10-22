@@ -133,6 +133,7 @@ export function layoutPillar(
   cardHeight: number,
   side: PillarSide,
   selectedId?: string,
+  gap = 10,
 ): PillarCard[] {
   const { bottom, top } = pillarWindow(year, span)
   const visible = events.filter(
@@ -157,7 +158,7 @@ export function layoutPillar(
         a.year - b.year ||
         a.id.localeCompare(b.id),
     )
-    const capacity = Math.max(1, Math.floor((height + 10) / (cardHeight + 10)))
+    const capacity = Math.max(1, Math.floor((height + gap) / (cardHeight + gap)))
     while (ranked.length && cards.length < capacity) {
       // Spread equally important landmarks across the window instead of filling
       // the middle with one dense era. A lower importance cannot displace a higher one.
@@ -181,12 +182,14 @@ export function layoutPillar(
       ].sort((a, b) => a.anchorY - b.anchorY || a.event.id.localeCompare(b.event.id))
       proposed.forEach((c, i) => {
         const desired = Math.max(cardHeight / 2, Math.min(height - cardHeight / 2, c.anchorY))
-        c.y = Math.max(desired, i ? proposed[i - 1].y + cardHeight + 10 : cardHeight / 2)
+        c.y = Math.max(desired, i ? proposed[i - 1].y + cardHeight + gap : cardHeight / 2)
       })
       for (let i = proposed.length - 1; i >= 0; i--) {
         proposed[i].y = Math.min(
           proposed[i].y,
-          i === proposed.length - 1 ? height - cardHeight / 2 : proposed[i + 1].y - cardHeight - 10,
+          i === proposed.length - 1
+            ? height - cardHeight / 2
+            : proposed[i + 1].y - cardHeight - gap,
         )
       }
       if (

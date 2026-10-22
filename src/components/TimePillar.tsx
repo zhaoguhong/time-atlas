@@ -38,7 +38,6 @@ import {
   pillarWindow,
   type PillarSide,
 } from '../lib/time-pillar'
-import { periods } from '../data/periods'
 import { eventPlaybackYears, PLAYBACK_SPEEDS } from '../lib/playback'
 import '../time-pillar.css'
 
@@ -86,6 +85,7 @@ export default function TimePillar(p: Props) {
   const [error, setError] = useState('')
   const [query, setQuery] = useState('')
   const [dragging, setDragging] = useState(false)
+  const [showSummary, setShowSummary] = useState(false)
   const current = useRef(p)
   current.current = p
   const preview = useRef(draft)
@@ -106,15 +106,15 @@ export default function TimePillar(p: Props) {
     span = draft?.span ?? p.span
   const narrow = size.width < 560
   const single = p.side !== 'compare'
-  const axis = single ? 46 : size.width / 2
-  const radius = single ? 20 : narrow ? 26 : 46
-  const padding = 28
+  const axis = single ? 40 : size.width / 2
+  const railGap = narrow ? 29 : 42
+  const padding = 34
   const height = Math.max(48, size.height - padding - 54)
-  const cardHeight = Math.min(size.height < 260 ? 66 : narrow ? 68 : 78, Math.max(48, height - 6))
-  const summaryVisible = cardHeight >= 78 && !narrow && (single || size.width >= 900)
+  const cardHeight = Math.min(showSummary ? 76 : 44, height)
+  const summaryVisible = showSummary && cardHeight >= 64
   const windowRange = pillarWindow(year, span)
   const cards = useMemo(
-    () => layoutPillar(p.events, year, span, height, cardHeight, p.side, p.selectedId),
+    () => layoutPillar(p.events, year, span, height, cardHeight, p.side, p.selectedId, 4),
     [p.events, year, span, height, cardHeight, p.side, p.selectedId],
   )
   const ticks = useMemo(
@@ -254,20 +254,12 @@ export default function TimePillar(p: Props) {
     setCluster([...records].sort((a, b) => a.year - b.year || b.importance - a.importance))
     openPanel('cluster', trigger)
   }
-  const eraBands =
-    p.side === 'world'
-      ? []
-      : periods.filter(
-          (era) =>
-            toOrdinal(era.to) >= windowRange.bottom && toOrdinal(era.from) <= windowRange.top,
-        )
   return (
     <section
       className="time-pillar"
       aria-label="时空柱"
       data-side={p.side}
       data-narrow={narrow}
-      data-short={size.height < 260}
       data-summary={summaryVisible}
       data-dragging={dragging}
       style={{ '--axis': `${axis}px` } as CSSProperties}
@@ -427,69 +419,49 @@ export default function TimePillar(p: Props) {
             )}
           </span>
         </div>
-        <div className="pillar-grain" aria-hidden="true" />
-        <div className="pillar-cylinder" aria-hidden="true">
-          <div className="pillar-cap" />
-          <div className="pillar-foot" />
-        </div>
+        <div className="pillar-spine" aria-hidden="true" />
         <svg className="pillar-lines" width="100%" height="100%" aria-hidden="true">
-          <defs>
-            <linearGradient id="pillar-ring">
-              <stop stopColor="#6ca7da" stopOpacity=".55" />
-              <stop offset=".5" stopColor="#f7e5bf" stopOpacity=".85" />
-              <stop offset="1" stopColor="#d39a74" stopOpacity=".55" />
-            </linearGradient>
-          </defs>
           {ticks.map((t) => (
-            <g key={t}>
-              <line
-                x1="8%"
-                x2="92%"
-                y1={yFor(toOrdinal(t))}
-                y2={yFor(toOrdinal(t))}
-                stroke="#345b48"
-                strokeOpacity=".09"
-                strokeDasharray="2 5"
-              />
-              <ellipse
-                cx={axis}
-                cy={yFor(toOrdinal(t))}
-                rx={radius}
-                ry={narrow ? 9 : 15}
-                fill="none"
-                stroke="url(#pillar-ring)"
-              />
-            </g>
-          ))}
-          {cards.map((c) => (
-            <path
-              key={c.event.id}
-              d={`M ${axis + (!single && c.side === 'world' ? -1 : 1) * radius} ${padding + c.anchorY} L ${axis + (!single && c.side === 'world' ? -1 : 1) * (radius + 8)} ${padding + c.anchorY} L ${axis + (!single && c.side === 'world' ? -1 : 1) * (radius + 12)} ${padding + c.y}`}
-              fill="none"
-              stroke={c.side === 'world' ? '#568fc2' : '#bb7753'}
-              strokeOpacity=".55"
+            <line
+              key={t}
+              x1={single ? axis : 16}
+              x2={size.width - 16}
+              y1={yFor(toOrdinal(t))}
+              y2={yFor(toOrdinal(t))}
+              className="pillar-gridline"
             />
           ))}
-        </svg>
-        <div className="pillar-periods" aria-hidden="true">
-          {eraBands.map((era) => {
-            const top = yFor(Math.min(windowRange.top, toOrdinal(era.to))),
-              bottom = yFor(Math.max(windowRange.bottom, toOrdinal(era.from)))
-            return bottom - top > 25 ? (
-              <span key={era.id} style={{ top, height: bottom - top, borderColor: era.color }}>
-                {bottom - top > 52 ? era.short : ''}
-              </span>
-            ) : null
+          {cards.map((c) => {
+            const direction = !single && c.side === 'world' ? -1 : 1
+            const start = axis + direction * 4
+            const end = single ? 72 : axis + direction * railGap
+            return (
+              <g key={c.event.id} className={`pillar-connector ${c.side}`}>
+                <path
+                  d={`M ${start} ${padding + c.anchorY} C ${end} ${padding + c.anchorY}, ${start} ${padding + c.y}, ${end} ${padding + c.y}`}
+                  fill="none"
+                />
+                <circle cx={start} cy={padding + c.anchorY} r={2} />
+              </g>
+            )
           })}
-        </div>
-        {ticks.map((t) => (
-          <span key={t} className="pillar-tick" style={{ top: yFor(toOrdinal(t)) }}>
-            {compactYear(t)}
-            <small>{t < 0 ? 'BCE' : 'CE'}</small>
-          </span>
-        ))}
+        </svg>
+        {ticks
+          .filter(
+            (t) =>
+              Math.abs(yFor(toOrdinal(t)) - yFor(toOrdinal(year))) > (t < 0 || year < 0 ? 34 : 25),
+          )
+          .map((t) => (
+            <span key={t} className="pillar-tick" style={{ top: yFor(toOrdinal(t)) }}>
+              {t < 0 && <small>公元前</small>}
+              {Math.abs(t)}年
+            </span>
+          ))}
         <div className="pillar-now" style={{ top: yFor(toOrdinal(year)) }} aria-hidden="true">
-          <span>{compactYear(year)}</span>
+          <span>
+            {year < 0 && <small>公元前</small>}
+            {Math.abs(year)}年
+          </span>
         </div>
         {cards.map((c) => (
           <div
@@ -506,15 +478,14 @@ export default function TimePillar(p: Props) {
                 p.onEvent(c.event.id)
               }}
               aria-label={`${c.event.title}，${formatEventDate(c.event)}`}
+              title={`${formatEventDate(c.event)} · ${c.event.title}`}
             >
-              <span className="pillar-card-meta">
-                <time>{c.event.dateLabel ?? `${compactYear(c.event.year)} 年`}</time>
-                <small>
-                  {c.event.importance >= 5 ? '✦ ' : ''}
-                  {c.event.category}
-                </small>
+              <span className="pillar-event-line">
+                <time>
+                  {(c.event.dateLabel ?? `${compactYear(c.event.year)}年`).replace(/\s+/g, '')}
+                </time>
+                <strong>{c.event.title}</strong>
               </span>
-              <strong>{c.event.title}</strong>
               {summaryVisible && <p>{c.event.summary}</p>}
             </button>
           </div>
@@ -719,6 +690,20 @@ export default function TimePillar(p: Props) {
                 <option value="world">仅世界历史</option>
                 <option value="china">仅中国历史</option>
               </select>
+            </label>
+            <label className="pillar-summary-option">
+              <span>
+                <strong>显示事件简介</strong>
+                <small>默认只展示日期与标题，留出更多历史节点</small>
+              </span>
+              <span className="pillar-summary-toggle">
+                <input
+                  type="checkbox"
+                  checked={showSummary}
+                  onChange={(event) => setShowSummary(event.target.checked)}
+                />
+                <span aria-hidden="true" />
+              </span>
             </label>
             <form
               onSubmit={(e) => {

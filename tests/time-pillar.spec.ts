@@ -34,7 +34,7 @@ async function geometry(page: Page) {
         r.bottom > stage.bottom + 0.5
       )
         problems.push('clipped card ' + card.getAttribute('data-event-id'))
-      const title = card.querySelector('strong')!.getBoundingClientRect()
+      const title = card.querySelector('.pillar-event-line')!.getBoundingClientRect()
       if (title.bottom > r.bottom - 3 || title.top < r.top + 3)
         problems.push('clipped title ' + card.getAttribute('data-event-id'))
     }
@@ -70,16 +70,24 @@ for (const [width, height] of [
     await page.setViewportSize({ width, height })
     await ready(page)
     await geometry(page)
+    await expect(page.locator('.pillar-event p')).toHaveCount(0)
+    for (const event of await page.locator('.pillar-event').all()) {
+      expect((await event.boundingBox())!.height).toBeGreaterThanOrEqual(44)
+      await expect(event.locator('time')).toBeVisible()
+      await expect(event.locator('strong')).toBeVisible()
+    }
     if (width === 390 || width === 360) {
       const toolbar = (await page.locator('.pillar-header').boundingBox())!
       expect(toolbar.height).toBeLessThanOrEqual(56)
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
-        width === 390 ? 12 : 8,
+        width === 390 ? 20 : 12,
       )
       await expect(page.getByLabel('切换历史范围', { exact: true })).toBeVisible()
     }
     await page.screenshot({ path: info.outputPath(`compare-${width}x${height}.png`) })
-    expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(28)
+    expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(
+      2 * Math.floor((await page.locator('.pillar-stage').boundingBox())!.height / 44),
+    )
     for (const control of ['放大时间', '缩小时间', '播放时空柱', '时空柱筛选与设置']) {
       const button = page.getByRole('button', { name: control, exact: true })
       await expect(button).toBeInViewport({ ratio: 1 })
@@ -225,7 +233,9 @@ test('cold pillar does not load map data, and rapid navigation has bounded rende
   await canvas.focus()
   for (let i = 0; i < 15; i++) await page.keyboard.press(i % 2 ? 'ArrowUp' : 'ArrowDown')
   await geometry(page)
-  expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(28)
+  expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(
+    2 * Math.floor((await page.locator('.pillar-stage').boundingBox())!.height / 44),
+  )
   expect(errors).toEqual([])
 })
 test('trusted two-finger gesture zooms without opening an event', async ({
@@ -430,3 +440,62 @@ for (const [width, height] of [
     await page.screenshot({ path: info.outputPath(`overview-reading-${width}.png`) })
   })
 }
+
+test('compact labels are the default, summaries are optional, and years use Chinese notation', async ({
+  page,
+}, info) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await ready(page)
+  const compactCount = await page.locator('.pillar-card').count()
+  expect(compactCount).toBeGreaterThanOrEqual(24)
+  await expect(page.locator('.pillar-event p')).toHaveCount(0)
+  await expect(page.locator('.pillar-now')).toHaveText('1500年')
+  for (const label of await page.locator('.pillar-tick').allTextContents()) {
+    expect(label).toMatch(/^\d+年$/)
+  }
+  const rows = await page.locator('.pillar-event-line').evaluateAll((elements) =>
+    elements.map((e) => {
+      const date = e.querySelector('time')!,
+        title = e.querySelector('strong')!
+      const a = date.getBoundingClientRect(),
+        b = title.getBoundingClientRect()
+      return (
+        date.getClientRects().length === 1 &&
+        title.getClientRects().length === 1 &&
+        a.right < b.left &&
+        a.top < b.bottom &&
+        a.bottom > b.top
+      )
+    }),
+  )
+  expect(rows.every(Boolean)).toBe(true)
+  await settings(page)
+  expect(
+    (await page.getByLabel('时空柱浏览方式', { exact: true }).boundingBox())!.height,
+  ).toBeGreaterThanOrEqual(44)
+  await page.getByRole('checkbox', { name: /^显示事件简介/ }).check()
+  await closeSettings(page)
+  await expect(page.locator('.pillar-event p').first()).toBeVisible()
+  expect(await page.locator('.pillar-card').count()).toBeLessThan(compactCount)
+  await geometry(page)
+  await page.screenshot({ path: info.outputPath('optional-summaries.png') })
+  await page.setViewportSize({ width: 360, height: 640 })
+  await page.evaluate(
+    () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+  )
+  await geometry(page)
+  await settings(page)
+  await page.getByRole('checkbox', { name: /^显示事件简介/ }).uncheck()
+  await closeSettings(page)
+  await expect(page.locator('.pillar-event p')).toHaveCount(0)
+  await page.goto('/#visual=pillar&year=-221&span=800')
+  await expect(page.locator('.pillar-now')).toHaveText('公元前221年')
+  expect(
+    (await page.locator('.pillar-tick').allTextContents()).some((t) => t.startsWith('公元前')),
+  ).toBe(true)
+  expect((await page.locator('.pillar-tick').allTextContents()).some((t) => /BCE|CE/.test(t))).toBe(
+    false,
+  )
+  await geometry(page)
+  await page.screenshot({ path: info.outputPath('bce-chronology.png') })
+})

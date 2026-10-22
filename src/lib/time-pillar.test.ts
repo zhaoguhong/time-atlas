@@ -43,28 +43,41 @@ describe('time pillar chronology and disclosure', () => {
   it('packs cards without overlaps while retaining every in-range event in a cluster', () => {
     for (const height of [48, 130, 350, 580])
       for (const year of [-2500, -1, 800, 1500, 1900])
-        for (const span of [8, 100, 900, MAX_SPAN]) {
-          const cardHeight = Math.min(112, height)
-          const cards = layoutPillar(events, year, span, height, cardHeight, 'compare')
-          const w = pillarWindow(year, span)
-          const expected = events.filter(
-            (e) => toOrdinal(e.year) <= w.top && toOrdinal(e.endYear ?? e.year) >= w.bottom,
-          )
-          const ids = cards.flatMap((c) => [c.event.id, ...c.hidden.map((e) => e.id)])
-          expect(new Set(ids).size).toBe(ids.length)
-          expect(new Set(ids)).toEqual(new Set(expected.map((e) => e.id)))
-          for (const lane of ['world', 'china']) {
-            const laneCards = cards.filter((c) => c.side === lane).sort((a, b) => a.y - b.y)
-            for (let i = 0; i < laneCards.length; i++) {
-              expect(laneCards[i].y - cardHeight / 2).toBeGreaterThanOrEqual(-0.001)
-              expect(laneCards[i].y + cardHeight / 2).toBeLessThanOrEqual(height + 0.001)
-              if (i)
-                expect(laneCards[i].y - laneCards[i - 1].y).toBeGreaterThanOrEqual(
-                  cardHeight + 9.99,
-                )
+        for (const span of [8, 100, 900, MAX_SPAN])
+          for (const [idealHeight, gap] of [
+            [44, 4],
+            [112, 10],
+          ]) {
+            const cardHeight = Math.min(idealHeight, height)
+            const cards = layoutPillar(
+              events,
+              year,
+              span,
+              height,
+              cardHeight,
+              'compare',
+              undefined,
+              gap,
+            )
+            const w = pillarWindow(year, span)
+            const expected = events.filter(
+              (e) => toOrdinal(e.year) <= w.top && toOrdinal(e.endYear ?? e.year) >= w.bottom,
+            )
+            const ids = cards.flatMap((c) => [c.event.id, ...c.hidden.map((e) => e.id)])
+            expect(new Set(ids).size).toBe(ids.length)
+            expect(new Set(ids)).toEqual(new Set(expected.map((e) => e.id)))
+            for (const lane of ['world', 'china']) {
+              const laneCards = cards.filter((c) => c.side === lane).sort((a, b) => a.y - b.y)
+              for (let i = 0; i < laneCards.length; i++) {
+                expect(laneCards[i].y - cardHeight / 2).toBeGreaterThanOrEqual(-0.001)
+                expect(laneCards[i].y + cardHeight / 2).toBeLessThanOrEqual(height + 0.001)
+                if (i)
+                  expect(laneCards[i].y - laneCards[i - 1].y).toBeGreaterThanOrEqual(
+                    cardHeight + gap - 0.01,
+                  )
+              }
             }
           }
-        }
   })
   it('promotes the selected event and reveals previously clustered events on zoom', () => {
     const broad = layoutPillar(events, 1500, 1000, 550, 100, 'compare')
