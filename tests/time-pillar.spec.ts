@@ -34,6 +34,9 @@ async function geometry(page: Page) {
         r.bottom > stage.bottom + 0.5
       )
         problems.push('clipped card ' + card.getAttribute('data-event-id'))
+      const title = card.querySelector('strong')!.getBoundingClientRect()
+      if (title.bottom > r.bottom - 3 || title.top < r.top + 3)
+        problems.push('clipped title ' + card.getAttribute('data-event-id'))
     }
     for (let i = 0; i < cards.length; i++)
       for (let j = i + 1; j < cards.length; j++) {
@@ -67,7 +70,16 @@ for (const [width, height] of [
     await page.setViewportSize({ width, height })
     await ready(page)
     await geometry(page)
-    expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(16)
+    if (width === 390 || width === 360) {
+      const toolbar = (await page.locator('.pillar-header').boundingBox())!
+      expect(toolbar.height).toBeLessThanOrEqual(56)
+      expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
+        width === 390 ? 12 : 8,
+      )
+      await expect(page.getByLabel('切换历史范围', { exact: true })).toBeVisible()
+    }
+    await page.screenshot({ path: info.outputPath(`compare-${width}x${height}.png`) })
+    expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(28)
     for (const control of ['放大时间', '缩小时间', '播放时空柱', '时空柱筛选与设置']) {
       const button = page.getByRole('button', { name: control, exact: true })
       await expect(button).toBeInViewport({ ratio: 1 })
@@ -212,7 +224,7 @@ test('cold pillar does not load map data, and rapid navigation has bounded rende
   await canvas.focus()
   for (let i = 0; i < 15; i++) await page.keyboard.press(i % 2 ? 'ArrowUp' : 'ArrowDown')
   await geometry(page)
-  expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(16)
+  expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(28)
   expect(errors).toEqual([])
 })
 test('trusted two-finger gesture zooms without opening an event', async ({
@@ -310,3 +322,110 @@ test('continuous playback stops at 1912 and the mobile menu reveals a switched m
   await page.getByRole('button', { name: '切换到时空柱', exact: true }).click()
   await expect(page.locator('.time-pillar')).toBeVisible()
 })
+
+for (const [width, height] of [
+  [360, 640],
+  [568, 320],
+]) {
+  test(`compact controls remain reachable through focus and reading at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await ready(page)
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page.getByRole('button', { name: '进入专注模式', exact: true }).click()
+    await expect(page.locator('.atlas-app')).toHaveAttribute('data-focus-mode', 'true')
+    await expect(page.locator('.visualization-switch')).toBeInViewport({ ratio: 1 })
+    const side = page.getByLabel('切换历史范围', { exact: true })
+    if (await side.isVisible()) {
+      await side.selectOption('world')
+    } else {
+      await page.getByRole('button', { name: '世界历史', exact: true }).click()
+    }
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+    await geometry(page)
+    await page.locator('.pillar-event').first().click()
+    await setSheet(page, 'split')
+    await expect(page.locator('.event-detail h2')).toBeVisible()
+    await geometry(page)
+    const rectangles = await page.evaluate(() =>
+      [
+        ...document.querySelectorAll(
+          '.visualization-switch, .pillar-side-select, .pillar-tabs, .pillar-settings, .focus-mode-exit',
+        ),
+      ]
+        .filter((el) => el.getBoundingClientRect().width > 0)
+        .map((el) => ({ name: el.className, ...el.getBoundingClientRect().toJSON() })),
+    )
+    for (const rect of rectangles) {
+      expect(rect.left, rect.name).toBeGreaterThanOrEqual(0)
+      expect(rect.right, rect.name).toBeLessThanOrEqual(width)
+      for (const other of rectangles.filter((item) => item.name !== rect.name))
+        expect(
+          rect.left < other.right &&
+            rect.right > other.left &&
+            rect.top < other.bottom &&
+            rect.bottom > other.top,
+          `${rect.name} overlaps ${other.name}`,
+        ).toBe(false)
+    }
+    await page.screenshot({ path: info.outputPath(`focus-reading-${width}.png`) })
+    await page.getByRole('button', { name: '退出专注模式', exact: true }).click()
+    await setSheet(page, 'map')
+    await page.locator('.pillar-cluster').click()
+    await page.keyboard.press('Escape')
+    await expect(page.locator('.pillar-cluster')).toBeFocused()
+    await page.locator('.pillar-cluster').click()
+    const buttons = page.locator('.pillar-cluster-list button')
+    const total = await buttons.count()
+    await expect(page.locator('.pillar-cluster')).toHaveAccessibleName(
+      `查看这段时间的全部${total}个事件`,
+    )
+    expect(total).toBeGreaterThan(await page.locator('.pillar-card').count())
+    await page.getByLabel('搜索聚合事件', { exact: true }).fill('哥伦布')
+    await expect(buttons).toHaveCount(1)
+    await buttons.first().click()
+    await expect(page.locator('.event-detail h2')).toContainText('哥伦布')
+    await expect(page.locator('.pillar-card.selected')).toHaveCount(1)
+    await setSheet(page, 'map')
+    for (let i = 0; i < 2; i++) {
+      await page
+        .getByRole('group', { name: '探索模式', exact: true })
+        .getByRole('button', { name: '地图', exact: true })
+        .click()
+      await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+      await page
+        .getByRole('group', { name: '探索模式', exact: true })
+        .getByRole('button', { name: '时空柱', exact: true })
+        .click()
+      await expect(page.locator('.pillar-card.selected')).toHaveCount(1)
+    }
+    await geometry(page)
+    await setSheet(page, 'split')
+    await page.locator('.pillar-stage').press('Home')
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '-10000')
+    for (const overview of [false, true]) {
+      if (overview) await page.getByRole('button', { name: '查看历史全貌', exact: true }).click()
+      const footer = await page.evaluate(() => {
+        const canvas = document.querySelector('.time-pillar')!.getBoundingClientRect()
+        return [...document.querySelectorAll('.pillar-footer button')]
+          .map((el) => el.getBoundingClientRect())
+          .filter((rect) => rect.width > 0)
+          .map((rect) => ({
+            left: rect.left - canvas.left,
+            right: rect.right - canvas.right,
+            width: rect.width,
+            height: rect.height,
+          }))
+      })
+      for (const control of footer) {
+        expect(control.left).toBeGreaterThanOrEqual(0)
+        expect(control.right).toBeLessThanOrEqual(0)
+        expect(control.width).toBeGreaterThanOrEqual(44)
+        expect(control.height).toBeGreaterThanOrEqual(44)
+      }
+      await geometry(page)
+    }
+    await page.screenshot({ path: info.outputPath(`overview-reading-${width}.png`) })
+  })
+}

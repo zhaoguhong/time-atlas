@@ -4,6 +4,8 @@ import {
   ArrowUp,
   Check,
   ChevronsUpDown,
+  ChevronDown,
+  List,
   Globe2,
   Layers3,
   LocateFixed,
@@ -73,6 +75,7 @@ export default function TimePillar(p: Props) {
   const stage = useRef<HTMLDivElement>(null)
   const dialog = useRef<HTMLDialogElement>(null)
   const optionsTrigger = useRef<HTMLButtonElement>(null)
+  const modalTrigger = useRef<HTMLElement | null>(null)
   const [size, setSize] = useState({ width: 800, height: 500 })
   const [draft, setDraft] = useState<{ year: number; span: number } | null>(null)
   const [modal, setModal] = useState<'settings' | 'cluster' | null>(null)
@@ -104,12 +107,11 @@ export default function TimePillar(p: Props) {
   const narrow = size.width < 560
   const single = p.side !== 'compare'
   const axis = single ? 46 : size.width / 2
-  const radius = single ? 20 : narrow ? 35 : 65
-  const padding = size.height < 240 ? 12 : 30
-  const height = Math.max(48, size.height - padding * 2 - 44)
-  const preferredHeight = height < 240 ? Math.max(64, Math.min(96, (height - 10) / 2)) : 112
-  const cardHeight = Math.min(preferredHeight, Math.max(48, height - 6))
-  const summaryVisible = (!narrow || single) && cardHeight >= 100
+  const radius = single ? 20 : narrow ? 26 : 46
+  const padding = 28
+  const height = Math.max(48, size.height - padding - 54)
+  const cardHeight = Math.min(size.height < 260 || narrow ? 68 : 78, Math.max(48, height - 6))
+  const summaryVisible = cardHeight >= 78 && !narrow && (single || size.width >= 900)
   const windowRange = pillarWindow(year, span)
   const cards = useMemo(
     () => layoutPillar(p.events, year, span, height, cardHeight, p.side, p.selectedId),
@@ -150,6 +152,17 @@ export default function TimePillar(p: Props) {
     const anchor = w.top - fraction * w.span
     return { year: limited(anchor + (fraction - 0.5) * newSpan), span: newSpan }
   }
+  // Parent reading/focus changes resize the canvas in this same React commit.
+  // Measure before paint so cards never retain the previous, taller layout.
+  useLayoutEffect(() => {
+    const bounds = stage.current?.getBoundingClientRect()
+    if (bounds)
+      setSize((previous) =>
+        previous.width === bounds.width && previous.height === bounds.height
+          ? previous
+          : { width: bounds.width, height: bounds.height },
+      )
+  })
   useLayoutEffect(() => {
     const element = stage.current
     if (!element) return
@@ -216,11 +229,17 @@ export default function TimePillar(p: Props) {
       moved: false,
     }
   }
+  function openPanel(type: 'settings' | 'cluster', trigger: HTMLElement) {
+    modalTrigger.current = trigger
+    setModal(type)
+  }
   function closeModal() {
     setModal(null)
     setError('')
     setQuery('')
-    requestAnimationFrame(() => optionsTrigger.current?.focus())
+    requestAnimationFrame(() =>
+      (modalTrigger.current?.isConnected ? modalTrigger.current : optionsTrigger.current)?.focus(),
+    )
   }
   function step(direction: number) {
     p.onPause()
@@ -229,11 +248,11 @@ export default function TimePillar(p: Props) {
       direction > 0 ? years.find((y) => y > p.year) : [...years].reverse().find((y) => y < p.year)
     if (next !== undefined) p.onNavigate(next, p.span)
   }
-  function openCluster(records: HistoryEvent[]) {
+  function openCluster(records: HistoryEvent[], trigger: HTMLElement) {
     flush()
     p.onPause()
     setCluster([...records].sort((a, b) => a.year - b.year || b.importance - a.importance))
-    setModal('cluster')
+    openPanel('cluster', trigger)
   }
   const eraBands =
     p.side === 'world'
@@ -248,20 +267,12 @@ export default function TimePillar(p: Props) {
       aria-label="时空柱"
       data-side={p.side}
       data-narrow={narrow}
-      data-compact={cardHeight < 100}
+      data-short={size.height < 260}
+      data-summary={summaryVisible}
       data-dragging={dragging}
       style={{ '--axis': `${axis}px` } as CSSProperties}
     >
       <header className="pillar-header">
-        <div className="pillar-heading">
-          <span className="pillar-emblem">
-            <Layers3 size={21} />
-          </span>
-          <div>
-            <h1>时空柱</h1>
-            <p>同一时刻，不同的世界</p>
-          </div>
-        </div>
         <div className="pillar-tabs" role="group" aria-label="历史对照方式">
           {(
             [
@@ -282,14 +293,29 @@ export default function TimePillar(p: Props) {
             </button>
           ))}
         </div>
+        <label className="pillar-side-select">
+          <select
+            aria-label="切换历史范围"
+            value={p.side}
+            onChange={(event) => {
+              flush()
+              p.onSide(event.target.value as PillarSide)
+            }}
+          >
+            <option value="compare">中外对照</option>
+            <option value="world">世界历史</option>
+            <option value="china">中国历史</option>
+          </select>
+          <ChevronDown size={14} aria-hidden="true" />
+        </label>
         <button
           ref={optionsTrigger}
           className="pillar-settings"
           aria-label="时空柱筛选与设置"
           title="筛选、年份定位与播放范围"
-          onClick={() => {
+          onClick={(event) => {
             flush()
-            setModal('settings')
+            openPanel('settings', event.currentTarget)
           }}
         >
           <Settings2 size={18} />
@@ -297,29 +323,6 @@ export default function TimePillar(p: Props) {
           {(p.category !== '全部' || p.region !== 'all' || p.range || p.hasSpatialFilter) && <i />}
         </button>
       </header>
-      <div className="pillar-lanes" aria-hidden="true">
-        <span>
-          <i />
-          {p.side === 'china' ? '中国历史' : '世界历史'}
-          <small>
-            {p.side === 'china'
-              ? '历代脉络'
-              : p.region === 'all'
-                ? '中国之外'
-                : historyRegions[p.region as keyof typeof historyRegions]}
-          </small>
-        </span>
-        <span>
-          {p.side === 'compare' ? (
-            <>
-              <i />
-              中国历史<small>历代脉络</small>
-            </>
-          ) : (
-            <small>更近的年代 ↑</small>
-          )}
-        </span>
-      </div>
       <div
         ref={stage}
         className="pillar-stage"
@@ -401,6 +404,29 @@ export default function TimePillar(p: Props) {
           }
         }}
       >
+        <div className="pillar-lanes" aria-hidden="true">
+          <span>
+            <i />
+            {p.side === 'china' ? '中国历史' : '世界历史'}
+            <small>
+              {p.side === 'china'
+                ? '历代脉络'
+                : p.region === 'all'
+                  ? '中国之外'
+                  : historyRegions[p.region as keyof typeof historyRegions]}
+            </small>
+          </span>
+          <span>
+            {p.side === 'compare' ? (
+              <>
+                <i />
+                中国历史<small>历代脉络</small>
+              </>
+            ) : (
+              <small>更近的年代 ↑</small>
+            )}
+          </span>
+        </div>
         <div className="pillar-grain" aria-hidden="true" />
         <div className="pillar-cylinder" aria-hidden="true">
           <div className="pillar-cap" />
@@ -409,9 +435,9 @@ export default function TimePillar(p: Props) {
         <svg className="pillar-lines" width="100%" height="100%" aria-hidden="true">
           <defs>
             <linearGradient id="pillar-ring">
-              <stop stopColor="#477e75" stopOpacity=".1" />
-              <stop offset=".5" stopColor="#7b9c93" stopOpacity=".42" />
-              <stop offset="1" stopColor="#bc955e" stopOpacity=".1" />
+              <stop stopColor="#6ca7da" stopOpacity=".55" />
+              <stop offset=".5" stopColor="#f7e5bf" stopOpacity=".85" />
+              <stop offset="1" stopColor="#d39a74" stopOpacity=".55" />
             </linearGradient>
           </defs>
           {ticks.map((t) => (
@@ -440,7 +466,7 @@ export default function TimePillar(p: Props) {
               key={c.event.id}
               d={`M ${axis + (!single && c.side === 'world' ? -1 : 1) * radius} ${padding + c.anchorY} L ${axis + (!single && c.side === 'world' ? -1 : 1) * (radius + 8)} ${padding + c.anchorY} L ${axis + (!single && c.side === 'world' ? -1 : 1) * (radius + 12)} ${padding + c.y}`}
               fill="none"
-              stroke={c.side === 'world' ? '#588b8a' : '#b58a53'}
+              stroke={c.side === 'world' ? '#568fc2' : '#bb7753'}
               strokeOpacity=".55"
             />
           ))}
@@ -470,6 +496,7 @@ export default function TimePillar(p: Props) {
             key={c.event.id}
             className={`pillar-card ${c.side} ${c.event.id === p.selectedId ? 'selected' : ''}`}
             data-event-id={c.event.id}
+            data-category={c.event.category}
             style={{ top: padding + c.y - cardHeight / 2, height: cardHeight }}
           >
             <button
@@ -483,23 +510,13 @@ export default function TimePillar(p: Props) {
               <span className="pillar-card-meta">
                 <time>{c.event.dateLabel ?? `${compactYear(c.event.year)} 年`}</time>
                 <small>
-                  {c.event.importance >= 5 ? '◆ ' : ''}
+                  {c.event.importance >= 5 ? '✦ ' : ''}
                   {c.event.category}
                 </small>
               </span>
               <strong>{c.event.title}</strong>
               {summaryVisible && <p>{c.event.summary}</p>}
             </button>
-            {c.hidden.length > 0 && (
-              <button
-                className="pillar-cluster"
-                aria-label={`查看${c.event.title}附近的${c.hidden.length + 1}个事件`}
-                onClick={() => openCluster([c.event, ...c.hidden])}
-              >
-                +{c.hidden.length}
-                <span> 件</span>
-              </button>
-            )}
           </div>
         ))}
         {!cards.length && (
@@ -510,7 +527,10 @@ export default function TimePillar(p: Props) {
             <button data-pillar-control onClick={() => commit({ year: year, span: MAX_SPAN })}>
               放眼历史全貌
             </button>
-            <button data-pillar-control onClick={() => setModal('settings')}>
+            <button
+              data-pillar-control
+              onClick={(event) => openPanel('settings', event.currentTarget)}
+            >
               调整筛选
             </button>
           </div>
@@ -556,9 +576,9 @@ export default function TimePillar(p: Props) {
         <button
           className="pillar-year"
           title="定位年份"
-          onClick={() => {
+          onClick={(event) => {
             setJump(String(year))
-            setModal('settings')
+            openPanel('settings', event.currentTarget)
           }}
         >
           <span>此刻的世界</span>
@@ -586,11 +606,26 @@ export default function TimePillar(p: Props) {
           </button>
         </div>
         <div className="pillar-footer-info">
-          <span>
-            {visibleCount} 件已收录 · {cards.length} 件展开
-          </span>
+          <span>同一时刻，不同的世界</span>
           <small>拖动探索 · 双指缩放 · 点击阅读</small>
         </div>
+        <button
+          className="pillar-cluster"
+          aria-label={`查看这段时间的全部${visibleCount}个事件`}
+          disabled={!visibleCount}
+          onClick={(event) =>
+            openCluster(
+              cards.flatMap((c) => [c.event, ...c.hidden]),
+              event.currentTarget,
+            )
+          }
+        >
+          <List size={17} aria-hidden="true" />
+          <span>
+            <strong>{visibleCount} 件</strong>
+            <small>全部事件</small>
+          </span>
+        </button>
         <button className="pillar-reader" aria-label="打开历史资料" onClick={p.onRead}>
           <Layers3 size={18} />
         </button>
@@ -611,7 +646,7 @@ export default function TimePillar(p: Props) {
           <div>
             <span className="eyebrow">TIME ATLAS · 时空柱</span>
             <h2 id="pillar-dialog-title">
-              {modal === 'cluster' ? '展开这段历史' : '寻找你的时间坐标'}
+              {modal === 'cluster' ? `这段历史 · ${cluster.length} 件事件` : '寻找你的时间坐标'}
             </h2>
           </div>
           <button aria-label="关闭时空柱面板" onClick={closeModal}>
