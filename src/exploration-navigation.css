@@ -1,0 +1,232 @@
+/* View switching shares the masthead; the canvas has no separate navigation row. */
+.atlas-app .topbar {
+  gap: 22px;
+}
+.atlas-app .topbar .brand {
+  min-width: 132px;
+  flex-shrink: 0;
+}
+.atlas-app .topbar .main-nav {
+  height: auto;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+.atlas-app .header-view-switch {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid #e1e7dd;
+  border-radius: 10px;
+  background: #f2f5ed;
+}
+.atlas-app .header-view-switch button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 12px;
+  gap: 6px;
+  border-radius: 7px;
+  color: #617267;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.atlas-app .header-view-switch [aria-pressed='true'] {
+  background: #36594e;
+  color: #fffef8;
+  box-shadow: 0 1px 3px #244c3320;
+}
+.atlas-app .header-view-switch button:focus-visible,
+.atlas-app .visualization-switch button:focus-visible {
+  outline: 2px solid #367c9b;
+  outline-offset: -2px;
+}
+.atlas-app .main-nav [data-main-topics] {
+  min-height: 44px;
+  padding-inline: 4px;
+}
+.atlas-app .header-actions > :is(.navigation-menu-entry, .topics-menu-entry) {
+  display: none;
+}
+.atlas-app .header-actions.mobile-open > .navigation-menu-entry {
+  display: inline-flex;
+}
+
+/* This text shortcut stays visible beside the map layers, including during tours. */
+.atlas-app[data-visualization='map'] .map-bottom-left {
+  left: 12px;
+  right: 64px;
+  gap: 8px;
+}
+.atlas-app .map-tools-row {
+  --navigation-safe-top: env(safe-area-inset-top, 0px);
+  --navigation-safe-right: env(safe-area-inset-right, 0px);
+  --navigation-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --navigation-safe-left: env(safe-area-inset-left, 0px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+}
+.atlas-app .map-tools-row .layers-button {
+  min-height: 44px;
+  white-space: nowrap;
+}
+.atlas-app .map-tools-row .layers-popover:not([data-positioned='true']) {
+  visibility: hidden;
+}
+.atlas-app .map-tools-row .map-mode-shortcut {
+  position: static;
+  display: flex;
+  padding: 0;
+  border: 1px solid #b8cbbb;
+  border-radius: 8px;
+  background: #fffef8f5;
+  box-shadow: 0 2px 8px #294a3514;
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.atlas-app .map-mode-shortcut button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  gap: 6px;
+  color: #365c4a;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.atlas-app .map-mode-shortcut button:hover {
+  background: #eaf1e5;
+}
+.atlas-app[data-focus-mode='true'] .pillar-focus-navigation {
+  position: absolute;
+  z-index: 8;
+  left: 58px;
+  top: 4px;
+  display: flex;
+  padding: 0;
+  background: #fffef8f5;
+  border: 1px solid #cbd8cc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #294a3510;
+}
+.atlas-app .pillar-focus-navigation button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  gap: 6px;
+  font-size: 12px;
+  color: #36594e;
+  border-radius: 7px;
+}
+
+@media (max-width: 1200px) {
+  .atlas-app .topbar {
+    gap: 14px;
+  }
+  .atlas-app .topbar .brand {
+    min-width: 114px;
+  }
+  .atlas-app .topbar .main-nav {
+    gap: 12px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .atlas-app .map-bottom-left:has(.layers-popover) {
+    z-index: 16;
+  }
+  .atlas-app .map-tools-row .layers-popover {
+    position: fixed;
+    right: auto;
+    margin: 0;
+    min-height: 0;
+    max-width: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 50;
+  }
+  .atlas-app .topbar {
+    gap: 4px;
+    padding-inline: 10px;
+  }
+  .atlas-app .topbar .brand {
+    min-width: 0;
+  }
+  .atlas-app .topbar .main-nav {
+    margin-left: auto;
+    gap: 0;
+  }
+  .atlas-app .header-view-switch {
+    gap: 0;
+    padding: 1px;
+    border-radius: 8px;
+  }
+  .atlas-app .header-view-switch button {
+    padding-inline: 8px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+  .atlas-app .header-view-switch svg,
+  .atlas-app .main-nav [data-main-topics] {
+    display: none;
+  }
+  .atlas-app .header-actions.mobile-open > .topics-menu-entry {
+    display: inline-flex;
+  }
+  .atlas-app .map-tools-row {
+    gap: 6px;
+  }
+  .atlas-app .map-mode-shortcut button {
+    padding-inline: 8px;
+    font-size: 11px;
+    gap: 5px;
+  }
+}
+@media (max-width: 350px) {
+  .atlas-app .topbar {
+    padding-inline: 8px;
+  }
+  .atlas-app .topbar .brand-mark {
+    display: none;
+  }
+}
+
+/* The timeline already shows the current year; narrow comparison panes need one form row. */
+@media (min-width: 560px) and (max-width: 700px) and (max-height: 540px) and (orientation: landscape) {
+  .atlas-app[data-mobile-view='split'] .comparison-controls {
+    max-height: calc(100% - 62px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .atlas-app[data-mobile-view='split'] .comparison-controls form > span {
+    display: none;
+  }
+  .atlas-app[data-visualization='map'][data-mobile-view='split']
+    .map-stage:has(.comparison-controls)
+    .map-bottom-left {
+    bottom: 8px;
+  }
+  .atlas-app[data-mobile-view='split']
+    .map-stage:has(.comparison-controls)
+    .maplibregl-ctrl-bottom-right {
+    bottom: 2px;
+    right: 8px;
+  }
+  .atlas-app[data-mobile-view='split']
+    .map-stage:has(.comparison-controls)
+    .maplibregl-ctrl-bottom-right
+    .maplibregl-ctrl {
+    margin: 0;
+  }
+}

@@ -1,6 +1,18 @@
 import { setSheet } from './mobile-sheet-helpers'
 import { test, expect, type Page } from '@playwright/test'
 
+async function openTopics(page: Page) {
+  const direct = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
+  if (await direct.isVisible()) await direct.click()
+  else {
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page
+      .locator('.header-actions')
+      .getByRole('button', { name: '历史专题', exact: true })
+      .click()
+  }
+}
+
 async function search(page: Page, text: string) {
   await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill(text)
   await page.locator('.search-results [role="option"]').first().click()
@@ -167,7 +179,7 @@ for (const [width, height] of [
   test(`makes the first topic immediately readable on ${width}x${height}`, async ({ page }) => {
     await page.setViewportSize({ width, height })
     await page.goto('/#year=750')
-    await page.getByRole('button', { name: '历史专题', exact: true }).click()
+    await openTopics(page)
     await expect(page.locator('.tour-card h3').first()).toBeInViewport({ ratio: 1 })
     await expect(page.locator('.timeline')).toBeInViewport({ ratio: 1 })
     await page.getByRole('button', { name: '更多操作', exact: true }).click()

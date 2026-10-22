@@ -114,6 +114,7 @@ import {
   toOrdinal,
   writePreferences,
 } from './lib/history'
+import './exploration-navigation.css'
 
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
@@ -300,6 +301,9 @@ export default function App() {
       : null,
   )
   const [layersOpen, setLayersOpen] = useState(false)
+  const mapToolsRef = useRef<HTMLDivElement>(null)
+  const layersPopoverRef = useRef<HTMLDivElement>(null)
+  const comparisonControlsRef = useRef<HTMLDivElement>(null)
   const [tourState, setTourState] = useState<TourState>(initial.tour)
   const showRoutes = tourState?.id === 'silk-road'
   const [toast, setToast] = useState('')
@@ -652,7 +656,11 @@ export default function App() {
     [rememberView, visualization, pillarSide, pillarRegion, category, exploration.range],
   )
   function switchVisualization(value: 'map' | 'pillar') {
-    if (value === visualization) return
+    if (value === visualization) {
+      setMoreOpen(false)
+      setMobileView((view) => (view === 'reading' ? 'split' : view))
+      return
+    }
     rememberView()
     setPlaying(false)
     setVisualization(value)
@@ -981,6 +989,10 @@ export default function App() {
       value > MAX_YEAR
     ) {
       setCompareError('请输入前10000年至1912年之间的年份，公元前用负数，没有0年。')
+      requestAnimationFrame(() => {
+        const controls = comparisonControlsRef.current
+        if (controls) controls.scrollTop = controls.scrollHeight
+      })
       return
     }
     setCompareYear(value)
@@ -1367,6 +1379,103 @@ export default function App() {
     else if (item.offsetTop + item.offsetHeight > container.scrollTop + container.clientHeight)
       container.scrollTop = item.offsetTop + item.offsetHeight - container.clientHeight
   }, [searchIndex])
+  useLayoutEffect(() => {
+    if (!layersOpen) return
+    const tools = mapToolsRef.current
+    const popover = layersPopoverRef.current
+    const app = tools?.closest<HTMLElement>('.atlas-app')
+    if (!tools || !popover || !app) return
+    const header = app.querySelector<HTMLElement>('.topbar')
+    const shell = tools.closest<HTMLElement>('.map-shell')
+    let frame: number | null = null
+    const position = () => {
+      const anchor = tools.getBoundingClientRect()
+      if (!anchor.width || !anchor.height) return
+      const compact = window.matchMedia(
+        '(max-width: 700px), (max-width: 1000px) and (max-height: 540px)',
+      ).matches
+      if (!compact) {
+        popover.removeAttribute('style')
+        popover.dataset.positioned = 'true'
+        popover.dataset.placement = 'above'
+        return
+      }
+      const viewport = window.visualViewport
+      const style = getComputedStyle(tools)
+      const safe = (side: string) =>
+        parseFloat(style.getPropertyValue(`--navigation-safe-${side}`)) || 0
+      const leftEdge = Math.max(viewport?.offsetLeft ?? 0, safe('left')) + 8
+      const rightEdge =
+        Math.min(
+          window.innerWidth - safe('right'),
+          (viewport?.offsetLeft ?? 0) + (viewport?.width ?? window.innerWidth),
+        ) - 8
+      const focusExit = app.querySelector<HTMLElement>('.focus-mode-exit')?.getBoundingClientRect()
+      const topEdge = Math.max(
+        (viewport?.offsetTop ?? 0) + safe('top') + 8,
+        (header?.getBoundingClientRect().bottom ?? 0) + 8,
+        (focusExit?.bottom ?? 0) + 8,
+      )
+      const bottomEdge =
+        Math.min(
+          window.innerHeight - safe('bottom'),
+          (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight),
+        ) - 8
+      const gap = 8
+      const above = Math.max(0, anchor.top - gap - topEdge)
+      const below = Math.max(0, bottomEdge - anchor.bottom - gap)
+      const right = Math.max(0, rightEdge - anchor.right - gap)
+      let width = Math.min(280, rightEdge - leftEdge)
+      let left = Math.max(leftEdge, Math.min(anchor.left, rightEdge - width))
+      let top = 'auto'
+      let bottom = `${window.innerHeight - anchor.top + gap}px`
+      let maxHeight = Math.min(430, above)
+      let placement = 'above'
+      if (above < 140 && right >= 218) {
+        width = Math.min(width, right)
+        left = anchor.right + gap
+        top = `${topEdge}px`
+        bottom = 'auto'
+        maxHeight = Math.min(430, bottomEdge - topEdge)
+        placement = 'right'
+      } else if (above < 140 && below > above) {
+        top = `${anchor.bottom + gap}px`
+        bottom = 'auto'
+        maxHeight = Math.min(430, below)
+        placement = 'below'
+      }
+      Object.assign(popover.style, {
+        left: `${left}px`,
+        top,
+        bottom,
+        width: `${Math.max(1, width)}px`,
+        maxHeight: `${Math.max(1, maxHeight)}px`,
+      })
+      popover.dataset.placement = placement
+      popover.dataset.positioned = 'true'
+    }
+    const schedule = () => {
+      if (frame !== null) return
+      frame = requestAnimationFrame(() => {
+        frame = null
+        position()
+      })
+    }
+    position()
+    const observer = new ResizeObserver(schedule)
+    for (const element of [tools, tools.parentElement, popover, header, shell, app])
+      if (element) observer.observe(element)
+    window.addEventListener('resize', schedule)
+    window.visualViewport?.addEventListener('resize', schedule)
+    window.visualViewport?.addEventListener('scroll', schedule)
+    return () => {
+      if (frame !== null) cancelAnimationFrame(frame)
+      observer.disconnect()
+      window.removeEventListener('resize', schedule)
+      window.visualViewport?.removeEventListener('resize', schedule)
+      window.visualViewport?.removeEventListener('scroll', schedule)
+    }
+  }, [layersOpen, mobileView, focusMode, readerCollapsed])
   useEffect(() => {
     if (!layersOpen) return
     function closeLayers(event: PointerEvent | KeyboardEvent) {
@@ -1524,17 +1633,20 @@ export default function App() {
           </span>
         </a>
         <nav className="main-nav" aria-label="主导航">
+          <div className="header-view-switch" role="group" aria-label="探索模式">
+            {(['map', 'pillar'] as const).map((value) => (
+              <button
+                key={value}
+                aria-pressed={visualization === value}
+                onClick={() => switchVisualization(value)}
+              >
+                {value === 'map' ? <MapIcon size={15} /> : <Layers3 size={15} />}
+                <span>{value === 'map' ? '地图' : '时空柱'}</span>
+              </button>
+            ))}
+          </div>
           <button
-            className={
-              !tour?.chapters && (mode === 'events' || mode === 'people' || mode === 'overview')
-                ? 'active'
-                : ''
-            }
-            onClick={() => navigateMode('events')}
-          >
-            自由探索
-          </button>
-          <button
+            data-main-topics
             className={mode === 'tours' || tour?.chapters ? 'active' : ''}
             onClick={() => navigateMode('tours')}
           >
@@ -1672,6 +1784,20 @@ export default function App() {
         </button>
         <div className={`header-actions ${moreOpen ? 'mobile-open' : ''}`}>
           <button
+            className="icon-button navigation-menu-entry"
+            aria-label="返回自由探索"
+            onClick={() => navigateMode('events')}
+          >
+            <Compass size={18} />
+          </button>
+          <button
+            className="icon-button topics-menu-entry"
+            aria-label="历史专题"
+            onClick={() => navigateMode('tours')}
+          >
+            <BookOpen size={18} />
+          </button>
+          <button
             className="icon-button visualization-action"
             aria-label={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
             title={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
@@ -1736,20 +1862,18 @@ export default function App() {
       </header>
 
       <main className="map-shell">
-        <div className="visualization-switch" role="group" aria-label="探索模式">
-          {(['map', 'pillar'] as const).map((value) => (
-            <button
-              key={value}
-              aria-pressed={visualization === value}
-              onClick={() => {
-                switchVisualization(value)
-              }}
-            >
-              {value === 'map' ? <MapIcon size={15} /> : <Layers3 size={15} />}
-              <span>{value === 'map' ? '地图' : '时空柱'}</span>
+        {visualization === 'pillar' && focusMode && (
+          <div
+            className="visualization-switch pillar-focus-navigation"
+            role="group"
+            aria-label="画布模式切换"
+          >
+            <button onClick={() => switchVisualization('map')}>
+              <MapIcon size={15} />
+              <span>地图</span>
             </button>
-          ))}
-        </div>
+          </div>
+        )}
         <h1 className="map-heading">
           {tour?.name ?? trail?.name ?? selectedPlace?.name ?? period.name} · {formatYear(year)}
         </h1>
@@ -1791,6 +1915,7 @@ export default function App() {
           >
             {visualization === 'pillar' ? (
               <TimePillar
+                focused={focusMode}
                 year={year}
                 span={pillarSpan}
                 side={pillarSide}
@@ -1882,7 +2007,7 @@ export default function App() {
             )}
           </Suspense>
           {compareYear !== null && (
-            <div className="comparison-controls">
+            <div className="comparison-controls" ref={comparisonControlsRef}>
               <form
                 onSubmit={(event) => {
                   event.preventDefault()
@@ -1899,6 +2024,8 @@ export default function App() {
                   <input
                     type="number"
                     aria-label="输入参考年份"
+                    aria-invalid={!!compareError}
+                    aria-describedby={compareError ? 'comparison-error' : undefined}
                     min={MIN_YEAR}
                     max={MAX_YEAR}
                     value={compareDraft}
@@ -1917,7 +2044,7 @@ export default function App() {
                 解读这段变化 <ArrowRight size={13} />
               </button>
               {compareError && (
-                <p role="alert" className="compare-error">
+                <p id="comparison-error" role="alert" className="compare-error">
                   {compareError}
                 </p>
               )}
@@ -1962,57 +2089,72 @@ export default function App() {
             </div>
           )}
           <div className="map-bottom-left">
-            <div className="layer-button-wrap">
-              <button
-                className={`layers-button ${layersOpen ? 'active' : ''}`}
-                onClick={() => setLayersOpen((v) => !v)}
-                aria-expanded={layersOpen}
-              >
-                <Layers size={16} />
-                地图图层
-                <ChevronRight size={12} />
-              </button>
-              {layersOpen && (
-                <div className="layers-popover">
-                  <span className="eyebrow">地图图层</span>
-                  {[
-                    ['历史事件', showEvents, () => setShowEvents((v) => !v)],
-                    ['城市与都城', showCities, () => setShowCities((v) => !v)],
-                  ].map(([label, active, toggle]) => (
-                    <button
-                      key={String(label)}
-                      role="switch"
-                      aria-checked={Boolean(active)}
-                      onClick={toggle as () => void}
-                    >
-                      <span>{label as string}</span>
-                      <span className={`switch ${active ? 'on' : ''}`}>
-                        <i />
-                      </span>
-                    </button>
-                  ))}
-                  <small>✦ 表示本版收录的都城</small>
-                  <div className="layer-polities" aria-label="全部政权图层">
-                    {polities.map((item) => (
+            <div className="map-tools-row" ref={mapToolsRef}>
+              <div className="layer-button-wrap">
+                <button
+                  className={`layers-button ${layersOpen ? 'active' : ''}`}
+                  onClick={() => setLayersOpen((v) => !v)}
+                  aria-expanded={layersOpen}
+                >
+                  <Layers size={16} />
+                  地图图层
+                  <ChevronRight size={12} />
+                </button>
+                {layersOpen && (
+                  <div className="layers-popover" ref={layersPopoverRef}>
+                    <span className="eyebrow">地图图层</span>
+                    {[
+                      ['历史事件', showEvents, () => setShowEvents((v) => !v)],
+                      ['城市与都城', showCities, () => setShowCities((v) => !v)],
+                    ].map(([label, active, toggle]) => (
                       <button
-                        key={item.name}
-                        aria-pressed={!hiddenPolities.includes(item.name)}
-                        onClick={() =>
-                          setHiddenPolities((items) =>
-                            items.includes(item.name)
-                              ? items.filter((name) => name !== item.name)
-                              : [...items, item.name],
-                          )
-                        }
+                        key={String(label)}
+                        role="switch"
+                        aria-checked={Boolean(active)}
+                        onClick={toggle as () => void}
                       >
-                        <span>
-                          <i style={{ background: item.color }} />
-                          {item.nameZh}
+                        <span>{label as string}</span>
+                        <span className={`switch ${active ? 'on' : ''}`}>
+                          <i />
                         </span>
-                        {!hiddenPolities.includes(item.name) && <Check size={13} />}
                       </button>
                     ))}
+                    <small>✦ 表示本版收录的都城</small>
+                    <div className="layer-polities" aria-label="全部政权图层">
+                      {polities.map((item) => (
+                        <button
+                          key={item.name}
+                          aria-pressed={!hiddenPolities.includes(item.name)}
+                          onClick={() =>
+                            setHiddenPolities((items) =>
+                              items.includes(item.name)
+                                ? items.filter((name) => name !== item.name)
+                                : [...items, item.name],
+                            )
+                          }
+                        >
+                          <span>
+                            <i style={{ background: item.color }} />
+                            {item.nameZh}
+                          </span>
+                          {!hiddenPolities.includes(item.name) && <Check size={13} />}
+                        </button>
+                      ))}
+                    </div>
                   </div>
+                )}
+              </div>
+              {visualization === 'map' && (
+                <div
+                  className="visualization-switch map-mode-shortcut"
+                  role="group"
+                  aria-label="画布模式切换"
+                >
+                  <button onClick={() => switchVisualization('pillar')} title="切换到时空柱">
+                    <Layers3 size={15} />
+                    <span>时空柱</span>
+                    <ArrowRight size={14} />
+                  </button>
                 </div>
               )}
             </div>

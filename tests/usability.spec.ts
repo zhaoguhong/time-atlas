@@ -1,7 +1,19 @@
 import { setSheet } from './mobile-sheet-helpers'
-import { test, expect } from '@playwright/test'
+import { test, expect, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
+
+async function openTopics(page: Page) {
+  const direct = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
+  if (await direct.isVisible()) await direct.click()
+  else {
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page
+      .locator('.header-actions')
+      .getByRole('button', { name: '历史专题', exact: true })
+      .click()
+  }
+}
 
 const searchName = '搜索历史事件、人物或地名'
 test.beforeEach(async ({ page }) => {
@@ -75,7 +87,7 @@ test('searches all results, prioritizes an exact alias, and supports keyboard se
 })
 
 test('restores shared topic chapters and clears them on a new hash', async ({ page }) => {
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
   await page.getByRole('button', { name: '开始地图学习', exact: true }).click()
   await page.getByRole('button', { name: '专题下一章', exact: true }).click()
@@ -147,7 +159,7 @@ test('small phone journey labels and clock remain visible during playback', asyn
 test('plays topic chapters without losing the topic and stops at its final chapter', async ({
   page,
 }) => {
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
   await page.getByRole('combobox', { name: '播放速度', exact: true }).selectOption('20')
   await page.getByRole('button', { name: '播放专题', exact: true }).click()
@@ -167,7 +179,7 @@ test('plays topic chapters without losing the topic and stops at its final chapt
 })
 
 test('retains the current topic label after resizing to a small phone', async ({ page }) => {
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
   await page.locator('.topic-chapter-list li').nth(6).getByRole('button').click()
   await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()

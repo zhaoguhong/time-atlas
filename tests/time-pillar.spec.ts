@@ -77,13 +77,19 @@ for (const [width, height] of [
       await expect(event.locator('strong')).toBeVisible()
     }
     if (width === 390 || width === 360) {
-      const toolbar = (await page.locator('.pillar-header').boundingBox())!
-      expect(toolbar.height).toBeLessThanOrEqual(56)
+      await expect(page.locator('.pillar-header')).toHaveCount(0)
+      const canvas = (await page.locator('.pillar-stage').boundingBox())!
+      const header = (await page.locator('.topbar').boundingBox())!
+      expect(canvas.y).toBeLessThanOrEqual(header.y + header.height + 1)
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
-        width === 390 ? 20 : 12,
+        width === 390 ? 24 : 16,
       )
-      await expect(page.getByLabel('切换历史范围', { exact: true })).toBeVisible()
+      await expect(page.locator('.pillar-year')).toContainText('中外对照 · 设置')
     }
+    if (width === 1440 || width === 844)
+      expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
+        width === 1440 ? 28 : 8,
+      )
     await page.screenshot({ path: info.outputPath(`compare-${width}x${height}.png`) })
     expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(
       2 * Math.floor((await page.locator('.pillar-stage').boundingBox())!.height / 44),
@@ -347,12 +353,9 @@ for (const [width, height] of [
     await page.getByRole('button', { name: '进入专注模式', exact: true }).click()
     await expect(page.locator('.atlas-app')).toHaveAttribute('data-focus-mode', 'true')
     await expect(page.locator('.visualization-switch')).toBeInViewport({ ratio: 1 })
-    const side = page.getByLabel('切换历史范围', { exact: true })
-    if (await side.isVisible()) {
-      await side.selectOption('world')
-    } else {
-      await page.getByRole('button', { name: '世界历史', exact: true }).click()
-    }
+    await settings(page)
+    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    await closeSettings(page)
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
     await geometry(page)
     await page.locator('.pillar-event').first().click()
@@ -360,11 +363,7 @@ for (const [width, height] of [
     await expect(page.locator('.event-detail h2')).toBeVisible()
     await geometry(page)
     const rectangles = await page.evaluate(() =>
-      [
-        ...document.querySelectorAll(
-          '.visualization-switch, .pillar-side-select, .pillar-tabs, .pillar-settings, .focus-mode-exit',
-        ),
-      ]
+      [...document.querySelectorAll('.pillar-focus-navigation, .pillar-year, .focus-mode-exit')]
         .filter((el) => el.getBoundingClientRect().width > 0)
         .map((el) => ({ name: el.className, ...el.getBoundingClientRect().toJSON() })),
     )

@@ -1,15 +1,27 @@
 import { setSheet } from './mobile-sheet-helpers'
-import { expect, test } from '@playwright/test'
+import { expect, test, type Page } from '@playwright/test'
 import { tours } from '../src/data/periods'
 import { readFileSync } from 'node:fs'
 const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
+
+async function openTopics(page: Page) {
+  const direct = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
+  if (await direct.isVisible()) await direct.click()
+  else {
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page
+      .locator('.header-actions')
+      .getByRole('button', { name: '历史专题', exact: true })
+      .click()
+  }
+}
 
 for (const topic of tours) {
   test(`reads every chapter of ${topic.name} with the matching historical map`, async ({
     page,
   }) => {
     test.setTimeout(90000)
-    await page.getByRole('button', { name: '历史专题', exact: true }).click()
+    await openTopics(page)
     await expect(page.locator('.tour-card')).toHaveCount(tours.length)
     await page.locator('.tour-card').filter({ hasText: topic.name }).click()
     await expect(page.locator('.topic-introduction h2')).toHaveText(topic.name)
@@ -76,7 +88,7 @@ test('opens detailed dynasty reading, filters its chronology and returns from an
 })
 
 test('keeps topic context when selecting a map or timeline node', async ({ page }) => {
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '安史之乱与唐代转折' }).click()
   await page.getByRole('button', { name: '开始地图学习', exact: false }).click()
   const marker = page.locator('.topic-marker[data-visible="true"]').first()
@@ -102,7 +114,7 @@ test('mobile reading, topic navigation and journey activity labels stay usable',
   await expect(page.locator('.dynasty-detail h2')).toHaveText('清朝')
   await page.getByRole('textbox', { name: '筛选朝代大事' }).fill('甲午')
   expect(await page.locator('.dynasty-chronology li').count()).toBeGreaterThanOrEqual(3)
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '甲午战争：从朝鲜到威海' }).click()
   await expect(page.locator('.topic-introduction h2')).toBeInViewport()
   await page.getByRole('button', { name: '开始地图学习', exact: false }).click()
@@ -146,7 +158,7 @@ test('keeps the current topic location visible in a short window and returns fro
   page,
 }) => {
   await page.setViewportSize({ width: 1280, height: 720 })
-  await page.getByRole('button', { name: '历史专题', exact: true }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
   await page.getByRole('button', { name: '开始地图学习', exact: true }).click()
   await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toContainText(
@@ -220,15 +232,17 @@ test('persists bookmarks and shows a clear empty year', async ({ page }) => {
   await page.reload()
   await page.getByRole('button', { name: '我的收藏' }).click()
   await expect(page.locator('.saved-panel')).toContainText('诸葛亮')
-  await page.getByRole('button', { name: '自由探索' }).click()
+  await page.getByRole('link', { name: '山河纪 · Time Atlas，返回自由探索', exact: true }).click()
   await page.getByRole('button', { name: '仅当年' }).click()
-  await expect(page.locator('.empty-state')).toContainText('暂未收录事件')
+  // World-history processes span this year; the war filter still has no matching event.
+  await page.locator('.category-filters').getByRole('button', { name: '战争', exact: true }).click()
+  await expect(page.locator('.empty-state')).toContainText('这个范围暂无战争事件')
   await page.getByRole('button', { name: '查看这一时期', exact: true }).click()
   await expect(page.locator('.event-card').first()).toBeVisible()
 })
 
 test('shows Silk Road nodes only while exploring its guided story', async ({ page }) => {
-  await page.getByRole('button', { name: /历史专题/ }).click()
+  await openTopics(page)
   await page.locator('.tour-card').filter({ hasText: '丝绸之路' }).click()
   await expect(page.locator('.topic-introduction h2')).toContainText('丝绸之路')
   await page.getByRole('button', { name: '开始地图学习', exact: false }).click()
@@ -255,10 +269,10 @@ test('playback advances, pause stops it, and the sources dialog is keyboard acce
   await page.waitForTimeout(1100)
   expect(await page.locator('.year-title').textContent()).toBe(year)
   await page.getByRole('button', { name: '数据与来源' }).click()
-  await expect(page.locator('dialog')).toBeVisible()
-  await expect(page.locator('dialog')).toContainText('CC BY 4.0')
+  await expect(page.locator('.info-dialog')).toBeVisible()
+  await expect(page.locator('.info-dialog')).toContainText('CC BY 4.0')
   await page.keyboard.press('Escape')
-  await expect(page.locator('dialog')).not.toBeVisible()
+  await expect(page.locator('.info-dialog')).not.toBeVisible()
 })
 
 test('restores event and camera from a shared link', async ({ page }) => {
