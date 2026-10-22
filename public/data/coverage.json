@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T18:16:24.753Z",
+  "generatedAt": "2026-10-22T09:20:11.598Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -16,13 +16,26 @@
     "outsideMapRange": 0
   },
   "events": {
-    "total": 460,
+    "total": 565,
+    "world": 120,
+    "byRegion": {
+      "china": 445,
+      "europe": 39,
+      "west-asia": 24,
+      "central-asia": 1,
+      "south-asia": 9,
+      "east-asia": 6,
+      "southeast-asia": 4,
+      "africa": 15,
+      "americas": 17,
+      "oceania": 5
+    },
     "byCategory": {
-      "政治": 168,
-      "战争": 131,
-      "文化": 70,
-      "交流": 32,
-      "社会": 59
+      "政治": 222,
+      "战争": 144,
+      "文化": 90,
+      "交流": 43,
+      "社会": 66
     }
   },
   "dynasties": {
@@ -66,19 +79,19 @@
     {
       "id": "early-civilizations",
       "name": "早期文明",
-      "events": 20,
+      "events": 22,
       "people": 0
     },
     {
       "id": "xia",
       "name": "夏",
-      "events": 2,
+      "events": 4,
       "people": 1
     },
     {
       "id": "shang",
       "name": "商",
-      "events": 4,
+      "events": 8,
       "people": 2
     },
     {
@@ -90,13 +103,13 @@
     {
       "id": "spring",
       "name": "春秋",
-      "events": 9,
+      "events": 16,
       "people": 4
     },
     {
       "id": "warring",
       "name": "战国",
-      "events": 26,
+      "events": 33,
       "people": 51
     },
     {
@@ -108,25 +121,25 @@
     {
       "id": "han",
       "name": "两汉",
-      "events": 49,
+      "events": 52,
       "people": 90
     },
     {
       "id": "three",
       "name": "三国",
-      "events": 16,
+      "events": 18,
       "people": 48
     },
     {
       "id": "jin",
       "name": "两晋 · 十六国",
-      "events": 16,
+      "events": 19,
       "people": 32
     },
     {
       "id": "north-south",
       "name": "南北朝",
-      "events": 20,
+      "events": 23,
       "people": 41
     },
     {
@@ -138,7 +151,7 @@
     {
       "id": "tang",
       "name": "唐",
-      "events": 33,
+      "events": 43,
       "people": 112
     },
     {
@@ -150,25 +163,25 @@
     {
       "id": "song",
       "name": "宋 · 辽 · 金 · 西夏",
-      "events": 65,
+      "events": 72,
       "people": 119
     },
     {
       "id": "yuan",
       "name": "元",
-      "events": 14,
+      "events": 17,
       "people": 45
     },
     {
       "id": "ming",
       "name": "明",
-      "events": 35,
+      "events": 54,
       "people": 90
     },
     {
       "id": "qing",
       "name": "清",
-      "events": 91,
+      "events": 124,
       "people": 135
     }
   ],
@@ -258,10 +271,10 @@
     }
   ],
   "sourceRetention": {
-    "references": 415,
-    "retained": 406,
+    "references": 474,
+    "retained": 460,
     "unavailable": 0,
-    "failed": 9,
+    "failed": 14,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [

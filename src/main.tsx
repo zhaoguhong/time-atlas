@@ -12,6 +12,7 @@ import './atlas-layout.css'
 import './exploration.css'
 import './mobile-sheet.css'
 import './focus-mode.css'
+import './time-pillar.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

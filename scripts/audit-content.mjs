@@ -34,6 +34,7 @@ const server = await createServer({
 })
 try {
   const { events, people, personById } = await server.ssrLoadModule('/src/data/content.ts')
+  const { eventRegion, historyRegions } = await server.ssrLoadModule('/src/lib/time-pillar.ts')
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { periods, tours } = await server.ssrLoadModule('/src/data/periods.ts')
@@ -60,6 +61,15 @@ try {
       assert(person.birth <= person.death, `Reversed lifespan: ${person.id}`)
   }
   for (const event of events) {
+    if (event.region)
+      assert(Object.hasOwn(historyRegions, event.region), `Invalid region: ${event.id}`)
+    for (const relation of event.relatedEvents ?? []) {
+      assert(
+        relation.id !== event.id && events.some((target) => target.id === relation.id),
+        `Invalid related event: ${event.id}`,
+      )
+      assert(relation.label && relation.note, `Unexplained relation: ${event.id}`)
+    }
     assert(event.summary && event.background && event.impact && event.sources.length, event.id)
     validateSources(event)
     assert(validYear(event.year) && event.year >= -10000 && event.year <= 1912, event.id)
@@ -291,6 +301,8 @@ try {
             title: event.title,
             year: event.year,
             people: event.people,
+            region: eventRegion(event),
+            relatedEvents: event.relatedEvents,
             sourceCount: event.sources.length,
             dateNote: event.dateNote,
             locationNote: event.locationNote,
@@ -357,6 +369,13 @@ try {
     },
     events: {
       total: events.length,
+      world: events.filter((event) => eventRegion(event) !== 'china').length,
+      byRegion: Object.fromEntries(
+        Object.keys(historyRegions).map((region) => [
+          region,
+          events.filter((event) => eventRegion(event) === region).length,
+        ]),
+      ),
       byCategory: Object.fromEntries(
         ['政治', '战争', '文化', '交流', '社会'].map((category) => [
           category,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T18:16:24.242Z",
+  "generatedAt": "2026-10-22T08:57:30.093Z",
   "sources": [
     {
       "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024，第17页）",
@@ -295,6 +295,736 @@
         {
           "kind": "person",
           "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "新西兰文化与遗产部 · Signing the treaty",
+      "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-waitangi"
+        }
+      ]
+    },
+    {
+      "title": "新西兰文化与遗产部 · Women win the right to vote",
+      "url": "https://nzhistory.govt.nz/womens-suffrage-day",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-nz-suffrage"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 10-1-the-eastward-shift",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-constantinople"
+        },
+        {
+          "kind": "event",
+          "id": "world-west-rome"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 10-2-the-byzantine-empire-and-persia",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sasanian"
+        },
+        {
+          "kind": "event",
+          "id": "world-justinian"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-aksum"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 11-1-the-rise-and-message-of-islam",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-1-the-rise-and-message-of-islam",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hijra"
+        },
+        {
+          "kind": "event",
+          "id": "world-mecca"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-umayyad"
+        },
+        {
+          "kind": "event",
+          "id": "world-abbasid"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sogdian"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 12-3-border-states-sogdiana-korea-and-japan",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-3-border-states-sogdiana-korea-and-japan",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-silla"
+        },
+        {
+          "kind": "event",
+          "id": "world-nara"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 13-1-the-post-roman-west-in-the-early-middle-ages",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-charlemagne"
+        },
+        {
+          "kind": "event",
+          "id": "world-verdun"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-schism"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 13-4-the-crusading-movement",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-4-the-crusading-movement",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crusade"
+        },
+        {
+          "kind": "event",
+          "id": "world-constantinople-sack"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-baghdad"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-great-zimbabwe"
+        },
+        {
+          "kind": "event",
+          "id": "world-mansa-musa"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 16-3-the-black-death-from-east-to-west",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/16-3-the-black-death-from-east-to-west",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-black-death"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 17-1-the-ottomans-and-the-mongols",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ottoman-constantinople"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-akkad"
+        },
+        {
+          "kind": "event",
+          "id": "world-hammurabi"
+        },
+        {
+          "kind": "event",
+          "id": "world-nineveh"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 4-2-egypts-new-kingdom",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-new-kingdom"
+        },
+        {
+          "kind": "event",
+          "id": "world-kadesh"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 4-3-the-persian-empire",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-cyrus"
+        },
+        {
+          "kind": "event",
+          "id": "world-babylon"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-srivijaya"
+        },
+        {
+          "kind": "event",
+          "id": "world-borobudur"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-buddhism"
+        },
+        {
+          "kind": "event",
+          "id": "world-maurya"
+        },
+        {
+          "kind": "event",
+          "id": "world-ashoka"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 6-1-early-mediterranean-peoples",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-1-early-mediterranean-peoples",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-minoan"
+        },
+        {
+          "kind": "event",
+          "id": "world-bronze-collapse"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 6-2-ancient-greece",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-2-ancient-greece",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-athens"
+        },
+        {
+          "kind": "event",
+          "id": "world-marathon"
+        },
+        {
+          "kind": "event",
+          "id": "world-peloponnesian"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 6-3-the-hellenistic-era",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-alexander"
+        },
+        {
+          "kind": "event",
+          "id": "world-hellenistic"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 6-4-the-roman-republic",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-roman-republic"
+        },
+        {
+          "kind": "event",
+          "id": "world-punic"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 6-5-the-age-of-augustus",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-caesar"
+        },
+        {
+          "kind": "event",
+          "id": "world-augustus"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 7-4-religion-in-the-roman-empire",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/7-4-religion-in-the-roman-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-milan"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 8-2-early-cultures-and-civilizations-in-the-americas",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-olmec"
+        },
+        {
+          "kind": "event",
+          "id": "world-teotihuacan"
+        },
+        {
+          "kind": "event",
+          "id": "world-maya"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tenochtitlan"
+        },
+        {
+          "kind": "event",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "event",
+          "id": "world-inca"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 1 · 9-3-the-kingdom-of-kush",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/9-3-the-kingdom-of-kush",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kerma"
+        },
+        {
+          "kind": "event",
+          "id": "world-meroe"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 10-5-regulation-reform-and-revolutionary-ideologies",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/10-5-regulation-reform-and-revolutionary-ideologies",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-manifesto"
+        },
+        {
+          "kind": "event",
+          "id": "world-public-health"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-delhi"
+        },
+        {
+          "kind": "event",
+          "id": "world-mughal"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 2-2-the-malacca-sultanate",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-2-the-malacca-sultanate",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-malacca"
+        },
+        {
+          "kind": "event",
+          "id": "world-malacca-conquest"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tokugawa"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-songhai"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 4-3-the-safavid-empire",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-safavid"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-printing"
+        },
+        {
+          "kind": "event",
+          "id": "world-reformation"
+        },
+        {
+          "kind": "event",
+          "id": "world-westphalia"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-dias"
+        },
+        {
+          "kind": "event",
+          "id": "world-columbus"
+        },
+        {
+          "kind": "event",
+          "id": "world-dagama"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 5-4-the-atlantic-slave-trade",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-4-the-atlantic-slave-trade",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-atlantic-slavery"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 6-1-european-colonization-in-the-americas",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-1-european-colonization-in-the-americas",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-conquest-mexico"
+        },
+        {
+          "kind": "event",
+          "id": "world-conquest-inca"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 6-2-the-rise-of-a-global-economy",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-2-the-rise-of-a-global-economy",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-seven-years"
+        },
+        {
+          "kind": "event",
+          "id": "world-plassey"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-industrial"
+        },
+        {
+          "kind": "event",
+          "id": "world-wealth-nations"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 7-1-the-enlightenment",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-1-the-enlightenment",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-enlightenment"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-american-independence"
+        },
+        {
+          "kind": "event",
+          "id": "world-french-revolution"
+        },
+        {
+          "kind": "event",
+          "id": "world-haitian-revolution"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-vienna"
+        },
+        {
+          "kind": "event",
+          "id": "world-italy"
+        },
+        {
+          "kind": "event",
+          "id": "world-germany"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 8-3-spanish-south-america",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-3-spanish-south-america",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-spanish-america"
+        },
+        {
+          "kind": "event",
+          "id": "world-ayacucho"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 8-4-portuguese-south-america",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-4-portuguese-south-america",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-brazil"
+        },
+        {
+          "kind": "event",
+          "id": "world-brazil-abolition"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-second-industrial"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 9-3-colonial-empires",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-india-1857"
+        },
+        {
+          "kind": "event",
+          "id": "world-meiji"
+        },
+        {
+          "kind": "event",
+          "id": "world-berlin-africa"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 9-4-exploitation-and-resistance",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-4-exploitation-and-resistance",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-adwa"
+        },
+        {
+          "kind": "event",
+          "id": "world-congo"
         }
       ]
     },
@@ -765,6 +1495,17 @@
       ]
     },
     {
+      "title": "剑桥大学 · Darwin Correspondence Project: Origin",
+      "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-darwin"
+        }
+      ]
+    },
+    {
       "title": "故宫博物院 ·《康熙字典》",
       "url": "https://www.dpm.org.cn/ancient/hall/165349.html",
       "references": [
@@ -1198,6 +1939,17 @@
       ]
     },
     {
+      "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
+      "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-copernicus"
+        }
+      ]
+    },
+    {
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "note": "自述中的机器采购与运送记载，和机构创办、后续生产分别理解。",
@@ -1278,6 +2030,28 @@
       ]
     },
     {
+      "title": "大都会艺术博物馆 · Florence and Central Italy, 1400–1600",
+      "url": "https://www.metmuseum.org/toah/ht/08/eustc",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-renaissance"
+        }
+      ]
+    },
+    {
+      "title": "英国国家档案馆 · Magna Carta",
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-magna-carta"
+        }
+      ]
+    },
+    {
       "title": "宁波博物院 · 河姆渡文化考古成果特展",
       "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
       "references": [
@@ -1294,6 +2068,17 @@
         {
           "kind": "event",
           "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "title": "日本国立国会图书馆 · Modern Japan in archives: Russo-Japanese War",
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russo-japanese"
         }
       ]
     },
@@ -1333,6 +2118,43 @@
         {
           "kind": "dynasty",
           "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "澳大利亚国家博物馆 · Defining moments timeline",
+      "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-first-fleet"
+        },
+        {
+          "kind": "event",
+          "id": "world-federation"
+        }
+      ]
+    },
+    {
+      "title": "美国国家公园管理局 · The Civil War: Overview",
+      "url": "https://www.nps.gov/civilwar/overview.htm",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-american-civil-war"
+        }
+      ]
+    },
+    {
+      "title": "美国国家公园管理局 · 1903 The First Flight",
+      "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-flight"
         }
       ]
     },
@@ -7745,6 +8567,17 @@
         {
           "kind": "event",
           "id": "dream-red-chamber-jiaxu"
+        }
+      ]
+    },
+    {
+      "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-newton"
         }
       ]
     },

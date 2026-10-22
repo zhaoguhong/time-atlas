@@ -57,7 +57,10 @@ describe('historical chronology', () => {
     expect(parseHash('#year=9999').year).toBe(MAX_YEAR)
   })
   it('distinguishes a five-year window from the current year and navigation period', () => {
-    expect(eventsInScope(events, 230, 'year')).toEqual([])
+    const at230 = eventsInScope(events, 230, 'year')
+    expect(at230.every((e) => e.year <= 230 && (e.endYear ?? e.year) >= 230)).toBe(true)
+    expect(at230.map((e) => e.id)).not.toContain('wu-emperor')
+    expect(at230.map((e) => e.id)).toContain('world-teotihuacan')
     expect(eventsInScope(events, 230, 'nearby').map((event) => event.id)).toEqual(
       expect.arrayContaining(['wu-emperor', 'northern-expedition', 'wuzhang']),
     )

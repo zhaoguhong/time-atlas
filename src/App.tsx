@@ -39,6 +39,9 @@ import {
   PanelTopClose,
   PanelTopOpen,
 } from 'lucide-react'
+import { pillarMatches, pillarWindow, relatedReading, type PillarSide } from './lib/time-pillar'
+import { Layers3, Map as MapIcon } from 'lucide-react'
+const TimePillar = lazy(() => import('./components/TimePillar'))
 import type { Camera } from './components/HistoryMap'
 const HistoryMap = lazy(() => import('./components/HistoryMap'))
 import Timeline from './components/Timeline'
@@ -222,6 +225,10 @@ function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large'
 export default function App() {
   const [initial] = useState(initialState)
   const [year, setYear] = useState(initial.year)
+  const [visualization, setVisualization] = useState<'map' | 'pillar'>(initial.view.visualization)
+  const [pillarSide, setPillarSide] = useState<PillarSide>(initial.view.pillarSide)
+  const [pillarRegion, setPillarRegion] = useState(initial.view.pillarRegion)
+  const [pillarSpan, setPillarSpan] = useState(initial.view.pillarSpan)
   const [selection, setSelection] = useState<Selection | null>(initial.selection)
   const [mode, setMode] = useState<PanelMode>(
     initial.view.mode ?? (initial.tour ? 'tours' : 'events'),
@@ -232,7 +239,12 @@ export default function App() {
   const [exploration, setExploration] = useState<ExplorationFilter>(initial.view.exploration)
   const [explorationOpen, setExplorationOpen] = useState(false)
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null)
-  const [playbackMode, setPlaybackMode] = useState<'years' | 'events'>(initial.view.playbackMode)
+  const [playbackMode, setPlaybackMode] = useState<'years' | 'events'>(
+    initial.view.visualization === 'pillar' &&
+      !new URLSearchParams(location.hash.slice(1)).has('play')
+      ? 'events'
+      : initial.view.playbackMode,
+  )
   const [archiveFilters, setArchiveFilters] = useState(initial.view.archiveFilters)
   const [progress, setProgress] = useState(readProgress)
   const [moreOpen, setMoreOpen] = useState(false)
@@ -301,6 +313,10 @@ export default function App() {
     if (view === 'reading') setPlaying(false)
   }, [])
   const view: NavigationView = {
+    visualization,
+    pillarSide,
+    pillarRegion,
+    pillarSpan,
     selection,
     mode,
     year,
@@ -332,6 +348,10 @@ export default function App() {
     setSelection(previous.selection)
     setMode(previous.mode)
     setYear(previous.year)
+    setVisualization(previous.visualization ?? 'map')
+    setPillarSide(previous.pillarSide ?? 'compare')
+    setPillarRegion(previous.pillarRegion ?? 'all')
+    setPillarSpan(previous.pillarSpan ?? 600)
     setScope(previous.scope)
     setCategory(previous.category)
     setExploration(previous.exploration)
@@ -371,14 +391,24 @@ export default function App() {
   const explorationEvents = useMemo(
     () =>
       filterExploration(events, exploration).filter(
-        (event) => category === '全部' || event.category === category,
+        (event) =>
+          (category === '全部' || event.category === category) &&
+          (visualization !== 'pillar' || pillarMatches(event, pillarSide, pillarRegion)),
       ),
-    [exploration, category],
+    [exploration, category, visualization, pillarSide, pillarRegion],
   )
-  const filteredEvents = useMemo(
-    () => (exploration.range ? explorationEvents : eventsInScope(explorationEvents, year, scope)),
-    [year, exploration, explorationEvents, scope],
-  )
+  const filteredEvents = useMemo(() => {
+    if (exploration.range) return explorationEvents
+    if (visualization === 'pillar' && scope === 'period') {
+      const window = pillarWindow(year, pillarSpan)
+      return explorationEvents.filter(
+        (event) =>
+          toOrdinal(event.year) <= window.top &&
+          toOrdinal(event.endYear ?? event.year) >= window.bottom,
+      )
+    }
+    return eventsInScope(explorationEvents, year, scope)
+  }, [year, exploration, explorationEvents, scope, visualization, pillarSpan])
   const currentYearEvents = useMemo(
     () => eventsAtYear(explorationEvents, year),
     [year, explorationEvents],
@@ -597,6 +627,18 @@ export default function App() {
       if (!keepTour && !keepTrail) rememberView()
       setPlaybackReading(false)
       setReaderCollapsed(false)
+      if (visualization === 'pillar') {
+        if (!pillarMatches(event, pillarSide, pillarRegion)) {
+          setPillarSide('compare')
+          setPillarRegion('all')
+        }
+        if (category !== '全部' && category !== event.category) setCategory('全部')
+        if (
+          exploration.range &&
+          (event.year < exploration.range[0] || event.year > exploration.range[1])
+        )
+          setExploration((old) => ({ ...old, range: null }))
+      }
       setYear(event.year)
       setMobileView((view) => (view === 'map' ? 'split' : view))
       setSelection({ type: 'event', id })
@@ -607,8 +649,25 @@ export default function App() {
       setFocus({ coordinates: event.coordinates, zoom: 4.6, token: Date.now() })
       setSearchOpen(false)
     },
-    [rememberView],
+    [rememberView, visualization, pillarSide, pillarRegion, category, exploration.range],
   )
+  function switchVisualization(value: 'map' | 'pillar') {
+    if (value === visualization) return
+    rememberView()
+    setPlaying(false)
+    setVisualization(value)
+    setLayersOpen(false)
+    setMoreOpen(false)
+    setMobileView((view) => (view === 'reading' ? 'split' : view))
+    if (value === 'pillar') {
+      setTourState(null)
+      setTrailPerson(null)
+      setPlaybackMode('events')
+    } else if (selection?.type === 'event') {
+      const event = eventById.get(selection.id)
+      if (event) setFocus({ coordinates: event.coordinates, zoom: 4.6, token: Date.now() })
+    }
+  }
   function openPerson(id: string, backTo?: Selection) {
     setPlaybackReading(false)
     setReaderCollapsed(false)
@@ -755,6 +814,7 @@ export default function App() {
   }
   function startTour(id: string) {
     rememberView()
+    setVisualization('map')
     setExploration(emptyExploration)
     setMobileView('reading')
     setPlaybackReading(false)
@@ -928,6 +988,7 @@ export default function App() {
   }
   function startTrail(id: string) {
     rememberView()
+    setVisualization('map')
     setMobileView('split')
     const journey = journeyByPerson.get(id)
     if (!journey) return
@@ -1049,6 +1110,13 @@ export default function App() {
   }, [year, showCities, showEvents, bookmarks, scope])
   useEffect(() => {
     const params = new URLSearchParams({ year: String(year), scope })
+    if (visualization === 'pillar') {
+      params.set('visual', 'pillar')
+      params.set('side', pillarSide)
+      params.set('region', pillarRegion)
+      params.set('span', String(Math.round(pillarSpan * 100) / 100))
+      params.set('play', playbackMode)
+    }
     if (compareYear !== null) params.set('compare', String(compareYear))
     if (tourState) {
       params.set('tour', tourState.id)
@@ -1090,6 +1158,10 @@ export default function App() {
     navigation.setUrl(`#${params}`, immediate)
   }, [
     year,
+    visualization,
+    pillarSide,
+    pillarRegion,
+    pillarSpan,
     selection,
     camera,
     scope,
@@ -1145,6 +1217,10 @@ export default function App() {
       const sharedCamera = readCamera()
       setPlaying(false)
       setYear(next.year)
+      setVisualization(next.view.visualization)
+      setPillarSide(next.view.pillarSide)
+      setPillarRegion(next.view.pillarRegion)
+      setPillarSpan(next.view.pillarSpan)
       setScope(next.scope)
       setCompareYear(next.compare)
       setCompareDraft(String(next.compare ?? 220))
@@ -1416,6 +1492,7 @@ export default function App() {
       data-mobile-view={mobileView}
       data-reader-collapsed={readerCollapsed}
       data-focus-mode={focusMode}
+      data-visualization={visualization}
     >
       {focusMode && (
         <button
@@ -1594,6 +1671,14 @@ export default function App() {
           <MoreHorizontal size={21} />
         </button>
         <div className={`header-actions ${moreOpen ? 'mobile-open' : ''}`}>
+          <button
+            className="icon-button visualization-action"
+            aria-label={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
+            title={visualization === 'map' ? '切换到时空柱' : '切换到地图'}
+            onClick={() => switchVisualization(visualization === 'map' ? 'pillar' : 'map')}
+          >
+            {visualization === 'map' ? <Layers3 size={18} /> : <MapIcon size={18} />}
+          </button>
           <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
           <button
             ref={focusEnterRef}
@@ -1651,6 +1736,20 @@ export default function App() {
       </header>
 
       <main className="map-shell">
+        <div className="visualization-switch" role="group" aria-label="探索模式">
+          {(['map', 'pillar'] as const).map((value) => (
+            <button
+              key={value}
+              aria-pressed={visualization === value}
+              onClick={() => {
+                switchVisualization(value)
+              }}
+            >
+              {value === 'map' ? <MapIcon size={15} /> : <Layers3 size={15} />}
+              <span>{value === 'map' ? '地图' : '时空柱'}</span>
+            </button>
+          ))}
+        </div>
         <h1 className="map-heading">
           {tour?.name ?? trail?.name ?? selectedPlace?.name ?? period.name} · {formatYear(year)}
         </h1>
@@ -1686,46 +1785,101 @@ export default function App() {
           <Suspense
             fallback={
               <div className="map-loading" role="status">
-                正在载入历史地图…
+                {visualization === 'pillar' ? '正在展开时空柱…' : '正在载入历史地图…'}
               </div>
             }
           >
-            <HistoryMap
-              year={year}
-              events={mapEvents}
-              showCities={showCities}
-              showEvents={showEvents}
-              showRoutes={showRoutes}
-              hiddenPolities={hiddenPolities}
-              selection={selection}
-              focus={focus}
-              initialCamera={initialCamera}
-              onSelect={selectMap}
-              onPolities={onPolities}
-              onBounds={setMapBounds}
-              onCamera={onCamera}
-              compareYear={compareYear}
-              trail={trail}
-              topicSteps={tour?.chapters ? tour.steps : undefined}
-              journeyResetToken={journeyResetToken}
-              playing={playing}
-              speed={speed}
-              spotlightId={
-                !trail && !tour
-                  ? selection?.type === 'event' && !playing && !playbackReading
-                    ? selection.id
-                    : currentYearEvents[0]?.id
-                  : undefined
-              }
-              onJourneyArrival={(id) => {
-                const node = personJourney?.nodes.find((item) => item.id === id)
-                if (!node) return
-                setYear(node.year)
-                setTrailPoint(node.id)
-                if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
-              }}
-              onJourneyNode={selectJourneyNode}
-            />
+            {visualization === 'pillar' ? (
+              <TimePillar
+                year={year}
+                span={pillarSpan}
+                side={pillarSide}
+                region={pillarRegion}
+                category={category}
+                events={explorationEvents}
+                hasSpatialFilter={!!exploration.place || !!exploration.bounds}
+                onClearSpatial={() => {
+                  setExploration((old) => ({ ...old, place: '', bounds: null }))
+                  setPlaying(false)
+                }}
+                selectedId={selection?.type === 'event' ? selection.id : undefined}
+                playing={playing}
+                speed={speed}
+                playbackMode={playbackMode}
+                range={exploration.range}
+                onNavigate={(value, span) => {
+                  setYear(clampYear(value))
+                  setPillarSpan(span)
+                  setPlaying(false)
+                  setPlaybackReading(false)
+                }}
+                onPause={() => setPlaying(false)}
+                onPlay={togglePlayback}
+                onSide={(value) => {
+                  setPillarSide(value)
+                  setPlaying(false)
+                }}
+                onRegion={(value) => {
+                  setPillarRegion(value)
+                  setPlaying(false)
+                }}
+                onCategory={(value) => {
+                  setCategory(value)
+                  setPlaying(false)
+                }}
+                onSpeed={setSpeed}
+                onPlaybackMode={(value) => {
+                  setPlaybackMode(value)
+                  setPlaying(false)
+                }}
+                onRange={(range) => {
+                  setExploration((old) => ({ ...old, range }))
+                  setPlaying(false)
+                }}
+                onEvent={openEvent}
+                onRead={() => {
+                  setReaderCollapsed(false)
+                  setMobileView('split')
+                }}
+              />
+            ) : (
+              <HistoryMap
+                year={year}
+                events={mapEvents}
+                showCities={showCities}
+                showEvents={showEvents}
+                showRoutes={showRoutes}
+                hiddenPolities={hiddenPolities}
+                selection={selection}
+                focus={focus}
+                initialCamera={initialCamera}
+                onSelect={selectMap}
+                onPolities={onPolities}
+                onBounds={setMapBounds}
+                onCamera={onCamera}
+                compareYear={compareYear}
+                trail={trail}
+                topicSteps={tour?.chapters ? tour.steps : undefined}
+                journeyResetToken={journeyResetToken}
+                playing={playing}
+                speed={speed}
+                spotlightId={
+                  !trail && !tour
+                    ? selection?.type === 'event' && !playing && !playbackReading
+                      ? selection.id
+                      : currentYearEvents[0]?.id
+                    : undefined
+                }
+                onJourneyArrival={(id) => {
+                  const node = personJourney?.nodes.find((item) => item.id === id)
+                  if (!node) return
+                  setYear(node.year)
+                  setTrailPoint(node.id)
+                  if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
+                }}
+                onJourneyNode={selectJourneyNode}
+              />
+            )}
           </Suspense>
           {compareYear !== null && (
             <div className="comparison-controls">
@@ -2073,6 +2227,23 @@ export default function App() {
                     <MapPin size={14} />
                     {selectedEvent.location}
                   </p>
+                  <button
+                    className="event-map-link"
+                    onClick={() => {
+                      rememberView()
+                      setVisualization(visualization === 'pillar' ? 'map' : 'pillar')
+                      setPlaying(false)
+                      setFocus({
+                        coordinates: selectedEvent.coordinates,
+                        zoom: 4.6,
+                        token: Date.now(),
+                      })
+                      setMobileView('split')
+                    }}
+                  >
+                    {visualization === 'pillar' ? <MapIcon size={15} /> : <Layers3 size={15} />}
+                    {visualization === 'pillar' ? '在地图中查看' : '在时空柱中对照'}
+                  </button>
                   <div className="detail-rule" />
                   <p className="detail-lead">{selectedEvent.summary}</p>
                   {(selectedEvent.dateNote || selectedEvent.locationNote) && (
@@ -2129,6 +2300,25 @@ export default function App() {
                     <h3>它改变了什么？</h3>
                     <p>{selectedEvent.impact}</p>
                   </div>
+                  {relatedReading(selectedEvent, events).length > 0 && (
+                    <section className="event-relations">
+                      <span className="eyebrow">沿着线索，继续读</span>
+                      <h3>历史不是孤立的时刻</h3>
+                      {relatedReading(selectedEvent, events).map((relation, index) => (
+                        <button
+                          key={`${relation.event.id}-${index}`}
+                          onClick={() => openEvent(relation.event.id)}
+                        >
+                          <span>
+                            {relation.label} · {formatEventDate(relation.event)}
+                          </span>
+                          <strong>{relation.event.title}</strong>
+                          <small>{relation.note}</small>
+                          <ChevronRight size={15} />
+                        </button>
+                      ))}
+                    </section>
+                  )}
                   {selectedEvent.people.length > 0 && (
                     <div className="related-people">
                       <h3>
@@ -2748,20 +2938,22 @@ export default function App() {
                 </div>
               ) : (
                 <div className="events-panel">
-                  <div className="period-brief">
-                    <button onClick={() => navigateMode('overview')}>
-                      <BookOpen size={15} />
-                      <span>{period.name}概览</span>
-                      <ChevronRight size={13} />
-                    </button>
-                    <button
-                      className="begin-learning"
-                      onClick={() => startTour(`period-${period.id}`)}
-                    >
-                      从开篇学习
-                      <ArrowRight size={13} />
-                    </button>
-                  </div>
+                  {(visualization !== 'pillar' || pillarSide !== 'world') && (
+                    <div className="period-brief">
+                      <button onClick={() => navigateMode('overview')}>
+                        <BookOpen size={15} />
+                        <span>{period.name}概览</span>
+                        <ChevronRight size={13} />
+                      </button>
+                      <button
+                        className="begin-learning"
+                        onClick={() => startTour(`period-${period.id}`)}
+                      >
+                        从开篇学习
+                        <ArrowRight size={13} />
+                      </button>
+                    </div>
+                  )}
                   <div className="event-list-controls">
                     <div className="event-list-heading">
                       <h3>
@@ -2788,7 +2980,9 @@ export default function App() {
                         )}
                         <option value="year">仅当年</option>
                         <option value="nearby">前后5年</option>
-                        <option value="period">整个时期</option>
+                        <option value="period">
+                          {visualization === 'pillar' ? '当前画布' : '整个时期'}
+                        </option>
                       </select>
                       <select
                         aria-label="筛选事件类别"
@@ -2807,7 +3001,7 @@ export default function App() {
                         [
                           ['year', '仅当年'],
                           ['nearby', '前后5年'],
-                          ['period', '整个时期'],
+                          ['period', visualization === 'pillar' ? '当前画布' : '整个时期'],
                         ] as const
                       ).map(([value, label]) => (
                         <button
@@ -2836,7 +3030,9 @@ export default function App() {
                   <p className="list-description">
                     {exploration.range
                       ? `${compactYear(exploration.range[0])}—${compactYear(exploration.range[1])}年`
-                      : scopeDescription(year, scope)}{' '}
+                      : visualization === 'pillar' && scope === 'period'
+                        ? '当前画布中的已收录事件'
+                        : scopeDescription(year, scope)}{' '}
                     ·{' '}
                     {exploration.range || scope === 'period' ? '按时间顺序' : '距当前年份由近及远'}
                     <ArrowDown size={11} />
@@ -2898,60 +3094,64 @@ export default function App() {
         </div>
       </aside>
 
-      <Timeline
-        selectedId={trail?.activeId ?? (selection?.type === 'event' ? selection.id : undefined)}
-        year={year}
-        playing={playing}
-        events={trail ? trailTimelineEvents : tour?.chapters ? mapEvents : explorationEvents}
-        range={exploration.range}
-        playbackMode={playbackMode}
-        onPlaybackMode={(value) => {
-          setPlaybackMode(value)
-          setPlaying(false)
-        }}
-        onYear={navigateYear}
-        onPlay={togglePlayback}
-        onEvent={trail ? selectJourneyNode : (id) => selectMap({ type: 'event', id })}
-        onSpeed={setSpeed}
-        speed={speed}
-        onPeriod={jumpPeriod}
-        onOverview={() => navigateMode('overview')}
-        readerCollapsed={readerCollapsed}
-        onExpandReader={() => setReaderCollapsed(false)}
-        comparing={compareYear !== null}
-        onCompare={() => {
-          if (compareYear === null && mobileView === 'reading') setMobileView('split')
-          toggleComparison()
-        }}
-        topic={
-          tour?.chapters && tourState
-            ? {
-                name: tour.name,
-                from: eventById.get(tour.steps[0])!.year,
-                to: eventById.get(tour.steps.at(-1)!)!.year,
-                canPrevious: tourState.step >= 0,
-                canNext: tourState.step < tour.steps.length - 1,
-                onPrevious: () => tourStep(-1),
-                onNext: () => tourStep(1),
-              }
-            : undefined
-        }
-        journey={
-          trail
-            ? {
-                name: trail.name,
-                from: trail.nodes[0].year,
-                to: trail.nodes.at(-1)!.year,
-                canPrevious: trail.nodes.findIndex((node) => node.id === trail.activeId) > 0,
-                canNext:
-                  trail.nodes.findIndex((node) => node.id === trail.activeId) <
-                  trail.nodes.length - 1,
-                onPrevious: () => stepJourney(-1),
-                onNext: () => stepJourney(1),
-              }
-            : undefined
-        }
-      />
+      {visualization === 'pillar' ? (
+        <section className="timeline" aria-hidden="true" inert />
+      ) : (
+        <Timeline
+          selectedId={trail?.activeId ?? (selection?.type === 'event' ? selection.id : undefined)}
+          year={year}
+          playing={playing}
+          events={trail ? trailTimelineEvents : tour?.chapters ? mapEvents : explorationEvents}
+          range={exploration.range}
+          playbackMode={playbackMode}
+          onPlaybackMode={(value) => {
+            setPlaybackMode(value)
+            setPlaying(false)
+          }}
+          onYear={navigateYear}
+          onPlay={togglePlayback}
+          onEvent={trail ? selectJourneyNode : (id) => selectMap({ type: 'event', id })}
+          onSpeed={setSpeed}
+          speed={speed}
+          onPeriod={jumpPeriod}
+          onOverview={() => navigateMode('overview')}
+          readerCollapsed={readerCollapsed}
+          onExpandReader={() => setReaderCollapsed(false)}
+          comparing={compareYear !== null}
+          onCompare={() => {
+            if (compareYear === null && mobileView === 'reading') setMobileView('split')
+            toggleComparison()
+          }}
+          topic={
+            tour?.chapters && tourState
+              ? {
+                  name: tour.name,
+                  from: eventById.get(tour.steps[0])!.year,
+                  to: eventById.get(tour.steps.at(-1)!)!.year,
+                  canPrevious: tourState.step >= 0,
+                  canNext: tourState.step < tour.steps.length - 1,
+                  onPrevious: () => tourStep(-1),
+                  onNext: () => tourStep(1),
+                }
+              : undefined
+          }
+          journey={
+            trail
+              ? {
+                  name: trail.name,
+                  from: trail.nodes[0].year,
+                  to: trail.nodes.at(-1)!.year,
+                  canPrevious: trail.nodes.findIndex((node) => node.id === trail.activeId) > 0,
+                  canNext:
+                    trail.nodes.findIndex((node) => node.id === trail.activeId) <
+                    trail.nodes.length - 1,
+                  onPrevious: () => stepJourney(-1),
+                  onNext: () => stepJourney(1),
+                }
+              : undefined
+          }
+        />
+      )}
       {toast && (
         <div className="toast" role="status">
           <Check size={15} />
@@ -2977,7 +3177,7 @@ export default function App() {
           <>
             <span className="eyebrow">山河纪 · 分享此刻</span>
             <h2>让朋友看到这段历史</h2>
-            <p>复制下面的链接，包含年份、当前档案、筛选条件、地图图层与视野。</p>
+            <p>复制下面的链接，包含年份、当前档案、探索模式、筛选条件与视野。</p>
             <input
               readOnly
               value={navigation.url()}

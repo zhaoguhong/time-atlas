@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T18:16:24.753Z",
+  "generatedAt": "2026-10-22T09:20:11.598Z",
   "validation": {
     "allIntroductionsAndSources": true,
     "datesAndCoordinates": true,
@@ -9714,6 +9714,7 @@
       "title": "哥贝克力石阵：早期共同体的巨石建筑",
       "year": -9600,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9724,6 +9725,7 @@
       "title": "杰里科：泉水旁的定居与公共建筑",
       "year": -9000,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "来源指出前第九至第八千纪已有较大永久聚落；轴上前9000—前7001年表示这两个千纪，不是石塔或围墙的精确施工年代。遗址另有更早和更晚的遗存。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9734,6 +9736,7 @@
       "title": "上山文化：钱塘江流域的早期稻作",
       "year": -8000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "来源以距今约10000—8500年表述；时间轴采用取整后的公元前年份作浏览入口，不作逐年精确换算。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9744,6 +9747,7 @@
       "title": "恰塔霍裕克：密集定居聚落",
       "year": -7400,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9754,6 +9758,7 @@
       "title": "贾湖聚落与刻符遗物",
       "year": -7000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9764,6 +9769,7 @@
       "title": "乔伊鲁科蒂亚：海岛上的圆形住宅",
       "year": -7000,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "采用UNESCO价值说明中的前第七至第五千纪作为本条阶段，轴上为前7000—前4001年。页面总述还包括较晚遗存，不能把这一阶段当作全遗址起讫。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9774,6 +9780,7 @@
       "title": "兴隆沟：西辽河流域的粟黍与聚落",
       "year": -6000,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。",
       "locationNote": "采用Wikidata遗址定位作区域参照，取整到遗址附近；不是第一地点的精确发掘探方或整个兴隆洼文化范围。",
@@ -9784,6 +9791,7 @@
       "title": "裴李岗：农耕生活与聚落分区",
       "year": -6000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。本条是遗址的裴李岗遗存阶段，不包括更早的旧石器遗存。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9794,6 +9802,7 @@
       "title": "大地湾：渭河上游的聚落与彩陶",
       "year": -6000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。仅收录新石器时代阶段，不把更早的人类活动都纳入同一文化。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9804,6 +9813,7 @@
       "title": "跨湖桥：独木舟与河口生活",
       "year": -6000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9814,6 +9824,7 @@
       "title": "仰韶文化：黄河流域的聚落与彩陶",
       "year": -5000,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9824,6 +9835,7 @@
       "title": "河姆渡：稻作与干栏式木构生活",
       "year": -5000,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。本条采用展览说明的六七千年前阶段，不表示河姆渡全部遗存起讫。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9834,6 +9846,7 @@
       "title": "库克：新几内亚高地的早期农业",
       "year": -5000,
       "people": [],
+      "region": "oceania",
       "sourceCount": 1,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。本条限于早期耕作转变；约距今4000年以来的排水沟为更晚阶段。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9844,6 +9857,7 @@
       "title": "半坡：住宅、陶窑与墓地的聚落分区",
       "year": -4500,
       "people": [],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "采用陕西省志中半坡早期类型的约前4500—前4300年分期作观察窗口；不是半坡全遗址存续年代，测年与分期仍可能调整。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9854,6 +9868,7 @@
       "title": "大汶口：墓葬差异与陶器工艺",
       "year": -4300,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9864,6 +9879,7 @@
       "title": "三内丸山：绳文社会的长期定居",
       "year": -3900,
       "people": [],
+      "region": "east-asia",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9874,6 +9890,7 @@
       "title": "凌家滩：玉器制作与社会分化",
       "year": -3800,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9884,6 +9901,7 @@
       "title": "牛河梁：红山社会的祭坛与积石冢",
       "year": -3500,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。这是本条采用的红山晚期观察区间，不等于全部红山文化年代。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9894,6 +9912,7 @@
       "title": "良渚古城：稻作、水利与早期国家",
       "year": -3300,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9904,6 +9923,7 @@
       "title": "林家遗址：早期青铜刀的实物证据",
       "year": -3280,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "前3280—前2740年为来源所列文化层碳十四测年区间，不是青铜刀精确铸造起止年，也不表示每一年都有持续生产。",
       "locationNote": "坐标为甘肃东乡林家所在区域附近的参照，不表示青铜刀出土探方或冶炼炉位置。",
@@ -9914,6 +9934,7 @@
       "title": "乌鲁克：两河流域的大型城市",
       "year": -3200,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "约前3200年是大型城市已发展起来的观察锚点，不是精确建城年。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9924,6 +9945,7 @@
       "title": "马家窑彩陶：图像与专业化制陶",
       "year": -3200,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "前3200—前2000年采用国博所列马家窑文化概括年代；本条涉及不同类型的彩陶，不是每件器物的精确制作年代。",
       "locationNote": "采用Wikidata马家窑遗址定位，取整作文化命名地参照；本条器物分布跨甘肃、青海，不表示都在该点出土。",
@@ -9934,6 +9956,7 @@
       "title": "乌鲁克泥板：从计量记账到早期书写",
       "year": -3200,
       "people": [],
+      "region": "west-asia",
       "sourceCount": 1,
       "dateNote": "约前3200—前3000年为来源讨论的早期书写阶段，不是文字被一次性发明的精确日期。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9944,6 +9967,7 @@
       "title": "古埃及统一与早王朝的形成",
       "year": -3100,
       "people": [],
+      "region": "africa",
       "sourceCount": 1,
       "dateNote": "约前3100年为常用纪年锚点，统一历经渐进过程，不是精确到年的单一事件。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9954,6 +9978,7 @@
       "title": "屈家岭：熊家岭水坝与稻田用水",
       "year": -3100,
       "people": [],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。区间包括早期坝及后续扩建，屈家岭文化和全遗址有更长年代。",
       "locationNote": "坐标采用湖北考古年度报告所列遗址中心，取整作参照；熊家岭坝在遗址东北部，不把遗址中心当作坝体精确位置。",
@@ -9964,6 +9989,7 @@
       "title": "多拉维拉：印度河文明的城市与蓄水",
       "year": -3000,
       "people": [],
+      "region": "south-asia",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9974,6 +10000,7 @@
       "title": "摩亨佐达罗：印度河流域的城市规划",
       "year": -3000,
       "people": [],
+      "region": "south-asia",
       "sourceCount": 1,
       "dateNote": "来源使用公元前第三千纪的概括尺度；轴上前3000—前2001年仅对应该千纪范围，不表示遗址起讫。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9984,6 +10011,7 @@
       "title": "卡拉尔：安第斯地区的广场与台基",
       "year": -3000,
       "people": [],
+      "region": "americas",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -9994,6 +10022,7 @@
       "title": "斯卡拉布雷：石屋中的日常生活",
       "year": -2920,
       "people": [],
+      "region": "europe",
       "sourceCount": 3,
       "dateNote": "2024年价值评估列出第一期石屋始建约前2920—前2885年、第二期结束约前2545—前2440年。轴上取包含两期的观察窗口，中间曾中断使用；更早活动约前3360—前3160年，不与现存石屋混同。",
       "locationNote": "坐标定位保存下来的村落；现代海岸线不等于当时湖岸或居住环境。",
@@ -10004,6 +10033,7 @@
       "title": "萨卡拉：左塞尔阶梯金字塔的营建",
       "year": -2667,
       "people": [],
+      "region": "africa",
       "sourceCount": 1,
       "dateNote": "采用来源所列左塞尔在位年代作营建观察窗口，不是工程精确开工和竣工日期。不同埃及年代体系的王年可能有差异。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -10014,6 +10044,7 @@
       "title": "吉萨：胡夫大金字塔与资源组织",
       "year": -2589,
       "people": [],
+      "region": "africa",
       "sourceCount": 1,
       "dateNote": "采用来源所列胡夫在位年代作观察窗口，不是建筑精确开工和竣工年；古埃及王年与营建方法仍有研究差异。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -10024,6 +10055,7 @@
       "title": "城子崖：山东龙山文化的城址与黑陶",
       "year": -2500,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -10034,16 +10066,29 @@
       "title": "石家河：城址群、作坊与玉器",
       "year": -2500,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。包括石家河和后石家河阶段；遗址群还有更早的油子岭、屈家岭等遗存。",
       "locationNote": "定位石家河遗址群的代表区域，不表示全部遗址点、城垣或当时政权边界。",
       "readingCharacters": 249
     },
     {
+      "id": "world-kerma",
+      "title": "克尔玛与努比亚王国",
+      "year": -2400,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 176
+    },
+    {
       "id": "taosi-city",
       "title": "陶寺：汾河流域的都邑与社会分区",
       "year": -2300,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "来源以“距今”概括年代；轴上采用取整的公元前年份作浏览参照，不作逐年精确换算，也不将区间端点当作始建或废弃年份。采用考古队领队介绍的概括区间；早期报告有更宽的分期估计，不将不同方案强行精确到同一年。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
@@ -10054,10 +10099,22 @@
       "title": "石峁：黄土高原北部的大型石城",
       "year": -2300,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古年代为概括区间，起点不是精确建成年，终点也不表示某一年突然消失。",
       "locationNote": "坐标定位代表遗址或城市附近，不表示考古文化分布范围、古河道或国家疆界。",
       "readingCharacters": 250
+    },
+    {
+      "id": "world-akkad",
+      "title": "阿卡德王国扩张",
+      "year": -2300,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 186
     },
     {
       "id": "xia-tradition",
@@ -10066,20 +10123,44 @@
       "people": [
         "early-yu"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "常见推年，不是已获同时代文字证实的建国日期。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 269
     },
     {
+      "id": "world-minoan",
+      "title": "克里特宫殿文明",
+      "year": -2000,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 169
+    },
+    {
       "id": "erlitou-centre",
       "title": "二里头都邑与手工业网络",
       "year": -1800,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "考古发展阶段；时间轴起点为区间入口，非都邑精确建成年。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 266
+    },
+    {
+      "id": "world-hammurabi",
+      "title": "汉谟拉比法典刻立",
+      "year": -1750,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 177
     },
     {
       "id": "shang-begins",
@@ -10088,6 +10169,7 @@
       "people": [
         "early-tang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "起始年采用常见推年；亳与鸣条地望有争议。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
@@ -10098,20 +10180,55 @@
       "title": "商前期的原始瓷与高温工艺",
       "year": -1600,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "器物年代区间，非技术首次出现的精确年份。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 235
     },
     {
+      "id": "world-new-kingdom",
+      "title": "埃及新王国兴起",
+      "year": -1540,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 177
+    },
+    {
+      "id": "world-olmec",
+      "title": "奥尔梅克中心与巨石头像",
+      "year": -1350,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 160
+    },
+    {
       "id": "pan-geng-yin",
       "title": "盘庚迁殷",
       "year": -1300,
       "people": [],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "采用常见迁殷考定，绝对年代仍有讨论。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 235
+    },
+    {
+      "id": "world-kadesh",
+      "title": "卡迭石之战",
+      "year": -1274,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 176
     },
     {
       "id": "wuding-era",
@@ -10120,10 +10237,22 @@
       "people": [
         "early-wuding"
       ],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "采用武丁在位的常见考定。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 262
+    },
+    {
+      "id": "world-bronze-collapse",
+      "title": "东地中海青铜时代危机",
+      "year": -1200,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 167
     },
     {
       "id": "muye",
@@ -10132,6 +10261,7 @@
       "people": [
         "early-wuwang"
       ],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "采用夏商周断代工程考定，另有不同学术推年。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
@@ -10144,6 +10274,7 @@
       "people": [
         "early-zhougong"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "仅定位于西周初期，前1046年是分期阅读入口，不是声称东征就在这一年开始。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
@@ -10154,6 +10285,7 @@
       "title": "国人暴动与共和行政",
       "year": -841,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 235
@@ -10163,6 +10295,7 @@
       "title": "周宣王即位与中兴",
       "year": -827,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 224
@@ -10172,6 +10305,7 @@
       "title": "幽王之死与西周终结",
       "year": -771,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 219
@@ -10181,6 +10315,7 @@
       "title": "平王东迁洛邑",
       "year": -770,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 225
@@ -10193,6 +10328,7 @@
         "early-qihuan",
         "early-guanzhong"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 225
@@ -10205,6 +10341,7 @@
         "early-qihuan",
         "early-guanzhong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 232
@@ -10216,15 +10353,27 @@
       "people": [
         "early-jinwen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 214
+    },
+    {
+      "id": "world-nineveh",
+      "title": "尼尼微陷落",
+      "year": -612,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 158
     },
     {
       "id": "bi-battle",
       "title": "邲之战",
       "year": -597,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 214
@@ -10234,27 +10383,90 @@
       "title": "鲁国初税亩",
       "year": -594,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 220
+    },
+    {
+      "id": "world-cyrus",
+      "title": "居鲁士击败米底，波斯帝国崛起",
+      "year": -550,
+      "people": [],
+      "region": "west-asia",
+      "relatedEvents": [
+        {
+          "id": "world-babylon",
+          "label": "后续扩张",
+          "note": "击败米底之后，波斯王权继续向两河流域扩张。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 165
+    },
+    {
+      "id": "world-babylon",
+      "title": "波斯军队进入巴比伦",
+      "year": -539,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 157
     },
     {
       "id": "zheng-law",
       "title": "郑国铸刑书",
       "year": -536,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 219
+    },
+    {
+      "id": "world-roman-republic",
+      "title": "罗马共和国的传统开端",
+      "year": -509,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 178
+    },
+    {
+      "id": "world-athens",
+      "title": "克里斯提尼改革与雅典公民政治",
+      "year": -508,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 173
     },
     {
       "id": "wu-enters-ying",
       "title": "吴军入郢",
       "year": -506,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 211
+    },
+    {
+      "id": "world-buddhism",
+      "title": "佛教与耆那教兴起",
+      "year": -500,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 166
     },
     {
       "id": "kongzi-teaching",
@@ -10263,10 +10475,21 @@
       "people": [
         "confucius"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "离鲁纪年有前497年、前496年等说；不构成已核定的逐站行迹。",
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 237
+    },
+    {
+      "id": "world-marathon",
+      "title": "马拉松之战",
+      "year": -490,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 159
     },
     {
       "id": "yue-defeats-wu",
@@ -10275,15 +10498,28 @@
       "people": [
         "early-goujian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为相关遗址或区域参照，不表示事件发生于一个可精确定位的点。",
       "readingCharacters": 214
+    },
+    {
+      "id": "world-peloponnesian",
+      "title": "伯罗奔尼撒战争",
+      "year": -431,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 164
     },
     {
       "id": "three-jin",
       "title": "三家分晋，列为诸侯",
       "year": -403,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为晋地的区域参照，非单一事件现场。",
       "readingCharacters": 229
@@ -10295,6 +10531,7 @@
       "people": [
         "shangyang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "这里采用第一阶段变法的常见纪年。",
       "readingCharacters": 224
@@ -10306,6 +10543,7 @@
       "people": [
         "sunbin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "古战场位置为大致参照。",
       "readingCharacters": 210
@@ -10318,6 +10556,7 @@
         "shangyang",
         "reviewed-秦孝公"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 177
@@ -10329,6 +10568,7 @@
       "people": [
         "sunbin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "战场位置有不同考证，标记为示意。",
       "readingCharacters": 193
@@ -10342,9 +10582,55 @@
         "reviewed-秦孝公",
         "reviewed-秦惠文王"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 170
+    },
+    {
+      "id": "world-alexander",
+      "title": "亚历山大东征",
+      "year": -334,
+      "people": [],
+      "region": "west-asia",
+      "relatedEvents": [
+        {
+          "id": "world-cyrus",
+          "label": "此前的帝国",
+          "note": "东征面对的是已长期发展并多次变迁的阿契美尼德帝国。"
+        },
+        {
+          "id": "world-hellenistic",
+          "label": "后续发展",
+          "note": "继业者王国在亚历山大去世后分立。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 170
+    },
+    {
+      "id": "world-hellenistic",
+      "title": "希腊化世界的交流与学术",
+      "year": -323,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 162
+    },
+    {
+      "id": "world-maurya",
+      "title": "孔雀王朝建立",
+      "year": -321,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 163
     },
     {
       "id": "mencius-liang",
@@ -10354,6 +10640,7 @@
         "mengzi",
         "reviewed-梁惠王"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "前320年为常见系年；另有前319、前335等说法，原典未给出这一精确公元纪年，不作为确定行迹。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10366,6 +10653,7 @@
       "people": [
         "q10916673"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 166
@@ -10377,8 +10665,20 @@
       "people": [
         "zhaowuling"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 203
+    },
+    {
+      "id": "world-meroe",
+      "title": "麦罗埃成为库施的重要中心",
+      "year": -300,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 170
     },
     {
       "id": "chu-huai-captured",
@@ -10388,6 +10688,7 @@
         "reviewed-楚怀王",
         "q313330"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "武关是楚怀王被扣留的相关地点，不能据此认定屈原到过武关。",
       "peopleNotes": {
@@ -10403,6 +10704,7 @@
         "zhaowuling",
         "reviewed-赵惠文王"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 145
@@ -10415,6 +10717,7 @@
         "q912239",
         "q3274709"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 155
@@ -10426,9 +10729,32 @@
       "people": [
         "baiqi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "采用今湖北荆州一带的地理参照。",
       "readingCharacters": 182
+    },
+    {
+      "id": "world-punic",
+      "title": "布匿战争与罗马地中海扩张",
+      "year": -264,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 169
+    },
+    {
+      "id": "world-ashoka",
+      "title": "羯陵伽战争与阿育王的转变",
+      "year": -261,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 166
     },
     {
       "id": "changping",
@@ -10437,6 +10763,7 @@
       "people": [
         "baiqi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 214
     },
@@ -10449,6 +10776,7 @@
         "q1038423",
         "q10835094"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -10458,6 +10786,7 @@
       "title": "西周君降秦",
       "year": -256,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 197
     },
@@ -10468,6 +10797,7 @@
       "people": [
         "q696721"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "约前3世纪；前256年作为常见传统纪年的展示锚点，并非可考定的单一年开工日期。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10480,6 +10810,7 @@
       "people": [
         "depth-zhengguo"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用通常所用的开工纪年；工程持续时间另需区分。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10492,6 +10823,7 @@
       "people": [
         "q366120"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 237
@@ -10503,6 +10835,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 179
     },
@@ -10513,6 +10846,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 168
     },
@@ -10524,6 +10858,7 @@
         "yingzheng",
         "q532410"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 236
@@ -10535,6 +10870,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 170
     },
@@ -10545,6 +10881,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 186
     },
@@ -10555,6 +10892,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "一个记录涵盖两处战线，以辽西作区域参照，不是单一战场。",
       "readingCharacters": 244
@@ -10567,6 +10905,7 @@
         "yingzheng",
         "lisi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 211
     },
@@ -10578,6 +10917,7 @@
         "yingzheng",
         "lisi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "标示统一后颁行措施的节点，不表示所有地区同时完成。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10591,6 +10931,7 @@
         "yingzheng",
         "q1151702"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "黄河河套的区域性战事，以今包头附近作参照。",
       "peopleNotes": {
@@ -10605,6 +10946,7 @@
       "people": [
         "yingzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "区域性事件，以广州一带作参照。",
       "readingCharacters": 189
@@ -10617,6 +10959,7 @@
         "yingzheng",
         "lisi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 221
     },
@@ -10628,6 +10971,7 @@
         "yingzheng",
         "q1151702"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用始皇三十五年的开工节点，不表示全线竣工。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10644,6 +10988,7 @@
         "yingzheng",
         "lisi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "沙丘位置采用今河北广宗一带参照。",
       "readingCharacters": 184
@@ -10655,6 +11000,7 @@
       "people": [
         "chensheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 205
     },
@@ -10665,6 +11011,7 @@
       "people": [
         "xiangyu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "古战场大致位置。",
       "readingCharacters": 191
@@ -10678,6 +11025,7 @@
         "liubang",
         "q701326"
       ],
+      "region": "china",
       "sourceCount": 1,
       "peopleNotes": {
         "q701326": "张良在宴前转达项伯告警，席间联络樊哙，刘邦离开后留下致谢献礼；《项羽本纪》直接记载其在场。"
@@ -10693,6 +11041,7 @@
         "q574498",
         "liubang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 141
@@ -10706,6 +11055,7 @@
         "reviewed-陈余",
         "reviewed-赵歇"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 144
@@ -10717,6 +11067,7 @@
       "people": [
         "liubang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 194
     },
@@ -10729,6 +11080,7 @@
         "xiangyu",
         "q574498"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 145
@@ -10742,6 +11094,7 @@
         "q382816",
         "q707658"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -10758,6 +11111,7 @@
         "q1368034",
         "q298039"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 148
@@ -10771,6 +11125,7 @@
         "q1368034",
         "reviewed-汉惠帝"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -10787,6 +11142,7 @@
         "q707658",
         "q7221"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -10801,6 +11157,7 @@
       "title": "七国之乱",
       "year": -154,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "全国性事件，非单一战场。",
       "readingCharacters": 195
@@ -10812,6 +11169,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 240
@@ -10824,6 +11182,7 @@
         "zhangqian",
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "采用前138年的常见纪年；部分资料记前139年。",
       "locationNote": "地图标记出发区域，路线为专题示意。",
@@ -10836,6 +11195,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
@@ -10848,6 +11208,7 @@
         "zhangqian",
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -10859,6 +11220,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 252
@@ -10871,6 +11233,7 @@
         "hanwudi",
         "huoqubing"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "区域参照，非具体交战点。",
       "readingCharacters": 195
@@ -10883,6 +11246,7 @@
         "zhangqian",
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "乌孙地域的示意位置。",
       "readingCharacters": 191
@@ -10896,6 +11260,7 @@
         "huoqubing",
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记蒙古高原的战役区域；不同军队的行军方向和交战地点不合并为个人路线。",
       "readingCharacters": 155
@@ -10907,6 +11272,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "这里标示元狩年间的关键节点；措施形成与调整经历多阶段。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10919,6 +11285,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 250
@@ -10931,6 +11298,7 @@
         "hanwudi",
         "simaqian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 198
     },
@@ -10943,6 +11311,7 @@
         "reviewed-李陵",
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "标记朝廷议论与审判地长安，不将李陵北方战场画作司马迁行迹。",
       "readingCharacters": 166
@@ -10955,6 +11324,7 @@
         "hanwudi",
         "q718024"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 152
@@ -10966,6 +11336,7 @@
       "people": [
         "hanwudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "不把这份诏书简单等同于全面停止战争或后世概括的统一“罪己诏”。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -10976,9 +11347,27 @@
       "title": "西域都护设置",
       "year": -60,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "治所位置采用大致参照。",
       "readingCharacters": 191
+    },
+    {
+      "id": "world-caesar",
+      "title": "恺撒遇刺与共和国危机",
+      "year": -44,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-augustus",
+          "label": "后续政局",
+          "note": "刺杀没有结束内战，屋大维在后续竞争中胜出。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 174
     },
     {
       "id": "zhaojun-marriage",
@@ -10987,9 +11376,20 @@
       "people": [
         "q701037"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "以入朝和结亲的长安作参照，未重建昭君出塞路线。",
       "readingCharacters": 252
+    },
+    {
+      "id": "world-augustus",
+      "title": "屋大维获奥古斯都称号",
+      "year": -27,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 162
     },
     {
       "id": "xin-founded",
@@ -10998,6 +11398,7 @@
       "people": [
         "wangmang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 195
     },
@@ -11008,6 +11409,7 @@
       "people": [
         "wangmang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 148
@@ -11019,6 +11421,7 @@
       "people": [
         "liuxiu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 140
@@ -11030,6 +11433,7 @@
       "people": [
         "liuxiu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 194
     },
@@ -11040,6 +11444,7 @@
       "people": [
         "liuxiu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 160
@@ -11051,6 +11456,7 @@
       "people": [
         "banchao"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "采用其出使活动的起始节点。",
       "locationNote": "地域示意，不是完整行程。",
@@ -11064,6 +11470,7 @@
         "banchao",
         "reviewed-汉和帝"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 144
@@ -11076,9 +11483,21 @@
         "banchao",
         "q315678"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "终点地望有讨论，标记采用波斯湾地区的一种常见解释，非确定港口。",
       "readingCharacters": 157
+    },
+    {
+      "id": "world-teotihuacan",
+      "title": "特奥蒂瓦坎的都市时代",
+      "year": 100,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 159
     },
     {
       "id": "paper",
@@ -11087,6 +11506,7 @@
       "people": [
         "cailun"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 211
     },
@@ -11097,6 +11517,7 @@
       "people": [
         "q197206"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "此年采用传世史书的制作纪年；不能把现代复原模型直接当作原器实物。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -11107,6 +11528,7 @@
       "title": "东汉第一次党锢之祸",
       "year": 166,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 261
@@ -11120,6 +11542,7 @@
         "caocao",
         "liubei"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "多地发生，标记为区域参照。",
       "readingCharacters": 202
@@ -11132,6 +11555,7 @@
         "dongzhuo",
         "yuanshao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 253
@@ -11145,6 +11569,7 @@
         "yuanshao",
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 193
     },
@@ -11157,6 +11582,7 @@
         "reviewed-王允",
         "q317846"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 139
@@ -11170,6 +11596,7 @@
         "reviewed-刘繇",
         "zhouyu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "195年为渡江扩展的起点，平定江东经历数年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -11182,6 +11609,7 @@
       "people": [
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 189
     },
@@ -11192,6 +11620,7 @@
       "people": [
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 235
@@ -11204,6 +11633,7 @@
         "caocao",
         "yuanshao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "采用今河南中牟一带的战场参照。",
       "readingCharacters": 203
@@ -11218,6 +11648,7 @@
         "sunquan",
         "zhouyu"
       ],
+      "region": "china",
       "sourceCount": 4,
       "dateNote": "战争常记为208年冬，也涉及208—209年的跨年问题。",
       "locationNote": "古战场有争议；标记采用今湖北赤壁一带作参照。",
@@ -11231,6 +11662,7 @@
         "liubei",
         "zhugeliang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 194
     },
@@ -11242,6 +11674,7 @@
         "liubei",
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 177
     },
@@ -11255,6 +11688,7 @@
         "sunquan",
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 157
@@ -11267,6 +11701,7 @@
         "caopi",
         "caocao"
       ],
+      "region": "china",
       "sourceCount": 1,
       "peopleNotes": {
         "caocao": "曹操为魏政权奠基者，在曹丕称帝前已去世；不是此次称帝的参与者。"
@@ -11281,6 +11716,7 @@
         "caopi",
         "depth-chenqun"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 255
@@ -11293,6 +11729,7 @@
         "liubei",
         "zhugeliang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 190
     },
@@ -11305,8 +11742,19 @@
         "sunquan",
         "luxun"
       ],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 195
+    },
+    {
+      "id": "world-sasanian",
+      "title": "萨珊王朝兴起",
+      "year": 224,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 152
     },
     {
       "id": "chushibiao",
@@ -11316,6 +11764,7 @@
         "zhugeliang",
         "liushan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 152
@@ -11327,6 +11776,7 @@
       "people": [
         "zhugeliang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "军事行动涉及多地，标记祁山地区。",
       "readingCharacters": 183
@@ -11339,6 +11789,7 @@
         "luxun",
         "sunquan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 229
@@ -11351,6 +11802,7 @@
         "sunquan",
         "luxun"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 184
     },
@@ -11362,6 +11814,7 @@
         "zhugeliang",
         "liushan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 196
     },
@@ -11373,6 +11826,7 @@
         "simayi",
         "reviewed-公孙渊"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 140
@@ -11384,8 +11838,20 @@
       "people": [
         "simayi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 181
+    },
+    {
+      "id": "world-maya",
+      "title": "玛雅古典时期的城邦与文字",
+      "year": 250,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 175
     },
     {
       "id": "shu-falls",
@@ -11395,6 +11861,7 @@
         "dengai",
         "liushan"
       ],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 187
     },
@@ -11405,6 +11872,7 @@
       "people": [
         "q316304"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "刘徽作注的具体地点未确知；使用魏地的区域参照，不视作本人到访记录。",
       "readingCharacters": 170
@@ -11416,6 +11884,7 @@
       "people": [
         "simayan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 178
     },
@@ -11426,6 +11895,7 @@
       "people": [
         "simayan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 186
     },
@@ -11436,6 +11906,7 @@
       "people": [
         "q468890"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "约西晋统一后；280年仅表示时代起点，不是史书可考的单一年完成日期。",
       "locationNote": "洛阳为其仕晋活动的参照，不能认定全书在此一年一地写成。",
@@ -11446,6 +11917,7 @@
       "title": "汲冢竹书发现",
       "year": 281,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 248
@@ -11455,6 +11927,7 @@
       "title": "八王之乱开始",
       "year": 291,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 222
     },
@@ -11465,6 +11938,7 @@
       "people": [
         "depth-liuyuan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 230
@@ -11474,6 +11948,7 @@
       "title": "永嘉之乱，洛阳陷落",
       "year": 311,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 209
     },
@@ -11485,15 +11960,27 @@
         "q3278132",
         "q7392"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
+    },
+    {
+      "id": "world-milan",
+      "title": "米兰协议与基督教合法化",
+      "year": 313,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 153
     },
     {
       "id": "eastern-jin",
       "title": "东晋建立",
       "year": 317,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 206
     },
@@ -11504,15 +11991,38 @@
       "people": [
         "q1196190"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 228
+    },
+    {
+      "id": "world-constantinople",
+      "title": "君士坦丁堡成为新都",
+      "year": 330,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 163
+    },
+    {
+      "id": "world-aksum",
+      "title": "阿克苏姆王权接受基督教",
+      "year": 330,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 167
     },
     {
       "id": "huanwen-shu",
       "title": "桓温灭成汉",
       "year": 347,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 232
@@ -11524,6 +12034,7 @@
       "people": [
         "wangxizhi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -11536,6 +12047,7 @@
         "wangxizhi",
         "reviewed-王述"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 154
@@ -11547,6 +12059,7 @@
       "people": [
         "fujian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "多战线事件，以前凉都城姑臧作参照。",
       "readingCharacters": 242
@@ -11559,6 +12072,7 @@
         "fujian",
         "xiean"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "古战场的区域参照。",
       "readingCharacters": 214
@@ -11570,6 +12084,7 @@
       "people": [
         "q1149178"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 252
@@ -11581,6 +12096,7 @@
       "people": [
         "taoyuanming"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 171
@@ -11592,6 +12108,7 @@
       "people": [
         "q49699"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 226
@@ -11601,6 +12118,7 @@
       "title": "刘宋建立",
       "year": 420,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 197
     },
@@ -11609,6 +12127,7 @@
       "title": "北魏统一北方主要地区",
       "year": 439,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 207
     },
@@ -11619,15 +12138,27 @@
       "people": [
         "q227444"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 187
+    },
+    {
+      "id": "world-west-rome",
+      "title": "西罗马皇帝被废黜",
+      "year": 476,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 175
     },
     {
       "id": "southern-qi-founded",
       "title": "萧道成建立南齐",
       "year": 479,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 216
@@ -11639,6 +12170,7 @@
       "people": [
         "xiaowen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 235
@@ -11650,8 +12182,20 @@
       "people": [
         "xiaowen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 211
+    },
+    {
+      "id": "world-sogdian",
+      "title": "粟特商人与欧亚交流",
+      "year": 500,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 164
     },
     {
       "id": "foundation-liang",
@@ -11660,6 +12204,7 @@
       "people": [
         "q736726"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 216
@@ -11673,6 +12218,7 @@
         "reviewed-祖暅",
         "q736726"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "《隋书》记天监九年颁行，并载此前比较检验过程；不能与462年提出新历合并。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -11686,6 +12232,7 @@
       "title": "北魏六镇之乱兴起",
       "year": 523,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "以六镇区域作参照；各镇位置与反抗发生时间不相同。",
       "readingCharacters": 243
@@ -11699,15 +12246,28 @@
         "reviewed-孝庄帝",
         "reviewed-胡太后"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 162
+    },
+    {
+      "id": "world-justinian",
+      "title": "查士丁尼时代编纂罗马法",
+      "year": 529,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 171
     },
     {
       "id": "wei-divides",
       "title": "北魏分裂",
       "year": 534,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记东部政治中心，事件涉及多个地区。",
       "readingCharacters": 201
@@ -11719,6 +12279,7 @@
       "people": [
         "q718249"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 220
@@ -11730,6 +12291,7 @@
       "people": [
         "q1071587"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 211
@@ -11742,6 +12304,7 @@
         "q718249",
         "q1071587"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 237
@@ -11754,6 +12317,7 @@
         "q890338",
         "q736726"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -11763,6 +12327,7 @@
       "title": "侯景攻陷建康台城",
       "year": 549,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 235
@@ -11774,6 +12339,7 @@
       "people": [
         "q712338"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 212
@@ -11785,6 +12351,7 @@
       "people": [
         "q1149222"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 227
@@ -11796,6 +12363,7 @@
       "people": [
         "q718217"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 206
@@ -11807,6 +12375,7 @@
       "people": [
         "q1327591"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 176
@@ -11818,6 +12387,7 @@
       "people": [
         "q1327591"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 155
@@ -11829,6 +12399,7 @@
       "people": [
         "yangjian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 182
     },
@@ -11839,6 +12410,7 @@
       "people": [
         "yangjian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 237
@@ -11852,6 +12424,7 @@
         "reviewed-苏威",
         "reviewed-牛弘"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 158
@@ -11863,6 +12436,7 @@
       "people": [
         "yangjian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 204
     },
@@ -11873,6 +12447,7 @@
       "people": [
         "yangguang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "线性工程，标记洛阳这一重要节点。",
       "readingCharacters": 230
@@ -11884,6 +12459,7 @@
       "people": [
         "yangguang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 223
@@ -11895,6 +12471,7 @@
       "people": [
         "yangguang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 230
@@ -11906,6 +12483,7 @@
       "people": [
         "yangguang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 166
@@ -11918,6 +12496,7 @@
         "q711364",
         "q841385"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 168
@@ -11931,6 +12510,7 @@
         "lishimin",
         "reviewed-裴寂"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 141
@@ -11943,8 +12523,26 @@
         "liyuan",
         "lishimin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 191
+    },
+    {
+      "id": "world-hijra",
+      "title": "穆罕默德迁徙至麦地那",
+      "year": 622,
+      "people": [],
+      "region": "west-asia",
+      "relatedEvents": [
+        {
+          "id": "world-mecca",
+          "label": "后续发展",
+          "note": "麦地那时期的战争与协商，构成后来取得麦加的背景。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 216
     },
     {
       "id": "xuanwu",
@@ -11954,6 +12552,7 @@
         "lishimin",
         "liyuan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 205
     },
@@ -11965,6 +12564,7 @@
         "lishimin",
         "q378356"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -11979,6 +12579,7 @@
       "people": [
         "xuanzang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "采用629年的常见纪年；出发年份有不同考证。",
       "locationNote": "标记出发区域，专题路线仅示意连接。",
@@ -11992,9 +12593,20 @@
         "q706792",
         "lishimin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 159
+    },
+    {
+      "id": "world-mecca",
+      "title": "穆罕默德进入麦加",
+      "year": 630,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 162
     },
     {
       "id": "gaochang",
@@ -12004,6 +12616,7 @@
         "q1038892",
         "lishimin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 160
@@ -12016,6 +12629,7 @@
         "wencheng",
         "songtsen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 212
     },
@@ -12027,6 +12641,7 @@
         "xuanzang",
         "lishimin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -12038,9 +12653,21 @@
       "people": [
         "xuanzang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 176
+    },
+    {
+      "id": "world-srivijaya",
+      "title": "室利佛逝与海峡贸易",
+      "year": 650,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 164
     },
     {
       "id": "wu-empress",
@@ -12050,6 +12677,7 @@
         "wuzetian",
         "q9703"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 154
@@ -12059,18 +12687,40 @@
       "title": "唐军击败西突厥阿史那贺鲁",
       "year": 657,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "战事涉及多地，以中亚东部作参照，非精确战场。",
       "readingCharacters": 242
+    },
+    {
+      "id": "world-umayyad",
+      "title": "倭马亚王朝建立",
+      "year": 661,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 163
     },
     {
       "id": "goguryeo-falls",
       "title": "唐与新罗军队攻灭高句丽",
       "year": 668,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 236
+    },
+    {
+      "id": "world-silla",
+      "title": "新罗控制朝鲜半岛大部",
+      "year": 676,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 213
     },
     {
       "id": "wu-zhou",
@@ -12079,6 +12729,7 @@
       "people": [
         "wuzetian"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 206
     },
@@ -12091,9 +12742,20 @@
         "q9717",
         "q708460"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 149
+    },
+    {
+      "id": "world-nara",
+      "title": "平城京与奈良时代",
+      "year": 710,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 154
     },
     {
       "id": "kaiyuan",
@@ -12103,6 +12765,7 @@
         "lilongji",
         "q1275350"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 178
@@ -12116,6 +12779,7 @@
         "lilongji",
         "q1268388"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 160
@@ -12128,16 +12792,35 @@
         "libai",
         "lilongji"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用天宝三载（744年）的通行年谱纪年；列传叙事与纪年需结合阅读。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 146
     },
     {
+      "id": "world-abbasid",
+      "title": "阿拔斯王朝兴起",
+      "year": 750,
+      "people": [],
+      "region": "west-asia",
+      "relatedEvents": [
+        {
+          "id": "world-baghdad",
+          "label": "后续转折",
+          "note": "相隔五个世纪，巴格达的阿拔斯统治在蒙古征服中结束。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 163
+    },
+    {
       "id": "talas",
       "title": "怛逻斯之战",
       "year": 751,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "采用今塔拉兹一带参照，具体战场位置有争议。",
       "readingCharacters": 217
@@ -12149,6 +12832,7 @@
       "people": [
         "q714061"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "渡海抵达为753年，进入奈良为754年，两项记录应分开。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12166,6 +12850,7 @@
         "q758566",
         "q1290765"
       ],
+      "region": "china",
       "sourceCount": 5,
       "peopleNotes": {
         "q313605": "王维在安史之乱期间陷于叛军控制，被拘并授以伪职，此后受唐廷追究。这是战争后续阶段的经历；755年是事件起始纪年，并非其被俘年份，也不表示他在范阳起兵现场。",
@@ -12182,6 +12867,7 @@
         "libai",
         "reviewed-永王李璘"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "756年为进入幕府的通行纪年；追究、流放和遇赦是此后数年的过程。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12194,6 +12880,7 @@
       "people": [
         "dufu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "抵达采用759年末的通行年谱纪年，草堂营建在次年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12206,6 +12893,7 @@
       "people": [
         "dufu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "采用区域参照，战争并非在一个地点同时结束。",
       "readingCharacters": 209
@@ -12215,6 +12903,7 @@
       "title": "唐实行两税法",
       "year": 780,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 239
@@ -12224,9 +12913,31 @@
       "title": "泾原兵变、唐德宗出奔",
       "year": 783,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 225
+    },
+    {
+      "id": "world-charlemagne",
+      "title": "查理曼加冕为皇帝",
+      "year": 800,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 212
+    },
+    {
+      "id": "world-borobudur",
+      "title": "婆罗浮屠佛教建筑营建",
+      "year": 800,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 158
     },
     {
       "id": "yongzhen-reform",
@@ -12238,6 +12949,7 @@
         "q337773",
         "reviewed-唐顺宗"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 174
@@ -12249,6 +12961,7 @@
       "people": [
         "q313324"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "815年为贬谪年；《琵琶行》作于次年，未合为同一日期。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12265,6 +12978,7 @@
         "reviewed-吴元济",
         "q318998"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 207
@@ -12277,15 +12991,27 @@
         "q318998",
         "reviewed-唐宪宗"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "坐标为贬任地潮州；上表发生在长安，不能合并为精确行程。",
       "readingCharacters": 158
+    },
+    {
+      "id": "world-verdun",
+      "title": "凡尔登条约分割加洛林帝国",
+      "year": 843,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 198
     },
     {
       "id": "huichang-buddhism",
       "title": "会昌时期大规模限制佛教",
       "year": 845,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 242
@@ -12295,6 +13021,7 @@
       "title": "有纪年《金刚经》印本",
       "year": 868,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记发现地点，不等于确定的印刷地点。",
       "readingCharacters": 222
@@ -12307,6 +13034,7 @@
         "q714113",
         "q4844228"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为起事区域，战争后来延伸到南方与长安，不合成一条未经核对的个人路线。",
       "readingCharacters": 159
@@ -12316,6 +13044,7 @@
       "title": "唐昭宗被迫迁洛阳",
       "year": 904,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 227
@@ -12325,6 +13054,7 @@
       "title": "唐朝结束",
       "year": 907,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 174
     },
@@ -12335,6 +13065,7 @@
       "people": [
         "q1275305"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 198
@@ -12346,6 +13077,7 @@
       "people": [
         "q1074727"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 224
@@ -12357,6 +13089,7 @@
       "people": [
         "q708651"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 177
@@ -12368,6 +13101,7 @@
       "people": [
         "q4989"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 246
@@ -12379,6 +13113,7 @@
       "people": [
         "q717972"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 199
@@ -12390,6 +13125,7 @@
       "people": [
         "q706815"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 216
@@ -12402,6 +13138,7 @@
         "q4989",
         "reviewed-耶律倍"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 153
@@ -12414,6 +13151,7 @@
         "q703646",
         "q706815"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 161
@@ -12425,6 +13163,7 @@
       "people": [
         "q1131595"
       ],
+      "region": "china",
       "sourceCount": 3,
       "dateNote": "932年为启动节点，953年田敏进呈印本为完成阶段，不是全套经典在932年即已刊成。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12440,6 +13179,7 @@
       "people": [
         "q1149186"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 191
@@ -12451,6 +13191,7 @@
       "people": [
         "q1189495"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 195
@@ -12462,6 +13203,7 @@
       "people": [
         "q711844"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 213
@@ -12474,6 +13216,7 @@
         "q1189495",
         "q4991"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "936年议定割地，938年交割；此处展示交割纪年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12486,6 +13229,7 @@
       "people": [
         "q708522"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 180
@@ -12497,6 +13241,7 @@
       "people": [
         "q1188860"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 226
@@ -12508,6 +13253,7 @@
       "people": [
         "liuchong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 189
@@ -12521,6 +13267,7 @@
         "zhaokuangyin",
         "liuchong"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -12532,6 +13279,7 @@
       "people": [
         "q1319646"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -12547,6 +13295,7 @@
         "q1319646",
         "zhaokuangyin"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -12562,6 +13311,7 @@
         "q1319646",
         "zhaokuangyin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -12576,6 +13326,7 @@
       "people": [
         "zhaokuangyin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 212
     },
@@ -12588,6 +13339,7 @@
         "reviewed-石守信",
         "reviewed-赵普"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "961年职任调整见本纪；宴饮故事和对话属于后出的叙述，不能将细节全部当作已证实事实。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12601,6 +13353,7 @@
         "zhaokuangyin",
         "reviewed-慕容延钊"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记战区江陵，赵匡胤为决策者，不能认定亲自抵达此地。",
       "peopleNotes": {
@@ -12616,6 +13369,7 @@
         "zhaokuangyin",
         "reviewed-窦仪"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -12630,6 +13384,7 @@
         "reviewed-孟昶",
         "reviewed-曹彬"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "成都为战事和投降地点；赵匡胤在朝廷部署，相关不等于本人在场。",
       "peopleNotes": {
@@ -12644,6 +13399,7 @@
       "people": [
         "zhaokuangyin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 160
@@ -12657,6 +13413,7 @@
         "reviewed-潘美",
         "reviewed-刘鋹"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "广州为战区参照；赵匡胤是决策者，没有据此绘制其到访轨迹。",
       "peopleNotes": {
@@ -12671,6 +13428,7 @@
       "people": [
         "zhaokuangyin"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 163
@@ -12686,6 +13444,7 @@
         "q378528",
         "reviewed-钱俶"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "金陵为战区参照，赵匡胤并未作为此地的到访人物收录。",
       "peopleNotes": {
@@ -12701,6 +13460,7 @@
         "zhaokuangyin",
         "q7473"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "本版只收录去世与继位事实，不将“烛影斧声”的传说作为确定死因。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12714,6 +13474,7 @@
         "reviewed-钱俶",
         "q7473"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 153
@@ -12725,6 +13486,7 @@
       "people": [
         "q7473"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 156
@@ -12736,6 +13498,7 @@
       "people": [
         "lishun-song"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "994年为李顺活动的重要阶段，起义始于前一年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12746,6 +13509,7 @@
       "title": "澶渊之盟",
       "year": 1004,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "议和过程跨1004—1005年，采用战争与谈判起始年份。",
       "readingCharacters": 212
@@ -12755,6 +13519,7 @@
       "title": "北宋在益州设交子务",
       "year": 1023,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 255
@@ -12766,6 +13531,7 @@
       "people": [
         "q7438"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 227
@@ -12778,6 +13544,7 @@
         "q381822",
         "reviewed-韩琦"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -12789,6 +13556,7 @@
       "people": [
         "q337805"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 156
@@ -12801,6 +13569,7 @@
         "bisheng",
         "shenkuo"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "庆历年间为1041—1048年，标记区间起点。",
       "locationNote": "具体活动地点未确证，标记为时代中心参照。",
@@ -12815,6 +13584,7 @@
         "q10954250",
         "ouyangxiu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -12827,9 +13597,20 @@
         "q381822",
         "reviewed-滕宗谅"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "写作在邓州；文章描绘岳阳景观不构成作者当年亲至岳阳的证明。",
       "readingCharacters": 167
+    },
+    {
+      "id": "world-schism",
+      "title": "东西方教会决裂的标志事件",
+      "year": 1054,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 204
     },
     {
       "id": "baozheng-kaifeng",
@@ -12838,6 +13619,7 @@
       "people": [
         "q337805"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 176
@@ -12852,6 +13634,7 @@
         "q1155951",
         "q1275360"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 168
@@ -12864,6 +13647,7 @@
         "ouyangxiu",
         "reviewed-宋祁"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -12875,6 +13659,7 @@
       "people": [
         "q337805"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 148
@@ -12887,6 +13672,7 @@
         "simaguang",
         "reviewed-宋英宗"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 168
@@ -12899,6 +13685,7 @@
         "wanganshi",
         "shenkuo"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 230
     },
@@ -12909,6 +13696,7 @@
       "people": [
         "shenkuo"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "雄州为宋辽往来区域参照，不是此次交涉全程或唯一会谈地点。",
       "readingCharacters": 153
@@ -12921,6 +13709,7 @@
         "wanganshi",
         "q7483"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 165
@@ -12932,6 +13721,7 @@
       "people": [
         "sushi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 152
@@ -12943,6 +13733,7 @@
       "people": [
         "sushi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "黄州东坡赤壁为文学地点，不与三国赤壁之战的战场混同。",
       "readingCharacters": 183
@@ -12954,6 +13745,7 @@
       "people": [
         "simaguang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 173
@@ -12963,6 +13755,7 @@
       "title": "宋在泉州设置市舶司",
       "year": 1087,
       "people": [],
+      "region": "china",
       "sourceCount": 3,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 248
@@ -12974,6 +13767,7 @@
       "people": [
         "shenkuo"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "约1080年代后期至1090年代；1088年为晚年居梦溪的展示锚点，不是全书精确完成日期。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -12986,9 +13780,32 @@
       "people": [
         "sushi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 159
+    },
+    {
+      "id": "world-crusade",
+      "title": "第一次十字军东征",
+      "year": 1096,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 151
+    },
+    {
+      "id": "world-great-zimbabwe",
+      "title": "大津巴布韦石城繁荣",
+      "year": 1100,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 153
     },
     {
       "id": "liqingzhao-jinshi-study",
@@ -12998,6 +13815,7 @@
         "liqingzhao",
         "reviewed-赵明诚"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1101年为婚后收藏活动的起点，持续多年，不是《金石录》完成年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13010,6 +13828,7 @@
       "people": [
         "q1822568"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用故宫藏本介绍中的1103年颁行纪年；镂版的具体时间在研究中另有讨论。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13022,6 +13841,7 @@
       "people": [
         "q5060"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 235
@@ -13033,6 +13853,7 @@
       "people": [
         "q7486"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "以辽东海路联系区域作参照，非唯一会谈地点。",
       "peopleNotes": {
@@ -13047,6 +13868,7 @@
       "people": [
         "q613587"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为辽西及北方战争区域；并非皇帝被俘的精确地点。",
       "readingCharacters": 149
@@ -13058,6 +13880,7 @@
       "people": [
         "q7486"
       ],
+      "region": "china",
       "sourceCount": 2,
       "peopleNotes": {
         "q7486": "宋徽宗已禅位为太上皇，靖康二年仍被金人胁迫北行，是皇室被俘的直接当事人；应区别其退位前决策与钦宗朝的危机。"
@@ -13072,6 +13895,7 @@
         "liqingzhao",
         "reviewed-赵明诚"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1127年为南渡起点；后续辗转跨越多年，不能将各次散失合为同一年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13084,6 +13908,7 @@
       "people": [
         "q7489"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 231
@@ -13096,6 +13921,7 @@
         "liqingzhao",
         "reviewed-赵明诚"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 166
@@ -13107,6 +13933,7 @@
       "people": [
         "q7489"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 253
@@ -13118,6 +13945,7 @@
       "people": [
         "yuefei"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 208
     },
@@ -13130,6 +13958,7 @@
         "q731694",
         "yuefei"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -13146,6 +13975,7 @@
         "q731694",
         "q7489"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "绍兴十一年十二月属公历1142年初；年份采用公元纪年，避免直接写成1141年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13159,6 +13989,7 @@
         "q5978295",
         "q5072"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 148
@@ -13171,6 +14002,7 @@
         "xinqiji",
         "reviewed-耿京"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "临安是归宋后政治活动的参照，不将北方捕叛将行动放在此坐标。",
       "readingCharacters": 160
@@ -13183,6 +14015,7 @@
         "q1069914",
         "reviewed-王炎"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 156
@@ -13194,6 +14027,7 @@
       "people": [
         "zhuxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 250
@@ -13205,6 +14039,7 @@
       "people": [
         "zhuxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -13216,6 +14051,7 @@
       "people": [
         "zhuxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -13227,6 +14063,7 @@
       "people": [
         "xinqiji"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "建军跨1180—1181年，采用完成阶段的纪年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13241,10 +14078,21 @@
         "reviewed-赵汝愚",
         "q708637"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "1196年为禁伪学的重要节点，党禁是跨年的过程。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
+    },
+    {
+      "id": "world-constantinople-sack",
+      "title": "第四次十字军攻陷君士坦丁堡",
+      "year": 1204,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 199
     },
     {
       "id": "mongol",
@@ -13253,6 +14101,7 @@
       "people": [
         "genghis"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "大会所在地采用流域示意，非精确坐标。",
       "readingCharacters": 211
@@ -13265,9 +14114,20 @@
         "q708637",
         "reviewed-宋宁宗"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 167
+    },
+    {
+      "id": "world-delhi",
+      "title": "德里苏丹国兴起",
+      "year": 1206,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 216
     },
     {
       "id": "jia-ding",
@@ -13276,6 +14136,7 @@
       "people": [
         "reviewed-宋宁宗"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 151
@@ -13287,9 +14148,20 @@
       "people": [
         "genghis"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 155
+    },
+    {
+      "id": "world-magna-carta",
+      "title": "约翰王接受《大宪章》",
+      "year": 1215,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 210
     },
     {
       "id": "jin-falls",
@@ -13298,9 +14170,20 @@
       "people": [
         "q5081"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 157
+    },
+    {
+      "id": "world-baghdad",
+      "title": "蒙古军队攻陷巴格达",
+      "year": 1258,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 151
     },
     {
       "id": "diaoyu",
@@ -13310,6 +14193,7 @@
         "q7521",
         "wangjian-diaoyu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "蒙哥死因在文献中有不同记载，不采用“确定被某一武器击杀”的说法。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13322,6 +14206,7 @@
       "people": [
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 192
     },
@@ -13333,6 +14218,7 @@
         "kublai",
         "reviewed-刘秉忠"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 166
@@ -13345,6 +14231,7 @@
         "kublai",
         "q10918378"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 152
@@ -13357,6 +14244,7 @@
         "kublai",
         "q575900"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "战场大致位置。",
       "peopleNotes": {
@@ -13374,6 +14262,7 @@
         "q11573072",
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "编修始于1276年前后；采用1281年正式颁行的纪年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13386,6 +14275,7 @@
       "people": [
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 245
@@ -13397,6 +14287,7 @@
       "people": [
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1282年为官方试行海运的阶段起点，不表示海上粮运此前从不存在。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13409,6 +14300,7 @@
       "people": [
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 233
@@ -13420,6 +14312,7 @@
       "people": [
         "kublai"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 226
@@ -13431,6 +14324,7 @@
       "people": [
         "guoshoujing"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 190
     },
@@ -13439,6 +14333,7 @@
       "title": "铁穆耳即位、元成宗统治开始",
       "year": 1294,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 251
@@ -13450,6 +14345,7 @@
       "people": [
         "q716074"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "旌德为作者任职与农业实践参照，不认定全书只有一个写作地点。",
       "readingCharacters": 175
@@ -13461,6 +14357,7 @@
       "people": [
         "q8540"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 167
@@ -13474,18 +14371,52 @@
         "reviewed-拜住",
         "reviewed-铁失"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 150
+    },
+    {
+      "id": "world-mansa-musa",
+      "title": "曼萨·穆萨朝觐",
+      "year": 1324,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 159
+    },
+    {
+      "id": "world-tenochtitlan",
+      "title": "特诺奇蒂特兰建城",
+      "year": 1325,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 156
     },
     {
       "id": "yuan-huizong",
       "title": "元顺帝即位",
       "year": 1333,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
+    },
+    {
+      "id": "world-black-death",
+      "title": "黑死病席卷欧洲",
+      "year": 1347,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 154
     },
     {
       "id": "red-turbans",
@@ -13495,6 +14426,7 @@
         "q713234",
         "q699373"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -13507,6 +14439,7 @@
         "reviewed-贾鲁",
         "reviewed-脱脱"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 167
@@ -13519,6 +14452,7 @@
         "zhuyuanzhang",
         "q1355886"
       ],
+      "region": "china",
       "sourceCount": 2,
       "peopleNotes": {
         "q1355886": "关联指1368年徐达率北伐军攻入元大都这一建国军事阶段；事件的南京称帝坐标不表示徐达在当地亲历称帝。"
@@ -13533,6 +14467,7 @@
         "zhuyuanzhang",
         "reviewed-胡惟庸"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 173
@@ -13544,6 +14479,7 @@
       "people": [
         "zhuyuanzhang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 254
@@ -13556,6 +14492,7 @@
         "zhuyuanzhang",
         "q1187958"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 165
@@ -13568,6 +14505,7 @@
         "zhuyuanzhang",
         "q9961"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 158
@@ -13580,9 +14518,39 @@
         "zhudi",
         "q9961"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 155
+    },
+    {
+      "id": "world-malacca",
+      "title": "马六甲港崛起",
+      "year": 1400,
+      "people": [],
+      "region": "southeast-asia",
+      "relatedEvents": [
+        {
+          "id": "world-malacca-conquest",
+          "label": "后续转折",
+          "note": "成熟港市后来成为葡萄牙武装扩张的目标。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 207
+    },
+    {
+      "id": "world-renaissance",
+      "title": "佛罗伦萨与意大利文艺复兴",
+      "year": 1400,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 176
     },
     {
       "id": "yongle-accession",
@@ -13592,6 +14560,7 @@
         "zhudi",
         "q10943311"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 158
@@ -13604,6 +14573,7 @@
         "zhenghe",
         "zhudi"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "采用组织航行的政治中心，非精确出海点。",
       "readingCharacters": 306
@@ -13616,6 +14586,7 @@
         "zhudi",
         "q3492967"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 187
@@ -13627,8 +14598,19 @@
       "people": [
         "zhudi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 212
+    },
+    {
+      "id": "world-aztec",
+      "title": "阿兹特克三方同盟形成",
+      "year": 1428,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 153
     },
     {
       "id": "zhenghe-seventh-voyage",
@@ -13638,10 +14620,22 @@
         "zhenghe",
         "q9977"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1431年出航，1433年船队归航；不将归航年自动当作郑和确定死亡年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 173
+    },
+    {
+      "id": "world-inca",
+      "title": "帕查库蒂时期印加扩张",
+      "year": 1438,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 158
     },
     {
       "id": "tumu",
@@ -13650,6 +14644,7 @@
       "people": [
         "q9983"
       ],
+      "region": "china",
       "sourceCount": 2,
       "peopleNotes": {
         "q9983": "明英宗亲征瓦剌，明军回师途中在土木败溃，英宗本人被俘，是此事件的直接当事人。"
@@ -13663,9 +14658,38 @@
       "people": [
         "q706876"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 248
+    },
+    {
+      "id": "world-printing",
+      "title": "古腾堡活字印刷发展",
+      "year": 1450,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-reformation",
+          "label": "传播条件",
+          "note": "印刷帮助改革观点传播，但不能单独解释宗教改革。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 208
+    },
+    {
+      "id": "world-ottoman-constantinople",
+      "title": "奥斯曼攻占君士坦丁堡",
+      "year": 1453,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 157
     },
     {
       "id": "duomen-coup",
@@ -13675,6 +14699,7 @@
         "q706876",
         "q9983"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -13683,15 +14708,98 @@
       "readingCharacters": 236
     },
     {
+      "id": "world-dias",
+      "title": "迪亚士绕过非洲南端",
+      "year": 1488,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 209
+    },
+    {
+      "id": "world-columbus",
+      "title": "哥伦布航行抵达加勒比海",
+      "year": 1492,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 160
+    },
+    {
+      "id": "world-dagama",
+      "title": "达·伽马抵达印度",
+      "year": 1498,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 201
+    },
+    {
+      "id": "world-atlantic-slavery",
+      "title": "跨大西洋奴隶贸易扩张",
+      "year": 1500,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 165
+    },
+    {
+      "id": "world-songhai",
+      "title": "桑海帝国的鼎盛阶段",
+      "year": 1500,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 162
+    },
+    {
+      "id": "world-safavid",
+      "title": "萨法维王朝建立",
+      "year": 1501,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 195
+    },
+    {
       "id": "wangyangming-longchang",
       "title": "王守仁谪居龙场",
       "year": 1508,
       "people": [
         "wangyangming"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 168
+    },
+    {
+      "id": "world-malacca-conquest",
+      "title": "葡萄牙攻占马六甲",
+      "year": 1511,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 193
+    },
+    {
+      "id": "world-reformation",
+      "title": "路德与宗教改革的开端",
+      "year": 1517,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 217
     },
     {
       "id": "wangyangming-ning",
@@ -13701,9 +14809,51 @@
         "wangyangming",
         "reviewed-朱宸濠"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 165
+    },
+    {
+      "id": "world-conquest-mexico",
+      "title": "西班牙与原住民联盟征服特诺奇蒂特兰",
+      "year": 1519,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 207
+    },
+    {
+      "id": "world-mughal",
+      "title": "巴布尔建立莫卧儿王朝",
+      "year": 1526,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 206
+    },
+    {
+      "id": "world-conquest-inca",
+      "title": "皮萨罗俘虏阿塔瓦尔帕",
+      "year": 1532,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 205
+    },
+    {
+      "id": "world-copernicus",
+      "title": "哥白尼《天体运行论》出版",
+      "year": 1543,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 218
     },
     {
       "id": "qijiguang",
@@ -13712,6 +14862,7 @@
       "people": [
         "q439768"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -13721,6 +14872,7 @@
       "title": "隆庆时期开放月港部分海外贸易",
       "year": 1567,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 239
@@ -13733,6 +14885,7 @@
         "q439768",
         "zhangjuzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1568年为调任的重要节点，防务与练兵持续多年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13746,6 +14899,7 @@
         "zhangjuzheng",
         "q10061"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 158
@@ -13758,6 +14912,7 @@
         "zhangjuzheng",
         "q10061"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 166
@@ -13769,6 +14924,7 @@
       "people": [
         "q698925"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1578年表示初稿阶段，不表示全部修订和出版同年完成。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13781,6 +14937,7 @@
       "people": [
         "zhangjuzheng"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "改革分地区长期推进，采用常见的全国推广纪年。",
       "readingCharacters": 208
@@ -13794,6 +14951,7 @@
         "q712027",
         "q10061"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1592—1598年为战争主要时段；这里以开始年进入时间轴。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13806,6 +14964,7 @@
       "people": [
         "q698925"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用纪念馆介绍中1596年出版纪年；不同版本对开刻与刊成年有不同记法。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13815,6 +14974,16 @@
       "readingCharacters": 161
     },
     {
+      "id": "world-tokugawa",
+      "title": "德川幕府建立",
+      "year": 1603,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 204
+    },
+    {
       "id": "euclid-chinese",
       "title": "几何原本前六卷译成",
       "year": 1607,
@@ -13822,6 +14991,7 @@
         "q420427",
         "depth-ricci"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
@@ -13833,6 +15003,7 @@
       "people": [
         "xuxiake"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "传世游记的起点不等于徐霞客一生第一次旅行。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13845,6 +15016,7 @@
       "people": [
         "nurhaci"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 196
     },
@@ -13856,6 +15028,7 @@
         "nurhaci",
         "q11099138"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -13868,6 +15041,7 @@
         "q296367",
         "nurhaci"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 160
@@ -13879,6 +15053,7 @@
       "people": [
         "q420427"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 239
@@ -13890,6 +15065,7 @@
       "people": [
         "q296367"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1616年是前身后金的建立；1636年改国号；1644年进入北京。三者分别标明。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13902,6 +15078,7 @@
       "people": [
         "xuxiake"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1636年为启程年，考察持续至1639年前后；起点不等于所有记录的地点。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13914,6 +15091,7 @@
       "people": [
         "q716217"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "以江西地区为作者活动区域参照，不能当作全书唯一编写或刊刻地点。",
       "peopleNotes": {},
@@ -13924,6 +15102,7 @@
       "title": "松锦大战、明辽东防线受挫",
       "year": 1641,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "大战及围城延续至1642年，这里取主要会战年份。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -13934,6 +15113,7 @@
       "title": "明清更替的重要转折",
       "year": 1644,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 215
     },
@@ -13945,6 +15125,7 @@
         "q333567",
         "q10069"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 159
@@ -13958,6 +15139,7 @@
         "q380573",
         "q333567"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 165
@@ -13969,6 +15151,7 @@
       "people": [
         "q3274611"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -13977,12 +15160,23 @@
       "readingCharacters": 234
     },
     {
+      "id": "world-westphalia",
+      "title": "威斯特伐利亚和约",
+      "year": 1648,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 154
+    },
+    {
       "id": "zhengchenggong-nanjing",
       "title": "郑成功军进攻南京受挫",
       "year": 1659,
       "people": [
         "zhengchenggong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 138
@@ -13994,6 +15188,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -14005,6 +15200,7 @@
       "people": [
         "zhengchenggong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1661年开始进攻，1662年完成投降安排。不能与1683年施琅军事行动混为同一次事件。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14018,6 +15214,7 @@
         "kangxi",
         "q1194024"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 153
@@ -14030,6 +15227,7 @@
         "q468701",
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 156
@@ -14041,6 +15239,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 151
@@ -14052,6 +15251,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记澎湖战役区域，事件亦涉及台湾。",
       "peopleNotes": {
@@ -14066,6 +15266,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 172
@@ -14077,9 +15278,20 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 252
+    },
+    {
+      "id": "world-newton",
+      "title": "牛顿《自然哲学的数学原理》出版",
+      "year": 1687,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 210
     },
     {
       "id": "nerchinsk",
@@ -14088,6 +15300,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "peopleNotes": {
         "kangxi": "康熙参与清廷决策，条约由使臣谈判，不表示本人到访尼布楚。"
@@ -14101,6 +15314,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 158
@@ -14114,12 +15328,24 @@
         "kangxi",
         "q1395045"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "标记为战役地区；康熙与此事件有关联，不表示他本人到过昭莫多战场。",
       "peopleNotes": {
         "kangxi": "康熙亲征与费扬古在昭莫多的战斗属于不同军队活动，不能合为皇帝路线。"
       },
       "readingCharacters": 162
+    },
+    {
+      "id": "world-enlightenment",
+      "title": "启蒙运动的公共讨论",
+      "year": 1700,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 216
     },
     {
       "id": "kangxi-dictionary",
@@ -14129,6 +15355,7 @@
         "kangxi",
         "q11068801"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -14143,6 +15370,7 @@
       "people": [
         "kangxi"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -14158,6 +15386,7 @@
         "kangxi",
         "q317839"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -14169,6 +15398,7 @@
       "people": [
         "q317839"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1723年为推广起点之一，政策分省分阶段实行，并非一年同时完成。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14181,6 +15411,7 @@
       "people": [
         "q317839"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1726年为鄂尔泰在西南推进政策的阶段节点；各地实施年份不同。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14193,6 +15424,7 @@
       "people": [
         "q317839"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "采用常见的1729年设置说；故宫资料同时说明有其他成立时间观点，1732年正式改称军机处。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14206,6 +15438,7 @@
         "qianlong",
         "q317839"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 154
@@ -14217,6 +15450,7 @@
       "people": [
         "q182874"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "1754年对应甲戌纪年，不表示全书在这一年完成，也不据此确定作者生卒年。",
       "locationNote": "北京为作者活动参照，不能由抄本纪年认定具体写作或抄写地点。",
@@ -14229,9 +15463,28 @@
       "people": [
         "qianlong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
+    },
+    {
+      "id": "world-seven-years",
+      "title": "七年战争",
+      "year": 1756,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-american-independence",
+          "label": "后续矛盾",
+          "note": "战争债务与帝国税收政策是殖民地冲突的背景之一。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 216
     },
     {
       "id": "canton",
@@ -14240,8 +15493,26 @@
       "people": [
         "qianlong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 215
+    },
+    {
+      "id": "world-plassey",
+      "title": "普拉西战役与东印度公司扩张",
+      "year": 1757,
+      "people": [],
+      "region": "south-asia",
+      "relatedEvents": [
+        {
+          "id": "world-india-1857",
+          "label": "后续统治变迁",
+          "note": "公司权力扩张后，起义与王室接管改变殖民体制。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 197
     },
     {
       "id": "qing-south-xinjiang",
@@ -14250,9 +15521,21 @@
       "people": [
         "qianlong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 239
+    },
+    {
+      "id": "world-industrial",
+      "title": "第一次工业革命",
+      "year": 1760,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 160
     },
     {
       "id": "siku",
@@ -14262,9 +15545,68 @@
         "qianlong",
         "q711989"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 174
+    },
+    {
+      "id": "world-wealth-nations",
+      "title": "亚当·斯密出版《国富论》",
+      "year": 1776,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 218
+    },
+    {
+      "id": "world-american-independence",
+      "title": "北美《独立宣言》发表",
+      "year": 1776,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 152
+    },
+    {
+      "id": "world-first-fleet",
+      "title": "第一舰队在悉尼湾建立殖民据点",
+      "year": 1788,
+      "people": [],
+      "region": "oceania",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 215
+    },
+    {
+      "id": "world-french-revolution",
+      "title": "法国大革命爆发",
+      "year": 1789,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-haitian-revolution",
+          "label": "相互交织",
+          "note": "法国的政治变化与殖民地权利争论交织，海地被奴役者拥有自身诉求和行动。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 158
+    },
+    {
+      "id": "world-haitian-revolution",
+      "title": "海地革命与独立",
+      "year": 1791,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 157
     },
     {
       "id": "macartney",
@@ -14273,6 +15615,7 @@
       "people": [
         "qianlong"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 210
     },
@@ -14281,9 +15624,59 @@
       "title": "川楚陕白莲教起义爆发",
       "year": 1796,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 236
+    },
+    {
+      "id": "world-spanish-america",
+      "title": "西属美洲独立战争",
+      "year": 1810,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 160
+    },
+    {
+      "id": "world-vienna",
+      "title": "维也纳会议重组欧洲秩序",
+      "year": 1814,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 207
+    },
+    {
+      "id": "world-brazil",
+      "title": "巴西宣布独立",
+      "year": 1822,
+      "people": [],
+      "region": "americas",
+      "relatedEvents": [
+        {
+          "id": "world-brazil-abolition",
+          "label": "继续追问",
+          "note": "国家独立后，奴隶制度仍延续数十年。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 218
+    },
+    {
+      "id": "world-ayacucho",
+      "title": "阿亚库乔战役",
+      "year": 1824,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 204
     },
     {
       "id": "humen",
@@ -14292,6 +15685,7 @@
       "people": [
         "linzexu"
       ],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 273
     },
@@ -14302,9 +15696,20 @@
       "people": [
         "linzexu"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "沿海多地作战，标记为区域参照。",
       "readingCharacters": 310
+    },
+    {
+      "id": "world-waitangi",
+      "title": "《怀唐伊条约》开始签署",
+      "year": 1840,
+      "people": [],
+      "region": "oceania",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 163
     },
     {
       "id": "humen-battle",
@@ -14313,6 +15718,7 @@
       "people": [
         "depth-guantianpei"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
@@ -14322,6 +15728,7 @@
       "title": "三元里抗英",
       "year": 1841,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 246
@@ -14331,6 +15738,7 @@
       "title": "《南京条约》签订",
       "year": 1842,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 314
     },
@@ -14341,6 +15749,7 @@
       "people": [
         "linzexu"
       ],
+      "region": "china",
       "sourceCount": 1,
       "dateNote": "1842年为抵达伊犁的重要纪年，革职与赴戍此前已开始。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14351,6 +15760,7 @@
       "title": "虎门条约与五口通商章程",
       "year": 1843,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 245
@@ -14360,9 +15770,30 @@
       "title": "望厦条约与黄埔条约签订",
       "year": 1844,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "以望厦所在澳门作参照；黄埔条约的交涉地点在广州附近。",
       "readingCharacters": 250
+    },
+    {
+      "id": "world-manifesto",
+      "title": "《共产党宣言》发表",
+      "year": 1848,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 219
+    },
+    {
+      "id": "world-public-health",
+      "title": "英国《公共卫生法》",
+      "year": 1848,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 209
     },
     {
       "id": "taiping",
@@ -14371,6 +15802,7 @@
       "people": [
         "hongxiuquan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 299
     },
@@ -14381,6 +15813,7 @@
       "people": [
         "zengguofan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 163
@@ -14392,6 +15825,7 @@
       "people": [
         "hongxiuquan"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 249
@@ -14401,6 +15835,7 @@
       "title": "第二次鸦片战争开始",
       "year": 1856,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 289
@@ -14412,15 +15847,28 @@
       "people": [
         "hongxiuquan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 238
+    },
+    {
+      "id": "world-india-1857",
+      "title": "印度起义与英国王室接管",
+      "year": 1857,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 219
     },
     {
       "id": "aigun-treaty",
       "title": "中俄瑷珲条约签订",
       "year": 1858,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 248
@@ -14430,6 +15878,7 @@
       "title": "第二次鸦片战争中签订天津条约",
       "year": 1858,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 267
@@ -14439,9 +15888,20 @@
       "title": "大沽口战事、英法舰队受挫",
       "year": 1859,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 234
+    },
+    {
+      "id": "world-darwin",
+      "title": "《物种起源》出版",
+      "year": 1859,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 158
     },
     {
       "id": "yuanmingyuan",
@@ -14450,6 +15910,7 @@
       "people": [
         "q334452"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 269
@@ -14459,6 +15920,7 @@
       "title": "中英、中法、中俄北京条约签订",
       "year": 1860,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 248
@@ -14471,6 +15933,7 @@
         "zengguofan",
         "lihongzhang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "采用常见起始节点，运动没有统一的单日起点。",
       "locationNote": "全国性过程，标记中央政治中心。",
@@ -14483,6 +15946,7 @@
       "people": [
         "depth-yixin"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 231
@@ -14496,9 +15960,31 @@
         "depth-cian",
         "depth-yixin"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 259
+    },
+    {
+      "id": "world-italy",
+      "title": "意大利王国成立",
+      "year": 1861,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 200
+    },
+    {
+      "id": "world-american-civil-war",
+      "title": "美国内战与奴隶制废除",
+      "year": 1861,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 157
     },
     {
       "id": "tongwen-college",
@@ -14507,6 +15993,7 @@
       "people": [
         "depth-yixin"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 251
@@ -14520,6 +16007,7 @@
         "q6143342",
         "hongxiuquan"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -14536,6 +16024,7 @@
         "zengguofan",
         "depth-ronghong"
       ],
+      "region": "china",
       "sourceCount": 4,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -14551,9 +16040,48 @@
         "q230200",
         "depth-shenbaozhen"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 260
+    },
+    {
+      "id": "world-meiji",
+      "title": "明治维新开始",
+      "year": 1868,
+      "people": [],
+      "region": "east-asia",
+      "relatedEvents": [
+        {
+          "id": "world-russo-japanese",
+          "label": "后续扩张",
+          "note": "国家重组与军备发展构成其后帝国扩张的背景。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 207
+    },
+    {
+      "id": "world-second-industrial",
+      "title": "第二次工业革命的扩展",
+      "year": 1870,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 155
+    },
+    {
+      "id": "world-germany",
+      "title": "德意志帝国成立",
+      "year": 1871,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 192
     },
     {
       "id": "merchant-steam",
@@ -14563,6 +16091,7 @@
         "lihongzhang",
         "q1015420"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 174
@@ -14576,6 +16105,7 @@
         "lihongzhang",
         "depth-ronghong"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "曾国藩参与前期筹划并于1872年去世；出发日期不证明他在上海送行。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14591,6 +16121,7 @@
       "people": [
         "q230200"
       ],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "这里标记北疆军事推进的重要年份，南疆行动延续至1877—1878年前后。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -14606,6 +16137,7 @@
       "people": [
         "depth-zengjize"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 251
@@ -14618,6 +16150,7 @@
         "q230200",
         "q10898035"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 156
@@ -14627,9 +16160,21 @@
       "title": "马尾海战",
       "year": 1884,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
+    },
+    {
+      "id": "world-berlin-africa",
+      "title": "柏林会议与瓜分非洲",
+      "year": 1884,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 207
     },
     {
       "id": "france-peace",
@@ -14638,6 +16183,7 @@
       "people": [
         "lihongzhang"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 171
@@ -14647,6 +16193,7 @@
       "title": "台湾建省",
       "year": 1885,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 255
@@ -14659,9 +16206,30 @@
         "lihongzhang",
         "q259375"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 243
+    },
+    {
+      "id": "world-brazil-abolition",
+      "title": "巴西废除奴隶制",
+      "year": 1888,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 197
+    },
+    {
+      "id": "world-nz-suffrage",
+      "title": "新西兰妇女取得议会选举投票权",
+      "year": 1893,
+      "people": [],
+      "region": "oceania",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 209
     },
     {
       "id": "sino-japanese",
@@ -14670,6 +16238,7 @@
       "people": [
         "lihongzhang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "战争涉及多个区域，标记为地理参照。",
       "readingCharacters": 306
@@ -14679,6 +16248,7 @@
       "title": "甲午战争平壤战役",
       "year": 1894,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 234
@@ -14691,6 +16261,7 @@
         "q259375",
         "q716227"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "海域性战事，坐标为鸭绿江口西南海域的近似参照。",
       "readingCharacters": 229
@@ -14700,6 +16271,7 @@
       "title": "日军攻陷旅顺",
       "year": 1894,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 229
@@ -14711,6 +16283,7 @@
       "people": [
         "sunyatsen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 249
@@ -14722,6 +16295,7 @@
       "people": [
         "lihongzhang"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 277
@@ -14733,6 +16307,7 @@
       "people": [
         "q259375"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 245
@@ -14745,9 +16320,20 @@
         "liangqichao",
         "q709087"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
+    },
+    {
+      "id": "world-adwa",
+      "title": "阿杜瓦战役",
+      "year": 1896,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 212
     },
     {
       "id": "hundred-days",
@@ -14757,6 +16343,7 @@
         "kangyouwei",
         "liangqichao"
       ],
+      "region": "china",
       "sourceCount": 2,
       "readingCharacters": 293
     },
@@ -14769,6 +16356,7 @@
         "liangqichao",
         "q47842"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 233
@@ -14778,6 +16366,7 @@
       "title": "京师大学堂设立",
       "year": 1898,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 266
@@ -14790,6 +16379,7 @@
         "q47842",
         "q299710"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 258
@@ -14802,6 +16392,7 @@
         "lihongzhang",
         "q1204208"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -14813,19 +16404,52 @@
       "people": [
         "q47842"
       ],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "宣诏时清廷仍在西安；改革实施涉及全国，不重建朝廷返回路线。",
       "readingCharacters": 253
+    },
+    {
+      "id": "world-federation",
+      "title": "澳大利亚联邦成立",
+      "year": 1901,
+      "people": [],
+      "region": "oceania",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 204
+    },
+    {
+      "id": "world-flight",
+      "title": "莱特兄弟实现动力操纵飞行",
+      "year": 1903,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 155
     },
     {
       "id": "guimao-schools",
       "title": "癸卯学制颁布",
       "year": 1904,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "dateNote": "采用1904年的颁布纪年；名称中的“癸卯”需与公历公布时间区别。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 253
+    },
+    {
+      "id": "world-russo-japanese",
+      "title": "日俄战争",
+      "year": 1904,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 157
     },
     {
       "id": "exams-end",
@@ -14835,6 +16459,7 @@
         "q197344",
         "q210329"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
@@ -14848,6 +16473,7 @@
         "q706842",
         "q532587"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 181
@@ -14861,6 +16487,7 @@
         "q299710",
         "reviewed-载泽"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 183
@@ -14875,6 +16502,7 @@
         "q47842",
         "q144348"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 168
@@ -14884,15 +16512,27 @@
       "title": "钦定宪法大纲颁布",
       "year": 1908,
       "people": [],
+      "region": "china",
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 249
+    },
+    {
+      "id": "world-congo",
+      "title": "刚果自由邦转为比利时殖民地",
+      "year": 1908,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
+      "readingCharacters": 202
     },
     {
       "id": "provincial-assemblies",
       "title": "各省咨议局开议",
       "year": 1909,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "多省同时发展，以湖北省会作区域参照，并非全国唯一会场。",
       "readingCharacters": 249
@@ -14904,6 +16544,7 @@
       "people": [
         "sunyatsen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 291
     },
@@ -14915,6 +16556,7 @@
         "q197432",
         "q11621297"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
@@ -14927,6 +16569,7 @@
         "sunyatsen",
         "q706842"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "peopleNotes": {
@@ -14939,6 +16582,7 @@
       "title": "清廷成立内阁、皇族成员占据要职",
       "year": 1911,
       "people": [],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 241
@@ -14951,6 +16595,7 @@
         "puyi",
         "sunyatsen"
       ],
+      "region": "china",
       "sourceCount": 1,
       "readingCharacters": 214
     },
@@ -14963,6 +16608,7 @@
         "q706842",
         "q210329"
       ],
+      "region": "china",
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 192
@@ -15842,6 +17488,836 @@
       ]
     },
     {
+      "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
+      "title": "新西兰文化与遗产部 · Signing the treaty",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-22T08:49:41.615339+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-waitangi"
+        }
+      ]
+    },
+    {
+      "url": "https://nzhistory.govt.nz/womens-suffrage-day",
+      "title": "新西兰文化与遗产部 · Women win the right to vote",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-22T08:49:46.449407+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-nz-suffrage"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
+      "title": "OpenStax · World History 1 · 10-1-the-eastward-shift",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:47.353199+00:00",
+      "sha256": "0201d5dfbbccf7780211ada667f7497fd6816a691b140118cc7518d6cf7761b8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-constantinople"
+        },
+        {
+          "kind": "event",
+          "id": "world-west-rome"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
+      "title": "OpenStax · World History 1 · 10-2-the-byzantine-empire-and-persia",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:47.679850+00:00",
+      "sha256": "27f484cc0d4251daca6172e84b50e9ca7b0f1c8ddd0bf0a5dce09d18cb814ca9",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sasanian"
+        },
+        {
+          "kind": "event",
+          "id": "world-justinian"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
+      "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:49.198541+00:00",
+      "sha256": "02137a80ea0f0ce9a1ccdeb713fd5ecbbfab7d2a246d0d696a61c5e7b70c99d7",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-aksum"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-1-the-rise-and-message-of-islam",
+      "title": "OpenStax · World History 1 · 11-1-the-rise-and-message-of-islam",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:48.575777+00:00",
+      "sha256": "7a9eead89024c25c4ac7c400e27b12e5320557f53fcc82376ee1d605d29951bf",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hijra"
+        },
+        {
+          "kind": "event",
+          "id": "world-mecca"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:49.377241+00:00",
+      "sha256": "46e9364a810a8bbe06cdf93df75e4d20a96289e8c3c04fab254710b990b96575",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-umayyad"
+        },
+        {
+          "kind": "event",
+          "id": "world-abbasid"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:49.305309+00:00",
+      "sha256": "a96b78cb5c429d1a33538be3f1ca360d7951c2c888d4155ebbdef67612dc0ab9",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sogdian"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-3-border-states-sogdiana-korea-and-japan",
+      "title": "OpenStax · World History 1 · 12-3-border-states-sogdiana-korea-and-japan",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:51.248048+00:00",
+      "sha256": "de09c4f7d8f65d049e4c67a2defd54f95c7c67004bb0d943f9ee47a2bcc256d8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-silla"
+        },
+        {
+          "kind": "event",
+          "id": "world-nara"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 13-1-the-post-roman-west-in-the-early-middle-ages",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:50.610935+00:00",
+      "sha256": "fa1ed9872fca5113c8ffbed304f799cafb23ccb67b953cf8dff006213a408c1f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-charlemagne"
+        },
+        {
+          "kind": "event",
+          "id": "world-verdun"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "title": "OpenStax · World History 1 · 13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:51.247633+00:00",
+      "sha256": "366d31c06c15b4f57a66b67b9125c8b83f1b437fc8bb0cd1fe36607f65579e7a",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-schism"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-4-the-crusading-movement",
+      "title": "OpenStax · World History 1 · 13-4-the-crusading-movement",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:53.945293+00:00",
+      "sha256": "987f007387bb7b0a84fb939de9a563d57b0d3d487ce0d1f964475ee9db8034d8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crusade"
+        },
+        {
+          "kind": "event",
+          "id": "world-constantinople-sack"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
+      "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:52.014002+00:00",
+      "sha256": "24644cc3a7b181476af9248fff95522aba5060d6ca5c020c6a00544ee6f9b220",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-baghdad"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:52.537465+00:00",
+      "sha256": "11d012e0150bbd7e2984b603d2ada68cc0120f28039324356fdd46823c1ff93b",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-great-zimbabwe"
+        },
+        {
+          "kind": "event",
+          "id": "world-mansa-musa"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/16-3-the-black-death-from-east-to-west",
+      "title": "OpenStax · World History 1 · 16-3-the-black-death-from-east-to-west",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:54.608965+00:00",
+      "sha256": "3de42ed578732cd3987fcd2060cf956f5425fef9a36f6a1d539e5e741e0d8d96",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-black-death"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
+      "title": "OpenStax · World History 1 · 17-1-the-ottomans-and-the-mongols",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:54.597242+00:00",
+      "sha256": "59bad5c554730614058f35628f32a6a2612be2c76446abc073a411c8918ac151",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ottoman-constantinople"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
+      "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:41.115833+00:00",
+      "sha256": "e0061437bcfae2e499b23924f36a98ce35657bdec43035da0255997f18a1f84a",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-akkad"
+        },
+        {
+          "kind": "event",
+          "id": "world-hammurabi"
+        },
+        {
+          "kind": "event",
+          "id": "world-nineveh"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
+      "title": "OpenStax · World History 1 · 4-2-egypts-new-kingdom",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:34.485082+00:00",
+      "sha256": "a2af434dd05167d1a2efddbae0b3589811bf7a1b4f5f7a4c1c1d02997df74f62",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-new-kingdom"
+        },
+        {
+          "kind": "event",
+          "id": "world-kadesh"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
+      "title": "OpenStax · World History 1 · 4-3-the-persian-empire",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:35.199703+00:00",
+      "sha256": "f62f6cbcb4c8d7aebf955cf271e840f5074038cfb66419c97c798ae8a6ec2ccb",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-cyrus"
+        },
+        {
+          "kind": "event",
+          "id": "world-babylon"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
+      "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:38.811963+00:00",
+      "sha256": "fde0869729f6cd1c4bddbb0cfd33c1d89d5d59f152483cd3b1de2cb00febf334",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-srivijaya"
+        },
+        {
+          "kind": "event",
+          "id": "world-borobudur"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:43.591525+00:00",
+      "sha256": "76d00dc664fc2ac129d73f028564db6dec7e18c18885c235ff560fc03f60c6b1",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-buddhism"
+        },
+        {
+          "kind": "event",
+          "id": "world-maurya"
+        },
+        {
+          "kind": "event",
+          "id": "world-ashoka"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-1-early-mediterranean-peoples",
+      "title": "OpenStax · World History 1 · 6-1-early-mediterranean-peoples",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:41.343898+00:00",
+      "sha256": "3c8b90c65c5303509cec205ffad2799bb34d0682fcf1b372bcd442a6cf30aec5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-minoan"
+        },
+        {
+          "kind": "event",
+          "id": "world-bronze-collapse"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-2-ancient-greece",
+      "title": "OpenStax · World History 1 · 6-2-ancient-greece",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:41.680026+00:00",
+      "sha256": "0750a7c8f26cd61fc2fe9e94fa8c8a71220c2701d21d961beffc35776fe21051",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-athens"
+        },
+        {
+          "kind": "event",
+          "id": "world-marathon"
+        },
+        {
+          "kind": "event",
+          "id": "world-peloponnesian"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
+      "title": "OpenStax · World History 1 · 6-3-the-hellenistic-era",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:42.543229+00:00",
+      "sha256": "16321cbb1b03566d9fccf0ee6fca460486c192a9024e922fc270b867004820c5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-alexander"
+        },
+        {
+          "kind": "event",
+          "id": "world-hellenistic"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
+      "title": "OpenStax · World History 1 · 6-4-the-roman-republic",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:44.440532+00:00",
+      "sha256": "c5895322e7b530dac19c4cdf992489540ae09788d4b0424896fca95b5be34262",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-roman-republic"
+        },
+        {
+          "kind": "event",
+          "id": "world-punic"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
+      "title": "OpenStax · World History 1 · 6-5-the-age-of-augustus",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:43.085782+00:00",
+      "sha256": "0651edfe7218154e53a7367ed01b54794c41ac91b9166af755c9b57668a6c291",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-caesar"
+        },
+        {
+          "kind": "event",
+          "id": "world-augustus"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/7-4-religion-in-the-roman-empire",
+      "title": "OpenStax · World History 1 · 7-4-religion-in-the-roman-empire",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:44.648686+00:00",
+      "sha256": "197896a56ca51d44661ce83c8aebc2a7b27b8091a9ad358490e986d4b175534f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-milan"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-2-early-cultures-and-civilizations-in-the-americas",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:45.567139+00:00",
+      "sha256": "f5e398e3ee8c6c1e231a3cda63cbf104c2ec1d8116833889534e218fd5f85be8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-olmec"
+        },
+        {
+          "kind": "event",
+          "id": "world-teotihuacan"
+        },
+        {
+          "kind": "event",
+          "id": "world-maya"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:45.697377+00:00",
+      "sha256": "d099e8c1e89fe64dea2843e49f4072dbbfc02d18687f08a1801fccb36bef3702",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tenochtitlan"
+        },
+        {
+          "kind": "event",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "event",
+          "id": "world-inca"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/9-3-the-kingdom-of-kush",
+      "title": "OpenStax · World History 1 · 9-3-the-kingdom-of-kush",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:47.945971+00:00",
+      "sha256": "c6d5df8b73bf7774b91f77e93ab1e28e4d0e0dd984ac940275051bc54b722f17",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kerma"
+        },
+        {
+          "kind": "event",
+          "id": "world-meroe"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/10-5-regulation-reform-and-revolutionary-ideologies",
+      "title": "OpenStax · World History 2 · 10-5-regulation-reform-and-revolutionary-ideologies",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:03.037186+00:00",
+      "sha256": "082c2a373d7b84a8fa269eebd69193eb3eeef9816ac94b918375a0ae5f2fef11",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-manifesto"
+        },
+        {
+          "kind": "event",
+          "id": "world-public-health"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
+      "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:54.797338+00:00",
+      "sha256": "74726a8d58d1800f6e9eaf1823803f8bd8cf4643d88a8461f226f2c735c9c61c",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-delhi"
+        },
+        {
+          "kind": "event",
+          "id": "world-mughal"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-2-the-malacca-sultanate",
+      "title": "OpenStax · World History 2 · 2-2-the-malacca-sultanate",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:55.135755+00:00",
+      "sha256": "1fd8ec9cabc98e23d6d8dd15d84b91a9b49cda256a07d110d13f492edd85fa8b",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-malacca"
+        },
+        {
+          "kind": "event",
+          "id": "world-malacca-conquest"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:56.314447+00:00",
+      "sha256": "3eeaa90336a8ca03789beb20bda434639903609105bdb9c23dcd322c6373967d",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tokugawa"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
+      "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:56.439112+00:00",
+      "sha256": "d0690498fb78a26e37c973575ef54159ed0bb0c8d3151e84a3c4e515ec887edd",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-songhai"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "title": "OpenStax · World History 2 · 4-3-the-safavid-empire",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:58.647730+00:00",
+      "sha256": "4445c7d4bb9040ac69f0712d9ee36bb87eef55d0419c67c09db81739df0917f8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-safavid"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+      "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:57.399226+00:00",
+      "sha256": "6e6cde8957511b48af689203e3b769dad61d87a1749350fdde67e949835a7f2e",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-printing"
+        },
+        {
+          "kind": "event",
+          "id": "world-reformation"
+        },
+        {
+          "kind": "event",
+          "id": "world-westphalia"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+      "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:56.996672+00:00",
+      "sha256": "6967fa7276c2f82d2fb79493b9cbe216a5ed08452e061a0938071dddf66386db",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-dias"
+        },
+        {
+          "kind": "event",
+          "id": "world-columbus"
+        },
+        {
+          "kind": "event",
+          "id": "world-dagama"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-4-the-atlantic-slave-trade",
+      "title": "OpenStax · World History 2 · 5-4-the-atlantic-slave-trade",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:57.935122+00:00",
+      "sha256": "06ad8e5fa34d31c5ee431d238d038b1aaed7514d21f403ab0fbf8cbff7e588ef",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-atlantic-slavery"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-1-european-colonization-in-the-americas",
+      "title": "OpenStax · World History 2 · 6-1-european-colonization-in-the-americas",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:57.923063+00:00",
+      "sha256": "ef4a9a4280538b614c341a7b592925c510ec8030df0b5c5a434f1dce26fb158d",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-conquest-mexico"
+        },
+        {
+          "kind": "event",
+          "id": "world-conquest-inca"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-2-the-rise-of-a-global-economy",
+      "title": "OpenStax · World History 2 · 6-2-the-rise-of-a-global-economy",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:58.478825+00:00",
+      "sha256": "3eac2dbf3701fa5900f28040fdb180430c07f2126953aba8665bcf4a3a33f454",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-seven-years"
+        },
+        {
+          "kind": "event",
+          "id": "world-plassey"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
+      "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:58.447572+00:00",
+      "sha256": "3741e23fbd8dc089a28c7bd3778221f74819fc770621f60194b58f1895840b4b",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-industrial"
+        },
+        {
+          "kind": "event",
+          "id": "world-wealth-nations"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-1-the-enlightenment",
+      "title": "OpenStax · World History 2 · 7-1-the-enlightenment",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:59.028668+00:00",
+      "sha256": "afe595d75aa49f8369ed243f6f6a60d548d22d4e2ed8c2f266935a0325103053",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-enlightenment"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
+      "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:58.921542+00:00",
+      "sha256": "3001926349a47ab24bea80265ead8670a248d1da8b47ec711f0f9a6577dbfbbc",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-american-independence"
+        },
+        {
+          "kind": "event",
+          "id": "world-french-revolution"
+        },
+        {
+          "kind": "event",
+          "id": "world-haitian-revolution"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "title": "OpenStax · World History 2 · 7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:00.499310+00:00",
+      "sha256": "276b78f6f6e2ffa1b07b72dab6c591789da79fcde153688f5ff306a547cb104b",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-vienna"
+        },
+        {
+          "kind": "event",
+          "id": "world-italy"
+        },
+        {
+          "kind": "event",
+          "id": "world-germany"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-3-spanish-south-america",
+      "title": "OpenStax · World History 2 · 8-3-spanish-south-america",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:00.786641+00:00",
+      "sha256": "22fb5bd1ded5f290f6f28bf6b7e398da4322c2a9fd93f9c168ebd68cdeadc1ee",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-spanish-america"
+        },
+        {
+          "kind": "event",
+          "id": "world-ayacucho"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-4-portuguese-south-america",
+      "title": "OpenStax · World History 2 · 8-4-portuguese-south-america",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:00.927539+00:00",
+      "sha256": "b626e6ef200794fa47351cbdb3fbf9f49b73e3fab9cd0d0e5d8c7fbfb7640870",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-brazil"
+        },
+        {
+          "kind": "event",
+          "id": "world-brazil-abolition"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
+      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:01.436623+00:00",
+      "sha256": "1443c443c9b2eb5705dd8da67e1c9e343c8e33cc7bbc819887b3c16e3daa3d7e",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-second-industrial"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
+      "title": "OpenStax · World History 2 · 9-3-colonial-empires",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:02.578626+00:00",
+      "sha256": "3e0a09afbcb9ffb410b7d31307a173c65eb0e5dd455bdd73c238f8b690a64d40",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-india-1857"
+        },
+        {
+          "kind": "event",
+          "id": "world-meiji"
+        },
+        {
+          "kind": "event",
+          "id": "world-berlin-africa"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-4-exploitation-and-resistance",
+      "title": "OpenStax · World History 2 · 9-4-exploitation-and-resistance",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:01.533337+00:00",
+      "sha256": "86fb2a6997f94dede639eda3748285b9d68db1e528fc7f3dbd622cd4bd73f0d2",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-adwa"
+        },
+        {
+          "kind": "event",
+          "id": "world-congo"
+        }
+      ]
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "status": "retained-and-hash-verified",
@@ -16426,6 +18902,19 @@
       ]
     },
     {
+      "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
+      "title": "剑桥大学 · Darwin Correspondence Project: Origin",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:38:31.977446+00:00",
+      "sha256": "53f12a8e9f667ec001d02981158df2087fc664db083e11f6bd01b54ded21b541",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-darwin"
+        }
+      ]
+    },
+    {
       "url": "https://www.dpm.org.cn/ancient/hall/165349.html",
       "title": "故宫博物院 ·《康熙字典》",
       "status": "retained-and-hash-verified",
@@ -16914,6 +19403,19 @@
       ]
     },
     {
+      "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
+      "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:49:42.815913+00:00",
+      "sha256": "3174a1fd907e4b7179c878f61204e8982a0f579fb3404bd3d88e3e666a01e1b7",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-copernicus"
+        }
+      ]
+    },
+    {
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "status": "retained-and-hash-verified",
@@ -17013,6 +19515,32 @@
       ]
     },
     {
+      "url": "https://www.metmuseum.org/toah/ht/08/eustc",
+      "title": "大都会艺术博物馆 · Florence and Central Italy, 1400–1600",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-22T08:49:34.403575+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-renaissance"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+      "title": "英国国家档案馆 · Magna Carta",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:38:30.551343+00:00",
+      "sha256": "f02ff2f72a4f71af36594584e37a31fe92860165f3bb5b1d785e18ae43cd503f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-magna-carta"
+        }
+      ]
+    },
+    {
       "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
       "title": "宁波博物院 · 河姆渡文化考古成果特展",
       "status": "retained-and-hash-verified",
@@ -17035,6 +19563,19 @@
         {
           "kind": "event",
           "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
+      "title": "日本国立国会图书馆 · Modern Japan in archives: Russo-Japanese War",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:49:45.035917+00:00",
+      "sha256": "e0e638c371c89df7d0a9a59f6cbc2808c33285d1cc3025913388099863383d6f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russo-japanese"
         }
       ]
     },
@@ -17076,6 +19617,49 @@
         {
           "kind": "dynasty",
           "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
+      "title": "澳大利亚国家博物馆 · Defining moments timeline",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-22T08:49:35.598235+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-first-fleet"
+        },
+        {
+          "kind": "event",
+          "id": "world-federation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nps.gov/civilwar/overview.htm",
+      "title": "美国国家公园管理局 · The Civil War: Overview",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:49:43.765631+00:00",
+      "sha256": "b847405e8c3f5e939dd43ebe88e3c7fdbcecf3d6554a6766d4c2f12b8bb0197f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-american-civil-war"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
+      "title": "美国国家公园管理局 · 1903 The First Flight",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:38:33.155521+00:00",
+      "sha256": "37cb908667b4c6fd93573de6a12ec92301bb67d444f8f40a7c30ffc3e2c38bfb",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-flight"
         }
       ]
     },
@@ -17145,6 +19729,19 @@
         {
           "kind": "event",
           "id": "dream-red-chamber-jiaxu"
+        }
+      ]
+    },
+    {
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
+      "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-22T08:51:07.193830+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-newton"
         }
       ]
     },

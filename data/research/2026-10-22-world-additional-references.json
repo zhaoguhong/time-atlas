@@ -1,0 +1,71 @@
+{
+  "purpose": "Factual verification for independently written historical summaries; reference text is not redistributed.",
+  "sources": [
+    {
+      "key": "magna",
+      "title": "英国国家档案馆 · Magna Carta",
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+      "references": []
+    },
+    {
+      "key": "renaissance",
+      "title": "大都会艺术博物馆 · Florence and Central Italy, 1400–1600",
+      "url": "https://www.metmuseum.org/toah/ht/08/eustc",
+      "references": []
+    },
+    {
+      "key": "newton",
+      "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
+      "references": []
+    },
+    {
+      "key": "darwin",
+      "title": "剑桥大学 · Darwin Correspondence Project: Origin",
+      "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
+      "references": []
+    },
+    {
+      "key": "flight",
+      "title": "美国国家公园管理局 · 1903 The First Flight",
+      "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
+      "references": []
+    },
+    {
+      "key": "australia",
+      "title": "澳大利亚国家博物馆 · Defining moments timeline",
+      "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
+      "references": []
+    },
+    {
+      "key": "waitangi",
+      "title": "新西兰文化与遗产部 · Signing the treaty",
+      "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
+      "references": []
+    },
+    {
+      "key": "suffrage",
+      "title": "新西兰文化与遗产部 · Women win the right to vote",
+      "url": "https://nzhistory.govt.nz/womens-suffrage-day",
+      "references": []
+    },
+    {
+      "key": "copernicus",
+      "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
+      "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
+      "references": []
+    },
+    {
+      "key": "civil-war",
+      "title": "美国国家公园管理局 · The Civil War: Overview",
+      "url": "https://www.nps.gov/civilwar/overview.htm",
+      "references": []
+    },
+    {
+      "key": "russo-japanese",
+      "title": "日本国立国会图书馆 · Modern Japan in archives: Russo-Japanese War",
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
+      "references": []
+    }
+  ]
+}

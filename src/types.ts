@@ -38,7 +38,22 @@ export interface HistoryEvent {
   dateNote?: string
   peopleNotes?: Record<string, string>
   details?: string[]
+  /** Curated reading geography, not inferred from modern borders or marker coordinates. */
+  region?: HistoryRegion
+  themes?: string[]
+  relatedEvents?: { id: string; label: string; note: string }[]
 }
+export type HistoryRegion =
+  | 'china'
+  | 'europe'
+  | 'west-asia'
+  | 'central-asia'
+  | 'south-asia'
+  | 'east-asia'
+  | 'southeast-asia'
+  | 'africa'
+  | 'americas'
+  | 'oceania'
 export interface Person {
   id: string
   name: string

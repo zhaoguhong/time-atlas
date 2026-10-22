@@ -497,7 +497,7 @@ export default function HistoryMap(props: Props) {
         ...container.current
           .closest('.atlas-app')!
           .querySelectorAll<HTMLElement>(
-            '.layers-button,.map-legend,.layers-popover,.map-controls,.tour-banner,.comparison-controls,.trail-note,.map-event-popup,.city-popup,.focus-explanation[open] > div,.early-map-note,.maplibregl-ctrl-attrib,.focus-mode-exit',
+            '.layers-button,.map-legend,.layers-popover,.map-controls,.tour-banner,.comparison-controls,.trail-note,.map-event-popup,.city-popup,.focus-explanation[open] > div,.early-map-note,.maplibregl-ctrl-attrib,.focus-mode-exit,.visualization-switch',
           ),
       ]
         .filter((el) => el.offsetWidth > 0)

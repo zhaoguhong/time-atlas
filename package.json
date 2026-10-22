@@ -23,7 +23,8 @@
     "data:audit": "node scripts/audit-content.mjs",
     "data:references": "node scripts/index-research.mjs && python3 scripts/collect-references.py && node scripts/index-research.mjs",
     "data:audit:ci": "node scripts/audit-content.mjs --metadata-only --check",
-    "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts"
+    "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts",
+    "test:e2e:pillar": "playwright test --config playwright.pillar.config.ts"
   },
   "dependencies": {
     "lucide-react": "^1.52.0",

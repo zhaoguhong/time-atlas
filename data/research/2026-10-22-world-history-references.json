@@ -1,0 +1,290 @@
+{
+  "purpose": "Factual chronology and source verification for original Chinese historical writing; no textbook text or illustrations redistributed.",
+  "sources": [
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-2-ancient-mesopotamia",
+      "title": "OpenStax · World History 1 · 3-2-ancient-mesopotamia",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-3-ancient-egypt",
+      "title": "OpenStax · World History 1 · 3-3-ancient-egypt",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-4-the-indus-valley-civilization",
+      "title": "OpenStax · World History 1 · 3-4-the-indus-valley-civilization",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
+      "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
+      "title": "OpenStax · World History 1 · 4-2-egypts-new-kingdom",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
+      "title": "OpenStax · World History 1 · 4-3-the-persian-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
+      "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-1-early-mediterranean-peoples",
+      "title": "OpenStax · World History 1 · 6-1-early-mediterranean-peoples",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-2-ancient-greece",
+      "title": "OpenStax · World History 1 · 6-2-ancient-greece",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
+      "title": "OpenStax · World History 1 · 6-3-the-hellenistic-era",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
+      "title": "OpenStax · World History 1 · 6-4-the-roman-republic",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
+      "title": "OpenStax · World History 1 · 6-5-the-age-of-augustus",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/7-4-religion-in-the-roman-empire",
+      "title": "OpenStax · World History 1 · 7-4-religion-in-the-roman-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-2-early-cultures-and-civilizations-in-the-americas",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/9-2-the-emergence-of-farming-and-the-bantu-migrations",
+      "title": "OpenStax · World History 1 · 9-2-the-emergence-of-farming-and-the-bantu-migrations",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/9-3-the-kingdom-of-kush",
+      "title": "OpenStax · World History 1 · 9-3-the-kingdom-of-kush",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
+      "title": "OpenStax · World History 1 · 10-1-the-eastward-shift",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
+      "title": "OpenStax · World History 1 · 10-2-the-byzantine-empire-and-persia",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
+      "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-1-the-rise-and-message-of-islam",
+      "title": "OpenStax · World History 1 · 11-1-the-rise-and-message-of-islam",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-3-border-states-sogdiana-korea-and-japan",
+      "title": "OpenStax · World History 1 · 12-3-border-states-sogdiana-korea-and-japan",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 13-1-the-post-roman-west-in-the-early-middle-ages",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "title": "OpenStax · World History 1 · 13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-4-the-crusading-movement",
+      "title": "OpenStax · World History 1 · 13-4-the-crusading-movement",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-2-chinggis-khan-and-the-early-mongol-empire",
+      "title": "OpenStax · World History 1 · 14-2-chinggis-khan-and-the-early-mongol-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
+      "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-3-the-people-of-the-sahel",
+      "title": "OpenStax · World History 1 · 15-3-the-people-of-the-sahel",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/16-3-the-black-death-from-east-to-west",
+      "title": "OpenStax · World History 1 · 16-3-the-black-death-from-east-to-west",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
+      "title": "OpenStax · World History 1 · 17-1-the-ottomans-and-the-mongols",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
+      "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-2-the-malacca-sultanate",
+      "title": "OpenStax · World History 2 · 2-2-the-malacca-sultanate",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
+      "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-2-the-ottoman-empire",
+      "title": "OpenStax · World History 2 · 4-2-the-ottoman-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "title": "OpenStax · World History 2 · 4-3-the-safavid-empire",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+      "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+      "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-4-the-atlantic-slave-trade",
+      "title": "OpenStax · World History 2 · 5-4-the-atlantic-slave-trade",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-1-european-colonization-in-the-americas",
+      "title": "OpenStax · World History 2 · 6-1-european-colonization-in-the-americas",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-2-the-rise-of-a-global-economy",
+      "title": "OpenStax · World History 2 · 6-2-the-rise-of-a-global-economy",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
+      "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-1-the-enlightenment",
+      "title": "OpenStax · World History 2 · 7-1-the-enlightenment",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
+      "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "title": "OpenStax · World History 2 · 7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-3-spanish-south-america",
+      "title": "OpenStax · World History 2 · 8-3-spanish-south-america",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-4-portuguese-south-america",
+      "title": "OpenStax · World History 2 · 8-4-portuguese-south-america",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
+      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
+      "title": "OpenStax · World History 2 · 9-3-colonial-empires",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-4-exploitation-and-resistance",
+      "title": "OpenStax · World History 2 · 9-4-exploitation-and-resistance",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/10-1-inventions-innovations-and-mechanization",
+      "title": "OpenStax · World History 2 · 10-1-inventions-innovations-and-mechanization",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/10-5-regulation-reform-and-revolutionary-ideologies",
+      "title": "OpenStax · World History 2 · 10-5-regulation-reform-and-revolutionary-ideologies",
+      "references": []
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-1-alliances-expansion-and-conflict",
+      "title": "OpenStax · World History 2 · 11-1-alliances-expansion-and-conflict",
+      "references": []
+    }
+  ]
+}

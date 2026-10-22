@@ -1,3 +1,4 @@
+import { worldEvents } from './world-events'
 import { civilizationEvents } from './civilizations'
 import { earlyEvents, earlyPeople } from './early-history'
 import type { Category, HistoryEvent, Person, Source } from '../types'
@@ -2116,6 +2117,7 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
     ),
   ),
 )
+  .concat(worldEvents)
   .map((event) => ({ ...event, sources: canonicalSources(event.sources) }))
   .sort((a, b) => a.year - b.year)
 

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type RefObject } from 'react'
 import type { Camera } from '../components/HistoryMap'
 import type { Category, EventScope, ExplorationFilter, PanelMode, Selection } from '../types'
 import { MIN_YEAR, MAX_YEAR } from './history'
+import { clampSpan, historyRegions, type PillarSide } from './time-pillar'
 import { createHistoryWriter } from './history-writer'
 
 export interface ArchiveFilters {
@@ -10,6 +11,10 @@ export interface ArchiveFilters {
   allChanges: boolean
 }
 export interface NavigationView {
+  visualization?: 'map' | 'pillar'
+  pillarSide?: PillarSide
+  pillarRegion?: string
+  pillarSpan?: number
   selection: Selection | null
   mode: PanelMode
   year: number
@@ -217,6 +222,15 @@ export function parseViewParams(hash: string) {
       ? [box[0], box[1], box[2], box[3]]
       : null
   return {
+    visualization: params.get('visual') === 'pillar' ? ('pillar' as const) : ('map' as const),
+    pillarSide: (['world', 'china'].includes(params.get('side') ?? '')
+      ? params.get('side')
+      : 'compare') as PillarSide,
+    pillarRegion:
+      params.get('region') !== 'china' && Object.hasOwn(historyRegions, params.get('region') ?? '')
+        ? params.get('region')!
+        : 'all',
+    pillarSpan: params.has('span') ? clampSpan(Number(params.get('span'))) : 600,
     category: (['战争', '政治', '文化', '交流', '社会'].includes(category ?? '')
       ? category
       : '全部') as Category | '全部',

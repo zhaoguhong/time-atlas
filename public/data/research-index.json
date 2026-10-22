@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-08T18:16:24.242Z",
-  "totalSourceLinks": 1079,
-  "referenceDocuments": 415,
-  "successfulSnapshots": 406,
+  "generatedAt": "2026-10-22T08:57:30.093Z",
+  "totalSourceLinks": 1138,
+  "referenceDocuments": 474,
+  "successfulSnapshots": 460,
   "unavailable": [
     {
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
@@ -25,6 +25,16 @@
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
+      "attemptedAt": "2026-10-22T08:49:41.615339+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://nzhistory.govt.nz/womens-suffrage-day",
+      "attemptedAt": "2026-10-22T08:49:46.449407+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
       "attemptedAt": "2026-10-06T16:20:29.279260+00:00",
       "error": "HTTP Error 412: Precondition Failed"
@@ -40,6 +50,16 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/toah/ht/08/eustc",
+      "attemptedAt": "2026-10-22T08:49:34.403575+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
+      "attemptedAt": "2026-10-22T08:49:35.598235+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.zhmuseum.org.cn/yanjiu/mrgsInfo?id=7",
       "attemptedAt": "2026-10-06T16:21:32.915323+00:00",
       "error": "HTTP Error 502: Bad Gateway"
@@ -47,6 +67,11 @@
     {
       "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/4184hnGgNFN.pdf",
       "attemptedAt": "2026-10-06T16:22:05.948859+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
+      "attemptedAt": "2026-10-22T08:51:07.193830+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     }
   ],
@@ -166,6 +191,354 @@
       "retrievedAt": "2026-10-08T18:03:12.660129+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.617181+00:00",
       "sha256": "6273a737cb11749384698c5c38a3ac07e3f9242975264a5b5ef30e16af86c123",
+      "revisionId": null
+    },
+    {
+      "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
+      "title": "新西兰文化与遗产部 · Signing the treaty",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-22T08:49:41.615339+00:00"
+    },
+    {
+      "url": "https://nzhistory.govt.nz/womens-suffrage-day",
+      "title": "新西兰文化与遗产部 · Women win the right to vote",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-22T08:49:46.449407+00:00"
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
+      "title": "OpenStax · World History 1 · 10-1-the-eastward-shift",
+      "retrievedAt": "2026-10-22T08:05:47.353199+00:00",
+      "sha256": "0201d5dfbbccf7780211ada667f7497fd6816a691b140118cc7518d6cf7761b8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
+      "title": "OpenStax · World History 1 · 10-2-the-byzantine-empire-and-persia",
+      "retrievedAt": "2026-10-22T08:05:47.679850+00:00",
+      "sha256": "27f484cc0d4251daca6172e84b50e9ca7b0f1c8ddd0bf0a5dce09d18cb814ca9",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
+      "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
+      "retrievedAt": "2026-10-22T08:05:49.198541+00:00",
+      "sha256": "02137a80ea0f0ce9a1ccdeb713fd5ecbbfab7d2a246d0d696a61c5e7b70c99d7",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-1-the-rise-and-message-of-islam",
+      "title": "OpenStax · World History 1 · 11-1-the-rise-and-message-of-islam",
+      "retrievedAt": "2026-10-22T08:05:48.575777+00:00",
+      "sha256": "7a9eead89024c25c4ac7c400e27b12e5320557f53fcc82376ee1d605d29951bf",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "retrievedAt": "2026-10-22T08:05:49.377241+00:00",
+      "sha256": "46e9364a810a8bbe06cdf93df75e4d20a96289e8c3c04fab254710b990b96575",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "retrievedAt": "2026-10-22T08:05:49.305309+00:00",
+      "sha256": "a96b78cb5c429d1a33538be3f1ca360d7951c2c888d4155ebbdef67612dc0ab9",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-3-border-states-sogdiana-korea-and-japan",
+      "title": "OpenStax · World History 1 · 12-3-border-states-sogdiana-korea-and-japan",
+      "retrievedAt": "2026-10-22T08:05:51.248048+00:00",
+      "sha256": "de09c4f7d8f65d049e4c67a2defd54f95c7c67004bb0d943f9ee47a2bcc256d8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
+      "title": "OpenStax · World History 1 · 13-1-the-post-roman-west-in-the-early-middle-ages",
+      "retrievedAt": "2026-10-22T08:05:50.610935+00:00",
+      "sha256": "fa1ed9872fca5113c8ffbed304f799cafb23ccb67b953cf8dff006213a408c1f",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "title": "OpenStax · World History 1 · 13-3-patriarch-and-papacy-the-church-and-the-call-to-crusade",
+      "retrievedAt": "2026-10-22T08:05:51.247633+00:00",
+      "sha256": "366d31c06c15b4f57a66b67b9125c8b83f1b437fc8bb0cd1fe36607f65579e7a",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-4-the-crusading-movement",
+      "title": "OpenStax · World History 1 · 13-4-the-crusading-movement",
+      "retrievedAt": "2026-10-22T08:05:53.945293+00:00",
+      "sha256": "987f007387bb7b0a84fb939de9a563d57b0d3d487ce0d1f964475ee9db8034d8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
+      "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
+      "retrievedAt": "2026-10-22T08:05:52.014002+00:00",
+      "sha256": "24644cc3a7b181476af9248fff95522aba5060d6ca5c020c6a00544ee6f9b220",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "retrievedAt": "2026-10-22T08:05:52.537465+00:00",
+      "sha256": "11d012e0150bbd7e2984b603d2ada68cc0120f28039324356fdd46823c1ff93b",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/16-3-the-black-death-from-east-to-west",
+      "title": "OpenStax · World History 1 · 16-3-the-black-death-from-east-to-west",
+      "retrievedAt": "2026-10-22T08:05:54.608965+00:00",
+      "sha256": "3de42ed578732cd3987fcd2060cf956f5425fef9a36f6a1d539e5e741e0d8d96",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
+      "title": "OpenStax · World History 1 · 17-1-the-ottomans-and-the-mongols",
+      "retrievedAt": "2026-10-22T08:05:54.597242+00:00",
+      "sha256": "59bad5c554730614058f35628f32a6a2612be2c76446abc073a411c8918ac151",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
+      "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
+      "retrievedAt": "2026-10-22T08:05:41.115833+00:00",
+      "sha256": "e0061437bcfae2e499b23924f36a98ce35657bdec43035da0255997f18a1f84a",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
+      "title": "OpenStax · World History 1 · 4-2-egypts-new-kingdom",
+      "retrievedAt": "2026-10-22T08:05:34.485082+00:00",
+      "sha256": "a2af434dd05167d1a2efddbae0b3589811bf7a1b4f5f7a4c1c1d02997df74f62",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
+      "title": "OpenStax · World History 1 · 4-3-the-persian-empire",
+      "retrievedAt": "2026-10-22T08:05:35.199703+00:00",
+      "sha256": "f62f6cbcb4c8d7aebf955cf271e840f5074038cfb66419c97c798ae8a6ec2ccb",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
+      "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
+      "retrievedAt": "2026-10-22T08:05:38.811963+00:00",
+      "sha256": "fde0869729f6cd1c4bddbb0cfd33c1d89d5d59f152483cd3b1de2cb00febf334",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "retrievedAt": "2026-10-22T08:05:43.591525+00:00",
+      "sha256": "76d00dc664fc2ac129d73f028564db6dec7e18c18885c235ff560fc03f60c6b1",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-1-early-mediterranean-peoples",
+      "title": "OpenStax · World History 1 · 6-1-early-mediterranean-peoples",
+      "retrievedAt": "2026-10-22T08:05:41.343898+00:00",
+      "sha256": "3c8b90c65c5303509cec205ffad2799bb34d0682fcf1b372bcd442a6cf30aec5",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-2-ancient-greece",
+      "title": "OpenStax · World History 1 · 6-2-ancient-greece",
+      "retrievedAt": "2026-10-22T08:05:41.680026+00:00",
+      "sha256": "0750a7c8f26cd61fc2fe9e94fa8c8a71220c2701d21d961beffc35776fe21051",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
+      "title": "OpenStax · World History 1 · 6-3-the-hellenistic-era",
+      "retrievedAt": "2026-10-22T08:05:42.543229+00:00",
+      "sha256": "16321cbb1b03566d9fccf0ee6fca460486c192a9024e922fc270b867004820c5",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
+      "title": "OpenStax · World History 1 · 6-4-the-roman-republic",
+      "retrievedAt": "2026-10-22T08:05:44.440532+00:00",
+      "sha256": "c5895322e7b530dac19c4cdf992489540ae09788d4b0424896fca95b5be34262",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
+      "title": "OpenStax · World History 1 · 6-5-the-age-of-augustus",
+      "retrievedAt": "2026-10-22T08:05:43.085782+00:00",
+      "sha256": "0651edfe7218154e53a7367ed01b54794c41ac91b9166af755c9b57668a6c291",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/7-4-religion-in-the-roman-empire",
+      "title": "OpenStax · World History 1 · 7-4-religion-in-the-roman-empire",
+      "retrievedAt": "2026-10-22T08:05:44.648686+00:00",
+      "sha256": "197896a56ca51d44661ce83c8aebc2a7b27b8091a9ad358490e986d4b175534f",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-2-early-cultures-and-civilizations-in-the-americas",
+      "retrievedAt": "2026-10-22T08:05:45.567139+00:00",
+      "sha256": "f5e398e3ee8c6c1e231a3cda63cbf104c2ec1d8116833889534e218fd5f85be8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
+      "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
+      "retrievedAt": "2026-10-22T08:05:45.697377+00:00",
+      "sha256": "d099e8c1e89fe64dea2843e49f4072dbbfc02d18687f08a1801fccb36bef3702",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/9-3-the-kingdom-of-kush",
+      "title": "OpenStax · World History 1 · 9-3-the-kingdom-of-kush",
+      "retrievedAt": "2026-10-22T08:05:47.945971+00:00",
+      "sha256": "c6d5df8b73bf7774b91f77e93ab1e28e4d0e0dd984ac940275051bc54b722f17",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/10-5-regulation-reform-and-revolutionary-ideologies",
+      "title": "OpenStax · World History 2 · 10-5-regulation-reform-and-revolutionary-ideologies",
+      "retrievedAt": "2026-10-22T08:06:03.037186+00:00",
+      "sha256": "082c2a373d7b84a8fa269eebd69193eb3eeef9816ac94b918375a0ae5f2fef11",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
+      "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
+      "retrievedAt": "2026-10-22T08:05:54.797338+00:00",
+      "sha256": "74726a8d58d1800f6e9eaf1823803f8bd8cf4643d88a8461f226f2c735c9c61c",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-2-the-malacca-sultanate",
+      "title": "OpenStax · World History 2 · 2-2-the-malacca-sultanate",
+      "retrievedAt": "2026-10-22T08:05:55.135755+00:00",
+      "sha256": "1fd8ec9cabc98e23d6d8dd15d84b91a9b49cda256a07d110d13f492edd85fa8b",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "retrievedAt": "2026-10-22T08:05:56.314447+00:00",
+      "sha256": "3eeaa90336a8ca03789beb20bda434639903609105bdb9c23dcd322c6373967d",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
+      "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
+      "retrievedAt": "2026-10-22T08:05:56.439112+00:00",
+      "sha256": "d0690498fb78a26e37c973575ef54159ed0bb0c8d3151e84a3c4e515ec887edd",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "title": "OpenStax · World History 2 · 4-3-the-safavid-empire",
+      "retrievedAt": "2026-10-22T08:05:58.647730+00:00",
+      "sha256": "4445c7d4bb9040ac69f0712d9ee36bb87eef55d0419c67c09db81739df0917f8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+      "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
+      "retrievedAt": "2026-10-22T08:05:57.399226+00:00",
+      "sha256": "6e6cde8957511b48af689203e3b769dad61d87a1749350fdde67e949835a7f2e",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+      "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
+      "retrievedAt": "2026-10-22T08:05:56.996672+00:00",
+      "sha256": "6967fa7276c2f82d2fb79493b9cbe216a5ed08452e061a0938071dddf66386db",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-4-the-atlantic-slave-trade",
+      "title": "OpenStax · World History 2 · 5-4-the-atlantic-slave-trade",
+      "retrievedAt": "2026-10-22T08:05:57.935122+00:00",
+      "sha256": "06ad8e5fa34d31c5ee431d238d038b1aaed7514d21f403ab0fbf8cbff7e588ef",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-1-european-colonization-in-the-americas",
+      "title": "OpenStax · World History 2 · 6-1-european-colonization-in-the-americas",
+      "retrievedAt": "2026-10-22T08:05:57.923063+00:00",
+      "sha256": "ef4a9a4280538b614c341a7b592925c510ec8030df0b5c5a434f1dce26fb158d",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-2-the-rise-of-a-global-economy",
+      "title": "OpenStax · World History 2 · 6-2-the-rise-of-a-global-economy",
+      "retrievedAt": "2026-10-22T08:05:58.478825+00:00",
+      "sha256": "3eac2dbf3701fa5900f28040fdb180430c07f2126953aba8665bcf4a3a33f454",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
+      "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
+      "retrievedAt": "2026-10-22T08:05:58.447572+00:00",
+      "sha256": "3741e23fbd8dc089a28c7bd3778221f74819fc770621f60194b58f1895840b4b",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-1-the-enlightenment",
+      "title": "OpenStax · World History 2 · 7-1-the-enlightenment",
+      "retrievedAt": "2026-10-22T08:05:59.028668+00:00",
+      "sha256": "afe595d75aa49f8369ed243f6f6a60d548d22d4e2ed8c2f266935a0325103053",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
+      "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
+      "retrievedAt": "2026-10-22T08:05:58.921542+00:00",
+      "sha256": "3001926349a47ab24bea80265ead8670a248d1da8b47ec711f0f9a6577dbfbbc",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "title": "OpenStax · World History 2 · 7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "retrievedAt": "2026-10-22T08:06:00.499310+00:00",
+      "sha256": "276b78f6f6e2ffa1b07b72dab6c591789da79fcde153688f5ff306a547cb104b",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-3-spanish-south-america",
+      "title": "OpenStax · World History 2 · 8-3-spanish-south-america",
+      "retrievedAt": "2026-10-22T08:06:00.786641+00:00",
+      "sha256": "22fb5bd1ded5f290f6f28bf6b7e398da4322c2a9fd93f9c168ebd68cdeadc1ee",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/8-4-portuguese-south-america",
+      "title": "OpenStax · World History 2 · 8-4-portuguese-south-america",
+      "retrievedAt": "2026-10-22T08:06:00.927539+00:00",
+      "sha256": "b626e6ef200794fa47351cbdb3fbf9f49b73e3fab9cd0d0e5d8c7fbfb7640870",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
+      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "retrievedAt": "2026-10-22T08:06:01.436623+00:00",
+      "sha256": "1443c443c9b2eb5705dd8da67e1c9e343c8e33cc7bbc819887b3c16e3daa3d7e",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
+      "title": "OpenStax · World History 2 · 9-3-colonial-empires",
+      "retrievedAt": "2026-10-22T08:06:02.578626+00:00",
+      "sha256": "3e0a09afbcb9ffb410b7d31307a173c65eb0e5dd455bdd73c238f8b690a64d40",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-4-exploitation-and-resistance",
+      "title": "OpenStax · World History 2 · 9-4-exploitation-and-resistance",
+      "retrievedAt": "2026-10-22T08:06:01.533337+00:00",
+      "sha256": "86fb2a6997f94dede639eda3748285b9d68db1e528fc7f3dbd622cd4bd73f0d2",
       "revisionId": null
     },
     {
@@ -475,6 +848,14 @@
       "revisionId": null
     },
     {
+      "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
+      "title": "剑桥大学 · Darwin Correspondence Project: Origin",
+      "retrievedAt": "2026-10-22T08:38:31.977446+00:00",
+      "lastCacheCheckAt": "2026-10-22T08:49:27.264193+00:00",
+      "sha256": "53f12a8e9f667ec001d02981158df2087fc664db083e11f6bd01b54ded21b541",
+      "revisionId": null
+    },
+    {
       "url": "https://www.dpm.org.cn/ancient/hall/165349.html",
       "title": "故宫博物院 ·《康熙字典》",
       "retrievedAt": "2026-10-06T12:10:12.091019+00:00",
@@ -635,6 +1016,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
+      "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
+      "retrievedAt": "2026-10-22T08:49:42.815913+00:00",
+      "sha256": "3174a1fd907e4b7179c878f61204e8982a0f579fb3404bd3d88e3e666a01e1b7",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "retrievedAt": "2026-10-08T17:25:10.424524+00:00",
@@ -686,6 +1074,20 @@
       "attemptedAt": "2026-10-06T18:33:54.455335+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/toah/ht/08/eustc",
+      "title": "大都会艺术博物馆 · Florence and Central Italy, 1400–1600",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-22T08:49:34.403575+00:00"
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+      "title": "英国国家档案馆 · Magna Carta",
+      "retrievedAt": "2026-10-22T08:38:30.551343+00:00",
+      "lastCacheCheckAt": "2026-10-22T08:49:27.256203+00:00",
+      "sha256": "f02ff2f72a4f71af36594584e37a31fe92860165f3bb5b1d785e18ae43cd503f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
       "title": "宁波博物院 · 河姆渡文化考古成果特展",
       "retrievedAt": "2026-10-07T06:33:31.124164+00:00",
@@ -702,10 +1104,38 @@
       "revisionId": null
     },
     {
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
+      "title": "日本国立国会图书馆 · Modern Japan in archives: Russo-Japanese War",
+      "retrievedAt": "2026-10-22T08:49:45.035917+00:00",
+      "sha256": "e0e638c371c89df7d0a9a59f6cbc2808c33285d1cc3025913388099863383d6f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.neac.gov.cn/seac/c103391/202306/1164738.shtml",
       "title": "国家民委 · 夏商周纪年与武王克商的考定",
       "retrievedAt": "2026-10-06T17:35:46.645993+00:00",
       "sha256": "dae36d94cf3b250c41cf9ea6622990c2555e466c75357f5251df1fa058f8fdbc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
+      "title": "澳大利亚国家博物馆 · Defining moments timeline",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-22T08:49:35.598235+00:00"
+    },
+    {
+      "url": "https://www.nps.gov/civilwar/overview.htm",
+      "title": "美国国家公园管理局 · The Civil War: Overview",
+      "retrievedAt": "2026-10-22T08:49:43.765631+00:00",
+      "sha256": "b847405e8c3f5e939dd43ebe88e3c7fdbcecf3d6554a6766d4c2f12b8bb0197f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
+      "title": "美国国家公园管理局 · 1903 The First Flight",
+      "retrievedAt": "2026-10-22T08:38:33.155521+00:00",
+      "lastCacheCheckAt": "2026-10-22T08:49:27.272511+00:00",
+      "sha256": "37cb908667b4c6fd93573de6a12ec92301bb67d444f8f40a7c30ffc3e2c38bfb",
       "revisionId": null
     },
     {
@@ -743,6 +1173,12 @@
       "title": "林语堂 · 平心论高鹗（中研院史语所保存）",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
       "attemptedAt": "2026-10-06T16:22:05.948859+00:00"
+    },
+    {
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
+      "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-22T08:51:07.193830+00:00"
     },
     {
       "url": "https://ysglxy.sdca.edu.cn/info/1049/1316.htm",
