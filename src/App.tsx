@@ -670,7 +670,7 @@ export default function App() {
     [personJourney, changeYear],
   )
   const openEvent = useCallback(
-    (id: string, keepTour = false, keepTrail = false) => {
+    (id: string, keepTour = false, keepTrail = false, keepPillarView = false) => {
       const event = eventById.get(id)
       if (!event) return
       if (!keepTour && !keepTrail) rememberView()
@@ -683,12 +683,13 @@ export default function App() {
         }
         if (category !== '全部' && category !== event.category) setCategory('全部')
         if (
+          !keepPillarView &&
           exploration.range &&
           (event.year < exploration.range[0] || event.year > exploration.range[1])
         )
           setExploration((old) => ({ ...old, range: null }))
       }
-      setYear(event.year)
+      if (!keepPillarView) setYear(event.year)
       setMobileView((view) => (view === 'map' ? 'split' : view))
       setSelection({ type: 'event', id })
       setMode('events')
@@ -715,7 +716,7 @@ export default function App() {
     if (value === 'pillar') {
       setTourState(null)
       setTrailPerson(null)
-      setPlaybackMode('events')
+      setPlaybackReading(false)
     } else if (selection?.type === 'event') {
       const event = eventById.get(selection.id)
       if (event) setFocus({ coordinates: event.coordinates, zoom: 4.6, token: Date.now() })
@@ -1159,6 +1160,7 @@ export default function App() {
     setMode('tours')
   }
   const togglePlayback = useCallback(() => {
+    if (visualization !== 'map') return
     if (tour?.chapters && tourState) {
       if (!playing && (tourState.step < 0 || tourState.step >= tour.steps.length - 1))
         openTourChapter(0)
@@ -1190,6 +1192,7 @@ export default function App() {
       }
     }
   }, [
+    visualization,
     playing,
     trail,
     tour,
@@ -1366,7 +1369,7 @@ export default function App() {
     return () => window.removeEventListener('hashchange', hashChanged)
   }, [changeYear])
   useEffect(() => {
-    if (!playing || personJourney || tour?.chapters) return
+    if (visualization !== 'map' || !playing || personJourney || tour?.chapters) return
     let last = performance.now()
     const interval = window.setInterval(() => {
       const now = performance.now()
@@ -1391,7 +1394,16 @@ export default function App() {
       }
     }, 40)
     return () => window.clearInterval(interval)
-  }, [playing, speed, personJourney, tour, playbackMode, eventYears, exploration.range])
+  }, [
+    visualization,
+    playing,
+    speed,
+    personJourney,
+    tour,
+    playbackMode,
+    eventYears,
+    exploration.range,
+  ])
   useEffect(() => {
     if (!playing || !tour?.chapters || !tourState) return
     const timeout = window.setTimeout(() => {
@@ -1407,7 +1419,7 @@ export default function App() {
     function keydown(event: KeyboardEvent) {
       const target = event.target as HTMLElement
       if (target.closest('input,textarea,select,button,a,dialog') || dialog) return
-      if (event.code === 'Space') {
+      if (event.code === 'Space' && visualization === 'map') {
         event.preventDefault()
         togglePlayback()
       }
@@ -1420,7 +1432,7 @@ export default function App() {
     }
     window.addEventListener('keydown', keydown)
     return () => window.removeEventListener('keydown', keydown)
-  }, [navigateYear, dialog, togglePlayback])
+  }, [navigateYear, dialog, togglePlayback, visualization])
   useEffect(() => {
     if (!toast) return
     const timeout = window.setTimeout(() => setToast(''), 3000)
@@ -2033,8 +2045,6 @@ export default function App() {
                 }}
                 selectedId={selection?.type === 'event' ? selection.id : undefined}
                 playing={playing}
-                speed={speed}
-                playbackMode={playbackMode}
                 range={exploration.range}
                 onNavigate={(value, span) => {
                   setYear(clampYear(value))
@@ -2043,7 +2053,18 @@ export default function App() {
                   setPlaybackReading(false)
                 }}
                 onPause={() => setPlaying(false)}
-                onPlay={togglePlayback}
+                onBrowseStart={() => {
+                  setTourState(null)
+                  setTrailPerson(null)
+                  setPlaying(true)
+                  setPlaybackReading(false)
+                  setSelection(null)
+                  setMode('events')
+                }}
+                onBrowseNavigate={(value, span) => {
+                  setYear(clampYear(value))
+                  setPillarSpan(span)
+                }}
                 onSide={(value) => {
                   setPillarSide(value)
                   setPlaying(false)
@@ -2056,20 +2077,13 @@ export default function App() {
                   setCategory(value)
                   setPlaying(false)
                 }}
-                onSpeed={setSpeed}
-                onPlaybackMode={(value) => {
-                  setPlaybackMode(value)
-                  setPlaying(false)
-                }}
                 onRange={(range) => {
                   setExploration((old) => ({ ...old, range }))
                   setPlaying(false)
                 }}
-                onEvent={openEvent}
-                onRead={() => {
-                  setReaderCollapsed(false)
-                  setMobileView('split')
-                }}
+                onEvent={(id) => openEvent(id, false, false, true)}
+                readerCollapsed={readerCollapsed}
+                onToggleReader={() => setReaderCollapsed((collapsed) => !collapsed)}
               />
             ) : (
               <HistoryMap
@@ -2488,6 +2502,17 @@ export default function App() {
                     className="event-map-link"
                     onClick={() => {
                       rememberView()
+                      // Reading stays at the pillar's current window; this explicit
+                      // map action instead opens the geography at the event's date.
+                      if (visualization === 'pillar') {
+                        setYear(selectedEvent.year)
+                        setExploration((old) =>
+                          old.range &&
+                          (selectedEvent.year < old.range[0] || selectedEvent.year > old.range[1])
+                            ? { ...old, range: null }
+                            : old,
+                        )
+                      }
                       setVisualization(visualization === 'pillar' ? 'map' : 'pillar')
                       setPlaying(false)
                       setFocus({

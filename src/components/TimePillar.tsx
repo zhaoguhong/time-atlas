@@ -1,12 +1,11 @@
 import { type CSSProperties, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import {
-  ArrowDown,
-  ArrowUp,
   Check,
   ChevronsUpDown,
   List,
   Globe2,
-  Layers3,
+  PanelRightClose,
+  PanelRightOpen,
   LocateFixed,
   Minus,
   Pause,
@@ -36,7 +35,8 @@ import {
   pillarWindow,
   type PillarSide,
 } from '../lib/time-pillar'
-import { eventPlaybackYears, PLAYBACK_SPEEDS } from '../lib/playback'
+import { pillarBrowseStops } from '../lib/pillar-browse'
+import { usePillarBrowse } from '../hooks/use-pillar-browse'
 import { usePillarTheme } from '../lib/pillar-theme'
 import { usePillarView } from '../hooks/use-pillar-view'
 import type { PillarView } from '../hooks/use-pillar-view'
@@ -57,20 +57,18 @@ type Props = {
   onClearSpatial: () => void
   selectedId?: string
   playing: boolean
-  speed: number
-  playbackMode: 'years' | 'events'
   range: [number, number] | null
   onNavigate: (year: number, span: number) => void
   onPause: () => void
-  onPlay: () => void
+  onBrowseStart: () => void
+  onBrowseNavigate: (year: number, span: number) => void
   onSide: (side: PillarSide) => void
   onRegion: (region: string) => void
   onCategory: (category: Category | '全部') => void
-  onSpeed: (speed: number) => void
-  onPlaybackMode: (mode: 'years' | 'events') => void
   onRange: (range: [number, number] | null) => void
   onEvent: (id: string) => void
-  onRead: () => void
+  readerCollapsed: boolean
+  onToggleReader: () => void
 }
 const categories: (Category | '全部')[] = ['全部', '政治', '战争', '文化', '交流', '社会']
 const niceSpan = (n: number) =>
@@ -93,6 +91,8 @@ export default function TimePillar(p: Props) {
   const [query, setQuery] = useState('')
   const [dragging, setDragging] = useState(false)
   const [showSummary, setShowSummary] = useState(false)
+  const [dwell, setDwell] = useState(6)
+  const autoPreview = useRef(false)
   const current = useRef(p)
   current.current = p
   const preview = useRef(draft)
@@ -117,13 +117,35 @@ export default function TimePillar(p: Props) {
   const { year, span, ordinal, moving, settle } = usePillarView(
     draft?.year ?? p.year,
     draft?.span ?? p.span,
-    draft !== null || dragging || p.playing,
+    draft !== null || dragging,
     targetOrdinal,
   )
   const rendered = useRef({ year, span, ordinal })
   rendered.current = { year, span, ordinal }
   const target = useRef<PillarView>({ year: p.year, span: p.span, ordinal: targetOrdinal })
   target.current = { year: p.year, span: p.span, ordinal: targetOrdinal }
+  const stops = useMemo(
+    () => pillarBrowseStops(p.events, p.span, p.range),
+    [p.events, p.span, p.range],
+  )
+  const browse = usePillarBrowse({
+    active: p.playing,
+    stops,
+    dwell,
+    view: rendered.current,
+    onFrame: (view) => {
+      autoPreview.current = true
+      preview.current = view
+      setDraft(view)
+    },
+    onArrive: (view) => {
+      autoPreview.current = false
+      settle(view)
+      commit(view, true)
+    },
+    onStop: () => pauseRef.current(),
+  })
+  const priorityId = p.selectedId ?? browse.stop?.event.id
   const narrow = size.width < 560
   const footerZoom = size.width >= 760
   const single = p.side !== 'compare'
@@ -146,17 +168,10 @@ export default function TimePillar(p: Props) {
   const windowRange = windowAt(ordinal, span)
   const scene = useMemo(
     () =>
-      createPillarScene(
-        p.events,
-        { ...windowRange, year },
-        height,
-        cardHeight,
-        p.side,
-        p.selectedId,
-      ),
+      createPillarScene(p.events, { ...windowRange, year }, height, cardHeight, p.side, priorityId),
     // A pan changes only the scene transform, never its packing or identities.
     // New scale/geometry/filter/selection deliberately establishes a new scene.
-    [p.events, span, height, cardHeight, p.side, p.selectedId],
+    [p.events, span, height, cardHeight, p.side, priorityId],
   )
   const { cards: bufferedCards, offset } = samplePillarScene(scene, windowRange)
   // CSS geometry rounds subpixels; omit zero-area boundary fragments instead
@@ -187,12 +202,37 @@ export default function TimePillar(p: Props) {
     const center = Math.max(toOrdinal(MIN_YEAR), Math.min(toOrdinal(MAX_YEAR), ordinal))
     return { year: limited(center), span, ordinal: center }
   }
-  const commit = (next: PillarView) => {
+  const commit = (next: PillarView, automatic = false) => {
     preview.current = null
     setDraft(null)
     setPrecise(next.ordinal === undefined ? null : next)
-    current.current.onNavigate(next.year, clampSpan(next.span))
+    const navigate = automatic ? current.current.onBrowseNavigate : current.current.onNavigate
+    navigate(next.year, clampSpan(next.span))
   }
+  const pauseBrowsing = () => {
+    browse.cancel()
+    if (autoPreview.current) {
+      autoPreview.current = false
+      const view = rendered.current
+      settle(view)
+      target.current = view
+      commit(view)
+    }
+    current.current.onPause()
+  }
+  const pauseRef = useRef(pauseBrowsing)
+  pauseRef.current = pauseBrowsing
+  // External reading/navigation may stop browsing and choose a new year in one commit.
+  // Drop the unfinished preview without overwriting that explicit destination.
+  useLayoutEffect(() => {
+    if (!p.playing && autoPreview.current) {
+      browse.cancel()
+      autoPreview.current = false
+      preview.current = null
+      setDraft(null)
+      settle({ year: p.year, span: p.span })
+    }
+  }, [p.playing, p.year, p.span, browse.cancel, settle])
   const flush = () => {
     if (timer.current) clearTimeout(timer.current)
     timer.current = null
@@ -248,7 +288,7 @@ export default function TimePillar(p: Props) {
     const wheel = (event: WheelEvent) => {
       if ((event.target as HTMLElement).closest('[data-pillar-control]')) return
       event.preventDefault()
-      current.current.onPause()
+      pauseRef.current()
       const state = preview.current ?? rendered.current
       const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? height : 1)
       const next =
@@ -281,7 +321,7 @@ export default function TimePillar(p: Props) {
   )
   useEffect(() => {
     if (modal) {
-      current.current.onPause()
+      pauseRef.current()
       dialog.current?.showModal()
     } else dialog.current?.close()
   }, [modal])
@@ -309,6 +349,7 @@ export default function TimePillar(p: Props) {
     }
   }
   function openPanel(type: 'settings' | 'cluster', trigger: HTMLElement) {
+    pauseBrowsing()
     modalTrigger.current = trigger
     setModal(type)
   }
@@ -320,16 +361,9 @@ export default function TimePillar(p: Props) {
       (modalTrigger.current?.isConnected ? modalTrigger.current : optionsTrigger.current)?.focus(),
     )
   }
-  function step(direction: number) {
-    p.onPause()
-    const years = eventPlaybackYears(p.events, p.range)
-    const next =
-      direction > 0 ? years.find((y) => y > p.year) : [...years].reverse().find((y) => y < p.year)
-    if (next !== undefined) commit({ year: next, span: p.span })
-  }
   function openCluster(records: HistoryEvent[], trigger: HTMLElement) {
+    pauseBrowsing()
     flush()
-    p.onPause()
     setCluster([...records].sort((a, b) => a.year - b.year || b.importance - a.importance))
     openPanel('cluster', trigger)
   }
@@ -345,7 +379,7 @@ export default function TimePillar(p: Props) {
         aria-label="放大时间"
         disabled={p.span <= MIN_SPAN}
         onClick={() => {
-          p.onPause()
+          pauseBrowsing()
           commit(zoom(0.6))
         }}
       >
@@ -356,7 +390,7 @@ export default function TimePillar(p: Props) {
         aria-label="缩小时间"
         disabled={p.span >= MAX_SPAN}
         onClick={() => {
-          p.onPause()
+          pauseBrowsing()
           commit(zoom(1.6))
         }}
       >
@@ -391,11 +425,19 @@ export default function TimePillar(p: Props) {
         role="region"
         aria-label="时间画布：上下拖动浏览，双指或 Ctrl 加滚轮缩放，方向键移动，加减键缩放"
         data-year={year}
+        data-ordinal={ordinal}
         data-span={Math.round(span)}
-        data-motion={moving}
+        data-motion={moving || browse.travelling}
+        data-browsing={p.playing}
+        data-browse-phase={p.playing ? (browse.travelling ? 'moving' : 'reading') : 'stopped'}
         onKeyDown={(event) => {
           if (event.target !== event.currentTarget) return
-          const target = current.current
+          if (p.playing && (event.key === ' ' || event.key === 'Escape')) {
+            event.preventDefault()
+            pauseBrowsing()
+            return
+          }
+          const target = p.playing ? rendered.current : current.current
           const moves: Record<string, () => void> = {
             ArrowUp: () =>
               commit({
@@ -415,15 +457,15 @@ export default function TimePillar(p: Props) {
           }
           if (moves[event.key]) {
             event.preventDefault()
-            p.onPause()
+            pauseBrowsing()
             moves[event.key]()
           }
         }}
         onPointerDown={(event) => {
           if (event.button !== 0 || (event.target as HTMLElement).closest('[data-pillar-control]'))
             return
+          pauseBrowsing()
           flush()
-          p.onPause()
           if (moving) showPreview(rendered.current)
           suppressClick.current = false
           pointerState.current.set(event.pointerId, { x: event.clientX, y: event.clientY })
@@ -562,7 +604,7 @@ export default function TimePillar(p: Props) {
             {cards.map((c) => (
               <div
                 key={c.event.id}
-                className={`pillar-card ${c.side} ${c.event.id === p.selectedId ? 'selected' : ''}`}
+                className={`pillar-card ${c.side} ${c.event.id === p.selectedId || (p.playing && !browse.travelling && c.event.id === browse.stop?.event.id) ? 'selected' : ''}`}
                 data-event-id={c.event.id}
                 data-category={c.event.category}
                 style={
@@ -574,12 +616,18 @@ export default function TimePillar(p: Props) {
               >
                 <button
                   className="pillar-event"
+                  aria-current={
+                    p.playing && !browse.travelling && c.event.id === browse.stop?.event.id
+                      ? 'step'
+                      : undefined
+                  }
                   tabIndex={
                     c.y + offset - cardHeight / 2 >= 0 && c.y + offset + cardHeight / 2 <= height
                       ? undefined
                       : -1
                   }
                   onClick={() => {
+                    pauseBrowsing()
                     flush()
                     p.onEvent(c.event.id)
                   }}
@@ -640,6 +688,7 @@ export default function TimePillar(p: Props) {
             }
             title="主题、历史范围、筛选与年份定位"
             onClick={(event) => {
+              pauseBrowsing()
               flush()
               setJump(String(year))
               openPanel('settings', event.currentTarget)
@@ -660,24 +709,21 @@ export default function TimePillar(p: Props) {
             <small>年</small>
           </strong>
         </div>
-        <div className="pillar-play">
-          <button aria-label="上一个事件年份" onClick={() => step(-1)}>
-            <ArrowDown size={18} />
-          </button>
+        {p.playing && (
           <button
-            className="pillar-play-main"
-            aria-label={p.playing ? '暂停时空柱' : '播放时空柱'}
-            onClick={() => {
-              flush()
-              p.onPlay()
-            }}
+            className="pillar-browse-stop"
+            aria-label="停止自动浏览"
+            title={
+              browse.travelling
+                ? '正在移向下一站，点击停止'
+                : `当前停留：${browse.stop?.event.title ?? '历史事件'}，点击停止`
+            }
+            onClick={pauseBrowsing}
           >
-            {p.playing ? <Pause size={20} /> : <Play size={20} />}
+            <Pause size={16} aria-hidden="true" />
+            <span>自动浏览</span>
           </button>
-          <button aria-label="下一个事件年份" onClick={() => step(1)}>
-            <ArrowUp size={18} />
-          </button>
-        </div>
+        )}
         {footerZoom && zoomControls}
         <button
           className="pillar-cluster"
@@ -691,8 +737,19 @@ export default function TimePillar(p: Props) {
             <small>全部事件</small>
           </span>
         </button>
-        <button className="pillar-reader" aria-label="打开历史资料" onClick={p.onRead}>
-          <Layers3 size={18} />
+        <button
+          className="pillar-reader"
+          aria-label={p.readerCollapsed ? '展开历史资料' : '收起历史资料'}
+          title={p.readerCollapsed ? '展开历史资料' : '收起历史资料，展开时空柱'}
+          aria-expanded={!p.readerCollapsed}
+          aria-controls="history-reading-content"
+          onClick={p.onToggleReader}
+        >
+          {p.readerCollapsed ? (
+            <PanelRightOpen size={18} aria-hidden="true" />
+          ) : (
+            <PanelRightClose size={18} aria-hidden="true" />
+          )}
         </button>
       </footer>
       <dialog
@@ -774,7 +831,7 @@ export default function TimePillar(p: Props) {
               aria-label="查看历史全貌"
               onClick={() => {
                 closeModal()
-                p.onPause()
+                pauseBrowsing()
                 commit({
                   year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
                   span: MAX_SPAN,
@@ -919,33 +976,43 @@ export default function TimePillar(p: Props) {
                 ))}
               </select>
             </label>
-            <div className="pillar-option-grid">
-              <label>
-                播放方式
-                <select
-                  aria-label="时空柱播放方式"
-                  value={p.playbackMode}
-                  onChange={(e) => p.onPlaybackMode(e.target.value as 'years' | 'events')}
+            <section className="pillar-browse-options" aria-labelledby="pillar-browse-title">
+              <h3 id="pillar-browse-title">自动浏览</h3>
+              <p>
+                从当前年份向前，按事件逐站停留。大跨度优先重要事件，放大后纳入更多事件；到筛选范围末尾自动结束。
+              </p>
+              <p>拖动、缩放或打开事件会立即停止，留在原处慢慢读。</p>
+              <div className="pillar-option-grid">
+                <label>
+                  每站停留
+                  <select
+                    aria-label="自动浏览停留时间"
+                    value={dwell}
+                    onChange={(e) => setDwell(Number(e.target.value))}
+                  >
+                    {[4, 6, 10].map((seconds) => (
+                      <option key={seconds} value={seconds}>
+                        {seconds} 秒
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <button
+                  className="pillar-primary"
+                  disabled={!stops.some((stop) => stop.year >= p.year)}
+                  onClick={() => {
+                    closeModal()
+                    p.onBrowseStart()
+                  }}
                 >
-                  <option value="events">逐事件年份 · 停下来读</option>
-                  <option value="years">连续年份 · 看历史流动</option>
-                </select>
-              </label>
-              <label>
-                播放速度
-                <select
-                  aria-label="时空柱播放速度"
-                  value={p.speed}
-                  onChange={(e) => p.onSpeed(Number(e.target.value))}
-                >
-                  {PLAYBACK_SPEEDS.map((n) => (
-                    <option key={n} value={n}>
-                      {n}×
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
+                  <Play size={16} aria-hidden="true" />
+                  开始自动浏览
+                </button>
+              </div>
+              {!stops.some((stop) => stop.year >= p.year) && (
+                <p>当前年份之后没有符合条件的事件。可移向更早的年份，或调整跨度与筛选。</p>
+              )}
+            </section>
             <form
               onSubmit={(e) => {
                 e.preventDefault()
@@ -971,7 +1038,7 @@ export default function TimePillar(p: Props) {
                 })
               }}
             >
-              <label>限定探索与播放范围</label>
+              <label>限定探索与自动浏览范围</label>
               <div className="pillar-range-row">
                 <input
                   aria-label="时空柱起始年份"

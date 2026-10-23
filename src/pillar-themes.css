@@ -470,16 +470,9 @@
   color: var(--pillar-ink);
   border-color: var(--pillar-rule);
 }
-:root[data-color-mode='dark']
-  .time-pillar
-  :is(.pillar-play button, .pillar-reader, .pillar-zoom button) {
+:root[data-color-mode='dark'] .time-pillar :is(.pillar-reader, .pillar-zoom button) {
   color: var(--pillar-ink);
   border-color: var(--pillar-rule);
-}
-:root[data-color-mode='dark'] .time-pillar .pillar-play-main {
-  background: #d9bb85;
-  border-color: #d9bb85;
-  color: #233a45;
 }
 :root[data-color-mode='dark'] .time-pillar .pillar-settings[data-filtered='true']::after {
   background: #36594e;

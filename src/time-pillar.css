@@ -405,26 +405,6 @@
   margin-left: 4px;
   color: #75848c;
 }
-.pillar-play {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.pillar-play button {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #dbe3e9;
-  border-radius: 50%;
-  color: #526f64;
-}
-.pillar-play .pillar-play-main {
-  background: #345751;
-  color: #fff;
-  border-color: #345751;
-  box-shadow: 0 3px 8px #34575115;
-}
 .pillar-footer-info {
   text-align: right;
   font-size: 11px;
@@ -793,8 +773,7 @@
   padding: 5px 10px;
   gap: 6px;
 }
-.time-pillar[data-narrow='true'] .pillar-footer-info,
-.time-pillar[data-narrow='true'] .pillar-reader {
+.time-pillar[data-narrow='true'] .pillar-footer-info {
   display: none;
 }
 .time-pillar[data-narrow='true'] .pillar-year strong {
@@ -803,9 +782,6 @@
 .time-pillar[data-narrow='true'] .pillar-year > span {
   font-size: 8px;
   letter-spacing: 0;
-}
-.time-pillar[data-narrow='true'] .pillar-play {
-  gap: 3px;
 }
 .time-pillar[data-narrow='true'] .pillar-cluster {
   padding-inline: 8px;
@@ -857,6 +833,11 @@
   }
   .pillar-option-grid {
     gap: 10px;
+  }
+}
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
+  .pillar-reader {
+    display: none;
   }
 }
 @media (min-width: 560px) and (max-width: 1000px) and (max-height: 540px) and (orientation: landscape) {
@@ -1028,4 +1009,52 @@
 }
 :root[data-color-mode='dark'] .time-pillar .pillar-settings:hover {
   background: #eef6f0;
+}
+
+.pillar-browse-stop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--pillar-rule);
+  border-radius: 14px;
+  background: var(--pillar-surface);
+  color: var(--pillar-ink);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.pillar-browse-options {
+  padding: 16px;
+  border: 1px solid var(--pillar-rule);
+  border-radius: 16px;
+  background: var(--pillar-surface);
+}
+.pillar-browse-options h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: var(--pillar-ink);
+}
+.pillar-browse-options p {
+  margin: 6px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--pillar-muted);
+}
+.pillar-browse-options .pillar-option-grid {
+  margin-top: 12px;
+  align-items: end;
+}
+.pillar-browse-options .pillar-primary {
+  margin: 0;
+  min-height: 44px;
+}
+.pillar-browse-options .pillar-primary:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.time-pillar[data-narrow='true'] .pillar-browse-stop {
+  padding-inline: 8px;
+  font-size: 11px;
 }

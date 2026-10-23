@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { toOrdinal } from '../src/lib/history'
 
 test.use({ hasTouch: true })
 async function ready(page: Page, hash = 'year=1500&span=900') {
@@ -107,7 +108,7 @@ for (const [width, height] of [
     expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(
       2 * Math.floor((await page.locator('.pillar-stage').boundingBox())!.height / 44),
     )
-    for (const control of ['放大时间', '缩小时间', '播放时空柱', '时空柱筛选与设置']) {
+    for (const control of ['放大时间', '缩小时间', '时空柱筛选与设置']) {
       const button = page.getByRole('button', { name: control, exact: true })
       await expect(button).toBeInViewport({ ratio: 1 })
       const box = (await button.boundingBox())!
@@ -189,36 +190,32 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await expect(page.locator('.event-detail h2')).toHaveText(title)
   await page.screenshot({ path: info.outputPath('detail-and-pillar.png') })
 })
-test('region and category filtering, bounded playback, pause-on-read and settings', async ({
-  page,
-}) => {
+test('filtered automatic browsing respects the range and stops for reading', async ({ page }) => {
   await ready(page, 'year=1776&span=150&side=world')
   await settings(page)
   await page.getByLabel('世界历史地区', { exact: true }).selectOption('americas')
   await page.getByLabel('时空柱事件类别', { exact: true }).selectOption('政治')
-  await page.getByLabel('时空柱播放速度', { exact: true }).selectOption('20')
   await page.getByLabel('时空柱起始年份', { exact: true }).fill('1776')
   await page.getByLabel('时空柱结束年份', { exact: true }).fill('1804')
   await page.getByRole('button', { name: '应用时空柱时间范围', exact: true }).click()
-  await page.getByRole('button', { name: '播放时空柱', exact: true }).click()
-  await expect
-    .poll(async () => Number(await page.locator('.pillar-stage').getAttribute('data-year')))
-    .toBeGreaterThanOrEqual(1791)
-  await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible({
-    timeout: 10000,
-  })
-  expect(Number(await page.locator('.pillar-stage').getAttribute('data-year'))).toBeLessThanOrEqual(
-    1804,
-  )
-  await page.getByRole('button', { name: '播放时空柱', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
+  await page.clock.install()
   await settings(page)
-  await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
-  await closeSettings(page)
-  // Playback can leave a row partly outside the clipping boundary. Choose an
-  // event in the keyboard sequence, whose complete touch target is visible.
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await page.clock.runFor(1400)
+  const stage = page.locator('.pillar-stage')
+  expect(Number(await stage.getAttribute('data-year'))).toBeGreaterThanOrEqual(1791)
+  expect(Number(await stage.getAttribute('data-year'))).toBeLessThanOrEqual(1804)
+  await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
+  const beforeReading = await stage.getAttribute('data-year')
   await page.locator('.pillar-event:not([tabindex="-1"])').first().click()
-  await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
+  await expect(stage).toHaveAttribute('data-year', beforeReading!)
+  await expect(stage).toHaveAttribute('data-browsing', 'false')
   await expect(page.locator('.event-detail h2')).toBeVisible()
+  await page.clock.runFor(1500)
+  const year = await stage.getAttribute('data-year')
+  await page.clock.runFor(20000)
+  await expect(stage).toHaveAttribute('data-year', year!)
 })
 test('mobile reading remains usable through rotation and supports split canvas', async ({
   page,
@@ -305,7 +302,7 @@ for (const [width, height] of [
     await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'split')
     await expect(page.locator('.event-detail h2')).toBeInViewport({ ratio: 1 })
     await geometry(page)
-    for (const name of ['播放时空柱', '放大时间', '时空柱筛选与设置'])
+    for (const name of ['放大时间', '时空柱筛选与设置'])
       await expect(page.getByRole('button', { name, exact: true })).toBeInViewport({ ratio: 1 })
     await page.screenshot({ path: info.outputPath(`portrait-split-${width}.png`) })
   })
@@ -339,18 +336,20 @@ test('world-only reading uses the canvas range and header entry remains accessib
     .click()
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
 })
-test('continuous playback stops at 1912 and the header reveals a switched mode', async ({
+test('automatic browsing finishes at the final event without looping and preserves map playback preference', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await ready(page, 'year=1910&span=50&play=years')
   await settings(page)
-  await page.getByLabel('时空柱播放方式', { exact: true }).selectOption('years')
-  await page.getByLabel('时空柱播放速度', { exact: true }).selectOption('20')
-  await closeSettings(page)
-  await page.getByRole('button', { name: '播放时空柱', exact: true }).click()
-  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1912')
-  await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1912', {
+    timeout: 20000,
+  })
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'false', {
+    timeout: 10000,
+  })
+  await expect(page).toHaveURL(/play=years/)
   await setSheet(page, 'reading')
   await page
     .getByRole('group', { name: '探索模式', exact: true })
@@ -577,3 +576,205 @@ for (const [width, height] of [
     }
   })
 }
+
+for (const width of [1440, 1024, 820, 701]) {
+  test(`pillar reader button toggles the existing reader at ${width}px`, async ({ page }, info) => {
+    await page.setViewportSize({ width, height: 900 })
+    await ready(page, 'year=-3800&span=926&scope=period')
+    const button = page.locator('.pillar-reader')
+    const reader = page.locator('.story-panel')
+    const url = page.url()
+    const stageWidth = (await page.locator('.pillar-stage').boundingBox())!.width
+    await expect(reader).toBeVisible()
+    await button.click()
+    await expect(reader).toBeHidden()
+    await expect(button).toHaveAttribute('aria-expanded', 'false')
+    await expect(button).toHaveAccessibleName('展开历史资料')
+    expect((await page.locator('.pillar-stage').boundingBox())!.width).toBeGreaterThan(stageWidth)
+    await expect(page).toHaveURL(url)
+    await page.screenshot({ path: info.outputPath(`reader-collapsed-${width}.png`) })
+    await button.focus()
+    await button.press('Enter')
+    await expect(reader).toBeVisible()
+    await expect(button).toHaveAttribute('aria-expanded', 'true')
+    await expect(button).toHaveAccessibleName('收起历史资料')
+    await expect(button).toBeFocused()
+    await expect(page).toHaveURL(url)
+    await expect(button).toBeInViewport({ ratio: 1 })
+    await geometry(page)
+    await page.screenshot({ path: info.outputPath(`reader-expanded-${width}.png`) })
+    await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
+    await expect(reader).toBeHidden()
+    await button.focus()
+    await button.press('Space')
+    await expect(reader).toBeVisible()
+    await expect(button).toHaveAttribute('aria-expanded', 'true')
+    if (width === 1440) {
+      await page.locator('.pillar-event:not([tabindex="-1"])').first().click()
+      const heading = page.locator('.event-detail h2')
+      await expect(heading).toBeVisible()
+      const title = await heading.textContent()
+      const selectedURL = page.url()
+      await button.click()
+      await expect(reader).toBeHidden()
+      await button.click()
+      await expect(heading).toHaveText(title!)
+      await expect(page).toHaveURL(selectedURL)
+    }
+  })
+}
+
+for (const [width, height] of [
+  [390, 844],
+  [600, 900],
+  [844, 390],
+]) {
+  test(`pillar uses sheet reading controls at ${width}x${height}`, async ({ page }, info) => {
+    await page.setViewportSize({ width, height })
+    await ready(page)
+    await expect(page.locator('.pillar-reader')).toBeHidden()
+    await setSheet(page, 'split')
+    await expect(page.locator('.panel-scroll')).toBeVisible()
+    await setSheet(page, 'map')
+    await expect(page.locator('.panel-scroll')).toBeHidden()
+    await page.screenshot({ path: info.outputPath(`sheet-reader-${width}.png`) })
+    await geometry(page)
+  })
+}
+
+for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
+  test(`automatic browsing dwell and immediate ${action} cancellation`, async ({ page }, info) => {
+    await page.setViewportSize({ width: action === 'drag' ? 390 : 1440, height: 900 })
+    await ready(page, 'year=1500&span=900')
+    await expect(page.locator('.pillar-play')).toHaveCount(0)
+    const stage = page.locator('.pillar-stage')
+    await stage.focus()
+    await page.keyboard.press('Space')
+    await expect(stage).toHaveAttribute('data-browsing', 'false')
+    await page.clock.install()
+    await settings(page)
+    await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+    await page.clock.runFor(500)
+    await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
+    const intermediate = Number(await stage.getAttribute('data-ordinal'))
+    expect(intermediate).toBeGreaterThan(toOrdinal(1500))
+    expect(intermediate).toBeLessThan(toOrdinal(1501))
+    await page.clock.runFor(900)
+    await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
+    const arrived = await stage.getAttribute('data-year')
+    await page.clock.runFor(5000)
+    await expect(stage).toHaveAttribute('data-year', arrived!)
+    await page.screenshot({ path: info.outputPath('automatic-reading.png') })
+    await page.clock.runFor(1000)
+    await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
+    const rect = (await stage.boundingBox())!
+    const x = rect.x + rect.width / 2,
+      y = rect.y + rect.height / 2
+    if (action === 'wheel') {
+      await page.mouse.move(x, y)
+      await page.mouse.wheel(0, 35)
+    } else if (action === 'zoom')
+      await page.getByRole('button', { name: '放大时间', exact: true }).click()
+    else if (action === 'drag') {
+      await page.mouse.move(x, y)
+      await page.mouse.down()
+      await page.mouse.move(x, y + 30, { steps: 5 })
+      await page.mouse.up()
+    } else if (action === 'read') {
+      // Capture the painted position at the actual pointer event: browser
+      // actionability checks can allow animation frames before pointerdown.
+      await stage.evaluate((element) => {
+        element.addEventListener(
+          'pointerdown',
+          () => element.setAttribute('data-read-start', element.getAttribute('data-ordinal')!),
+          { capture: true, once: true },
+        )
+      })
+      await page.locator('.pillar-event:not([tabindex="-1"])').first().click()
+      await expect(page.locator('.event-detail h2')).toBeVisible()
+      await expect(stage).toHaveAttribute(
+        'data-ordinal',
+        (await stage.getAttribute('data-read-start'))!,
+      )
+    } else await page.getByRole('button', { name: '停止自动浏览', exact: true }).click()
+    await page.clock.runFor(1500)
+    await expect(stage).toHaveAttribute('data-browsing', 'false')
+    const stoppedYear = await stage.getAttribute('data-year'),
+      stoppedSpan = await stage.getAttribute('data-span')
+    await page.clock.runFor(20000)
+    await expect(stage).toHaveAttribute('data-year', stoppedYear!)
+    await expect(stage).toHaveAttribute('data-span', stoppedSpan!)
+    await geometry(page)
+    await page.screenshot({ path: info.outputPath('stopped-browsing.png') })
+  })
+}
+
+test('automatic browsing reduced motion, empty range and keyboard stop', async ({ page }, info) => {
+  await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: 'dark' })
+  await page.setViewportSize({ width: 320, height: 700 })
+  await ready(page, 'year=1500&span=900')
+  await page.clock.install()
+  await settings(page)
+  await page.getByRole('heading', { name: '自动浏览', exact: true }).scrollIntoViewIfNeeded()
+  await page.screenshot({ path: info.outputPath('automatic-settings-night.png') })
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1501')
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browse-phase', 'reading')
+  await expect(page.locator('.pillar-event[aria-current="step"]')).toBeVisible()
+  await geometry(page)
+  await page.screenshot({ path: info.outputPath('automatic-phone-night.png') })
+  await page.locator('.pillar-stage').focus()
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'false')
+  await page.clock.runFor(20000)
+  await settings(page)
+  await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+  await page.getByLabel('世界历史地区', { exact: true }).selectOption('oceania')
+  await page.getByLabel('时空柱起始年份', { exact: true }).fill('1912')
+  await page.getByLabel('时空柱结束年份', { exact: true }).fill('1912')
+  await page.getByRole('button', { name: '应用时空柱时间范围', exact: true }).click()
+  await settings(page)
+  // No eligible current/future stop must leave a clear, disabled action.
+  const start = page.getByRole('button', { name: '开始自动浏览', exact: true })
+  await expect(start).toBeDisabled()
+  await expect(page.getByText('当前年份之后没有符合条件的事件。', { exact: false })).toBeVisible()
+})
+
+test('switching out of active automatic browsing restores independent map playback', async ({
+  page,
+}) => {
+  await ready(page, 'year=1200&span=900&play=years')
+  await page.clock.install()
+  await settings(page)
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await page.clock.runFor(500)
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'true')
+  const modes = page.getByRole('group', { name: '探索模式', exact: true })
+  await modes.getByRole('button', { name: '地图', exact: true }).click()
+  await page.clock.resume()
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+  await expect(page.getByRole('button', { name: '播放时间', exact: true })).toBeVisible()
+  await page.getByLabel('播放速度', { exact: true }).selectOption('20')
+  await page.getByRole('button', { name: '播放时间', exact: true }).click()
+  await expect(page.getByRole('button', { name: '暂停时间播放', exact: true })).toBeVisible()
+  await expect
+    .poll(async () => new URLSearchParams(new URL(page.url()).hash.slice(1)).get('year'))
+    .not.toBe('1200')
+  await page.getByRole('button', { name: '暂停时间播放', exact: true }).click()
+  await modes.getByRole('button', { name: '时空柱', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'false')
+  await expect(page.locator('.pillar-play')).toHaveCount(0)
+})
+
+test('pillar reading stays in place while explicit map reading uses the event date', async ({
+  page,
+}) => {
+  await ready(page, 'year=1700&span=300&side=world')
+  await page.locator('[data-event-id="world-newton"] .pillar-event').click()
+  await expect(page.locator('.event-detail h2')).toContainText('牛顿')
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1700')
+  await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+  await expect(page).toHaveURL(/year=1687/)
+  await expect(page.locator('.event-detail h2')).toContainText('牛顿')
+})

@@ -389,9 +389,6 @@
   background: var(--night-raised);
   color: var(--ink);
 }
-:root[data-color-mode='dark'] .time-pillar .pillar-play .pillar-play-main {
-  color: #233a45;
-}
 @media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
   :root[data-color-mode='dark']
     .atlas-app
@@ -415,10 +412,10 @@
 :root[data-color-mode='dark'] .atlas-app .pillar-card.china time {
   color: var(--china);
 }
-:root[data-color-mode='dark'] .atlas-app :is(.pillar-settings, .pillar-play-main) {
+:root[data-color-mode='dark'] .atlas-app .pillar-settings {
   color: #233a45;
 }
-:root[data-color-mode='dark'] .atlas-app :is(.pillar-settings, .pillar-play-main) span {
+:root[data-color-mode='dark'] .atlas-app .pillar-settings span {
   color: inherit;
 }
 @media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
