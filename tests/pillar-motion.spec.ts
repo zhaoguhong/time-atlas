@@ -102,18 +102,17 @@ for (const [width, height] of [
     expect(settingsBox.y).toBeGreaterThan(stageBox.y + stageBox.height - 80)
     await expect(page.getByRole('button', { name: '查看历史全貌', exact: true })).toHaveCount(0)
     const zoom = page.locator('.pillar-zoom')
-    if (stageBox.width >= 760) {
-      await expect(page.locator('.pillar-footer .pillar-zoom')).toBeVisible()
-      const footer = (await page.locator('.pillar-footer').boundingBox())!
-      const zoomBox = (await zoom.boundingBox())!
-      expect(zoomBox.y).toBeGreaterThanOrEqual(footer.y)
-      expect(zoomBox.y + zoomBox.height).toBeLessThanOrEqual(footer.y + footer.height)
-    } else {
-      await expect(page.locator('.pillar-zoom-dock .pillar-zoom')).toBeVisible()
-      const zoomBox = (await zoom.boundingBox())!
-      expect(zoomBox.x + zoomBox.width).toBeLessThanOrEqual(stageBox.x + stageBox.width / 2)
-      expect(zoomBox.y).toBeGreaterThan(stageBox.y + stageBox.height - 80)
-    }
+    await expect(page.locator('.pillar-controls .pillar-zoom')).toBeVisible()
+    await expect(page.locator('.pillar-footer, .pillar-zoom-dock')).toHaveCount(0)
+    const dock = (await page.locator('.pillar-controls').boundingBox())!
+    const zoomBox = (await zoom.boundingBox())!
+    expect(zoomBox.x).toBeGreaterThanOrEqual(dock.x)
+    expect(zoomBox.y).toBeGreaterThanOrEqual(dock.y)
+    expect(zoomBox.y + zoomBox.height).toBeLessThanOrEqual(dock.y + dock.height)
+    const pillarBox = (await page.locator('.time-pillar').boundingBox())!
+    expect(Math.abs(stageBox.y + stageBox.height - pillarBox.y - pillarBox.height)).toBeLessThan(
+      0.5,
+    )
     for (const name of ['放大时间', '缩小时间']) {
       const control = page.getByRole('button', { name, exact: true })
       await expect(control).toBeInViewport({ ratio: 1 })

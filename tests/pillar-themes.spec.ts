@@ -65,9 +65,7 @@ async function compactGeometry(page: Page) {
       issues.push('event viewport outside canvas')
     const cards = [...document.querySelectorAll('.pillar-card')]
     const controls = [
-      ...document.querySelectorAll(
-        '.pillar-footer, [aria-label="探索模式"], .pillar-focus-navigation',
-      ),
+      ...document.querySelectorAll('[aria-label="探索模式"], .pillar-focus-navigation'),
     ].filter((element) => rect(element).width && rect(element).height)
     if (document.documentElement.scrollWidth > innerWidth) issues.push('horizontal overflow')
     if (document.documentElement.scrollHeight > innerHeight) issues.push('vertical overflow')

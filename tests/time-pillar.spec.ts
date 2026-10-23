@@ -58,7 +58,35 @@ async function geometry(page: Page) {
         if (a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top)
           problems.push('overlapping cards')
       }
+    const pillar = document.querySelector('.time-pillar')!.getBoundingClientRect()
+    if (Math.abs(stage.bottom - pillar.bottom) > 0.5)
+      problems.push('canvas does not fill former footer space')
+    if (document.querySelector('.pillar-footer, .pillar-year, .pillar-zoom-dock'))
+      problems.push('obsolete footer or separate dock')
+    const toolButtons = [...document.querySelectorAll('.pillar-controls button')].filter(
+      (el) => el.getBoundingClientRect().width > 0,
+    )
     const dock = document.querySelector('.pillar-controls')!.getBoundingClientRect()
+    for (const button of toolButtons) {
+      const box = button.getBoundingClientRect()
+      if (box.width < 44 || box.height < 44) problems.push('small floating control')
+      if (
+        box.left < dock.left ||
+        box.right > dock.right ||
+        box.top < dock.top ||
+        box.bottom > dock.bottom
+      )
+        problems.push('control outside unified dock')
+      const hit = document.elementFromPoint(box.left + box.width / 2, box.top + box.height / 2)
+      if (!button.contains(hit)) problems.push('floating control is obscured')
+    }
+    for (let i = 1; i < toolButtons.length; i++) {
+      if (
+        toolButtons[i - 1].getBoundingClientRect().right >
+        toolButtons[i].getBoundingClientRect().left + 0.5
+      )
+        problems.push('overlapping floating controls')
+    }
     if (
       dock.right > stage.right + 0.5 ||
       dock.left < stage.left - 0.5 ||
@@ -98,7 +126,7 @@ for (const [width, height] of [
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
         width === 390 ? 24 : 16,
       )
-      await expect(page.locator('.pillar-year > span')).toHaveText('中外对照')
+      await expect(page.locator('.pillar-now')).toContainText('1500年')
     }
     if (width === 1440 || width === 844)
       expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
@@ -444,9 +472,9 @@ for (const [width, height] of [
         await page.getByRole('button', { name: '查看历史全貌', exact: true }).click()
         await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
       }
-      const footer = await page.evaluate(() => {
+      const controls = await page.evaluate(() => {
         const canvas = document.querySelector('.time-pillar')!.getBoundingClientRect()
-        return [...document.querySelectorAll('.pillar-footer button')]
+        return [...document.querySelectorAll('.pillar-controls button')]
           .map((el) => el.getBoundingClientRect())
           .filter((rect) => rect.width > 0)
           .map((rect) => ({
@@ -456,7 +484,8 @@ for (const [width, height] of [
             height: rect.height,
           }))
       })
-      for (const control of footer) {
+      expect(controls.length).toBeGreaterThanOrEqual(4)
+      for (const control of controls) {
         expect(control.left).toBeGreaterThanOrEqual(0)
         expect(control.right).toBeLessThanOrEqual(0)
         expect(control.width).toBeGreaterThanOrEqual(44)
@@ -654,6 +683,8 @@ for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
     await page.clock.install()
     await settings(page)
     await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+    // Start the controlled clock only after React has scheduled the browse animation.
+    await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
     await page.clock.runFor(500)
     await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
     const intermediate = Number(await stage.getAttribute('data-ordinal'))
@@ -713,6 +744,7 @@ test('automatic browsing reduced motion, empty range and keyboard stop', async (
   await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: 'dark' })
   await page.setViewportSize({ width: 320, height: 700 })
   await ready(page, 'year=1500&span=900')
+  await expect(page.locator('.pillar-controls .pillar-cluster small')).toBeVisible()
   await page.clock.install()
   await settings(page)
   await page.getByRole('heading', { name: '自动浏览', exact: true }).scrollIntoViewIfNeeded()

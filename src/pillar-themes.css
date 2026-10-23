@@ -465,7 +465,7 @@
     linear-gradient(#a1e2c609 1px, transparent 1px),
     linear-gradient(90deg, #d3b1ed09 1px, transparent 1px);
 }
-:root[data-color-mode='dark'] .time-pillar :is(.pillar-footer, .pillar-controls, .pillar-dialog) {
+:root[data-color-mode='dark'] .time-pillar .pillar-dialog {
   background: var(--pillar-surface);
   color: var(--pillar-ink);
   border-color: var(--pillar-rule);
@@ -477,21 +477,10 @@
 :root[data-color-mode='dark'] .time-pillar .pillar-settings[data-filtered='true']::after {
   background: #36594e;
 }
-:root[data-color-mode='dark']
-  .time-pillar
-  :is(
-    .pillar-zoom span,
-    .pillar-year > span,
-    .pillar-year small,
-    .pillar-footer-info,
-    .pillar-footer-info small,
-    .pillar-cluster small
-  ) {
+:root[data-color-mode='dark'] .time-pillar .pillar-zoom span {
   color: var(--pillar-muted);
 }
-:root[data-color-mode='dark']
-  .time-pillar
-  :is(.pillar-cluster, .pillar-empty, .pillar-cluster-search) {
+:root[data-color-mode='dark'] .time-pillar :is(.pillar-empty, .pillar-cluster-search) {
   background: var(--pillar-soft);
   color: var(--pillar-ink);
   border-color: var(--pillar-rule);
