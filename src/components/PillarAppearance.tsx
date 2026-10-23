@@ -25,6 +25,7 @@ export function PillarAppearance({ value, onChange }: Props) {
             />
             <span className="pillar-theme-option">
               <span className="pillar-theme-preview" data-theme={theme.id} aria-hidden="true">
+                <span className="pillar-preview-landscape" />
                 <span className="pillar-preview-column" />
                 <span className="pillar-preview-rows">
                   <i />
@@ -53,10 +54,21 @@ export function PillarAppearance({ value, onChange }: Props) {
 
 export function PillarScenery() {
   return (
-    <div className="pillar-scenery" aria-hidden="true">
-      <span className="pillar-column-ring" />
-      <span className="pillar-column-ring" />
-      <span className="pillar-column-ring" />
-    </div>
+    <>
+      <div className="pillar-atmosphere" aria-hidden="true">
+        <span className="pillar-atmosphere-light" />
+        <svg className="pillar-horizon" viewBox="0 0 1000 400" preserveAspectRatio="none">
+          <path d="M0 201 C130 140 217 279 370 252 S605 133 755 205 S912 209 1000 170 L1000 400 H0Z" />
+          <path d="M0 281 C169 205 230 342 411 297 S645 217 765 268 S934 294 1000 245 L1000 400 H0Z" />
+          <path d="M0 342 C146 283 280 377 456 338 S744 302 1000 352 L1000 400 H0Z" />
+        </svg>
+      </div>
+      <div className="pillar-scenery" aria-hidden="true">
+        <span className="pillar-column-light" />
+        <span className="pillar-column-ring" />
+        <span className="pillar-column-ring" />
+        <span className="pillar-column-ring" />
+      </div>
+    </>
   )
 }

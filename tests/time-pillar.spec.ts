@@ -426,7 +426,11 @@ for (const [width, height] of [
     await page.locator('.pillar-stage').press('Home')
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '-10000')
     for (const overview of [false, true]) {
-      if (overview) await page.getByRole('button', { name: '查看历史全貌', exact: true }).click()
+      if (overview) {
+        await settings(page)
+        await page.getByRole('button', { name: '查看历史全貌', exact: true }).click()
+        await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
+      }
       const footer = await page.evaluate(() => {
         const canvas = document.querySelector('.time-pillar')!.getBoundingClientRect()
         return [...document.querySelectorAll('.pillar-footer button')]
@@ -546,7 +550,7 @@ for (const [width, height] of [
       expect(issues).toEqual({ separate: true, coreVisible: true, contained: true })
       await expect(card.locator('time')).not.toContainText(' · ')
       const settingsButton = page.getByRole('button', { name: '时空柱筛选与设置', exact: true })
-      await expect(settingsButton).toHaveText('设置')
+      await expect(settingsButton).toHaveText('')
       await expect(settingsButton.locator('svg')).toBeVisible()
       await settingsButton.click({ trial: true })
       await geometry(page)

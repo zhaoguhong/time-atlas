@@ -249,6 +249,47 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await expect(page.getByRole('button', { name: '时空柱筛选与设置', exact: true })).toBeFocused()
 })
 
+test('single-side browsing keeps every selected theme in both color modes', async ({
+  page,
+}, info) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await ready(page)
+  for (const [id, name] of themes) {
+    await openSettings(page)
+    await choose(page, name)
+    await closeSettings(page)
+    for (const side of ['world', 'china']) {
+      await openSettings(page)
+      await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption(side)
+      await closeSettings(page)
+      for (const mode of ['light', 'dark']) {
+        if (mode === 'dark')
+          await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+        const surfaces = await page.evaluate(() => {
+          const canvas = document.querySelector('.time-pillar')!
+          const probe = document.createElement('span')
+          probe.style.backgroundImage =
+            getComputedStyle(canvas).getPropertyValue('--pillar-stage-bg')
+          canvas.append(probe)
+          const expected = getComputedStyle(probe).backgroundImage
+          probe.remove()
+          return {
+            actual: getComputedStyle(document.querySelector('.pillar-stage')!).backgroundImage,
+            expected,
+          }
+        })
+        expect(surfaces.actual).toBe(surfaces.expected)
+        await compactGeometry(page)
+        if (mode === 'dark') {
+          await nightTextContrast(page)
+          await page.screenshot({ path: info.outputPath(`${id}-${side}-dark.png`) })
+          await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+        }
+      }
+    }
+  }
+})
+
 test('invalid saved themes recover and can be replaced with a valid selection', async ({
   page,
 }) => {

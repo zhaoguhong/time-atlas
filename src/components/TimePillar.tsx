@@ -8,7 +8,6 @@ import {
   Globe2,
   Layers3,
   LocateFixed,
-  Maximize2,
   Minus,
   Pause,
   Play,
@@ -40,6 +39,7 @@ import {
 } from '../lib/time-pillar'
 import { eventPlaybackYears, PLAYBACK_SPEEDS } from '../lib/playback'
 import { usePillarTheme } from '../lib/pillar-theme'
+import { usePillarView } from '../hooks/use-pillar-view'
 import { PillarAppearance, PillarScenery } from './PillarAppearance'
 import '../time-pillar.css'
 import '../pillar-themes.css'
@@ -107,9 +107,15 @@ export default function TimePillar(p: Props) {
     moved: boolean
   } | null>(null)
   const suppressClick = useRef(false)
-  const year = draft?.year ?? p.year,
-    span = draft?.span ?? p.span
+  const { year, span, moving } = usePillarView(
+    draft?.year ?? p.year,
+    draft?.span ?? p.span,
+    draft !== null || dragging || p.playing,
+  )
+  const rendered = useRef({ year, span })
+  rendered.current = { year, span }
   const narrow = size.width < 560
+  const footerZoom = size.width >= 760
   const single = p.side !== 'compare'
   const axis = single ? 40 : size.width / 2
   const railGap = narrow ? 29 : 42
@@ -150,8 +156,11 @@ export default function TimePillar(p: Props) {
         setDraft(preview.current)
       })
   }
-  const zoom = (factor: number, fraction = 0.5) => {
-    const state = preview.current ?? { year: current.current.year, span: current.current.span }
+  const zoom = (
+    factor: number,
+    fraction = 0.5,
+    state = preview.current ?? { year: current.current.year, span: current.current.span },
+  ) => {
     const w = pillarWindow(state.year, state.span),
       newSpan = clampSpan(state.span * factor)
     const anchor = w.top - fraction * w.span
@@ -184,13 +193,14 @@ export default function TimePillar(p: Props) {
       if ((event.target as HTMLElement).closest('[data-pillar-control]')) return
       event.preventDefault()
       current.current.onPause()
-      const state = preview.current ?? { year: current.current.year, span: current.current.span }
+      const state = preview.current ?? rendered.current
       const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? height : 1)
       const next =
         event.ctrlKey || event.metaKey
           ? zoom(
               Math.exp(Math.max(-0.4, Math.min(0.4, dy * 0.004))),
               position(event.clientY - element.getBoundingClientRect().top),
+              state,
             )
           : { year: limited(toOrdinal(state.year) - (dy / height) * state.span), span: state.span }
       showPreview(next)
@@ -220,7 +230,7 @@ export default function TimePillar(p: Props) {
   function startGesture() {
     const points = [...pointerState.current.values()]
     if (!points.length) return
-    const state = preview.current ?? { year: p.year, span: p.span }
+    const state = preview.current ?? rendered.current
     const y = points.reduce((n, v) => n + v.y, 0) / points.length
     const fraction = position(y - (stage.current?.getBoundingClientRect().top ?? 0))
     const w = pillarWindow(state.year, state.span)
@@ -259,6 +269,37 @@ export default function TimePillar(p: Props) {
     setCluster([...records].sort((a, b) => a.year - b.year || b.importance - a.importance))
     openPanel('cluster', trigger)
   }
+  const zoomControls = (
+    <div
+      className="pillar-zoom"
+      data-pillar-control
+      role="group"
+      aria-label={`时间缩放，当前跨度${niceSpan(span)}`}
+      title={`当前时间跨度：${niceSpan(span)}`}
+    >
+      <button
+        aria-label="放大时间"
+        disabled={p.span <= MIN_SPAN}
+        onClick={() => {
+          p.onPause()
+          commit(zoom(0.6))
+        }}
+      >
+        <Plus size={18} />
+      </button>
+      <span>{niceSpan(span)}</span>
+      <button
+        aria-label="缩小时间"
+        disabled={p.span >= MAX_SPAN}
+        onClick={() => {
+          p.onPause()
+          commit(zoom(1.6))
+        }}
+      >
+        <Minus size={18} />
+      </button>
+    </div>
+  )
   return (
     <section
       className="time-pillar"
@@ -274,6 +315,8 @@ export default function TimePillar(p: Props) {
           '--axis': `${axis}px`,
           '--pillar-top': `${padding}px`,
           '--pillar-bottom': '12px',
+          '--scene-zoom': 1 + Math.log(MAX_SPAN / span) * 0.015,
+          '--scene-drift': `${(toOrdinal(year) / MAX_SPAN) * 18}px`,
         } as CSSProperties
       }
     >
@@ -285,16 +328,26 @@ export default function TimePillar(p: Props) {
         aria-label="时间画布：上下拖动浏览，双指或 Ctrl 加滚轮缩放，方向键移动，加减键缩放"
         data-year={year}
         data-span={Math.round(span)}
+        data-motion={moving}
         onKeyDown={(event) => {
           if (event.target !== event.currentTarget) return
+          const target = current.current
           const moves: Record<string, () => void> = {
-            ArrowUp: () => commit({ year: limited(toOrdinal(year) + span * 0.15), span }),
-            ArrowDown: () => commit({ year: limited(toOrdinal(year) - span * 0.15), span }),
+            ArrowUp: () =>
+              commit({
+                year: limited(toOrdinal(target.year) + target.span * 0.15),
+                span: target.span,
+              }),
+            ArrowDown: () =>
+              commit({
+                year: limited(toOrdinal(target.year) - target.span * 0.15),
+                span: target.span,
+              }),
             '+': () => commit(zoom(0.6)),
             '=': () => commit(zoom(0.6)),
             '-': () => commit(zoom(1.6)),
-            Home: () => commit({ year: MIN_YEAR, span }),
-            End: () => commit({ year: MAX_YEAR, span }),
+            Home: () => commit({ year: MIN_YEAR, span: target.span }),
+            End: () => commit({ year: MAX_YEAR, span: target.span }),
           }
           if (moves[event.key]) {
             event.preventDefault()
@@ -307,6 +360,7 @@ export default function TimePillar(p: Props) {
             return
           flush()
           p.onPause()
+          if (moving) showPreview(rendered.current)
           suppressClick.current = false
           pointerState.current.set(event.pointerId, { x: event.clientX, y: event.clientY })
           startGesture()
@@ -432,13 +486,19 @@ export default function TimePillar(p: Props) {
             {Math.abs(year)}年
           </span>
         </div>
-        {cards.map((c) => (
+        {cards.map((c, index) => (
           <div
             key={c.event.id}
             className={`pillar-card ${c.side} ${c.event.id === p.selectedId ? 'selected' : ''}`}
             data-event-id={c.event.id}
             data-category={c.event.category}
-            style={{ top: padding + c.y - cardHeight / 2, height: cardHeight }}
+            style={
+              {
+                top: padding + c.y - cardHeight / 2,
+                height: cardHeight,
+                '--entry-delay': `${Math.min(index, 8) * 18}ms`,
+              } as CSSProperties
+            }
           >
             <button
               className="pillar-event"
@@ -473,13 +533,7 @@ export default function TimePillar(p: Props) {
             </button>
           </div>
         )}
-        <div
-          className="pillar-controls"
-          data-pillar-control
-          role="group"
-          aria-label={`时间工具，当前跨度${niceSpan(span)}`}
-          title={`当前时间跨度：${niceSpan(span)}`}
-        >
+        <div className="pillar-controls" data-pillar-control>
           <button
             ref={optionsTrigger}
             className="pillar-settings"
@@ -500,46 +554,10 @@ export default function TimePillar(p: Props) {
               openPanel('settings', event.currentTarget)
             }}
           >
-            <Settings size={18} aria-hidden="true" />
-            <span>设置</span>
+            <Settings size={20} aria-hidden="true" />
           </button>
-          <div className="pillar-zoom">
-            <button
-              aria-label="放大时间"
-              disabled={span <= MIN_SPAN}
-              onClick={() => {
-                p.onPause()
-                commit(zoom(0.6))
-              }}
-            >
-              <Plus size={18} />
-            </button>
-            <span>{niceSpan(span)}</span>
-            <button
-              aria-label="缩小时间"
-              disabled={span >= MAX_SPAN}
-              onClick={() => {
-                p.onPause()
-                commit(zoom(1.6))
-              }}
-            >
-              <Minus size={18} />
-            </button>
-            <button
-              aria-label="查看历史全貌"
-              title="历史全貌"
-              onClick={() => {
-                p.onPause()
-                commit({
-                  year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
-                  span: MAX_SPAN,
-                })
-              }}
-            >
-              <Maximize2 size={16} />
-            </button>
-          </div>
         </div>
+        {!footerZoom && <div className="pillar-zoom-dock">{zoomControls}</div>}
       </div>
       <footer className="pillar-footer">
         <div className="pillar-year">
@@ -569,10 +587,7 @@ export default function TimePillar(p: Props) {
             <ArrowUp size={18} />
           </button>
         </div>
-        <div className="pillar-footer-info">
-          <span>同一时刻，不同的世界</span>
-          <small>拖动探索 · 双指缩放 · 点击阅读</small>
-        </div>
+        {footerZoom && zoomControls}
         <button
           className="pillar-cluster"
           aria-label={`查看这段时间的全部${visibleCount}个事件`}
@@ -668,6 +683,21 @@ export default function TimePillar(p: Props) {
               当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
               {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
             </p>
+            <button
+              className="pillar-reset pillar-overview"
+              aria-label="查看历史全貌"
+              onClick={() => {
+                closeModal()
+                p.onPause()
+                commit({
+                  year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
+                  span: MAX_SPAN,
+                })
+              }}
+            >
+              查看历史全貌
+              <small>公元前10000年—1912年</small>
+            </button>
             {p.hasSpatialFilter && (
               <div className="pillar-filter-note">
                 <p>当前还保留着地点或地图视野筛选，可能只显示少数事件。</p>

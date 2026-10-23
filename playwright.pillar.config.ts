@@ -14,6 +14,7 @@ export default defineConfig({
   testMatch: [
     'time-pillar.spec.ts',
     'pillar-themes.spec.ts',
+    'pillar-motion.spec.ts',
     'exploration-navigation.spec.ts',
     'color-mode.spec.ts',
     'smoke.spec.ts',
