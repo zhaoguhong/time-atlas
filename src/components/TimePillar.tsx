@@ -4,7 +4,6 @@ import {
   ChevronsUpDown,
   List,
   Globe2,
-  PanelRightClose,
   PanelRightOpen,
   LocateFixed,
   Minus,
@@ -322,6 +321,8 @@ export default function TimePillar(p: Props) {
     if (modal) {
       pauseRef.current()
       dialog.current?.showModal()
+      if (modal === 'cluster')
+        dialog.current?.querySelector<HTMLInputElement>('.pillar-cluster-search input')?.focus()
     } else dialog.current?.close()
   }, [modal])
   useEffect(() => {
@@ -405,7 +406,6 @@ export default function TimePillar(p: Props) {
       data-theme={theme}
       data-focused={!!p.focused}
       data-narrow={narrow}
-      data-compact-tools={size.width < 320}
       data-summary={summaryVisible}
       data-dragging={dragging}
       style={
@@ -689,34 +689,18 @@ export default function TimePillar(p: Props) {
             </button>
           )}
           {zoomControls}
-          <button
-            className="pillar-cluster"
-            aria-label={`查看这段时间的全部${visibleCount}个事件`}
-            title={`全部事件 · 当前范围 ${visibleCount} 件`}
-            aria-haspopup="dialog"
-            disabled={!visibleCount}
-            onClick={(event) => openCluster(windowEvents, event.currentTarget)}
-          >
-            <List size={17} aria-hidden="true" />
-            <span>
-              <small>全部事件</small>
-              <strong>{visibleCount}</strong>
-            </span>
-          </button>
-          <button
-            className="pillar-reader"
-            aria-label={p.readerCollapsed ? '展开历史资料' : '收起历史资料'}
-            title={p.readerCollapsed ? '展开历史资料' : '收起历史资料，展开时空柱'}
-            aria-expanded={!p.readerCollapsed}
-            aria-controls="history-reading-content"
-            onClick={p.onToggleReader}
-          >
-            {p.readerCollapsed ? (
+          {p.readerCollapsed && (
+            <button
+              className="pillar-reader"
+              aria-label="展开历史资料"
+              title="展开历史资料"
+              aria-expanded="false"
+              aria-controls="history-reading-content"
+              onClick={p.onToggleReader}
+            >
               <PanelRightOpen size={18} aria-hidden="true" />
-            ) : (
-              <PanelRightClose size={18} aria-hidden="true" />
-            )}
-          </button>
+            </button>
+          )}
           <button
             ref={optionsTrigger}
             className="pillar-settings"
@@ -816,6 +800,18 @@ export default function TimePillar(p: Props) {
               当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
               {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
             </p>
+            <button
+              className="pillar-reset pillar-cluster"
+              aria-label={`查看这段时间的全部${visibleCount}个事件`}
+              aria-haspopup="dialog"
+              disabled={!visibleCount}
+              onClick={(event) => openCluster(windowEvents, event.currentTarget)}
+            >
+              <List size={17} aria-hidden="true" />
+              <span>
+                全部事件 <small>{visibleCount} 件 · 搜索与阅读当前画布内的事件</small>
+              </span>
+            </button>
             <button
               className="pillar-reset pillar-overview"
               aria-label="查看历史全貌"

@@ -361,8 +361,9 @@ test('continuing events stay available after their start card leaves the viewpor
   const continuing = page.locator('.pillar-continuing')
   await expect(continuing).toBeVisible()
   await expect(page.getByText('当前范围与筛选下没有已收录的事件。', { exact: true })).toHaveCount(0)
-  const allEvents = page.locator('.pillar-cluster')
-  const count = Number((await allEvents.getAttribute('aria-label'))!.match(/全部(\d+)个事件/)![1])
+  const count = Number(
+    (await continuing.getByRole('button').textContent())!.match(/(\d+) 个事件/)![1],
+  )
   expect(count).toBeGreaterThan(0)
   await expect(continuing.getByRole('button')).toHaveText(`查看这段时间的 ${count} 个事件`)
   await page.screenshot({ path: info.outputPath('continuing-events-outside-start.png') })
@@ -373,7 +374,8 @@ test('continuing events stay available after their start card leaves the viewpor
   await expect(page.locator('.pillar-cluster-list > button')).toHaveCount(count)
   await expect(page.locator('.pillar-cluster-list strong')).toContainText(['克里特宫殿文明'])
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
-  await allEvents.click()
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await page.locator('.pillar-cluster').click()
   await expect(page.locator('.pillar-cluster-list > button')).toHaveCount(count)
   expect(errors).toEqual([])
 })

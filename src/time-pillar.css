@@ -284,7 +284,7 @@
   border: 1px solid var(--pillar-rule);
   border-radius: 18px;
   color: var(--pillar-ink);
-  background: color-mix(in srgb, var(--pillar-surface) 88%, transparent);
+  background: color-mix(in srgb, var(--pillar-surface) 64%, transparent);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   box-shadow: 0 4px 20px #263f4217;
@@ -303,7 +303,7 @@
   border: 0;
   border-radius: 0;
   color: #3c625e;
-  background: #edf5f1;
+  background: #edf5f1b8;
   box-shadow: none;
   font-size: 12px;
   font-weight: 500;
@@ -364,32 +364,21 @@
   color: var(--pillar-muted);
 }
 .pillar-cluster {
-  min-width: 44px;
-  min-height: 44px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 0 10px;
-  border-radius: 12px;
-  color: var(--pillar-ink);
-  background: transparent;
-  flex-shrink: 0;
+  padding: 10px 12px;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left;
 }
 .pillar-cluster span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.pillar-cluster strong {
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--pillar-muted);
-  font-variant-numeric: tabular-nums;
+  display: grid;
+  gap: 3px;
 }
 .pillar-cluster small {
-  font-size: 12px;
-  white-space: nowrap;
+  color: var(--pillar-muted);
+  font-size: 11px;
+  font-weight: 400;
 }
 .pillar-reader {
   width: 44px;
@@ -410,14 +399,8 @@
 .pillar-controls button {
   touch-action: manipulation;
 }
-.time-pillar[data-narrow='true'] .pillar-cluster strong,
-.time-pillar[data-narrow='true'] .pillar-browse-stop span,
-.time-pillar[data-compact-tools='true'] .pillar-cluster span {
+.time-pillar[data-narrow='true'] .pillar-browse-stop span {
   display: none;
-}
-.time-pillar[data-compact-tools='true'] .pillar-cluster {
-  width: 44px;
-  padding: 0;
 }
 .pillar-empty {
   position: absolute;
@@ -736,10 +719,6 @@
 .time-pillar[data-narrow='true'] .pillar-lanes small {
   display: none;
 }
-.time-pillar[data-narrow='true'] .pillar-cluster {
-  padding-inline: 8px;
-  gap: 5px;
-}
 .time-pillar[data-narrow='true'] .pillar-controls {
   left: auto;
   right: 8px;
@@ -925,7 +904,7 @@
 }
 :root[data-color-mode='dark'] .time-pillar .pillar-settings {
   color: #2d4f4b;
-  background: #dce9e3;
+  background: #dce9e3cc;
 }
 :root[data-color-mode='dark'] .time-pillar .pillar-settings:hover {
   background: #eef6f0;

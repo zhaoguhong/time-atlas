@@ -450,6 +450,18 @@ export default function App() {
     if (worldBrowsing && scope === 'period') return worldPeriodEvents(explorationEvents, year)
     return eventsInScope(explorationEvents, year, scope)
   }, [year, exploration, explorationEvents, scope, visualization, pillarSpan, worldBrowsing])
+  const scopeOptions: [EventScope, string][] =
+    visualization === 'pillar'
+      ? [
+          ['period', '当前画布'],
+          ['nearby', '前后5年'],
+          ['year', '仅当年'],
+        ]
+      : [
+          ['year', '仅当年'],
+          ['nearby', '前后5年'],
+          ['period', '整个时期'],
+        ]
   const currentYearEvents = useMemo(
     () => eventsAtYear(explorationEvents, year),
     [year, explorationEvents],
@@ -2083,7 +2095,12 @@ export default function App() {
                 }}
                 onEvent={(id) => openEvent(id, false, false, true)}
                 readerCollapsed={readerCollapsed}
-                onToggleReader={() => setReaderCollapsed((collapsed) => !collapsed)}
+                onToggleReader={() => {
+                  setReaderCollapsed(false)
+                  requestAnimationFrame(() =>
+                    document.querySelector<HTMLButtonElement>('.reader-toggle')?.focus(),
+                  )
+                }}
               />
             ) : (
               <HistoryMap
@@ -2364,9 +2381,17 @@ export default function App() {
           <button
             className="reader-toggle"
             aria-label="收起历史资料"
-            title="收起历史资料，展开地图"
+            title={
+              visualization === 'pillar' ? '收起历史资料，展开时空柱' : '收起历史资料，展开地图'
+            }
             aria-expanded="true"
-            onClick={() => setReaderCollapsed(true)}
+            onClick={() => {
+              setReaderCollapsed(true)
+              if (visualization === 'pillar')
+                requestAnimationFrame(() =>
+                  document.querySelector<HTMLButtonElement>('.pillar-reader')?.focus(),
+                )
+            }}
           >
             <PanelRightClose size={17} />
           </button>
@@ -3284,7 +3309,9 @@ export default function App() {
                             ? '当年事件'
                             : scope === 'nearby'
                               ? '附近事件'
-                              : '这一时期'}
+                              : visualization === 'pillar'
+                                ? '当前画布'
+                                : '这一时期'}
                         <span>{filteredEvents.length} 件</span>
                       </h3>
                     </div>
@@ -3299,11 +3326,11 @@ export default function App() {
                             自定时间段
                           </option>
                         )}
-                        <option value="year">仅当年</option>
-                        <option value="nearby">前后5年</option>
-                        <option value="period">
-                          {visualization === 'pillar' ? '当前画布' : '整个时期'}
-                        </option>
+                        {scopeOptions.map(([value, label]) => (
+                          <option key={value} value={value}>
+                            {label}
+                          </option>
+                        ))}
                       </select>
                       <select
                         aria-label="筛选事件类别"
@@ -3318,13 +3345,7 @@ export default function App() {
                       </select>
                     </div>
                     <div className="event-scope" aria-label="事件时间范围">
-                      {(
-                        [
-                          ['year', '仅当年'],
-                          ['nearby', '前后5年'],
-                          ['period', visualization === 'pillar' ? '当前画布' : '整个时期'],
-                        ] as const
-                      ).map(([value, label]) => (
+                      {scopeOptions.map(([value, label]) => (
                         <button
                           key={value}
                           aria-pressed={!exploration.range && scope === value}

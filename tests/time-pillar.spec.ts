@@ -199,7 +199,8 @@ test('clusters expose all hidden content, reading has relations and sources, map
 }, info) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await ready(page)
-  await page.locator('.pillar-cluster').first().click()
+  await settings(page)
+  await page.locator('.pillar-cluster').click()
   await expect(page.locator('.pillar-dialog')).toBeVisible()
   expect(await page.locator('.pillar-cluster-list button').count()).toBeGreaterThan(1)
   await page.locator('.pillar-cluster-list button').first().click()
@@ -434,15 +435,17 @@ for (const [width, height] of [
     await page.screenshot({ path: info.outputPath(`focus-reading-${width}.png`) })
     await page.getByRole('button', { name: '退出专注模式', exact: true }).click()
     await setSheet(page, 'map')
+    await settings(page)
+    const listLabel = await page.locator('.pillar-cluster').getAttribute('aria-label')
     await page.locator('.pillar-cluster').click()
+    await expect(page.getByLabel('搜索聚合事件', { exact: true })).toBeFocused()
     await page.keyboard.press('Escape')
-    await expect(page.locator('.pillar-cluster')).toBeFocused()
+    await expect(page.locator('.pillar-settings')).toBeFocused()
+    await settings(page)
     await page.locator('.pillar-cluster').click()
     const buttons = page.locator('.pillar-cluster-list button')
     const total = await buttons.count()
-    await expect(page.locator('.pillar-cluster')).toHaveAccessibleName(
-      `查看这段时间的全部${total}个事件`,
-    )
+    expect(listLabel).toBe(`查看这段时间的全部${total}个事件`)
     expect(total).toBeGreaterThan(await page.locator('.pillar-card').count())
     await page.getByLabel('搜索聚合事件', { exact: true }).fill('哥伦布')
     await expect(buttons).toHaveCount(1)
@@ -484,7 +487,7 @@ for (const [width, height] of [
             height: rect.height,
           }))
       })
-      expect(controls.length).toBeGreaterThanOrEqual(4)
+      expect(controls.length).toBe(3)
       for (const control of controls) {
         expect(control.left).toBeGreaterThanOrEqual(0)
         expect(control.right).toBeLessThanOrEqual(0)
@@ -615,7 +618,8 @@ for (const width of [1440, 1024, 820, 701]) {
     const url = page.url()
     const stageWidth = (await page.locator('.pillar-stage').boundingBox())!.width
     await expect(reader).toBeVisible()
-    await button.click()
+    await expect(button).toHaveCount(0)
+    await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
     await expect(reader).toBeHidden()
     await expect(button).toHaveAttribute('aria-expanded', 'false')
     await expect(button).toHaveAccessibleName('展开历史资料')
@@ -625,11 +629,12 @@ for (const width of [1440, 1024, 820, 701]) {
     await button.focus()
     await button.press('Enter')
     await expect(reader).toBeVisible()
-    await expect(button).toHaveAttribute('aria-expanded', 'true')
-    await expect(button).toHaveAccessibleName('收起历史资料')
-    await expect(button).toBeFocused()
+    await expect(button).toHaveCount(0)
+    await expect(reader.getByRole('button', { name: '收起历史资料', exact: true })).toBeFocused()
     await expect(page).toHaveURL(url)
-    await expect(button).toBeInViewport({ ratio: 1 })
+    await expect(reader.getByRole('button', { name: '收起历史资料', exact: true })).toBeInViewport({
+      ratio: 1,
+    })
     await geometry(page)
     await page.screenshot({ path: info.outputPath(`reader-expanded-${width}.png`) })
     await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
@@ -637,14 +642,14 @@ for (const width of [1440, 1024, 820, 701]) {
     await button.focus()
     await button.press('Space')
     await expect(reader).toBeVisible()
-    await expect(button).toHaveAttribute('aria-expanded', 'true')
+    await expect(button).toHaveCount(0)
     if (width === 1440) {
       await page.locator('.pillar-event:not([tabindex="-1"])').first().click()
       const heading = page.locator('.event-detail h2')
       await expect(heading).toBeVisible()
       const title = await heading.textContent()
       const selectedURL = page.url()
-      await button.click()
+      await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
       await expect(reader).toBeHidden()
       await button.click()
       await expect(heading).toHaveText(title!)
@@ -744,7 +749,8 @@ test('automatic browsing reduced motion, empty range and keyboard stop', async (
   await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: 'dark' })
   await page.setViewportSize({ width: 320, height: 700 })
   await ready(page, 'year=1500&span=900')
-  await expect(page.locator('.pillar-controls .pillar-cluster small')).toBeVisible()
+  await expect(page.locator('.pillar-controls button')).toHaveCount(3)
+  await expect(page.locator('.pillar-controls .pillar-cluster')).toHaveCount(0)
   await page.clock.install()
   await settings(page)
   await page.getByRole('heading', { name: '自动浏览', exact: true }).scrollIntoViewIfNeeded()
@@ -810,3 +816,52 @@ test('pillar reading stays in place while explicit map reading uses the event da
   await expect(page).toHaveURL(/year=1687/)
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
 })
+
+for (const width of [1440, 390]) {
+  test(`canvas event list shares coverage without duplicate floating entries at ${width}px`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height: 900 })
+    await ready(page, 'year=1500&span=900&scope=period')
+    if (width === 390) await setSheet(page, 'split')
+    await expect(page.locator('.pillar-controls button')).toHaveCount(3)
+    await expect(
+      page.locator('.pillar-controls .pillar-cluster, .pillar-controls .pillar-reader'),
+    ).toHaveCount(0)
+    const labels = ['当前画布', '前后5年', '仅当年']
+    await expect(page.locator('.event-scope button')).toHaveText(labels)
+    await expect(page.getByLabel('筛选事件时间范围', { exact: true }).locator('option')).toHaveText(
+      labels,
+    )
+    for (const query of [
+      'year=1500&span=900&scope=period',
+      'year=1500&span=80&scope=period&side=world&category=交流',
+    ]) {
+      await ready(page, query)
+      if (width === 390) await setSheet(page, 'split')
+      const titles = (await page.locator('.event-card h3').allTextContents()).sort()
+      expect(titles.length).toBeGreaterThan(0)
+      await settings(page)
+      await page.screenshot({ path: info.outputPath(`settings-${width}-${titles.length}.png`) })
+      await page.locator('.pillar-cluster').click()
+      await expect(page.getByLabel('搜索聚合事件', { exact: true })).toBeFocused()
+      expect((await page.locator('.pillar-cluster-list strong').allTextContents()).sort()).toEqual(
+        titles,
+      )
+      await closeSettings(page)
+      await expect(page.locator('.pillar-settings')).toBeFocused()
+    }
+    await geometry(page)
+    const background = await page.locator('.pillar-controls').evaluate((el) => {
+      const canvas = document.createElement('canvas')
+      canvas.width = canvas.height = 1
+      const context = canvas.getContext('2d')!
+      context.fillStyle = getComputedStyle(el).backgroundColor
+      context.fillRect(0, 0, 1, 1)
+      return context.getImageData(0, 0, 1, 1).data[3] / 255
+    })
+    expect(background).toBeGreaterThan(0.5)
+    expect(background).toBeLessThan(0.75)
+    await page.screenshot({ path: info.outputPath(`simplified-tools-${width}.png`) })
+  })
+}
