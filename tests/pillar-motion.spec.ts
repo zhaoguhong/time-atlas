@@ -224,6 +224,74 @@ test('drag interrupts zoom and commits the visible view without a delayed snap o
   expect(errors).toEqual([])
 })
 
+test('pointer movement released before its preview frame commits without a second animation', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  const errors = watchErrors(page)
+  await ready(page, -1)
+  const stage = page.locator('.pillar-stage')
+  await page.getByRole('button', { name: '放大时间', exact: true }).click()
+  await expect(stage).toHaveAttribute('data-motion', 'true')
+  const bounds = (await stage.boundingBox())!
+  const x = bounds.x + bounds.width / 2,
+    y = bounds.y + bounds.height * 0.45
+  await stage.evaluate((element) => {
+    element.addEventListener(
+      'pointerdown',
+      (event) =>
+        element.setAttribute('data-test-pointer', String((event as PointerEvent).pointerId)),
+      { once: true },
+    )
+  })
+  await page.mouse.move(x, y)
+  await page.mouse.down()
+  await recordMotion(page)
+  // Keep an actual active pointer so setPointerCapture is exercised. Deliver its
+  // final movement and release in one browser task, before a preview rAF can run.
+  await stage.evaluate(
+    (element, { x, y }) => {
+      ;(window as MotionWindow).__pillarMotionSamples = []
+      const pointerId = Number(element.getAttribute('data-test-pointer'))
+      for (let step = 1; step <= 6; step++)
+        element.dispatchEvent(
+          new PointerEvent('pointermove', {
+            bubbles: true,
+            pointerId,
+            pointerType: 'mouse',
+            button: 0,
+            buttons: 1,
+            clientX: x,
+            clientY: y + (70 * step) / 6,
+          }),
+        )
+      element.dispatchEvent(
+        new PointerEvent('pointerup', {
+          bubbles: true,
+          pointerId,
+          pointerType: 'mouse',
+          button: 0,
+          clientX: x,
+          clientY: y + 70,
+        }),
+      )
+    },
+    { x, y },
+  )
+  await page.mouse.up()
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-dragging', 'false')
+  await expect.poll(async () => Number(await stage.getAttribute('data-year'))).toBeGreaterThan(0)
+  await expect(stage).toHaveAttribute('data-motion', 'false')
+  const year = await stage.getAttribute('data-year'),
+    span = await stage.getAttribute('data-span')
+  await page.waitForTimeout(420)
+  expect((await samples(page)).some((sample) => sample.moving)).toBe(false)
+  await expect(stage).toHaveAttribute('data-year', year!)
+  await expect(stage).toHaveAttribute('data-span', span!)
+  expect(errors).toEqual([])
+})
+
 test('reduced motion keeps navigation immediate and disables entrance animation', async ({
   page,
 }, info) => {

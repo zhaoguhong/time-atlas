@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T09:20:11.598Z",
+  "generatedAt": "2026-10-23T07:00:43.320Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -16,30 +16,33 @@
     "outsideMapRange": 0
   },
   "events": {
-    "total": 565,
-    "world": 120,
+    "total": 643,
+    "world": 198,
     "byRegion": {
       "china": 445,
-      "europe": 39,
-      "west-asia": 24,
-      "central-asia": 1,
-      "south-asia": 9,
-      "east-asia": 6,
-      "southeast-asia": 4,
-      "africa": 15,
-      "americas": 17,
-      "oceania": 5
+      "europe": 59,
+      "west-asia": 28,
+      "central-asia": 9,
+      "south-asia": 14,
+      "east-asia": 13,
+      "southeast-asia": 12,
+      "africa": 26,
+      "americas": 28,
+      "oceania": 9
     },
     "byCategory": {
-      "政治": 222,
-      "战争": 144,
-      "文化": 90,
-      "交流": 43,
-      "社会": 66
+      "政治": 263,
+      "战争": 157,
+      "文化": 101,
+      "交流": 54,
+      "社会": 68
     }
   },
   "dynasties": {
     "total": 53
+  },
+  "worldPolities": {
+    "total": 55
   },
   "topics": {
     "total": 13,
@@ -121,7 +124,7 @@
     {
       "id": "han",
       "name": "两汉",
-      "events": 52,
+      "events": 53,
       "people": 90
     },
     {
@@ -133,13 +136,13 @@
     {
       "id": "jin",
       "name": "两晋 · 十六国",
-      "events": 19,
+      "events": 20,
       "people": 32
     },
     {
       "id": "north-south",
       "name": "南北朝",
-      "events": 23,
+      "events": 24,
       "people": 41
     },
     {
@@ -151,37 +154,37 @@
     {
       "id": "tang",
       "name": "唐",
-      "events": 43,
+      "events": 47,
       "people": 112
     },
     {
       "id": "five",
       "name": "五代十国",
-      "events": 21,
+      "events": 22,
       "people": 29
     },
     {
       "id": "song",
       "name": "宋 · 辽 · 金 · 西夏",
-      "events": 72,
+      "events": 84,
       "people": 119
     },
     {
       "id": "yuan",
       "name": "元",
-      "events": 17,
+      "events": 22,
       "people": 45
     },
     {
       "id": "ming",
       "name": "明",
-      "events": 54,
+      "events": 70,
       "people": 90
     },
     {
       "id": "qing",
       "name": "清",
-      "events": 124,
+      "events": 161,
       "people": 135
     }
   ],
@@ -271,10 +274,10 @@
     }
   ],
   "sourceRetention": {
-    "references": 474,
-    "retained": 460,
+    "references": 585,
+    "retained": 536,
     "unavailable": 0,
-    "failed": 14,
+    "failed": 49,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [

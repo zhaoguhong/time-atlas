@@ -1,5 +1,6 @@
 import { readingSourceUrl } from '../lib/source-links'
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
+import type { ReactNode } from 'react'
 import type { JourneyView, PersonJourney } from '../types'
 import { compactYear, formatYear } from '../lib/history'
 import ReadingText from './ReadingText'
@@ -11,6 +12,7 @@ export default function JourneyPanel({
   year,
   onNode,
   onStep,
+  furtherReading,
 }: {
   journey: PersonJourney
   biography: string
@@ -18,6 +20,7 @@ export default function JourneyPanel({
   year: number
   onNode: (id: string) => void
   onStep: (offset: number) => void
+  furtherReading?: ReactNode
 }) {
   const index = view.nodes.findIndex((node) => node.id === view.activeId)
   const active = view.nodes[index]
@@ -68,6 +71,7 @@ export default function JourneyPanel({
           </div>
         </div>
       )}
+      {furtherReading}
       <details className="journey-biography">
         <summary>人物简介与行迹说明</summary>
         <ReadingText className="detail-lead" text={biography} />

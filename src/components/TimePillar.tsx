@@ -107,7 +107,7 @@ export default function TimePillar(p: Props) {
     moved: boolean
   } | null>(null)
   const suppressClick = useRef(false)
-  const { year, span, moving } = usePillarView(
+  const { year, span, moving, settle } = usePillarView(
     draft?.year ?? p.year,
     draft?.span ?? p.span,
     draft !== null || dragging || p.playing,
@@ -146,7 +146,13 @@ export default function TimePillar(p: Props) {
   const flush = () => {
     if (timer.current) clearTimeout(timer.current)
     timer.current = null
-    if (preview.current) commit(preview.current)
+    if (frame.current !== null) cancelAnimationFrame(frame.current)
+    frame.current = null
+    if (preview.current) {
+      const next = { ...preview.current, span: clampSpan(preview.current.span) }
+      settle(next)
+      commit(next)
+    }
   }
   const showPreview = (next: { year: number; span: number }) => {
     preview.current = next

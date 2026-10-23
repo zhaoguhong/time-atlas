@@ -1,0 +1,307 @@
+{
+  "purpose": "Factual verification for 39 independently written selected Asian and African world-history milestones. References are not permission to redistribute source prose or images. Query evidence, including failed/oversized page reads, is retained separately; the collector records actual cache/request outcomes.",
+  "sources": [
+    {
+      "key": "kushan",
+      "title": "OpenStax · The Margins of Empire：贵霜",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-4-the-margins-of-empire",
+      "references": []
+    },
+    {
+      "key": "central",
+      "title": "大都会艺术博物馆 · Central and North Asia, 500–1000",
+      "url": "https://www.metmuseum.org/toah/ht/06/nc",
+      "references": []
+    },
+    {
+      "key": "orkhon",
+      "title": "UNESCO · 鄂尔浑河谷文化景观",
+      "url": "https://whc.unesco.org/en/list/1081/",
+      "references": []
+    },
+    {
+      "key": "bukhara",
+      "title": "UNESCO · 布哈拉历史中心",
+      "url": "https://whc.unesco.org/en/list/602/",
+      "references": []
+    },
+    {
+      "key": "merv",
+      "title": "UNESCO · 古代梅尔夫历史文化公园",
+      "url": "https://whc.unesco.org/en/list/886/",
+      "references": []
+    },
+    {
+      "key": "urgench",
+      "title": "UNESCO · 库尼亚－乌尔根奇",
+      "url": "https://whc.unesco.org/en/list/1199/",
+      "references": []
+    },
+    {
+      "key": "timur",
+      "title": "Oxford Research Encyclopedia · Tamerlane and the Timurids（作者摘要）",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
+      "references": []
+    },
+    {
+      "key": "samarkand",
+      "title": "UNESCO · 撒马尔罕：文化的十字路口",
+      "url": "https://whc.unesco.org/en/list/603/",
+      "references": []
+    },
+    {
+      "key": "ulugh",
+      "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
+      "url": "https://whc.unesco.org/document/104639",
+      "references": []
+    },
+    {
+      "key": "russian",
+      "title": "俄罗斯国家图书馆 · Conquest of Samarkand and War Trophies",
+      "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
+      "references": []
+    },
+    {
+      "key": "russianPhoto",
+      "title": "美国国会图书馆 · 1868年撒马尔罕驻军影像档案",
+      "url": "https://www.loc.gov/item/2007680333/",
+      "references": []
+    },
+    {
+      "key": "gupta",
+      "title": "牛津阿什莫林博物馆 · Mathura sculpture in the Gupta period",
+      "url": "https://jameelcentre.ashmolean.org/collection/4/6739/6744",
+      "references": [],
+      "note": "Superseded citation candidate: the real collector returned HTTP 404 on 2026-10-23 despite indexed search/page-read evidence. Retained to preserve the failed request and provenance history; no longer cited by the event. Replaced by Princeton and Met collection records."
+    },
+    {
+      "key": "chola",
+      "title": "ICOMOS · Great Living Chola Temples 评估",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/250bis.pdf",
+      "references": []
+    },
+    {
+      "key": "cholaSite",
+      "title": "UNESCO · 朱罗王朝现存的伟大神庙",
+      "url": "https://whc.unesco.org/en/list/250/",
+      "references": []
+    },
+    {
+      "key": "hampi",
+      "title": "UNESCO · 亨比古迹群",
+      "url": "https://whc.unesco.org/en/list/241/",
+      "references": []
+    },
+    {
+      "key": "khalsa",
+      "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
+      "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
+      "references": []
+    },
+    {
+      "key": "congress",
+      "title": "印度国民大会党 · 历届大会原始年表",
+      "url": "https://inc.in/inc-sessions",
+      "references": []
+    },
+    {
+      "key": "congressFounding",
+      "title": "印度国民大会党 · 1885—1895年创立时期",
+      "url": "https://inc.in/brief-history-of-congress/1885-1895",
+      "references": []
+    },
+    {
+      "key": "heian",
+      "title": "大都会艺术博物馆 · Heian Period (794–1185)",
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "references": []
+    },
+    {
+      "key": "kamakura",
+      "title": "大都会艺术博物馆 · Japan, 1000–1400",
+      "url": "https://www.metmuseum.org/toah/ht/07/eaj",
+      "references": []
+    },
+    {
+      "key": "goryeo",
+      "title": "UNESCO · 开城历史建筑与遗址",
+      "url": "https://whc.unesco.org/en/list/1278/",
+      "references": []
+    },
+    {
+      "key": "joseon",
+      "title": "OpenStax · Exchange in East Asia",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "references": []
+    },
+    {
+      "key": "hangul",
+      "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
+      "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
+      "references": []
+    },
+    {
+      "key": "kanagawa",
+      "title": "美国国家档案馆 · The Treaty of Kanagawa",
+      "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
+      "references": []
+    },
+    {
+      "key": "korea1910",
+      "title": "日本国立国会图书馆 · Japan’s Annexation of Korea",
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description27.html",
+      "references": []
+    },
+    {
+      "key": "angkor",
+      "title": "UNESCO · 吴哥",
+      "url": "https://whc.unesco.org/en/list/668/",
+      "references": []
+    },
+    {
+      "key": "angkorWat",
+      "title": "柬埔寨文化与艺术部 · Maurice Glaize：Angkor Guide 年代与碑铭",
+      "url": "https://cisark.mcfa.gov.kh/Documentation/Glaize_M.%2C%20Guide%20%28trad.%20anglaise%29.pdf",
+      "references": [],
+      "note": "Superseded citation candidate: the real collector reported expired TLS certificate on 2026-10-23. Retained to preserve the failed request and provenance history; no longer cited by the event. Replaced by NASA Earth Observatory, alongside the existing UNESCO Angkor reference."
+    },
+    {
+      "key": "bagan",
+      "title": "UNESCO · 蒲甘",
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "references": []
+    },
+    {
+      "key": "sukhothai",
+      "title": "UNESCO · 素可泰历史城镇及相关城镇",
+      "url": "https://whc.unesco.org/en/list/574/",
+      "references": []
+    },
+    {
+      "key": "ayutthaya",
+      "title": "UNESCO · 阿瑜陀耶古城",
+      "url": "https://whc.unesco.org/en/list/576/",
+      "references": []
+    },
+    {
+      "key": "majapahit",
+      "title": "大都会艺术博物馆 · Southeast Asia, 1000–1400",
+      "url": "https://www.metmuseum.org/toah/ht/07/sse",
+      "references": []
+    },
+    {
+      "key": "batavia",
+      "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
+      "references": []
+    },
+    {
+      "key": "philippines",
+      "title": "菲律宾国家历史委员会 · The Philippine National Flag 历史标记",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/the-philippine-national-flag/",
+      "references": []
+    },
+    {
+      "key": "ghanaMali",
+      "title": "OpenStax · Medieval Sub-Saharan Africa",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "references": []
+    },
+    {
+      "key": "maliChronology",
+      "title": "OpenStax · Early Modern Africa 年代图",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-introduction",
+      "references": []
+    },
+    {
+      "key": "kilwa",
+      "title": "UNESCO · 基尔瓦基斯瓦尼与松戈马拉遗址",
+      "url": "https://whc.unesco.org/en/list/144/",
+      "references": []
+    },
+    {
+      "key": "lalibela",
+      "title": "UNESCO · 拉利贝拉岩石教堂",
+      "url": "https://whc.unesco.org/en/list/18/",
+      "references": []
+    },
+    {
+      "key": "benin",
+      "title": "芝加哥艺术博物馆 · Oba Ewuare and the Portuguese",
+      "url": "https://archive.artic.edu/benin/oba/",
+      "references": []
+    },
+    {
+      "key": "beninDate",
+      "title": "剑桥大学考古与人类学博物馆 · Kingdom of Benin",
+      "url": "https://maa.cam.ac.uk/schools/resources/african-collections-schools-resources/kingdom-benin",
+      "references": []
+    },
+    {
+      "key": "kongo",
+      "title": "大都会艺术博物馆 · Christianity and Kongo Visual Culture",
+      "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
+      "references": []
+    },
+    {
+      "key": "timbuktu",
+      "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
+      "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
+      "references": []
+    },
+    {
+      "key": "sokoto",
+      "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
+      "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
+      "references": []
+    },
+    {
+      "key": "sokotoPlace",
+      "title": "Getty 地名词表 · Sokoto（7000538）",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=Nigeria&place=&subjectid=7000538",
+      "references": []
+    },
+    {
+      "key": "zulu",
+      "title": "南非政府 · History",
+      "url": "https://www.gov.za/about-sa/history",
+      "references": []
+    },
+    {
+      "key": "suez",
+      "title": "苏伊士运河管理局 · Canal History",
+      "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "references": []
+    },
+    {
+      "key": "boer",
+      "title": "英国国家陆军博物馆 · Boer War",
+      "url": "https://www.nam.ac.uk/explore/boer-war",
+      "references": []
+    },
+    {
+      "key": "gupta-princeton",
+      "title": "普林斯顿大学艺术博物馆 · Seated male figure：笈多时代背景",
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
+      "references": []
+    },
+    {
+      "key": "gupta-met-mathura",
+      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection：秣菟罗笈多造像",
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "references": []
+    },
+    {
+      "key": "khalsa-wallace",
+      "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
+      "references": []
+    },
+    {
+      "key": "angkor-wat-nasa",
+      "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
+      "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
+      "references": []
+    }
+  ]
+}

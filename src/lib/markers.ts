@@ -54,7 +54,13 @@ export function groupMapEvents(
   return [...groups.values()].map((items) => ({
     events: [...items].sort((a, b) => a.year - b.year),
     coordinates: [
-      items.reduce((sum, item) => sum + item.coordinates[0], 0) / items.length,
+      // A projected cluster can straddle the date line. Average on the branch
+      // nearest its first point so 179° and −179° stay near 180°, not Greenwich.
+      items.reduce((sum, item) => {
+        const origin = items[0].coordinates[0]
+        const lng = item.coordinates[0]
+        return sum + lng + 360 * Math.round((origin - lng) / 360)
+      }, 0) / items.length,
       items.reduce((sum, item) => sum + item.coordinates[1], 0) / items.length,
     ],
   }))

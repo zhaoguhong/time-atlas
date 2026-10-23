@@ -1,0 +1,220 @@
+{
+  "purpose": "Factual verification for 39 independently written major-event readings in Europe, West Asia, the Americas and Oceania through 1912; source prose and images are not redistributed. Coordinates are representative reading anchors, not reconstructed event or journey tracks.",
+  "sources": [
+    {
+      "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
+      "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
+      "references": []
+    },
+    {
+      "title": "英国皇家军械博物馆 · The Hundred Years’ War",
+      "url": "https://royalarmouries.org/objects-and-stories/stories/the-hundred-years-war-1337-1453",
+      "references": []
+    },
+    {
+      "title": "阿尔罕布拉宫管理委员会 · History",
+      "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
+      "references": []
+    },
+    {
+      "title": "OpenStax · World History 2 · The Protestant Reformation",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+      "references": []
+    },
+    {
+      "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
+      "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
+      "references": []
+    },
+    {
+      "title": "美国国会图书馆 · The First Map of the Strait of Magellan, 1520",
+      "url": "https://www.loc.gov/item/2021668426/",
+      "references": []
+    },
+    {
+      "title": "荷兰国立博物馆 · The Republic",
+      "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
+      "references": []
+    },
+    {
+      "title": "英国议会 · Armada Tapestries: History",
+      "url": "https://armada.parliament.uk/history.html",
+      "references": []
+    },
+    {
+      "title": "英国国家陆军博物馆 · British Civil Wars",
+      "url": "https://www.nam.ac.uk/explore/british-civil-wars",
+      "references": []
+    },
+    {
+      "title": "英国议会 · Overview of the Glorious Revolution",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
+      "references": []
+    },
+    {
+      "title": "UNESCO · Historic Centre of Saint Petersburg and Related Groups of Monuments",
+      "url": "https://whc.unesco.org/en/list/540/",
+      "references": []
+    },
+    {
+      "title": "拿破仑基金会 · The Duchy of Warsaw: The Gradual Disappearance of Poland",
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-duchy-of-warsaw/",
+      "references": []
+    },
+    {
+      "title": "拿破仑基金会 · The proclamation of Empire, 18 May 1804",
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-proclamation-of-empire/",
+      "references": []
+    },
+    {
+      "title": "拿破仑基金会 · The masses of granite: The Civil Code",
+      "url": "https://www.napoleon.org/en/young-historians/napodoc/les-masses-de-granit-de-nouvelles-institutions-napoleoniennes",
+      "references": []
+    },
+    {
+      "title": "英国国家陆军博物馆 · Battle of Waterloo",
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "references": []
+    },
+    {
+      "title": "OpenStax · World History 2 · Nationalism, Liberalism, Conservatism, and the Political Order",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "references": []
+    },
+    {
+      "title": "德国历史博物馆 · Die Revolution von 1848/49",
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/revolution-1848",
+      "references": []
+    },
+    {
+      "title": "英国国家陆军博物馆 · Crimean War",
+      "url": "https://www.nam.ac.uk/explore/crimean-war",
+      "references": []
+    },
+    {
+      "title": "英国国家档案馆 · British Army operations up to 1913",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-operations-up-to-1913",
+      "references": []
+    },
+    {
+      "title": "OpenStax · World History 2 · The Second Industrial Revolution",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
+      "references": []
+    },
+    {
+      "title": "狄金森学院 · Tsar Alexander II signs the legislation ending serfdom",
+      "url": "https://hd.housedivided.dickinson.edu/node/34893",
+      "references": []
+    },
+    {
+      "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
+      "references": []
+    },
+    {
+      "title": "大都会艺术博物馆 · The Ottoman Empire",
+      "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
+      "references": []
+    },
+    {
+      "title": "OpenStax · World History 2 · The Safavid Empire",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "references": []
+    },
+    {
+      "title": "大都会艺术博物馆 · Pen Box Depicting Shah Isma’il in Battle",
+      "url": "https://www.metmuseum.org/art/collection/search/455304",
+      "references": []
+    },
+    {
+      "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
+      "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
+      "references": []
+    },
+    {
+      "title": "美国国会图书馆法律图书馆 · Civic Education Models: Turkey",
+      "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
+      "references": []
+    },
+    {
+      "title": "美国国家档案馆 · Constitution of the United States (1787)",
+      "url": "https://www.archives.gov/milestone-documents/constitution",
+      "references": []
+    },
+    {
+      "title": "美国国家档案馆 · Louisiana Purchase Treaty (1803)",
+      "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+      "references": []
+    },
+    {
+      "title": "墨西哥国家档案馆 · Documentos de la consumación de la Independencia de México",
+      "url": "https://www.gob.mx/agn/articulos/archivisticaclio-documentos-de-la-consumacion-de-la-independencia-de-mexico?idiom=es",
+      "references": []
+    },
+    {
+      "title": "美国国家档案馆 · Monroe Doctrine (1823)",
+      "url": "https://www.archives.gov/milestone-documents/monroe-doctrine",
+      "references": []
+    },
+    {
+      "title": "美国国家档案馆 · Treaty of Guadalupe Hidalgo (1848)",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
+      "references": []
+    },
+    {
+      "title": "加拿大政府 · The history of Canada Day",
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
+      "references": []
+    },
+    {
+      "title": "美国国会图书馆 · The Rise of Francisco Madero",
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "references": []
+    },
+    {
+      "title": "美国国务院历史办公室 · The Spanish-American War, 1898",
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "references": []
+    },
+    {
+      "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
+      "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
+      "references": []
+    },
+    {
+      "title": "UNESCO · Historic Sanctuary of Machu Picchu",
+      "url": "https://whc.unesco.org/en/list/274",
+      "references": []
+    },
+    {
+      "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
+      "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
+      "references": []
+    },
+    {
+      "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
+      "url": "https://history.state.gov/countries/hawaii",
+      "references": []
+    },
+    {
+      "title": "美国国家公园管理局 · Hawaiian History",
+      "url": "https://www.nps.gov/locations/hawaii/history.htm",
+      "references": []
+    },
+    {
+      "title": "新西兰文化与遗产部 · James Cook",
+      "url": "https://nzhistory.govt.nz/people/james-cook",
+      "references": []
+    },
+    {
+      "title": "新西兰自然保护部 · New Zealand Wars",
+      "url": "https://www.doc.govt.nz/our-work/heritage/heritage-topics/new-zealand-wars/",
+      "references": []
+    },
+    {
+      "title": "英国科学博物馆 · Sending messages across the Atlantic",
+      "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
+      "references": []
+    }
+  ]
+}

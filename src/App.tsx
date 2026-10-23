@@ -41,7 +41,21 @@ import {
   Sun,
   Moon,
 } from 'lucide-react'
-import { pillarMatches, pillarWindow, relatedReading, type PillarSide } from './lib/time-pillar'
+import {
+  eventRegion,
+  historyRegions,
+  pillarMatches,
+  pillarWindow,
+  relatedReading,
+  type PillarSide,
+} from './lib/time-pillar'
+import {
+  worldPeriodAt,
+  worldPeriodEvents,
+  worldPeriods,
+  worldRegionBounds,
+} from './lib/world-history'
+import { worldPolities, worldPolityById, worldPolityForMap } from './data/world-polities'
 import { Layers3, Map as MapIcon } from 'lucide-react'
 const TimePillar = lazy(() => import('./components/TimePillar'))
 import type { Camera } from './components/HistoryMap'
@@ -59,12 +73,14 @@ import TopicPanel from './components/TopicPanel'
 import PlacePanel from './components/PlacePanel'
 import ComparisonPanel from './components/ComparisonPanel'
 import ExplorationFilters from './components/ExplorationFilters'
+import HistoryScopeControls from './components/HistoryScopeControls'
 import {
   places,
   placeById,
   namesPlace,
   filterExploration,
   emptyExploration,
+  insideBounds,
 } from './lib/exploration'
 import { parseViewParams, useNavigationHistory, type NavigationView } from './lib/navigation'
 import { readProgress, writeProgress, readingSelectionKey } from './lib/reading-progress'
@@ -140,7 +156,7 @@ function initialState() {
   if (hash.event && eventById.has(hash.event)) selection = { type: 'event', id: hash.event }
   else if (hash.person && personById.has(hash.person))
     selection = { type: 'person', id: hash.person }
-  else if (hash.dynasty && dynastyById.has(hash.dynasty))
+  else if (hash.dynasty && (dynastyById.has(hash.dynasty) || worldPolityById.has(hash.dynasty)))
     selection = { type: 'dynasty', id: hash.dynasty }
   else if (view.place && placeById.has(view.place)) selection = { type: 'place', id: view.place }
   else if (view.polity) selection = { type: 'polity', id: view.polity }
@@ -295,7 +311,12 @@ export default function App() {
             zoom: 5,
             token: Date.now(),
           }
-        : null,
+        : initial.view.pillarSide === 'world' && !readCamera()
+          ? {
+              bounds: worldRegionBounds[initial.view.pillarRegion] ?? worldRegionBounds.all,
+              token: Date.now(),
+            }
+          : null,
   )
   const [camera, setCamera] = useState<Camera | null>(readCamera)
   const [initialCamera] = useState(readCamera)
@@ -394,6 +415,8 @@ export default function App() {
   yearRef.current = year
   const tour = allTours.find((item) => item.id === tourState?.id)
   const period = periodAt(year)
+  const worldBrowsing = pillarSide === 'world' && !tour && !trailPerson
+  const worldPeriod = worldPeriodAt(year)
   const profile = profiles[period.id]
   const periodEvents = useMemo(() => eventsInPeriod(events, year), [year])
   const explorationEvents = useMemo(
@@ -401,9 +424,9 @@ export default function App() {
       filterExploration(events, exploration).filter(
         (event) =>
           (category === '全部' || event.category === category) &&
-          (visualization !== 'pillar' || pillarMatches(event, pillarSide, pillarRegion)),
+          pillarMatches(event, pillarSide, pillarRegion),
       ),
-    [exploration, category, visualization, pillarSide, pillarRegion],
+    [exploration, category, pillarSide, pillarRegion],
   )
   const filteredEvents = useMemo(() => {
     if (exploration.range) return explorationEvents
@@ -415,8 +438,9 @@ export default function App() {
           toOrdinal(event.endYear ?? event.year) >= window.bottom,
       )
     }
+    if (worldBrowsing && scope === 'period') return worldPeriodEvents(explorationEvents, year)
     return eventsInScope(explorationEvents, year, scope)
-  }, [year, exploration, explorationEvents, scope, visualization, pillarSpan])
+  }, [year, exploration, explorationEvents, scope, visualization, pillarSpan, worldBrowsing])
   const currentYearEvents = useMemo(
     () => eventsAtYear(explorationEvents, year),
     [year, explorationEvents],
@@ -477,7 +501,10 @@ export default function App() {
   const selectedPerson = selection?.type === 'person' ? personById.get(selection.id) : undefined
   const selectedPolity =
     selection?.type === 'polity' ? polities.find((item) => item.name === selection.id) : undefined
-  const selectedDynasty = selection?.type === 'dynasty' ? dynastyById.get(selection.id) : undefined
+  const selectedDynasty =
+    selection?.type === 'dynasty'
+      ? (dynastyById.get(selection.id) ?? worldPolityById.get(selection.id))
+      : undefined
   const selectedPlace = selection?.type === 'place' ? placeById.get(selection.id) : undefined
   const displayedPanel =
     selection?.type === 'place'
@@ -489,7 +516,10 @@ export default function App() {
           : selection?.type === 'event'
             ? 'events'
             : mode
-  const polityDynasty = selectedPolity ? dynastyForMap(selectedPolity.name, year) : undefined
+  const polityDynasty =
+    selection?.type === 'polity'
+      ? (dynastyForMap(selection.id, year) ?? worldPolityForMap(selection.id, year))
+      : undefined
   const searchResults = useMemo(() => {
     const text = query.toLowerCase().replace(/\s+/g, '')
     const exact = (names: string[]) =>
@@ -514,9 +544,11 @@ export default function App() {
           sub: person.role,
           exact: exact([person.name, person.courtesy ?? '', ...(person.aliases ?? [])]),
         })),
-      ...dynasties
+      ...[...dynasties, ...worldPolities]
         .filter((dynasty) =>
-          [dynasty.name, ...dynasty.aliases].some((value) => value.includes(text)),
+          [dynasty.name, ...dynasty.aliases].some((value) =>
+            value.toLowerCase().replace(/\s+/g, '').includes(text),
+          ),
         )
         .map((dynasty) => ({
           type: 'dynasty' as const,
@@ -635,7 +667,7 @@ export default function App() {
       if (!keepTour && !keepTrail) rememberView()
       setPlaybackReading(false)
       setReaderCollapsed(false)
-      if (visualization === 'pillar') {
+      {
         if (!pillarMatches(event, pillarSide, pillarRegion)) {
           setPillarSide('compare')
           setPillarRegion('all')
@@ -678,7 +710,29 @@ export default function App() {
     } else if (selection?.type === 'event') {
       const event = eventById.get(selection.id)
       if (event) setFocus({ coordinates: event.coordinates, zoom: 4.6, token: Date.now() })
+    } else if (pillarSide === 'world') {
+      setFocus({
+        bounds: worldRegionBounds[pillarRegion] ?? worldRegionBounds.all,
+        token: Date.now(),
+      })
     }
+  }
+  function changeHistoryScope(side: PillarSide, region = pillarRegion) {
+    rememberView()
+    setPillarSide(side)
+    setPillarRegion(region)
+    setSelection(null)
+    setMode('events')
+    setPlaying(false)
+    setPlaybackReading(false)
+    setTrailPerson(null)
+    setTourState(null)
+    setExploration((old) => ({ ...old, place: '', bounds: null }))
+    setScope('period')
+    setShowEvents(true)
+    if (side === 'world')
+      setFocus({ bounds: worldRegionBounds[region] ?? worldRegionBounds.all, token: Date.now() })
+    else if (side === 'china') setFocus({ region: 'china', token: Date.now() })
   }
   function openPerson(id: string, backTo?: Selection) {
     setPlaybackReading(false)
@@ -687,6 +741,8 @@ export default function App() {
     if (!person) return
     rememberView()
     if (!backTo) {
+      setPillarSide('compare')
+      setPillarRegion('all')
       setYear(personFocusYear(person, year, journeyByPerson.get(id)))
       setTourState(null)
       setMode('people')
@@ -704,7 +760,7 @@ export default function App() {
   function openDynasty(id: string) {
     setPlaybackReading(false)
     setReaderCollapsed(false)
-    const dynasty = dynastyById.get(id)
+    const dynasty = dynastyById.get(id) ?? worldPolityById.get(id)
     if (!dynasty) return
     rememberView()
     const preferred: Record<string, number> = {
@@ -732,7 +788,23 @@ export default function App() {
     setTrailPerson(null)
     setTourState(null)
     setPlaying(false)
-    setFocus({ region: 'china', token: Date.now() })
+    const worldPolity = worldPolityById.get(id)
+    if (worldPolity) {
+      setPillarSide('world')
+      setPillarRegion(worldPolity.region)
+      setExploration(emptyExploration)
+      setCategory('全部')
+      const active = polities.find((polity) => worldPolity.mapNames.includes(polity.name))
+      setFocus(
+        active && year >= dynasty.from && year <= dynasty.to
+          ? { coordinates: active.label, zoom: 3, token: Date.now() }
+          : { bounds: worldRegionBounds[worldPolity.region], token: Date.now() },
+      )
+    } else {
+      setPillarSide('compare')
+      setPillarRegion('all')
+      setFocus({ region: 'china', token: Date.now() })
+    }
   }
   function openPlace(id: string) {
     const place = placeById.get(id)
@@ -786,6 +858,21 @@ export default function App() {
   }
   function jumpPeriod(id: string) {
     rememberView()
+    const world = worldPeriods.find((item) => item.id === id)
+    if (world) {
+      setExploration(emptyExploration)
+      changeYear(world.focus)
+      setScope('period')
+      setCategory('全部')
+      setMode('events')
+      setPlaybackReading(false)
+      setHiddenPolities([])
+      setFocus({
+        bounds: worldRegionBounds[pillarRegion] ?? worldRegionBounds.all,
+        token: Date.now(),
+      })
+      return
+    }
     setExploration(emptyExploration)
     setPlaybackReading(false)
     setReaderCollapsed(false)
@@ -825,6 +912,8 @@ export default function App() {
     } else setMode('overview')
   }
   function startTour(id: string) {
+    setPillarSide('compare')
+    setPillarRegion('all')
     rememberView()
     setVisualization('map')
     setExploration(emptyExploration)
@@ -1005,6 +1094,8 @@ export default function App() {
   function startTrail(id: string) {
     rememberView()
     setVisualization('map')
+    setPillarSide('compare')
+    setPillarRegion('all')
     setMobileView('split')
     const journey = journeyByPerson.get(id)
     if (!journey) return
@@ -1133,6 +1224,10 @@ export default function App() {
       params.set('span', String(Math.round(pillarSpan * 100) / 100))
       params.set('play', playbackMode)
     }
+    if (visualization === 'map') {
+      if (pillarSide !== 'compare') params.set('side', pillarSide)
+      if (pillarRegion !== 'all') params.set('region', pillarRegion)
+    }
     if (compareYear !== null) params.set('compare', String(compareYear))
     if (tourState) {
       params.set('tour', tourState.id)
@@ -1205,7 +1300,7 @@ export default function App() {
         : selection?.type === 'person'
           ? personById.get(selection.id)?.name
           : selection?.type === 'dynasty'
-            ? dynastyById.get(selection.id)?.name
+            ? (dynastyById.get(selection.id) ?? worldPolityById.get(selection.id))?.name
             : selection?.type === 'place'
               ? placeById.get(selection.id)?.name
               : undefined)
@@ -1266,6 +1361,11 @@ export default function App() {
         setFocus({
           coordinates: placeById.get(next.selection.id)!.coordinates,
           zoom: 5,
+          token: Date.now(),
+        })
+      } else if (next.view.pillarSide === 'world') {
+        setFocus({
+          bounds: worldRegionBounds[next.view.pillarRegion] ?? worldRegionBounds.all,
           token: Date.now(),
         })
       }
@@ -1982,6 +2082,7 @@ export default function App() {
             ) : (
               <HistoryMap
                 colorMode={colorMode}
+                wrapLongitude={pillarSide !== 'china' && pillarRegion === 'oceania'}
                 year={year}
                 events={mapEvents}
                 showCities={showCities}
@@ -2001,6 +2102,7 @@ export default function App() {
                 journeyResetToken={journeyResetToken}
                 playing={playing}
                 speed={speed}
+                followSpotlight={playing || liveReading}
                 spotlightId={
                   !trail && !tour
                     ? selection?.type === 'event' && !playing && !playbackReading
@@ -2051,7 +2153,8 @@ export default function App() {
                 </button>
               </form>
               <p>
-                蓝色虚线：{formatYear(compareYear)}的疆域记录 · {periodAt(compareYear).name}
+                蓝色虚线：{formatYear(compareYear)}的疆域记录 ·{' '}
+                {worldBrowsing ? worldPeriodAt(compareYear).name : periodAt(compareYear).name}
               </p>
               <button className="comparison-read-button" onClick={() => navigateMode('comparison')}>
                 解读这段变化 <ArrowRight size={13} />
@@ -2116,6 +2219,12 @@ export default function App() {
                 {layersOpen && (
                   <div className="layers-popover" ref={layersPopoverRef}>
                     <span className="eyebrow">地图图层</span>
+                    <HistoryScopeControls
+                      side={pillarSide}
+                      region={pillarRegion}
+                      onSide={(side) => changeHistoryScope(side)}
+                      onRegion={(region) => changeHistoryScope(pillarSide, region)}
+                    />
                     {[
                       ['历史事件', showEvents, () => setShowEvents((v) => !v)],
                       ['城市与都城', showCities, () => setShowCities((v) => !v)],
@@ -2173,6 +2282,13 @@ export default function App() {
             </div>
             <div className="map-legend" aria-label="政权图例">
               {polities
+                .filter((item) => !mapBounds || insideBounds(item.label, mapBounds))
+                .sort((a, b) =>
+                  worldBrowsing
+                    ? Number(!!worldPolityForMap(b.name, year)) -
+                        Number(!!worldPolityForMap(a.name, year)) || b.area - a.area
+                    : 0,
+                )
                 .filter((item) => item.nameZh !== item.name || item.area > 90)
                 .slice(0, 7)
                 .map((item) => (
@@ -2235,7 +2351,7 @@ export default function App() {
               onClick={() => navigateMode('dynasties')}
             >
               <BookOpen size={14} />
-              朝代
+              {worldBrowsing ? '政权' : '朝代'}
             </button>
             <button
               className={displayedPanel === 'places' ? 'active' : ''}
@@ -2549,7 +2665,9 @@ export default function App() {
                       text={selectedPerson.biography}
                     />
                   )}
-                  <PersonFurtherReading person={selectedPerson} />
+                  {trail?.personId !== selectedPerson.id && (
+                    <PersonFurtherReading person={selectedPerson} />
+                  )}
                   {journeyByPerson.has(selectedPerson.id) &&
                   !(trail?.personId === selectedPerson.id) ? (
                     <>
@@ -2580,6 +2698,7 @@ export default function App() {
                       year={year}
                       onNode={selectJourneyNode}
                       onStep={stepJourney}
+                      furtherReading={<PersonFurtherReading person={selectedPerson} />}
                     />
                   )}
                   <div className="person-events">
@@ -2625,10 +2744,15 @@ export default function App() {
                 <DynastyPanel
                   key={selectedDynasty.id}
                   dynasty={selectedDynasty}
+                  world={worldPolityById.has(selectedDynasty.id)}
                   query={archiveFilters.query}
                   onQuery={(query) => setArchiveFilters((old) => ({ ...old, query }))}
                   onYear={changeYear}
-                  events={events}
+                  events={
+                    worldPolityById.has(selectedDynasty.id)
+                      ? events.filter((event) => eventRegion(event) !== 'china')
+                      : events
+                  }
                   onEvent={(id) => {
                     openEvent(id)
                   }}
@@ -2640,7 +2764,7 @@ export default function App() {
                     className="polity-swatch"
                     style={{ background: selectedPolity?.color ?? '#aab8ac' }}
                   />
-                  <h2>{selectedPolity?.nameZh ?? selection.id}</h2>
+                  <h2>{polityDynasty?.name ?? selectedPolity?.nameZh ?? selection.id}</h2>
                   <p className="polity-english">{selectedPolity?.name}</p>
                   {polityDynasty && <DynastyIntroduction dynasty={polityDynasty} />}
                   {selectedPolity ? (
@@ -2689,9 +2813,12 @@ export default function App() {
                       />
                     </>
                   ) : (
-                    <p className="empty-description">
-                      当前年份没有这一政权的地图记录。选择其他年份，继续探索。
-                    </p>
+                    <>
+                      <p className="empty-description">
+                        当前年份没有这一政权的地图记录。选择其他年份，继续探索。
+                      </p>
+                      {polityDynasty && <Sources sources={polityDynasty.sources} />}
+                    </>
                   )}
                 </article>
               ) : mode === 'comparison' && compareYear !== null ? (
@@ -2700,8 +2827,22 @@ export default function App() {
                   reference={compareYear}
                   all={archiveFilters.allChanges}
                   onAll={(allChanges) => setArchiveFilters((old) => ({ ...old, allChanges }))}
-                  events={events}
-                  dynasties={dynasties}
+                  events={explorationEvents}
+                  dynasties={[
+                    ...(pillarSide === 'world' ? [] : dynasties),
+                    ...(pillarSide === 'china'
+                      ? []
+                      : worldPolities.filter(
+                          (polity) => pillarRegion === 'all' || polity.region === pillarRegion,
+                        )),
+                  ]}
+                  scopeLabel={
+                    pillarSide === 'china'
+                      ? '中国历史'
+                      : pillarSide === 'world'
+                        ? `世界历史 · ${historyRegions[pillarRegion as keyof typeof historyRegions] ?? '所有地区'}`
+                        : '中外历史'
+                  }
                   onEvent={openEvent}
                   onDynasty={openDynasty}
                 />
@@ -2925,7 +3066,7 @@ export default function App() {
                             </span>
                           </button>
                         )
-                      const dynasty = dynastyById.get(id)
+                      const dynasty = dynastyById.get(id) ?? worldPolityById.get(id)
                       if (type === 'dynasty' && dynasty)
                         return (
                           <button
@@ -2946,7 +3087,9 @@ export default function App() {
                 </div>
               ) : mode === 'dynasties' ? (
                 <div className="dynasties-panel">
-                  <span className="eyebrow">朝代与政权 · 各有自己的历史</span>
+                  <span className="eyebrow">
+                    {worldBrowsing ? '世界政权' : '朝代与政权'} · 各有自己的历史
+                  </span>
                   <h2>读懂山河背后的时代</h2>
                   <p className="panel-intro">
                     建国、都城、时代背景和参考资料分别说明；政权存续年与地图来源区间分开阅读。
@@ -2957,13 +3100,25 @@ export default function App() {
                     onChange={(event) => setDynastyRange(event.target.value as 'period' | 'all')}
                   >
                     <option value="period">当前时期政权</option>
-                    <option value="all">全部档案（{dynasties.length}）</option>
+                    <option value="all">
+                      全部档案（
+                      {worldBrowsing
+                        ? worldPolities.filter(
+                            (polity) => pillarRegion === 'all' || polity.region === pillarRegion,
+                          ).length
+                        : dynasties.length}
+                      ）
+                    </option>
                   </select>
-                  {dynasties
+                  {(worldBrowsing ? worldPolities : dynasties)
                     .filter(
                       (dynasty) =>
-                        dynastyRange === 'all' ||
-                        (dynasty.from <= period.to && dynasty.to >= period.from),
+                        (!worldBrowsing ||
+                          pillarRegion === 'all' ||
+                          worldPolityById.get(dynasty.id)?.region === pillarRegion) &&
+                        (dynastyRange === 'all' ||
+                          (dynasty.from <= (worldBrowsing ? worldPeriod.to : period.to) &&
+                            dynasty.to >= (worldBrowsing ? worldPeriod.from : period.from))),
                     )
                     .map((dynasty) => (
                       <button
@@ -3093,7 +3248,7 @@ export default function App() {
                 </div>
               ) : (
                 <div className="events-panel">
-                  {(visualization !== 'pillar' || pillarSide !== 'world') && (
+                  {pillarSide !== 'world' && (
                     <div className="period-brief">
                       <button onClick={() => navigateMode('overview')}>
                         <BookOpen size={15} />
@@ -3108,6 +3263,21 @@ export default function App() {
                         <ArrowRight size={13} />
                       </button>
                     </div>
+                  )}
+                  {worldBrowsing && (
+                    <section className="world-history-brief">
+                      <span className="eyebrow">
+                        世界历史 ·{' '}
+                        {pillarRegion === 'all'
+                          ? '中国之外'
+                          : historyRegions[pillarRegion as keyof typeof historyRegions]}
+                      </span>
+                      <h3>{worldPeriod.name}</h3>
+                      <p>{worldPeriod.summary}</p>
+                      <button className="outline-action" onClick={() => navigateMode('dynasties')}>
+                        阅读主要政权档案 <ArrowRight size={13} />
+                      </button>
+                    </section>
                   )}
                   <div className="event-list-controls">
                     <div className="event-list-heading">
@@ -3187,7 +3357,9 @@ export default function App() {
                       ? `${compactYear(exploration.range[0])}—${compactYear(exploration.range[1])}年`
                       : visualization === 'pillar' && scope === 'period'
                         ? '当前画布中的已收录事件'
-                        : scopeDescription(year, scope)}{' '}
+                        : worldBrowsing && scope === 'period'
+                          ? `${worldPeriod.name} · ${compactYear(worldPeriod.from)}—${compactYear(worldPeriod.to)}年`
+                          : scopeDescription(year, scope)}{' '}
                     ·{' '}
                     {exploration.range || scope === 'period' ? '按时间顺序' : '距当前年份由近及远'}
                     <ArrowDown size={11} />
@@ -3253,6 +3425,7 @@ export default function App() {
         <section className="timeline" aria-hidden="true" inert />
       ) : (
         <Timeline
+          historyPeriods={worldBrowsing ? worldPeriods : undefined}
           selectedId={trail?.activeId ?? (selection?.type === 'event' ? selection.id : undefined)}
           year={year}
           playing={playing}
@@ -3269,7 +3442,7 @@ export default function App() {
           onSpeed={setSpeed}
           speed={speed}
           onPeriod={jumpPeriod}
-          onOverview={() => navigateMode('overview')}
+          onOverview={() => (worldBrowsing ? navigateMode('events') : navigateMode('overview'))}
           readerCollapsed={readerCollapsed}
           onExpandReader={() => setReaderCollapsed(false)}
           comparing={compareYear !== null}

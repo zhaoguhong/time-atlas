@@ -1,6 +1,38 @@
 {
-  "generatedAt": "2026-10-22T08:57:30.093Z",
+  "generatedAt": "2026-10-23T07:00:42.687Z",
   "sources": [
+    {
+      "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
+      "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
+      "note": "依据作者公开摘要核实基础事实；不声称已读取付费全文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sokoto-reform"
+        }
+      ]
+    },
+    {
+      "title": "Oxford Research Encyclopedia · Tamerlane and the Timurids（作者摘要）",
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
+      "note": "依据作者公开摘要核实基础事实；不声称已读取付费全文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timurid-rise"
+        }
+      ]
+    },
+    {
+      "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
+        }
+      ]
+    },
     {
       "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024，第17页）",
       "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
@@ -12,12 +44,96 @@
       ]
     },
     {
+      "title": "芝加哥艺术博物馆 · Oba Ewuare and the Portuguese",
+      "url": "https://archive.artic.edu/benin/oba/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-benin-ewuare"
+        }
+      ]
+    },
+    {
+      "title": "英国议会 · Armada Tapestries: History",
+      "url": "https://armada.parliament.uk/history.html",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-spanish-armada"
+        }
+      ]
+    },
+    {
+      "title": "普林斯顿大学艺术博物馆 · Seated male figure：笈多时代背景",
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-gupta-age"
+        }
+      ]
+    },
+    {
+      "title": "史密森尼国立亚洲艺术博物馆 · 满者伯夷陶塑与贸易社会",
+      "url": "https://asia-archive.si.edu/collections/new/acquisitions-2017/s2017-8-12/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-majapahit"
+        }
+      ]
+    },
+    {
+      "title": "英国科学博物馆 · Sending messages across the Atlantic",
+      "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-atlantic-telegraph"
+        }
+      ]
+    },
+    {
       "title": "陕西省地方志 · 半坡类型仰韶文化年代",
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
       "references": [
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "印度 INFLIBNET · 印度希腊人、塞人与贵霜",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/indo-greeks-sakas-and-kushanas/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kushan"
+        }
+      ]
+    },
+    {
+      "title": "印度 INFLIBNET · 朱罗王朝",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-cholas/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-chola"
+        }
+      ]
+    },
+    {
+      "title": "印度 INFLIBNET · 笈多帝国",
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-gupta-empire/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-gupta"
         }
       ]
     },
@@ -48,6 +164,17 @@
         {
           "kind": "event",
           "id": "khufu-pyramid"
+        }
+      ]
+    },
+    {
+      "title": "俄罗斯国家图书馆 · Conquest of Samarkand and War Trophies",
+      "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-samarkand"
         }
       ]
     },
@@ -208,6 +335,54 @@
       ]
     },
     {
+      "title": "狄金森学院 · Tsar Alexander II signs the legislation ending serfdom",
+      "url": "https://hd.housedivided.dickinson.edu/node/34893",
+      "note": "亚历山大二世及改革年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-emancipation"
+        }
+      ]
+    },
+    {
+      "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
+      "url": "https://history.state.gov/countries/hawaii",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-kingdom"
+        }
+      ]
+    },
+    {
+      "title": "美国国务院历史办公室 · The Spanish-American War, 1898",
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-overthrow"
+        },
+        {
+          "kind": "event",
+          "id": "world-spanish-american-war"
+        }
+      ]
+    },
+    {
+      "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
+      "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-us-transcontinental-railway"
+        }
+      ]
+    },
+    {
       "title": "杭州文物遗产与历史建筑保护中心 · 跨湖桥遗址博物馆（杭州网刊载）",
       "url": "https://hznews.hangzhou.com.cn/wghz/content/2026-05/18/content_9224937.htm",
       "references": [
@@ -234,6 +409,28 @@
         {
           "kind": "event",
           "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "title": "印度国民大会党 · 1885—1895年创立时期",
+      "url": "https://inc.in/brief-history-of-congress/1885-1895",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-indian-national-congress"
+        }
+      ]
+    },
+    {
+      "title": "印度国民大会党 · 历届大会原始年表",
+      "url": "https://inc.in/inc-sessions",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-indian-national-congress"
         }
       ]
     },
@@ -288,6 +485,17 @@
       ]
     },
     {
+      "title": "剑桥大学考古与人类学博物馆 · Kingdom of Benin",
+      "url": "https://maa.cam.ac.uk/schools/resources/african-collections-schools-resources/kingdom-benin",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-benin-ewuare"
+        }
+      ]
+    },
+    {
       "title": "吉林铁路博物馆 · 第一条国有铁路干线",
       "url": "https://museum.jty.edu.cn/Home/Content/20227",
       "note": "核对分段施工、关沟地形、人字形线路与隧道开挖方法；不将线路自动转换为个人逐日行踪。",
@@ -295,6 +503,17 @@
         {
           "kind": "person",
           "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "新西兰文化与遗产部 · James Cook",
+      "url": "https://nzhistory.govt.nz/people/james-cook",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-cook-new-zealand"
         }
       ]
     },
@@ -332,6 +551,10 @@
         {
           "kind": "event",
           "id": "world-west-rome"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
         }
       ]
     },
@@ -347,6 +570,14 @@
         {
           "kind": "event",
           "id": "world-justinian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-byzantium"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-sasanian"
         }
       ]
     },
@@ -358,6 +589,21 @@
         {
           "kind": "event",
           "id": "world-aksum"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aksum"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · The Margins of Empire：贵霜",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-4-the-margins-of-empire",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kushan-networks"
         }
       ]
     },
@@ -388,6 +634,22 @@
         {
           "kind": "event",
           "id": "world-abbasid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-rashidun"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-sasanian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-umayyad"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-abbasid"
         }
       ]
     },
@@ -399,6 +661,10 @@
         {
           "kind": "event",
           "id": "world-sogdian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-delhi"
         }
       ]
     },
@@ -429,6 +695,14 @@
         {
           "kind": "event",
           "id": "world-verdun"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-franks"
         }
       ]
     },
@@ -466,21 +740,45 @@
         {
           "kind": "event",
           "id": "world-baghdad"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-abbasid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
         }
       ]
     },
     {
-      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · Medieval Sub-Saharan Africa",
       "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
       "references": [
+        {
+          "kind": "event",
+          "id": "world-ghana-trade"
+        },
         {
           "kind": "event",
           "id": "world-great-zimbabwe"
         },
         {
           "kind": "event",
+          "id": "world-mali-sundiata"
+        },
+        {
+          "kind": "event",
           "id": "world-mansa-musa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ghana"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mali"
         }
       ]
     },
@@ -503,6 +801,32 @@
         {
           "kind": "event",
           "id": "world-ottoman-constantinople"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · 世界历史上卷 · 古代埃及",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-3-ancient-egypt",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-early-egypt"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-old-egypt"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-middle-egypt"
         }
       ]
     },
@@ -522,6 +846,18 @@
         {
           "kind": "event",
           "id": "world-nineveh"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-assyria"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-babylon"
         }
       ]
     },
@@ -537,6 +873,10 @@
         {
           "kind": "event",
           "id": "world-kadesh"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-new-egypt"
         }
       ]
     },
@@ -552,6 +892,14 @@
         {
           "kind": "event",
           "id": "world-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-achaemenid"
         }
       ]
     },
@@ -567,6 +915,10 @@
         {
           "kind": "event",
           "id": "world-borobudur"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-srivijaya"
         }
       ]
     },
@@ -586,6 +938,10 @@
         {
           "kind": "event",
           "id": "world-ashoka"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-maurya"
         }
       ]
     },
@@ -635,6 +991,22 @@
         {
           "kind": "event",
           "id": "world-hellenistic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-seleucid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ptolemaic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-achaemenid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-macedon"
         }
       ]
     },
@@ -650,6 +1022,14 @@
         {
           "kind": "event",
           "id": "world-punic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-carthage"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-republic"
         }
       ]
     },
@@ -665,6 +1045,14 @@
         {
           "kind": "event",
           "id": "world-augustus"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-republic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
         }
       ]
     },
@@ -714,6 +1102,14 @@
         {
           "kind": "event",
           "id": "world-inca"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
         }
       ]
     },
@@ -748,6 +1144,31 @@
       ]
     },
     {
+      "title": "OpenStax · 世界历史下卷 · 同盟、扩张与冲突",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-1-alliances-expansion-and-conflict",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-austria-hungary"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-revolution-1905"
+        }
+      ]
+    },
+    {
       "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -759,6 +1180,18 @@
         {
           "kind": "event",
           "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-delhi"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
         }
       ]
     },
@@ -778,13 +1211,29 @@
       ]
     },
     {
-      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "title": "OpenStax · Exchange in East Asia",
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
       "references": [
         {
           "kind": "event",
+          "id": "world-joseon-foundation"
+        },
+        {
+          "kind": "event",
           "id": "world-tokugawa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-tokugawa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-goryeo"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-joseon"
         }
       ]
     },
@@ -796,6 +1245,35 @@
         {
           "kind": "event",
           "id": "world-songhai"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-songhai"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · Early Modern Africa 年代图",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-introduction",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mali-sundiata"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · 世界历史下卷 · 奥斯曼帝国",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-2-the-ottoman-empire",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-byzantium"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ottoman"
         }
       ]
     },
@@ -806,6 +1284,14 @@
       "references": [
         {
           "kind": "event",
+          "id": "world-safavid"
+        },
+        {
+          "kind": "event",
+          "id": "world-chaldiran"
+        },
+        {
+          "kind": "world-polity",
           "id": "world-safavid"
         }
       ]
@@ -821,7 +1307,15 @@
         },
         {
           "kind": "event",
+          "id": "world-granada"
+        },
+        {
+          "kind": "event",
           "id": "world-reformation"
+        },
+        {
+          "kind": "event",
+          "id": "world-thirty-years-war"
         },
         {
           "kind": "event",
@@ -845,6 +1339,14 @@
         {
           "kind": "event",
           "id": "world-dagama"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
         }
       ]
     },
@@ -901,6 +1403,10 @@
         {
           "kind": "event",
           "id": "world-wealth-nations"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
         }
       ]
     },
@@ -931,6 +1437,18 @@
         {
           "kind": "event",
           "id": "world-haitian-revolution"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-united-states"
         }
       ]
     },
@@ -945,11 +1463,31 @@
         },
         {
           "kind": "event",
+          "id": "world-greek-independence"
+        },
+        {
+          "kind": "event",
           "id": "world-italy"
         },
         {
           "kind": "event",
           "id": "world-germany"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
         }
       ]
     },
@@ -984,10 +1522,18 @@
       ]
     },
     {
-      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "title": "OpenStax · World History 2 · The Second Industrial Revolution",
       "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
-      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
       "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-emancipation"
+        },
+        {
+          "kind": "event",
+          "id": "world-canadian-confederation"
+        },
         {
           "kind": "event",
           "id": "world-second-industrial"
@@ -1010,6 +1556,46 @@
         {
           "kind": "event",
           "id": "world-berlin-africa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ottoman"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-portugal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-joseon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-united-states"
         }
       ]
     },
@@ -1029,12 +1615,56 @@
       ]
     },
     {
+      "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
+      "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-norse-newfoundland"
+        }
+      ]
+    },
+    {
+      "title": "菲律宾国家历史委员会 · The Philippine National Flag 历史标记",
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/the-philippine-national-flag/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-philippine-independence-declaration"
+        }
+      ]
+    },
+    {
       "title": "教育部 · 子产铸刑书",
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "references": [
         {
           "kind": "event",
           "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "title": "英国皇家军械博物馆 · The Hundred Years’ War",
+      "url": "https://royalarmouries.org/objects-and-stories/stories/the-hundred-years-war-1337-1453",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hundred-years-war"
+        }
+      ]
+    },
+    {
+      "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
+      "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-angkor-wat"
         }
       ]
     },
@@ -1084,12 +1714,77 @@
       ]
     },
     {
+      "title": "美国国会图书馆 · 俄罗斯国别研究（历史章节）",
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆法律图书馆 · Civic Education Models: Turkey",
+      "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-young-turk-revolution"
+        }
+      ]
+    },
+    {
+      "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
+      "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timbuktu-learning"
+        }
+      ]
+    },
+    {
+      "title": "ICOMOS · Great Living Chola Temples 评估",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/250bis.pdf",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chola-temple"
+        }
+      ]
+    },
+    {
+      "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
+      "url": "https://whc.unesco.org/document/104639",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ulugh-beg-observatory"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 青城山与都江堰",
       "url": "https://whc.unesco.org/en/list/1001/",
       "references": [
         {
           "kind": "event",
           "id": "dujiangyan"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 鄂尔浑河谷文化景观",
+      "url": "https://whc.unesco.org/en/list/1081/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-turkic-khaganate"
         }
       ]
     },
@@ -1112,12 +1807,34 @@
       ]
     },
     {
+      "title": "UNESCO · 库尼亚－乌尔根奇",
+      "url": "https://whc.unesco.org/en/list/1199/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khorezm-urgench"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 卡拉尔—苏佩圣城",
       "url": "https://whc.unesco.org/en/list/1269/",
       "references": [
         {
           "kind": "event",
           "id": "caral-city"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 开城历史建筑与遗址",
+      "url": "https://whc.unesco.org/en/list/1278/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-goryeo-foundation"
         }
       ]
     },
@@ -1148,6 +1865,17 @@
         {
           "kind": "event",
           "id": "catalhoyuk"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 基尔瓦基斯瓦尼与松戈马拉遗址",
+      "url": "https://whc.unesco.org/en/list/144/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kilwa-trade"
         }
       ]
     },
@@ -1229,6 +1957,17 @@
       ]
     },
     {
+      "title": "UNESCO · 蒲甘",
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-bagan-kingdom"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 良渚古城遗址",
       "url": "https://whc.unesco.org/en/list/1592/",
       "references": [
@@ -1259,12 +1998,130 @@
       ]
     },
     {
+      "title": "UNESCO · 拉利贝拉岩石教堂",
+      "url": "https://whc.unesco.org/en/list/18/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-lalibela-churches"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 亨比古迹群",
+      "url": "https://whc.unesco.org/en/list/241/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-vijayanagara-hampi"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 朱罗王朝现存的伟大神庙",
+      "url": "https://whc.unesco.org/en/list/250/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chola-temple"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Historic Sanctuary of Machu Picchu",
+      "url": "https://whc.unesco.org/en/list/274",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-machu-picchu"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 奥克尼新石器时代遗址",
       "url": "https://whc.unesco.org/en/list/514/",
       "references": [
         {
           "kind": "event",
           "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Historic Centre of Saint Petersburg and Related Groups of Monuments",
+      "url": "https://whc.unesco.org/en/list/540/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-saint-petersburg"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 素可泰历史城镇及相关城镇",
+      "url": "https://whc.unesco.org/en/list/574/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sukhothai"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 阿瑜陀耶古城",
+      "url": "https://whc.unesco.org/en/list/576/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ayutthaya-foundation"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 布哈拉历史中心",
+      "url": "https://whc.unesco.org/en/list/602/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-samanid-culture"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 撒马尔罕：文化的十字路口",
+      "url": "https://whc.unesco.org/en/list/603/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timurid-rise"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 吴哥",
+      "url": "https://whc.unesco.org/en/list/668/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-angkor-centres"
+        },
+        {
+          "kind": "event",
+          "id": "world-angkor-wat"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-khmer"
         }
       ]
     },
@@ -1285,6 +2142,17 @@
         {
           "kind": "event",
           "id": "jianzhen"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · 古代梅尔夫历史文化公园",
+      "url": "https://whc.unesco.org/en/list/886/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-seljuk-merv"
         }
       ]
     },
@@ -1327,12 +2195,119 @@
       ]
     },
     {
+      "title": "阿尔罕布拉宫管理委员会 · History",
+      "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-granada"
+        }
+      ]
+    },
+    {
+      "title": "美国国家档案馆 · The Treaty of Kanagawa",
+      "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kanagawa-treaty"
+        }
+      ]
+    },
+    {
+      "title": "美国国家档案馆 · Constitution of the United States (1787)",
+      "url": "https://www.archives.gov/milestone-documents/constitution",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-us-constitution"
+        }
+      ]
+    },
+    {
+      "title": "美国国家档案馆 · Louisiana Purchase Treaty (1803)",
+      "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-louisiana-purchase"
+        }
+      ]
+    },
+    {
+      "title": "美国国家档案馆 · Monroe Doctrine (1823)",
+      "url": "https://www.archives.gov/milestone-documents/monroe-doctrine",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-monroe-doctrine"
+        }
+      ]
+    },
+    {
+      "title": "美国国家档案馆 · Treaty of Guadalupe Hidalgo (1848)",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-american-war"
+        }
+      ]
+    },
+    {
       "title": "西安半坡博物馆 · 遗址与功能分区",
       "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
       "references": [
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
+        }
+      ]
+    },
+    {
+      "title": "剑桥大学出版社 · 古埃及经济：托勒密时期",
+      "url": "https://www.cambridge.org/core/books/ancient-egyptian-economy/ptolemaic-period-33230-bce/029A98BAB6F458BA138E6E028C71CAB3",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-ptolemaic"
+        }
+      ]
+    },
+    {
+      "title": "剑桥大学出版社 · 英格兰王国的起源",
+      "url": "https://www.cambridge.org/core/books/writing-kingship-and-power-in-anglosaxon-england/origins-of-the-kingdom-of-the-english/02EA5266C0D391AD15C6A7E314DAF681",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        }
+      ]
+    },
+    {
+      "title": "加拿大政府 · The history of Canada Day",
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-canadian-confederation"
         }
       ]
     },
@@ -1495,6 +2470,17 @@
       ]
     },
     {
+      "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
+      "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-circumnavigation"
+        }
+      ]
+    },
+    {
       "title": "剑桥大学 · Darwin Correspondence Project: Origin",
       "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -1502,6 +2488,38 @@
         {
           "kind": "event",
           "id": "world-darwin"
+        }
+      ]
+    },
+    {
+      "title": "德国历史博物馆 · 神圣罗马帝国（962—1806）",
+      "url": "https://www.dhm.de/archiv/ausstellungen/heiliges-roemisches-reich/index_3.html",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-holy-roman"
+        }
+      ]
+    },
+    {
+      "title": "德国历史博物馆 · Die Revolution von 1848/49",
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/revolution-1848",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-revolutions-1848"
+        }
+      ]
+    },
+    {
+      "title": "新西兰自然保护部 · New Zealand Wars",
+      "url": "https://www.doc.govt.nz/our-work/heritage/heritage-topics/new-zealand-wars/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-new-zealand-wars"
         }
       ]
     },
@@ -1928,6 +2946,17 @@
       ]
     },
     {
+      "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
+      "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hastings"
+        }
+      ]
+    },
+    {
       "title": "福州市人民政府 · 严复",
       "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
       "note": "用于船政与英国海军教育、归国教学和天演论译介；页面生年与基础身份纪年不同，部分童年年龄叙述也不自洽，不用于校订生卒日期或沿用宣传性评价。",
@@ -1939,6 +2968,17 @@
       ]
     },
     {
+      "title": "Getty 地名词表 · Sokoto（7000538）",
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=Nigeria&place=&subjectid=7000538",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sokoto-reform"
+        }
+      ]
+    },
+    {
       "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
       "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -1946,6 +2986,28 @@
         {
           "kind": "event",
           "id": "world-copernicus"
+        }
+      ]
+    },
+    {
+      "title": "墨西哥国家档案馆 · Documentos de la consumación de la Independencia de México",
+      "url": "https://www.gob.mx/agn/articulos/archivisticaclio-documentos-de-la-consumacion-de-la-independencia-de-mexico?idiom=es",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-independence"
+        }
+      ]
+    },
+    {
+      "title": "南非政府 · History",
+      "url": "https://www.gov.za/about-sa/history",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-zulu-consolidation"
         }
       ]
     },
@@ -2000,12 +3062,144 @@
       ]
     },
     {
+      "title": "奥地利军事历史博物馆 · 1867年妥协至第一次世界大战",
+      "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/franz-joseph-hall",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-austria-hungary"
+        }
+      ]
+    },
+    {
       "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
       "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
       "references": [
         {
           "kind": "event",
           "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
+      "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-persian-constitution"
+        }
+      ]
+    },
+    {
+      "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
+      "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khalsa"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · 皮萨罗与印加人",
+      "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · The Rise of Francisco Madero",
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-revolution"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · 1868年撒马尔罕驻军影像档案",
+      "url": "https://www.loc.gov/item/2007680333/",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-samarkand"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · The First Map of the Strait of Magellan, 1520",
+      "url": "https://www.loc.gov/item/2021668426/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-circumnavigation"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · 宽永行幸记",
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-tokugawa"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection：秣菟罗笈多造像",
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-gupta-age"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Pen Box Depicting Shah Isma’il in Battle",
+      "url": "https://www.metmuseum.org/art/collection/search/455304",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chaldiran"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Heian Period (794–1185)",
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-heian-capital"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-heian"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
         }
       ]
     },
@@ -2020,12 +3214,135 @@
       ]
     },
     {
+      "title": "大都会艺术博物馆 · 塞琉古帝国",
+      "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-seleucid"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · Uruk: The First City",
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
       "references": [
         {
           "kind": "event",
           "id": "uruk-city"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 非洲艺术：刚果文明",
+      "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kongo"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Christianity and Kongo Visual Culture",
+      "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kongo-baptism"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · The Ottoman Empire",
+      "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ottoman-origins"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 西北非，前1000年—公元1年",
+      "url": "https://www.metmuseum.org/toah/ht/04/afw.html",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-carthage"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Central and North Asia, 500–1000",
+      "url": "https://www.metmuseum.org/toah/ht/06/nc",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-turkic-khaganate"
+        },
+        {
+          "kind": "event",
+          "id": "world-samanid-culture"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Japan, 1000–1400",
+      "url": "https://www.metmuseum.org/toah/ht/07/eaj",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kamakura-shogun"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 朝鲜半岛，1000—1400年",
+      "url": "https://www.metmuseum.org/toah/ht/07/eak",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-goryeo"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 法国，1000—1400年",
+      "url": "https://www.metmuseum.org/toah/ht/07/euwf",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Southeast Asia, 1000–1400",
+      "url": "https://www.metmuseum.org/toah/ht/07/sse",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-majapahit-foundation"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 伊比利亚半岛，1400—1600年",
+      "url": "https://www.metmuseum.org/toah/ht/08/eusi",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-portugal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
         }
       ]
     },
@@ -2041,6 +3358,94 @@
       ]
     },
     {
+      "title": "英国国家陆军博物馆 · Battle of Waterloo",
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-waterloo"
+        }
+      ]
+    },
+    {
+      "title": "英国国家陆军博物馆 · Boer War",
+      "url": "https://www.nam.ac.uk/explore/boer-war",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-south-african-war"
+        }
+      ]
+    },
+    {
+      "title": "英国国家陆军博物馆 · British Civil Wars",
+      "url": "https://www.nam.ac.uk/explore/british-civil-wars",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-british-civil-wars"
+        }
+      ]
+    },
+    {
+      "title": "英国国家陆军博物馆 · Crimean War",
+      "url": "https://www.nam.ac.uk/explore/crimean-war",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crimean-war"
+        }
+      ]
+    },
+    {
+      "title": "拿破仑基金会 · The Duchy of Warsaw: The Gradual Disappearance of Poland",
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-duchy-of-warsaw/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-partitions-poland"
+        }
+      ]
+    },
+    {
+      "title": "拿破仑基金会 · The proclamation of Empire, 18 May 1804",
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-proclamation-of-empire/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-napoleon-empire"
+        }
+      ]
+    },
+    {
+      "title": "拿破仑基金会 · The masses of granite: The Civil Code",
+      "url": "https://www.napoleon.org/en/young-historians/napodoc/les-masses-de-granit-de-nouvelles-institutions-napoleoniennes",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-napoleonic-civil-code"
+        }
+      ]
+    },
+    {
+      "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-batavia"
+        }
+      ]
+    },
+    {
       "title": "英国国家档案馆 · Magna Carta",
       "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -2048,6 +3453,21 @@
         {
           "kind": "event",
           "id": "world-magna-carta"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        }
+      ]
+    },
+    {
+      "title": "英国国家档案馆 · British Army operations up to 1913",
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-operations-up-to-1913",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crimean-war"
         }
       ]
     },
@@ -2079,6 +3499,21 @@
         {
           "kind": "event",
           "id": "world-russo-japanese"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        }
+      ]
+    },
+    {
+      "title": "日本国立国会图书馆 · Japan’s Annexation of Korea",
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description27.html",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-korea-annexation"
         }
       ]
     },
@@ -2148,6 +3583,17 @@
       ]
     },
     {
+      "title": "美国国家公园管理局 · Hawaiian History",
+      "url": "https://www.nps.gov/locations/hawaii/history.htm",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-overthrow"
+        }
+      ]
+    },
+    {
       "title": "美国国家公园管理局 · 1903 The First Flight",
       "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -2155,6 +3601,41 @@
         {
           "kind": "event",
           "id": "world-flight"
+        }
+      ]
+    },
+    {
+      "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
+        }
+      ]
+    },
+    {
+      "title": "英国议会 · Overview of the Glorious Revolution",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-glorious-revolution"
+        }
+      ]
+    },
+    {
+      "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
+      "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kongo"
         }
       ]
     },
@@ -2169,6 +3650,27 @@
       ]
     },
     {
+      "title": "荷兰国立博物馆 · The Republic",
+      "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
+      "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-dutch-abjuration"
+        }
+      ]
+    },
+    {
+      "title": "圣路易斯艺术博物馆 · 明治时代",
+      "url": "https://www.slam.org/collection/constituents/3919/",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        }
+      ]
+    },
+    {
       "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
       "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
       "note": "用于该书政治、经济、军事、历史和地理内容及数字说明的概述。",
@@ -2176,6 +3678,39 @@
         {
           "kind": "person",
           "id": "q597003"
+        }
+      ]
+    },
+    {
+      "title": "苏伊士运河管理局 · Canal History",
+      "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-suez-canal"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
+      "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
+      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hunminjeongeum"
+        }
+      ]
+    },
+    {
+      "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
+      "note": "博物馆的锡克帝国专题核实1699年纪年与团体性质；中文由本站独立编写。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khalsa"
         }
       ]
     },

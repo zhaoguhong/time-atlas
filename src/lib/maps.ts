@@ -1,4 +1,5 @@
 import type { PolityFeature, PolityProperties } from '../types'
+import { worldPolityForMap } from '../data/world-polities'
 
 const primary = new Set([
   'Shang Dynasty',
@@ -67,6 +68,10 @@ export function activeMapFeatures(features: PolityFeature[], year: number): Poli
       .filter((f) => !(f.properties.name === 'Shang Dynasty' && year >= -1046))
       .map((feature) => {
         const properties = { ...feature.properties }
+        const worldPolity = worldPolityForMap(properties.name, year)
+        if (worldPolity) {
+          properties.nameZh = worldPolity.name
+        }
         if (properties.name === 'Later Zhou' && year < 0) {
           properties.nameZh = '周王室'
           properties.displayNote =

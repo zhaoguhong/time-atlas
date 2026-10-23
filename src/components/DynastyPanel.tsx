@@ -38,6 +38,7 @@ export default function DynastyPanel({
   onEvent,
   query,
   onQuery,
+  world = false,
 }: {
   dynasty: Dynasty
   onYear: (year: number) => void
@@ -45,14 +46,19 @@ export default function DynastyPanel({
   onEvent: (id: string) => void
   query: string
   onQuery: (value: string) => void
+  world?: boolean
 }) {
   const inRange = dynasty.from >= MIN_YEAR && dynasty.from <= MAX_YEAR
   const chronologyRef = useRef<HTMLElement>(null)
-  const allEvents = events.filter((event) => event.year >= dynasty.from && event.year <= dynasty.to)
+  const allEvents = events.filter(
+    (event) =>
+      (world ? (event.endYear ?? event.year) : event.year) >= dynasty.from &&
+      event.year <= dynasty.to,
+  )
   const chronology = allEvents.filter((event) => matchesEvent(event, query.trim()))
   return (
     <article className="dynasty-detail">
-      <span className="eyebrow">朝代与政权档案</span>
+      <span className="eyebrow">{world ? '世界政权档案' : '朝代与政权档案'}</span>
       <h2>{dynasty.name}</h2>
       {allEvents.length > 0 && (
         <button
@@ -72,7 +78,11 @@ export default function DynastyPanel({
       )}
       {inRange && (
         <button className="outline-action" onClick={() => onYear(dynasty.from)}>
-          {dynasty.dateNote && dynasty.from < -841 ? '查看约定起始年代' : '查看建立年份的地图'}
+          {world
+            ? '查看阅读起始年代的地图'
+            : dynasty.dateNote && dynasty.from < -841
+              ? '查看约定起始年代'
+              : '查看建立年份的地图'}
           <ArrowRight size={14} />
         </button>
       )}
@@ -82,7 +92,9 @@ export default function DynastyPanel({
             同时期主要大事 <small>{allEvents.length} 件</small>
           </h3>
           <p className="person-relation-note">
-            覆盖这一政权的存续年份，包含同时并立政权和周边地区的事件；按时间顺序阅读。
+            {world
+              ? '列出档案时间范围内的世界历史节点，用于同时代对照，不表示这些事件都发生在这一政权境内。'
+              : '覆盖这一政权的存续年份，包含同时并立政权和周边地区的事件；按时间顺序阅读。'}
           </p>
           <input
             className="dynasty-event-filter"

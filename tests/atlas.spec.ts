@@ -328,12 +328,18 @@ test('uses explicit time scopes and marks future events', async ({ page }) => {
     'aria-pressed',
     'true',
   )
-  await expect(page.locator('.event-card')).toHaveCount(5)
+  // The nearby window also includes long processes spanning these years.
+  await expect(
+    page.locator('.event-card').filter({ hasText: '特奥蒂瓦坎的都市时代' }),
+  ).toBeVisible()
+  await expect(
+    page.locator('.event-card').filter({ hasText: '麦罗埃成为库施的重要中心' }),
+  ).toBeVisible()
   await expect(page.locator('.event-card').filter({ hasText: '诸葛亮卒于五丈原' })).toContainText(
     '晚 4 年',
   )
   await page.getByRole('button', { name: '整个时期', exact: true }).click()
-  await expect(page.locator('.event-card').first()).toContainText('曹丕建立魏')
+  await expect(page.locator('.event-card').filter({ hasText: '曹丕建立魏' })).toBeVisible()
   await expect(page).toHaveURL(/scope=period/)
   await page.reload()
   await expect(page.getByRole('button', { name: '整个时期', exact: true })).toHaveAttribute(
@@ -516,14 +522,39 @@ test('keeps mobile dynasty navigation in the timeline and leaves the map unobstr
 
 test('fractional playback retains integer dates and skips year zero', async ({ page }) => {
   await page.goto('/#year=-1')
+  await page.locator('.year-title').evaluate((element) => {
+    const playback = window as Window & { atlasPlaybackTitles: string[] }
+    playback.atlasPlaybackTitles = [element.textContent ?? '']
+    new MutationObserver(() =>
+      playback.atlasPlaybackTitles.push(element.textContent ?? ''),
+    ).observe(element, { childList: true, characterData: true, subtree: true })
+  })
   await page.getByRole('combobox', { name: '播放速度' }).selectOption('0.25')
   await page.getByRole('button', { name: '播放时间', exact: true }).click()
   await page.waitForTimeout(1100)
   await expect(page.locator('.year-title')).toContainText('公元前 1 年')
   await page.getByRole('combobox', { name: '播放速度' }).selectOption('2')
-  await expect(page.locator('.year-title')).toContainText('公元 1 年')
+  // At 2× this year lasts less than an assertion's later polling intervals.
+  // Observe every displayed label rather than requiring it to still be current.
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles.includes(
+          '公元 1 年',
+        ),
+      ),
+    )
+    .toBe(true)
   await page.getByRole('button', { name: '暂停时间播放' }).click()
-  await expect(page.locator('.year-title')).not.toContainText('0 年')
+  const labels = await page.evaluate(
+    () => (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles,
+  )
+  expect(
+    labels.every((label) => {
+      const value = label.match(/^公元(?:前)? (\d+) 年$/)?.[1]
+      return value !== undefined && Number(value) >= 1
+    }),
+  ).toBe(true)
 })
 
 test('animates every same-year journey record, pauses in place and resumes at another speed', async ({

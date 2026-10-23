@@ -14,8 +14,8 @@ import {
   PanelRightOpen,
   SlidersHorizontal,
 } from 'lucide-react'
-import { periods } from '../data/periods'
-import type { HistoryEvent } from '../types'
+import { periods as chinaPeriods } from '../data/periods'
+import type { HistoryEvent, Period } from '../types'
 import {
   compactYear,
   formatYear,
@@ -35,6 +35,7 @@ import {
 } from '../lib/playback'
 
 interface Props {
+  historyPeriods?: Period[]
   year: number
   playing: boolean
   events: HistoryEvent[]
@@ -73,6 +74,7 @@ interface Props {
   }
 }
 export default function Timeline({
+  historyPeriods,
   year,
   playing,
   events,
@@ -107,7 +109,8 @@ export default function Timeline({
   const dynastyRef = useRef<HTMLElement>(null)
   const menuRef = useRef<HTMLDivElement>(null)
   const menuTrigger = useRef<HTMLButtonElement | null>(null)
-  const period = periodAt(year)
+  const periods = historyPeriods ?? chinaPeriods
+  const period = periods.find((item) => year >= item.from && year <= item.to) ?? periodAt(year)
   const from = journey?.from ?? topic?.from ?? range?.[0] ?? (overview ? MIN_YEAR : period.from),
     to = journey?.to ?? topic?.to ?? range?.[1] ?? (overview ? MAX_YEAR : period.to)
   const min = toOrdinal(from),

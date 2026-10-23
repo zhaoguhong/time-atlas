@@ -116,6 +116,8 @@ for (const [width, height] of [
     await page.reload()
     await expect(page.locator('.period-overview')).toContainText('安第斯苏佩河谷城市')
     await expect(page).toHaveURL(overviewURL)
+    // A fresh mobile load starts with the compact map sheet.
+    if (width < 600) await setSheet(page, 'split')
     await page
       .locator('.overview-steps')
       .getByRole('button', { name: /卡拉尔：安第斯地区的广场与台基/ })

@@ -59,6 +59,7 @@ function readingPadding(container: HTMLElement, topic = false) {
 }
 interface Props {
   colorMode: ColorMode
+  wrapLongitude?: boolean
   year: number
   events: HistoryEvent[]
   showCities: boolean
@@ -79,10 +80,17 @@ interface Props {
   playing: boolean
   speed: number
   spotlightId?: string
+  followSpotlight: boolean
   onJourneyArrival: (id: string) => void
   onJourneyNode: (id: string) => void
 }
 const empty: FeatureCollection = { type: 'FeatureCollection', features: [] }
+function projectNearest(instance: maplibregl.Map, [lng, lat]: [number, number], wrap?: boolean) {
+  return instance.project([
+    wrap ? lng + 360 * Math.round((instance.getCenter().lng - lng) / 360) : lng,
+    lat,
+  ])
+}
 function applyMapPalette(instance: maplibregl.Map, mode: ColorMode) {
   const dark = mode === 'dark'
   if (!instance.getLayer('land')) return
@@ -216,7 +224,7 @@ export default function HistoryMap(props: Props) {
         maxZoom: 8,
         maxPitch: 0,
         attributionControl: false,
-        renderWorldCopies: false,
+        renderWorldCopies: !!current.current.wrapLongitude,
         style: {
           version: 8,
           sources: {},
@@ -488,13 +496,16 @@ export default function HistoryMap(props: Props) {
       ])
       const center = instance.getCenter()
       current.current.onCamera({
-        lng: +center.lng.toFixed(3),
+        lng: +center.wrap().lng.toFixed(3),
         lat: +center.lat.toFixed(3),
         zoom: +instance.getZoom().toFixed(2),
       })
       applyMapPalette(instance, current.current.colorMode)
       paletteMode.current = current.current.colorMode
       setReady(true)
+    })
+    instance.on('movestart', () => {
+      if (container.current) container.current.dataset.rendered = 'false'
     })
     instance.on('moveend', () => {
       const bounds = instance.getBounds()
@@ -506,7 +517,7 @@ export default function HistoryMap(props: Props) {
       ])
       const center = instance.getCenter()
       current.current.onCamera({
-        lng: +center.lng.toFixed(3),
+        lng: +center.wrap().lng.toFixed(3),
         lat: +center.lat.toFixed(3),
         zoom: +instance.getZoom().toFixed(2),
       })
@@ -641,9 +652,13 @@ export default function HistoryMap(props: Props) {
       // Reframe only the active reading location when it would leave that area.
       const state = current.current
       const node = state.trail?.nodes.find((item) => item.id === state.trail?.activeId)
-      const event = state.events.find((item) =>
-        state.topicSteps ? item.id === state.selection?.id : item.id === state.spotlightId,
-      )
+      const eventId =
+        state.selection?.type === 'event'
+          ? state.selection.id
+          : state.followSpotlight
+            ? state.spotlightId
+            : undefined
+      const event = eventId ? state.events.find((item) => item.id === eventId) : undefined
       const location =
         state.playing && node && traveler.current
           ? traveler.current.getLngLat().toArray()
@@ -653,7 +668,7 @@ export default function HistoryMap(props: Props) {
               : undefined) ??
             event?.coordinates)
       if (changed && location && element.clientWidth > 100 && element.clientHeight > 100) {
-        const point = instance.project(location)
+        const point = projectNearest(instance, location, state.wrapLongitude)
         const padding = readingPadding(element, !!state.topicSteps)
         if (
           point.x < padding.left ||
@@ -810,7 +825,7 @@ export default function HistoryMap(props: Props) {
         return
       }
       const groups = groupMapEvents(current.current.events, (coordinates) =>
-        instance.project(coordinates),
+        projectNearest(instance, coordinates, current.current.wrapLongitude),
       )
       for (const group of groups) {
         const selected = group.events.some((event) =>
@@ -991,6 +1006,7 @@ export default function HistoryMap(props: Props) {
     props.trail,
     props.topicSteps,
     props.spotlightId,
+    props.wrapLongitude,
   ])
 
   useEffect(() => {
@@ -1296,7 +1312,7 @@ export default function HistoryMap(props: Props) {
     if (!ready || !instance || !props.playing || !props.showEvents || !props.spotlightId) return
     const event = props.events.find((e) => e.id === props.spotlightId)
     if (!event) return
-    const point = instance.project(event.coordinates)
+    const point = projectNearest(instance, event.coordinates, props.wrapLongitude)
     const padding = readingPadding(container.current!)
     if (
       point.x < padding.left ||
@@ -1310,7 +1326,7 @@ export default function HistoryMap(props: Props) {
         padding,
         duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500,
       })
-  }, [ready, props.spotlightId, props.playing, props.showEvents])
+  }, [ready, props.spotlightId, props.playing, props.showEvents, props.wrapLongitude])
 
   useEffect(() => {
     arrange.current()
@@ -1330,6 +1346,14 @@ export default function HistoryMap(props: Props) {
       document.removeEventListener('keydown', escape)
     }
   }, [eventGroup])
+
+  useEffect(() => {
+    if (ready && map.current) {
+      map.current.setRenderWorldCopies(!!props.wrapLongitude)
+      rebuildEvents.current()
+      arrange.current()
+    }
+  }, [ready, props.wrapLongitude])
 
   useEffect(() => {
     const instance = map.current

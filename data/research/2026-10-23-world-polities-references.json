@@ -1,0 +1,301 @@
+{
+  "purpose": "Original Chinese overview profiles for existing Cliopatria world polities. Source geometry, feature IDs and source sampling dates remain unchanged. Profile chronology includes explicitly qualified approximate ranges and the site reading cutoff in 1912.",
+  "sources": [
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "title": "OpenStax · 世界历史上卷 · 早期伊斯兰国家",
+      "references": ["world-rashidun", "world-sasanian", "world-umayyad", "world-abbasid"]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/04/afw.html",
+      "title": "大都会艺术博物馆 · 西北非，前1000年—公元1年",
+      "references": ["world-carthage"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
+      "title": "OpenStax · 世界历史上卷 · 罗马共和国",
+      "references": ["world-carthage", "world-roman-republic"]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
+      "title": "大都会艺术博物馆 · 塞琉古帝国",
+      "references": ["world-seleucid"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
+      "title": "OpenStax · 世界历史上卷 · 希腊化时代",
+      "references": ["world-seleucid", "world-ptolemaic", "world-achaemenid", "world-macedon"]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/ancient-egyptian-economy/ptolemaic-period-33230-bce/029A98BAB6F458BA138E6E028C71CAB3",
+      "title": "剑桥大学出版社 · 古埃及经济：托勒密时期",
+      "references": ["world-ptolemaic"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-1-alliances-expansion-and-conflict",
+      "title": "OpenStax · 世界历史下卷 · 同盟、扩张与冲突",
+      "references": ["world-german-empire", "world-austria-hungary"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
+      "title": "OpenStax · 世界历史下卷 · 民族主义与政治秩序",
+      "references": ["world-german-empire", "world-france", "world-spain", "world-russia"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
+      "title": "OpenStax · 世界历史下卷 · 殖民帝国",
+      "references": [
+        "world-german-empire",
+        "world-meiji",
+        "world-ottoman",
+        "world-france",
+        "world-portugal",
+        "world-britain",
+        "world-russia",
+        "world-mughal",
+        "world-joseon",
+        "world-united-states"
+      ]
+    },
+    {
+      "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/franz-joseph-hall",
+      "title": "奥地利军事历史博物馆 · 1867年妥协至第一次世界大战",
+      "references": ["world-austria-hungary"]
+    },
+    {
+      "url": "https://www.slam.org/collection/constituents/3919/",
+      "title": "圣路易斯艺术博物馆 · 明治时代",
+      "references": ["world-meiji"]
+    },
+    {
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
+      "title": "日本国立国会图书馆 · 日俄战争档案",
+      "references": ["world-meiji"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-3-ancient-egypt",
+      "title": "OpenStax · 世界历史上卷 · 古代埃及",
+      "references": ["world-early-egypt", "world-old-egypt", "world-middle-egypt"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
+      "title": "OpenStax · 世界历史上卷 · 埃及新王国",
+      "references": ["world-new-egypt"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
+      "title": "OpenStax · 世界历史上卷 · 古巴比伦到米底",
+      "references": ["world-babylon", "world-neo-assyria", "world-neo-babylon"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
+      "title": "OpenStax · 世界历史上卷 · 波斯帝国",
+      "references": ["world-neo-babylon", "world-achaemenid"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
+      "title": "OpenStax · 世界历史上卷 · 奥古斯都时代",
+      "references": ["world-roman-republic", "world-roman-empire"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
+      "title": "OpenStax · 世界历史上卷 · 罗马帝国重心东移",
+      "references": ["world-roman-empire"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
+      "title": "OpenStax · 世界历史上卷 · 罗马之后的西欧",
+      "references": ["world-roman-empire", "world-franks"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
+      "title": "OpenStax · 世界历史上卷 · 拜占庭与波斯",
+      "references": ["world-byzantium", "world-sasanian"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-2-the-ottoman-empire",
+      "title": "OpenStax · 世界历史下卷 · 奥斯曼帝国",
+      "references": ["world-byzantium", "world-ottoman"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
+      "title": "OpenStax · 世界历史上卷 · 蒙古帝国的分裂",
+      "references": ["world-abbasid", "world-chagatai"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
+      "title": "OpenStax · 世界历史下卷 · 萨法维帝国",
+      "references": ["world-safavid"]
+    },
+    {
+      "url": "https://www.dhm.de/archiv/ausstellungen/heiliges-roemisches-reich/index_3.html",
+      "title": "德国历史博物馆 · 神圣罗马帝国（962—1806）",
+      "references": ["world-holy-roman"]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/writing-kingship-and-power-in-anglosaxon-england/origins-of-the-kingdom-of-the-english/02EA5266C0D391AD15C6A7E314DAF681",
+      "title": "剑桥大学出版社 · 英格兰王国的起源",
+      "references": ["world-england"]
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
+      "title": "英国国家档案馆 · 大宪章",
+      "references": ["world-england"]
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+      "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
+      "references": ["world-england", "world-britain"]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/euwf",
+      "title": "大都会艺术博物馆 · 法国，1000—1400年",
+      "references": ["world-france"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
+      "title": "OpenStax · 世界历史下卷 · 美国、法国与海地革命",
+      "references": ["world-france", "world-spain", "world-united-states"]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/08/eusi",
+      "title": "大都会艺术博物馆 · 伊比利亚半岛，1400—1600年",
+      "references": ["world-portugal", "world-spain"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
+      "title": "OpenStax · 世界历史下卷 · 第一次工业革命",
+      "references": ["world-britain"]
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
+      "title": "美国国会图书馆 · 俄罗斯国别研究（历史章节）",
+      "references": ["world-russia"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
+      "title": "OpenStax · 世界历史上卷 · 孔雀王朝",
+      "references": ["world-maurya"]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/indo-greeks-sakas-and-kushanas/",
+      "title": "印度 INFLIBNET · 印度希腊人、塞人与贵霜",
+      "references": ["world-kushan"]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-gupta-empire/",
+      "title": "印度 INFLIBNET · 笈多帝国",
+      "references": ["world-gupta"]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-cholas/",
+      "title": "印度 INFLIBNET · 朱罗王朝",
+      "references": ["world-chola"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
+      "title": "OpenStax · 世界历史上卷 · 中世纪早期印度洋",
+      "references": ["world-delhi"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
+      "title": "OpenStax · 世界历史下卷 · 印度与国际联系",
+      "references": ["world-delhi", "world-mughal", "world-timurid"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
+      "title": "OpenStax · 世界历史上卷 · 朝鲜、日本与东南亚",
+      "references": ["world-srivijaya"]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/668/",
+      "title": "联合国教科文组织世界遗产中心 · 吴哥",
+      "references": ["world-khmer"]
+    },
+    {
+      "url": "https://asia-archive.si.edu/collections/new/acquisitions-2017/s2017-8-12/",
+      "title": "史密森尼国立亚洲艺术博物馆 · 满者伯夷陶塑与贸易社会",
+      "references": ["world-majapahit"]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "title": "大都会艺术博物馆 · 平安时代（794—1185）",
+      "references": ["world-heian"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
+      "title": "OpenStax · 世界历史下卷 · 东亚交流",
+      "references": ["world-tokugawa", "world-goryeo", "world-joseon"]
+    },
+    {
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
+      "title": "美国国会图书馆 · 宽永行幸记",
+      "references": ["world-tokugawa"]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eak",
+      "title": "大都会艺术博物馆 · 朝鲜半岛，1000—1400年",
+      "references": ["world-goryeo"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
+      "title": "OpenStax · 世界历史上卷 · 阿克苏姆与希木叶尔",
+      "references": ["world-aksum"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · 世界历史上卷 · 中世纪撒哈拉以南非洲",
+      "references": ["world-ghana", "world-mali"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
+      "title": "OpenStax · 世界历史下卷 · 桑海帝国",
+      "references": ["world-songhai"]
+    },
+    {
+      "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
+      "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
+      "references": ["world-kongo"]
+    },
+    {
+      "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
+      "title": "大都会艺术博物馆 · 非洲艺术：刚果文明",
+      "references": ["world-kongo"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
+      "title": "OpenStax · 世界历史上卷 · 美洲帝国",
+      "references": ["world-aztec", "world-inca"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+      "title": "OpenStax · 世界历史下卷 · 跨越大西洋",
+      "references": ["world-aztec", "world-inca"]
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
+      "title": "美国国会图书馆 · 皮萨罗与印加人",
+      "references": ["world-inca"]
+    },
+    {
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
+      "references": ["world-inca"]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
+      "title": "OpenStax · 世界历史上卷 · 奥斯曼人与蒙古人",
+      "references": ["world-chagatai", "world-timurid"]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
+      "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
+      "references": ["world-chagatai"]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
+      "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
+      "references": ["world-timurid"]
+    }
+  ]
+}

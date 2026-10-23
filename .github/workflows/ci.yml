@@ -33,3 +33,4 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e:smoke
       - run: npm run test:e2e:pillar -- --project chrome
+      - run: npm run test:e2e:world -- --project chrome

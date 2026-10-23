@@ -9,6 +9,7 @@ const server = await createServer({
 try {
   const { people, events } = await server.ssrLoadModule('/src/data/content.ts')
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
+  const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { topicTours } = await server.ssrLoadModule('/src/data/topics.ts')
   const sources = new Map()
@@ -16,6 +17,7 @@ try {
     ['event', events],
     ['person', people],
     ['dynasty', dynasties],
+    ['world-polity', worldPolities],
     ['journey', journeys.flatMap((j) => j.nodes)],
     ['topic', topicTours],
   ]) {

@@ -1,9 +1,44 @@
 {
-  "generatedAt": "2026-10-22T08:57:30.093Z",
-  "totalSourceLinks": 1138,
-  "referenceDocuments": 474,
-  "successfulSnapshots": 460,
+  "generatedAt": "2026-10-23T07:00:42.687Z",
+  "totalSourceLinks": 1249,
+  "referenceDocuments": 585,
+  "successfulSnapshots": 536,
   "unavailable": [
+    {
+      "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
+      "attemptedAt": "2026-10-23T06:46:56.336082+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
+      "attemptedAt": "2026-10-23T06:45:08.687741+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "attemptedAt": "2026-10-23T06:54:51.991716+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://archive.artic.edu/benin/oba/",
+      "attemptedAt": "2026-10-23T06:46:45.885981+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://armada.parliament.uk/history.html",
+      "attemptedAt": "2026-10-23T06:50:26.283125+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
+      "attemptedAt": "2026-10-23T06:59:40.484608+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
+      "attemptedAt": "2026-10-23T06:46:13.882602+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
     {
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
       "attemptedAt": "2026-10-07T07:11:22.393274+00:00",
@@ -25,6 +60,11 @@
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://nzhistory.govt.nz/people/james-cook",
+      "attemptedAt": "2026-10-23T06:51:01.629785+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
       "attemptedAt": "2026-10-22T08:49:41.615339+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -35,9 +75,74 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
+      "attemptedAt": "2026-10-23T06:54:35.535937+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
+      "attemptedAt": "2026-10-23T06:50:45.703705+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
       "attemptedAt": "2026-10-06T16:20:29.279260+00:00",
       "error": "HTTP Error 412: Precondition Failed"
+    },
+    {
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
+      "attemptedAt": "2026-10-23T06:52:35.110439+00:00",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
+      "attemptedAt": "2026-10-23T06:45:49.214582+00:00",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
+      "attemptedAt": "2026-10-23T06:54:51.970592+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "attemptedAt": "2026-10-23T06:50:53.078855+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/item/2007680333/",
+      "attemptedAt": "2026-10-23T06:45:16.741990+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/item/2021668426/",
+      "attemptedAt": "2026-10-23T06:50:23.251988+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
+      "attemptedAt": "2026-10-23T06:54:43.413272+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "attemptedAt": "2026-10-23T06:59:40.480295+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/455304",
+      "attemptedAt": "2026-10-23T06:50:41.179301+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "attemptedAt": "2026-10-23T06:54:39.832640+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
+      "attemptedAt": "2026-10-23T06:54:59.227031+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
@@ -45,8 +150,63 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
+      "attemptedAt": "2026-10-23T06:54:18.445130+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
       "attemptedAt": "2026-10-06T18:33:54.455335+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
+      "attemptedAt": "2026-10-23T06:54:51.649562+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
+      "attemptedAt": "2026-10-23T06:46:48.444811+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
+      "attemptedAt": "2026-10-23T06:50:38.766490+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/04/afw.html",
+      "attemptedAt": "2026-10-23T06:54:18.444666+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/06/nc",
+      "attemptedAt": "2026-10-23T06:45:06.037336+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eaj",
+      "attemptedAt": "2026-10-23T06:46:07.125176+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eak",
+      "attemptedAt": "2026-10-23T06:54:43.774414+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/euwf",
+      "attemptedAt": "2026-10-23T06:54:28.058563+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/sse",
+      "attemptedAt": "2026-10-23T06:46:29.569816+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/08/eusi",
+      "attemptedAt": "2026-10-23T06:54:32.553778+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -57,6 +217,21 @@
     {
       "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
       "attemptedAt": "2026-10-22T08:49:35.598235+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+      "attemptedAt": "2026-10-23T06:54:27.819261+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
+      "attemptedAt": "2026-10-23T06:50:27.749035+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.slam.org/collection/constituents/3919/",
+      "attemptedAt": "2026-10-23T06:54:25.307099+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -77,10 +252,60 @@
   ],
   "sources": [
     {
+      "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
+      "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:46:56.336082+00:00"
+    },
+    {
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
+      "title": "Oxford Research Encyclopedia · Tamerlane and the Timurids（作者摘要）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:45:08.687741+00:00"
+    },
+    {
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:51.991716+00:00"
+    },
+    {
       "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
       "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024）",
       "retrievedAt": "2026-10-07T06:45:25.796637+00:00",
       "sha256": "594aa675bd8b2ed74c71b6a824420ae4b259e7cee1178cc85a6795f0c251a9ce",
+      "revisionId": null
+    },
+    {
+      "url": "https://archive.artic.edu/benin/oba/",
+      "title": "芝加哥艺术博物馆 · Oba Ewuare and the Portuguese",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:46:45.885981+00:00"
+    },
+    {
+      "url": "https://armada.parliament.uk/history.html",
+      "title": "英国议会 · Armada Tapestries: History",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:50:26.283125+00:00"
+    },
+    {
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
+      "title": "普林斯顿大学艺术博物馆 · Seated male figure：笈多时代背景",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:59:40.484608+00:00"
+    },
+    {
+      "url": "https://asia-archive.si.edu/collections/new/acquisitions-2017/s2017-8-12/",
+      "title": "史密森尼国立亚洲艺术博物馆 · 满者伯夷陶塑与贸易社会",
+      "retrievedAt": "2026-10-23T06:54:35.260517+00:00",
+      "sha256": "9d99a2ddbda3d45edf8e5488ce17726520c51b376e70cc3cf5c295e1f9766273",
+      "revisionId": null
+    },
+    {
+      "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
+      "title": "英国科学博物馆 · Sending messages across the Atlantic",
+      "retrievedAt": "2026-10-23T06:51:01.656575+00:00",
+      "sha256": "da6000d449de022631a61e6b81cc99315b7d0c1678feb05078c28d768911efef",
       "revisionId": null
     },
     {
@@ -89,6 +314,27 @@
       "retrievedAt": "2026-10-07T06:33:41.603600+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:07.104098+00:00",
       "sha256": "b58ec07ff7e5a1703cb5251ca99eb28c74ef4a9891a6b3e35b13c35a995523f5",
+      "revisionId": null
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/indo-greeks-sakas-and-kushanas/",
+      "title": "印度 INFLIBNET · 印度希腊人、塞人与贵霜",
+      "retrievedAt": "2026-10-23T06:54:29.429025+00:00",
+      "sha256": "006b24f9a7b64ca45e7eb85678342b94ff0fd7f0cb1a701143bb687e88a14bea",
+      "revisionId": null
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-cholas/",
+      "title": "印度 INFLIBNET · 朱罗王朝",
+      "retrievedAt": "2026-10-23T06:54:31.504264+00:00",
+      "sha256": "3b6261fbf9f86a0fa0597d31fdd2671c7923f2bb3a3a84278476a91087467754",
+      "revisionId": null
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-gupta-empire/",
+      "title": "印度 INFLIBNET · 笈多帝国",
+      "retrievedAt": "2026-10-23T06:54:30.509929+00:00",
+      "sha256": "47c3ca58e8966e987d408272c82356297a7a607002458d969f58330708ea4d80",
       "revisionId": null
     },
     {
@@ -115,6 +361,12 @@
       "revisionId": null
     },
     {
+      "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
+      "title": "俄罗斯国家图书馆 · Conquest of Samarkand and War Trophies",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-23T06:46:13.882602+00:00"
+    },
+    {
       "url": "https://fns.pdsu.edu.cn/info/1062/1655.htm",
       "title": "平顶山学院 · 苏轼年谱简编",
       "retrievedAt": "2026-10-06T12:09:55.310114+00:00",
@@ -127,6 +379,34 @@
       "title": "故宫博物院 · 凌家滩玉器展单元与墓葬说明",
       "error": "IncompleteRead(81500 bytes read)",
       "attemptedAt": "2026-10-07T07:11:22.393274+00:00"
+    },
+    {
+      "url": "https://hd.housedivided.dickinson.edu/node/34893",
+      "title": "狄金森学院 · Tsar Alexander II signs the legislation ending serfdom",
+      "retrievedAt": "2026-10-23T06:50:31.888034+00:00",
+      "sha256": "473825dff09166b35fb5e4819abaa2228ffd2bb0772fc15a4fc0f8e14948209f",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/countries/hawaii",
+      "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
+      "retrievedAt": "2026-10-23T06:50:54.310248+00:00",
+      "sha256": "ab95b80fa44dfc407c2d791a79765eaa8e7d84935aa0af1f71d6ea7543f20861",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "title": "美国国务院历史办公室 · The Spanish-American War, 1898",
+      "retrievedAt": "2026-10-23T06:50:47.846452+00:00",
+      "sha256": "5ba297b160bce950e0aad843f378967fa0b2a9889ddcffb28b10416a61a4fb7d",
+      "revisionId": null
+    },
+    {
+      "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
+      "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
+      "retrievedAt": "2026-10-23T06:50:54.367606+00:00",
+      "sha256": "ea5404b35f5b42c34908f5ba1fd9698fd579cd1f84e28acba3fe0a29f4f84922",
+      "revisionId": null
     },
     {
       "url": "https://hznews.hangzhou.com.cn/wghz/content/2026-05/18/content_9224937.htm",
@@ -147,6 +427,20 @@
       "title": "湖北考古年度报告 · 屈家岭遗址中心坐标",
       "retrievedAt": "2026-10-07T06:45:28.531022+00:00",
       "sha256": "052e0d66f149dd5cb7f73c57465d3a3dd664f708d69259e9a1f1834e4162158c",
+      "revisionId": null
+    },
+    {
+      "url": "https://inc.in/brief-history-of-congress/1885-1895",
+      "title": "印度国民大会党 · 1885—1895年创立时期",
+      "retrievedAt": "2026-10-23T06:45:52.665829+00:00",
+      "sha256": "432ed9aa65167e71a63736062ce24c7a9a74868e17d7a337b94beed813c58247",
+      "revisionId": null
+    },
+    {
+      "url": "https://inc.in/inc-sessions",
+      "title": "印度国民大会党 · 历届大会原始年表",
+      "retrievedAt": "2026-10-23T06:45:50.357262+00:00",
+      "sha256": "3036e6677419d768b488a0050fe0ec63aa637f272bae71aa11f8fecb45d50c06",
       "revisionId": null
     },
     {
@@ -186,12 +480,25 @@
       "revisionId": null
     },
     {
+      "url": "https://maa.cam.ac.uk/schools/resources/african-collections-schools-resources/kingdom-benin",
+      "title": "剑桥大学考古与人类学博物馆 · Kingdom of Benin",
+      "retrievedAt": "2026-10-23T06:46:40.048136+00:00",
+      "sha256": "ceaf06ba040308a72d69adce928156c076350c585ff88025ba73876e889c2cc4",
+      "revisionId": null
+    },
+    {
       "url": "https://museum.jty.edu.cn/Home/Content/20227",
       "title": "吉林铁路博物馆 · 第一条国有铁路干线",
       "retrievedAt": "2026-10-08T18:03:12.660129+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.617181+00:00",
       "sha256": "6273a737cb11749384698c5c38a3ac07e3f9242975264a5b5ef30e16af86c123",
       "revisionId": null
+    },
+    {
+      "url": "https://nzhistory.govt.nz/people/james-cook",
+      "title": "新西兰文化与遗产部 · James Cook",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:51:01.629785+00:00"
     },
     {
       "url": "https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty",
@@ -209,6 +516,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
       "title": "OpenStax · World History 1 · 10-1-the-eastward-shift",
       "retrievedAt": "2026-10-22T08:05:47.353199+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.580134+00:00",
       "sha256": "0201d5dfbbccf7780211ada667f7497fd6816a691b140118cc7518d6cf7761b8",
       "revisionId": null
     },
@@ -216,6 +524,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-2-the-byzantine-empire-and-persia",
       "title": "OpenStax · World History 1 · 10-2-the-byzantine-empire-and-persia",
       "retrievedAt": "2026-10-22T08:05:47.679850+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.595944+00:00",
       "sha256": "27f484cc0d4251daca6172e84b50e9ca7b0f1c8ddd0bf0a5dce09d18cb814ca9",
       "revisionId": null
     },
@@ -223,7 +532,15 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
       "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
       "retrievedAt": "2026-10-22T08:05:49.198541+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:39.894145+00:00",
       "sha256": "02137a80ea0f0ce9a1ccdeb713fd5ecbbfab7d2a246d0d696a61c5e7b70c99d7",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-4-the-margins-of-empire",
+      "title": "OpenStax · The Margins of Empire：贵霜",
+      "retrievedAt": "2026-10-23T06:44:56.823919+00:00",
+      "sha256": "19f445fb1ae08409ff9bee9ddb0b919be5e1048f1d4cc2c596761d94083d4d28",
       "revisionId": null
     },
     {
@@ -237,6 +554,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
       "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
       "retrievedAt": "2026-10-22T08:05:49.377241+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:09.205745+00:00",
       "sha256": "46e9364a810a8bbe06cdf93df75e4d20a96289e8c3c04fab254710b990b96575",
       "revisionId": null
     },
@@ -244,6 +562,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages",
       "title": "OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages",
       "retrievedAt": "2026-10-22T08:05:49.305309+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:31.521109+00:00",
       "sha256": "a96b78cb5c429d1a33538be3f1ca360d7951c2c888d4155ebbdef67612dc0ab9",
       "revisionId": null
     },
@@ -258,6 +577,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/13-1-the-post-roman-west-in-the-early-middle-ages",
       "title": "OpenStax · World History 1 · 13-1-the-post-roman-west-in-the-early-middle-ages",
       "retrievedAt": "2026-10-22T08:05:50.610935+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.595700+00:00",
       "sha256": "fa1ed9872fca5113c8ffbed304f799cafb23ccb67b953cf8dff006213a408c1f",
       "revisionId": null
     },
@@ -279,6 +599,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
       "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
       "retrievedAt": "2026-10-22T08:05:52.014002+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.611071+00:00",
       "sha256": "24644cc3a7b181476af9248fff95522aba5060d6ca5c020c6a00544ee6f9b220",
       "revisionId": null
     },
@@ -286,6 +607,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
       "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
       "retrievedAt": "2026-10-22T08:05:52.537465+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:39.907904+00:00",
       "sha256": "11d012e0150bbd7e2984b603d2ada68cc0120f28039324356fdd46823c1ff93b",
       "revisionId": null
     },
@@ -300,13 +622,23 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/17-1-the-ottomans-and-the-mongols",
       "title": "OpenStax · World History 1 · 17-1-the-ottomans-and-the-mongols",
       "retrievedAt": "2026-10-22T08:05:54.597242+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:51.723381+00:00",
       "sha256": "59bad5c554730614058f35628f32a6a2612be2c76446abc073a411c8918ac151",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-3-ancient-egypt",
+      "title": "OpenStax · World History 1 · 3-3-ancient-egypt",
+      "retrievedAt": "2026-10-22T08:05:34.294715+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.541840+00:00",
+      "sha256": "d9964a7d60caad458c7defabe21825025e832438b35b648ea7bf0c2d9dd4cd7a",
       "revisionId": null
     },
     {
       "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
       "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
       "retrievedAt": "2026-10-22T08:05:41.115833+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.562935+00:00",
       "sha256": "e0061437bcfae2e499b23924f36a98ce35657bdec43035da0255997f18a1f84a",
       "revisionId": null
     },
@@ -314,6 +646,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/4-2-egypts-new-kingdom",
       "title": "OpenStax · World History 1 · 4-2-egypts-new-kingdom",
       "retrievedAt": "2026-10-22T08:05:34.485082+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.542303+00:00",
       "sha256": "a2af434dd05167d1a2efddbae0b3589811bf7a1b4f5f7a4c1c1d02997df74f62",
       "revisionId": null
     },
@@ -321,6 +654,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/4-3-the-persian-empire",
       "title": "OpenStax · World History 1 · 4-3-the-persian-empire",
       "retrievedAt": "2026-10-22T08:05:35.199703+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.562684+00:00",
       "sha256": "f62f6cbcb4c8d7aebf955cf271e840f5074038cfb66419c97c798ae8a6ec2ccb",
       "revisionId": null
     },
@@ -328,6 +662,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
       "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
       "retrievedAt": "2026-10-22T08:05:38.811963+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:31.544724+00:00",
       "sha256": "fde0869729f6cd1c4bddbb0cfd33c1d89d5d59f152483cd3b1de2cb00febf334",
       "revisionId": null
     },
@@ -335,6 +670,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
       "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
       "retrievedAt": "2026-10-22T08:05:43.591525+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:28.139180+00:00",
       "sha256": "76d00dc664fc2ac129d73f028564db6dec7e18c18885c235ff560fc03f60c6b1",
       "revisionId": null
     },
@@ -356,6 +692,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/6-3-the-hellenistic-era",
       "title": "OpenStax · World History 1 · 6-3-the-hellenistic-era",
       "retrievedAt": "2026-10-22T08:05:42.543229+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:09.223125+00:00",
       "sha256": "16321cbb1b03566d9fccf0ee6fca460486c192a9024e922fc270b867004820c5",
       "revisionId": null
     },
@@ -363,6 +700,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/6-4-the-roman-republic",
       "title": "OpenStax · World History 1 · 6-4-the-roman-republic",
       "retrievedAt": "2026-10-22T08:05:44.440532+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:09.206178+00:00",
       "sha256": "c5895322e7b530dac19c4cdf992489540ae09788d4b0424896fca95b5be34262",
       "revisionId": null
     },
@@ -370,6 +708,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/6-5-the-age-of-augustus",
       "title": "OpenStax · World History 1 · 6-5-the-age-of-augustus",
       "retrievedAt": "2026-10-22T08:05:43.085782+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.579919+00:00",
       "sha256": "0651edfe7218154e53a7367ed01b54794c41ac91b9166af755c9b57668a6c291",
       "revisionId": null
     },
@@ -391,6 +730,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
       "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
       "retrievedAt": "2026-10-22T08:05:45.697377+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:43.435860+00:00",
       "sha256": "d099e8c1e89fe64dea2843e49f4072dbbfc02d18687f08a1801fccb36bef3702",
       "revisionId": null
     },
@@ -409,9 +749,25 @@
       "revisionId": null
     },
     {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-1-alliances-expansion-and-conflict",
+      "title": "OpenStax · World History 2 · 11-1-alliances-expansion-and-conflict",
+      "retrievedAt": "2026-10-22T08:06:02.589563+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:11.317536+00:00",
+      "sha256": "f0349134a99408b5d7e8c31d3d17d0239740381662a2c8c449207ea9112a67a4",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
+      "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
+      "retrievedAt": "2026-10-23T06:50:30.628003+00:00",
+      "sha256": "cbb967c8ef48ddacef1d0f8e62bbcbab0f4399bab5b0eb3035a6db207c3d64b8",
+      "revisionId": null
+    },
+    {
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
       "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
       "retrievedAt": "2026-10-22T08:05:54.797338+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:31.533548+00:00",
       "sha256": "74726a8d58d1800f6e9eaf1823803f8bd8cf4643d88a8461f226f2c735c9c61c",
       "revisionId": null
     },
@@ -426,6 +782,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
       "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
       "retrievedAt": "2026-10-22T08:05:56.314447+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:35.276588+00:00",
       "sha256": "3eeaa90336a8ca03789beb20bda434639903609105bdb9c23dcd322c6373967d",
       "revisionId": null
     },
@@ -433,13 +790,30 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
       "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
       "retrievedAt": "2026-10-22T08:05:56.439112+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:39.919381+00:00",
       "sha256": "d0690498fb78a26e37c973575ef54159ed0bb0c8d3151e84a3c4e515ec887edd",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-introduction",
+      "title": "OpenStax · Early Modern Africa 年代图",
+      "retrievedAt": "2026-10-23T06:46:34.383613+00:00",
+      "sha256": "596e5ae7889fa84b5d6ae4a603375f40eeaca629e7217e2f562c4d633bda1d4f",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-2-the-ottoman-empire",
+      "title": "OpenStax · World History 2 · 4-2-the-ottoman-empire",
+      "retrievedAt": "2026-10-22T08:05:56.379060+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.610879+00:00",
+      "sha256": "114df2161ce8e94243918671ed732c4251d2413baf6a30c3f7e40857324b3d32",
       "revisionId": null
     },
     {
       "url": "https://openstax.org/books/world-history-volume-2/pages/4-3-the-safavid-empire",
       "title": "OpenStax · World History 2 · 4-3-the-safavid-empire",
       "retrievedAt": "2026-10-22T08:05:58.647730+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.627058+00:00",
       "sha256": "4445c7d4bb9040ac69f0712d9ee36bb87eef55d0419c67c09db81739df0917f8",
       "revisionId": null
     },
@@ -447,6 +821,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
       "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
       "retrievedAt": "2026-10-22T08:05:57.399226+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:50:14.332494+00:00",
       "sha256": "6e6cde8957511b48af689203e3b769dad61d87a1749350fdde67e949835a7f2e",
       "revisionId": null
     },
@@ -454,6 +829,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
       "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
       "retrievedAt": "2026-10-22T08:05:56.996672+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:43.449826+00:00",
       "sha256": "6967fa7276c2f82d2fb79493b9cbe216a5ed08452e061a0938071dddf66386db",
       "revisionId": null
     },
@@ -482,6 +858,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
       "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
       "retrievedAt": "2026-10-22T08:05:58.447572+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:27.848918+00:00",
       "sha256": "3741e23fbd8dc089a28c7bd3778221f74819fc770621f60194b58f1895840b4b",
       "revisionId": null
     },
@@ -496,6 +873,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
       "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
       "retrievedAt": "2026-10-22T08:05:58.921542+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:25.328571+00:00",
       "sha256": "3001926349a47ab24bea80265ead8670a248d1da8b47ec711f0f9a6577dbfbbc",
       "revisionId": null
     },
@@ -503,6 +881,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/7-4-nationalism-liberalism-conservatism-and-the-political-order",
       "title": "OpenStax · World History 2 · 7-4-nationalism-liberalism-conservatism-and-the-political-order",
       "retrievedAt": "2026-10-22T08:06:00.499310+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:11.326855+00:00",
       "sha256": "276b78f6f6e2ffa1b07b72dab6c591789da79fcde153688f5ff306a547cb104b",
       "revisionId": null
     },
@@ -524,6 +903,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
       "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
       "retrievedAt": "2026-10-22T08:06:01.436623+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:50:29.939644+00:00",
       "sha256": "1443c443c9b2eb5705dd8da67e1c9e343c8e33cc7bbc819887b3c16e3daa3d7e",
       "revisionId": null
     },
@@ -531,6 +911,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/9-3-colonial-empires",
       "title": "OpenStax · World History 2 · 9-3-colonial-empires",
       "retrievedAt": "2026-10-22T08:06:02.578626+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:11.337127+00:00",
       "sha256": "3e0a09afbcb9ffb410b7d31307a173c65eb0e5dd455bdd73c238f8b690a64d40",
       "revisionId": null
     },
@@ -542,10 +923,38 @@
       "revisionId": null
     },
     {
+      "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
+      "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
+      "retrievedAt": "2026-10-23T06:50:50.365593+00:00",
+      "sha256": "fdd40f8672491ed8cb5d7e4c91178bdadac78ba60185c6b5db09c10a8890133c",
+      "revisionId": null
+    },
+    {
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/the-philippine-national-flag/",
+      "title": "菲律宾国家历史委员会 · The Philippine National Flag 历史标记",
+      "retrievedAt": "2026-10-23T06:46:37.037512+00:00",
+      "sha256": "ce61999c59ab02ccbed17e99c5daeaa68a2d7c71269ac94694e645cea5b7850f",
+      "revisionId": null
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "retrievedAt": "2026-10-06T17:45:55.335171+00:00",
       "sha256": "4f41ba3984bc9dc894abe764105bb9e94827e2cb49771fa54243112d7d9e5cc3",
+      "revisionId": null
+    },
+    {
+      "url": "https://royalarmouries.org/objects-and-stories/stories/the-hundred-years-war-1337-1453",
+      "title": "英国皇家军械博物馆 · The Hundred Years’ War",
+      "retrievedAt": "2026-10-23T06:50:15.373524+00:00",
+      "sha256": "0cf7635db47c1fa32b5b67a945f85c245b46b293386d8376bcbc3c25db2b4ecb",
+      "revisionId": null
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
+      "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
+      "retrievedAt": "2026-10-23T06:59:35.270424+00:00",
+      "sha256": "354ca5fac3821c28bc0143afb378a8e3418b207964c8021754b1881d7c52c1ce",
       "revisionId": null
     },
     {
@@ -581,11 +990,51 @@
       "revisionId": null
     },
     {
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
+      "title": "美国国会图书馆 · 俄罗斯国别研究（历史章节）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:35.535937+00:00"
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
+      "title": "美国国会图书馆法律图书馆 · Civic Education Models: Turkey",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:50:45.703705+00:00"
+    },
+    {
+      "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
+      "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
+      "retrievedAt": "2026-10-23T06:46:50.946708+00:00",
+      "sha256": "ec98d079ec1ef4f72fea0c06c51673c932ee829ccdd11ce2fa02a2fe159ebbff",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/250bis.pdf",
+      "title": "ICOMOS · Great Living Chola Temples 评估",
+      "retrievedAt": "2026-10-23T06:45:36.708396+00:00",
+      "sha256": "ed5a7bfd8640398dcb0524860232c77031904217016ca332644038b4fe6de181",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/document/104639",
+      "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
+      "retrievedAt": "2026-10-23T06:49:35.306409+00:00",
+      "sha256": "177b36fd35fb3b11761816f15f5594b68d7634f74a5d8bb5525101cd91dc4a19",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1001/",
       "title": "UNESCO · 青城山与都江堰",
       "retrievedAt": "2026-10-06T12:09:05.879673+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:22.920922+00:00",
       "sha256": "58536043f8226c69970e9eb60283e645e497f78cf6d1e3d365adce9beb37e202",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1081/",
+      "title": "UNESCO · 鄂尔浑河谷文化景观",
+      "retrievedAt": "2026-10-23T06:44:56.149871+00:00",
+      "sha256": "20a8853291a4535ee4ea255ed61a39e53085e41d12b5d8062ced73f6b1f5c149",
       "revisionId": null
     },
     {
@@ -596,11 +1045,25 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/1199/",
+      "title": "UNESCO · 库尼亚－乌尔根奇",
+      "retrievedAt": "2026-10-23T06:45:01.266251+00:00",
+      "sha256": "39ae77dfc735005d470d5990064776f372180b0489c6848fea6673a9cb228331",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1269/",
       "title": "UNESCO · 卡拉尔—苏佩圣城",
       "retrievedAt": "2026-10-07T06:33:47.593186+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:13.920697+00:00",
       "sha256": "1c2d7c08ae915733755d3497a1be05e085b4ff5931c0fa9bb67de81c677ac6af",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1278/",
+      "title": "UNESCO · 开城历史建筑与遗址",
+      "retrievedAt": "2026-10-23T06:46:07.927222+00:00",
+      "sha256": "30fdae7914cd5d337e9bc0647010d75bff904ac38b32a8aded40f38f89612ee5",
       "revisionId": null
     },
     {
@@ -623,6 +1086,13 @@
       "title": "UNESCO · 恰塔霍裕克新石器时代遗址",
       "retrievedAt": "2026-10-06T18:33:45.841725+00:00",
       "sha256": "e18e2e754a37b1bf25e344b1d079e01ca3787ca07370f8d370cec747ef9aa375",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/144/",
+      "title": "UNESCO · 基尔瓦基斯瓦尼与松戈马拉遗址",
+      "retrievedAt": "2026-10-23T06:46:36.588022+00:00",
+      "sha256": "416caa67d57b7e9596354007e286074bf72a9728cebb751a07430c2d6440d14f",
       "revisionId": null
     },
     {
@@ -657,6 +1127,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "title": "UNESCO · 蒲甘",
+      "retrievedAt": "2026-10-23T06:46:20.908894+00:00",
+      "sha256": "796e1bdffc3b24c4b74e6c4b746c5772d5e9e326b0bf4e341d1adad02a99e4b0",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1592/",
       "title": "UNESCO · 良渚古城遗址",
       "retrievedAt": "2026-10-06T18:33:46.870424+00:00",
@@ -679,11 +1156,82 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/18/",
+      "title": "UNESCO · 拉利贝拉岩石教堂",
+      "retrievedAt": "2026-10-23T06:46:38.270232+00:00",
+      "sha256": "b7c02a44c2e2cef43cf1a4007709ee8b3aa08d4178a15557f83cf36f8dbc0c6f",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/241/",
+      "title": "UNESCO · 亨比古迹群",
+      "retrievedAt": "2026-10-23T06:45:37.809802+00:00",
+      "sha256": "67ece693cc170204b9ab19e9baa8920932fc4ecf6ae9f9776b0b472cc5d8adf1",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/250/",
+      "title": "UNESCO · 朱罗王朝现存的伟大神庙",
+      "retrievedAt": "2026-10-23T06:45:37.296287+00:00",
+      "sha256": "eb5f07ca79b572676a2549dac12959c1f5241667b4d6c7974fe21d7ecaab2c7a",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/274",
+      "title": "UNESCO · Historic Sanctuary of Machu Picchu",
+      "retrievedAt": "2026-10-23T06:50:51.116919+00:00",
+      "sha256": "15e86e45613a831afc5c129f19b777faf5ed28a9623230a2b69bc83401ee3462",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/514/",
       "title": "UNESCO · 奥克尼新石器时代遗址",
       "retrievedAt": "2026-10-07T06:33:46.881601+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:13.914129+00:00",
       "sha256": "00eba28a04585f572e7c0607ecf904913a18cea7e38a98097bf6497f79b384cd",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/540/",
+      "title": "UNESCO · Historic Centre of Saint Petersburg and Related Groups of Monuments",
+      "retrievedAt": "2026-10-23T06:50:25.174655+00:00",
+      "sha256": "bfd6ad8d1e8d1976d142d9179ad25417395fafcbae71517c6f3f7be70854bbfe",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/574/",
+      "title": "UNESCO · 素可泰历史城镇及相关城镇",
+      "retrievedAt": "2026-10-23T06:46:21.826188+00:00",
+      "sha256": "13583aa7c23525d68243139dcad710203f5b1980a2e10bf10780c72b53de5a99",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/576/",
+      "title": "UNESCO · 阿瑜陀耶古城",
+      "retrievedAt": "2026-10-23T06:46:22.401546+00:00",
+      "sha256": "8a871132ac0d6a564fd44b3f97f3c96984e32da5eac7081ec2f16bc23afbe2d8",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/602/",
+      "title": "UNESCO · 布哈拉历史中心",
+      "retrievedAt": "2026-10-23T06:44:57.002188+00:00",
+      "sha256": "fdfdbd5b654c12f2616f0bb39356ba1cf20b1e834ab7011a36f573d72686675c",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/603/",
+      "title": "UNESCO · 撒马尔罕：文化的十字路口",
+      "retrievedAt": "2026-10-23T06:45:05.464266+00:00",
+      "sha256": "772da192636d8451391aa51f4e6ce32c1214e96057909dff3a39647feb8bf304",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/668/",
+      "title": "UNESCO · 吴哥",
+      "retrievedAt": "2026-10-23T06:46:15.362174+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:31.555940+00:00",
+      "sha256": "e8bc0601ffddd8e04e149aa03c33a5de2b1af6485fedbb4c9ad072c2488a5eb3",
       "revisionId": null
     },
     {
@@ -700,6 +1248,13 @@
       "retrievedAt": "2026-10-06T12:09:46.632009+00:00",
       "lastCacheCheckAt": "2026-10-06T16:20:22.940443+00:00",
       "sha256": "83125d5005eb465696d08f2d38f53325344038de908c2587883016415a19c063",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/886/",
+      "title": "UNESCO · 古代梅尔夫历史文化公园",
+      "retrievedAt": "2026-10-23T06:45:00.984612+00:00",
+      "sha256": "9bb05bd6e2c259f4583736f2a28fae1877864aa958c71347cae3b2e171e3cdd2",
       "revisionId": null
     },
     {
@@ -725,12 +1280,81 @@
       "revisionId": null
     },
     {
+      "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
+      "title": "阿尔罕布拉宫管理委员会 · History",
+      "retrievedAt": "2026-10-23T06:50:18.818968+00:00",
+      "sha256": "cf4853e1cc2ceb44f2c22b59cad61d2a2af53cf4a7c4de019ee673d579e977d4",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
+      "title": "美国国家档案馆 · The Treaty of Kanagawa",
+      "retrievedAt": "2026-10-23T06:46:20.326591+00:00",
+      "sha256": "82a09ee6b82e3a39661f9abddc5f983d6feaa0c98b24b555b0008591ebce2874",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/constitution",
+      "title": "美国国家档案馆 · Constitution of the United States (1787)",
+      "retrievedAt": "2026-10-23T06:50:39.657957+00:00",
+      "sha256": "d977283fb996e16995e0fbbeb6e8c9287a8bce3da51124ab22014edd864ca25a",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+      "title": "美国国家档案馆 · Louisiana Purchase Treaty (1803)",
+      "retrievedAt": "2026-10-23T06:50:46.531068+00:00",
+      "sha256": "e2a1a091f405d33cc88e88324bac58eb08e2e516f1882a94f8a90ceae08c48f6",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/monroe-doctrine",
+      "title": "美国国家档案馆 · Monroe Doctrine (1823)",
+      "retrievedAt": "2026-10-23T06:50:42.464170+00:00",
+      "sha256": "97b76b27c94fbad627b37e398c04f872a10313499a0d88c807b070e0421cb54c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
+      "title": "美国国家档案馆 · Treaty of Guadalupe Hidalgo (1848)",
+      "retrievedAt": "2026-10-23T06:50:42.937540+00:00",
+      "sha256": "e00fd84e286e0dfd8786f99ed2b449a32fdaa727f04c05d83d3db3b9864d25fc",
+      "revisionId": null
+    },
+    {
       "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
       "title": "西安半坡博物馆 · 遗址与功能分区",
       "retrievedAt": "2026-10-07T06:33:31.712220+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:07.035196+00:00",
       "sha256": "077b865cdcb82484574f1178e69b2df78ca23d37a239e8f224ec21cc5af9d6de",
       "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
+      "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
+      "retrievedAt": "2026-10-23T06:54:52.555532+00:00",
+      "sha256": "5414a3268cad36c3186b07f06d96b72365a5b6a1343776f53cbdc72de9657f56",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/ancient-egyptian-economy/ptolemaic-period-33230-bce/029A98BAB6F458BA138E6E028C71CAB3",
+      "title": "剑桥大学出版社 · 古埃及经济：托勒密时期",
+      "retrievedAt": "2026-10-23T06:54:11.305501+00:00",
+      "sha256": "763771fcca041c94bc5ee5a1c33d5e1a7770169ca733b45d06a4640a22066434",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/writing-kingship-and-power-in-anglosaxon-england/origins-of-the-kingdom-of-the-english/02EA5266C0D391AD15C6A7E314DAF681",
+      "title": "剑桥大学出版社 · 英格兰王国的起源",
+      "retrievedAt": "2026-10-23T06:54:20.929058+00:00",
+      "sha256": "e397a7153b26ce22ca9f790650ba762f6d89ccf29696393784feda45f2135c6f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
+      "title": "加拿大政府 · The history of Canada Day",
+      "error": "The read operation timed out",
+      "attemptedAt": "2026-10-23T06:52:35.110439+00:00"
     },
     {
       "url": "https://www.cass.cn/xueshuchengguo/wenzhexuebulishixuebu/201707/t20170720_3585032.shtml",
@@ -848,11 +1472,39 @@
       "revisionId": null
     },
     {
+      "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
+      "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
+      "retrievedAt": "2026-10-23T06:50:15.841194+00:00",
+      "sha256": "a990c7ded14b0ed04766f700c50908108738c76de587cefbda0ba8cddec07e1f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
       "title": "剑桥大学 · Darwin Correspondence Project: Origin",
       "retrievedAt": "2026-10-22T08:38:31.977446+00:00",
       "lastCacheCheckAt": "2026-10-22T08:49:27.264193+00:00",
       "sha256": "53f12a8e9f667ec001d02981158df2087fc664db083e11f6bd01b54ded21b541",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dhm.de/archiv/ausstellungen/heiliges-roemisches-reich/index_3.html",
+      "title": "德国历史博物馆 · 神圣罗马帝国（962—1806）",
+      "retrievedAt": "2026-10-23T06:54:20.673896+00:00",
+      "sha256": "3b3953a8499468276ab9377a0687a19699ebb574e7595899d10ec0e62b5f2855",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/revolution-1848",
+      "title": "德国历史博物馆 · Die Revolution von 1848/49",
+      "retrievedAt": "2026-10-23T06:50:30.074652+00:00",
+      "sha256": "0de1c5d57edb275694c0aa4daf5d9757dfda51c090eb75459b7f043e377f1c73",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.doc.govt.nz/our-work/heritage/heritage-topics/new-zealand-wars/",
+      "title": "新西兰自然保护部 · New Zealand Wars",
+      "retrievedAt": "2026-10-23T06:50:57.974670+00:00",
+      "sha256": "2802350c7075385a42cf6b701d82ac32da48708dc1f6014b8c7413c5cbbd4d41",
       "revisionId": null
     },
     {
@@ -1008,6 +1660,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
+      "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
+      "retrievedAt": "2026-10-23T06:50:14.321138+00:00",
+      "sha256": "f23ed7fec219e69e687f193273b83d70b453ed3c1d800b16471edd5d3e5e10dc",
+      "revisionId": null
+    },
+    {
       "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
       "title": "福州市人民政府 · 严复",
       "retrievedAt": "2026-10-08T18:03:11.747620+00:00",
@@ -1016,10 +1675,31 @@
       "revisionId": null
     },
     {
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=Nigeria&place=&subjectid=7000538",
+      "title": "Getty 地名词表 · Sokoto（7000538）",
+      "retrievedAt": "2026-10-23T06:46:52.270309+00:00",
+      "sha256": "402df91e1aac27ff1b49b3d2471b7f640b33fa6f0f57bec2ee045f27a3a79629",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
       "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
       "retrievedAt": "2026-10-22T08:49:42.815913+00:00",
       "sha256": "3174a1fd907e4b7179c878f61204e8982a0f579fb3404bd3d88e3e666a01e1b7",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gob.mx/agn/articulos/archivisticaclio-documentos-de-la-consumacion-de-la-independencia-de-mexico?idiom=es",
+      "title": "墨西哥国家档案馆 · Documentos de la consumación de la Independencia de México",
+      "retrievedAt": "2026-10-23T06:50:41.826987+00:00",
+      "sha256": "45165e31eed8741ceff387fbb8aae24e83b6142c5fdbd73022814a2be5dca2f8",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gov.za/about-sa/history",
+      "title": "南非政府 · History",
+      "retrievedAt": "2026-10-23T06:46:54.415234+00:00",
+      "sha256": "deb874d650f2d7a15a94e3f54a07e236d4e7b80f0ade102ab3b1d8d8f4b4eb84",
       "revisionId": null
     },
     {
@@ -1054,6 +1734,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/franz-joseph-hall",
+      "title": "奥地利军事历史博物馆 · 1867年妥协至第一次世界大战",
+      "retrievedAt": "2026-10-23T06:54:16.203727+00:00",
+      "sha256": "1b3c3efa4c3a13896eb6a01fb228232fd638faadf4872429617679cdf87f3719",
+      "revisionId": null
+    },
+    {
       "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
       "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
       "retrievedAt": "2026-10-07T06:33:45.994199+00:00",
@@ -1062,10 +1749,83 @@
       "revisionId": null
     },
     {
+      "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
+      "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
+      "retrievedAt": "2026-10-23T06:50:37.554525+00:00",
+      "sha256": "67c51b01a70197854779fed9ef48032ff42b6d0e83c0c5f691183d82e48c2ccd",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
+      "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
+      "error": "HTTP Error 503: Service Unavailable",
+      "attemptedAt": "2026-10-23T06:45:49.214582+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
+      "title": "美国国会图书馆 · 皮萨罗与印加人",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:51.970592+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "title": "美国国会图书馆 · The Rise of Francisco Madero",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:50:53.078855+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/item/2007680333/",
+      "title": "美国国会图书馆 · 1868年撒马尔罕驻军影像档案",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:45:16.741990+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/item/2021668426/",
+      "title": "美国国会图书馆 · The First Map of the Strait of Magellan, 1520",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:50:23.251988+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
+      "title": "美国国会图书馆 · 宽永行幸记",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:43.413272+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection：秣菟罗笈多造像",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:59:40.480295+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/455304",
+      "title": "大都会艺术博物馆 · Pen Box Depicting Shah Isma’il in Battle",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:50:41.179301+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "title": "大都会艺术博物馆 · 平安时代（794—1185）",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:39.832640+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
+      "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:59.227031+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
       "title": "大都会艺术博物馆 · 书写的起源",
       "error": "HTTP Error 429: Too Many Requests",
       "attemptedAt": "2026-10-07T06:45:21.038044+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
+      "title": "大都会艺术博物馆 · 塞琉古帝国",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:18.445130+00:00"
     },
     {
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
@@ -1074,17 +1834,140 @@
       "attemptedAt": "2026-10-06T18:33:54.455335+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
+      "title": "大都会艺术博物馆 · 非洲艺术：刚果文明",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:51.649562+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
+      "title": "大都会艺术博物馆 · Christianity and Kongo Visual Culture",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:46:48.444811+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
+      "title": "大都会艺术博物馆 · The Ottoman Empire",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:50:38.766490+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/04/afw.html",
+      "title": "大都会艺术博物馆 · 西北非，前1000年—公元1年",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:18.444666+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/06/nc",
+      "title": "大都会艺术博物馆 · Central and North Asia, 500–1000",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:45:06.037336+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eaj",
+      "title": "大都会艺术博物馆 · Japan, 1000–1400",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:46:07.125176+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eak",
+      "title": "大都会艺术博物馆 · 朝鲜半岛，1000—1400年",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:43.774414+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/euwf",
+      "title": "大都会艺术博物馆 · 法国，1000—1400年",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:28.058563+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/sse",
+      "title": "大都会艺术博物馆 · Southeast Asia, 1000–1400",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:46:29.569816+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/08/eusi",
+      "title": "大都会艺术博物馆 · 伊比利亚半岛，1400—1600年",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-23T06:54:32.553778+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/toah/ht/08/eustc",
       "title": "大都会艺术博物馆 · Florence and Central Italy, 1400–1600",
       "error": "HTTP Error 429: Too Many Requests",
       "attemptedAt": "2026-10-22T08:49:34.403575+00:00"
     },
     {
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "title": "英国国家陆军博物馆 · Battle of Waterloo",
+      "retrievedAt": "2026-10-23T06:50:28.552756+00:00",
+      "sha256": "68cb1986c4a6309f844e6135870d143ba64b967fdf219e39af0ec29475b66197",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/boer-war",
+      "title": "英国国家陆军博物馆 · Boer War",
+      "retrievedAt": "2026-10-23T06:46:58.505289+00:00",
+      "sha256": "4306d56ff5514e131f0babaac91faa9257216f92fdada9d6310f90e0a5b36f17",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/british-civil-wars",
+      "title": "英国国家陆军博物馆 · British Civil Wars",
+      "retrievedAt": "2026-10-23T06:50:20.510204+00:00",
+      "sha256": "1d6db08c900117e0d79d3afd8ead4a137b0e6b63f6c0dfa9a9cf682a9a033643",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/crimean-war",
+      "title": "英国国家陆军博物馆 · Crimean War",
+      "retrievedAt": "2026-10-23T06:50:29.925571+00:00",
+      "sha256": "75c0c6840326f9157abd27ca457c6dfb83c31d38abf7115180240c8607c18371",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-duchy-of-warsaw/",
+      "title": "拿破仑基金会 · The Duchy of Warsaw: The Gradual Disappearance of Poland",
+      "retrievedAt": "2026-10-23T06:50:26.467456+00:00",
+      "sha256": "9ad746d8fbd68412b6fd0f6108e4cdba56a7877c10877059f012bca85b0c0797",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-proclamation-of-empire/",
+      "title": "拿破仑基金会 · The proclamation of Empire, 18 May 1804",
+      "retrievedAt": "2026-10-23T06:50:28.477892+00:00",
+      "sha256": "5e364b7d163a33967247ffda56719ba15fbe14c2c1c6902f74b3ebffdadc6306",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.napoleon.org/en/young-historians/napodoc/les-masses-de-granit-de-nouvelles-institutions-napoleoniennes",
+      "title": "拿破仑基金会 · The masses of granite: The Civil Code",
+      "retrievedAt": "2026-10-23T06:50:27.829182+00:00",
+      "sha256": "3905a44806cbd7b3d691ad65400c2d7da2f1d3bdd54fc524d5631720b0d89a61",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
+      "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
+      "retrievedAt": "2026-10-23T06:46:32.795222+00:00",
+      "sha256": "f1ec0314b3716651924f2a2addd179e6ef1374d93b1e7bee766f166baa90ef65",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
       "title": "英国国家档案馆 · Magna Carta",
       "retrievedAt": "2026-10-22T08:38:30.551343+00:00",
-      "lastCacheCheckAt": "2026-10-22T08:49:27.256203+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:20.693374+00:00",
       "sha256": "f02ff2f72a4f71af36594584e37a31fe92860165f3bb5b1d785e18ae43cd503f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-operations-up-to-1913",
+      "title": "英国国家档案馆 · British Army operations up to 1913",
+      "retrievedAt": "2026-10-23T06:50:32.157869+00:00",
+      "sha256": "d2faf1ba69aaf41aee8e0b23c0e440825244494e4e8ac5f3f41d92e5197250b5",
       "revisionId": null
     },
     {
@@ -1107,7 +1990,15 @@
       "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
       "title": "日本国立国会图书馆 · Modern Japan in archives: Russo-Japanese War",
       "retrievedAt": "2026-10-22T08:49:45.035917+00:00",
+      "lastCacheCheckAt": "2026-10-23T06:54:18.516740+00:00",
       "sha256": "e0e638c371c89df7d0a9a59f6cbc2808c33285d1cc3025913388099863383d6f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description27.html",
+      "title": "日本国立国会图书馆 · Japan’s Annexation of Korea",
+      "retrievedAt": "2026-10-23T06:46:14.800727+00:00",
+      "sha256": "0dc933a821ba3cc70eedeb55e2456bbc8d82aee7b16038ec3171078cea782564",
       "revisionId": null
     },
     {
@@ -1131,11 +2022,37 @@
       "revisionId": null
     },
     {
+      "url": "https://www.nps.gov/locations/hawaii/history.htm",
+      "title": "美国国家公园管理局 · Hawaiian History",
+      "retrievedAt": "2026-10-23T06:50:57.054825+00:00",
+      "sha256": "772fa165a5aadcae434631b8aae5e0b74c6d4019475326105671ff2ed6754244",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
       "title": "美国国家公园管理局 · 1903 The First Flight",
       "retrievedAt": "2026-10-22T08:38:33.155521+00:00",
       "lastCacheCheckAt": "2026-10-22T08:49:27.272511+00:00",
       "sha256": "37cb908667b4c6fd93573de6a12ec92301bb67d444f8f40a7c30ffc3e2c38bfb",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+      "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:27.819261+00:00"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
+      "title": "英国议会 · Overview of the Glorious Revolution",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:50:27.749035+00:00"
+    },
+    {
+      "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
+      "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
+      "retrievedAt": "2026-10-23T06:54:41.816286+00:00",
+      "sha256": "98e34858f9852863928ac4ff11baa18a7e506a98ec121bd0da328b9f91ef3b95",
       "revisionId": null
     },
     {
@@ -1147,11 +2064,45 @@
       "revisionId": null
     },
     {
+      "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
+      "title": "荷兰国立博物馆 · The Republic",
+      "retrievedAt": "2026-10-23T06:50:19.796361+00:00",
+      "sha256": "c5420c23d7df9118bee1b832fefc46f63660f2f47f5d90e85f19210f2200d84d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.slam.org/collection/constituents/3919/",
+      "title": "圣路易斯艺术博物馆 · 明治时代",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-23T06:54:25.307099+00:00"
+    },
+    {
       "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
       "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
       "retrievedAt": "2026-10-08T18:03:11.501891+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.637191+00:00",
       "sha256": "fd96425fe1567a41d22a7dec86020f687f4daae0b0b9a8bb47af11192bc5d3d7",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "title": "苏伊士运河管理局 · Canal History",
+      "retrievedAt": "2026-10-23T06:46:55.997648+00:00",
+      "sha256": "c5991d9b0e015ef53d09d52d85bc2cba7aa9549d027ff298acaea550eeb57424",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
+      "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
+      "retrievedAt": "2026-10-23T06:46:12.358204+00:00",
+      "sha256": "05dc7a369fa776488a8355b5592834b0020cc3a98e70ed6248e2ca367cef8775",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
+      "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
+      "retrievedAt": "2026-10-23T06:59:34.747894+00:00",
+      "sha256": "d1ac06c7921ed1578002c1996ce4eb2fa9640865aa92aa5de64fc019bd040d9e",
       "revisionId": null
     },
     {

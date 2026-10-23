@@ -36,6 +36,7 @@ try {
   const { events, people, personById } = await server.ssrLoadModule('/src/data/content.ts')
   const { eventRegion, historyRegions } = await server.ssrLoadModule('/src/lib/time-pillar.ts')
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
+  const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { periods, tours } = await server.ssrLoadModule('/src/data/periods.ts')
   const snapshot = JSON.parse(await readFile('data/people.sources.json', 'utf8'))
@@ -114,6 +115,15 @@ try {
     )
     validateSources(dynasty)
     assert(dynasty.sections?.length >= 2, `Missing dynasty reading: ${dynasty.id}`)
+  }
+  assert.equal(new Set(worldPolities.map((polity) => polity.id)).size, worldPolities.length)
+  for (const polity of worldPolities) {
+    assert(!dynasties.some((dynasty) => dynasty.id === polity.id), `Repeated archive: ${polity.id}`)
+    assert(polity.summary && polity.context && polity.capital && polity.dateNote, polity.id)
+    assert(validYear(polity.from) && validYear(polity.to) && polity.from <= polity.to, polity.id)
+    assert(polity.region !== 'china' && Object.hasOwn(historyRegions, polity.region), polity.id)
+    assert(polity.mapNames.length && polity.sections?.length >= 1, polity.id)
+    validateSources(polity)
   }
   for (const tour of tours) {
     validateSources(tour)
@@ -327,6 +337,16 @@ try {
               ...(dynasty.sections ?? []).map((section) => section.text),
             ].join('').length,
           })),
+          worldPolities: worldPolities.map((polity) => ({
+            id: polity.id,
+            name: polity.name,
+            from: polity.from,
+            to: polity.to,
+            region: polity.region,
+            mapNames: polity.mapNames,
+            sourceCount: polity.sources.length,
+            dateNote: polity.dateNote,
+          })),
           topics: tours.map((topic) => ({
             id: topic.id,
             name: topic.name,
@@ -384,6 +404,7 @@ try {
       ),
     },
     dynasties: { total: dynasties.length },
+    worldPolities: { total: worldPolities.length },
     topics: {
       total: tours.length,
       chapters: tours.reduce((count, topic) => count + topic.steps.length, 0),
@@ -434,7 +455,7 @@ try {
   if (!checkOnly)
     await writeFile('public/data/coverage.json', JSON.stringify(report, null, 2) + '\n')
   console.log(
-    `Audited ${people.length} people, ${events.length} events, ${dynasties.length} dynasty records, and ${report.journeys.nodes} journey nodes for ${journeys.length} people.`,
+    `Audited ${people.length} people, ${events.length} events, ${dynasties.length} Chinese dynasty records, ${worldPolities.length} world-polity profiles, and ${report.journeys.nodes} journey nodes for ${journeys.length} people.`,
   )
   console.log(
     `Source snapshots: ${report.sourceRetention.retained} verified, ${report.sourceRetention.unavailable} unavailable locally, ${report.sourceRetention.failed} recorded request failures; ${missingSnapshots} snapshot files not checked.`,

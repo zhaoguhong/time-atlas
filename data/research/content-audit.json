@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T09:20:11.598Z",
+  "generatedAt": "2026-10-23T07:00:43.320Z",
   "validation": {
     "allIntroductionsAndSources": true,
     "datesAndCoordinates": true,
@@ -11500,6 +11500,17 @@
       "readingCharacters": 159
     },
     {
+      "id": "world-kushan-networks",
+      "title": "贵霜连接中亚与北印度",
+      "year": 101,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 1,
+      "dateNote": "以2世纪概括贵霜扩展与交流；迦腻色伽在位的具体纪年仍有争论，不指定登基年。",
+      "locationNote": "以今阿富汗巴尔赫附近作巴克特里亚的区域阅读参照，非某次统一仪式地点或帝国边界。",
+      "readingCharacters": 141
+    },
+    {
       "id": "paper",
       "title": "蔡伦改进造纸并上奏",
       "year": 105,
@@ -11932,6 +11943,17 @@
       "readingCharacters": 222
     },
     {
+      "id": "world-gupta-age",
+      "title": "笈多时代的北印度文化",
+      "year": 301,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 2,
+      "dateNote": "此范围是笈多时代文化与艺术的宽泛分期，不表示所有地区在三百年中始终由同一王权统治。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 136
+    },
+    {
       "id": "han-zhao-founded",
       "title": "刘渊建立汉政权",
       "year": 304,
@@ -12343,6 +12365,16 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 212
+    },
+    {
+      "id": "world-turkic-khaganate",
+      "title": "突厥汗国兴起",
+      "year": 552,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 2,
+      "locationNote": "坐标位于今蒙古国鄂尔浑河谷，代表草原政治文化区域；不声称552年建国发生于这一坐标。",
+      "readingCharacters": 138
     },
     {
       "id": "foundation-northern-zhou",
@@ -12919,6 +12951,16 @@
       "readingCharacters": 225
     },
     {
+      "id": "world-heian-capital",
+      "title": "日本迁都平安京",
+      "year": 794,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 149
+    },
+    {
       "id": "world-charlemagne",
       "title": "查理曼加冕为皇帝",
       "year": 800,
@@ -12938,6 +12980,28 @@
       "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 158
+    },
+    {
+      "id": "world-angkor-centres",
+      "title": "高棉王权与吴哥都城发展",
+      "year": 801,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "范围概括吴哥早期都城的发展，不把802年的传统纪年等同于现今吴哥城的单次建成。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 149
+    },
+    {
+      "id": "world-ghana-trade",
+      "title": "古加纳与跨撒哈拉贸易",
+      "year": 801,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "范围概括古加纳的贸易优势阶段，不指定尚不确定的建国年。",
+      "locationNote": "库姆比萨利赫为与古加纳有关的考古区域，坐标不构成对古都位置争论的最终判定。",
+      "readingCharacters": 145
     },
     {
       "id": "yongzhen-reform",
@@ -13015,6 +13079,17 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 242
+    },
+    {
+      "id": "world-samanid-culture",
+      "title": "萨曼尼时代的布哈拉",
+      "year": 850,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 2,
+      "dateNote": "所示为萨曼尼时期城市与文化发展的概括，非王朝精确起讫。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 139
     },
     {
       "id": "diamond-sutra",
@@ -13117,6 +13192,17 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 199
+    },
+    {
+      "id": "world-goryeo-foundation",
+      "title": "王建建立高丽",
+      "year": 918,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "dateNote": "918年为王朝建立；不是开城所有宫城建筑同时建成或半岛统一完成的年份。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 140
     },
     {
       "id": "foundation-later-tang",
@@ -13505,6 +13591,57 @@
       "readingCharacters": 181
     },
     {
+      "id": "world-norse-newfoundland",
+      "title": "北欧航海者在纽芬兰留下营地",
+      "year": 1000,
+      "people": [],
+      "region": "americas",
+      "relatedEvents": [
+        {
+          "id": "world-columbus",
+          "label": "跨大西洋航行的年代对照",
+          "note": "两条记录相隔近五百年，不表示从北欧营地到加勒比航行存在已知的连续航线。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "年代概括遗址及相近建筑的考古分期，不是可确定的单日登陆日期；萨迦成文晚于所述航行。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 182
+    },
+    {
+      "id": "world-seljuk-merv",
+      "title": "梅尔夫成为塞尔柱都城",
+      "year": 1001,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 1,
+      "dateNote": "以世纪范围表示塞尔柱时期梅尔夫的都城发展，非王朝存在的全部年代。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 140
+    },
+    {
+      "id": "world-bagan-kingdom",
+      "title": "蒲甘王国与佛寺营建",
+      "year": 1001,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "所示为蒲甘文明的繁荣时期，不以世纪起点作为王朝精确建国年。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 146
+    },
+    {
+      "id": "world-chola-temple",
+      "title": "朱罗王朝营建坦贾武尔大神庙",
+      "year": 1003,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 2,
+      "dateNote": "范围指坦贾武尔布里哈迪斯瓦拉神庙的主要营建阶段，非朱罗王朝起讫。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 143
+    },
+    {
       "id": "chanyuan",
       "title": "澶渊之盟",
       "year": 1004,
@@ -13678,6 +13815,23 @@
       "readingCharacters": 168
     },
     {
+      "id": "world-hastings",
+      "title": "黑斯廷斯之战与诺曼征服",
+      "year": 1066,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-magna-carta",
+          "label": "王权变化的长期对照",
+          "note": "两条记录相隔约一个半世纪，便于比较征服王权与后来贵族、国王的权力争议，不表示简单的直接因果。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 183
+    },
+    {
       "id": "wanganshi",
       "title": "王安石变法开始",
       "year": 1069,
@@ -13820,6 +13974,39 @@
       "dateNote": "1101年为婚后收藏活动的起点，持续多年，不是《金石录》完成年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 171
+    },
+    {
+      "id": "world-khorezm-urgench",
+      "title": "花剌子模与乌尔根奇古城",
+      "year": 1101,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 1,
+      "dateNote": "此范围用于观察乌尔根奇的中世纪发展；现存遗迹实际跨越11—16世纪。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 142
+    },
+    {
+      "id": "world-angkor-wat",
+      "title": "吴哥寺营建",
+      "year": 1101,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 2,
+      "dateNote": "采用12世纪上半叶的宽泛营建分期，不表示精确施工起讫或完工日期。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 148
+    },
+    {
+      "id": "world-lalibela-churches",
+      "title": "拉利贝拉岩石教堂营建",
+      "year": 1101,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "教堂年代和原始用途并非完全一致；此范围保留传统归属与建筑分期的不确定性。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 142
     },
     {
       "id": "yingzao-fashi",
@@ -14070,6 +14257,17 @@
       "readingCharacters": 157
     },
     {
+      "id": "world-kamakura-shogun",
+      "title": "源赖朝获征夷大将军称号",
+      "year": 1192,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "dateNote": "1192年指将军任命，不把这一年表述为毫无争议的幕府唯一成立年份。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 147
+    },
+    {
       "id": "qingyuan-faction-ban",
       "title": "庆元党禁与理学受禁",
       "year": 1196,
@@ -14083,6 +14281,28 @@
       "dateNote": "1196年为禁伪学的重要节点，党禁是跨年的过程。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 164
+    },
+    {
+      "id": "world-sukhothai",
+      "title": "素可泰王国与泰文化发展",
+      "year": 1201,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "采用素可泰作为政治文化中心的世纪分期，不把有争论的建国细节压成一个确切年份。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 151
+    },
+    {
+      "id": "world-kilwa-trade",
+      "title": "基尔瓦与斯瓦希里海岸繁荣",
+      "year": 1201,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "指基尔瓦繁荣高峰，港市的实际居住与贸易历史远早于并晚于该范围。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 148
     },
     {
       "id": "world-constantinople-sack",
@@ -14174,6 +14394,24 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 157
+    },
+    {
+      "id": "world-mali-sundiata",
+      "title": "桑贾塔整合马里政权",
+      "year": 1235,
+      "people": [],
+      "region": "africa",
+      "relatedEvents": [
+        {
+          "id": "world-mansa-musa",
+          "label": "后续发展",
+          "note": "曼萨·穆萨的朝觐发生于马里建立之后，反映王国后来的财富与国际联系。"
+        }
+      ],
+      "sourceCount": 2,
+      "dateNote": "采用桑贾塔整合马里政权的传统近似纪年；史诗与书面史料不能支持每项细节的精确日期。",
+      "locationNote": "以今巴马科附近作上尼日尔河区域定位，不指认有争议的古都或某次战役地点。",
+      "readingCharacters": 145
     },
     {
       "id": "world-baghdad",
@@ -14329,6 +14567,16 @@
       "readingCharacters": 190
     },
     {
+      "id": "world-majapahit-foundation",
+      "title": "满者伯夷王国兴起",
+      "year": 1293,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标以特罗武兰遗址地区为近似阅读参照，不表示宫殿精确位置或势力范围。",
+      "readingCharacters": 142
+    },
+    {
       "id": "temur-accession",
       "title": "铁穆耳即位、元成宗统治开始",
       "year": 1294,
@@ -14337,6 +14585,28 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 251
+    },
+    {
+      "id": "world-ottoman-origins",
+      "title": "奥斯曼政权在安纳托利亚兴起",
+      "year": 1299,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "1299年是奥斯曼建国的传统纪年；边疆政权的形成是逐步过程，不代表已存在后来的帝国疆域。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 172
+    },
+    {
+      "id": "world-vijayanagara-hampi",
+      "title": "毗奢耶那伽罗与亨比都城",
+      "year": 1301,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 1,
+      "dateNote": "所示为亨比作为都城发展的时期；1565年受创不等于王朝全部政治活动同时终结。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 145
     },
     {
       "id": "wangzhen-agricultural-book",
@@ -14408,6 +14678,17 @@
       "readingCharacters": 244
     },
     {
+      "id": "world-hundred-years-war",
+      "title": "英法百年战争",
+      "year": 1337,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "通用起讫年概括多轮战争与停战；并非连续作战一百多年。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 178
+    },
+    {
       "id": "world-black-death",
       "title": "黑死病席卷欧洲",
       "year": 1347,
@@ -14417,6 +14698,17 @@
       "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 154
+    },
+    {
+      "id": "world-ayutthaya-foundation",
+      "title": "阿瑜陀耶兴起",
+      "year": 1350,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "dateNote": "UNESCO采用约1350年；其他资料可用1351年，故保留近似标记。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 150
     },
     {
       "id": "red-turbans",
@@ -14460,6 +14752,23 @@
       "readingCharacters": 195
     },
     {
+      "id": "world-timurid-rise",
+      "title": "帖木儿建立统治中心",
+      "year": 1370,
+      "people": [],
+      "region": "central-asia",
+      "relatedEvents": [
+        {
+          "id": "world-mughal",
+          "label": "后续王朝联系",
+          "note": "巴布尔出自帖木儿家族；莫卧儿的建立属于后来的独立政治阶段。"
+        }
+      ],
+      "sourceCount": 2,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 151
+    },
+    {
       "id": "huweiyong-case",
       "title": "胡惟庸案与废除丞相",
       "year": 1380,
@@ -14483,6 +14792,16 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 254
+    },
+    {
+      "id": "world-joseon-foundation",
+      "title": "李成桂建立朝鲜王朝",
+      "year": 1392,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为王朝建立时的旧都开城附近，不把后来的汉城建都提前到1392年。",
+      "readingCharacters": 149
     },
     {
       "id": "lanyu-case",
@@ -14553,6 +14872,42 @@
       "readingCharacters": 176
     },
     {
+      "id": "world-timbuktu-learning",
+      "title": "通布图的学术与手稿文化",
+      "year": 1401,
+      "people": [],
+      "region": "africa",
+      "relatedEvents": [
+        {
+          "id": "world-songhai",
+          "label": "同时代背景",
+          "note": "学术繁荣与桑海统治有联系，但城市文化早于并延续于单一王朝之外。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "所示为学术与手稿文化繁荣阶段，不表示城市建于1400年。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 141
+    },
+    {
+      "id": "world-machu-picchu",
+      "title": "印加营建马丘比丘",
+      "year": 1401,
+      "people": [],
+      "region": "americas",
+      "relatedEvents": [
+        {
+          "id": "world-inca",
+          "label": "同一文明的政治背景",
+          "note": "把建筑遗址与印加扩张并读，可以区分城市工程、国家范围与不确定的具体营建阶段。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "区间表示来源给出的营建世纪，不断言工程从1401年持续至1500年；具体建筑阶段仍有研究空间。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 202
+    },
+    {
       "id": "yongle-accession",
       "title": "朱棣夺取南京、即皇帝位",
       "year": 1402,
@@ -14590,6 +14945,17 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 187
+    },
+    {
+      "id": "world-ulugh-beg-observatory",
+      "title": "兀鲁伯营建撒马尔罕天文台",
+      "year": 1420,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 1,
+      "dateNote": "资料对开工与建成的具体年份表述不同，此处保留1420年代的营建过程，不设单一竣工年。",
+      "locationNote": "坐标按ICOMOS–IAU案例所列北纬39°40′29″、东经67°0′20″换算，标记天文台遗址。",
+      "readingCharacters": 157
     },
     {
       "id": "beijing-capital",
@@ -14636,6 +15002,27 @@
       "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 158
+    },
+    {
+      "id": "world-benin-ewuare",
+      "title": "埃乌阿雷时期贝宁王国扩展",
+      "year": 1440,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 2,
+      "dateNote": "采用埃乌阿雷统治的常见近似范围，不将口述传统的全部故事当作确切纪年史实。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 138
+    },
+    {
+      "id": "world-hunminjeongeum",
+      "title": "《训民正音》公布",
+      "year": 1446,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 162
     },
     {
       "id": "tumu",
@@ -14718,6 +15105,16 @@
       "readingCharacters": 209
     },
     {
+      "id": "world-kongo-baptism",
+      "title": "刚果国王受洗与大西洋交往",
+      "year": 1491,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 162
+    },
+    {
       "id": "world-columbus",
       "title": "哥伦布航行抵达加勒比海",
       "year": 1492,
@@ -14726,6 +15123,16 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 160
+    },
+    {
+      "id": "world-granada",
+      "title": "格拉纳达纳斯尔王朝结束",
+      "year": 1492,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 2,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 174
     },
     {
       "id": "world-dagama",
@@ -14792,6 +15199,16 @@
       "readingCharacters": 193
     },
     {
+      "id": "world-chaldiran",
+      "title": "查尔迪兰之战",
+      "year": 1514,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 2,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 177
+    },
+    {
       "id": "world-reformation",
       "title": "路德与宗教改革的开端",
       "year": 1517,
@@ -14824,6 +15241,24 @@
       "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 207
+    },
+    {
+      "id": "world-circumnavigation",
+      "title": "麦哲伦—埃尔卡诺船队完成环球航行",
+      "year": 1519,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-columbus",
+          "label": "另一条远洋航行",
+          "note": "两次航行展现不同阶段的海洋知识和殖民竞争，沿途各社会拥有自己的历史。"
+        }
+      ],
+      "sourceCount": 2,
+      "dateNote": "标注远航的起讫区间；麦哲伦于途中去世，返航由埃尔卡诺等人完成。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 178
     },
     {
       "id": "world-mughal",
@@ -14943,6 +15378,26 @@
       "readingCharacters": 208
     },
     {
+      "id": "world-dutch-abjuration",
+      "title": "尼德兰签署《弃绝法案》",
+      "year": 1581,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 171
+    },
+    {
+      "id": "world-spanish-armada",
+      "title": "西班牙无敌舰队远征失败",
+      "year": 1588,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 173
+    },
+    {
       "id": "imjin",
       "title": "明朝援助朝鲜抗击日本入侵",
       "year": 1592,
@@ -15021,6 +15476,24 @@
       "readingCharacters": 196
     },
     {
+      "id": "world-thirty-years-war",
+      "title": "三十年战争",
+      "year": 1618,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-westphalia",
+          "label": "战争的主要和解安排",
+          "note": "1648年的多项和约结束主要战事并调整欧洲政治关系。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "这是包含不同战区与多次结盟变化的战争区间，停战并不在所有地方同时发生。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 186
+    },
+    {
       "id": "sarhu",
       "title": "萨尔浒之战",
       "year": 1619,
@@ -15032,6 +15505,16 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 169
+    },
+    {
+      "id": "world-batavia",
+      "title": "荷兰东印度公司建立巴达维亚",
+      "year": 1619,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 144
     },
     {
       "id": "huangtaiji-accession",
@@ -15107,6 +15590,24 @@
       "dateNote": "大战及围城延续至1642年，这里取主要会战年份。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 244
+    },
+    {
+      "id": "world-british-civil-wars",
+      "title": "英国内战与三王国战争",
+      "year": 1642,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-glorious-revolution",
+          "label": "后来的王权与议会重组",
+          "note": "内战和光荣革命是不同阶段，期间还经历王政复辟，不能视为连续不变的运动。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "通用区间覆盖数次内战；苏格兰、爱尔兰的相关冲突另有更早起点。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 183
     },
     {
       "id": "qing-enters",
@@ -15294,6 +15795,17 @@
       "readingCharacters": 210
     },
     {
+      "id": "world-glorious-revolution",
+      "title": "光荣革命与《权利法案》",
+      "year": 1688,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "区间标记王位更替及其主要制度安排；相关战争与权力调整此后仍继续。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 176
+    },
+    {
       "id": "nerchinsk",
       "title": "《尼布楚条约》签订",
       "year": 1689,
@@ -15337,6 +15849,17 @@
       "readingCharacters": 162
     },
     {
+      "id": "world-khalsa",
+      "title": "锡克教卡尔萨团体建立",
+      "year": 1699,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 2,
+      "dateNote": "采用常见的1699年纪年，不混用当年的历法日期与今日节日日期。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 157
+    },
+    {
       "id": "world-enlightenment",
       "title": "启蒙运动的公共讨论",
       "year": 1700,
@@ -15346,6 +15869,16 @@
       "dateNote": "此处是便于对照的近似年代；考古分期或历史过程不能精确到单一年份。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 216
+    },
+    {
+      "id": "world-saint-petersburg",
+      "title": "彼得一世营建圣彼得堡",
+      "year": 1703,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 177
     },
     {
       "id": "kangxi-dictionary",
@@ -15538,6 +16071,42 @@
       "readingCharacters": 160
     },
     {
+      "id": "world-cook-new-zealand",
+      "title": "库克考察新西兰海岸",
+      "year": 1769,
+      "people": [],
+      "region": "oceania",
+      "relatedEvents": [
+        {
+          "id": "world-waitangi",
+          "label": "后来的主权与条约问题",
+          "note": "海洋接触之后，商贸、移民与政治关系继续发展，1840年条约构成另一个重要节点。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "指库克首次考察新西兰的阶段；后续到访另有年代，且他不是最早生活于此或最早抵达的欧洲人。",
+      "locationNote": "吉斯伯恩仅为首次接触区域的阅读参照；考察涉及新西兰多段海岸，不表示精确航线或逐年位置。",
+      "readingCharacters": 177
+    },
+    {
+      "id": "world-partitions-poland",
+      "title": "波兰—立陶宛联邦遭三次瓜分",
+      "year": 1772,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-vienna",
+          "label": "后来的领土安排",
+          "note": "拿破仑时期的变化之后，维也纳会议再次处理波兰地区的归属。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "三次主要瓜分发生于1772、1793和1795年；各次参与者和取得的区域并不相同。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 173
+    },
+    {
       "id": "siku",
       "title": "四库全书馆设立",
       "year": 1773,
@@ -15569,6 +16138,23 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 152
+    },
+    {
+      "id": "world-us-constitution",
+      "title": "美国制宪会议通过宪法文本",
+      "year": 1787,
+      "people": [],
+      "region": "americas",
+      "relatedEvents": [
+        {
+          "id": "world-american-independence",
+          "label": "从独立到联邦制度",
+          "note": "1776年的独立宣言与1787年的制宪处理不同问题，后者重建政府权力分配。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 179
     },
     {
       "id": "world-first-fleet",
@@ -15630,6 +16216,61 @@
       "readingCharacters": 236
     },
     {
+      "id": "world-louisiana-purchase",
+      "title": "美国与法国签订路易斯安那购地条约",
+      "year": 1803,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为新奥尔良这一地区性阅读锚点；条约在巴黎谈判签署，不表示所有领土实际控制或原住民同意转让。",
+      "readingCharacters": 171
+    },
+    {
+      "id": "world-sokoto-reform",
+      "title": "索科托改革战争与新政权形成",
+      "year": 1804,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 2,
+      "dateNote": "1804年标记改革战争的开端；政权扩展与首都组织分阶段形成，不能视作当日完成统一。",
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 142
+    },
+    {
+      "id": "world-napoleon-empire",
+      "title": "法兰西第一帝国建立",
+      "year": 1804,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-waterloo",
+          "label": "帝国最终失败的节点",
+          "note": "1815年滑铁卢战败结束了拿破仑重返帝位的百日统治。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 176
+    },
+    {
+      "id": "world-napoleonic-civil-code",
+      "title": "法国《民法典》颁行",
+      "year": 1804,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-napoleon-empire",
+          "label": "同年的另一项制度变化",
+          "note": "法典与帝国建立可并读，用于观察统一法律与权力集中的关系，并不说明二者等同。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 175
+    },
+    {
       "id": "world-spanish-america",
       "title": "西属美洲独立战争",
       "year": 1810,
@@ -15641,6 +16282,41 @@
       "readingCharacters": 160
     },
     {
+      "id": "world-mexican-independence",
+      "title": "墨西哥独立战争",
+      "year": 1810,
+      "people": [],
+      "region": "americas",
+      "relatedEvents": [
+        {
+          "id": "world-spanish-america",
+          "label": "拉丁美洲的跨区域对照",
+          "note": "墨西哥与西属南美的独立同时发生于更广泛的帝国危机中，各自具有独立的社会力量和战争过程。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "从多洛雷斯起义到独立实现的通用观察区间；不同地区与派别的参战阶段并不相同。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 180
+    },
+    {
+      "id": "world-hawaiian-kingdom",
+      "title": "卡美哈梅哈完成夏威夷群岛政治统一",
+      "year": 1810,
+      "people": [],
+      "region": "oceania",
+      "relatedEvents": [
+        {
+          "id": "world-hawaiian-overthrow",
+          "label": "王国后来面临的危机",
+          "note": "独立王国的形成和1893年的政变属于不同阶段，前者不能用后来的殖民身份解释。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 189
+    },
+    {
       "id": "world-vienna",
       "title": "维也纳会议重组欧洲秩序",
       "year": 1814,
@@ -15650,6 +16326,38 @@
       "dateNote": "所标时间为这一过程的观察区间；不同地区的变化并不同时发生。",
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 207
+    },
+    {
+      "id": "world-waterloo",
+      "title": "滑铁卢战役",
+      "year": 1815,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 170
+    },
+    {
+      "id": "world-zulu-consolidation",
+      "title": "沙卡时期祖鲁王权扩展",
+      "year": 1820,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "范围表示沙卡时期祖鲁势力扩展，不指定有不同说法的即位年；区域动荡不能全归因于一人。",
+      "locationNote": "以今夸杜库扎附近定位祖鲁兰地区，不代表所有战争或迁徙的起点。",
+      "readingCharacters": 149
+    },
+    {
+      "id": "world-greek-independence",
+      "title": "希腊独立运动",
+      "year": 1821,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "以起义至独立获承认为观察区间；王国体制和边界仍在后续外交安排中调整。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 174
     },
     {
       "id": "world-brazil",
@@ -15667,6 +16375,16 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 218
+    },
+    {
+      "id": "world-monroe-doctrine",
+      "title": "门罗提出西半球政策原则",
+      "year": 1823,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 187
     },
     {
       "id": "world-ayacucho",
@@ -15776,6 +16494,35 @@
       "readingCharacters": 250
     },
     {
+      "id": "world-new-zealand-wars",
+      "title": "新西兰战争与土地争夺",
+      "year": 1845,
+      "people": [],
+      "region": "oceania",
+      "relatedEvents": [
+        {
+          "id": "world-waitangi",
+          "label": "条约之后的争议",
+          "note": "战争与对主权和土地权的不同理解相联系，双方阵营并不能只按族群简单划分。"
+        }
+      ],
+      "sourceCount": 1,
+      "dateNote": "这是多场战争的常见整体区间；1843年怀劳冲突为此前的重要背景，并非所有地区连续交战。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 182
+    },
+    {
+      "id": "world-mexican-american-war",
+      "title": "美墨战争与墨西哥割地",
+      "year": 1846,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "战争以1848年《瓜达卢佩—伊达尔戈条约》结束；之后仍有条约批准和撤军事项。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 185
+    },
+    {
       "id": "world-manifesto",
       "title": "《共产党宣言》发表",
       "year": 1848,
@@ -15794,6 +16541,17 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 209
+    },
+    {
+      "id": "world-revolutions-1848",
+      "title": "1848年欧洲革命浪潮",
+      "year": 1848,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 1,
+      "dateNote": "多个地区的革命与镇压具有不同起讫时间，此处使用总体观察区间。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 173
     },
     {
       "id": "taiping",
@@ -15829,6 +16587,34 @@
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 249
+    },
+    {
+      "id": "world-crimean-war",
+      "title": "克里米亚战争",
+      "year": 1853,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 2,
+      "dateNote": "总战争区间；英国和法国于1854年介入，部分英国资料因此以1854年作为叙述起点。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 184
+    },
+    {
+      "id": "world-kanagawa-treaty",
+      "title": "日美签订《神奈川条约》",
+      "year": 1854,
+      "people": [],
+      "region": "east-asia",
+      "relatedEvents": [
+        {
+          "id": "world-meiji",
+          "label": "后续政治变化",
+          "note": "条约与对外压力是幕府末期危机的背景之一，不能单独解释明治维新。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 141
     },
     {
       "id": "second-opium",
@@ -15987,6 +16773,16 @@
       "readingCharacters": 157
     },
     {
+      "id": "world-russian-emancipation",
+      "title": "俄国废除农奴制",
+      "year": 1861,
+      "people": [],
+      "region": "europe",
+      "sourceCount": 2,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 177
+    },
+    {
       "id": "tongwen-college",
       "title": "京师同文馆创办",
       "year": 1862,
@@ -16046,6 +16842,33 @@
       "readingCharacters": 260
     },
     {
+      "id": "world-atlantic-telegraph",
+      "title": "跨大西洋海底电缆实现持续通信",
+      "year": 1866,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-second-industrial",
+          "label": "通信与工业网络",
+          "note": "跨洋电报可同第二次工业革命并读，观察技术如何改变信息速度和全球联系。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 198
+    },
+    {
+      "id": "world-canadian-confederation",
+      "title": "加拿大联邦成立",
+      "year": 1867,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 2,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 173
+    },
+    {
       "id": "world-meiji",
       "title": "明治维新开始",
       "year": 1868,
@@ -16061,6 +16884,36 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 207
+    },
+    {
+      "id": "world-russian-samarkand",
+      "title": "俄军占领撒马尔罕",
+      "year": 1868,
+      "people": [],
+      "region": "central-asia",
+      "sourceCount": 2,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 152
+    },
+    {
+      "id": "world-suez-canal",
+      "title": "苏伊士运河通航",
+      "year": 1869,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "locationNote": "坐标位于伊斯梅利亚附近的运河中段，代表整条航道，非单一施工点。",
+      "readingCharacters": 162
+    },
+    {
+      "id": "world-us-transcontinental-railway",
+      "title": "美国首条横贯大陆铁路接轨",
+      "year": 1869,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 200
     },
     {
       "id": "world-second-industrial",
@@ -16199,6 +17052,16 @@
       "readingCharacters": 255
     },
     {
+      "id": "world-indian-national-congress",
+      "title": "印度国民大会党召开首次大会",
+      "year": 1885,
+      "people": [],
+      "region": "south-asia",
+      "sourceCount": 2,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 148
+    },
+    {
       "id": "beiyang-fleet",
       "title": "北洋海军正式成军",
       "year": 1888,
@@ -16230,6 +17093,16 @@
       "sourceCount": 1,
       "locationNote": "坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。",
       "readingCharacters": 209
+    },
+    {
+      "id": "world-hawaiian-overthrow",
+      "title": "夏威夷君主制被推翻",
+      "year": 1893,
+      "people": [],
+      "region": "oceania",
+      "sourceCount": 2,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 185
     },
     {
       "id": "sino-japanese",
@@ -16372,6 +17245,37 @@
       "readingCharacters": 266
     },
     {
+      "id": "world-philippine-independence-declaration",
+      "title": "菲律宾宣告独立",
+      "year": 1898,
+      "people": [],
+      "region": "southeast-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标标示菲律宾Kawit宣告地附近；所引NHCP页面中的香港标记纪念国旗缝制，其铭文另明确记载Kawit宣告地点。",
+      "readingCharacters": 139
+    },
+    {
+      "id": "world-spanish-american-war",
+      "title": "美西战争与殖民版图重组",
+      "year": 1898,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 175
+    },
+    {
+      "id": "world-south-african-war",
+      "title": "南非战争（第二次布尔战争）",
+      "year": 1899,
+      "people": [],
+      "region": "africa",
+      "sourceCount": 1,
+      "dateNote": "范围指第二次布尔战争；不与1880—1881年的第一次布尔战争混同。",
+      "locationNote": "以比勒陀利亚附近作德兰士瓦区域参照；战事横跨广大地区，不是单一战场。",
+      "readingCharacters": 139
+    },
+    {
       "id": "eight-nations",
       "title": "八国联军进入北京",
       "year": 1900,
@@ -16479,6 +17383,23 @@
       "readingCharacters": 181
     },
     {
+      "id": "world-russian-revolution-1905",
+      "title": "俄国1905年革命",
+      "year": 1905,
+      "people": [],
+      "region": "europe",
+      "relatedEvents": [
+        {
+          "id": "world-russo-japanese",
+          "label": "同一时期的国际背景",
+          "note": "战争和国内革命在时间上交错；本链接提供并读入口，不把两者的关系化约为单一原因。"
+        }
+      ],
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 167
+    },
+    {
       "id": "late-qing-constitution",
       "title": "清廷宣布预备立宪",
       "year": 1906,
@@ -16491,6 +17412,17 @@
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 183
+    },
+    {
+      "id": "world-persian-constitution",
+      "title": "波斯立宪与议会建立",
+      "year": 1906,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "dateNote": "指议会与基本法、补充法的建立阶段；整个立宪革命通常观察为1905—1911年。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 180
     },
     {
       "id": "puyi-accession",
@@ -16528,6 +17460,16 @@
       "readingCharacters": 202
     },
     {
+      "id": "world-young-turk-revolution",
+      "title": "青年土耳其革命与宪政恢复",
+      "year": 1908,
+      "people": [],
+      "region": "west-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 179
+    },
+    {
       "id": "provincial-assemblies",
       "title": "各省咨议局开议",
       "year": 1909,
@@ -16536,6 +17478,27 @@
       "sourceCount": 1,
       "locationNote": "多省同时发展，以湖北省会作区域参照，并非全国唯一会场。",
       "readingCharacters": 249
+    },
+    {
+      "id": "world-korea-annexation",
+      "title": "日本吞并朝鲜",
+      "year": 1910,
+      "people": [],
+      "region": "east-asia",
+      "sourceCount": 1,
+      "locationNote": "坐标为所述遗址或现代城镇附近的近似阅读参照，不指认精确发生点、政治疆界或人物行迹。",
+      "readingCharacters": 151
+    },
+    {
+      "id": "world-mexican-revolution",
+      "title": "墨西哥革命兴起",
+      "year": 1910,
+      "people": [],
+      "region": "americas",
+      "sourceCount": 1,
+      "dateNote": "1910年标记革命兴起，不表示革命当年结束；此处叙述范围限于1912年及以前。",
+      "locationNote": "坐标为地点或区域的近似阅读参照，不表示事件只发生于此，不构成精确战场边界、政治疆域或人物行迹。",
+      "readingCharacters": 177
     },
     {
       "id": "wuchang",
@@ -17049,6 +18012,703 @@
       "readingCharacters": 301
     }
   ],
+  "worldPolities": [
+    {
+      "id": "world-rashidun",
+      "name": "四大哈里发时期",
+      "from": 632,
+      "to": 661,
+      "region": "west-asia",
+      "mapNames": [
+        "Rashidun Caliphate"
+      ],
+      "sourceCount": 1,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-carthage",
+      "name": "迦太基",
+      "from": -814,
+      "to": -146,
+      "region": "africa",
+      "mapNames": [
+        "Carthage"
+      ],
+      "sourceCount": 2,
+      "dateNote": "前814年为传统建城纪年，不是确证的现代式建国日；帝国扩展晚于建城。前146年指布匿迦太基被毁，不能套用于后建罗马城市。"
+    },
+    {
+      "id": "world-seleucid",
+      "name": "塞琉古帝国",
+      "from": -312,
+      "to": -64,
+      "region": "west-asia",
+      "mapNames": [
+        "Seleucid Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "前312年以塞琉古重返巴比伦的常用纪年起算，称王在其后；前64年采用所引博物馆终点，另有前63年的编年表述。"
+    },
+    {
+      "id": "world-ptolemaic",
+      "name": "托勒密王国",
+      "from": -305,
+      "to": -30,
+      "region": "africa",
+      "mapNames": [
+        "Ptolemaic Kingdom"
+      ],
+      "sourceCount": 2,
+      "dateNote": "前305年为托勒密称王节点，埃及由其掌权早于称王；前332年亚历山大征服、前323年分配埃及不能与建王国混同。"
+    },
+    {
+      "id": "world-german-empire",
+      "name": "德意志帝国",
+      "from": 1871,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "German Empire"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1871年为帝国建立；1912年仅为本站阅读截止。帝国君主制在1918年结束，不以源图采样终点替代。"
+    },
+    {
+      "id": "world-austria-hungary",
+      "name": "奥匈帝国",
+      "from": 1867,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "Austria-Hungary"
+      ],
+      "sourceCount": 2,
+      "dateNote": "1867年为二元体制起点；1912年是本站截止。帝国在1918年解体，不能把截止时间当作灭亡时间。"
+    },
+    {
+      "id": "world-meiji",
+      "name": "日本明治时代",
+      "from": 1868,
+      "to": 1912,
+      "region": "east-asia",
+      "mapNames": [
+        "Empire of Japan"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1868—1912年指明治时代；源图 Empire of Japan 的帝国阶段延续到此后，不能把1912年当作日本帝国终年。"
+    },
+    {
+      "id": "world-early-egypt",
+      "name": "埃及早王朝",
+      "from": -3150,
+      "to": -2613,
+      "region": "africa",
+      "mapNames": [
+        "Early Dynastic Period of Egypt"
+      ],
+      "sourceCount": 1,
+      "dateNote": "起讫约前3150—前2613年，采用所引教材分期；其他年代方案不同，源地图采样不据此改写。"
+    },
+    {
+      "id": "world-old-egypt",
+      "name": "埃及古王国",
+      "from": -2613,
+      "to": -2181,
+      "region": "africa",
+      "mapNames": [
+        "Old Kingdom of Egypt"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约前2613—前2181年采用所引教材分期；古王国具体起讫有不同年代方案。"
+    },
+    {
+      "id": "world-middle-egypt",
+      "name": "埃及中王国",
+      "from": -2040,
+      "to": -1782,
+      "region": "africa",
+      "mapNames": [
+        "Middle Kingdom of Egypt"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约前2040—前1782年采用所引教材分期；其他年代方案对终点有不同划分。"
+    },
+    {
+      "id": "world-new-egypt",
+      "name": "埃及新王国",
+      "from": -1550,
+      "to": -1069,
+      "region": "africa",
+      "mapNames": [
+        "New Kingdom of Egypt"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约前1550—前1069年采用所引教材分期；边地控制随阶段改变，并非全期疆域相同。"
+    },
+    {
+      "id": "world-babylon",
+      "name": "古巴比伦",
+      "from": -1894,
+      "to": -1600,
+      "region": "west-asia",
+      "mapNames": [
+        "Babylonia"
+      ],
+      "sourceCount": 1,
+      "dateNote": "本条约前1894—前1600年概述古巴比伦阶段；古近东绝对年代有不同方案，终点不主张精确至某一年。"
+    },
+    {
+      "id": "world-neo-assyria",
+      "name": "新亚述帝国",
+      "from": -900,
+      "to": -605,
+      "region": "west-asia",
+      "mapNames": [
+        "Neo-Assyrian Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "本条从约前900年复兴讲起，至前605年前后残余抵抗结束；常见分期另以约前911年为起点。"
+    },
+    {
+      "id": "world-neo-babylon",
+      "name": "新巴比伦帝国",
+      "from": -626,
+      "to": -539,
+      "region": "west-asia",
+      "mapNames": [
+        "Neo-Babylonian Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-achaemenid",
+      "name": "阿契美尼德帝国",
+      "from": -550,
+      "to": -330,
+      "region": "west-asia",
+      "mapNames": [
+        "Achaemenid Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-macedon",
+      "name": "亚历山大帝国",
+      "from": -336,
+      "to": -323,
+      "region": "europe",
+      "mapNames": [
+        "Macedonian Empire",
+        "(Macedonian Empire)"
+      ],
+      "sourceCount": 1,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-roman-republic",
+      "name": "罗马共和国",
+      "from": -509,
+      "to": -27,
+      "region": "europe",
+      "mapNames": [
+        "Roman Republic"
+      ],
+      "sourceCount": 2,
+      "dateNote": "前509年为传统纪年，早期叙事成书较晚；前27年为奥古斯都取得新地位的常用分期节点。"
+    },
+    {
+      "id": "world-roman-empire",
+      "name": "罗马帝国",
+      "from": -27,
+      "to": 476,
+      "region": "europe",
+      "mapNames": [
+        "Roman Empire",
+        "Western Roman Empire"
+      ],
+      "sourceCount": 3,
+      "dateNote": "本条讲述前27年至476年的帝国及西部终局；395年后的东西部须分别阅读，东部延续不以476年为终点。"
+    },
+    {
+      "id": "world-byzantium",
+      "name": "东罗马／拜占庭",
+      "from": 330,
+      "to": 1453,
+      "region": "europe",
+      "mapNames": [
+        "Byzantine Empire",
+        "Eastern Roman Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "330年新都启用作为阅读起点；亦常以395年永久分治为分期。1204—1261年存在中断与流亡，1453年为君士坦丁堡陷落。"
+    },
+    {
+      "id": "world-sasanian",
+      "name": "萨珊帝国",
+      "from": 224,
+      "to": 651,
+      "region": "west-asia",
+      "mapNames": [
+        "Sasanian Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-umayyad",
+      "name": "倭马亚王朝",
+      "from": 661,
+      "to": 750,
+      "region": "west-asia",
+      "mapNames": [
+        "Umayyad Caliphate"
+      ],
+      "sourceCount": 1,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-abbasid",
+      "name": "阿拔斯王朝",
+      "from": 750,
+      "to": 1258,
+      "region": "west-asia",
+      "mapNames": [
+        "Abbasid Caliphate",
+        "Abbasid Caliphate/Buyid Dynasty"
+      ],
+      "sourceCount": 2,
+      "dateNote": "750—1258年指以伊拉克为中心的王朝阶段；后期有军政控制转移，不包含其后开罗名义哈里发的全部年代。"
+    },
+    {
+      "id": "world-ottoman",
+      "name": "奥斯曼帝国",
+      "from": 1299,
+      "to": 1912,
+      "region": "west-asia",
+      "mapNames": [
+        "Ottoman Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "起点约为十三世纪末；1912年是本站阅读截止，并非帝国灭亡。奥斯曼苏丹制在1922年结束。"
+    },
+    {
+      "id": "world-safavid",
+      "name": "萨法维王朝",
+      "from": 1501,
+      "to": 1736,
+      "region": "west-asia",
+      "mapNames": [
+        "Safavid Dynasty"
+      ],
+      "sourceCount": 1,
+      "dateNote": "1501年建朝；1722年首都失陷后仍有残余及名义君主，1736年纳迪尔称王为常用终点。"
+    },
+    {
+      "id": "world-franks",
+      "name": "法兰克王国",
+      "from": 481,
+      "to": 843,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of the Franks",
+        "(Kingdom of the Franks)"
+      ],
+      "sourceCount": 1,
+      "dateNote": "481年作为克洛维即位的常用阅读起点，843年标记凡尔登分割；早期法兰克势力更早，分立后也有短暂再统一。"
+    },
+    {
+      "id": "world-holy-roman",
+      "name": "神圣罗马帝国",
+      "from": 962,
+      "to": 1806,
+      "region": "europe",
+      "mapNames": [
+        "Holy Roman Empire",
+        "(Holy Roman Empire)",
+        "Holy Roman Empire Minor States"
+      ],
+      "sourceCount": 1,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-england",
+      "name": "英格兰王国",
+      "from": 927,
+      "to": 1707,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of England",
+        "(Kingdom of England)",
+        "Norman England"
+      ],
+      "sourceCount": 3,
+      "dateNote": "927年是统一的重要节点；1649—1660年存在共和国中断。1707年政治联合并非1603年共戴一君的同一事件。"
+    },
+    {
+      "id": "world-france",
+      "name": "法国",
+      "from": 987,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of France",
+        "(Kingdom of France)",
+        "Bourbon Kingdom of France",
+        "(Bourbon Kingdom of France)",
+        "French First Republic",
+        "(French First Republic)",
+        "French Directory",
+        "(French Directory)",
+        "French Consulate",
+        "(French Consulate)",
+        "First French Empire",
+        "(First French Empire)",
+        "French Second Republic",
+        "(French Second Republic)",
+        "Second French Empire",
+        "(Second French Empire)",
+        "French Third Republic",
+        "(French Third Republic)"
+      ],
+      "sourceCount": 4,
+      "dateNote": "987年是卡佩王朝起点；本条跨多个政体。1912年仅为本站阅读截止，并非法国国家或第三共和国终止。"
+    },
+    {
+      "id": "world-portugal",
+      "name": "葡萄牙王国",
+      "from": 1139,
+      "to": 1910,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of Portugal"
+      ],
+      "sourceCount": 2,
+      "dateNote": "1139年为称王的常用起点，独立认可有后续阶段；1910年王国终结，不是葡萄牙国家终结。"
+    },
+    {
+      "id": "world-spain",
+      "name": "西班牙",
+      "from": 1516,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of Spain",
+        "Spanish Empire",
+        "(Spanish Empire)",
+        "Pro-Habsburg Spain",
+        "First Spanish Republic"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1516年以哈布斯堡统治起点作阅读分期；此前已有联合王权。1912年是本站截止，期间政体多次改变。"
+    },
+    {
+      "id": "world-britain",
+      "name": "英国",
+      "from": 1707,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "Kingdom of Great Britain",
+        "British Empire",
+        "(British Empire)",
+        "British Colonial Empire"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1707年指政治联合，1801年国名与制度再变；1912年是本站阅读截止，并非英国或其帝国终止。"
+    },
+    {
+      "id": "world-russia",
+      "name": "俄罗斯帝国",
+      "from": 1721,
+      "to": 1912,
+      "region": "europe",
+      "mapNames": [
+        "Russian Empire"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1721年为正式帝国名号起点；1912年仅为本站阅读截止。帝制在1917年革命中终结，不得用源图采样误作终年。"
+    },
+    {
+      "id": "world-maurya",
+      "name": "孔雀王朝",
+      "from": -322,
+      "to": -185,
+      "region": "south-asia",
+      "mapNames": [
+        "Maurya Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约前322—前185年为常用分期，早期年代有讨论；王室宣传与实际地方治理需分别理解。"
+    },
+    {
+      "id": "world-kushan",
+      "name": "贵霜帝国",
+      "from": 50,
+      "to": 375,
+      "region": "central-asia",
+      "mapNames": [
+        "Kushan Empire",
+        "Eastern Kushans",
+        "Western Kushans"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约1—4世纪为本条阅读范围，50年只是约略起点，迦腻色迦纪年及各地终点存在讨论；不把分部源图等同完整国祚。"
+    },
+    {
+      "id": "world-gupta",
+      "name": "笈多帝国",
+      "from": 320,
+      "to": 550,
+      "region": "south-asia",
+      "mapNames": [
+        "Gupta Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约320—550年概述帝国阶段；地方王室与同名后继政权的年代不能直接并入。"
+    },
+    {
+      "id": "world-chola",
+      "name": "朱罗王朝",
+      "from": 850,
+      "to": 1279,
+      "region": "south-asia",
+      "mapNames": [
+        "Chola Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约850—1279年指中古帝国阶段，与源图中的 Early Cholas（早期朱罗）分开，不以同名合并数百年空档。"
+    },
+    {
+      "id": "world-delhi",
+      "name": "德里苏丹国",
+      "from": 1206,
+      "to": 1526,
+      "region": "south-asia",
+      "mapNames": [
+        "(Delhi Sultanate)"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-mughal",
+      "name": "莫卧儿帝国",
+      "from": 1526,
+      "to": 1857,
+      "region": "south-asia",
+      "mapNames": [
+        "Mughal Empire"
+      ],
+      "sourceCount": 2,
+      "dateNote": "1526—1857年是王朝常用分期，1540—1555年中央统治曾中断；后期名义皇权不等于昔日帝国的实际控制。"
+    },
+    {
+      "id": "world-srivijaya",
+      "name": "室利佛逝",
+      "from": 650,
+      "to": 1400,
+      "region": "southeast-asia",
+      "mapNames": [
+        "Srivijaya"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约7—14世纪为较宽的阅读分期；650与1400是约略边界，不主张确切建亡年或固定首都。"
+    },
+    {
+      "id": "world-khmer",
+      "name": "高棉／吴哥王朝",
+      "from": 800,
+      "to": 1450,
+      "region": "southeast-asia",
+      "mapNames": [
+        "Khmer Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约9—15世纪是所引遗产资料的吴哥阶段；800与1450为阅读近似边界，并非确切建亡年。"
+    },
+    {
+      "id": "world-majapahit",
+      "name": "满者伯夷",
+      "from": 1293,
+      "to": 1527,
+      "region": "southeast-asia",
+      "mapNames": [
+        "Majapahit"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约1293年至16世纪初；1527为常见较晚终点之一，另有1478等分期，不据此推定全期疆域。"
+    },
+    {
+      "id": "world-heian",
+      "name": "日本平安时代",
+      "from": 794,
+      "to": 1185,
+      "region": "east-asia",
+      "mapNames": [
+        "Heian Japan"
+      ],
+      "sourceCount": 1,
+      "dateNote": "794—1185年采用所引博物馆分期；亦有以1192年设幕府为终点的用法。时代名称不是一个新建国家的国号。"
+    },
+    {
+      "id": "world-tokugawa",
+      "name": "德川幕府",
+      "from": 1603,
+      "to": 1868,
+      "region": "east-asia",
+      "mapNames": [
+        "Tokugawa Shogunate"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-goryeo",
+      "name": "高丽王朝",
+      "from": 918,
+      "to": 1392,
+      "region": "east-asia",
+      "mapNames": [
+        "Goryeo"
+      ],
+      "sourceCount": 2,
+      "dateNote": "918年建高丽、936年完成后期三国整合是不同节点；1392年王朝更替，不是半岛文化重新开始。"
+    },
+    {
+      "id": "world-joseon",
+      "name": "朝鲜王朝",
+      "from": 1392,
+      "to": 1897,
+      "region": "east-asia",
+      "mapNames": [
+        "Joseon"
+      ],
+      "sourceCount": 2,
+      "dateNote": "1392—1897年在此指朝鲜国号时期；李氏王统延续至大韩帝国，1910年并吞须与1897年改号区别。"
+    },
+    {
+      "id": "world-aksum",
+      "name": "阿克苏姆王国",
+      "from": 1,
+      "to": 700,
+      "region": "africa",
+      "mapNames": [
+        "Kingdom of Axum"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约1—7世纪概述王国主要发展阶段；1与700为阅读近似边界，不是已知确切建亡年，后继转变有更长过程。"
+    },
+    {
+      "id": "world-ghana",
+      "name": "古加纳帝国",
+      "from": 500,
+      "to": 1235,
+      "region": "africa",
+      "mapNames": [
+        "Ghana Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "约6—13世纪为宽分期；500是近似起点，1235标记索索败于马里的区域转折，并非可确证的单一亡国日。"
+    },
+    {
+      "id": "world-mali",
+      "name": "马里帝国",
+      "from": 1235,
+      "to": 1600,
+      "region": "africa",
+      "mapNames": [
+        "Mali Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "1235年是松迪亚塔崛起的常用节点，晚期约至16世纪；1600为宽泛阅读终点，非确切亡国年。"
+    },
+    {
+      "id": "world-songhai",
+      "name": "桑海帝国",
+      "from": 1464,
+      "to": 1591,
+      "region": "africa",
+      "mapNames": [
+        "Songhai Empire"
+      ],
+      "sourceCount": 1,
+      "dateNote": "1464—1591年指常用的帝国扩张阶段，早期桑海／加奥国家更早，1591年后也有地方延续。"
+    },
+    {
+      "id": "world-kongo",
+      "name": "刚果王国",
+      "from": 1390,
+      "to": 1912,
+      "region": "africa",
+      "mapNames": [
+        "Kingdom of Kongo"
+      ],
+      "sourceCount": 2,
+      "dateNote": "约1390年为传统起点；1678年前后为研究中的政治社会转折。1912年是本站阅读截止，后期已长期分裂，不主张持续统一。"
+    },
+    {
+      "id": "world-aztec",
+      "name": "阿兹特克三方同盟",
+      "from": 1428,
+      "to": 1521,
+      "region": "americas",
+      "mapNames": [
+        "Aztec Triple Alliance"
+      ],
+      "sourceCount": 2,
+      "dateNote": "阅读采用常见历史分期；地图轮廓沿用原始资料的采样年份与概略边界，两者不能相互替代。"
+    },
+    {
+      "id": "world-inca",
+      "name": "印加帝国",
+      "from": 1438,
+      "to": 1572,
+      "region": "americas",
+      "mapNames": [
+        "Inca Empire"
+      ],
+      "sourceCount": 4,
+      "dateNote": "1438年为帝国扩张的常用起点；1530年代中央统治崩解，至1572年的终点包括比尔卡班巴抵抗政权。"
+    },
+    {
+      "id": "world-united-states",
+      "name": "美国",
+      "from": 1776,
+      "to": 1912,
+      "region": "americas",
+      "mapNames": [
+        "United States of America"
+      ],
+      "sourceCount": 2,
+      "dateNote": "1776年是独立宣言节点，1783年和平承认及1789年宪法施行均为后续阶段；1912年为本站阅读截止，并非国家终止。"
+    },
+    {
+      "id": "world-chagatai",
+      "name": "察合台汗国",
+      "from": 1227,
+      "to": 1347,
+      "region": "central-asia",
+      "mapNames": [
+        "Chagatai Khanate"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1227年作分封后阅读起点，1347年标记东西部分化的重要阶段；东部后继政权另有延续，本条不把其全部国祚合并。"
+    },
+    {
+      "id": "world-timurid",
+      "name": "帖木儿帝国",
+      "from": 1370,
+      "to": 1507,
+      "region": "central-asia",
+      "mapNames": [
+        "Timurid Empire"
+      ],
+      "sourceCount": 3,
+      "dateNote": "1370—1507年概述中亚王朝阶段；帖木儿1405年去世后已多次分立，后裔在其他地区的统治另行阅读。"
+    }
+  ],
   "topics": [
     {
       "id": "three-kingdoms",
@@ -17144,6 +18804,45 @@
   ],
   "sources": [
     {
+      "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
+      "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:56.336082+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sokoto-reform"
+        }
+      ]
+    },
+    {
+      "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
+      "title": "Oxford Research Encyclopedia · Tamerlane and the Timurids（作者摘要）",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:45:08.687741+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timurid-rise"
+        }
+      ]
+    },
+    {
+      "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
+      "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:51.991716+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
+        }
+      ]
+    },
+    {
       "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
       "title": "苏格兰历史环境局 · 斯卡拉布雷价值评估（2024，第17页）",
       "status": "retained-and-hash-verified",
@@ -17157,6 +18856,71 @@
       ]
     },
     {
+      "url": "https://archive.artic.edu/benin/oba/",
+      "title": "芝加哥艺术博物馆 · Oba Ewuare and the Portuguese",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:45.885981+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-benin-ewuare"
+        }
+      ]
+    },
+    {
+      "url": "https://armada.parliament.uk/history.html",
+      "title": "英国议会 · Armada Tapestries: History",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:26.283125+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-spanish-armada"
+        }
+      ]
+    },
+    {
+      "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
+      "title": "普林斯顿大学艺术博物馆 · Seated male figure：笈多时代背景",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:59:40.484608+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-gupta-age"
+        }
+      ]
+    },
+    {
+      "url": "https://asia-archive.si.edu/collections/new/acquisitions-2017/s2017-8-12/",
+      "title": "史密森尼国立亚洲艺术博物馆 · 满者伯夷陶塑与贸易社会",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:35.260517+00:00",
+      "sha256": "9d99a2ddbda3d45edf8e5488ce17726520c51b376e70cc3cf5c295e1f9766273",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-majapahit"
+        }
+      ]
+    },
+    {
+      "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
+      "title": "英国科学博物馆 · Sending messages across the Atlantic",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:51:01.656575+00:00",
+      "sha256": "da6000d449de022631a61e6b81cc99315b7d0c1678feb05078c28d768911efef",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-atlantic-telegraph"
+        }
+      ]
+    },
+    {
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
       "title": "陕西省地方志 · 半坡类型仰韶文化年代",
       "status": "retained-and-hash-verified",
@@ -17166,6 +18930,45 @@
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/indo-greeks-sakas-and-kushanas/",
+      "title": "印度 INFLIBNET · 印度希腊人、塞人与贵霜",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:29.429025+00:00",
+      "sha256": "006b24f9a7b64ca45e7eb85678342b94ff0fd7f0cb1a701143bb687e88a14bea",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kushan"
+        }
+      ]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-cholas/",
+      "title": "印度 INFLIBNET · 朱罗王朝",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:31.504264+00:00",
+      "sha256": "3b6261fbf9f86a0fa0597d31fdd2671c7923f2bb3a3a84278476a91087467754",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-chola"
+        }
+      ]
+    },
+    {
+      "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-gupta-empire/",
+      "title": "印度 INFLIBNET · 笈多帝国",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:30.509929+00:00",
+      "sha256": "47c3ca58e8966e987d408272c82356297a7a607002458d969f58330708ea4d80",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-gupta"
         }
       ]
     },
@@ -17205,6 +19008,19 @@
         {
           "kind": "event",
           "id": "khufu-pyramid"
+        }
+      ]
+    },
+    {
+      "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
+      "title": "俄罗斯国家图书馆 · Conquest of Samarkand and War Trophies",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:13.882602+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-samarkand"
         }
       ]
     },
@@ -17371,6 +19187,62 @@
       ]
     },
     {
+      "url": "https://hd.housedivided.dickinson.edu/node/34893",
+      "title": "狄金森学院 · Tsar Alexander II signs the legislation ending serfdom",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:31.888034+00:00",
+      "sha256": "473825dff09166b35fb5e4819abaa2228ffd2bb0772fc15a4fc0f8e14948209f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-emancipation"
+        }
+      ]
+    },
+    {
+      "url": "https://history.state.gov/countries/hawaii",
+      "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:54.310248+00:00",
+      "sha256": "ab95b80fa44dfc407c2d791a79765eaa8e7d84935aa0af1f71d6ea7543f20861",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-kingdom"
+        }
+      ]
+    },
+    {
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "title": "美国国务院历史办公室 · The Spanish-American War, 1898",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:47.846452+00:00",
+      "sha256": "5ba297b160bce950e0aad843f378967fa0b2a9889ddcffb28b10416a61a4fb7d",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-overthrow"
+        },
+        {
+          "kind": "event",
+          "id": "world-spanish-american-war"
+        }
+      ]
+    },
+    {
+      "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
+      "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:54.367606+00:00",
+      "sha256": "ea5404b35f5b42c34908f5ba1fd9698fd579cd1f84e28acba3fe0a29f4f84922",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-us-transcontinental-railway"
+        }
+      ]
+    },
+    {
       "url": "https://hznews.hangzhou.com.cn/wghz/content/2026-05/18/content_9224937.htm",
       "title": "杭州文物遗产与历史建筑保护中心 · 跨湖桥遗址博物馆（杭州网刊载）",
       "status": "retained-and-hash-verified",
@@ -17406,6 +19278,32 @@
         {
           "kind": "event",
           "id": "qujialing-water"
+        }
+      ]
+    },
+    {
+      "url": "https://inc.in/brief-history-of-congress/1885-1895",
+      "title": "印度国民大会党 · 1885—1895年创立时期",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:52.665829+00:00",
+      "sha256": "432ed9aa65167e71a63736062ce24c7a9a74868e17d7a337b94beed813c58247",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-indian-national-congress"
+        }
+      ]
+    },
+    {
+      "url": "https://inc.in/inc-sessions",
+      "title": "印度国民大会党 · 历届大会原始年表",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:50.357262+00:00",
+      "sha256": "3036e6677419d768b488a0050fe0ec63aa637f272bae71aa11f8fecb45d50c06",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-indian-national-congress"
         }
       ]
     },
@@ -17475,6 +19373,19 @@
       ]
     },
     {
+      "url": "https://maa.cam.ac.uk/schools/resources/african-collections-schools-resources/kingdom-benin",
+      "title": "剑桥大学考古与人类学博物馆 · Kingdom of Benin",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:40.048136+00:00",
+      "sha256": "ceaf06ba040308a72d69adce928156c076350c585ff88025ba73876e889c2cc4",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-benin-ewuare"
+        }
+      ]
+    },
+    {
       "url": "https://museum.jty.edu.cn/Home/Content/20227",
       "title": "吉林铁路博物馆 · 第一条国有铁路干线",
       "status": "retained-and-hash-verified",
@@ -17484,6 +19395,19 @@
         {
           "kind": "person",
           "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "url": "https://nzhistory.govt.nz/people/james-cook",
+      "title": "新西兰文化与遗产部 · James Cook",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:51:01.629785+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-cook-new-zealand"
         }
       ]
     },
@@ -17527,6 +19451,10 @@
         {
           "kind": "event",
           "id": "world-west-rome"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
         }
       ]
     },
@@ -17544,6 +19472,14 @@
         {
           "kind": "event",
           "id": "world-justinian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-byzantium"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-sasanian"
         }
       ]
     },
@@ -17557,6 +19493,23 @@
         {
           "kind": "event",
           "id": "world-aksum"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aksum"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/10-4-the-margins-of-empire",
+      "title": "OpenStax · The Margins of Empire：贵霜",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:44:56.823919+00:00",
+      "sha256": "19f445fb1ae08409ff9bee9ddb0b919be5e1048f1d4cc2c596761d94083d4d28",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kushan-networks"
         }
       ]
     },
@@ -17591,6 +19544,22 @@
         {
           "kind": "event",
           "id": "world-abbasid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-rashidun"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-sasanian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-umayyad"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-abbasid"
         }
       ]
     },
@@ -17604,6 +19573,10 @@
         {
           "kind": "event",
           "id": "world-sogdian"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-delhi"
         }
       ]
     },
@@ -17638,6 +19611,14 @@
         {
           "kind": "event",
           "id": "world-verdun"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-franks"
         }
       ]
     },
@@ -17681,23 +19662,47 @@
         {
           "kind": "event",
           "id": "world-baghdad"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-abbasid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
         }
       ]
     },
     {
       "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
-      "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
+      "title": "OpenStax · Medieval Sub-Saharan Africa",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-22T08:05:52.537465+00:00",
       "sha256": "11d012e0150bbd7e2984b603d2ada68cc0120f28039324356fdd46823c1ff93b",
       "references": [
         {
           "kind": "event",
+          "id": "world-ghana-trade"
+        },
+        {
+          "kind": "event",
           "id": "world-great-zimbabwe"
         },
         {
           "kind": "event",
+          "id": "world-mali-sundiata"
+        },
+        {
+          "kind": "event",
           "id": "world-mansa-musa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ghana"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mali"
         }
       ]
     },
@@ -17724,6 +19729,35 @@
         {
           "kind": "event",
           "id": "world-ottoman-constantinople"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/3-3-ancient-egypt",
+      "title": "OpenStax · 世界历史上卷 · 古代埃及",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:34.294715+00:00",
+      "sha256": "d9964a7d60caad458c7defabe21825025e832438b35b648ea7bf0c2d9dd4cd7a",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-early-egypt"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-old-egypt"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-middle-egypt"
         }
       ]
     },
@@ -17745,6 +19779,18 @@
         {
           "kind": "event",
           "id": "world-nineveh"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-assyria"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-babylon"
         }
       ]
     },
@@ -17762,6 +19808,10 @@
         {
           "kind": "event",
           "id": "world-kadesh"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-new-egypt"
         }
       ]
     },
@@ -17779,6 +19829,14 @@
         {
           "kind": "event",
           "id": "world-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-neo-babylon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-achaemenid"
         }
       ]
     },
@@ -17796,6 +19854,10 @@
         {
           "kind": "event",
           "id": "world-borobudur"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-srivijaya"
         }
       ]
     },
@@ -17817,6 +19879,10 @@
         {
           "kind": "event",
           "id": "world-ashoka"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-maurya"
         }
       ]
     },
@@ -17872,6 +19938,22 @@
         {
           "kind": "event",
           "id": "world-hellenistic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-seleucid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ptolemaic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-achaemenid"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-macedon"
         }
       ]
     },
@@ -17889,6 +19971,14 @@
         {
           "kind": "event",
           "id": "world-punic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-carthage"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-republic"
         }
       ]
     },
@@ -17906,6 +19996,14 @@
         {
           "kind": "event",
           "id": "world-augustus"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-republic"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-roman-empire"
         }
       ]
     },
@@ -17961,6 +20059,14 @@
         {
           "kind": "event",
           "id": "world-inca"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
         }
       ]
     },
@@ -17999,6 +20105,36 @@
       ]
     },
     {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-1-alliances-expansion-and-conflict",
+      "title": "OpenStax · 世界历史下卷 · 同盟、扩张与冲突",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:06:02.589563+00:00",
+      "sha256": "f0349134a99408b5d7e8c31d3d17d0239740381662a2c8c449207ea9112a67a4",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-austria-hungary"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
+      "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:30.628003+00:00",
+      "sha256": "cbb967c8ef48ddacef1d0f8e62bbcbab0f4399bab5b0eb3035a6db207c3d64b8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-revolution-1905"
+        }
+      ]
+    },
+    {
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
       "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
       "status": "retained-and-hash-verified",
@@ -18012,6 +20148,18 @@
         {
           "kind": "event",
           "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-delhi"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
         }
       ]
     },
@@ -18034,14 +20182,30 @@
     },
     {
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-3-exchange-in-east-asia",
-      "title": "OpenStax · World History 2 · 2-3-exchange-in-east-asia",
+      "title": "OpenStax · Exchange in East Asia",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-22T08:05:56.314447+00:00",
       "sha256": "3eeaa90336a8ca03789beb20bda434639903609105bdb9c23dcd322c6373967d",
       "references": [
         {
           "kind": "event",
+          "id": "world-joseon-foundation"
+        },
+        {
+          "kind": "event",
           "id": "world-tokugawa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-tokugawa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-goryeo"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-joseon"
         }
       ]
     },
@@ -18055,6 +20219,40 @@
         {
           "kind": "event",
           "id": "world-songhai"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-songhai"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/3-introduction",
+      "title": "OpenStax · Early Modern Africa 年代图",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:34.383613+00:00",
+      "sha256": "596e5ae7889fa84b5d6ae4a603375f40eeaca629e7217e2f562c4d633bda1d4f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mali-sundiata"
+        }
+      ]
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/4-2-the-ottoman-empire",
+      "title": "OpenStax · 世界历史下卷 · 奥斯曼帝国",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-22T08:05:56.379060+00:00",
+      "sha256": "114df2161ce8e94243918671ed732c4251d2413baf6a30c3f7e40857324b3d32",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-byzantium"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ottoman"
         }
       ]
     },
@@ -18067,6 +20265,14 @@
       "references": [
         {
           "kind": "event",
+          "id": "world-safavid"
+        },
+        {
+          "kind": "event",
+          "id": "world-chaldiran"
+        },
+        {
+          "kind": "world-polity",
           "id": "world-safavid"
         }
       ]
@@ -18084,7 +20290,15 @@
         },
         {
           "kind": "event",
+          "id": "world-granada"
+        },
+        {
+          "kind": "event",
           "id": "world-reformation"
+        },
+        {
+          "kind": "event",
+          "id": "world-thirty-years-war"
         },
         {
           "kind": "event",
@@ -18110,6 +20324,14 @@
         {
           "kind": "event",
           "id": "world-dagama"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-aztec"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
         }
       ]
     },
@@ -18174,6 +20396,10 @@
         {
           "kind": "event",
           "id": "world-wealth-nations"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
         }
       ]
     },
@@ -18208,6 +20434,18 @@
         {
           "kind": "event",
           "id": "world-haitian-revolution"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-united-states"
         }
       ]
     },
@@ -18224,11 +20462,31 @@
         },
         {
           "kind": "event",
+          "id": "world-greek-independence"
+        },
+        {
+          "kind": "event",
           "id": "world-italy"
         },
         {
           "kind": "event",
           "id": "world-germany"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
         }
       ]
     },
@@ -18268,11 +20526,19 @@
     },
     {
       "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
-      "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
+      "title": "OpenStax · World History 2 · The Second Industrial Revolution",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-22T08:06:01.436623+00:00",
       "sha256": "1443c443c9b2eb5705dd8da67e1c9e343c8e33cc7bbc819887b3c16e3daa3d7e",
       "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-emancipation"
+        },
+        {
+          "kind": "event",
+          "id": "world-canadian-confederation"
+        },
         {
           "kind": "event",
           "id": "world-second-industrial"
@@ -18297,6 +20563,46 @@
         {
           "kind": "event",
           "id": "world-berlin-africa"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-german-empire"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-ottoman"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-portugal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-mughal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-joseon"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-united-states"
         }
       ]
     },
@@ -18318,6 +20624,32 @@
       ]
     },
     {
+      "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
+      "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:50.365593+00:00",
+      "sha256": "fdd40f8672491ed8cb5d7e4c91178bdadac78ba60185c6b5db09c10a8890133c",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-norse-newfoundland"
+        }
+      ]
+    },
+    {
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/the-philippine-national-flag/",
+      "title": "菲律宾国家历史委员会 · The Philippine National Flag 历史标记",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:37.037512+00:00",
+      "sha256": "ce61999c59ab02ccbed17e99c5daeaa68a2d7c71269ac94694e645cea5b7850f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-philippine-independence-declaration"
+        }
+      ]
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "status": "retained-and-hash-verified",
@@ -18327,6 +20659,32 @@
         {
           "kind": "event",
           "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "url": "https://royalarmouries.org/objects-and-stories/stories/the-hundred-years-war-1337-1453",
+      "title": "英国皇家军械博物馆 · The Hundred Years’ War",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:15.373524+00:00",
+      "sha256": "0cf7635db47c1fa32b5b67a945f85c245b46b293386d8376bcbc3c25db2b4ecb",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hundred-years-war"
+        }
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
+      "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:59:35.270424+00:00",
+      "sha256": "354ca5fac3821c28bc0143afb378a8e3418b207964c8021754b1881d7c52c1ce",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-angkor-wat"
         }
       ]
     },
@@ -18387,6 +20745,71 @@
       ]
     },
     {
+      "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
+      "title": "美国国会图书馆 · 俄罗斯国别研究（历史章节）",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:35.535937+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-russia"
+        }
+      ]
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
+      "title": "美国国会图书馆法律图书馆 · Civic Education Models: Turkey",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:45.703705+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-young-turk-revolution"
+        }
+      ]
+    },
+    {
+      "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
+      "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:50.946708+00:00",
+      "sha256": "ec98d079ec1ef4f72fea0c06c51673c932ee829ccdd11ce2fa02a2fe159ebbff",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timbuktu-learning"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/250bis.pdf",
+      "title": "ICOMOS · Great Living Chola Temples 评估",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:36.708396+00:00",
+      "sha256": "ed5a7bfd8640398dcb0524860232c77031904217016ca332644038b4fe6de181",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chola-temple"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/document/104639",
+      "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:49:35.306409+00:00",
+      "sha256": "177b36fd35fb3b11761816f15f5594b68d7634f74a5d8bb5525101cd91dc4a19",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ulugh-beg-observatory"
+        }
+      ]
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1001/",
       "title": "UNESCO · 青城山与都江堰",
       "status": "retained-and-hash-verified",
@@ -18396,6 +20819,19 @@
         {
           "kind": "event",
           "id": "dujiangyan"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1081/",
+      "title": "UNESCO · 鄂尔浑河谷文化景观",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:44:56.149871+00:00",
+      "sha256": "20a8853291a4535ee4ea255ed61a39e53085e41d12b5d8062ced73f6b1f5c149",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-turkic-khaganate"
         }
       ]
     },
@@ -18421,6 +20857,19 @@
       ]
     },
     {
+      "url": "https://whc.unesco.org/en/list/1199/",
+      "title": "UNESCO · 库尼亚－乌尔根奇",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:01.266251+00:00",
+      "sha256": "39ae77dfc735005d470d5990064776f372180b0489c6848fea6673a9cb228331",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khorezm-urgench"
+        }
+      ]
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1269/",
       "title": "UNESCO · 卡拉尔—苏佩圣城",
       "status": "retained-and-hash-verified",
@@ -18430,6 +20879,19 @@
         {
           "kind": "event",
           "id": "caral-city"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1278/",
+      "title": "UNESCO · 开城历史建筑与遗址",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:07.927222+00:00",
+      "sha256": "30fdae7914cd5d337e9bc0647010d75bff904ac38b32a8aded40f38f89612ee5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-goryeo-foundation"
         }
       ]
     },
@@ -18469,6 +20931,19 @@
         {
           "kind": "event",
           "id": "catalhoyuk"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/144/",
+      "title": "UNESCO · 基尔瓦基斯瓦尼与松戈马拉遗址",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:36.588022+00:00",
+      "sha256": "416caa67d57b7e9596354007e286074bf72a9728cebb751a07430c2d6440d14f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kilwa-trade"
         }
       ]
     },
@@ -18561,6 +21036,19 @@
       ]
     },
     {
+      "url": "https://whc.unesco.org/en/list/1588/",
+      "title": "UNESCO · 蒲甘",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:20.908894+00:00",
+      "sha256": "796e1bdffc3b24c4b74e6c4b746c5772d5e9e326b0bf4e341d1adad02a99e4b0",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-bagan-kingdom"
+        }
+      ]
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1592/",
       "title": "UNESCO · 良渚古城遗址",
       "status": "retained-and-hash-verified",
@@ -18600,6 +21088,58 @@
       ]
     },
     {
+      "url": "https://whc.unesco.org/en/list/18/",
+      "title": "UNESCO · 拉利贝拉岩石教堂",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:38.270232+00:00",
+      "sha256": "b7c02a44c2e2cef43cf1a4007709ee8b3aa08d4178a15557f83cf36f8dbc0c6f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-lalibela-churches"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/241/",
+      "title": "UNESCO · 亨比古迹群",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:37.809802+00:00",
+      "sha256": "67ece693cc170204b9ab19e9baa8920932fc4ecf6ae9f9776b0b472cc5d8adf1",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-vijayanagara-hampi"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/250/",
+      "title": "UNESCO · 朱罗王朝现存的伟大神庙",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:37.296287+00:00",
+      "sha256": "eb5f07ca79b572676a2549dac12959c1f5241667b4d6c7974fe21d7ecaab2c7a",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chola-temple"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/274",
+      "title": "UNESCO · Historic Sanctuary of Machu Picchu",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:51.116919+00:00",
+      "sha256": "15e86e45613a831afc5c129f19b777faf5ed28a9623230a2b69bc83401ee3462",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-machu-picchu"
+        }
+      ]
+    },
+    {
       "url": "https://whc.unesco.org/en/list/514/",
       "title": "UNESCO · 奥克尼新石器时代遗址",
       "status": "retained-and-hash-verified",
@@ -18609,6 +21149,92 @@
         {
           "kind": "event",
           "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/540/",
+      "title": "UNESCO · Historic Centre of Saint Petersburg and Related Groups of Monuments",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:25.174655+00:00",
+      "sha256": "bfd6ad8d1e8d1976d142d9179ad25417395fafcbae71517c6f3f7be70854bbfe",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-saint-petersburg"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/574/",
+      "title": "UNESCO · 素可泰历史城镇及相关城镇",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:21.826188+00:00",
+      "sha256": "13583aa7c23525d68243139dcad710203f5b1980a2e10bf10780c72b53de5a99",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sukhothai"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/576/",
+      "title": "UNESCO · 阿瑜陀耶古城",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:22.401546+00:00",
+      "sha256": "8a871132ac0d6a564fd44b3f97f3c96984e32da5eac7081ec2f16bc23afbe2d8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ayutthaya-foundation"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/602/",
+      "title": "UNESCO · 布哈拉历史中心",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:44:57.002188+00:00",
+      "sha256": "fdfdbd5b654c12f2616f0bb39356ba1cf20b1e834ab7011a36f573d72686675c",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-samanid-culture"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/603/",
+      "title": "UNESCO · 撒马尔罕：文化的十字路口",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:05.464266+00:00",
+      "sha256": "772da192636d8451391aa51f4e6ce32c1214e96057909dff3a39647feb8bf304",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-timurid-rise"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/668/",
+      "title": "UNESCO · 吴哥",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:15.362174+00:00",
+      "sha256": "e8bc0601ffddd8e04e149aa03c33a5de2b1af6485fedbb4c9ad072c2488a5eb3",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-angkor-centres"
+        },
+        {
+          "kind": "event",
+          "id": "world-angkor-wat"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-khmer"
         }
       ]
     },
@@ -18635,6 +21261,19 @@
         {
           "kind": "event",
           "id": "jianzhen"
+        }
+      ]
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/886/",
+      "title": "UNESCO · 古代梅尔夫历史文化公园",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:45:00.984612+00:00",
+      "sha256": "9bb05bd6e2c259f4583736f2a28fae1877864aa958c71347cae3b2e171e3cdd2",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-seljuk-merv"
         }
       ]
     },
@@ -18686,6 +21325,84 @@
       ]
     },
     {
+      "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
+      "title": "阿尔罕布拉宫管理委员会 · History",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:18.818968+00:00",
+      "sha256": "cf4853e1cc2ceb44f2c22b59cad61d2a2af53cf4a7c4de019ee673d579e977d4",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-granada"
+        }
+      ]
+    },
+    {
+      "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
+      "title": "美国国家档案馆 · The Treaty of Kanagawa",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:20.326591+00:00",
+      "sha256": "82a09ee6b82e3a39661f9abddc5f983d6feaa0c98b24b555b0008591ebce2874",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kanagawa-treaty"
+        }
+      ]
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/constitution",
+      "title": "美国国家档案馆 · Constitution of the United States (1787)",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:39.657957+00:00",
+      "sha256": "d977283fb996e16995e0fbbeb6e8c9287a8bce3da51124ab22014edd864ca25a",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-us-constitution"
+        }
+      ]
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
+      "title": "美国国家档案馆 · Louisiana Purchase Treaty (1803)",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:46.531068+00:00",
+      "sha256": "e2a1a091f405d33cc88e88324bac58eb08e2e516f1882a94f8a90ceae08c48f6",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-louisiana-purchase"
+        }
+      ]
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/monroe-doctrine",
+      "title": "美国国家档案馆 · Monroe Doctrine (1823)",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:42.464170+00:00",
+      "sha256": "97b76b27c94fbad627b37e398c04f872a10313499a0d88c807b070e0421cb54c",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-monroe-doctrine"
+        }
+      ]
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
+      "title": "美国国家档案馆 · Treaty of Guadalupe Hidalgo (1848)",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:42.937540+00:00",
+      "sha256": "e00fd84e286e0dfd8786f99ed2b449a32fdaa727f04c05d83d3db3b9864d25fc",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-american-war"
+        }
+      ]
+    },
+    {
       "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
       "title": "西安半坡博物馆 · 遗址与功能分区",
       "status": "retained-and-hash-verified",
@@ -18695,6 +21412,58 @@
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
+      "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:52.555532+00:00",
+      "sha256": "5414a3268cad36c3186b07f06d96b72365a5b6a1343776f53cbdc72de9657f56",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-chagatai"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/ancient-egyptian-economy/ptolemaic-period-33230-bce/029A98BAB6F458BA138E6E028C71CAB3",
+      "title": "剑桥大学出版社 · 古埃及经济：托勒密时期",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:11.305501+00:00",
+      "sha256": "763771fcca041c94bc5ee5a1c33d5e1a7770169ca733b45d06a4640a22066434",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-ptolemaic"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/writing-kingship-and-power-in-anglosaxon-england/origins-of-the-kingdom-of-the-english/02EA5266C0D391AD15C6A7E314DAF681",
+      "title": "剑桥大学出版社 · 英格兰王国的起源",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:20.929058+00:00",
+      "sha256": "e397a7153b26ce22ca9f790650ba762f6d89ccf29696393784feda45f2135c6f",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        }
+      ]
+    },
+    {
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
+      "title": "加拿大政府 · The history of Canada Day",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:52:35.110439+00:00",
+      "error": "The read operation timed out",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-canadian-confederation"
         }
       ]
     },
@@ -18902,6 +21671,19 @@
       ]
     },
     {
+      "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
+      "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:15.841194+00:00",
+      "sha256": "a990c7ded14b0ed04766f700c50908108738c76de587cefbda0ba8cddec07e1f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-circumnavigation"
+        }
+      ]
+    },
+    {
       "url": "https://www.darwinproject.ac.uk/letters/darwins-works-letters/origin",
       "title": "剑桥大学 · Darwin Correspondence Project: Origin",
       "status": "retained-and-hash-verified",
@@ -18911,6 +21693,45 @@
         {
           "kind": "event",
           "id": "world-darwin"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dhm.de/archiv/ausstellungen/heiliges-roemisches-reich/index_3.html",
+      "title": "德国历史博物馆 · 神圣罗马帝国（962—1806）",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:20.673896+00:00",
+      "sha256": "3b3953a8499468276ab9377a0687a19699ebb574e7595899d10ec0e62b5f2855",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-holy-roman"
+        }
+      ]
+    },
+    {
+      "url": "https://www.dhm.de/lemo/kapitel/vormaerz-und-revolution/revolution-1848",
+      "title": "德国历史博物馆 · Die Revolution von 1848/49",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:30.074652+00:00",
+      "sha256": "0de1c5d57edb275694c0aa4daf5d9757dfda51c090eb75459b7f043e377f1c73",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-revolutions-1848"
+        }
+      ]
+    },
+    {
+      "url": "https://www.doc.govt.nz/our-work/heritage/heritage-topics/new-zealand-wars/",
+      "title": "新西兰自然保护部 · New Zealand Wars",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:57.974670+00:00",
+      "sha256": "2802350c7075385a42cf6b701d82ac32da48708dc1f6014b8c7413c5cbbd4d41",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-new-zealand-wars"
         }
       ]
     },
@@ -19390,6 +22211,19 @@
       ]
     },
     {
+      "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
+      "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:14.321138+00:00",
+      "sha256": "f23ed7fec219e69e687f193273b83d70b453ed3c1d800b16471edd5d3e5e10dc",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hastings"
+        }
+      ]
+    },
+    {
       "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
       "title": "福州市人民政府 · 严复",
       "status": "retained-and-hash-verified",
@@ -19403,6 +22237,19 @@
       ]
     },
     {
+      "url": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=Nigeria&place=&subjectid=7000538",
+      "title": "Getty 地名词表 · Sokoto（7000538）",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:52.270309+00:00",
+      "sha256": "402df91e1aac27ff1b49b3d2471b7f640b33fa6f0f57bec2ee045f27a3a79629",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-sokoto-reform"
+        }
+      ]
+    },
+    {
       "url": "https://www.gla.ac.uk/myglasgow/archivespecialcollections/digitisedcollections/revolutionsinastronomy/copernicusderevolutionibus/",
       "title": "格拉斯哥大学特藏 · Copernicus: De Revolutionibus",
       "status": "retained-and-hash-verified",
@@ -19412,6 +22259,32 @@
         {
           "kind": "event",
           "id": "world-copernicus"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gob.mx/agn/articulos/archivisticaclio-documentos-de-la-consumacion-de-la-independencia-de-mexico?idiom=es",
+      "title": "墨西哥国家档案馆 · Documentos de la consumación de la Independencia de México",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:41.826987+00:00",
+      "sha256": "45165e31eed8741ceff387fbb8aae24e83b6142c5fdbd73022814a2be5dca2f8",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-independence"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.za/about-sa/history",
+      "title": "南非政府 · History",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:54.415234+00:00",
+      "sha256": "deb874d650f2d7a15a94e3f54a07e236d4e7b80f0ade102ab3b1d8d8f4b4eb84",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-zulu-consolidation"
         }
       ]
     },
@@ -19476,6 +22349,19 @@
       ]
     },
     {
+      "url": "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/franz-joseph-hall",
+      "title": "奥地利军事历史博物馆 · 1867年妥协至第一次世界大战",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:16.203727+00:00",
+      "sha256": "1b3c3efa4c3a13896eb6a01fb228232fd638faadf4872429617679cdf87f3719",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-austria-hungary"
+        }
+      ]
+    },
+    {
       "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
       "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
       "status": "retained-and-hash-verified",
@@ -19485,6 +22371,153 @@
         {
           "kind": "event",
           "id": "skara-brae"
+        }
+      ]
+    },
+    {
+      "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
+      "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:37.554525+00:00",
+      "sha256": "67c51b01a70197854779fed9ef48032ff42b6d0e83c0c5f691183d82e48c2ccd",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-persian-constitution"
+        }
+      ]
+    },
+    {
+      "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
+      "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:45:49.214582+00:00",
+      "error": "HTTP Error 503: Service Unavailable",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khalsa"
+        }
+      ]
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
+      "title": "美国国会图书馆 · 皮萨罗与印加人",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:51.970592+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-inca"
+        }
+      ]
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/rise-of-madero.html",
+      "title": "美国国会图书馆 · The Rise of Francisco Madero",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:53.078855+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-mexican-revolution"
+        }
+      ]
+    },
+    {
+      "url": "https://www.loc.gov/item/2007680333/",
+      "title": "美国国会图书馆 · 1868年撒马尔罕驻军影像档案",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:45:16.741990+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-russian-samarkand"
+        }
+      ]
+    },
+    {
+      "url": "https://www.loc.gov/item/2021668426/",
+      "title": "美国国会图书馆 · The First Map of the Strait of Magellan, 1520",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:23.251988+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-circumnavigation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
+      "title": "美国国会图书馆 · 宽永行幸记",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:43.413272+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-tokugawa"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection：秣菟罗笈多造像",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:59:40.480295+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-gupta-age"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/455304",
+      "title": "大都会艺术博物馆 · Pen Box Depicting Shah Isma’il in Battle",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:41.179301+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-chaldiran"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+      "title": "大都会艺术博物馆 · Heian Period (794–1185)",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:39.832640+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-heian-capital"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-heian"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
+      "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:59.227031+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-timurid"
         }
       ]
     },
@@ -19502,6 +22535,19 @@
       ]
     },
     {
+      "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
+      "title": "大都会艺术博物馆 · 塞琉古帝国",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:18.445130+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-seleucid"
+        }
+      ]
+    },
+    {
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
       "title": "大都会艺术博物馆 · Uruk: The First City",
       "status": "request-failed",
@@ -19511,6 +22557,144 @@
         {
           "kind": "event",
           "id": "uruk-city"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
+      "title": "大都会艺术博物馆 · 非洲艺术：刚果文明",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:51.649562+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kongo"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
+      "title": "大都会艺术博物馆 · Christianity and Kongo Visual Culture",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:48.444811+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kongo-baptism"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
+      "title": "大都会艺术博物馆 · The Ottoman Empire",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:38.766490+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ottoman-origins"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/04/afw.html",
+      "title": "大都会艺术博物馆 · 西北非，前1000年—公元1年",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:18.444666+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-carthage"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/06/nc",
+      "title": "大都会艺术博物馆 · Central and North Asia, 500–1000",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:45:06.037336+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-turkic-khaganate"
+        },
+        {
+          "kind": "event",
+          "id": "world-samanid-culture"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eaj",
+      "title": "大都会艺术博物馆 · Japan, 1000–1400",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:07.125176+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kamakura-shogun"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/eak",
+      "title": "大都会艺术博物馆 · 朝鲜半岛，1000—1400年",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:43.774414+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-goryeo"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/euwf",
+      "title": "大都会艺术博物馆 · 法国，1000—1400年",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:28.058563+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-france"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/07/sse",
+      "title": "大都会艺术博物馆 · Southeast Asia, 1000–1400",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:46:29.569816+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-majapahit-foundation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.metmuseum.org/toah/ht/08/eusi",
+      "title": "大都会艺术博物馆 · 伊比利亚半岛，1400—1600年",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:32.553778+00:00",
+      "error": "HTTP Error 429: Too Many Requests",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-portugal"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-spain"
         }
       ]
     },
@@ -19528,6 +22712,110 @@
       ]
     },
     {
+      "url": "https://www.nam.ac.uk/explore/battle-waterloo",
+      "title": "英国国家陆军博物馆 · Battle of Waterloo",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:28.552756+00:00",
+      "sha256": "68cb1986c4a6309f844e6135870d143ba64b967fdf219e39af0ec29475b66197",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-waterloo"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/boer-war",
+      "title": "英国国家陆军博物馆 · Boer War",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:58.505289+00:00",
+      "sha256": "4306d56ff5514e131f0babaac91faa9257216f92fdada9d6310f90e0a5b36f17",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-south-african-war"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/british-civil-wars",
+      "title": "英国国家陆军博物馆 · British Civil Wars",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:20.510204+00:00",
+      "sha256": "1d6db08c900117e0d79d3afd8ead4a137b0e6b63f6c0dfa9a9cf682a9a033643",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-british-civil-wars"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nam.ac.uk/explore/crimean-war",
+      "title": "英国国家陆军博物馆 · Crimean War",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:29.925571+00:00",
+      "sha256": "75c0c6840326f9157abd27ca457c6dfb83c31d38abf7115180240c8607c18371",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crimean-war"
+        }
+      ]
+    },
+    {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-duchy-of-warsaw/",
+      "title": "拿破仑基金会 · The Duchy of Warsaw: The Gradual Disappearance of Poland",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:26.467456+00:00",
+      "sha256": "9ad746d8fbd68412b6fd0f6108e4cdba56a7877c10877059f012bca85b0c0797",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-partitions-poland"
+        }
+      ]
+    },
+    {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/close-up/a-close-up-on-the-proclamation-of-empire/",
+      "title": "拿破仑基金会 · The proclamation of Empire, 18 May 1804",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:28.477892+00:00",
+      "sha256": "5e364b7d163a33967247ffda56719ba15fbe14c2c1c6902f74b3ebffdadc6306",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-napoleon-empire"
+        }
+      ]
+    },
+    {
+      "url": "https://www.napoleon.org/en/young-historians/napodoc/les-masses-de-granit-de-nouvelles-institutions-napoleoniennes",
+      "title": "拿破仑基金会 · The masses of granite: The Civil Code",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:27.829182+00:00",
+      "sha256": "3905a44806cbd7b3d691ad65400c2d7da2f1d3bdd54fc524d5631720b0d89a61",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-napoleonic-civil-code"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
+      "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:32.795222+00:00",
+      "sha256": "f1ec0314b3716651924f2a2addd179e6ef1374d93b1e7bee766f166baa90ef65",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-batavia"
+        }
+      ]
+    },
+    {
       "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
       "title": "英国国家档案馆 · Magna Carta",
       "status": "retained-and-hash-verified",
@@ -19537,6 +22825,23 @@
         {
           "kind": "event",
           "id": "world-magna-carta"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/british-army-operations-up-to-1913",
+      "title": "英国国家档案馆 · British Army operations up to 1913",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:32.157869+00:00",
+      "sha256": "d2faf1ba69aaf41aee8e0b23c0e440825244494e4e8ac5f3f41d92e5197250b5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-crimean-war"
         }
       ]
     },
@@ -19576,6 +22881,23 @@
         {
           "kind": "event",
           "id": "world-russo-japanese"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ndl.go.jp/modern/e/cha2/description27.html",
+      "title": "日本国立国会图书馆 · Japan’s Annexation of Korea",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:14.800727+00:00",
+      "sha256": "0dc933a821ba3cc70eedeb55e2456bbc8d82aee7b16038ec3171078cea782564",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-korea-annexation"
         }
       ]
     },
@@ -19651,6 +22973,19 @@
       ]
     },
     {
+      "url": "https://www.nps.gov/locations/hawaii/history.htm",
+      "title": "美国国家公园管理局 · Hawaiian History",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:57.054825+00:00",
+      "sha256": "772fa165a5aadcae434631b8aae5e0b74c6d4019475326105671ff2ed6754244",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hawaiian-overthrow"
+        }
+      ]
+    },
+    {
       "url": "https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm",
       "title": "美国国家公园管理局 · 1903 The First Flight",
       "status": "retained-and-hash-verified",
@@ -19660,6 +22995,49 @@
         {
           "kind": "event",
           "id": "world-flight"
+        }
+      ]
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
+      "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:27.819261+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-england"
+        },
+        {
+          "kind": "world-polity",
+          "id": "world-britain"
+        }
+      ]
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
+      "title": "英国议会 · Overview of the Glorious Revolution",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:50:27.749035+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-glorious-revolution"
+        }
+      ]
+    },
+    {
+      "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
+      "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:54:41.816286+00:00",
+      "sha256": "98e34858f9852863928ac4ff11baa18a7e506a98ec121bd0da328b9f91ef3b95",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-kongo"
         }
       ]
     },
@@ -19677,6 +23055,32 @@
       ]
     },
     {
+      "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
+      "title": "荷兰国立博物馆 · The Republic",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:50:19.796361+00:00",
+      "sha256": "c5420c23d7df9118bee1b832fefc46f63660f2f47f5d90e85f19210f2200d84d",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-dutch-abjuration"
+        }
+      ]
+    },
+    {
+      "url": "https://www.slam.org/collection/constituents/3919/",
+      "title": "圣路易斯艺术博物馆 · 明治时代",
+      "status": "request-failed",
+      "attemptedAt": "2026-10-23T06:54:25.307099+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "references": [
+        {
+          "kind": "world-polity",
+          "id": "world-meiji"
+        }
+      ]
+    },
+    {
       "url": "https://www.stats.gov.cn/zs/tjlshi/gd/202301/t20230101_1903782.html",
       "title": "国家统计局 · 《海国图志》——类似国势学派的统计学著作",
       "status": "retained-and-hash-verified",
@@ -19686,6 +23090,45 @@
         {
           "kind": "person",
           "id": "q597003"
+        }
+      ]
+    },
+    {
+      "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "title": "苏伊士运河管理局 · Canal History",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:55.997648+00:00",
+      "sha256": "c5991d9b0e015ef53d09d52d85bc2cba7aa9549d027ff298acaea550eeb57424",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-suez-canal"
+        }
+      ]
+    },
+    {
+      "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
+      "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:46:12.358204+00:00",
+      "sha256": "05dc7a369fa776488a8355b5592834b0020cc3a98e70ed6248e2ca367cef8775",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-hunminjeongeum"
+        }
+      ]
+    },
+    {
+      "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
+      "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-10-23T06:59:34.747894+00:00",
+      "sha256": "d1ac06c7921ed1578002c1996ce4eb2fa9640865aa92aa5de64fc019bd040d9e",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-khalsa"
         }
       ]
     },
