@@ -98,7 +98,9 @@ test('opens Xia through Spring and Autumn with sourced reading and honest approx
   await expect(page.locator('.rail-label').filter({ hasText: '二里头' })).toBeVisible()
 })
 
-test('loads global time slices and reaches Rome, the Americas and Africa', async ({ page }) => {
+test('loads global time slices and reaches Rome, the Americas and Africa', async ({
+  page,
+}, info) => {
   const mapRequests: string[] = []
   page.on('request', (r) => {
     if (r.url().includes('/data/maps/')) mapRequests.push(r.url())
@@ -109,15 +111,30 @@ test('loads global time slices and reaches Rome, the Americas and Africa', async
   await expect(
     page.locator('.polity-label[data-visible="true"]').filter({ hasText: '罗马帝国' }),
   ).toBeVisible()
-  await expect(
-    page.locator('.polity-label[data-visible="true"]').filter({ hasText: 'Mayan' }),
-  ).toBeVisible()
-  // Smaller polity names may be suppressed by collisions at the fitted world scale.
-  await page.goto('/#year=230&lng=30&lat=20&zoom=3')
+  // The global overview prioritizes current event labels, including Teotihuacan.
+  // Give nearby polity labels geographic room instead of requiring every small
+  // polity caption to survive collision suppression at the fitted world scale.
+  await page.goto('/#year=230&lng=-91&lat=17&zoom=4')
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
   await expect(
-    page.locator('.polity-label[data-visible="true"]').filter({ hasText: 'Kush' }),
+    page.getByRole('button', { name: '查看Mayan City-States疆域资料', exact: true }),
   ).toBeVisible()
+  await page.screenshot({ path: info.outputPath('maya-map-label.png') })
+  await page.goto('/#year=230&lng=33&lat=19&zoom=4')
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+  // Meroe's nearby long-running event can occupy the polity's caption space.
+  // Use the ordinary layer switch to inspect the historical territory itself.
+  await page.getByRole('button', { name: '地图图层', exact: true }).click()
+  await page.getByRole('switch', { name: '历史事件', exact: true }).click()
+  await expect(page.getByRole('switch', { name: '历史事件', exact: true })).toHaveAttribute(
+    'aria-checked',
+    'false',
+  )
+  await page.getByRole('button', { name: '地图图层', exact: true }).click()
+  await expect(
+    page.getByRole('button', { name: '查看Kingdom of Kush疆域资料', exact: true }),
+  ).toBeVisible()
+  await page.screenshot({ path: info.outputPath('kush-map-label.png') })
   expect(mapRequests.length).toBeGreaterThan(0)
   expect(mapRequests.every((url) => /\/maps\/[a-z-]+\/\d+\.geojson$/.test(url))).toBe(true)
   await page.goto('/#year=1840&lng=-100&lat=38&zoom=2.5')
@@ -130,10 +147,20 @@ test('loads global time slices and reaches Rome, the Americas and Africa', async
 })
 
 for (const width of [390, 768, 1440]) {
-  test(`timeline names avoid overlap and preserve date pins at ${width}px`, async ({ page }) => {
+  test(`timeline names avoid overlap and preserve date pins at ${width}px`, async ({
+    page,
+  }, info) => {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 900 })
     await page.goto('/#year=1840&event=opium-war&scope=period')
     await expect(page.locator('.rail-label.selected')).toContainText('鸦片战争')
+    // Initial captions use a fallback rail width until ResizeObserver measures
+    // the actual viewport. Inspect the settled page, retaining strict geometry.
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+    await page.evaluate(async () => {
+      await document.fonts.ready
+      await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)))
+    })
+    await page.screenshot({ path: info.outputPath(`timeline-layout-${width}.png`) })
     const boxes = await page.locator('.rail-label').evaluateAll((items) =>
       items.map((item) => {
         const r = item.getBoundingClientRect()
@@ -145,17 +172,26 @@ for (const width of [390, 768, 1440]) {
       for (let j = 0; j < i; j++)
         expect(boxes[i].left >= boxes[j].right || boxes[i].right <= boxes[j].left).toBe(true)
     const overlap = await page.evaluate(() => {
-      const labels = [...document.querySelectorAll('.rail-label')].map((e) =>
-          e.getBoundingClientRect(),
-        ),
-        pins = [...document.querySelectorAll('.rail-event')].map((e) => e.getBoundingClientRect())
-      return labels.some((a) =>
-        pins.some(
-          (b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top,
-        ),
-      )
+      const labels = [...document.querySelectorAll('.rail-label')],
+        pins = [...document.querySelectorAll('.rail-event')]
+      return labels.flatMap((label) => {
+        const a = label.getBoundingClientRect()
+        return pins.flatMap((pin) => {
+          const b = pin.getBoundingClientRect()
+          return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top
+            ? [
+                {
+                  label: label.textContent,
+                  labelBox: a.toJSON(),
+                  pin: pin.getAttribute('aria-label'),
+                  pinBox: b.toJSON(),
+                },
+              ]
+            : []
+        })
+      })
     })
-    expect(overlap).toBe(false)
+    expect(overlap).toEqual([])
     await page.locator('.rail-label.selected').click()
     if (await page.locator('.timeline-event-menu').isVisible()) {
       await expect(page.locator('.timeline-event-menu')).toBeInViewport({ ratio: 1 })

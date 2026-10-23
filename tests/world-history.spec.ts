@@ -20,27 +20,6 @@ async function mapReady(page: Page, year?: number) {
   await expect(canvas).toHaveAttribute('data-rendered', 'true')
 }
 
-async function regionReady(page: Page, region: 'africa' | 'europe' | 'oceania') {
-  // Camera URLs commit at moveend. A previous idle frame can still be visible
-  // immediately after a React scope selection, before its camera effect runs.
-  const ranges = {
-    africa: [-10, 45, -20, 25],
-    europe: [-5, 40, 35, 70],
-    oceania: [140, 180, -40, 30],
-  }
-  await expect
-    .poll(() => {
-      const params = new URLSearchParams(new URL(page.url()).hash.slice(1))
-      if (!params.has('lng') || !params.has('lat')) return false
-      const lng = Number(params.get('lng')),
-        lat = Number(params.get('lat'))
-      const [west, east, south, north] = ranges[region]
-      return lng >= west && lng <= east && lat >= south && lat <= north
-    })
-    .toBe(true)
-  await mapReady(page)
-}
-
 async function sheet(page: Page, view: 'map' | 'split' | 'reading') {
   if (page.viewportSize()!.width <= 1000) await setSheet(page, view)
 }
@@ -81,39 +60,97 @@ async function choosePeriod(page: Page, id: string, shortName: string) {
       .click()
 }
 
+async function pillarSettings(page: Page) {
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await expect(page.locator('.pillar-dialog')).toBeVisible()
+}
+
+async function closePillarSettings(page: Page) {
+  await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
+  await expect(page.locator('.pillar-dialog')).not.toBeVisible()
+}
+
+async function globalMapEvents(page: Page) {
+  // Markers outside the current camera remain in the map's event universe.
+  // Check their records instead of requiring distant continents to fit together.
+  await expect(page.locator('.event-marker[data-event-ids~="world-suez-canal"]')).toHaveCount(1)
+  await expect(page.locator('.event-marker[data-event-ids~="taiping"]')).toHaveCount(1)
+}
+
+async function singleWorldLabels(page: Page) {
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-longitude-wrapped', 'false')
+  await mapReady(page)
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const params = new URLSearchParams(location.hash.slice(1))
+        if (!params.has('lng') || !params.has('zoom')) return ['camera not committed']
+        const map = document.querySelector('.map-canvas')!.getBoundingClientRect()
+        const world = 512 * 2 ** Number(params.get('zoom'))
+        const left = map.width / 2 - ((Number(params.get('lng')) + 180) / 360) * world
+        const right = left + world
+        const labels = [
+          ...document.querySelectorAll<HTMLElement>(
+            '.polity-label[data-visible="true"],.polity-label[aria-label="查看美国疆域资料"]',
+          ),
+        ]
+        const problems: string[] = []
+        if (!labels.some((label) => label.getAttribute('aria-label') === '查看美国疆域资料'))
+          problems.push('missing USA map label')
+        for (const label of labels) {
+          const box = label.getBoundingClientRect()
+          // Labels may move by up to 90 px to avoid controls. Check their
+          // geographic anchor, removing that deliberate CSS-only displacement.
+          const offset = Number.parseFloat(getComputedStyle(label).translate) || 0
+          const anchor = box.left + box.width / 2 - offset - map.left
+          // The camera URL rounds zoom to 2 decimals, and fitBounds may use
+          // asymmetric side padding. Neither can explain a full world-copy drift.
+          if (anchor < left - 16 || anchor > right + 16)
+            problems.push(`${label.textContent}: ${anchor} outside ${left}—${right}`)
+        }
+        return problems
+      }),
+    )
+    .toEqual([])
+}
+
 for (const [width, height] of [
   [1440, 900],
   [390, 844],
   [844, 390],
 ]) {
-  test(`world scope and selected event survive map/pillar navigation at ${width}x${height}`, async ({
+  test(`pillar preferences stay independent from the global map at ${width}x${height}`, async ({
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#year=1869')
-    await mapReady(page, 1869)
+    await page.goto('/#visual=pillar&year=1869&span=150&scope=period')
+    await expect(page.locator('.pillar-stage')).toBeVisible()
+    await pillarSettings(page)
+    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    await page.getByLabel('世界历史地区', { exact: true }).selectOption('africa')
+    await closePillarSettings(page)
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+    await expect(page.locator('.pillar-card.china')).toHaveCount(0)
+    await expect(page.locator('.pillar-card.world').first()).toBeVisible()
+    await switchMode(page, '地图')
     await sheet(page, 'map')
-    await page.getByRole('button', { name: '地图图层', exact: true }).click()
-    await page.getByLabel('地图历史范围', { exact: true }).selectOption('world')
-    await page.getByLabel('地图世界地区', { exact: true }).selectOption('africa')
-    await expect(page.getByLabel('地图历史范围', { exact: true })).toHaveValue('world')
-    await expect(page.getByLabel('地图世界地区', { exact: true })).toHaveValue('africa')
-    await regionReady(page, 'africa')
+    if (width >= 844) await singleWorldLabels(page)
     await mapReady(page, 1869)
-    for (const name of ['地图历史范围', '地图世界地区']) {
-      const box = (await page.getByLabel(name, { exact: true }).boundingBox())!
-      expect(box.height).toBeGreaterThanOrEqual(44)
-    }
+    await page.getByRole('button', { name: '地图图层', exact: true }).click()
+    await expect(page.getByLabel('地图历史范围', { exact: true })).toHaveCount(0)
+    await expect(page.getByLabel('地图世界地区', { exact: true })).toHaveCount(0)
+    await expect(page.locator('.layers-popover select')).toHaveCount(0)
     const popover = (await page.locator('.layers-popover').boundingBox())!
     expect(popover.x).toBeGreaterThanOrEqual(-1)
     expect(popover.y).toBeGreaterThanOrEqual(-1)
     expect(popover.x + popover.width).toBeLessThanOrEqual(width + 1)
     expect(popover.y + popover.height).toBeLessThanOrEqual(height + 1)
-    await page.screenshot({ path: info.outputPath(`world-map-controls-${width}.png`) })
+    await page.screenshot({ path: info.outputPath(`global-map-controls-${width}.png`) })
     await page.getByRole('button', { name: '地图图层', exact: true }).click()
     await mapReady(page, 1869)
     await expect(page).toHaveURL(/side=world/)
     await expect(page).toHaveURL(/region=africa/)
+    await globalMapEvents(page)
 
     await search(page, '苏伊士运河通航')
     await mapReady(page, 1869)
@@ -146,30 +183,42 @@ for (const [width, height] of [
     await expect(page).toHaveURL(/event=world-suez-canal/)
     await page.reload()
     await mapReady(page, 1869)
-    await sheet(page, 'map')
-    await page.getByRole('button', { name: '地图图层', exact: true }).click()
-    await expect(page.getByLabel('地图历史范围', { exact: true })).toHaveValue('world')
-    await expect(page.getByLabel('地图世界地区', { exact: true })).toHaveValue('africa')
-    await page.getByRole('button', { name: '地图图层', exact: true }).click()
+    await globalMapEvents(page)
+    await switchMode(page, '时空柱')
+    await pillarSettings(page)
+    await expect(page.getByLabel('时空柱浏览方式', { exact: true })).toHaveValue('world')
+    await expect(page.getByLabel('世界历史地区', { exact: true })).toHaveValue('africa')
+    await closePillarSettings(page)
+    await page.goBack()
+    await mapReady(page, 1869)
+    await globalMapEvents(page)
+    await expect(page.locator('.event-detail h2')).toHaveText('苏伊士运河通航')
+    await page.goForward()
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+    await pillarSettings(page)
+    await expect(page.getByLabel('世界历史地区', { exact: true })).toHaveValue('africa')
+    await closePillarSettings(page)
     await noPageOverflow(page)
   })
 
-  test(`world periods navigate the map through the 1912 boundary at ${width}x${height}`, async ({
+  test(`legacy pillar filters do not restrict map chronology through 1912 at ${width}x${height}`, async ({
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#year=1869&side=world&region=europe')
+    await page.goto('/#year=1869&side=world&region=europe&scope=period')
     await mapReady(page, 1869)
     await sheet(page, 'map')
-    await choosePeriod(page, 'world-classical', '古典')
-    await mapReady(page, 200)
-    await regionReady(page, 'europe')
-    await expect(page).toHaveURL(/year=200/)
+    await globalMapEvents(page)
+    await expect(page.locator('.timeline-period-select option[value^="world-"]')).toHaveCount(0)
+    await choosePeriod(page, 'han', '汉')
+    await mapReady(page, -100)
+    await expect(page).toHaveURL(/year=-100/)
     await expect(page).toHaveURL(/side=world/)
+    await expect(page).toHaveURL(/region=europe/)
     await expect(page).not.toHaveURL(/visual=pillar/)
-    await page.screenshot({ path: info.outputPath(`classical-world-map-${width}.png`) })
-    await choosePeriod(page, 'world-transformations', '帝国与变革')
-    await mapReady(page, 1900)
+    await page.screenshot({ path: info.outputPath(`global-map-han-${width}.png`) })
+    await choosePeriod(page, 'qing', '清')
+    await mapReady(page, 1750)
     await page.locator('.year-title').click()
     const yearInput = page.getByRole('spinbutton', { name: '输入历史年份', exact: true })
     await yearInput.fill('1912')
@@ -189,11 +238,28 @@ for (const [width, height] of [
   })
 }
 
+for (const width of [1440, 390]) {
+  test(`a Chinese-only pillar does not hide world map events at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: width === 390 ? 844 : 900 })
+    await page.goto('/#visual=pillar&year=1869&span=150&side=china&scope=period')
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'china')
+    await expect(page.locator('.pillar-card.world')).toHaveCount(0)
+    await switchMode(page, '地图')
+    await globalMapEvents(page)
+    await page.reload()
+    await mapReady(page, 1869)
+    await globalMapEvents(page)
+    await switchMode(page, '时空柱')
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'china')
+    await expect(page.locator('.pillar-card.world')).toHaveCount(0)
+  })
+}
+
 test('a Chinese map label opens the sourced Roman world-polity profile without mixing geometry dates', async ({
   page,
 }, info) => {
   await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto('/#year=200&side=world&region=europe&events=0')
+  await page.goto('/#year=200&events=0&lng=13&lat=40&zoom=2.2')
   await mapReady(page, 200)
   await page.getByRole('button', { name: '查看罗马帝国疆域资料', exact: true }).click()
   await expect(page.locator('.polity-detail h2')).toHaveText('罗马帝国')
@@ -250,7 +316,7 @@ test('an approximate Central Asian event retains date, location caveats and refe
   await page.screenshot({ path: info.outputPath('approximate-world-map-reading.png') })
 })
 
-test('an independent Chinese event search exits incompatible world filters and retains the Chinese archive', async ({
+test('map searches read both histories without changing remembered pillar filters', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
@@ -259,22 +325,32 @@ test('an independent Chinese event search exits incompatible world filters and r
   await search(page, '秦统一六国')
   await expect(page.locator('.event-detail h2')).toHaveText('秦统一六国')
   await mapReady(page, -221)
-  await expect(page).not.toHaveURL(/side=world|region=africa/)
+  await expect(page).toHaveURL(/side=world/)
+  await expect(page).toHaveURL(/region=africa/)
   await expect(page).toHaveURL(/event=qin-unifies/)
-  await switchMode(page, '时空柱')
-  await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'compare')
-  await expect(page.locator('.pillar-card[data-event-id="qin-unifies"]')).toBeVisible()
+  await expect(page.locator('.event-marker[data-event-ids~="qin-unifies"]')).toHaveCount(1)
   await search(page, '秦朝')
   await expect(page.locator('.dynasty-detail h2')).toHaveText('秦朝')
   await expect(page.locator('.dynasty-detail > .eyebrow')).toHaveText('朝代与政权档案')
   await expect(page).not.toHaveURL(/dynasty=world-/)
+  await expect(page).toHaveURL(/side=world/)
+  await expect(page).toHaveURL(/region=africa/)
+  await search(page, '罗马帝国')
+  await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
+  await expect(page).toHaveURL(/side=world/)
+  await expect(page).toHaveURL(/region=africa/)
+  await switchMode(page, '时空柱')
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+  await pillarSettings(page)
+  await expect(page.getByLabel('世界历史地区', { exact: true })).toHaveValue('africa')
+  await closePillarSettings(page)
 })
 
 test('world archives persist in bookmarks and recent reading with their own start-date action', async ({
   page,
 }, info) => {
   await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto('/#year=200&side=world&region=europe&dynasty=world-roman-empire')
+  await page.goto('/#year=200&dynasty=world-roman-empire&lng=13&lat=40&zoom=2.2')
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
   // Exercise persistence from a loaded map. Reloading during WebKit's pending
   // module import reports the old document's cancelled dependency as a pageerror.
@@ -289,7 +365,7 @@ test('world archives persist in bookmarks and recent reading with their own star
   await page.locator('.saved-panel .dynasty-list-card').click()
   await page.getByRole('button', { name: '查看阅读起始年代的地图', exact: true }).click()
   await mapReady(page, -27)
-  await expect(page).toHaveURL(/side=world/)
+  await expect(page).not.toHaveURL(/side=world|region=europe/)
   await expect(page).toHaveURL(/year=-27/)
   await page
     .getByRole('combobox', { name: '搜索历史事件、人物或地名', exact: true })
@@ -302,18 +378,19 @@ test('world archives persist in bookmarks and recent reading with their own star
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
 })
 
-test('an external world-region hash frames Pacific events including Hawaii', async ({
+test('an explicit Pacific camera shows Hawaii independently of pillar region preferences', async ({
   page,
 }, info) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/#year=1900&side=world&region=africa&scope=period')
+  await page.goto('/#year=1900&side=world&region=africa&scope=period&lng=15&lat=20&zoom=1')
   await mapReady(page, 1900)
   await sheet(page, 'map')
   await page.evaluate(() => {
-    location.hash = 'year=1900&side=world&region=oceania&scope=period'
+    location.hash = 'year=1900&side=world&region=africa&scope=period&lng=165&lat=-10&zoom=1'
   })
   await mapReady(page, 1900)
-  await regionReady(page, 'oceania')
+  await expect(page).toHaveURL(/lng=165(?:&|$)/)
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-longitude-wrapped', 'true')
   const marker = page.locator('.event-marker[data-event-ids~="world-hawaiian-overthrow"]')
   await expect(marker).toHaveCount(1)
   await expect
@@ -332,7 +409,17 @@ test('an external world-region hash frames Pacific events including Hawaii', asy
     )
     .toBe(true)
   await page.screenshot({ path: info.outputPath('pacific-world-region.png') })
+  const grouped = (await marker.getAttribute('data-event-ids'))!.split(' ').length > 1
   await marker.click()
+  if (grouped) {
+    // The global map can combine the 1810 and 1893 Hawaii records at this zoom.
+    // Follow the ordinary cluster choice instead of assuming a single marker.
+    await page
+      .getByRole('dialog', { name: '此处的历史事件', exact: true })
+      .getByRole('button')
+      .filter({ has: page.getByText('夏威夷君主制被推翻', { exact: true }) })
+      .click()
+  }
   await sheet(page, 'reading')
   await expect(page.locator('.event-detail h2')).toHaveText('夏威夷君主制被推翻')
   await expect(page.locator('.event-detail')).toContainText('1898年的美国并吞')
@@ -349,13 +436,52 @@ test('an external world-region hash frames Pacific events including Hawaii', asy
   await mapReady(page, 1893)
   await sheet(page, 'split')
   await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
+  await page.setViewportSize({ width: 844, height: 390 })
+  await sheet(page, 'map')
+  await page.getByRole('button', { name: '查看全球疆域', exact: true }).click()
+  await singleWorldLabels(page)
+  await mapReady(page, 1893)
+  await page.screenshot({ path: info.outputPath('pacific-to-single-world-overview.png') })
+  await page.setViewportSize({ width: 390, height: 844 })
+  await search(page, '夏威夷君主制被推翻')
+  await mapReady(page, 1893)
+  await sheet(page, 'split')
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-longitude-wrapped', 'true')
+  await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
   await search(page, '秦统一六国')
   await mapReady(page, -221)
-  await expect(page).not.toHaveURL(/region=oceania|side=world/)
+  await expect(page).toHaveURL(/side=world/)
+  await expect(page).toHaveURL(/region=africa/)
   await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
 })
 
-test('world year comparison respects the selected region for events and polity archives', async ({
+test('a same-zoom Pacific camera hash retains a single canonical overview', async ({
+  page,
+}, info) => {
+  await page.setViewportSize({ width: 512, height: 390 })
+  await page.goto('/#year=1900&scope=period&lng=0&lat=0&zoom=0')
+  await mapReady(page, 1900)
+  await sheet(page, 'map')
+  await singleWorldLabels(page)
+  await expect(page).toHaveURL(/zoom=0(?:&|$)/)
+  await page.evaluate(async () => {
+    // Preserve an exactly representable zoom. A longitude-only camera move
+    // must restore overview wrapping even when no zoomend event is emitted.
+    const changed = new Promise<void>((resolve) =>
+      addEventListener('hashchange', () => resolve(), { once: true }),
+    )
+    location.hash = 'year=1900&scope=period&lng=165&lat=0&zoom=0'
+    await changed
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)))
+  })
+  await mapReady(page, 1900)
+  await expect(page).toHaveURL(/zoom=0(?:&|$)/)
+  await singleWorldLabels(page)
+  await page.screenshot({ path: info.outputPath('same-zoom-pacific-overview.png') })
+  await noPageOverflow(page)
+})
+
+test('map year comparison includes Chinese and world records despite remembered pillar filters', async ({
   page,
 }, info) => {
   await page.setViewportSize({ width: 1440, height: 900 })
@@ -367,10 +493,10 @@ test('world year comparison respects the selected region for events and polity a
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-reference-rendered', 'true')
   await page.locator('.comparison-read-button').click()
   const reader = page.locator('.comparison-reading')
-  await expect(reader.locator('.eyebrow')).toContainText('世界历史')
+  await expect(reader.locator('.eyebrow')).toContainText('中外历史')
   await expect(reader.locator('.comparison-years')).toContainText('德意志帝国')
-  await expect(reader.locator('.comparison-years')).not.toContainText('清朝')
+  await expect(reader.locator('.comparison-years')).toContainText('清朝')
   await expect(reader.locator('.archive-event-list')).toContainText('德意志帝国成立')
-  await expect(reader.locator('.archive-event-list')).not.toContainText('太平天国')
-  await page.screenshot({ path: info.outputPath('europe-world-comparison.png') })
+  await expect(reader.locator('.archive-event-list')).toContainText('洋务运动逐步展开')
+  await page.screenshot({ path: info.outputPath('global-history-comparison.png') })
 })

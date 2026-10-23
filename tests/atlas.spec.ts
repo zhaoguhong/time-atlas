@@ -636,7 +636,12 @@ test('reads and saves dynasty introductions with actual dates and handles approx
 }) => {
   await page.getByRole('button', { name: '朝代', exact: true }).click()
   await page.getByRole('combobox', { name: '朝代档案范围' }).selectOption('all')
-  await expect(page.locator('.dynasty-list-card')).toHaveCount(53)
+  await expect(page.locator('.dynasty-list-card')).toHaveCount(108)
+  await expect(
+    page.locator('.dynasty-list-card').filter({
+      has: page.getByText('罗马帝国', { exact: true }),
+    }),
+  ).toHaveCount(1)
   await page.locator('.dynasty-list-card').filter({ hasText: '皇太极改国号为清' }).click()
   await expect(page.locator('.dynasty-detail h2')).toHaveText('清朝')
   await expect(page.locator('.dynasty-facts')).toContainText('1636—1912')

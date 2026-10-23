@@ -73,7 +73,6 @@ import TopicPanel from './components/TopicPanel'
 import PlacePanel from './components/PlacePanel'
 import ComparisonPanel from './components/ComparisonPanel'
 import ExplorationFilters from './components/ExplorationFilters'
-import HistoryScopeControls from './components/HistoryScopeControls'
 import {
   places,
   placeById,
@@ -311,12 +310,7 @@ export default function App() {
             zoom: 5,
             token: Date.now(),
           }
-        : initial.view.pillarSide === 'world' && !readCamera()
-          ? {
-              bounds: worldRegionBounds[initial.view.pillarRegion] ?? worldRegionBounds.all,
-              token: Date.now(),
-            }
-          : null,
+        : null,
   )
   const [camera, setCamera] = useState<Camera | null>(readCamera)
   const [initialCamera] = useState(readCamera)
@@ -415,7 +409,22 @@ export default function App() {
   yearRef.current = year
   const tour = allTours.find((item) => item.id === tourState?.id)
   const period = periodAt(year)
-  const worldBrowsing = pillarSide === 'world' && !tour && !trailPerson
+  // Side and world-region choices belong to the pillar. Map browsing always
+  // includes both China and the rest of the world, even after a shared link.
+  const historySide = visualization === 'pillar' ? pillarSide : 'compare'
+  const historyRegion = visualization === 'pillar' ? pillarRegion : 'all'
+  const worldBrowsing = historySide === 'world' && !tour && !trailPerson
+  const historyDynasties = useMemo(
+    () => [
+      ...(historySide === 'world' ? [] : dynasties),
+      ...(historySide === 'china'
+        ? []
+        : worldPolities.filter(
+            (polity) => historyRegion === 'all' || polity.region === historyRegion,
+          )),
+    ],
+    [historySide, historyRegion],
+  )
   const worldPeriod = worldPeriodAt(year)
   const profile = profiles[period.id]
   const periodEvents = useMemo(() => eventsInPeriod(events, year), [year])
@@ -424,9 +433,9 @@ export default function App() {
       filterExploration(events, exploration).filter(
         (event) =>
           (category === '全部' || event.category === category) &&
-          pillarMatches(event, pillarSide, pillarRegion),
+          pillarMatches(event, historySide, historyRegion),
       ),
-    [exploration, category, pillarSide, pillarRegion],
+    [exploration, category, historySide, historyRegion],
   )
   const filteredEvents = useMemo(() => {
     if (exploration.range) return explorationEvents
@@ -668,7 +677,7 @@ export default function App() {
       setPlaybackReading(false)
       setReaderCollapsed(false)
       {
-        if (!pillarMatches(event, pillarSide, pillarRegion)) {
+        if (visualization === 'pillar' && !pillarMatches(event, pillarSide, pillarRegion)) {
           setPillarSide('compare')
           setPillarRegion('all')
         }
@@ -710,29 +719,13 @@ export default function App() {
     } else if (selection?.type === 'event') {
       const event = eventById.get(selection.id)
       if (event) setFocus({ coordinates: event.coordinates, zoom: 4.6, token: Date.now() })
-    } else if (pillarSide === 'world') {
-      setFocus({
-        bounds: worldRegionBounds[pillarRegion] ?? worldRegionBounds.all,
-        token: Date.now(),
-      })
+    } else {
+      setFocus(
+        camera
+          ? { camera, token: Date.now() }
+          : { bounds: worldRegionBounds.all, token: Date.now() },
+      )
     }
-  }
-  function changeHistoryScope(side: PillarSide, region = pillarRegion) {
-    rememberView()
-    setPillarSide(side)
-    setPillarRegion(region)
-    setSelection(null)
-    setMode('events')
-    setPlaying(false)
-    setPlaybackReading(false)
-    setTrailPerson(null)
-    setTourState(null)
-    setExploration((old) => ({ ...old, place: '', bounds: null }))
-    setScope('period')
-    setShowEvents(true)
-    if (side === 'world')
-      setFocus({ bounds: worldRegionBounds[region] ?? worldRegionBounds.all, token: Date.now() })
-    else if (side === 'china') setFocus({ region: 'china', token: Date.now() })
   }
   function openPerson(id: string, backTo?: Selection) {
     setPlaybackReading(false)
@@ -741,8 +734,10 @@ export default function App() {
     if (!person) return
     rememberView()
     if (!backTo) {
-      setPillarSide('compare')
-      setPillarRegion('all')
+      if (visualization === 'pillar') {
+        setPillarSide('compare')
+        setPillarRegion('all')
+      }
       setYear(personFocusYear(person, year, journeyByPerson.get(id)))
       setTourState(null)
       setMode('people')
@@ -790,8 +785,10 @@ export default function App() {
     setPlaying(false)
     const worldPolity = worldPolityById.get(id)
     if (worldPolity) {
-      setPillarSide('world')
-      setPillarRegion(worldPolity.region)
+      if (visualization === 'pillar') {
+        setPillarSide('world')
+        setPillarRegion(worldPolity.region)
+      }
       setExploration(emptyExploration)
       setCategory('全部')
       const active = polities.find((polity) => worldPolity.mapNames.includes(polity.name))
@@ -801,8 +798,10 @@ export default function App() {
           : { bounds: worldRegionBounds[worldPolity.region], token: Date.now() },
       )
     } else {
-      setPillarSide('compare')
-      setPillarRegion('all')
+      if (visualization === 'pillar') {
+        setPillarSide('compare')
+        setPillarRegion('all')
+      }
       setFocus({ region: 'china', token: Date.now() })
     }
   }
@@ -912,8 +911,6 @@ export default function App() {
     } else setMode('overview')
   }
   function startTour(id: string) {
-    setPillarSide('compare')
-    setPillarRegion('all')
     rememberView()
     setVisualization('map')
     setExploration(emptyExploration)
@@ -1094,8 +1091,6 @@ export default function App() {
   function startTrail(id: string) {
     rememberView()
     setVisualization('map')
-    setPillarSide('compare')
-    setPillarRegion('all')
     setMobileView('split')
     const journey = journeyByPerson.get(id)
     if (!journey) return
@@ -1225,6 +1220,8 @@ export default function App() {
       params.set('play', playbackMode)
     }
     if (visualization === 'map') {
+      // Preserve the next pillar visit through reload/share. These parameters
+      // are dormant preferences here, never filters for map data or reading.
       if (pillarSide !== 'compare') params.set('side', pillarSide)
       if (pillarRegion !== 'all') params.set('region', pillarRegion)
     }
@@ -1363,12 +1360,7 @@ export default function App() {
           zoom: 5,
           token: Date.now(),
         })
-      } else if (next.view.pillarSide === 'world') {
-        setFocus({
-          bounds: worldRegionBounds[next.view.pillarRegion] ?? worldRegionBounds.all,
-          token: Date.now(),
-        })
-      }
+      } else setFocus(null)
     }
     window.addEventListener('hashchange', hashChanged)
     return () => window.removeEventListener('hashchange', hashChanged)
@@ -2082,7 +2074,7 @@ export default function App() {
             ) : (
               <HistoryMap
                 colorMode={colorMode}
-                wrapLongitude={pillarSide !== 'china' && pillarRegion === 'oceania'}
+                wrapLongitude
                 year={year}
                 events={mapEvents}
                 showCities={showCities}
@@ -2219,12 +2211,6 @@ export default function App() {
                 {layersOpen && (
                   <div className="layers-popover" ref={layersPopoverRef}>
                     <span className="eyebrow">地图图层</span>
-                    <HistoryScopeControls
-                      side={pillarSide}
-                      region={pillarRegion}
-                      onSide={(side) => changeHistoryScope(side)}
-                      onRegion={(region) => changeHistoryScope(pillarSide, region)}
-                    />
                     {[
                       ['历史事件', showEvents, () => setShowEvents((v) => !v)],
                       ['城市与都城', showCities, () => setShowCities((v) => !v)],
@@ -2828,19 +2814,12 @@ export default function App() {
                   all={archiveFilters.allChanges}
                   onAll={(allChanges) => setArchiveFilters((old) => ({ ...old, allChanges }))}
                   events={explorationEvents}
-                  dynasties={[
-                    ...(pillarSide === 'world' ? [] : dynasties),
-                    ...(pillarSide === 'china'
-                      ? []
-                      : worldPolities.filter(
-                          (polity) => pillarRegion === 'all' || polity.region === pillarRegion,
-                        )),
-                  ]}
+                  dynasties={historyDynasties}
                   scopeLabel={
-                    pillarSide === 'china'
+                    historySide === 'china'
                       ? '中国历史'
-                      : pillarSide === 'world'
-                        ? `世界历史 · ${historyRegions[pillarRegion as keyof typeof historyRegions] ?? '所有地区'}`
+                      : historySide === 'world'
+                        ? `世界历史 · ${historyRegions[historyRegion as keyof typeof historyRegions] ?? '所有地区'}`
                         : '中外历史'
                   }
                   onEvent={openEvent}
@@ -3102,23 +3081,15 @@ export default function App() {
                     <option value="period">当前时期政权</option>
                     <option value="all">
                       全部档案（
-                      {worldBrowsing
-                        ? worldPolities.filter(
-                            (polity) => pillarRegion === 'all' || polity.region === pillarRegion,
-                          ).length
-                        : dynasties.length}
-                      ）
+                      {historyDynasties.length}）
                     </option>
                   </select>
-                  {(worldBrowsing ? worldPolities : dynasties)
+                  {historyDynasties
                     .filter(
                       (dynasty) =>
-                        (!worldBrowsing ||
-                          pillarRegion === 'all' ||
-                          worldPolityById.get(dynasty.id)?.region === pillarRegion) &&
-                        (dynastyRange === 'all' ||
-                          (dynasty.from <= (worldBrowsing ? worldPeriod.to : period.to) &&
-                            dynasty.to >= (worldBrowsing ? worldPeriod.from : period.from))),
+                        dynastyRange === 'all' ||
+                        (dynasty.from <= (worldBrowsing ? worldPeriod.to : period.to) &&
+                          dynasty.to >= (worldBrowsing ? worldPeriod.from : period.from)),
                     )
                     .map((dynasty) => (
                       <button
@@ -3248,7 +3219,7 @@ export default function App() {
                 </div>
               ) : (
                 <div className="events-panel">
-                  {pillarSide !== 'world' && (
+                  {historySide !== 'world' && (
                     <div className="period-brief">
                       <button onClick={() => navigateMode('overview')}>
                         <BookOpen size={15} />

@@ -87,7 +87,9 @@ interface Props {
 const empty: FeatureCollection = { type: 'FeatureCollection', features: [] }
 function projectNearest(instance: maplibregl.Map, [lng, lat]: [number, number], wrap?: boolean) {
   return instance.project([
-    wrap ? lng + 360 * Math.round((instance.getCenter().lng - lng) / 360) : lng,
+    wrap && instance.getRenderWorldCopies()
+      ? lng + 360 * Math.round((instance.getCenter().lng - lng) / 360)
+      : lng,
     lat,
   ])
 }
@@ -144,6 +146,30 @@ interface MapLabel {
   priority: number
   capital?: boolean
   kind: 'polity' | 'city' | 'event'
+}
+
+function canonicalMarker(
+  marker: maplibregl.Marker,
+  instance: maplibregl.Map,
+  anchor: 'center' | 'left' | 'bottom',
+) {
+  const location = marker.getLngLat()
+  if (!location || Math.abs(location.lng) <= 180) return marker
+  // MapLibre's Marker retains a prior screen position for smart wrapping even
+  // when world copies are disabled. A fresh Marker clears that branch memory;
+  // reuse the DOM node so application click handlers and label content survive.
+  const element = marker.getElement()
+  const offset = marker.getOffset()
+  const options = {
+    element,
+    anchor,
+    offset,
+    rotation: marker.getRotation(),
+    rotationAlignment: marker.getRotationAlignment(),
+    pitchAlignment: marker.getPitchAlignment(),
+  }
+  marker.remove()
+  return new maplibregl.Marker(options).setLngLat(location.wrap()).addTo(instance)
 }
 
 function graticule(): FeatureCollection<LineString> {
@@ -224,7 +250,9 @@ export default function HistoryMap(props: Props) {
         maxZoom: 8,
         maxPitch: 0,
         attributionControl: false,
-        renderWorldCopies: !!current.current.wrapLongitude,
+        renderWorldCopies:
+          !!current.current.wrapLongitude &&
+          512 * 2 ** camera.zoom > container.current.clientWidth + 1,
         style: {
           version: 8,
           sources: {},
@@ -547,6 +575,16 @@ export default function HistoryMap(props: Props) {
         ...eventLabels.current,
         ...placeLabels.current,
       ].sort((a, b) => b.priority - a.priority)
+      if (!instance.getRenderWorldCopies()) {
+        for (const item of items)
+          item.marker = canonicalMarker(
+            item.marker,
+            instance,
+            item.kind === 'polity' ? 'center' : item.kind === 'city' ? 'left' : 'bottom',
+          )
+        if (traveler.current)
+          traveler.current = canonicalMarker(traveler.current, instance, 'bottom')
+      }
       for (const item of items) {
         const fits = (rect: DOMRect) =>
           rect.left >= viewport.left + 5 &&
@@ -1122,7 +1160,7 @@ export default function HistoryMap(props: Props) {
     const marker = new maplibregl.Marker({ element, anchor: 'bottom', offset: [0, -5] })
     traveler.current = marker
     return () => {
-      marker.remove()
+      traveler.current?.remove()
       traveler.current = null
       travelProgress.current = { key: '', value: 0 }
       ;(instance.getSource('journey-progress') as maplibregl.GeoJSONSource | undefined)?.setData(
@@ -1154,6 +1192,8 @@ export default function HistoryMap(props: Props) {
     )
     marker.setLngLat(from.coordinates).addTo(instance)
     function draw(progress: number) {
+      const marker = traveler.current
+      if (!marker) return
       const visibleProgress = reduced && progress < 1 ? 0 : journeyMotionProgress(progress)
       const point = to
         ? interpolateJourneyCoordinates(from!.coordinates, to.coordinates, visibleProgress)
@@ -1256,7 +1296,7 @@ export default function HistoryMap(props: Props) {
         to!.coordinates,
         reduced ? (progress < 1 ? 0 : 1) : journeyMotionProgress(progress),
       )
-      marker.setLngLat(point)
+      traveler.current?.setLngLat(point)
       element.dataset.progress = progress.toFixed(4)
       if (now - lastPaint > 33 || progress === 1) {
         draw(progress)
@@ -1295,7 +1335,7 @@ export default function HistoryMap(props: Props) {
     placeLabels.current = [{ marker, element, priority: 3000, kind: 'event' }]
     arrange.current()
     return () => {
-      marker.remove()
+      placeLabels.current.forEach((label) => label.marker.remove())
       placeLabels.current = []
       arrange.current()
     }
@@ -1348,10 +1388,34 @@ export default function HistoryMap(props: Props) {
   }, [eventGroup])
 
   useEffect(() => {
-    if (ready && map.current) {
-      map.current.setRenderWorldCopies(!!props.wrapLongitude)
-      rebuildEvents.current()
-      arrange.current()
+    const instance = map.current
+    const element = container.current
+    if (!ready || !instance || !element) return
+    const update = () => {
+      // Wrap across the date line while exploring. Once a whole world fits,
+      // show it once instead of repeating continents in short, wide layouts.
+      const enabled =
+        !!props.wrapLongitude && 512 * 2 ** instance.getZoom() > element.clientWidth + 1
+      element.dataset.longitudeWrapped = String(enabled)
+      if (instance.getRenderWorldCopies() !== enabled) {
+        element.dataset.rendered = 'false'
+        instance.setRenderWorldCopies(enabled)
+        // Re-constrain the camera after leaving a date-line branch. The SDK
+        // changes its wrapping flag without applying single-world bounds;
+        // allow a pixel above for its near-180-degree floating-point limit.
+        if (!enabled) instance.resize()
+        rebuildEvents.current()
+        arrange.current()
+      }
+    }
+    update()
+    instance.on('zoomend', update)
+    instance.on('moveend', update)
+    instance.on('resize', update)
+    return () => {
+      instance.off('zoomend', update)
+      instance.off('moveend', update)
+      instance.off('resize', update)
     }
   }, [ready, props.wrapLongitude])
 
@@ -1363,6 +1427,22 @@ export default function HistoryMap(props: Props) {
     // animation, then reframe against the visible viewport when it returns.
     const hidden = !container.current?.clientWidth || !container.current.clientHeight
     pendingFocus.current = hidden
+    // Enable the longitude branch before MapLibre constrains an explicit
+    // Pacific destination. The movement/resize handler restores the overview rule.
+    const destination = props.focus
+    const crossesDateLine =
+      'bounds' in destination
+        ? destination.bounds[0][0] < -180 || destination.bounds[1][0] > 180
+        : 'camera' in destination
+          ? Math.abs(destination.camera.lng) > 130
+          : 'coordinates' in destination && Math.abs(destination.coordinates[0]) > 130
+    if (props.wrapLongitude && crossesDateLine && !instance.getRenderWorldCopies()) {
+      if (container.current) {
+        container.current.dataset.rendered = 'false'
+        container.current.dataset.longitudeWrapped = 'true'
+      }
+      instance.setRenderWorldCopies(true)
+    }
     if ('camera' in props.focus) {
       instance.jumpTo({
         center: [props.focus.camera.lng, props.focus.camera.lat],
