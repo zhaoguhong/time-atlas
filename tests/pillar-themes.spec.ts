@@ -57,6 +57,12 @@ async function compactGeometry(page: Page) {
       a.top < b.bottom - 0.5 &&
       a.bottom > b.top + 0.5
     const stage = rect(document.querySelector('.pillar-stage')!)
+    const viewport = document.querySelector('.pillar-events')!
+    const clip = rect(viewport)
+    if (!['hidden', 'clip'].includes(getComputedStyle(viewport).overflowY))
+      issues.push('unclipped event viewport')
+    if (clip.top < stage.top - 0.5 || clip.bottom > stage.bottom + 0.5)
+      issues.push('event viewport outside canvas')
     const cards = [...document.querySelectorAll('.pillar-card')]
     const controls = [
       ...document.querySelectorAll(
@@ -68,14 +74,17 @@ async function compactGeometry(page: Page) {
     cards.forEach((card, index) => {
       const bounds = rect(card)
       const id = card.getAttribute('data-event-id')
+      if (bounds.left < stage.left - 0.5 || bounds.right > stage.right + 0.5)
+        issues.push(`${id}: card outside canvas width`)
+      if (bounds.bottom <= clip.top || bounds.top >= clip.bottom)
+        issues.push(`${id}: offscreen card rendered`)
+      const eventButton = card.querySelector('button')!
       if (
-        bounds.left < stage.left - 0.5 ||
-        bounds.right > stage.right + 0.5 ||
-        bounds.top < stage.top - 0.5 ||
-        bounds.bottom > stage.bottom + 0.5
+        (bounds.top < clip.top - 0.5 || bounds.bottom > clip.bottom + 0.5) &&
+        eventButton.tabIndex !== -1
       )
-        issues.push(`${id}: card outside canvas`)
-      const button = rect(card.querySelector('button')!)
+        issues.push(`${id}: partly clipped card remains in tab order`)
+      const button = rect(eventButton)
       if (button.height < 44 || button.width < 44) issues.push(`${id}: small touch target`)
       const label = rect(card.querySelector('.pillar-event-line')!)
       if (label.top < bounds.top + 3 || label.bottom > bounds.bottom - 3)

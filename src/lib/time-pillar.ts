@@ -142,7 +142,30 @@ export function layoutPillar(
   selectedId?: string,
   gap = 10,
 ): PillarCard[] {
-  const { bottom, top } = pillarWindow(year, span)
+  return layoutPillarWindow(
+    events,
+    pillarWindow(year, span),
+    height,
+    cardHeight,
+    side,
+    selectedId,
+    gap,
+    year,
+  )
+}
+
+/** Pack an explicit time tile without clamping its scale at the history boundaries. */
+export function layoutPillarWindow(
+  events: HistoryEvent[],
+  window: { bottom: number; top: number; span: number },
+  height: number,
+  cardHeight: number,
+  side: PillarSide,
+  selectedId?: string,
+  gap = 10,
+  year = fromOrdinal((window.bottom + window.top) / 2),
+): PillarCard[] {
+  const { bottom, top } = window
   const visible = events.filter(
     (e) => toOrdinal(e.year) <= top && toOrdinal(e.endYear ?? e.year) >= bottom,
   )

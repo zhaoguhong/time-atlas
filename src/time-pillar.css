@@ -81,6 +81,7 @@
   flex: 1;
   min-height: 0;
   overflow: hidden;
+  overflow: clip;
   touch-action: none;
   cursor: grab;
   user-select: none;
@@ -115,6 +116,22 @@
 .pillar-gridline {
   stroke: #8b9a92;
   stroke-opacity: 0.12;
+}
+.pillar-events {
+  position: absolute;
+  inset: var(--pillar-top, 34px) 0 var(--pillar-bottom, 12px);
+  overflow: hidden;
+  overflow: clip;
+  pointer-events: none;
+  z-index: 3;
+}
+.pillar-event-track {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+.pillar-event-track .pillar-card {
+  pointer-events: auto;
 }
 .pillar-connector {
   color: var(--world);
@@ -483,6 +500,18 @@
   padding: 8px;
   font-size: 12px;
   text-decoration: underline;
+}
+.pillar-continuing {
+  padding: 12px 16px;
+}
+.pillar-continuing p {
+  color: var(--pillar-ink);
+}
+.pillar-continuing button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 .pillar-dialog {
   width: min(520px, calc(100vw - 24px));
@@ -975,13 +1004,6 @@
   transform-origin: center 8%;
   animation: pillar-column-in 580ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
 }
-.pillar-card {
-  animation: pillar-event-in 280ms ease-out both;
-  animation-delay: var(--entry-delay, 0ms);
-}
-.time-pillar[data-dragging='true'] .pillar-card {
-  animation: none;
-}
 @keyframes pillar-atmosphere-in {
   from {
     opacity: 0;
@@ -998,14 +1020,6 @@
   to {
     opacity: 1;
     transform: translateX(-50%) scaleY(1);
-  }
-}
-@keyframes pillar-event-in {
-  from {
-    opacity: 0.18;
-  }
-  to {
-    opacity: 1;
   }
 }
 :root[data-color-mode='dark'] .time-pillar .pillar-settings {

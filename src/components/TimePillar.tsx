@@ -29,7 +29,6 @@ import {
   clampSpan,
   eventRegion,
   historyRegions,
-  layoutPillar,
   MAX_SPAN,
   MIN_SPAN,
   pillarTicks,
@@ -40,6 +39,8 @@ import {
 import { eventPlaybackYears, PLAYBACK_SPEEDS } from '../lib/playback'
 import { usePillarTheme } from '../lib/pillar-theme'
 import { usePillarView } from '../hooks/use-pillar-view'
+import type { PillarView } from '../hooks/use-pillar-view'
+import { createPillarScene, samplePillarScene } from '../lib/pillar-scene'
 import { PillarAppearance, PillarScenery } from './PillarAppearance'
 import '../time-pillar.css'
 import '../pillar-themes.css'
@@ -81,7 +82,8 @@ export default function TimePillar(p: Props) {
   const optionsTrigger = useRef<HTMLButtonElement>(null)
   const modalTrigger = useRef<HTMLElement | null>(null)
   const [size, setSize] = useState({ width: 800, height: 500 })
-  const [draft, setDraft] = useState<{ year: number; span: number } | null>(null)
+  const [draft, setDraft] = useState<PillarView | null>(null)
+  const [precise, setPrecise] = useState<PillarView | null>(null)
   const [modal, setModal] = useState<'settings' | 'cluster' | null>(null)
   const [cluster, setCluster] = useState<HistoryEvent[]>([])
   const [jump, setJump] = useState('')
@@ -101,19 +103,27 @@ export default function TimePillar(p: Props) {
     y: number
     distance: number
     year: number
+    ordinal: number
     span: number
     anchor: number
     top: number
     moved: boolean
   } | null>(null)
   const suppressClick = useRef(false)
-  const { year, span, moving, settle } = usePillarView(
+  const targetOrdinal =
+    draft?.ordinal ??
+    (precise?.year === p.year && precise.span === p.span ? precise.ordinal : undefined) ??
+    toOrdinal(draft?.year ?? p.year)
+  const { year, span, ordinal, moving, settle } = usePillarView(
     draft?.year ?? p.year,
     draft?.span ?? p.span,
     draft !== null || dragging || p.playing,
+    targetOrdinal,
   )
-  const rendered = useRef({ year, span })
-  rendered.current = { year, span }
+  const rendered = useRef({ year, span, ordinal })
+  rendered.current = { year, span, ordinal }
+  const target = useRef<PillarView>({ year: p.year, span: p.span, ordinal: targetOrdinal })
+  target.current = { year: p.year, span: p.span, ordinal: targetOrdinal }
   const narrow = size.width < 560
   const footerZoom = size.width >= 760
   const single = p.side !== 'compare'
@@ -123,24 +133,64 @@ export default function TimePillar(p: Props) {
   const height = Math.max(48, size.height - padding - 12)
   const cardHeight = Math.min(showSummary ? 76 : 44, height)
   const summaryVisible = showSummary && cardHeight >= 64
-  const windowRange = pillarWindow(year, span)
-  const cards = useMemo(
-    () => layoutPillar(p.events, year, span, height, cardHeight, p.side, p.selectedId, 4),
-    [p.events, year, span, height, cardHeight, p.side, p.selectedId],
+  // Fractional ordinal time keeps even a four-year window pixel-smooth. Civil
+  // years and shared URLs still use whole years, with no year zero.
+  const windowAt = (center: number, duration: number) => {
+    const w = pillarWindow(fromOrdinal(Math.round(center)), duration)
+    const bottom = Math.max(
+      toOrdinal(MIN_YEAR),
+      Math.min(toOrdinal(MAX_YEAR) - w.span, center - w.span / 2),
+    )
+    return { bottom, top: bottom + w.span, span: w.span }
+  }
+  const windowRange = windowAt(ordinal, span)
+  const scene = useMemo(
+    () =>
+      createPillarScene(
+        p.events,
+        { ...windowRange, year },
+        height,
+        cardHeight,
+        p.side,
+        p.selectedId,
+      ),
+    // A pan changes only the scene transform, never its packing or identities.
+    // New scale/geometry/filter/selection deliberately establishes a new scene.
+    [p.events, span, height, cardHeight, p.side, p.selectedId],
+  )
+  const { cards: bufferedCards, offset } = samplePillarScene(scene, windowRange)
+  // CSS geometry rounds subpixels; omit zero-area boundary fragments instead
+  // of retaining an effectively offscreen button because of float residue.
+  const cards = bufferedCards.filter(
+    (c) => c.y + offset + cardHeight / 2 > 0.5 && c.y + offset - cardHeight / 2 < height - 0.5,
+  )
+  const windowEvents = useMemo(
+    () =>
+      p.events.filter(
+        (e) =>
+          toOrdinal(e.year) <= windowRange.top &&
+          toOrdinal(e.endYear ?? e.year) >= windowRange.bottom,
+      ),
+    [p.events, windowRange.top, windowRange.bottom],
   )
   const ticks = useMemo(
     () => pillarTicks(windowRange.bottom, windowRange.top, height),
     [windowRange.bottom, windowRange.top, height],
   )
-  const visibleCount = cards.reduce((n, c) => n + 1 + c.hidden.length, 0)
+  const visibleCount = windowEvents.length
   const yFor = (ordinal: number) =>
     padding + ((windowRange.top - ordinal) / windowRange.span) * height
   const position = (y: number) => Math.max(0, Math.min(1, (y - padding) / height))
   const limited = (ordinal: number) =>
     fromOrdinal(Math.round(Math.max(toOrdinal(MIN_YEAR), Math.min(toOrdinal(MAX_YEAR), ordinal))))
-  const commit = (next: { year: number; span: number }) => {
+  const continuous = (ordinal: number, span: number) => {
+    const center = Math.max(toOrdinal(MIN_YEAR), Math.min(toOrdinal(MAX_YEAR), ordinal))
+    return { year: limited(center), span, ordinal: center }
+  }
+  const commit = (next: PillarView) => {
     preview.current = null
     setDraft(null)
+    setPrecise(next.ordinal === undefined ? null : next)
     current.current.onNavigate(next.year, clampSpan(next.span))
   }
   const flush = () => {
@@ -154,7 +204,7 @@ export default function TimePillar(p: Props) {
       commit(next)
     }
   }
-  const showPreview = (next: { year: number; span: number }) => {
+  const showPreview = (next: PillarView) => {
     preview.current = next
     if (frame.current === null)
       frame.current = requestAnimationFrame(() => {
@@ -165,12 +215,12 @@ export default function TimePillar(p: Props) {
   const zoom = (
     factor: number,
     fraction = 0.5,
-    state = preview.current ?? { year: current.current.year, span: current.current.span },
+    state: PillarView = preview.current ?? target.current,
   ) => {
-    const w = pillarWindow(state.year, state.span),
+    const w = windowAt(state.ordinal ?? toOrdinal(state.year), state.span),
       newSpan = clampSpan(state.span * factor)
     const anchor = w.top - fraction * w.span
-    return { year: limited(anchor + (fraction - 0.5) * newSpan), span: newSpan }
+    return continuous(anchor + (fraction - 0.5) * newSpan, newSpan)
   }
   // Parent reading/focus changes resize the canvas in this same React commit.
   // Measure before paint so cards never retain the previous, taller layout.
@@ -208,7 +258,10 @@ export default function TimePillar(p: Props) {
               position(event.clientY - element.getBoundingClientRect().top),
               state,
             )
-          : { year: limited(toOrdinal(state.year) - (dy / height) * state.span), span: state.span }
+          : continuous(
+              (state.ordinal ?? toOrdinal(state.year)) - (dy / height) * state.span,
+              state.span,
+            )
       showPreview(next)
       if (timer.current) clearTimeout(timer.current)
       timer.current = setTimeout(flush, 140)
@@ -216,6 +269,9 @@ export default function TimePillar(p: Props) {
     element.addEventListener('wheel', wheel, { passive: false })
     return () => element.removeEventListener('wheel', wheel)
   }, [height])
+  useEffect(() => {
+    if (precise && (precise.year !== p.year || precise.span !== p.span)) setPrecise(null)
+  }, [p.year, p.span, precise])
   useEffect(
     () => () => {
       if (timer.current) clearTimeout(timer.current)
@@ -239,12 +295,14 @@ export default function TimePillar(p: Props) {
     const state = preview.current ?? rendered.current
     const y = points.reduce((n, v) => n + v.y, 0) / points.length
     const fraction = position(y - (stage.current?.getBoundingClientRect().top ?? 0))
-    const w = pillarWindow(state.year, state.span)
+    const center = state.ordinal ?? toOrdinal(state.year)
+    const w = windowAt(center, state.span)
     gesture.current = {
       y,
       distance:
         points.length > 1 ? Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y) : 0,
       ...state,
+      ordinal: center,
       anchor: w.top - fraction * w.span,
       top: w.top,
       moved: false,
@@ -267,7 +325,7 @@ export default function TimePillar(p: Props) {
     const years = eventPlaybackYears(p.events, p.range)
     const next =
       direction > 0 ? years.find((y) => y > p.year) : [...years].reverse().find((y) => y < p.year)
-    if (next !== undefined) p.onNavigate(next, p.span)
+    if (next !== undefined) commit({ year: next, span: p.span })
   }
   function openCluster(records: HistoryEvent[], trigger: HTMLElement) {
     flush()
@@ -322,7 +380,7 @@ export default function TimePillar(p: Props) {
           '--pillar-top': `${padding}px`,
           '--pillar-bottom': '12px',
           '--scene-zoom': 1 + Math.log(MAX_SPAN / span) * 0.015,
-          '--scene-drift': `${(toOrdinal(year) / MAX_SPAN) * 18}px`,
+          '--scene-drift': `${(ordinal / MAX_SPAN) * 18}px`,
         } as CSSProperties
       }
     >
@@ -385,14 +443,14 @@ export default function TimePillar(p: Props) {
           }
           if (!g.moved) return
           let nextSpan = g.span,
-            nextOrdinal = toOrdinal(g.year) + ((y - g.y) / height) * g.span
+            nextOrdinal = g.ordinal + ((y - g.y) / height) * g.span
           if (points.length > 1 && g.distance) {
             const distance = Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y)
             nextSpan = clampSpan((g.span * g.distance) / Math.max(20, distance))
             const fraction = position(y - event.currentTarget.getBoundingClientRect().top)
             nextOrdinal = g.anchor + (fraction - 0.5) * nextSpan
           }
-          showPreview({ year: limited(nextOrdinal), span: nextSpan })
+          showPreview(continuous(nextOrdinal, nextSpan))
         }}
         onPointerUp={(event) => {
           if (!pointerState.current.has(event.pointerId)) return
@@ -407,8 +465,7 @@ export default function TimePillar(p: Props) {
           pointerState.current.clear()
           gesture.current = null
           setDragging(false)
-          setDraft(null)
-          preview.current = null
+          flush()
         }}
         onClickCapture={(event) => {
           if (suppressClick.current) {
@@ -454,31 +511,36 @@ export default function TimePillar(p: Props) {
               className="pillar-gridline"
             />
           ))}
-          {cards.map((c) => {
-            const direction = !single && c.side === 'world' ? -1 : 1
-            const start = axis + direction * 4
-            const end = single ? 72 : axis + direction * railGap
-            return (
-              <g key={c.event.id} className={`pillar-connector ${c.side}`}>
-                <path
-                  d={
-                    theme === 'ribbon'
-                      ? `M ${start} ${padding + c.anchorY} L ${end} ${padding + c.y}`
-                      : theme === 'scroll'
-                        ? `M ${start} ${padding + c.anchorY} L ${start} ${padding + c.y} L ${end} ${padding + c.y}`
-                        : `M ${start} ${padding + c.anchorY} C ${end} ${padding + c.anchorY}, ${start} ${padding + c.y}, ${end} ${padding + c.y}`
-                  }
-                  fill="none"
-                />
-                <circle cx={start} cy={padding + c.anchorY} r={2} />
-              </g>
-            )
-          })}
+          <svg x={0} y={padding} width="100%" height={height} overflow="hidden">
+            <g transform={`translate(0 ${offset})`}>
+              {cards.map((c) => {
+                const direction = !single && c.side === 'world' ? -1 : 1
+                const start = axis + direction * 4
+                const end = single ? 72 : axis + direction * railGap
+                return (
+                  <g key={c.event.id} className={`pillar-connector ${c.side}`}>
+                    <path
+                      d={
+                        theme === 'ribbon'
+                          ? `M ${start} ${c.anchorY} L ${end} ${c.y}`
+                          : theme === 'scroll'
+                            ? `M ${start} ${c.anchorY} L ${start} ${c.y} L ${end} ${c.y}`
+                            : `M ${start} ${c.anchorY} C ${end} ${c.anchorY}, ${start} ${c.y}, ${end} ${c.y}`
+                      }
+                      fill="none"
+                    />
+                    <circle cx={start} cy={c.anchorY} r={2} />
+                  </g>
+                )
+              })}
+            </g>
+          </svg>
         </svg>
         {ticks
           .filter(
             (t) =>
-              Math.abs(yFor(toOrdinal(t)) - yFor(toOrdinal(year))) > (t < 0 || year < 0 ? 34 : 25),
+              t !== year &&
+              Math.abs(yFor(toOrdinal(t)) - yFor(ordinal)) > (t < 0 || year < 0 ? 34 : 25),
           )
           .map((t) => (
             <span key={t} className="pillar-tick" style={{ top: yFor(toOrdinal(t)) }}>
@@ -486,44 +548,55 @@ export default function TimePillar(p: Props) {
               {Math.abs(t)}年
             </span>
           ))}
-        <div className="pillar-now" style={{ top: yFor(toOrdinal(year)) }} aria-hidden="true">
+        <div className="pillar-now" style={{ top: yFor(ordinal) }} aria-hidden="true">
           <span>
             {year < 0 && <small>公元前</small>}
             {Math.abs(year)}年
           </span>
         </div>
-        {cards.map((c, index) => (
+        <div className="pillar-events">
           <div
-            key={c.event.id}
-            className={`pillar-card ${c.side} ${c.event.id === p.selectedId ? 'selected' : ''}`}
-            data-event-id={c.event.id}
-            data-category={c.event.category}
-            style={
-              {
-                top: padding + c.y - cardHeight / 2,
-                height: cardHeight,
-                '--entry-delay': `${Math.min(index, 8) * 18}ms`,
-              } as CSSProperties
-            }
+            className="pillar-event-track"
+            style={{ transform: `translate3d(0, ${offset}px, 0)` }}
           >
-            <button
-              className="pillar-event"
-              onClick={() => {
-                flush()
-                p.onEvent(c.event.id)
-              }}
-              aria-label={`${c.event.title}，${formatEventDate(c.event)}`}
-              title={`${formatEventDate(c.event)} · ${c.event.title}`}
-            >
-              <span className="pillar-event-line">
-                <time>{pillarDateLabel(c.event)}</time>
-                <strong>{c.event.title}</strong>
-              </span>
-              {summaryVisible && <p>{c.event.summary}</p>}
-            </button>
+            {cards.map((c) => (
+              <div
+                key={c.event.id}
+                className={`pillar-card ${c.side} ${c.event.id === p.selectedId ? 'selected' : ''}`}
+                data-event-id={c.event.id}
+                data-category={c.event.category}
+                style={
+                  {
+                    top: c.y - cardHeight / 2,
+                    height: cardHeight,
+                  } as CSSProperties
+                }
+              >
+                <button
+                  className="pillar-event"
+                  tabIndex={
+                    c.y + offset - cardHeight / 2 >= 0 && c.y + offset + cardHeight / 2 <= height
+                      ? undefined
+                      : -1
+                  }
+                  onClick={() => {
+                    flush()
+                    p.onEvent(c.event.id)
+                  }}
+                  aria-label={`${c.event.title}，${formatEventDate(c.event)}`}
+                  title={`${formatEventDate(c.event)} · ${c.event.title}`}
+                >
+                  <span className="pillar-event-line">
+                    <time>{pillarDateLabel(c.event)}</time>
+                    <strong>{c.event.title}</strong>
+                  </span>
+                  {summaryVisible && <p>{c.event.summary}</p>}
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
-        {!cards.length && (
+        </div>
+        {!visibleCount && !cards.length && (
           <div className="pillar-empty">
             <Globe2 size={32} />
             <h2>这一段，留给继续发现</h2>
@@ -536,6 +609,18 @@ export default function TimePillar(p: Props) {
               onClick={(event) => openPanel('settings', event.currentTarget)}
             >
               调整筛选
+            </button>
+          </div>
+        )}
+        {!!visibleCount && !cards.length && (
+          <div className="pillar-empty pillar-continuing">
+            <p>部分事件跨越多年，起点位于当前视野之外。</p>
+            <button
+              data-pillar-control
+              onClick={(event) => openCluster(windowEvents, event.currentTarget)}
+            >
+              <List size={16} aria-hidden="true" />
+              查看这段时间的 {visibleCount} 个事件
             </button>
           </div>
         )}
@@ -598,12 +683,7 @@ export default function TimePillar(p: Props) {
           className="pillar-cluster"
           aria-label={`查看这段时间的全部${visibleCount}个事件`}
           disabled={!visibleCount}
-          onClick={(event) =>
-            openCluster(
-              cards.flatMap((c) => [c.event, ...c.hidden]),
-              event.currentTarget,
-            )
-          }
+          onClick={(event) => openCluster(windowEvents, event.currentTarget)}
         >
           <List size={17} aria-hidden="true" />
           <span>
@@ -676,7 +756,7 @@ export default function TimePillar(p: Props) {
                   a = Math.min(...years),
                   b = Math.max(...years)
                 closeModal()
-                p.onNavigate(limited((a + b) / 2), clampSpan(Math.max(8, (b - a) * 1.4)))
+                commit({ year: limited((a + b) / 2), span: clampSpan(Math.max(8, (b - a) * 1.4)) })
               }}
             >
               <ChevronsUpDown size={16} />
@@ -754,7 +834,7 @@ export default function TimePillar(p: Props) {
                   return
                 }
                 closeModal()
-                p.onNavigate(n, p.span)
+                commit({ year: n, span: p.span })
               }}
             >
               <label htmlFor="pillar-jump">直接前往年份</label>
@@ -815,10 +895,10 @@ export default function TimePillar(p: Props) {
                   const [a, b] = e.target.value.split(',').map(Number)
                   if (!a || !b) return
                   closeModal()
-                  p.onNavigate(
-                    limited((toOrdinal(a) + toOrdinal(b)) / 2),
-                    clampSpan(toOrdinal(b) - toOrdinal(a)),
-                  )
+                  commit({
+                    year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
+                    span: clampSpan(toOrdinal(b) - toOrdinal(a)),
+                  })
                 }}
               >
                 <option value="" disabled>
@@ -885,10 +965,10 @@ export default function TimePillar(p: Props) {
                 }
                 p.onRange([a, b])
                 closeModal()
-                p.onNavigate(
-                  limited((toOrdinal(a) + toOrdinal(b)) / 2),
-                  clampSpan(toOrdinal(b) - toOrdinal(a)),
-                )
+                commit({
+                  year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
+                  span: clampSpan(toOrdinal(b) - toOrdinal(a)),
+                })
               }}
             >
               <label>限定探索与播放范围</label>

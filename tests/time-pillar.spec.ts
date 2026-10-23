@@ -24,16 +24,28 @@ async function geometry(page: Page) {
     if (document.documentElement.scrollWidth > innerWidth) problems.push('horizontal overflow')
     if (document.documentElement.scrollHeight > innerHeight) problems.push('vertical overflow')
     const stage = document.querySelector('.pillar-stage')!.getBoundingClientRect()
+    const viewport = document.querySelector('.pillar-events')!
+    const clip = viewport.getBoundingClientRect()
+    const overflow = getComputedStyle(viewport).overflowY
+    if (!['hidden', 'clip'].includes(overflow)) problems.push('unclipped event viewport')
+    if (clip.top < stage.top - 0.5 || clip.bottom > stage.bottom + 0.5)
+      problems.push('event viewport outside canvas')
     const cards = [...document.querySelectorAll('.pillar-card')]
     for (const card of cards) {
       const r = card.getBoundingClientRect()
+      if (r.left < stage.left - 0.5 || r.right > stage.right + 0.5)
+        problems.push('horizontally clipped card ' + card.getAttribute('data-event-id'))
+      // Panning keeps rows fixed to the chronology, so boundary rows deliberately
+      // pass through the clipped event viewport instead of being repacked inside it.
+      if (r.bottom <= clip.top || r.top >= clip.bottom)
+        problems.push('offscreen card rendered ' + card.getAttribute('data-event-id'))
       if (
-        r.left < stage.left - 0.5 ||
-        r.right > stage.right + 0.5 ||
-        r.top < stage.top - 0.5 ||
-        r.bottom > stage.bottom + 0.5
+        (r.top < clip.top - 0.5 || r.bottom > clip.bottom + 0.5) &&
+        card.querySelector('button')!.tabIndex !== -1
       )
-        problems.push('clipped card ' + card.getAttribute('data-event-id'))
+        problems.push(
+          'partly clipped card remains in tab order ' + card.getAttribute('data-event-id'),
+        )
       const title = card.querySelector('.pillar-event-line')!.getBoundingClientRect()
       if (title.bottom > r.bottom - 3 || title.top < r.top + 3)
         problems.push('clipped title ' + card.getAttribute('data-event-id'))
@@ -202,7 +214,9 @@ test('region and category filtering, bounded playback, pause-on-read and setting
   await settings(page)
   await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
   await closeSettings(page)
-  await page.locator('.pillar-event').first().click()
+  // Playback can leave a row partly outside the clipping boundary. Choose an
+  // event in the keyboard sequence, whose complete touch target is visible.
+  await page.locator('.pillar-event:not([tabindex="-1"])').first().click()
   await expect(page.getByRole('button', { name: '播放时空柱', exact: true })).toBeVisible()
   await expect(page.locator('.event-detail h2')).toBeVisible()
 })
