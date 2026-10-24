@@ -10,7 +10,11 @@ test('every deferred article exactly preserves its authoritative record and hash
     [people, peopleIndex],
   ] as const) {
     expect(indexes.map((record) => record.id)).toEqual(records.map((record) => record.id))
+    expect(new Set(indexes.map((record) => record.readingPath)).size).toBe(records.length)
     records.forEach((record, i) => {
+      expect(indexes[i].readingPath).toMatch(
+        /^data\/reading\/(events|people)\/[a-zA-Z0-9_-]+\.json$/,
+      )
       const text = readFileSync(`public/${indexes[i].readingPath}`, 'utf8')
       expect(JSON.parse(text)).toEqual(record)
       expect(indexes[i].readingPath).toContain(

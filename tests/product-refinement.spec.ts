@@ -183,3 +183,25 @@ test('desktop actions use one menu and an empty map reports its actual state', a
   await page.getByRole('button', { name: '地图图层', exact: true }).click()
   await expect(page.locator('.legend-empty')).toContainText('暂无可用疆域轮廓')
 })
+
+test('a non-ASCII person ID keeps its shared address and loads an ASCII article path', async ({
+  page,
+}) => {
+  const article = page.waitForResponse(
+    (response) =>
+      response.url().includes('/data/reading/people/record-') && response.status() === 200,
+  )
+  await page.goto(`/#visual=pillar&year=-350&person=${encodeURIComponent('reviewed-梁惠王')}`)
+  const response = await article
+  expect(new URL(response.url()).pathname).toMatch(
+    /^\/data\/reading\/people\/[a-zA-Z0-9_-]+\.json$/,
+  )
+  const record = await response.json()
+  expect(record.id).toBe('reviewed-梁惠王')
+  await expect(page.locator('.person-hero h2')).toContainText('梁惠王')
+  await expect(page.locator('.person-biography')).toHaveText(record.biography)
+  await expect(page.locator('.person-detail .reference-list a').first()).toBeVisible()
+  expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('person')).toBe(
+    'reviewed-梁惠王',
+  )
+})

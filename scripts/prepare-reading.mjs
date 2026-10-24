@@ -20,7 +20,12 @@ try {
     for (const record of records) {
       const text = JSON.stringify(record)
       const hash = createHash('sha256').update(text).digest('hex').slice(0, 16)
-      const readingPath = `data/reading/${kind}/${record.id}-${hash}.json`
+      // Some source IDs contain Chinese names. Keep those IDs in the record,
+      // while publishing filenames compatible with the deployment allowlist.
+      const fileId = /^[a-zA-Z0-9_-]+$/.test(record.id)
+        ? record.id
+        : `record-${createHash('sha256').update(record.id).digest('hex')}`
+      const readingPath = `data/reading/${kind}/${fileId}-${hash}.json`
       await writeChanged(resolve(root, 'public', readingPath), text)
       const index = { ...record, sources: [], readingPath }
       if (kind === 'events') {
