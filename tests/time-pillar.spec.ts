@@ -2,6 +2,7 @@ import { expandPillarOptions } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
+import { installPillarClock } from './pillar-clock-helpers'
 
 test.use({ hasTouch: true })
 async function ready(page: Page, hash = 'year=1500&span=900') {
@@ -683,16 +684,24 @@ for (const [width, height] of [
 for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
   test(`automatic browsing dwell and immediate ${action} cancellation`, async ({ page }, info) => {
     await page.setViewportSize({ width: action === 'drag' ? 390 : 1440, height: 900 })
+    const pauseClock = await installPillarClock(page)
     await ready(page, 'year=1500&span=900')
     await expect(page.locator('.pillar-play')).toHaveCount(0)
     const stage = page.locator('.pillar-stage')
     await stage.focus()
     await page.keyboard.press('Space')
     await expect(stage).toHaveAttribute('data-browsing', 'false')
-    await page.clock.install()
+    await pauseClock()
     await settings(page)
     await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
-    // Start the controlled clock only after React has scheduled the browse animation.
+    // The first eligible stop is at the starting year itself. Complete its
+    // six-second dwell explicitly; the old live clock hid it inside the wait
+    // for "moving". aria-current confirms the browse effect has installed it.
+    await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
+    await expect(stage).toHaveAttribute('data-year', '1500')
+    await expect(page.locator('.pillar-event[aria-current="step"]')).toBeVisible()
+    await page.clock.runFor(6000)
+    // Confirm the scheduled travel phase before advancing its animation frames.
     await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
     await page.clock.runFor(500)
     await expect(stage).toHaveAttribute('data-browse-phase', 'moving')
@@ -701,8 +710,10 @@ for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
     expect(intermediate).toBeLessThan(toOrdinal(1501))
     await page.clock.runFor(900)
     await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
+    await expect(stage).toHaveAttribute('data-year', '1501')
     const arrived = await stage.getAttribute('data-year')
     await page.clock.runFor(5000)
+    await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
     await expect(stage).toHaveAttribute('data-year', arrived!)
     await page.screenshot({ path: info.outputPath('automatic-reading.png') })
     await page.clock.runFor(1000)
@@ -737,6 +748,7 @@ for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
         (await stage.getAttribute('data-read-start'))!,
       )
     } else await page.getByRole('button', { name: '停止自动浏览', exact: true }).click()
+    await expect(stage).toHaveAttribute('data-browsing', 'false')
     await page.clock.runFor(1500)
     await expect(stage).toHaveAttribute('data-browsing', 'false')
     const stoppedYear = await stage.getAttribute('data-year'),

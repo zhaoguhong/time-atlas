@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { installPillarClock } from './pillar-clock-helpers'
 
 type MotionSample = {
   year: number
@@ -183,11 +184,19 @@ test('drag interrupts zoom and commits the visible view without a delayed snap o
   await page.setViewportSize({ width: 390, height: 844 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   const errors = watchErrors(page)
+  const pauseClock = await installPillarClock(page)
   await ready(page, -1)
+  await pauseClock()
   await recordMotion(page)
   await page.getByRole('button', { name: '放大时间', exact: true }).click()
   const stage = page.locator('.pillar-stage')
   await expect(stage).toHaveAttribute('data-motion', 'true')
+  // Hold an actual intermediate view through runner/protocol delays and pointer
+  // actionability checks, rather than racing the 320 ms real-time tween.
+  await page.clock.runFor(128)
+  const interruptedSpan = Number(await stage.getAttribute('data-span'))
+  expect(interruptedSpan).toBeGreaterThan(540)
+  expect(interruptedSpan).toBeLessThan(900)
   const bounds = (await stage.boundingBox())!
   const x = bounds.x + bounds.width / 2
   const y = bounds.y + bounds.height * 0.45
@@ -204,19 +213,21 @@ test('drag interrupts zoom and commits the visible view without a delayed snap o
   expect(year).toBeGreaterThan(-1)
   expect(span).toBeGreaterThanOrEqual(540)
   expect(span).toBeLessThanOrEqual(900)
+  expect(span).toBe(interruptedSpan)
   await expect
     .poll(() =>
       page.evaluate(() => Number(new URLSearchParams(location.hash.slice(1)).get('year'))),
     )
     .toBe(year)
   // Watch more than the complete tween duration: a cancelled animation must never snap back.
-  await page.waitForTimeout(420)
+  await page.clock.runFor(420)
   await expect(stage).toHaveAttribute('data-year', String(year))
   await expect(stage).toHaveAttribute('data-span', String(span))
   expect(
     (await samples(page)).every((sample) => Number.isInteger(sample.year) && sample.year !== 0),
   ).toBe(true)
   await page.screenshot({ path: info.outputPath('drag-interrupts-zoom.png') })
+  await page.clock.resume()
   await page.reload()
   await expect(stage).toHaveAttribute('data-year', String(year))
   await expect(stage).toHaveAttribute('data-span', String(Math.round(span)))
@@ -229,10 +240,16 @@ test('pointer movement released before its preview frame commits without a secon
   await page.setViewportSize({ width: 390, height: 844 })
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   const errors = watchErrors(page)
+  const pauseClock = await installPillarClock(page)
   await ready(page, -1)
+  await pauseClock()
   const stage = page.locator('.pillar-stage')
   await page.getByRole('button', { name: '放大时间', exact: true }).click()
   await expect(stage).toHaveAttribute('data-motion', 'true')
+  await page.clock.runFor(128)
+  const interruptedSpan = Number(await stage.getAttribute('data-span'))
+  expect(interruptedSpan).toBeGreaterThan(540)
+  expect(interruptedSpan).toBeLessThan(900)
   const bounds = (await stage.boundingBox())!
   const x = bounds.x + bounds.width / 2,
     y = bounds.y + bounds.height * 0.45
@@ -284,7 +301,8 @@ test('pointer movement released before its preview frame commits without a secon
   await expect(stage).toHaveAttribute('data-motion', 'false')
   const year = await stage.getAttribute('data-year'),
     span = await stage.getAttribute('data-span')
-  await page.waitForTimeout(420)
+  expect(Number(span)).toBe(interruptedSpan)
+  await page.clock.runFor(420)
   expect((await samples(page)).some((sample) => sample.moving)).toBe(false)
   await expect(stage).toHaveAttribute('data-year', year!)
   await expect(stage).toHaveAttribute('data-span', span!)
