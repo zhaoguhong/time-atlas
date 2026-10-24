@@ -88,6 +88,7 @@ test('arbitrates article scrolling, horizontal swipes, and cancellation', async 
   await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'reading')
   expect(await contentTouch(page, 90)).toBe(true)
   await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'split')
+  await page.locator('.detail-navigation > button').click()
   await page.locator('.panel-tabs').getByRole('button', { name: '人物', exact: true }).click()
   await expect(page.locator('.people-panel')).toBeVisible()
 })

@@ -98,8 +98,7 @@
 }
 
 /* A single menu keeps the expanded set of actions usable on tablets and small laptops. */
-@media (min-width: 701px) and (max-width: 1200px) and (min-height: 541px),
-  (min-width: 1001px) and (max-width: 1200px) {
+@media (min-width: 701px) and (min-height: 541px), (min-width: 1001px) {
   .topbar {
     position: relative;
     gap: 14px;

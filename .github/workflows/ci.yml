@@ -34,3 +34,4 @@ jobs:
       - run: npm run test:e2e:smoke
       - run: npm run test:e2e:pillar -- --project chrome
       - run: npm run test:e2e:world -- --project chrome
+      - run: npm run test:e2e:refinement -- --project chrome

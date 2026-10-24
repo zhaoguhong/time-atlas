@@ -13,6 +13,8 @@ coverage/
 /public/data/land.geojson
 /public/data/lakes.geojson
 /public/data/rivers_lake_centerlines.geojson
+/public/data/reading/
+/src/data/generated/reading-catalog.json
 
 # Private local tools, deployment configuration and backups
 .local/

@@ -287,7 +287,7 @@ test('keeps display controls and reading usable on tablets and desktop', async (
     await page.getByRole('button', { name: '退出专注模式', exact: true }).click()
     await expect(page.locator('.topbar')).toBeVisible()
     const restoredFocus = page.getByRole('button', {
-      name: name === 'desktop' ? '进入专注模式' : '更多操作',
+      name: '更多操作',
       exact: true,
     })
     await expect(restoredFocus).toBeFocused()

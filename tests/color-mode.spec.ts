@@ -1,3 +1,4 @@
+import { expandPillarOptions } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 const key = 'time-atlas:color-mode:v1'
@@ -97,6 +98,7 @@ test('color and shape survive independently across navigation and reload', async
   await expect(page.locator('.pillar-card').first()).toBeVisible()
   await toggle(page, 'dark')
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await expandPillarOptions(page, '外观与简介')
   await page.getByRole('radio', { name: '山河长卷', exact: true }).locator('..').click()
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'scroll')
@@ -145,6 +147,7 @@ test('night pillar preferences migrate to a global dark mode and the default cyl
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
   expect(await page.evaluate((key) => localStorage.getItem(key), key)).toBe('dark')
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await expandPillarOptions(page, '外观与简介')
   await readingContrast(page, '.pillar-dialog-head h2')
   await expect(page.getByRole('radio')).toHaveCount(4)
   await expect(page.getByRole('radio', { name: '星夜时柱', exact: true })).toHaveCount(0)

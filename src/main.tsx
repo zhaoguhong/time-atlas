@@ -14,6 +14,7 @@ import './mobile-sheet.css'
 import './focus-mode.css'
 import './time-pillar.css'
 import './color-mode.css'
+import './product-refinement.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

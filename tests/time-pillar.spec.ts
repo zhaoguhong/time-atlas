@@ -1,3 +1,4 @@
+import { expandPillarOptions } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
@@ -14,6 +15,8 @@ async function ready(page: Page, hash = 'year=1500&span=900') {
 async function settings(page: Page) {
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).toBeVisible()
+  await expandPillarOptions(page, '外观与简介')
+  await expandPillarOptions(page, '自动浏览与停留')
 }
 async function closeSettings(page: Page) {
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
@@ -316,6 +319,7 @@ test('trusted two-finger gesture zooms without opening an event', async ({
     .poll(async () => Number(await page.locator('.pillar-stage').getAttribute('data-span')))
     .toBeLessThan(700)
   await expect(page.locator('.event-detail')).toHaveCount(0)
+  await expect(page.locator('.pillar-dialog')).not.toBeVisible()
   await geometry(page)
 })
 for (const [width, height] of [

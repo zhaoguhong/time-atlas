@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "data:build": "python3 scripts/build_maps.py && npm run data:pack",
     "data:pack": "node scripts/pack-maps.mjs",
-    "data:prepare": "node scripts/prepare-maps.mjs",
+    "data:prepare": "node scripts/prepare-maps.mjs && node scripts/prepare-reading.mjs",
     "predata:check": "npm run data:prepare",
     "data:check": "node scripts/check-data.mjs",
     "format": "prettier --write .",
@@ -25,7 +25,8 @@
     "data:audit:ci": "node scripts/audit-content.mjs --metadata-only --check",
     "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts",
     "test:e2e:pillar": "playwright test --config playwright.pillar.config.ts",
-    "test:e2e:world": "playwright test --config playwright.world.config.ts"
+    "test:e2e:world": "playwright test --config playwright.world.config.ts",
+    "test:e2e:refinement": "playwright test --config playwright.refinement.config.ts"
   },
   "dependencies": {
     "lucide-react": "^1.52.0",

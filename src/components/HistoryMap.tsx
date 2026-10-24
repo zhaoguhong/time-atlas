@@ -70,6 +70,7 @@ interface Props {
   focus: Focus | null
   initialCamera: Camera | null
   onSelect: (selection: Selection) => void
+  onLoadState?: (state: 'loading' | 'ready' | 'error') => void
   onPolities: (polities: PolityProperties[]) => void
   onCamera: (camera: Camera) => void
   onBounds: (bounds: MapBounds) => void
@@ -230,6 +231,9 @@ export default function HistoryMap(props: Props) {
   const [collection, setCollection] = useState<FeatureCollection | null>(null)
   const [loadedPeriod, setLoadedPeriod] = useState('')
   const slice = mapSlice(props.year)
+  useEffect(() => {
+    props.onLoadState?.(error ? 'error' : loading || loadedPeriod !== slice ? 'loading' : 'ready')
+  }, [error, loading, loadedPeriod, slice, props.onLoadState])
 
   function closeEventGroup() {
     setEventGroup(null)

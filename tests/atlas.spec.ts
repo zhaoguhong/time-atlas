@@ -1,3 +1,4 @@
+import { openHeaderMenu } from './refinement-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { tours } from '../src/data/periods'
@@ -230,7 +231,8 @@ test('persists bookmarks and shows a clear empty year', async ({ page }) => {
   await expect(page.locator('.person-hero h2')).toContainText('诸葛亮')
   await page.getByRole('button', { name: '收藏', exact: true }).click()
   await page.reload()
-  await page.getByRole('button', { name: '我的收藏' }).click()
+  await openHeaderMenu(page)
+  await page.getByRole('button', { name: '我的阅读' }).click()
   await expect(page.locator('.saved-panel')).toContainText('诸葛亮')
   await page.getByRole('link', { name: '山河纪 · Time Atlas，返回自由探索', exact: true }).click()
   await page.getByRole('button', { name: '仅当年' }).click()
@@ -268,6 +270,7 @@ test('playback advances, pause stops it, and the sources dialog is keyboard acce
   const year = await page.locator('.year-title').textContent()
   await page.waitForTimeout(1100)
   expect(await page.locator('.year-title').textContent()).toBe(year)
+  await openHeaderMenu(page)
   await page.getByRole('button', { name: '数据与来源' }).click()
   await expect(page.locator('.info-dialog')).toBeVisible()
   await expect(page.locator('.info-dialog')).toContainText('CC BY 4.0')
@@ -298,7 +301,7 @@ test('mobile layout stays within the viewport and supports the same detail flow'
   await setSheet(page, 'split')
   await page.locator('.event-card').first().click()
   await expect(page.locator('.event-detail h2')).toBeVisible()
-  await page.getByRole('button', { name: '关闭详情' }).click()
+  await page.locator('.detail-navigation > button').click()
   await expect(page.locator('.event-card').first()).toBeVisible()
 })
 
@@ -649,7 +652,8 @@ test('reads and saves dynasty introductions with actual dates and handles approx
   await page.getByRole('button', { name: '收藏', exact: true }).click()
   await page.reload()
   await expect(page.locator('.dynasty-detail h2')).toHaveText('清朝')
-  await page.getByRole('button', { name: '我的收藏', exact: true }).click()
+  await openHeaderMenu(page)
+  await page.getByRole('button', { name: '我的阅读', exact: true }).click()
   await page.locator('.saved-panel .dynasty-list-card').click()
   await page.getByRole('button', { name: '查看建立年份的地图', exact: true }).click()
   await expect(page.locator('.year-title')).toContainText('1636')

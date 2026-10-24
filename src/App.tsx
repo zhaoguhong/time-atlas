@@ -83,7 +83,7 @@ import {
 } from './lib/exploration'
 import { parseViewParams, useNavigationHistory, type NavigationView } from './lib/navigation'
 import { readProgress, writeProgress, readingSelectionKey } from './lib/reading-progress'
-import { events, eventById, people, personById } from './data/content'
+import { events, eventById, people, personById } from './data/catalog'
 import { periods, tours } from './data/periods'
 import { profiles, periodCourses } from './data/learning'
 import { journeyByPerson } from './data/journeys'
@@ -132,6 +132,10 @@ import {
   writePreferences,
 } from './lib/history'
 import './exploration-navigation.css'
+import { useReadingRecord } from './hooks/use-reading-record'
+import ReadingStatus from './components/ReadingStatus'
+import CanvasBoundary from './components/CanvasBoundary'
+import { readScopePreferences, writeScopePreference } from './lib/scope-preferences'
 import { useColorMode } from './lib/color-mode'
 
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
@@ -180,7 +184,7 @@ function initialState() {
     view,
     year,
     selection,
-    scope: hash.scope ?? preferences.scope,
+    scope: hash.scope ?? readScopePreferences(preferences.scope)[view.visualization],
     compare: hash.compare ?? null,
     trail:
       !topic && hash.person && hash.journey === hash.person && journeyByPerson.has(hash.person)
@@ -209,6 +213,7 @@ function readCamera(): Camera | null {
 }
 
 function Sources({ sources }: { sources: Source[] }) {
+  if (!sources.length) return null
   return (
     <div className="reference-list">
       <span className="eyebrow">继续阅读 · 参考资料</span>
@@ -290,6 +295,7 @@ export default function App() {
   const [searchLimit, setSearchLimit] = useState(12)
   const [searchIndex, setSearchIndex] = useState(-1)
   const [playing, setPlaying] = useState(false)
+  const [mapLoadState, setMapLoadState] = useState<'loading' | 'ready' | 'error'>('loading')
   const [readerCollapsed, setReaderCollapsed] = useState(false)
   const [followYear, setFollowYear] = useState(true)
   const [playbackReading, setPlaybackReading] = useState(false)
@@ -515,11 +521,20 @@ export default function App() {
         (peopleDepth === 'all' ||
           (peopleDepth === 'journey'
             ? journeyByPerson.has(person.id)
-            : person.biography.length >= 160)),
+            : person.biographyLength >= 160)),
     )
   }, [periodEvents, period.id, period.from, period.to, peopleRange, peopleQuery, peopleDepth])
-  const selectedEvent = selection?.type === 'event' ? eventById.get(selection.id) : undefined
-  const selectedPerson = selection?.type === 'person' ? personById.get(selection.id) : undefined
+  const selectedEventIndex = selection?.type === 'event' ? eventById.get(selection.id) : undefined
+  const selectedPersonIndex =
+    selection?.type === 'person' ? personById.get(selection.id) : undefined
+  const eventReading = useReadingRecord(selectedEventIndex)
+  const personReading = useReadingRecord(selectedPersonIndex)
+  const liveEventReading = useReadingRecord(
+    liveReading ? eventById.get(currentYearEvents[0]?.id) : undefined,
+  )
+  const selectedEvent = eventReading.record ?? selectedEventIndex
+  const selectedPerson = personReading.record ?? selectedPersonIndex
+  const liveEvent = liveEventReading.record ?? currentYearEvents[0]
   const selectedPolity =
     selection?.type === 'polity' ? polities.find((item) => item.name === selection.id) : undefined
   const selectedDynasty =
@@ -721,6 +736,7 @@ export default function App() {
     }
     rememberView()
     setPlaying(false)
+    setScope(readScopePreferences(initial.preferences.scope)[value])
     setVisualization(value)
     setLayersOpen(false)
     setMoreOpen(false)
@@ -925,6 +941,7 @@ export default function App() {
   }
   function startTour(id: string) {
     rememberView()
+    setScope(readScopePreferences(initial.preferences.scope).map)
     setVisualization('map')
     setExploration(emptyExploration)
     setMobileView('reading')
@@ -1103,6 +1120,7 @@ export default function App() {
   }
   function startTrail(id: string) {
     rememberView()
+    setScope(readScopePreferences(initial.preferences.scope).map)
     setVisualization('map')
     setMobileView('split')
     const journey = journeyByPerson.get(id)
@@ -1218,13 +1236,14 @@ export default function App() {
 
   useEffect(() => {
     writePreferences({
-      scope,
+      scope: visualization === 'map' ? scope : readScopePreferences(initial.preferences.scope).map,
       year,
       cities: showCities,
       events: showEvents,
       bookmarks,
     })
-  }, [year, showCities, showEvents, bookmarks, scope])
+    writeScopePreference(visualization, scope, initial.preferences.scope)
+  }, [year, showCities, showEvents, bookmarks, scope, visualization])
   useEffect(() => {
     const params = new URLSearchParams({ year: String(year), scope })
     if (visualization === 'pillar') {
@@ -1621,8 +1640,10 @@ export default function App() {
         event instanceof KeyboardEvent
           ? event.key === 'Escape'
           : !(event.target as Element).closest('.header-actions,.header-more')
-      )
+      ) {
         setMoreOpen(false)
+        if (event instanceof KeyboardEvent) moreButtonRef.current?.focus()
+      }
     }
     document.addEventListener('pointerdown', close)
     document.addEventListener('keydown', close)
@@ -1722,6 +1743,7 @@ export default function App() {
       data-reader-collapsed={readerCollapsed}
       data-focus-mode={focusMode}
       data-visualization={visualization}
+      data-reading-detail={!!selection}
     >
       {focusMode && (
         <button
@@ -1917,6 +1939,7 @@ export default function App() {
           >
             <BookOpen size={18} />
           </button>
+          <span className="menu-group-label">显示方式</span>
           <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
           <button
             ref={focusEnterRef}
@@ -1927,10 +1950,11 @@ export default function App() {
           >
             <PanelTopClose size={18} aria-hidden="true" />
           </button>
+          <span className="menu-group-label">阅读与分享</span>
           <button
             className={`icon-button ${mode === 'saved' ? 'active' : ''}`}
-            title="我的收藏"
-            aria-label="我的收藏"
+            title="我的阅读：收藏与最近浏览"
+            aria-label="我的阅读"
             onClick={() => navigateMode('saved')}
           >
             <Bookmark size={18} />
@@ -1947,17 +1971,6 @@ export default function App() {
           >
             <Info size={18} />
           </button>
-          <a
-            className="icon-button"
-            href={projectRepositoryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub 开源项目（新标签页打开）"
-            aria-label="GitHub 开源项目"
-            onClick={() => setMoreOpen(false)}
-          >
-            <GitHubIcon />
-          </a>
           <span className="header-separator" />
           <button
             className="share-button"
@@ -2034,116 +2047,119 @@ export default function App() {
           </div>
         )}
         <div className="map-stage">
-          <Suspense
-            fallback={
-              <div className="map-loading" role="status">
-                {visualization === 'pillar' ? '正在展开时空柱…' : '正在载入历史地图…'}
-              </div>
-            }
-          >
-            {visualization === 'pillar' ? (
-              <TimePillar
-                focused={focusMode}
-                year={year}
-                span={pillarSpan}
-                side={pillarSide}
-                region={pillarRegion}
-                category={category}
-                events={explorationEvents}
-                hasSpatialFilter={!!exploration.place || !!exploration.bounds}
-                onClearSpatial={() => {
-                  setExploration((old) => ({ ...old, place: '', bounds: null }))
-                  setPlaying(false)
-                }}
-                selectedId={selection?.type === 'event' ? selection.id : undefined}
-                playing={playing}
-                range={exploration.range}
-                onNavigate={(value, span) => {
-                  setYear(clampYear(value))
-                  setPillarSpan(span)
-                  setPlaying(false)
-                  setPlaybackReading(false)
-                }}
-                onPause={() => setPlaying(false)}
-                onBrowseStart={() => {
-                  setTourState(null)
-                  setTrailPerson(null)
-                  setPlaying(true)
-                  setPlaybackReading(false)
-                  setSelection(null)
-                  setMode('events')
-                }}
-                onBrowseNavigate={(value, span) => {
-                  setYear(clampYear(value))
-                  setPillarSpan(span)
-                }}
-                onSide={(value) => {
-                  setPillarSide(value)
-                  setPlaying(false)
-                }}
-                onRegion={(value) => {
-                  setPillarRegion(value)
-                  setPlaying(false)
-                }}
-                onCategory={(value) => {
-                  setCategory(value)
-                  setPlaying(false)
-                }}
-                onRange={(range) => {
-                  setExploration((old) => ({ ...old, range }))
-                  setPlaying(false)
-                }}
-                onEvent={(id) => openEvent(id, false, false, true)}
-                readerCollapsed={readerCollapsed}
-                onToggleReader={() => {
-                  setReaderCollapsed(false)
-                  requestAnimationFrame(() =>
-                    document.querySelector<HTMLButtonElement>('.reader-toggle')?.focus(),
-                  )
-                }}
-              />
-            ) : (
-              <HistoryMap
-                colorMode={colorMode}
-                wrapLongitude
-                year={year}
-                events={mapEvents}
-                showCities={showCities}
-                showEvents={showEvents}
-                showRoutes={showRoutes}
-                hiddenPolities={hiddenPolities}
-                selection={selection}
-                focus={focus}
-                initialCamera={initialCamera}
-                onSelect={selectMap}
-                onPolities={onPolities}
-                onBounds={setMapBounds}
-                onCamera={onCamera}
-                compareYear={compareYear}
-                trail={trail}
-                topicSteps={tour?.chapters ? tour.steps : undefined}
-                journeyResetToken={journeyResetToken}
-                playing={playing}
-                speed={speed}
-                followSpotlight={playing || liveReading}
-                spotlightId={
-                  !trail && !tour
-                    ? selection?.type === 'event' && !playing && !playbackReading
-                      ? selection.id
-                      : currentYearEvents[0]?.id
-                    : undefined
-                }
-                onJourneyArrival={(id) => {
-                  const node = personJourney?.nodes.find((item) => item.id === id)
-                  if (!node) return
-                  setYear(node.year)
-                  setTrailPoint(node.id)
-                  if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
-                }}
-                onJourneyNode={selectJourneyNode}
-              />
-            )}
-          </Suspense>
+          <CanvasBoundary key={visualization} onRetry={() => window.location.reload()}>
+            <Suspense
+              fallback={
+                <div className="map-loading" role="status">
+                  {visualization === 'pillar' ? '正在展开时空柱…' : '正在载入历史地图…'}
+                </div>
+              }
+            >
+              {visualization === 'pillar' ? (
+                <TimePillar
+                  focused={focusMode}
+                  year={year}
+                  span={pillarSpan}
+                  side={pillarSide}
+                  region={pillarRegion}
+                  category={category}
+                  events={explorationEvents}
+                  hasSpatialFilter={!!exploration.place || !!exploration.bounds}
+                  onClearSpatial={() => {
+                    setExploration((old) => ({ ...old, place: '', bounds: null }))
+                    setPlaying(false)
+                  }}
+                  selectedId={selection?.type === 'event' ? selection.id : undefined}
+                  playing={playing}
+                  range={exploration.range}
+                  onNavigate={(value, span) => {
+                    setYear(clampYear(value))
+                    setPillarSpan(span)
+                    setPlaying(false)
+                    setPlaybackReading(false)
+                  }}
+                  onPause={() => setPlaying(false)}
+                  onBrowseStart={() => {
+                    setTourState(null)
+                    setTrailPerson(null)
+                    setPlaying(true)
+                    setPlaybackReading(false)
+                    setSelection(null)
+                    setMode('events')
+                  }}
+                  onBrowseNavigate={(value, span) => {
+                    setYear(clampYear(value))
+                    setPillarSpan(span)
+                  }}
+                  onSide={(value) => {
+                    setPillarSide(value)
+                    setPlaying(false)
+                  }}
+                  onRegion={(value) => {
+                    setPillarRegion(value)
+                    setPlaying(false)
+                  }}
+                  onCategory={(value) => {
+                    setCategory(value)
+                    setPlaying(false)
+                  }}
+                  onRange={(range) => {
+                    setExploration((old) => ({ ...old, range }))
+                    setPlaying(false)
+                  }}
+                  onEvent={(id) => openEvent(id, false, false, true)}
+                  readerCollapsed={readerCollapsed}
+                  onToggleReader={() => {
+                    setReaderCollapsed(false)
+                    requestAnimationFrame(() =>
+                      document.querySelector<HTMLButtonElement>('.reader-toggle')?.focus(),
+                    )
+                  }}
+                />
+              ) : (
+                <HistoryMap
+                  colorMode={colorMode}
+                  wrapLongitude
+                  year={year}
+                  events={mapEvents}
+                  showCities={showCities}
+                  showEvents={showEvents}
+                  showRoutes={showRoutes}
+                  hiddenPolities={hiddenPolities}
+                  selection={selection}
+                  focus={focus}
+                  initialCamera={initialCamera}
+                  onSelect={selectMap}
+                  onPolities={onPolities}
+                  onLoadState={setMapLoadState}
+                  onBounds={setMapBounds}
+                  onCamera={onCamera}
+                  compareYear={compareYear}
+                  trail={trail}
+                  topicSteps={tour?.chapters ? tour.steps : undefined}
+                  journeyResetToken={journeyResetToken}
+                  playing={playing}
+                  speed={speed}
+                  followSpotlight={playing || liveReading}
+                  spotlightId={
+                    !trail && !tour
+                      ? selection?.type === 'event' && !playing && !playbackReading
+                        ? selection.id
+                        : currentYearEvents[0]?.id
+                      : undefined
+                  }
+                  onJourneyArrival={(id) => {
+                    const node = personJourney?.nodes.find((item) => item.id === id)
+                    if (!node) return
+                    setYear(node.year)
+                    setTrailPoint(node.id)
+                    if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
+                  }}
+                  onJourneyNode={selectJourneyNode}
+                />
+              )}
+            </Suspense>
+          </CanvasBoundary>
           {compareYear !== null && (
             <div className="comparison-controls" ref={comparisonControlsRef}>
               <form
@@ -2326,7 +2342,15 @@ export default function App() {
                     {item.nameZh}
                   </button>
                 ))}
-              {polities.length === 0 && <span className="legend-empty">正在读取疆域资料</span>}
+              {polities.length === 0 && (
+                <span className="legend-empty">
+                  {mapLoadState === 'loading'
+                    ? '正在读取疆域资料'
+                    : mapLoadState === 'error'
+                      ? '疆域资料加载失败，可在地图中重试'
+                      : '这一年暂无可用疆域轮廓；仍可阅读事件。'}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -2431,14 +2455,15 @@ export default function App() {
                     {formatEventDate(currentYearEvents[0])} · {currentYearEvents[0].location}
                   </p>
                   <p>{currentYearEvents[0].summary}</p>
-                  <p>{currentYearEvents[0].details?.[0]}</p>
+                  <p>{liveEvent?.details?.[0]}</p>
                   <button
                     className="live-read-more"
                     onClick={() => openEvent(currentYearEvents[0].id)}
                   >
                     暂停并阅读全文 <ChevronRight size={14} />
                   </button>
-                  <Sources sources={currentYearEvents[0].sources} />
+                  <ReadingStatus {...liveEventReading} />
+                  <Sources sources={liveEvent.sources} />
                   {currentYearEvents.length > 1 && (
                     <>
                       <h3>同时期的其他记录 · {currentYearEvents.length - 1}</h3>
@@ -2474,12 +2499,7 @@ export default function App() {
                                   ? '返回专题'
                                   : '返回列表'}
                   </button>
-                  <div>
-                    {selection.type !== 'polity' && saveButton(selection)}
-                    <button className="icon-button" aria-label="关闭详情" onClick={back}>
-                      <X size={17} />
-                    </button>
-                  </div>
+                  <div>{selection.type !== 'polity' && saveButton(selection)}</div>
                 </div>
               )}
               {tour?.chapters && tourState?.step === -1 ? (
@@ -2523,6 +2543,7 @@ export default function App() {
                     <MapPin size={14} />
                     {selectedEvent.location}
                   </p>
+                  <p className="detail-lead">{selectedEvent.summary}</p>
                   <button
                     className="event-map-link"
                     onClick={() => {
@@ -2538,7 +2559,9 @@ export default function App() {
                             : old,
                         )
                       }
-                      setVisualization(visualization === 'pillar' ? 'map' : 'pillar')
+                      const nextMode = visualization === 'pillar' ? 'map' : 'pillar'
+                      setScope(readScopePreferences(initial.preferences.scope)[nextMode])
+                      setVisualization(nextMode)
                       setPlaying(false)
                       setFocus({
                         coordinates: selectedEvent.coordinates,
@@ -2552,7 +2575,6 @@ export default function App() {
                     {visualization === 'pillar' ? '在地图中查看' : '在时空柱中对照'}
                   </button>
                   <div className="detail-rule" />
-                  <p className="detail-lead">{selectedEvent.summary}</p>
                   {(selectedEvent.dateNote || selectedEvent.locationNote) && (
                     <div className="evidence-note">
                       <Info size={14} />
@@ -2588,6 +2610,7 @@ export default function App() {
                       </div>
                     </section>
                   )}
+                  <ReadingStatus {...eventReading} />
                   {selectedEvent.details && (
                     <section className="detail-section event-narrative">
                       <span className="section-number">01</span>
@@ -2597,16 +2620,24 @@ export default function App() {
                       ))}
                     </section>
                   )}
-                  <div className="detail-section">
-                    <span className="section-number">{selectedEvent.details ? '02' : '01'}</span>
-                    <h3>当时是什么局势？</h3>
-                    <p>{selectedEvent.background}</p>
-                  </div>
-                  <div className="detail-section">
-                    <span className="section-number">{selectedEvent.details ? '03' : '02'}</span>
-                    <h3>它改变了什么？</h3>
-                    <p>{selectedEvent.impact}</p>
-                  </div>
+                  {eventReading.record && (
+                    <>
+                      <div className="detail-section">
+                        <span className="section-number">
+                          {selectedEvent.details ? '02' : '01'}
+                        </span>
+                        <h3>当时是什么局势？</h3>
+                        <p>{selectedEvent.background}</p>
+                      </div>
+                      <div className="detail-section">
+                        <span className="section-number">
+                          {selectedEvent.details ? '03' : '02'}
+                        </span>
+                        <h3>它改变了什么？</h3>
+                        <p>{selectedEvent.impact}</p>
+                      </div>
+                    </>
+                  )}
                   {relatedReading(selectedEvent, events).length > 0 && (
                     <section className="event-relations">
                       <span className="eyebrow">沿着线索，继续读</span>
@@ -2695,6 +2726,7 @@ export default function App() {
                       {lifeDates(selectedPerson)} <span>·</span> {selectedPerson.role}
                     </p>
                   </div>
+                  <ReadingStatus {...personReading} />
                   {trail?.personId !== selectedPerson.id && (
                     <ReadingText
                       className="detail-lead person-biography"
@@ -3026,8 +3058,9 @@ export default function App() {
                 </div>
               ) : mode === 'saved' ? (
                 <div className="saved-panel">
+                  <h2>我的阅读</h2>
                   <section className="resume-reading">
-                    <h3>最近浏览</h3>
+                    <h3>继续阅读</h3>
                     <p>记录保存在当前浏览器，继续阅读可回到专题的上次章节。</p>
                     {progress.recent.length ? (
                       progress.recent.map((item) => (
@@ -3161,6 +3194,11 @@ export default function App() {
               ) : mode === 'people' ? (
                 <div className="people-panel">
                   <span className="eyebrow">{period.name} · 相关人物</span>
+                  {worldBrowsing && (
+                    <p className="people-time-note">
+                      人物目录目前以中国历史为主，不随世界地区筛选。世界政权与事件可从相应目录阅读。
+                    </p>
+                  )}
                   <h2>谁在这段历史里？</h2>
                   <p className="panel-intro">通过人物的经历，走进事件背后的选择。</p>
                   <p className="people-time-note">
@@ -3230,7 +3268,7 @@ export default function App() {
                           <span className="person-depth">
                             {journeyByPerson.has(person.id)
                               ? '可播放行迹'
-                              : person.biography.length >= 160
+                              : person.biographyLength >= 160
                                 ? '较完整介绍'
                                 : '简要档案'}
                           </span>
@@ -3413,6 +3451,15 @@ export default function App() {
                           setScope('period')
                           setCategory('全部')
                           setExploration(emptyExploration)
+                          if (visualization === 'pillar') {
+                            const range = worldBrowsing ? worldPeriod : period
+                            setYear(
+                              fromOrdinal(
+                                Math.round((toOrdinal(range.from) + toOrdinal(range.to)) / 2),
+                              ),
+                            )
+                            setPillarSpan(Math.max(4, toOrdinal(range.to) - toOrdinal(range.from)))
+                          }
                         }}
                       >
                         查看这一时期
@@ -3428,13 +3475,6 @@ export default function App() {
               )}
             </>
           )}
-        </div>
-        <div className="panel-footer">
-          <span />
-          <span>史料有边界，探索无止境</span>
-          <button aria-label="查看资料说明" onClick={() => setDialog('sources')}>
-            <Info size={13} />
-          </button>
         </div>
       </aside>
 
@@ -3504,9 +3544,11 @@ export default function App() {
         </div>
       )}
       <dialog
+        aria-labelledby="info-dialog-title"
         ref={dialogRef}
         className="info-dialog"
         onCancel={() => setDialog(null)}
+        onClose={() => moreButtonRef.current?.focus()}
         onClick={(event) => {
           if (event.target === dialogRef.current) setDialog(null)
         }}
@@ -3521,7 +3563,7 @@ export default function App() {
         {dialog === 'share' ? (
           <>
             <span className="eyebrow">山河纪 · 分享此刻</span>
-            <h2>让朋友看到这段历史</h2>
+            <h2 id="info-dialog-title">让朋友看到这段历史</h2>
             <p>复制下面的链接，包含年份、当前档案、探索模式、筛选条件与视野。</p>
             <input
               readOnly
@@ -3533,7 +3575,7 @@ export default function App() {
         ) : (
           <>
             <span className="eyebrow">山河纪 · TIME ATLAS</span>
-            <h2>每一次探索，都有出处</h2>
+            <h2 id="info-dialog-title">每一次探索，都有出处</h2>
             <p className="dialog-intro">
               在地图上读历史，在时间中看山河。这是一份以中国历史为主、持续整理的交互历史地图。地图来源与内容参考分开标注，帮助你理解资料所能支持的范围。
             </p>
@@ -3615,7 +3657,7 @@ export default function App() {
               当前收录 {dynasties.length} 个朝代与政权档案、{journeyByPerson.size} 份详细行迹。其中{' '}
               {people.filter((person) => person.recordKind === 'catalog').length}{' '}
               份人物档案仅有基本身份，
-              {people.filter((person) => person.biography.length >= 160).length}{' '}
+              {people.filter((person) => person.biographyLength >= 160).length}{' '}
               份有较完整介绍。数量不等于历史资料完整，年谱仍按史料逐人核对。
             </p>
             <p className="source-attribution">

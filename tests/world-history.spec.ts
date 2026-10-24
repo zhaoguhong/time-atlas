@@ -1,3 +1,4 @@
+import { openHeaderMenu } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 
@@ -70,6 +71,17 @@ async function closePillarSettings(page: Page) {
   await expect(page.locator('.pillar-dialog')).not.toBeVisible()
 }
 
+async function rememberMapPeriod(page: Page) {
+  // Map coverage is checked over a whole period; pillar scope no longer
+  // changes the map's independent saved time scope.
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'time-atlas:scope-by-mode:v1',
+      JSON.stringify({ map: 'period', pillar: 'period' }),
+    )
+  })
+}
+
 async function globalMapEvents(page: Page) {
   // Markers outside the current camera remain in the map's event universe.
   // Check their records instead of requiring distant continents to fit together.
@@ -123,6 +135,7 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
+    await rememberMapPeriod(page)
     await page.goto('/#visual=pillar&year=1869&span=150&scope=period')
     await expect(page.locator('.pillar-stage')).toBeVisible()
     await pillarSettings(page)
@@ -241,6 +254,7 @@ for (const [width, height] of [
 for (const width of [1440, 390]) {
   test(`a Chinese-only pillar does not hide world map events at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 900 })
+    await rememberMapPeriod(page)
     await page.goto('/#visual=pillar&year=1869&span=150&side=china&scope=period')
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'china')
     await expect(page.locator('.pillar-card.world')).toHaveCount(0)
@@ -358,7 +372,8 @@ test('world archives persist in bookmarks and recent reading with their own star
   await page.getByRole('button', { name: '收藏', exact: true }).click()
   await page.reload()
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
-  await page.getByRole('button', { name: '我的收藏', exact: true }).click()
+  await openHeaderMenu(page)
+  await page.getByRole('button', { name: '我的阅读', exact: true }).click()
   await expect(page.locator('.resume-reading')).toContainText('罗马帝国')
   await expect(page.locator('.saved-panel .dynasty-list-card')).toHaveCount(1)
   await page.screenshot({ path: info.outputPath('world-archive-bookmarks.png') })
