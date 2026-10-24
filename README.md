@@ -80,9 +80,7 @@ npm ci
 npm run dev
 ```
 
-打开终端显示的地址，默认是 `http://127.0.0.1:5173`。地图以无损 Brotli 包随仓库提供；开发、测试和构建命令会用 Node.js 自动校验并还原，无需额外下载、Python 或重建史料缓存。浏览器仍按需读取普通 GeoJSON 切片，不在前端解压整包。人物数据也随仓库提供。
-
-事件和人物的摘要、日期与检索元数据随首屏加载，完整正文及来源在打开阅读时请求。`npm run data:prepare` 从原始内容生成轻量目录与带内容哈希的 JSON 正文；开发、构建、测试和数据检查前会自动执行。生成物不入库，不修改原始记录。加载失败时保留摘要并提供重试，画布模块加载失败也不会清空阅读区。
+打开终端显示的地址，默认是 `http://127.0.0.1:5173`。运行所需地图包和人物数据随仓库提供；开发、测试和构建命令会自动准备派生文件，无需额外下载历史资料。
 
 生产构建与本地预览：
 
@@ -91,15 +89,7 @@ npm run build
 npm run preview
 ```
 
-`dist/` 是完整的静态网站，可交给你选择的静态托管服务。请通过 HTTP/HTTPS 访问，不能直接双击 HTML 文件。放在子目录（例如 `/time-atlas/`）时，构建命令为：
-
-```sh
-npm run build -- --base=/time-atlas/
-```
-
-应用通过 URL hash 保存阅读状态，无需服务端路由重写。使用自己的域名时，可调整 `index.html` 中的站点 URL 元数据。
-
-技术栈：React · TypeScript · Vite · MapLibre GL JS。
+`dist/` 是完整的静态网站，须通过 HTTP/HTTPS 访问。子目录部署与自定义域名说明见[静态托管](CONTRIBUTING.md#静态托管)。
 
 ## 数据来源与边界
 
@@ -120,28 +110,14 @@ npm run build -- --base=/time-atlas/
 
 详见 [数据处理与维护](docs/data.md) 和 [第三方署名及许可](THIRD_PARTY_NOTICES.md)。
 
-## 检查与贡献
+## 参与贡献
 
-```sh
-npm test
-npm run data:check
-npm run data:audit:ci
-npm run format:check
-npm run build
-```
+欢迎报告程序问题、补充可靠来源、纠正史实或改善交互。贡献入口和验证要求见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-`data:audit:ci` 不要求本地原始网页缓存；缺失缓存会明确报告为未核验，不会改写审校报告。维护者的完整缓存审校使用 `npm run data:audit`。
+- [架构与代码导航](docs/architecture.md)：模块分工、阅读状态、地图与时空柱的加载方式。
+- [数据来源、处理与维护](docs/data.md)：权威文件、来源锁、历史内容规范和审校流程。
 
-```sh
-npx playwright install chromium
-npm run test:e2e:smoke
-```
-
-上面的冒烟测试使用生产预览，检查桌面/手机地图和阅读。完整交互回归使用 `npm run test:e2e`；时空柱的 Chrome / WebKit 检查使用 `npm run test:e2e:pillar`；世界历史的地图／时空柱共享浏览检查使用 `npm run test:e2e:world`。阅读与操作精简的回归使用 `npm run test:e2e:refinement`。GitHub Actions 配置执行格式、单元测试、数据与构建检查，以及生产冒烟、时空柱和世界历史的 Chrome 测试。
-
-欢迎报告程序问题、补充可靠来源、纠正史实或改善交互。提交方法和证据要求见 [贡献指南](CONTRIBUTING.md)。维护约定与项目交接统一记录在 [AGENTS.md](AGENTS.md)。
-
-接下来重点完善人物传记、文化与社会史事件、可核对年谱，以及加载性能和真实移动设备体验。
+当前内容仍有区域与人物传记深度不均、部分上游疆域缺失等限制，欢迎围绕有可靠来源的缺口贡献。
 
 ## 许可
 

@@ -1,36 +1,59 @@
 # 数据来源、处理与维护
 
-| 内容                     | 原始来源                                                                            | 本版的使用方式                                                   |
-| ------------------------ | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 历史疆域                 | [Cliopatria / Seshat](https://github.com/Seshat-Global-History-Databank/cliopatria) | 下载原始 GeoJSON，按年份筛选、全球几何简化与中文名称整理         |
-| 海岸、陆地、河流、湖泊   | [Natural Earth](https://www.naturalearthdata.com/)                                  | 1:50m 自然地理图层，作为现代地理参照                             |
-| 原典、事件与重点人物介绍 | 各档案内标明的原典、维基文库及百科参考链接                                          | 本项目编写中文摘要、影响说明与关联；没有整段复制参考文本         |
-| 丝路专题                 | [UNESCO 丝绸之路](https://whc.unesco.org/en/list/1442/)与相关档案参考               | 连接已知节点的示意线，不是精确行程重建                           |
-| 人物结构化档案           | [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing) · CC0                  | 名称、别名、身份、职业、生卒纪年，保存实体版本；编辑简介另行标注 |
-| 人物行迹                 | 故宫年表、苏轼年谱与《三国志》                                                      | 只绘制有出处的本人活动节点，缺失年份不推断                       |
-| 朝代与政权               | 史记、汉书、各代正史等原典                                                          | 简介、都城、存续年与导航分期分开说明                             |
+本页说明权威数据入口、派生文件、史料约束与审校流程。日常启动见 [README](../README.md#本地运行)，开发验证见[贡献指南](../CONTRIBUTING.md#验证)。数量与覆盖以[覆盖清单](../public/data/coverage.json)、[地图来源清单](../public/data/provenance.json)及[内容审校结果](../data/research/content-audit.json)为准，不在此维护另一套数量快照。
 
-Cliopatria 数据采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，须保留署名、来源、许可链接及修改说明。Natural Earth 数据为公有领域。完整署名和第三方数据说明见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
+## 来源与权威入口
 
-历史疆域保留全球轮廓，仅按 Web Mercator 极区限制裁切至 `[-180°, -85°, 180°, 85°]`。原始源有 13,797 条记录，本版处理出 11,944 条记录，涉及 1,340 个源政权分组，19 个完整时期归档共约 48.7 MB。运行时按20年切片加载，共602片，最大单片约3.34 MB，内存最多保留4片；同一条记录可能跨时期或切片出现。全球地图不等于全球事件库，事件与人物仍以中国为主。
+| 内容                   | 来源与使用方式                                                                                                            | 仓库入口                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 历史疆域               | [Cliopatria / Seshat](https://github.com/Seshat-Global-History-Databank/cliopatria)，固定版本，保留来源日期与几何处理说明 | `data/sources.lock.json`、`public/data/provenance.json`、`data/map-packs/`              |
+| 现代自然地理参照       | [Natural Earth](https://www.naturalearthdata.com/)，公有领域的海岸、陆地、河流和湖泊                                      | 同一地图来源锁、处理脚本与包清单                                                        |
+| 人物基础身份           | [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing)，CC0，保留实体与 revision                                    | `data/people*-seeds.json`、`data/people.sources.json`、`src/data/generated/people.json` |
+| 事件与编辑人物介绍     | 逐条引用原典、博物馆、考古机构与研究文献，独立撰写中文摘要                                                                | `src/data/content.ts` 汇总各事件、人物和阅读内容集合                                    |
+| 中国朝代与世界政权档案 | 资料出处、编辑阅读范围与地图来源适用日期分别保留                                                                          | `src/data/dynasties.ts`、`dynasty-reading.ts`、`world-polities.ts`                      |
+| 专题与学习分期         | 使用既有记录 ID 组织有出处的导读、章节与地图问题                                                                          | `src/data/topics.ts`、`periods.ts`、`learning.ts`                                       |
+| 独立核对的活动年谱     | 有具体日期、地点和活动内容的本人记录                                                                                      | `src/data/journeys.ts`                                                                  |
 
-`data/sources.lock.json` 固定上游 Git 提交与 SHA-256。`public/data/provenance.json` 记录来源、处理范围、记录数和文件大小。重建脚本在读取或下载原始数据时验证哈希，不跟随上游自动变动。
+Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保留。Wikidata 身份数据与项目编辑讲解适用的许可不同；引用网页不意味着可以重新分发全文或图片。完整范围见[第三方声明](../THIRD_PARTY_NOTICES.md)和[许可说明](../LICENSE-CONTENT.md)。未导入 CHGIS 或 CBDB 原始整库，CBDB 的研究参考不能替代再分发许可。
 
-### 仓库无损压缩与运行数据
+## 历史内容规则
 
-`data/map-packs/` 是提交到 Git 的地图输入：按时期分包的 Brotli 压缩文件，以及包含每个压缩包和原文件 SHA-256 的清单。包内保存完整 GeoJSON 文本，不重新序列化数字、不减少坐标精度、不删除字段或记录。完整时期归档、602 个切片和三个自然地理图层均可逐字节恢复；上面的几何简化属于既有数据处理，本次存储压缩没有增加简化。
+- 每条事件、人物、政权档案与年谱记录均需介绍和可定位出处。事件另有背景、影响、日期与地点；按需要说明不确定性。引用应核对实际卷次与内容，不能仅按标题或人物名称匹配。
+- 历史上没有公元 0 年。计算使用 `src/lib/history.ts` 的 `toOrdinal` / `fromOrdinal`；公元前后插值也遵守这一规则。
+- 考古区间、约略年代、`dateLabel` 与 `endYear` 不应改写成精确纪年。未知生卒年保留未知，不为增加条目而猜测出生、死亡或活动年份。
+- 导航分期是学习分段，不能代替政权真实存续日期或地图来源的适用区间。地图有全球轮廓，不代表事件与人物已完整覆盖世界史。
+- 人物与事件相关不等于本人在场。去世后的关联事件必须解释间接或身后关系；主题、年代相近的自动推荐不能宣称因果。
+- 事件坐标可能代表区域；城市位置不等于古城边界，现代海岸、河流和湖泊仅供参照。
 
-`npm run data:prepare` 使用 Node.js 内置 Brotli 离线恢复数据。`npm run dev`、`npm test`、`npm run data:check` 和 `npm run build` 会自动调用它；已有正确文件只校验、不重写，缺失或损坏的派生文件从包中恢复，压缩包本身损坏则报错。直接调用 `vite` 或 `vitest` 前须先执行 `npm run data:prepare`。
+### 年谱与早期史的具体约束
 
-- 完整时期归档还原到 `.cache/map-archives/`，用于审校与测试，不进入静态网站。
-- 浏览器所需切片还原到 `public/data/maps/<时期>/<切片>.geojson`；自然地理图层还原到 `public/data/`。这些派生文件由 `.gitignore` 排除，但生产构建会包含它们。
-- 浏览器请求路径、响应字节、按需加载和四片 LRU 缓存保持原样。压缩包仅用于开发和构建，不需要浏览器解压，也不依赖托管服务器支持 Brotli。
+苏轼年谱参考[平顶山学院年谱](https://fns.pdsu.edu.cn/info/1062/1655.htm)，康熙参考[故宫生平与年表](https://www.dpm.org.cn/court/lineage/226256.html)，诸葛亮参考[《三国志》卷 35](https://zh.wikisource.org/wiki/三國志/卷35)。详细出处仍以每条记录为准。
 
-普通贡献者不需要修改压缩包。地图处理变化后使用下方重建流程，再执行 `npm run data:pack` 更新包与清单，并提交 `data/map-packs/` 和相关来源清单。不要仅修改还原出的 GeoJSON：下次准备数据时会恢复为提交的包内容。
+只有独立核对的实际到访才能进入年谱。任命、相关战场、使臣谈判、文学地名或疆域不能自动转为本人行程。同年多条记录与重复地点保留顺序，动画仅表达记录先后，不推断道路、速度或中间活动。
 
-### 重建地图数据
+- 康熙记录不包含台湾、尼布楚或费扬古在昭莫多的作战地点作为本人到访。
+- 苏轼未到任的汝州、英州不作相应任命年份的到访点；1100 年北归经过英州的有据记录另行保留。
+- 诸葛亮隆中采用襄阳解释，保留争议说明。
+- 夏代没有可靠的上游疆域，应展示已有考古／文献节点与限制。商周多边形时间采样粗略，前 1046—前 1001 年的周疆域缺口不得借商的几何补齐。
 
-日常运行不需要 Python，也不需要重新下载数据。只有修改地图处理方式时才需要：
+早期节点入口为 `src/data/civilizations.ts` 和 `early-history.ts`。新增专题复用事件 ID，不复制出日期或来源不同的另一条同名记录。
+
+## 仓库无损压缩与运行数据
+
+`data/map-packs/` 是提交到 Git 的地图输入，包含按时期打包的 Brotli 文件及压缩包、原文件的 SHA-256 清单。包保存完整 GeoJSON 字节；存储压缩不重新简化几何，也不改变数字、字段或记录。
+
+`npm run data:prepare` 用 Node.js 内置 Brotli 离线恢复并校验数据。`npm run dev`、`npm test`、`npm run data:check` 和 `npm run build` 会自动调用它；直接执行 `vite` 或 `vitest` 前须自行准备。
+
+- 完整时期归档还原到 `.cache/map-archives/`，用于审校与测试，不进入网站。
+- 浏览器切片还原到 `public/data/maps/`，自然地理图层还原到 `public/data/`。这些派生文件不入库，构建时纳入网站。
+- 已有正确文件不重写；缺失或损坏的派生文件从包恢复，压缩包本身损坏则报错。
+- 浏览器按需请求普通 GeoJSON 切片，使用有界缓存，不解压整包，也不依赖托管服务的 Brotli 支持。
+
+不要只修改还原后的 GeoJSON，下次准备数据会按包内容恢复。修改地图处理方式时，应重建并提交包、来源锁及对应清单。
+
+### 重建地图
+
+日常开发无需 Python。修改地图处理方式时使用：
 
 ```sh
 python3 -m venv .venv
@@ -40,23 +63,23 @@ npm run data:pack
 npm run data:check
 ```
 
-脚本首次运行会下载锁定的原始文件到 `data/raw/`。这些缓存不进入版本控制。后续重用缓存，但仍验证 SHA-256。历史几何保留原始名称与时间区间；无效几何经修复，与中国及周边区域 `[40, -12, 150, 65]` 相交的记录以0.035度容差简化，其余以0.09度简化，并保留四位小数。图层颜色与部分中文名称由本项目补充。`area` 只用于标签与图例排序，是经纬度平面面积，不是平方公里。
+脚本下载或重用 `data/raw/` 中锁定的原始文件，始终校验哈希，不自动追随上游版本。全球几何按 Web Mercator 极区限制裁切；中国及周边使用较细简化，其余地区使用较粗简化。范围、容差、记录数与输出哈希见 `public/data/provenance.json`。`area` 是经纬度平面面积，仅供排序，不是平方公里。
 
-### 资料边界
+### 地图展示与来源纠偏
 
-这是一版可用的学习原型，内容仍需逐条史料校验与专家审核。
+`src/lib/maps.ts` 的展示规则与原始来源记录分离，不能用标签调整悄悄改写原始名称、身份、几何或适用日期：
 
-- 导航时期的区间是界面分段。例如元的导航区间从 1279 年开始，元朝在此之前已经建立，地图仍按原始记录展示。
-- 源数据可能存在名称、年代、疆域归属和空间覆盖的争议。缺少色块不表示该地无人居住或没有历史。
-- 当前展示层省略 220 年及以后仍标为 Han Dynasty 的记录，避免把汉朝延续到三国；不会自行把相应地域分配给其他政权。
-- Eastern Wu 在 222 年前显示为“孙氏势力”；317 年后源名 Western Jin 的记录显示为“东晋”。原始名称、几何和时间区间保持可查，档案中明确说明显示名调整。这些规则位于 `src/lib/maps.ts`。
-- 源数据中的五代十国合并多边形显示为“五代十国（来源合并）”，并说明它不代表统一政权；宋初部分年份的单独政权边界仍缺少资料。
-- 河流、湖泊和海岸是现代自然地理参照。古今地名坐标代表城市所在区域，不能用来认定古城边界或考古遗址。
-- 事件地点可能采用代表性位置；跨多年事件采用一个导航年，相关说明见具体档案。人物未采用确定生卒年时显示 `?`。
-- 丝路线是一条交流节点示意线，不代表某年整条道路的控制状况，也不代表张骞或玄奘的实际行程。
-- 本版已导入591份Wikidata结构化人物快照，经过同名、身份、生卒纪年和分期核对，与原有人物及编辑档案合并后共673人。基础身份档案有简短介绍与出处，不等于详细传记或完整年谱。未导入CHGIS或CBDB原始整库；CBDB仅用于研究参考。
+- 隐去 220 年及以后仍标为 Han Dynasty 的争议归属；不将地域重新分配给其他政权。
+- 隐去前 1046 年及以后仍标为 Shang Dynasty 的来源归属；不将商的轮廓改名为周。
+- 222 年前的 Eastern Wu 显示“孙氏势力”，317 年后的 Western Jin 来源记录显示“东晋”，均保留展示说明。
+- 古代的 Later Zhou 指周王室，不能与五代后周混淆。
+- 来源合并的五代十国多边形显示“五代十国”，阅读说明保留“来源合并、并非统一政权”的限制，不能当作各国独立边界。
 
-### 人物资料与行迹维护
+世界政权档案通过明确的源名称别名和日期条件匹配地图，为读者提供中文名称、介绍与出处，不替换中国朝代档案或修改来源多边形。缺失疆域保持空白；空白不表示当地无人居住。
+
+## 人物与世界史维护
+
+人物导入使用 Python 标准库：
 
 ```sh
 npm run data:people
@@ -64,51 +87,37 @@ npm run data:check
 npm run data:audit:ci
 ```
 
-导入脚本只使用Python标准库。先通过中文维基百科的公开接口解析简繁名称和重定向，再取Wikidata实体；这些接口只用于构建资料快照，浏览器不会发起人物API请求。脚本拒绝消歧义页、非人物和时代不符的同名记录。简短身份描述及职业字段为CC0结构化数据；未采用确定或精度足够的纪年保持未知。`--refresh`显式更新来源版本，默认重用URL相同、SHA-256一致的缓存。
+导入器先通过中文维基百科接口解析名称及重定向，再获取 Wikidata 实体；它拒绝消歧义页、非人物和时代不符的同名记录。接口仅用于生成资料快照，浏览器不请求人物 API。默认重用 URL 与哈希一致的缓存，`--refresh` 才显式更新来源版本，不能为了清理仓库重新生成不同版本的快照。
 
-`data/people.sources.json`固定每份请求的URL和原始哈希，人物记录保留Wikidata实体和revision；`src/data/generated/people.json`为可复现输出。公开版本说明见`public/data/content-provenance.json`，当前覆盖核对见`public/data/coverage.json`。导入未能唯一确认的六个名字由有出处的编辑档案覆盖，不采用消歧义页或现代同名者代替。
+`data/people.sources.json` 保留请求与哈希，`src/data/generated/people.json` 保留实体和 revision；这些可复现输出需要提交，与被忽略的原始响应缓存不同。人物“延伸阅读”来自同版本 Wikidata 的站点链接，生成在 `src/data/generated/person-reading-links.json`，不能按姓名猜测词条地址。编辑人物介绍位于 `person-reading.ts`、`depth-people.ts`、`person-expansion*.ts` 等集合。
 
-苏轼行迹参考[平顶山学院年谱](https://fns.pdsu.edu.cn/info/1062/1655.htm)，康熙参考[故宫生平与年表](https://www.dpm.org.cn/court/lineage/226256.html)，诸葛亮参考[《三国志》卷35](https://zh.wikisource.org/wiki/三國志/卷35)。每条记录包含年份、实际活动类型、地点、坐标精度说明和出处。任命地、相关战场与使臣谈判地不自动变成本人到访；康熙轨迹不含台湾、尼布楚或费扬古的昭莫多战场。苏轼的汝州、未到任的英州不作当年到访点；1100年北归行至英州的明确记录单独保留。
+世界史事件位于 `src/data/world-events.ts` 和 `world-expansion-*.ts`，由 `content.ts` 汇总。每条记录独立提供出处、日期范围、代表地点与影响。参考网站的原文与插图不随网站分发；地区是阅读归属，不能仅按现代坐标自动推断。中国之外的既有早期事件分类也应与 `src/lib/time-pillar.ts` 中的映射一致。
 
-新增年谱须核对实际到访及先后次序；没有核对的年谱不画线。生卒、事件或文学作品中的地名均不自动证明到访。时间轴已扩至约前10000—1912年；夏没有可靠的源疆域，展示考古和传世文献节点及资料限制。商周源多边形年代粗略，前1046—前1001年的周疆域缺口保留为空，不沿用商的轮廓补齐。早期数据在 `src/data/early-history.ts` 与 `src/data/civilizations.ts`，其近似年代不应转换为精确纪年。
+## 阅读目录与正文
 
-### 时空柱与世界史资料
+`scripts/prepare-reading.mjs` 从 `src/data/content.ts` 导出轻量目录 `src/data/generated/reading-catalog.json` 和 `public/data/reading/` 下的完整事件／人物正文。这两类运行生成物由 Git 忽略，在数据准备时自动生成。
 
-`src/data/world-events.ts` 保存本站独立编写的世界史阅读节点，逐条附有来源、近似年代或区间说明、代表地点与影响。参考 OpenStax 世界史和博物馆、档案馆、大学资料只用于核对史实；原文与插图不随网站分发，也不把参考网站的许可替换为本站许可。两份 `2026-10-22-world-*-references.json` 清单保留采集范围，实际请求与失败沿用现有审计机制。
+目录保留摘要、日期和检索字段，正文保留完整原始记录与来源。文件名使用稳定的 ASCII 标识和内容哈希；不要为了文件名修改原始记录 ID 或分享链接。`src/lib/reading-catalog.test.ts` 检查完整记录一致性、哈希与路径，浏览器请求由 `src/hooks/use-reading-record.ts` 管理。
 
-地区字段表达事件的阅读归属，不用现代坐标自动推断。中国之外的既有早期事件在 `src/lib/time-pillar.ts` 中显式分类；对照、地区筛选和播放使用同一分类。覆盖文件新增 `events.world` 和 `events.byRegion`，以生成结果为准。
-
-明确编写的事件关系保留解释；自动推荐只标注同主题或相近年代，不能解释为因果。图中连线用于连接卡片与时间刻度，不表示人物实际旅行。专题和已有年谱继续使用其原有来源与地图行为。
+内容修改应落在权威数据模块，不能手改运行目录、正文 JSON 或快照的哈希。加载和失败恢复设计见[架构说明](architecture.md#加载与构建)。
 
 ## 审校与缓存
 
-普通贡献者与 CI 使用 `npm run data:audit:ci`：检查全部记录的字段、纪年、关联、专题章节和来源元数据；本地存在的缓存仍会验证哈希，缺失文件会明确统计为未核验。该命令不改写覆盖或审校报告。
+普通贡献者与 CI 使用 `npm run data:audit:ci`：检查字段、纪年、关联、专题与来源元数据。存在的缓存会验证哈希，缺失文件明确统计为未核验；该命令不改写覆盖或审校报告。
 
-维护者完整审校使用 `npm run data:audit`，要求已留存的来源缓存存在且哈希一致，再生成 `public/data/coverage.json` 和 `data/research/content-audit.json`。缓存损坏或缺失时停止，不把缺失当作通过。
+内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
 
-`npm run data:references` 用于资料维护，会请求参考网站并更新索引；首次收集可能耗时较长，也可能遇到远端拒绝访问。新抓取不保证与以前快照字节相同，不能将重新抓取的网页冒充原版本。
+`npm run data:references` 会请求参考网站并更新索引，可能耗时或遭拒绝访问，不是普通构建检查。原始参考资料通过 `scripts/collect-references.py` 留存。新抓取字节可能不同，不能替代旧快照后继续声称原哈希已验证。
 
-来源清单、版本锁、请求元数据和生成的审校结果进入仓库；原始地图、接口响应和参考文章留在被忽略的 `data/raw/`。`data/research/searches/` 的检索证据及 `data/research/verification/` 的截图、日志和 trace 仅本地保留，避免公开无关环境信息与参考文本。被忽略不表示可以删除。
+| 文件或目录                                                                    | 用途与提交范围                                         |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `data/research/*-references.json`、`references.json`、`source-inventory.json` | 引用与来源清单，提交                                   |
+| `data/research/fetches.json`、`fetch-history.jsonl`                           | 请求、版本与校验元数据，提交；追加记录不覆盖历史       |
+| `public/data/research-index.json`、`content-provenance.json`                  | 公开来源索引与版本说明，提交                           |
+| `public/data/coverage.json`、`data/research/content-audit.json`               | 生成的覆盖与审校结果，内容更新时按流程生成并提交       |
+| `data/raw/`                                                                   | 原始地图、人物响应、参考网页和文章，保留在本地，不提交 |
+| `data/research/searches/`、`data/research/verification/`                      | 检索证据和验证输出，保留在本地，不提交                 |
 
-后续请求与缓存检查追加到 `data/research/fetch-history.jsonl`；实际抓取、缓存检查和失败尝试的时间分别记录。未知旧时间保持未知。公开站点只分发摘要、运行地图与来源元数据，不分发下载的参考文章正文。
+请求记录中的 `retrievedAt` 是实际抓取时间，`lastCacheCheckAt` 是缓存检查时间，`attemptedAt` 是失败尝试时间。未知的旧时间保持未知，不能从文件修改时间倒推。检索应保留查询、提供方、实际时间与返回证据，失败和修正也应保留。
 
-## 维护入口
-
-人物介绍后的“延伸阅读”优先提供百科词条、年谱与原典链接，完整参考列表仍保留在档案末尾。`src/data/generated/person-reading-links.json` 由人物导入器从同一版本的 Wikidata `zhwiki` 站点链接生成，以实体 ID 和版本号对应人物，不按姓名猜测词条地址。运行网站不请求外部接口；点击链接后才在新标签页打开外部网站，其正文不随本站分发。
-
-| 路径                                             | 内容                       |
-| ------------------------------------------------ | -------------------------- |
-| `src/data/content.ts` 与事件集合                 | 事件、人物、关联与出处     |
-| `src/data/civilizations.ts` / `early-history.ts` | 史前、早期文明与古代节点   |
-| `src/data/person-reading.ts` / `depth-people.ts` | 编辑人物介绍               |
-| `src/data/journeys.ts`                           | 独立核对的年谱记录         |
-| `src/data/topics.ts`                             | 专题导读、章节和地图问题   |
-| `src/data/dynasties.ts` / `dynasty-reading.ts`   | 政权日期与政治社会介绍     |
-| `src/data/periods.ts` / `learning.ts`            | 导航时期与学习路线         |
-| `src/lib/history.ts` / `navigation.ts`           | 纪年、筛选、分享与返回状态 |
-| `scripts/build_maps.py` / `import_people.py`     | 固定版本地图与人物导入     |
-| `scripts/pack-maps.mjs` / `prepare-maps.mjs`     | 地图无损打包、校验与还原   |
-| `scripts/audit-content.mjs`                      | 结构、纪年、关联与缓存校验 |
-| `scripts/collect-references.py`                  | 原始参考资料和请求留存     |
-
-当前状态和未解决问题只在 [AGENTS.md](../AGENTS.md) 维护，数量以生成清单为准。新增专题复用事件 ID；更新地图来源必须显式更新锁文件、重建并核对变化。
+遵守 `.prettierignore`，不格式化原始快照、生成的来源清单或追加式请求历史。Git 忽略不代表可以删除：缓存是验证来源的证据。公开网站分发运行地图、项目编写的讲解和来源元数据，不分发下载的参考文章正文。
