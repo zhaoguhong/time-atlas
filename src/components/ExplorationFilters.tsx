@@ -9,12 +9,14 @@ export default function ExplorationFilters({
   bounds,
   open,
   onOpen,
+  maximum = MAX_YEAR,
 }: {
   value: ExplorationFilter
   onChange: (value: ExplorationFilter) => void
   bounds: MapBounds | null
   open: boolean
   onOpen: (value: boolean) => void
+  maximum?: number
 }) {
   const [from, setFrom] = useState(String(value.range?.[0] ?? ''))
   const [to, setTo] = useState(String(value.range?.[1] ?? ''))
@@ -71,11 +73,11 @@ export default function ExplorationFilters({
             if (
               ![from, to].every((s) => /^-?\d+$/.test(s)) ||
               ![a, b].every(
-                (n) => Number.isInteger(n) && n !== 0 && n >= MIN_YEAR && n <= MAX_YEAR,
+                (n) => Number.isInteger(n) && n !== 0 && n >= MIN_YEAR && n <= maximum,
               ) ||
               a > b
             ) {
-              setError('请按先后输入前10000至1912年，公元前用负数，没有0年。')
+              setError(`请按先后输入前10000至${maximum}年，公元前用负数，没有0年。`)
               return
             }
             setError('')

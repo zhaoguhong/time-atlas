@@ -13,6 +13,7 @@ export default defineConfig({
   ],
   testMatch: [
     'time-pillar.spec.ts',
+    'modern-reading.spec.ts',
     'pillar-themes.spec.ts',
     'pillar-motion.spec.ts',
     'pillar-pan.spec.ts',

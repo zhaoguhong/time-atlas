@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { events } from '../data/content'
 import { worldEvents } from '../data/world-events'
-import { toOrdinal } from './history'
+import { toOrdinal, PILLAR_MAX_YEAR } from './history'
 import { parseViewParams } from './navigation'
 import {
   clampSpan,
@@ -44,7 +44,7 @@ describe('time pillar chronology and disclosure', () => {
       for (const span of [4, 80, 600, MAX_SPAN]) {
         const w = pillarWindow(year, span)
         expect(w.bottom).toBeGreaterThanOrEqual(toOrdinal(-10000))
-        expect(w.top).toBeLessThanOrEqual(toOrdinal(1912))
+        expect(w.top).toBeLessThanOrEqual(toOrdinal(PILLAR_MAX_YEAR))
         const ticks = pillarTicks(w.bottom, w.top, 600)
         expect(ticks).not.toContain(0)
         expect(ticks.every((t) => toOrdinal(t) >= w.bottom && toOrdinal(t) <= w.top)).toBe(true)

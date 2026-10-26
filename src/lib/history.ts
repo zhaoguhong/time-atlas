@@ -1,8 +1,21 @@
 import { periods } from '../data/periods'
-import type { EventScope, HistoryEvent, Person, Preferences } from '../types'
+import type { EventScope, HistoryEvent, Person, Preferences, Period } from '../types'
 
 export const MIN_YEAR = -10000
+// Historical borders stop at 1912; the pillar and reading chronology continue.
 export const MAX_YEAR = 1912
+export const PILLAR_MAX_YEAR = 2000
+export const modernReadingPeriod: Period = {
+  id: 'modern-reading',
+  name: '20世纪',
+  short: '20世纪',
+  from: 1913,
+  to: PILLAR_MAX_YEAR,
+  focus: 1950,
+  color: '#658a87',
+  subtitle: '现代历史 · 事件阅读',
+  summary: '沿已收录的思想、战争、社会、科学与文化节点阅读20世纪；这一分段不代表统一的政权时期。',
+}
 export const DEFAULT_YEAR = 230
 export const toOrdinal = (year: number) => (year > 0 ? year - 1 : year)
 export const fromOrdinal = (ordinal: number) => (ordinal >= 0 ? ordinal + 1 : ordinal)
@@ -12,10 +25,13 @@ export const compactYear = (year: number) => (year < 0 ? `前${Math.abs(year)}` 
 export const formatEventDate = (event: HistoryEvent) => event.dateLabel ?? formatYear(event.year)
 export const eventDateRelation = (event: HistoryEvent, year: number) =>
   event.dateLabel ? (event.endYear ? '阶段记录' : '约定纪年') : eventRelation(event.year, year)
-export const clampYear = (year: number) =>
-  Math.min(MAX_YEAR, Math.max(MIN_YEAR, year === 0 ? 1 : Math.round(year)))
+export const clampYear = (year: number, maximum = MAX_YEAR) =>
+  Math.min(maximum, Math.max(MIN_YEAR, year === 0 ? 1 : Math.round(year)))
+export const clampPillarYear = (year: number) => clampYear(year, PILLAR_MAX_YEAR)
 export const periodAt = (year: number) =>
-  periods.find((p) => year >= p.from && year <= p.to) ?? periods[0]
+  year > MAX_YEAR
+    ? modernReadingPeriod
+    : (periods.find((p) => year >= p.from && year <= p.to) ?? periods[0])
 export const lifeDates = (person: Person) =>
   `${person.birth === null ? '?' : compactYear(person.birth)} — ${person.death === null ? '?' : compactYear(person.death)}`
 
@@ -60,19 +76,21 @@ export function eventRelation(eventYear: number, year: number) {
   const distance = toOrdinal(eventYear) - toOrdinal(year)
   return distance === 0 ? '当年' : `${distance < 0 ? '早' : '晚'} ${Math.abs(distance)} 年`
 }
-export function scopeDescription(year: number, scope: EventScope) {
+export function scopeDescription(year: number, scope: EventScope, maximum = MAX_YEAR) {
   if (scope === 'year') return `${formatYear(year)} · 当年事件`
   if (scope === 'period') {
     const period = periodAt(year)
     return `${period.name} · ${compactYear(period.from)}—${compactYear(period.to)}`
   }
-  return `${compactYear(clampYear(fromOrdinal(toOrdinal(year) - 5)))}—${compactYear(clampYear(fromOrdinal(toOrdinal(year) + 5)))} · 前后五年`
+  return `${compactYear(clampYear(fromOrdinal(toOrdinal(year) - 5), maximum))}—${compactYear(clampYear(fromOrdinal(toOrdinal(year) + 5), maximum))} · 前后五年`
 }
 
 export function parseHash(hash: string) {
   const params = new URLSearchParams(hash.replace(/^#/, ''))
+  const maximum = params.get('visual') === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR
   const rawYear = params.get('year')
-  const year = rawYear !== null && /^-?\d+$/.test(rawYear) ? clampYear(Number(rawYear)) : undefined
+  const year =
+    rawYear !== null && /^-?\d+$/.test(rawYear) ? clampYear(Number(rawYear), maximum) : undefined
   const event = params.get('event')
   const person = params.get('person')
   const rawScope = params.get('scope')

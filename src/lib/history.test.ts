@@ -10,6 +10,7 @@ import {
   formatYear,
   fromOrdinal,
   MAX_YEAR,
+  PILLAR_MAX_YEAR,
   MIN_YEAR,
   parseHash,
   periodAt,
@@ -134,7 +135,7 @@ describe('historical content integrity', () => {
     for (const event of events) {
       expect(event.year).not.toBe(0)
       expect(event.year).toBeGreaterThanOrEqual(MIN_YEAR)
-      expect(event.year).toBeLessThanOrEqual(MAX_YEAR)
+      expect(event.year).toBeLessThanOrEqual(PILLAR_MAX_YEAR)
       expect(event.coordinates[0]).toBeGreaterThanOrEqual(-180)
       expect(event.coordinates[0]).toBeLessThanOrEqual(180)
       expect(event.coordinates[1]).toBeGreaterThanOrEqual(-85)

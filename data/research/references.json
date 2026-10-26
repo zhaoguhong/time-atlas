@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T07:00:42.687Z",
+  "generatedAt": "2026-10-25T17:43:27.121Z",
   "sources": [
     {
       "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
@@ -20,6 +20,50 @@
         {
           "kind": "event",
           "id": "world-timurid-rise"
+        }
+      ]
+    },
+    {
+      "title": "Oxford Bibliographies · Battle of Manzikert",
+      "url": "https://academic.oup.com/reference/62399/reference-article-abstract/561732157",
+      "note": "条目导论，1071年8月26日及交战双方；后续解释参见所列研究。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-manzikert"
+        }
+      ]
+    },
+    {
+      "title": "Columbia University · Mind Is Principle by Lu Jiuyuan",
+      "url": "https://afe.easia.columbia.edu/ps/cup/lu_jiuyuan_mind.pdf",
+      "note": "《Sources of Chinese Tradition》第2版卷1，第715—717页节选与导读：陆九渊1139—1193年及心即理思想；本文据南宋后期学术活动作约略分期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-lu-jiuyuan-mind"
+        }
+      ]
+    },
+    {
+      "title": "Columbia University · Excerpts from the Reform Edict of Taika",
+      "url": "https://afe.easia.columbia.edu/ps/japan/taika.pdf",
+      "note": "导言及改革诏书节译；核对645年政变、646年诏令与改革内容。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-taika"
+        }
+      ]
+    },
+    {
+      "title": "哥伦比亚大学 Asia for Educators · Rice Cultivation in Song China",
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-rice.html",
+      "note": "“New Varieties of Rice”引述1012年前后江淮传播及早熟、耐旱特征。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-champa-rice"
         }
       ]
     },
@@ -51,6 +95,17 @@
         {
           "kind": "event",
           "id": "world-benin-ewuare"
+        }
+      ]
+    },
+    {
+      "title": "Archives du Sénat · Victor Hugo, écrivain et sénateur",
+      "url": "https://archives.senat.fr/en-2025-le-senat-fete-ses-150-ans/victor-hugo-ecrivain-et-senateur.html",
+      "note": "1802—1885年、文学作品、政治立场变化、1851年后流亡及回国后的参议员任职。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-hugo"
         }
       ]
     },
@@ -87,6 +142,28 @@
       ]
     },
     {
+      "title": "爱资哈尔官方门户 · الجامع الأزهر الشريف",
+      "url": "https://azhar.eg/alazharmosque/about_alazhar.htm",
+      "note": "首段记回历359—361年营建及公元972年首次主麻聚礼。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-azhar"
+        }
+      ]
+    },
+    {
+      "title": "Bauhaus-Universität Weimar · History",
+      "url": "https://bauhaus100.uni-weimar.de/en/history/",
+      "note": "大学百年专题History、Ideas、Work，核对1919年成立、1925年迁德绍、工作坊教育、政治压力与1933年师生迁徙。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-bauhaus"
+        }
+      ]
+    },
+    {
       "title": "英国科学博物馆 · Sending messages across the Atlantic",
       "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -98,12 +175,222 @@
       ]
     },
     {
+      "title": "牛津大学博德利图书馆 · Illustrating Dante’s Divine Comedy",
+      "url": "https://blogs.bodleian.ox.ac.uk/oxfordtrainees/wp-content/uploads/sites/133/2021/09/Exhibition-Handlist-Illustrating-Dantes-Divine-Comedy-October-2020.pdf",
+      "note": "展览手册开篇记作品在1321年9月去世前不久完成。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-dante"
+        }
+      ]
+    },
+    {
+      "title": "Bibliothèque nationale de France · Les Misérables",
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb306255232",
+      "note": "馆藏书目Publication: Paris, Pagnerre, 1862；不混同小说情节的年代。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-les-miserables"
+        }
+      ]
+    },
+    {
+      "title": "英国皇家学会档案 · A dynamical theory of the electromagnetic field",
+      "url": "https://catalogues.royalsociety.org/CalmView/Record.aspx?id=PT%2F72%2F7&src=CalmView.Catalog",
+      "note": "PT/72/7，1865年《哲学汇刊》论文手稿记录；论文发表年与1864年宣读区分。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-maxwell"
+        }
+      ]
+    },
+    {
+      "title": "Columbia University · Annihilation of Caste: About This MSE",
+      "url": "https://ccnmtl.columbia.edu/projects/mmt/ambedkar/about.html",
+      "note": "Columbia University MSE About、原作导言与时间线，明确1936年孟买自印及邀请撤销。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-ambedkar-annihilation-caste"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-ambedkar"
+        }
+      ]
+    },
+    {
+      "title": "Museo del Cenacolo Vinciano · The Last Supper",
+      "url": "https://cenacolovinciano.org/en/museum/the-works/the-last-supper-leonardo-da-vinci-1452-1519/",
+      "note": "作品说明记1494年至1498年初；本条不复制图像。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-leonardo-supper"
+        }
+      ]
+    },
+    {
+      "title": "CiNii Books · Sein und Zeit, 1. Hälfte (1927)",
+      "url": "https://ci.nii.ac.jp/ncid/BA0822464X",
+      "note": "书目BA0822464X：von Martin Heidegger，M. Niemeyer，1927，出版地Halle a.d.S.；不把后版出版地回填初版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-heidegger-being-time"
+        }
+      ]
+    },
+    {
+      "title": "CiNii Books · 东京大学藏《论道》题录",
+      "url": "https://ci.nii.ac.jp/ncid/BA56097962?l=en",
+      "note": "NCID BA56097962，金岳霖著，商务印书馆1940年9月；此馆藏题录出版地为长沙。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-jin-on-dao"
+        }
+      ]
+    },
+    {
+      "title": "Princeton University · Saul Kripke: Naming and Necessity",
+      "url": "https://collaborate.princeton.edu/en/publications/saul-kripke-naming-and-necessity/",
+      "note": "Princeton University收录John P. Burgess研究章节摘要，明确1970、1972、1980三个阶段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-kripke-naming"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-kripke"
+        }
+      ]
+    },
+    {
+      "title": "National Army Museum · Gold Coast Regiment Company arriving in Kumasi",
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1978-07-8-35",
+      "note": "馆藏说明追述1874年英军毁坏库马西部分城区与王宫；馆藏照片本身摄于1909年，不冒充战时影像。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kumasi-1874"
+        }
+      ]
+    },
+    {
+      "title": "南京市档案馆 · 侵华日军南京大屠杀档案",
+      "url": "https://dag.nanjing.gov.cn/daggk/gzjs/",
+      "note": "馆藏介绍中的专题档案，记1937年12月13日南京陷落后持续六周的暴行及调查材料。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nanjing-massacre"
+        }
+      ]
+    },
+    {
       "title": "陕西省地方志 · 半坡类型仰韶文化年代",
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
       "references": [
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "陕西省地方志办公室 · 陕西省志相关医学史卷",
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923622775887905.pdf",
+      "note": "孙思邈与《千金要方》条列永徽三年652年；只用于历史成书年代。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-sun-simiao-qianjin"
+        }
+      ]
+    },
+    {
+      "title": "Science History Institute · Traité Élémentaire de Chimie",
+      "url": "https://digital.sciencehistory.org/works/v979v4270",
+      "note": "1789年巴黎Cuchet版馆藏，作者、绘图者与教学内容说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-lavoisier-chemistry"
+        }
+      ]
+    },
+    {
+      "title": "台北故宫博物院 · 开元通宝",
+      "url": "https://digitalarchive.npm.gov.tw/Antique/Content?Dept=U&uid=9499",
+      "note": "馆藏购钱000161N000000000，断代唐高祖武德四年（621年）以后。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-kaiyuan-cash"
+        }
+      ]
+    },
+    {
+      "title": "意大利文化部罗马国家博物馆管理局 · Pantheon",
+      "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
+      "note": "历史介绍将现存形制定于哈德良初期118—125年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-pantheon"
+        }
+      ]
+    },
+    {
+      "title": "法鼓文理学院 · Database of Modern Chinese Buddhism · Xiong Shili",
+      "url": "https://dmcb.dila.edu.tw/dmcb/Xiong_Shili_%E7%86%8A%E5%8D%81%E5%8A%9B",
+      "note": "DILA现代佛教数据库Xiong Shili，明确1932年文言本；SEP Modern Confucianism §1与§3说明思想内容。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-xiong-new-consciousness"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-xiong"
+        }
+      ]
+    },
+    {
+      "title": "World Bank · China: Liberalization of Services",
+      "url": "https://documents1.worldbank.org/curated/en/162201468236960426/pdf/418560CHA0Liberalization0WP401PUBLIC1.pdf",
+      "note": "Introduction记1978年经济改革和12月三中全会转折；本条只说明起点，不采用后续年份作为当年成果。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-china-reform"
+        }
+      ]
+    },
+    {
+      "title": "Columbia University Press · Waiting for the Dawn",
+      "url": "https://doi.org/10.7312/columbia/9780231153973.003.0016",
+      "note": "《Finding Wisdom in East Asian Classics》第15章摘要：对黄宗羲制度批评和政治方案的解释；不将其等同于现代民主制度。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-huang-zongxi-dawn"
+        }
+      ]
+    },
+    {
+      "title": "佛罗伦萨主教座堂工程处 · Dome",
+      "url": "https://duomo.firenze.it/en/40/dome",
+      "note": "官方介绍记1420—1436年、双壳与肋架；不把后来采光亭并入主穹顶完成年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-florence-dome"
         }
       ]
     },
@@ -134,6 +421,17 @@
         {
           "kind": "world-polity",
           "id": "world-gupta"
+        }
+      ]
+    },
+    {
+      "title": "Nobel Foundation · Robert Koch and Tuberculosis",
+      "url": "https://educationalgames.nobelprize.org/educational/medicine/tuberculosis/readmore.html",
+      "note": "Koch’s Famous Lecture，1882年3月24日的病原研究报告。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-koch-tuberculosis"
         }
       ]
     },
@@ -325,12 +623,67 @@
       ]
     },
     {
+      "title": "University of Oklahoma Libraries · The New Astronomy",
+      "url": "https://galileo.ou.edu/exhibits/new-astronomy.html",
+      "note": "Astronomia nova展品，1609年及开普勒的轨道解释。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-kepler-new-astronomy"
+        }
+      ]
+    },
+    {
+      "title": "German History in Documents and Images · Religious Peace of Augsburg",
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-religious-peace-of-augsburg-september-25-1555",
+      "note": "1555年9月25日和约原典节译及导言。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-augsburg-peace"
+        }
+      ]
+    },
+    {
       "title": "故宫博物院 · 凌家滩玉器展单元与墓葬说明",
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
       "references": [
         {
           "kind": "event",
           "id": "lingjiatan-jade"
+        }
+      ]
+    },
+    {
+      "title": "University of Göttingen · GRETIL Brahmagupta",
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_brahmagupta-brAhmasphuTasiddhAnta.htm",
+      "note": "原典电子文本及628年书目信息，数学内容见相关章节。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-brahmagupta"
+        }
+      ]
+    },
+    {
+      "title": "美国国会图书馆 · Brooklyn Bridge, Fanfare and Fatalities",
+      "url": "https://guides.loc.gov/chronicling-america-brooklyn-bridge",
+      "note": "Introduction及Timeline列1883年5月24日开放，附同期报纸原始史料入口。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-brooklyn"
+        }
+      ]
+    },
+    {
+      "title": "Library of Congress · Invention of the Telephone",
+      "url": "https://guides.loc.gov/chronicling-america-telephone-invention",
+      "note": "1876年专利与格雷争议，原始报刊研究指南。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-telephone-patent"
         }
       ]
     },
@@ -346,6 +699,39 @@
       ]
     },
     {
+      "title": "UNESCO · Educational planning and management modules",
+      "url": "https://healtheducationresources.unesco.org/sites/default/files/resources/planning_modules_vol_1_en.pdf",
+      "note": "全民教育历史部分列1990年3月宗滴恩大会与World Declaration on Education for All。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-education-for-all"
+        }
+      ]
+    },
+    {
+      "title": "UK Parliament · The Transatlantic Slave Trade",
+      "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
+      "note": "Slavery Abolition Act, 1833小节，生效年份、赔偿与学徒制；学徒制1838年结束另见议会研究报告。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-slavery-abolition-act"
+        }
+      ]
+    },
+    {
+      "title": "英国皇家内科医师学会博物馆 · Timeline",
+      "url": "https://history.rcp.ac.uk/timeline",
+      "note": "1628年条目及图注确认《心血运动论》在法兰克福出版和循环论证。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-harvey"
+        }
+      ]
+    },
+    {
       "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
       "url": "https://history.state.gov/countries/hawaii",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -353,6 +739,39 @@
         {
           "kind": "event",
           "id": "world-hawaiian-kingdom"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · Russia: Dissolution of the Soviet Union",
+      "url": "https://history.state.gov/countries/russia",
+      "note": "1991年小节列12月8日协议、21日独联体及25日辞职与承认，作为一系列过程阅读。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-soviet-dissolution"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · The Iranian Hostage Crisis",
+      "url": "https://history.state.gov/departmenthistory/short-history/iraniancrises",
+      "note": "核对1979年革命背景与同年11月人质事件的区别；来源有美国外交视角，不照录其价值标签。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-iran-revolution"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Department of State · FRUS 1878 · The Treaty of Berlin",
+      "url": "https://history.state.gov/historicaldocuments/frus1878/d523",
+      "note": "1878年7月13日条约正文及批准书交换记录；与非洲柏林会议严格区分。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-berlin-congress"
         }
       ]
     },
@@ -372,6 +791,138 @@
       ]
     },
     {
+      "title": "U.S. Office of the Historian · The Paris Peace Conference and the Treaty of Versailles",
+      "url": "https://history.state.gov/milestones/1914-1920/paris-peace",
+      "note": "核对1919年1月和会召开、6月28日对德条约签署及美国未批准。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-versailles"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · The Chinese Revolution of 1949",
+      "url": "https://history.state.gov/milestones/1945-1952/chinese-rev",
+      "note": "核对1949年10月1日宣告成立及此前国共内战；只采用可核对事实，不沿用来源的政治标签。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-prc-founded"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · North Atlantic Treaty Organization, 1949",
+      "url": "https://history.state.gov/milestones/1945-1952/nato",
+      "note": "公约签署及欧洲重建、柏林危机背景；与成员后续扩展区分。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nato"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · Bandung Conference, 1955",
+      "url": "https://history.state.gov/milestones/1953-1960/bandung-conf",
+      "note": "核对1955年4月、29个政府、主权与文化经济合作公报；保留参加者立场差异。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-bandung"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · Dien Bien Phu and the Fall of French Indochina",
+      "url": "https://history.state.gov/milestones/1953-1960/dien-bien-phu",
+      "note": "核对1954年5月7日法军据点失守、日内瓦谈判和后续分治安排；不沿用导言的围城时长简化。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-dien-bien-phu"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · The Cuban Missile Crisis, October 1962",
+      "url": "https://history.state.gov/milestones/1961-1968/cuban-missile-crisis",
+      "note": "核对1962年10月侦察发现、海上封锁、公开与秘密谈判和危机解决条件。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-cuban-missile-crisis"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · Oil Embargo, 1973–1974",
+      "url": "https://history.state.gov/milestones/1969-1976/oil-embargo",
+      "note": "核对1973年禁运及1974年3月解除、产量价格与美元因素，避免单因解释。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-oil-crisis"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · The Soviet Invasion of Afghanistan and the U.S. Response",
+      "url": "https://history.state.gov/milestones/1977-1980/soviet-invasion-afghanistan",
+      "note": "核对1979年12月苏军进入及其长期战争背景；苏军1989年撤离与后续内战区别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-soviet-afghan-war"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Office of the Historian · Fall of Communism in Eastern Europe, 1989",
+      "url": "https://history.state.gov/milestones/1989-1992/fall-of-communism",
+      "note": "核对1989年11月9日边境开放、东欧改革与1990年统一之间的区别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-berlin-wall-opened"
+        }
+      ]
+    },
+    {
+      "title": "香港中文大学图书馆 · 文学散步：鲁迅",
+      "url": "https://hklit.lib.cuhk.edu.hk/wp-content/uploads/2020/10/litwalkd.pdf",
+      "note": "鲁迅生平说明记1918年以鲁迅为笔名发表《狂人日记》；作品初刊见《新青年》4卷5号。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-luxun-diary"
+        }
+      ]
+    },
+    {
+      "title": "CERN · A century of quantum mechanics",
+      "url": "https://home.cern/century-quantum-mechanics/",
+      "note": "核对1925年海森堡论文及玻恩、约尔当等共同发展的顺序。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-quantum-mechanics"
+        }
+      ]
+    },
+    {
+      "title": "CERN · The birth of the Web",
+      "url": "https://home.cern/science/computing/the-birth-of-the-web",
+      "note": "核对1989年提案、1990年实现与后续开放传播的时间顺序，区别Web与Internet。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-web-proposal"
+        }
+      ]
+    },
+    {
       "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
       "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -379,6 +930,47 @@
         {
           "kind": "event",
           "id": "world-us-transcontinental-railway"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Park Service · The Spaniards, El Morro",
+      "url": "https://home.nps.gov/elmo/learn/historyculture/the-spaniards.htm",
+      "note": "The Pueblo Revolt小节，1680年起义与1692年西班牙重返。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-pueblo-revolt"
+        }
+      ]
+    },
+    {
+      "title": "中央研究院胡适纪念馆 · 传略（著述年表）",
+      "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=116",
+      "note": "胡适纪念馆“传略（著述年表）”1917、1919年条明确北大教学与1919年2月上卷出版；坐标指北京教学研究语境，不作印刷地判断。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-hushi-history-chinese-philosophy"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-hushi"
+        }
+      ]
+    },
+    {
+      "title": "中央研究院胡适纪念馆 · 整理国故运动的旗手",
+      "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=94",
+      "note": "“中国哲学史”部分说明讲义、蔡元培序、1919年初出版与未完成中下卷。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-hushi-history-chinese-philosophy"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-hushi"
         }
       ]
     },
@@ -399,6 +991,76 @@
         {
           "kind": "event",
           "id": "diamond-sutra"
+        }
+      ]
+    },
+    {
+      "title": "Internet Encyclopedia of Philosophy · Chinese Philosophy: Overview of History",
+      "url": "https://iep.utm.edu/chinese-philosophy-overview-of-history/",
+      "note": "Feng Youlan两卷本1931、1934年及现代哲学史学科形成的段落。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-feng-history-chinese-philosophy"
+        }
+      ]
+    },
+    {
+      "title": "Internet Encyclopedia of Philosophy · Feng Youlan",
+      "url": "https://iep.utm.edu/feng/",
+      "note": "IEP Chinese Philosophy: Overview of History明确第一卷1931、第二卷1934；Feng条目介绍其方法与新理学背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-feng-history-chinese-philosophy"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-feng"
+        }
+      ]
+    },
+    {
+      "title": "Internet Encyclopedia of Philosophy · Plato",
+      "url": "https://iep.utm.edu/plato/",
+      "note": "第2节作品分期：中期对话约前380—前360年，包括《理想国》第二至十卷；第一卷通常另作早期讨论。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-plato-republic"
+        }
+      ]
+    },
+    {
+      "title": "Internet Encyclopedia of Philosophy · Zhang Zai",
+      "url": "https://iep.utm.edu/zhang-zai-chang-tsai/",
+      "note": "§1 Life and Work明确记载1076年完成《正蒙》；§2 Metaphysics、§3 Human Nature and Ethics说明气论及《西铭》。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-zhangzai-zhengmeng"
+        }
+      ]
+    },
+    {
+      "title": "Internet Encyclopedia of Philosophy · Zhou Dunyi",
+      "url": "https://iep.utm.edu/zhou-dun/",
+      "note": "§1 Life and Context：1071年退居及1073年卒；§2 Works与§3 Key Concepts讨论《太极图说》《通书》，不把退居年当成确切成书年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-zhou-dunyi-lianxi"
+        }
+      ]
+    },
+    {
+      "title": "International Committee of the Red Cross · Geneva Convention, 22 August 1864",
+      "url": "https://ihl-databases.icrc.org/assets/treaties/120-IHL-GC1864-EN.pdf",
+      "note": "1864年公约正文，第1—6条及签署日期；不以其代替后续版本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-geneva-convention"
         }
       ]
     },
@@ -435,12 +1097,34 @@
       ]
     },
     {
+      "title": "Indiana University Press · The Peony Pavilion, Second Edition",
+      "url": "https://iupress.org/9780253215277/the-peony-pavilion-second-edition/",
+      "note": "Description明确原作由汤显祖写于1598年；页面2002年为该英文译本第二版的出版年，不混同原作年代。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-peony-pavilion"
+        }
+      ]
+    },
+    {
       "title": "日本绳文遗址官方门户 · 三内丸山遗址",
       "url": "https://jomon-japan.jp/en/learn/jomon-sites/sannai-maruyama",
       "references": [
         {
           "kind": "event",
           "id": "sannai-maruyama"
+        }
+      ]
+    },
+    {
+      "title": "Kalliope · Goethe- und Schiller-Archiv · Zarathustra IV",
+      "url": "https://kalliope.staatsbibliothek-berlin.de/ead?ead.id=DE-2060-BE-71-471226",
+      "note": "馆藏号 GSA 71/25a：第四部，C. G. Naumann，Leipzig 1885，Privatdruck；用于核对第四部私人印行的性质。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-nietzsche-zarathustra"
         }
       ]
     },
@@ -461,6 +1145,58 @@
         {
           "kind": "event",
           "id": "taosi-city"
+        }
+      ]
+    },
+    {
+      "title": "Krishnamurti Foundation Trust · Dissolution Speech",
+      "url": "https://kfoundation.org/dissolution-speech/",
+      "note": "Krishnamurti Foundation Trust保存的Dissolution Speech，日期1929年8月3日，地点Ommen。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-krishnamurti-dissolution"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-krishnamurti"
+        }
+      ]
+    },
+    {
+      "title": "国文学研究资料馆 · 《辨道》国书数据库",
+      "url": "https://kokusho.nijl.ac.jp/biblio/100391144/",
+      "note": "著作信息“成立年 享保二刊（1717）”；日本图书馆存本目录，区别原刊纪年与后来的重刊本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-ogyu-sorai-bendo"
+        }
+      ]
+    },
+    {
+      "title": "Mozarteum Foundation · Köchel catalogue KV 620",
+      "url": "https://kv.mozarteum.at/en/work/die-zauberflote-7137",
+      "note": "Dating与First Performance字段，维也纳1791年9月30日首演。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-mozart-magic-flute"
+        },
+        {
+          "kind": "person",
+          "id": "category-person-mozart"
+        }
+      ]
+    },
+    {
+      "title": "日本国文学研究资料馆 · 古今和歌集",
+      "url": "https://literarymaps.nijl.ac.jp/en/resources/567554dddddddddddddddd01/",
+      "note": "作品目录列作者、体裁及905／912年两种时间标记。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-kokinshu"
         }
       ]
     },
@@ -496,6 +1232,116 @@
       ]
     },
     {
+      "title": "University of St Andrews · MacTutor · Albert Einstein",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
+      "note": "生卒、1905年论文、1915年广义相对论与1921年度诺奖的授奖内容。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-einstein"
+        }
+      ]
+    },
+    {
+      "title": "圣安德鲁斯大学 MacTutor · Euclid",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/",
+      "note": "见生平断代讨论及《原本》13卷内容介绍。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-euclid"
+        }
+      ]
+    },
+    {
+      "title": "University of St Andrews · MacTutor · Galileo Galilei",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/",
+      "note": "生卒、任教、1609年望远镜改进、1610年《星际信使》与运动研究；不采用页面内部有出入的出版月份。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-galileo"
+        }
+      ]
+    },
+    {
+      "title": "University of St Andrews · MacTutor · Johannes Kepler",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/",
+      "note": "生卒、与第谷的工作、1609及1619年定律、光学著作与1627年星表。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-kepler"
+        }
+      ]
+    },
+    {
+      "title": "University of St Andrews · MacTutor · Isaac Newton",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Newton/",
+      "note": "生卒采用换算公历1643—1727；传记明确当时英国旧历出生记1642年，另述1687年《原理》与研究、任职。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-newton"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Babad Diponegoro nomination",
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/indonesia_netherlands_babad_diponegoro.pdf",
+      "note": "申报材料第6页，战争年代、流放与纪事成书时间。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-java-war"
+        }
+      ]
+    },
+    {
+      "title": "Masaryk University Mendel Museum · Gregor Johann Mendel",
+      "url": "https://mendelmuseum.muni.cz/o-muzeu/gregor-johann-mendel",
+      "note": "人物年表1865年报告及1866年论文出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-mendel-paper"
+        }
+      ]
+    },
+    {
+      "title": "International Mozarteum Foundation · Wolfgang Amadé Mozart",
+      "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
+      "note": "1756—1791年、音乐家庭、南内尔及家庭巡演；与父亲同页介绍的1756年小提琴教材不是他的作品。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-mozart"
+        }
+      ]
+    },
+    {
+      "title": "Musée protestant · The Edict of Nantes (1598)",
+      "url": "https://museeprotestant.org/en/notice/the-edict-of-nantes-1598/",
+      "note": "1598年敕令、民事平等与新教礼拜限制。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-edict-nantes"
+        }
+      ]
+    },
+    {
+      "title": "Museo Leonardiano di Vinci · Leonardo’s biography",
+      "url": "https://museoleonardiano.it/en/leonardo-in-vinci/biografia/",
+      "note": "1452—1519年、韦罗基奥作坊、米兰多种职务、《最后的晚餐》与1516年赴法国。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-leonardo"
+        }
+      ]
+    },
+    {
       "title": "吉林铁路博物馆 · 第一条国有铁路干线",
       "url": "https://museum.jty.edu.cn/Home/Content/20227",
       "note": "核对分段施工、关沟地形、人字形线路与隧道开挖方法；不将线路自动转换为个人逐日行踪。",
@@ -503,6 +1349,61 @@
         {
           "kind": "person",
           "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "云南省民族宗教事务委员会 · 唐代云南的景教",
+      "url": "https://mzzj.yn.gov.cn/html/2015/minjianxinyang_0629/9703.html",
+      "note": "前段明确建中二年781年景净撰立；本文不采用其中推测性的云南传播细节。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-jingjiao-stele"
+        }
+      ]
+    },
+    {
+      "title": "日本国立国会图书馆 · 宗教論集 第1（宗教とは何か）",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000039-I2975553",
+      "note": "西谷啓治著、创文社、1961年书目记录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nishitani-religion"
+        }
+      ]
+    },
+    {
+      "title": "北京大学新闻网 · 中华人民共和国大事记",
+      "url": "https://news.pku.edu.cn/info/1651/17081.htm",
+      "note": "新华社大事记一九七七年10月12日条，记恢复统一考试、当年11—12月考试与录取；不把招生年份与全部入学年份混同。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-gaokao-restored"
+        }
+      ]
+    },
+    {
+      "title": "北京大学 · 五四百年专题",
+      "url": "https://news.pku.edu.cn/ztwz111/bnws/wsps/fd36130f9fd64d1e8e4ce4c5461f6487.htm",
+      "note": "核对1919年巴黎和会山东问题及5月4日北京学生抗议；使用可定位日期，不照录宣传性评价。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-may-fourth"
+        }
+      ]
+    },
+    {
+      "title": "New Zealand Ministry for Culture and Heritage · The search for a king",
+      "url": "https://nzhistory.govt.nz/media/interactive/king-movement-map",
+      "note": "1858年6月恩加鲁阿瓦希亚拥立首位国王的地图与说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-kingitanga"
         }
       ]
     },
@@ -536,6 +1437,39 @@
         {
           "kind": "event",
           "id": "world-nz-suffrage"
+        }
+      ]
+    },
+    {
+      "title": "World Council of Churches · First Assembly, Amsterdam 1948",
+      "url": "https://oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "note": "第一届大会小节，1948年8月23日正式成立、147个成员教会及讨论主题。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-world-council-churches"
+        }
+      ]
+    },
+    {
+      "title": "New York Public Library · Ulysses, first edition",
+      "url": "https://old-digitalcollections.nypl.org/items/12311e40-df89-013a-e962-0242ac110004",
+      "note": "馆藏书目Date Issued为1922、Place为Paris、Publisher为Shakespeare and Co.；1935年题赠不是出版年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-ulysses"
+        }
+      ]
+    },
+    {
+      "title": "美国数学协会 Convergence · Latin Manuscript of Al-Khwarizmi’s Algebra",
+      "url": "https://old.maa.org/node/1409908",
+      "note": "Frank J. Swetz文章开篇记约825年写成及后来的拉丁译本，并列六种方程。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-algebra"
         }
       ]
     },
@@ -623,10 +1557,14 @@
       ]
     },
     {
-      "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
+      "title": "OpenStax · World History 1 · 11.2 The Arab-Islamic Conquests",
       "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
-      "note": "史实与年代参考；中文叙述由本站独立编写。",
+      "note": "叙利亚征服与636年雅尔穆克战役段。",
       "references": [
+        {
+          "kind": "event",
+          "id": "world-yarmuk"
+        },
         {
           "kind": "event",
           "id": "world-umayyad"
@@ -1158,6 +2096,17 @@
       ]
     },
     {
+      "title": "OpenStax · World History 2 · 11.2 The Coming of War",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-2-the-collapse-of-the-ottomans-and-the-coming-of-war",
+      "note": "1914年危机、战争爆发及参战网络。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-first-world-war"
+        }
+      ]
+    },
+    {
       "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
       "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -1165,6 +2114,40 @@
         {
           "kind": "event",
           "id": "world-russian-revolution-1905"
+        },
+        {
+          "kind": "event",
+          "id": "modern-first-world-war"
+        },
+        {
+          "kind": "event",
+          "id": "modern-russian-revolutions"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 13.2 Theaters of War",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/13-2-theaters-of-war",
+      "note": "东亚战争、中国抵抗、日本1937—1942年扩张及战时平民段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-china-war"
+        },
+        {
+          "kind": "event",
+          "id": "modern-second-world-war"
+        }
+      ]
+    },
+    {
+      "title": "OpenStax · World History 2 · 14.2 The Spread of Communism",
+      "url": "https://openstax.org/books/world-history-volume-2/pages/14-2-the-spread-of-communism",
+      "note": "半岛分割、1950年战争、中国参战及1953年停战段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-korean-war"
         }
       ]
     },
@@ -1335,6 +2318,10 @@
         {
           "kind": "event",
           "id": "world-columbus"
+        },
+        {
+          "kind": "event",
+          "id": "world-tordesillas"
         },
         {
           "kind": "event",
@@ -1615,6 +2602,28 @@
       ]
     },
     {
+      "title": "Oxford University Museum of Natural History · Marie Curie",
+      "url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "note": "核对1867—1934年、放射性合作研究、两个科学领域诺奖与战时X射线工作；该页赴巴黎年份有误，未采纳。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-marie-curie"
+        }
+      ]
+    },
+    {
+      "title": "Autoridad del Canal de Panamá · Preguntas Frecuentes",
+      "url": "https://pancanal.com/preguntas-frecuentes/",
+      "note": "核对1914年8月15日安孔号正式通航、1904年美国接续工程及施工劳工背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-panama-canal"
+        }
+      ]
+    },
+    {
       "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
       "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -1622,6 +2631,28 @@
         {
           "kind": "event",
           "id": "world-norse-newfoundland"
+        }
+      ]
+    },
+    {
+      "title": "United Nations · Ghanaian peacekeepers mark Independence Day",
+      "url": "https://peacekeeping.un.org/en/node/109340",
+      "note": "核对加纳1957年3月6日结束英国统治；独立日期不同于加入联合国日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-ghana-independence"
+        }
+      ]
+    },
+    {
+      "title": "United Nations · UNGOMAP background",
+      "url": "https://peacekeeping.un.org/sites/default/files/past/ungomap/background.html",
+      "note": "Monitoring of withdrawal及Second phase，核对1988—1989年分阶段撤军与1989年2月完成。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-soviet-afghan-war"
         }
       ]
     },
@@ -1637,12 +2668,1342 @@
       ]
     },
     {
+      "title": "Stanford Encyclopedia of Philosophy · Theodor W. Adorno",
+      "url": "https://plato.stanford.edu/entries/adorno/",
+      "note": "SEP Adorno §2与Horkheimer相关讨论，区分1944文本及1947 Dialectic of Enlightenment正式版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-dialectic-enlightenment"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-adorno"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Aquinas",
+      "url": "https://plato.stanford.edu/entries/aquinas/",
+      "note": "第1节 Life and Works 及参考书目 A1：Summa theologiae（1267—73，未完成）；第8节伦理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-aquinas-summa"
+        },
+        {
+          "kind": "person",
+          "id": "phil-aquinas"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Hannah Arendt",
+      "url": "https://plato.stanford.edu/entries/arendt/",
+      "note": "SEP Arendt导言与The Origins of Totalitarianism讨论，明确1951年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-arendt-totalitarianism"
+        },
+        {
+          "kind": "event",
+          "id": "modern-arendt-human-condition"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-arendt"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Aristotle",
+      "url": "https://plato.stanford.edu/entries/aristotle/",
+      "note": "第1节 Aristotle’s Life：前335年返雅典并在 Lyceum 建学；第2节说明现存著作的性质。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-aristotle-lyceum"
+        },
+        {
+          "kind": "person",
+          "id": "phil-aristotle"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Augustine of Hippo",
+      "url": "https://plato.stanford.edu/entries/augustine/",
+      "note": "第1节 Life：386年夏转向、387年复活节受洗；导言与相关章节解释哲学及神学影响。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-augustine-conversion"
+        },
+        {
+          "kind": "person",
+          "id": "phil-augustine"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · John Langshaw Austin",
+      "url": "https://plato.stanford.edu/entries/austin-jl/",
+      "note": "SEP Austin §1与书目1962b，明确1955 William James Lectures及身后出版版本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-austin-words"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-austin"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Simone de Beauvoir",
+      "url": "https://plato.stanford.edu/entries/beauvoir/",
+      "note": "SEP Beauvoir §4 Pyrrhus and Cinéas，明确1944年及自由、他人和伦理行动等论题。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-beauvoir-pyrrhus"
+        },
+        {
+          "kind": "event",
+          "id": "modern-beauvoir-ambiguity"
+        },
+        {
+          "kind": "event",
+          "id": "modern-beauvoir-second-sex"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-beauvoir"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Henri Bergson",
+      "url": "https://plato.stanford.edu/entries/bergson/",
+      "note": "SEP Bergson生平与Creative Evolution专节，明确1907年问世。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-bergson-creative-evolution"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-bergson"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Albert Camus",
+      "url": "https://plato.stanford.edu/entries/camus/",
+      "note": "SEP Camus关于The Myth of Sisyphus的专节及原始著作书目，1942年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-camus-sisyphus"
+        },
+        {
+          "kind": "event",
+          "id": "modern-camus-rebel"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-camus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Legalism in Chinese Philosophy",
+      "url": "https://plato.stanford.edu/entries/chinese-legalism/",
+      "note": "§1.1 Major fa Texts、§4 Ordering the Bureaucracy、§5 The Ruler：韩非卒于前233年，传世文本的复合性及法、术、势问题。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-hanfei-government"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Modern Confucianism",
+      "url": "https://plato.stanford.edu/entries/confucianism-modern/",
+      "note": "SEP Modern Confucianism §1及书目列1921年上海商务印书馆；普林斯顿研究亦记1921年末出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-liang-east-west"
+        },
+        {
+          "kind": "event",
+          "id": "modern-xiong-new-consciousness"
+        },
+        {
+          "kind": "event",
+          "id": "modern-tang-spiritual-value-chinese-culture"
+        },
+        {
+          "kind": "event",
+          "id": "modern-mou-mind-nature"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-liang"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-mou"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-tang"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Dai Zhen",
+      "url": "https://plato.stanford.edu/entries/dai-zhen/",
+      "note": "§1 Life and Writings及§4 Moral Psychology、§7 Normative Ethics；书目列《孟子字义疏证》1777年，晚年论欲、情、理与考证方法。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-dai-zhen-mencius"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Jacques Derrida",
+      "url": "https://plato.stanford.edu/entries/derrida/",
+      "note": "SEP Derrida生平及Of Grammatology讨论，明确1967年三部主要著作同时问世；本条只记录其中一部。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-derrida-grammatology"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-derrida"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · René Descartes",
+      "url": "https://plato.stanford.edu/entries/descartes/",
+      "note": "条目导言列1637年《方法谈》及三篇附论；第1.3节讨论其形成与发表。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-descartes-discourse"
+        },
+        {
+          "kind": "event",
+          "id": "phil-descartes-meditations"
+        },
+        {
+          "kind": "person",
+          "id": "phil-descartes"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · John Dewey",
+      "url": "https://plato.stanford.edu/entries/dewey/",
+      "note": "SEP Dewey生平年表及教育哲学部分，Democracy and Education为1916年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-dewey-democracy-education"
+        },
+        {
+          "kind": "event",
+          "id": "modern-dewey-experience-nature"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-dewey"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Epictetus",
+      "url": "https://plato.stanford.edu/entries/epictetus/",
+      "note": "SEP Epictetus §1 Life and Works、§4与教学方法部分；生卒与讲授年代保持约略，不造精确刊行年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-epictetus-discourses"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-epictetus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Epicurus",
+      "url": "https://plato.stanford.edu/entries/epicurus/",
+      "note": "第2节 Life：前307/06年回雅典购置花园；第4、6节讨论伦理与学派生活。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-epicurus-garden"
+        },
+        {
+          "kind": "person",
+          "id": "phil-epicurus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Michel Foucault",
+      "url": "https://plato.stanford.edu/entries/foucault/",
+      "note": "SEP Foucault §3.1 Histories of Madness and Medicine及原始书目，Folie et déraison为1961年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-foucault-madness"
+        },
+        {
+          "kind": "event",
+          "id": "modern-foucault-order-things"
+        },
+        {
+          "kind": "event",
+          "id": "modern-foucault-discipline"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-foucault"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Francis Bacon",
+      "url": "https://plato.stanford.edu/entries/francis-bacon/",
+      "note": "第1节明确1620年10月《大复兴》卷出版并含《新工具》两卷；第4.2节讨论新方法。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-bacon-novum-organum"
+        },
+        {
+          "kind": "person",
+          "id": "phil-francis-bacon"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Gottlob Frege",
+      "url": "https://plato.stanford.edu/entries/frege/",
+      "note": "第1节 Life and Influences 明确1879年《概念文字》出版；第2节讨论谓词逻辑与证明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-frege-concept-script"
+        },
+        {
+          "kind": "person",
+          "id": "phil-frege"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Hans-Georg Gadamer",
+      "url": "https://plato.stanford.edu/entries/gadamer/",
+      "note": "SEP Gadamer生平及诠释学讨论，明确Truth and Method于1960年出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-gadamer-truth-method"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-gadamer"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Jürgen Habermas",
+      "url": "https://plato.stanford.edu/entries/habermas/",
+      "note": "SEP Habermas早期公共领域专节与书目，The Structural Transformation of the Public Sphere为1962年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-habermas-public-sphere"
+        },
+        {
+          "kind": "event",
+          "id": "modern-habermas-communicative-action"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-habermas"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Georg Wilhelm Friedrich Hegel",
+      "url": "https://plato.stanford.edu/entries/hegel/",
+      "note": "第1节明确1806年底完成、1807年出版；第3.1.1节分析《精神现象学》。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-hegel-phenomenology"
+        },
+        {
+          "kind": "person",
+          "id": "phil-hegel"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Martin Heidegger",
+      "url": "https://plato.stanford.edu/entries/heidegger/",
+      "note": "SEP Heidegger关于Being and Time的分析及出版史，明确1927年；其书目中的图宾根1953年为第7版，1927年哈雷初版另据馆藏题录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-heidegger-being-time"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-heidegger"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Hobbes",
+      "url": "https://plato.stanford.edu/entries/hobbes/",
+      "note": "第1节 Life and Works：法国流亡及1651年《利维坦》出版；其结构包括认识、政治和经文解释。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-hobbes-leviathan"
+        },
+        {
+          "kind": "person",
+          "id": "phil-hobbes"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Max Horkheimer",
+      "url": "https://plato.stanford.edu/entries/horkheimer/",
+      "note": "SEP Horkheimer §1明确1933年法兰克福研究所被关闭、1934—1941年霍克海默主要在纽约工作；本条坐标指流亡学术网络，不判断期刊印刷地。§3及原始书目列Traditional and Critical Theory发表于1937年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-horkheimer-critical-theory"
+        },
+        {
+          "kind": "event",
+          "id": "modern-dialectic-enlightenment"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-horkheimer"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · David Hume",
+      "url": "https://plato.stanford.edu/entries/hume/",
+      "note": "第1节 Life and Works 明确1739年第一、二卷及1740年第三卷；第2—4节讨论认识、激情和伦理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-hume-treatise"
+        },
+        {
+          "kind": "person",
+          "id": "phil-hume"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Edmund Husserl",
+      "url": "https://plato.stanford.edu/entries/husserl/",
+      "note": "第1节 Life and work 明确1900—1901年出版；第2节讨论逻辑的理想性与意向性。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-husserl-logical-investigations"
+        },
+        {
+          "kind": "event",
+          "id": "modern-husserl-ideas"
+        },
+        {
+          "kind": "person",
+          "id": "phil-husserl"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Ibn Rushd [Averroes]",
+      "url": "https://plato.stanford.edu/entries/ibn-rushd/",
+      "note": "第6节 Religion 与著作目录 Decisive Treatise（1178/9）；另见第9节接受史。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-averroes-decisive"
+        },
+        {
+          "kind": "person",
+          "id": "phil-averroes"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Ibn Sina [Avicenna]",
+      "url": "https://plato.stanford.edu/entries/ibn-sina/",
+      "note": "第1.1节 Life：伊斯法罕约1024—1037年及完成《治疗论》；第1.2节与第4节解释著作范围。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-avicenna-cure"
+        },
+        {
+          "kind": "person",
+          "id": "phil-avicenna"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · William James",
+      "url": "https://plato.stanford.edu/entries/james/",
+      "note": "条目导言及第6.1节 Pragmatism (1907)，说明出版年份、实用主义方法及真理讨论。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-james-pragmatism"
+        },
+        {
+          "kind": "person",
+          "id": "phil-william-james"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Japanese Confucian Philosophy",
+      "url": "https://plato.stanford.edu/entries/japanese-confucian/",
+      "note": "§4.1 Language、§4.7 Political Thought：荻生徂徕1666—1728年及《辨道》《辨名》对语言、礼乐和制度的解释。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-ogyu-sorai-bendo"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-ogyu-sorai"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Immanuel Kant",
+      "url": "https://plato.stanford.edu/entries/kant/",
+      "note": "导言和第1节明确第一版1781年、第二版1787年；第2—4节讨论知识条件、先验唯心论及演绎。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-kant-pure-reason"
+        },
+        {
+          "kind": "event",
+          "id": "phil-kant-practical-reason"
+        },
+        {
+          "kind": "person",
+          "id": "phil-kant"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Søren Kierkegaard",
+      "url": "https://plato.stanford.edu/entries/kierkegaard/",
+      "note": "第1节及 Chronology of Kierkegaard’s Works 列1843年《非此即彼》《恐惧与战栗》等；第3节讨论不同存在领域。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-kierkegaard-either-or"
+        },
+        {
+          "kind": "person",
+          "id": "phil-kierkegaard"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Korean Confucianism",
+      "url": "https://plato.stanford.edu/entries/korean-confucianism/",
+      "note": "§4 Sage Learning and the Four-Seven Debate：李滉1501—1570年，《圣学十图》作于1568年；与李珥及四端七情论辩的思想背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-yi-hwang-ten-diagrams"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-yi-hwang"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · The Kyoto School",
+      "url": "https://plato.stanford.edu/entries/kyoto-school/",
+      "note": "SEP Kyoto School相关思想讨论；日文初版日期以日本国立国会图书馆1961年书目核对，英译为1982年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nishitani-religion"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-nishitani"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Laozi",
+      "url": "https://plato.stanford.edu/entries/laozi/",
+      "note": "§2 Date and Authorship、§3 Textual Traditions、§7 Naturalness and Nonaction：文本层累形成及约前3世纪中叶趋稳，不将传说中的老子生年当作成书年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-laozi-text"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Gottfried Wilhelm Leibniz",
+      "url": "https://plato.stanford.edu/entries/leibniz/",
+      "note": "第1.1节 Chronology of Major Writings 列1714年 Monadology；第2—4节说明体系与实体。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-leibniz-monadology"
+        },
+        {
+          "kind": "person",
+          "id": "phil-leibniz"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Emmanuel Levinas",
+      "url": "https://plato.stanford.edu/entries/levinas/",
+      "note": "SEP Levinas §2.3 The “Treatise on Hospitality”: Totality and Infinity (1961)。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-levinas-totality-infinity"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-levinas"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · John Locke",
+      "url": "https://plato.stanford.edu/entries/locke/",
+      "note": "导言以1689年标《人类理解论》；第1.3节说明返英后出版《人类理解论》《政府论》及宽容书信。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-locke-essay"
+        },
+        {
+          "kind": "person",
+          "id": "phil-locke"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Marcus Aurelius",
+      "url": "https://plato.stanford.edu/entries/marcus-aurelius/",
+      "note": "SEP Marcus Aurelius §1 Life and Works，记121—180生卒、161年继位及晚年军事期间的笔记。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-marcus-meditations"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-marcus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Karl Marx",
+      "url": "https://plato.stanford.edu/entries/marx/",
+      "note": "第3节 Economics、尤其3.1 Reading Capital，说明政治经济学分析与作品范围。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-marx-capital"
+        },
+        {
+          "kind": "person",
+          "id": "phil-marx"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Maurice Merleau-Ponty",
+      "url": "https://plato.stanford.edu/entries/merleau-ponty/",
+      "note": "SEP Merleau-Ponty生平、embodiment与Phénoménologie de la perception书目，1945年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-merleau-perception"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-merleau"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · John Stuart Mill",
+      "url": "https://plato.stanford.edu/entries/mill/",
+      "note": "条目导言列《论自由》1859年；有关政治、个性与自由的章节讨论伤害原则和社会压制。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-mill-liberty"
+        },
+        {
+          "kind": "person",
+          "id": "phil-mill"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Mohism",
+      "url": "https://plato.stanford.edu/entries/mohism/",
+      "note": "导言及“Historical Background”“Ethics”：墨子约活跃于前430年；兼爱、非攻与论证方法。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-mozi-inclusive-care"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Nāgārjuna",
+      "url": "https://plato.stanford.edu/entries/nagarjuna/",
+      "note": "§1 Life and works及§2 Emptiness and svabhāva：约150—250年、南印度活动概况及《中论》归属；具体生卒和著书地点无法精确确定。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-nagarjuna-middle-way"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-nagarjuna"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Neo-Daoism",
+      "url": "https://plato.stanford.edu/entries/neo-daoism/",
+      "note": "§2 He Yan and Wang Bi：王弼226—249年生卒、《老子》《周易》注及对“无”的解释；不是注书完成年的记录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-wangbi-commentaries"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-wang-bi"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Friedrich Nietzsche",
+      "url": "https://plato.stanford.edu/entries/nietzsche/",
+      "note": "第1节 Life and Works 及主要著作目录列1883—1885年；第3、5节讨论价值创造与文体解释。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-nietzsche-zarathustra"
+        },
+        {
+          "kind": "person",
+          "id": "phil-nietzsche"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Nishida Kitarō",
+      "url": "https://plato.stanford.edu/entries/nishida-kitaro/",
+      "note": "§1 Biography、§2.1 Pure Experience及“Nishida’s works”书目：1870—1945年，《善的研究》初版1911年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-nishida-inquiry-good"
+        },
+        {
+          "kind": "event",
+          "id": "modern-nishida-place"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-nishida-kitaro"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Robert Nozick’s Political Philosophy",
+      "url": "https://plato.stanford.edu/entries/nozick-political/",
+      "note": "SEP Robert Nozick’s Political Philosophy导言与§2—3，明确1974年Anarchy, State, and Utopia。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nozick-utopia"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-nozick"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Charles Sanders Peirce",
+      "url": "https://plato.stanford.edu/entries/peirce/",
+      "note": "SEP Peirce关于1877—1878年Illustrations of the Logic of Science系列和实用准则的讨论。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-peirce-clear-ideas"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-peirce"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Plato",
+      "url": "https://plato.stanford.edu/entries/plato/",
+      "note": "第1、3及11节，理念、对话形式与早中晚期分期的解释限制。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-plato-republic"
+        },
+        {
+          "kind": "person",
+          "id": "phil-plato"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Plotinus",
+      "url": "https://plato.stanford.edu/entries/plotinus/",
+      "note": "第1节 Life and Writings：244年末定居罗马并持续讲学，说明文本与课堂及波菲利编纂的关系。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-plotinus-rome"
+        },
+        {
+          "kind": "person",
+          "id": "phil-plotinus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Karl Popper",
+      "url": "https://plato.stanford.edu/entries/popper/",
+      "note": "SEP Popper原始书目列1935 Logik der Forschung与1959 The Logic of Scientific Discovery，生平段讨论早期出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-popper-discovery"
+        },
+        {
+          "kind": "event",
+          "id": "modern-popper-open-society"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-popper"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Presocratic Philosophy",
+      "url": "https://plato.stanford.edu/entries/presocratics/",
+      "note": "第1节史料限制、第2节 The Milesians；讨论泰勒斯的活动年代、自然原理与日食故事的不可靠性。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-milesian-inquiry"
+        },
+        {
+          "kind": "person",
+          "id": "phil-thales"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Willard Van Orman Quine",
+      "url": "https://plato.stanford.edu/entries/quine/",
+      "note": "SEP Quine关于分析—综合区分的讨论与Primary Sources：1951，Philosophical Review 60:20—43。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-quine-two-dogmas"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-quine"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · John Rawls",
+      "url": "https://plato.stanford.edu/entries/rawls/",
+      "note": "SEP Rawls生平、作为公平的正义各节及原始书目，A Theory of Justice为1971年初版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-rawls-justice"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-rawls"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Jean Jacques Rousseau",
+      "url": "https://plato.stanford.edu/entries/rousseau/",
+      "note": "第1节 Life 及主要著作目录明确两书均发表于1762年；第3节政治哲学、第5节教育。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-rousseau-contract-emile"
+        },
+        {
+          "kind": "person",
+          "id": "phil-rousseau"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Bertrand Russell",
+      "url": "https://plato.stanford.edu/entries/russell/",
+      "note": "SEP Russell关于悖论、类型理论与逻辑主义的专节及1903年Principles of Mathematics书目。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-russell-principles"
+        },
+        {
+          "kind": "event",
+          "id": "modern-principia-mathematica"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-russell"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Gilbert Ryle",
+      "url": "https://plato.stanford.edu/entries/ryle/",
+      "note": "SEP Ryle导言及The Concept of Mind各节、原始书目，初版1949年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-ryle-concept-mind"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-ryle"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Jean-Paul Sartre",
+      "url": "https://plato.stanford.edu/entries/sartre/",
+      "note": "SEP Sartre导言、关于Nausea的讨论及原始著作书目，明确1938年巴黎Gallimard出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-sartre-nausea"
+        },
+        {
+          "kind": "event",
+          "id": "modern-sartre-being-nothingness"
+        },
+        {
+          "kind": "event",
+          "id": "modern-sartre-existentialism-humanism"
+        },
+        {
+          "kind": "event",
+          "id": "modern-sartre-dialectical-reason"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-sartre"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Arthur Schopenhauer",
+      "url": "https://plato.stanford.edu/entries/schopenhauer/",
+      "note": "第1节 Life 明确1818年12月刊行及题年1819；第4—5节讨论意志与超越冲突的方式。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-schopenhauer-world"
+        },
+        {
+          "kind": "person",
+          "id": "phil-schopenhauer"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Sextus Empiricus",
+      "url": "https://plato.stanford.edu/entries/sextus-empiricus/",
+      "note": "SEP Sextus Empiricus导言及§1—3，人物可能活于公元2或3世纪；不虚构精确出版年份。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-sextus-skepticism"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-sextus"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Śaṅkara",
+      "url": "https://plato.stanford.edu/entries/shankara/",
+      "note": "§1 Life and Works、§2 Metaphysics、§4 Contemplative Philosophical Methods：8世纪活动与多种生卒推算，不采用未经确定的788—820精确生卒。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-shankara-nonduality"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-shankara"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Simone Weil",
+      "url": "https://plato.stanford.edu/entries/simone-weil/",
+      "note": "SEP Simone Weil原始书目：[OL] Oppression et liberté，Paris: Gallimard，1955。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-weil-oppression-liberty"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-weil"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Socrates",
+      "url": "https://plato.stanford.edu/entries/socrates/",
+      "note": "条目导言及第3节 Chronology，前399年的审判与死亡；第2节说明苏格拉底问题及三类主要史料。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-socrates-trial"
+        },
+        {
+          "kind": "person",
+          "id": "phil-socrates"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Song-Ming Confucianism",
+      "url": "https://plato.stanford.edu/entries/song-ming-confucianism/",
+      "note": "§2.1 Neo-Confucians in the Northern Song：二程的理、气和修养论；时间用北宋后期讲学活动的约略范围，不设虚构的共同成书日。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-cheng-brothers-principle"
+        },
+        {
+          "kind": "event",
+          "id": "east-wang-fuzhi-qi"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Baruch Spinoza",
+      "url": "https://plato.stanford.edu/entries/spinoza/",
+      "note": "第1节 Biography 记1677年去世后友人出版未刊作品；第2节详细解释《伦理学》的体系。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-spinoza-ethics"
+        },
+        {
+          "kind": "person",
+          "id": "phil-spinoza"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Stoicism",
+      "url": "https://plato.stanford.edu/entries/stoicism/",
+      "note": "第1.1节 The School and its History：约前300年建学及柱廊名称来源；第4节伦理。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-stoic-school"
+        },
+        {
+          "kind": "person",
+          "id": "phil-zeno-citium"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Kuhn",
+      "url": "https://plato.stanford.edu/entries/thomas-kuhn/",
+      "note": "SEP Thomas Kuhn导言及§2—4，明确1962年The Structure of Scientific Revolutions。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-kuhn-revolutions"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-kuhn"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Thomas More",
+      "url": "https://plato.stanford.edu/entries/thomas-more/",
+      "note": "SEP Thomas More关于Utopia的专节及1516年初版书目，区别1518年附入诗集的后续版本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-more-utopia"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-more"
+        }
+      ]
+    },
+    {
+      "title": "斯坦福哲学百科 · Tsongkhapa",
+      "url": "https://plato.stanford.edu/entries/tsongkhapa/",
+      "note": "见第6节关于1409年建立甘丹寺及弟子参与营建的段落。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-ganden"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Vasubandhu",
+      "url": "https://plato.stanford.edu/entries/vasubandhu/",
+      "note": "§1 Biography and Works、§4 Major Yogācāra Arguments：约4—5世纪，生平及是否存在同名作者有争议，《俱舍论》与唯识论证分别说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-vasubandhu-consciousness"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-vasubandhu"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Alfred North Whitehead",
+      "url": "https://plato.stanford.edu/entries/whitehead/",
+      "note": "SEP Whitehead导言与SEP Russell逻辑主义讨论，明确三卷1910、1912、1913年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-principia-mathematica"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-whitehead"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Ludwig Wittgenstein",
+      "url": "https://plato.stanford.edu/entries/wittgenstein/",
+      "note": "SEP Wittgenstein §2.1及书目，明确1921年Annalen初刊、1922年书版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-wittgenstein-tractatus"
+        },
+        {
+          "kind": "event",
+          "id": "modern-wittgenstein-investigations"
+        },
+        {
+          "kind": "event",
+          "id": "modern-wittgenstein-certainty"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-wittgenstein"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Mary Wollstonecraft",
+      "url": "https://plato.stanford.edu/entries/wollstonecraft/",
+      "note": "导言及第3节 Moral and Political Writings 明确《女权辩护》1792年出版，并讨论理性、德性和教育。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-wollstonecraft-rights"
+        },
+        {
+          "kind": "person",
+          "id": "phil-wollstonecraft"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Xunzi",
+      "url": "https://plato.stanford.edu/entries/xunzi/",
+      "note": "§1 Xunzi and Xunzi、§2 Human Nature、§3 Ritual：前3世纪活动及后世编订；人性、学习和礼的论证。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-xunzi-learning-ritual"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Zhu Xi",
+      "url": "https://plato.stanford.edu/entries/zhu-xi/",
+      "note": "导言及§1 Life and Works、§3 Ethical Philosophy：四书整理、格物与长期修订；以12世纪后期概括编订过程，不声称一次定稿。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-zhuxi-four-books"
+        }
+      ]
+    },
+    {
+      "title": "Stanford Encyclopedia of Philosophy · Zhuangzi",
+      "url": "https://plato.stanford.edu/entries/zhuangzi/",
+      "note": "§1 Zhuangzi’s Life and Times及文本讨论：庄周活跃于前4世纪后半，现存文集包含不同层次；不能把全部篇章归于一人一时。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-zhuangzi-perspectives"
+        }
+      ]
+    },
+    {
+      "title": "Annals of Saudi Medicine · Ibn Al-Haytham: Father of Modern Optics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6074172/",
+      "note": "见关于《光学》写作时间1011—1021及实验和视觉理论的段落。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-optics"
+        }
+      ]
+    },
+    {
+      "title": "Getlink · The Channel Tunnel, 30 years of history",
+      "url": "https://press.getlinkgroup.com/assets/press-release-6may-30th-anniversary-channel-tunnel-pdf-f9f2-0791e.html?dl=1",
+      "note": "运营机构周年材料明确1994年5月6日揭幕；区别仪式与具体服务启动阶段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-channel-tunnel"
+        }
+      ]
+    },
+    {
+      "title": "湖南大学出版社 · 岳麓书院史",
+      "url": "https://press.hnu.edu.cn/info/1133/4271.htm",
+      "note": "内容介绍明确记北宋开宝九年（976年）创设及1903年改学堂。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-yuelu"
+        }
+      ]
+    },
+    {
+      "title": "Arsip Nasional Republik Indonesia · Presidenpedia",
+      "url": "https://pusdipres.anri.go.id/presidenpedia/",
+      "note": "总统档案机构说明1945年8月17日苏加诺、哈达宣告独立及其后任职。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-indonesia-independence"
+        }
+      ]
+    },
+    {
       "title": "教育部 · 子产铸刑书",
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "references": [
         {
           "kind": "event",
           "id": "zheng-law"
+        }
+      ]
+    },
+    {
+      "title": "United Nations · Charter research guide",
+      "url": "https://research.un.org/en/docs/uncharter/intro",
+      "note": "宪章签署、批准与1945年生效的历史说明，结合宪章第110条。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-united-nations"
+        }
+      ]
+    },
+    {
+      "title": "House of Commons Library · The public finances: a historical overview",
+      "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8265/CBP-8265.pdf",
+      "note": "2.4 Abolition of slavery，1834年实施、1838年完全结束学徒制及赔偿对象。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-slavery-abolition-act"
+        }
+      ]
+    },
+    {
+      "title": "The Metropolitan Museum of Art · Roman Art: A Resource for Educators",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Roman_Art_A_Resource_for_Educators.pdf",
+      "note": "历史背景中戴克里先与四帝共治段，明确纪年293年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tetrarchy"
         }
       ]
     },
@@ -1658,6 +4019,28 @@
       ]
     },
     {
+      "title": "University of Toronto Libraries · Nobel Prize for Literature",
+      "url": "https://rpo.library.utoronto.ca/award/nobel-prize-literature",
+      "note": "泰戈尔段列孟加拉文1910年及英文1912年，区别1913年获奖。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-tagore-gitanjali"
+        }
+      ]
+    },
+    {
+      "title": "北京大学《儒藏》中心 · 《明夷待访录》等五种",
+      "url": "https://ruzang.pku.edu.cn/info/1053/1985.htm",
+      "note": "《明夷待访录》书目、底本与校勘说明；政治思想另参哥伦比亚大学出版社William Theodore de Bary的《Waiting for the Dawn》研究。年代1662/1663存在不同叙述，此处保留区间。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-huang-zongxi-dawn"
+        }
+      ]
+    },
+    {
       "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
       "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -1665,6 +4048,39 @@
         {
           "kind": "event",
           "id": "world-angkor-wat"
+        }
+      ]
+    },
+    {
+      "title": "British Library · Brahmasphutasiddhanta, IO SAN 2529d",
+      "url": "https://searcharchives.bl.uk/catalog/032-003720262",
+      "note": "馆藏说明记628年成书；文本为天文计算传统中的著作。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-brahmagupta"
+        }
+      ]
+    },
+    {
+      "title": "British Library · East India Company Charters, IOR/A/1",
+      "url": "https://searcharchives.bl.uk/catalog/036-000178601",
+      "note": "馆藏IOR/A/1的1600年特许状与Administrative Context；本条仅采用一致的年份，不据目录导言确定月日。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-east-india-charter"
+        }
+      ]
+    },
+    {
+      "title": "OHCHR · Convention on the Elimination of All Forms of Discrimination against Women",
+      "url": "https://searchlibrary.ohchr.org/record/7990/files/7990.pdf",
+      "note": "标题明确1979年12月18日大会34/180号决议及公约条款；通过与生效分开。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-cedaw"
         }
       ]
     },
@@ -1703,6 +4119,28 @@
       ]
     },
     {
+      "title": "UNESCO / Smarthistory · Giant Buddha of Leshan",
+      "url": "https://smarthistory.org/giant-buddha-leshan/",
+      "note": "UNESCO合作条目的Artwork details明确713—803年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-leshan-buddha"
+        }
+      ]
+    },
+    {
+      "title": "Harvard University · Sounding China: Score of Peony Pavilion",
+      "url": "https://soundingchina.fas.harvard.edu/chinaobj6.html",
+      "note": "用于了解昆曲、后世曲谱及演出传统；馆藏影印本为1921年，不用该版本年代或演出记载证明原作完稿年月。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-peony-pavilion"
+        }
+      ]
+    },
+    {
       "title": "国家铁路局 · 百年京张 世纪经典",
       "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
       "note": "核对1905—1909年京张建设、詹天佑主持及中国自主勘测设计施工管理的范围。",
@@ -1710,6 +4148,43 @@
         {
           "kind": "person",
           "id": "q1397430"
+        }
+      ]
+    },
+    {
+      "title": "Fordham University · Al-Baladhuri: The Battle of the Yarmuk",
+      "url": "https://sourcebooks.web.fordham.edu/source/yarmuk.asp",
+      "note": "巴拉祖里征服叙事英译；作为后出的历史叙事阅读，不照录其兵力数字。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-yarmuk"
+        }
+      ]
+    },
+    {
+      "title": "Krishnamurti Foundation Trust · About Us",
+      "url": "https://store.kfoundation.org/about-us/",
+      "note": "基金会记生于1895年、卒于1986年。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-krishnamurti"
+        }
+      ]
+    },
+    {
+      "title": "国家图书馆 · 台湾华文电子书库《论道》初版题录",
+      "url": "https://taiwanebook.ncl.edu.tw/zh-tw/book/NCL-9910006682",
+      "note": "国家图书馆初版题录明确1940年；不是该书2015年重印时间。坐标指西南联大昆明研究语境，出版地题录另见上海或长沙记录，不据此推断1940年行程。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-jin-on-dao"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-jin"
         }
       ]
     },
@@ -1735,6 +4210,17 @@
       ]
     },
     {
+      "title": "State Museum of Leo Tolstoy · Fifteen beginnings of War and Peace",
+      "url": "https://tolstoymuseum.ru/news/2025/09/25/80115/",
+      "note": "展览说明明确1863—1869年的构思、手稿与出版过程。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-war-peace-writing"
+        }
+      ]
+    },
+    {
       "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
       "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -1742,6 +4228,72 @@
         {
           "kind": "event",
           "id": "world-timbuktu-learning"
+        }
+      ]
+    },
+    {
+      "title": "United Nations Treaty Series · France and Algeria, No.7395",
+      "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20507/volume-507-I-7395-English.pdf",
+      "note": "埃维昂声明及1962年7月3日承认独立和主权移交的往返信件；不混同停火与独立日。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-algeria-independence"
+        }
+      ]
+    },
+    {
+      "title": "Wittgenstein Archives at Bergen · Working Papers No. 7 (1993)",
+      "url": "https://uhra.herts.ac.uk/id/eprint/12250/1/904279.pdf",
+      "note": "Biggs与Pichler编书目，PDF第53页Part II的TLP1921*列Leipzig 1921，TLP1922列London德英对照版；用于区分初刊出版地与后版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-wittgenstein-tractatus"
+        }
+      ]
+    },
+    {
+      "title": "密歇根大学美术馆 · Ushiwakamaru and Jôrurihime",
+      "url": "https://umma.umich.edu/objects/ushiwakamaru-and-jorurihime-mitate-1948-1-170/",
+      "note": "馆藏说明关联紫式部《源氏物语》及1008年；此处仅作早期流传的约略定位。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-genji"
+        }
+      ]
+    },
+    {
+      "title": "UNFCCC · The Kyoto Protocol",
+      "url": "https://unfccc.int/process-and-meetings/the-kyoto-protocol",
+      "note": "官方说明明确1997年12月11日通过、2005年2月16日生效及附件国家的约束安排。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-kyoto-protocol"
+        }
+      ]
+    },
+    {
+      "title": "University of Washington Press · Symptoms of an Unruly Age",
+      "url": "https://uw.manifoldapp.org/system/resource/c/8/6/c86ddb44-a6ad-42f4-b7c7-b9e4f10754f1/attachment/e15c37e39a88fbda9cd4c2e24ff49311.pdf",
+      "note": "Rivi Handler-Spitz，第63页“ The Rhetoric of Bluff”：记《焚书》约1590年出版，并讨论作者序、读者与思想表达。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-li-zhi-book-to-burn"
+        }
+      ]
+    },
+    {
+      "title": "University of Edinburgh · The Life of Dolly",
+      "url": "https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly",
+      "note": "罗斯林研究所说明1996年7月5日出生、1997年2月22日公开及成年乳腺细胞来源；区别实验发生与研究报道。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-dolly-born"
         }
       ]
     },
@@ -1764,6 +4316,17 @@
         {
           "kind": "event",
           "id": "world-ulugh-beg-observatory"
+        }
+      ]
+    },
+    {
+      "title": "ICOMOS · 莫高窟世界遗产评估",
+      "url": "https://whc.unesco.org/document/153484",
+      "note": "见第1页关于碑记记载366年开窟、敦煌交通地位的说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-mogao"
         }
       ]
     },
@@ -1929,6 +4492,17 @@
       ]
     },
     {
+      "title": "UNESCO · Archaeological Site of Nalanda Mahavihara",
+      "url": "https://whc.unesco.org/en/list/1502/",
+      "note": "Outstanding Universal Value中区分早期遗存与5—13世纪寺院教育机构。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-nalanda"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 宋元中国的世界海洋商贸中心泉州",
       "url": "https://whc.unesco.org/en/list/1561/",
       "references": [
@@ -2031,6 +4605,17 @@
       ]
     },
     {
+      "title": "UNESCO World Heritage Centre · Taj Mahal",
+      "url": "https://whc.unesco.org/en/list/252/",
+      "note": "Outstanding Universal Value—Brief synthesis列1632、1648及1653年的施工阶段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-taj-mahal"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · Historic Sanctuary of Machu Picchu",
       "url": "https://whc.unesco.org/en/list/274",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -2038,6 +4623,17 @@
         {
           "kind": "event",
           "id": "world-machu-picchu"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO World Heritage Centre · Historic Centre of Cordoba",
+      "url": "https://whc.unesco.org/en/list/313/",
+      "note": "Integrity段列八世纪兴建、长期扩建与1236年改作座堂。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-cordoba-mosque"
         }
       ]
     },
@@ -2126,6 +4722,17 @@
       ]
     },
     {
+      "title": "UNESCO World Heritage Centre · Haeinsa Temple Janggyeong Panjeon",
+      "url": "https://whc.unesco.org/en/list/737/",
+      "note": "现存经版雕于1237—1248年，藏经建筑年代另列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-tripitaka-koreana"
+        }
+      ]
+    },
+    {
       "title": "UNESCO · 乔伊鲁科蒂亚",
       "url": "https://whc.unesco.org/en/list/848/",
       "references": [
@@ -2167,6 +4774,17 @@
       ]
     },
     {
+      "title": "UNESCO预备清单 · Wooden Structures of Liao Dynasty",
+      "url": "https://whc.unesco.org/en/tentativelists/5803/",
+      "note": "Description及I. Wooden Pagoda of Yingxian列1056年与结构信息；为预备清单，不写作已列世界遗产。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-yingxian"
+        }
+      ]
+    },
+    {
       "title": "湖北省文旅厅 · 李时珍纪念馆所述本草纲目编撰与出版",
       "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
       "references": [
@@ -2195,6 +4813,17 @@
       ]
     },
     {
+      "title": "International Atomic Energy Agency · Chernobyl: Looking Back to Go Forward",
+      "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1312_web.pdf",
+      "note": "会议文集事故经过与放射性释放章节；采用1986年4月26日，不照录单一死亡估计或单因结论。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-chernobyl"
+        }
+      ]
+    },
+    {
       "title": "阿尔罕布拉宫管理委员会 · History",
       "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -2206,6 +4835,17 @@
       ]
     },
     {
+      "title": "Stadsarchief Amsterdam · Omwisselen",
+      "url": "https://www.amsterdam.nl/stadsarchief/stukken/handel/omwisselen/",
+      "note": "Wisselbank段记1609年设立、货币鉴定与转账功能。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-amsterdam-wisselbank"
+        }
+      ]
+    },
+    {
       "title": "美国国家档案馆 · The Treaty of Kanagawa",
       "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -2213,6 +4853,28 @@
         {
           "kind": "event",
           "id": "world-kanagawa-treaty"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Archives · Brown v. Board of Education",
+      "url": "https://www.archives.gov/milestone-documents/brown-v-board-of-education",
+      "note": "RG267，1954年5月17日最高法院意见及公立学校种族隔离违宪说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-brown-education"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Archives · Civil Rights Act",
+      "url": "https://www.archives.gov/milestone-documents/civil-rights-act",
+      "note": "1964年7月2日法律原件及公共设施、就业、学校与联邦项目条款说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-civil-rights-act"
         }
       ]
     },
@@ -2261,6 +4923,43 @@
       ]
     },
     {
+      "title": "美国土木工程师学会 · Zhaozhou Bridge",
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/zhaozhou-bridge",
+      "note": "Completion Date列605，正文说明敞肩拱、李春及历代栏杆更换。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-zhaozhou"
+        }
+      ]
+    },
+    {
+      "title": "Auschwitz-Birkenau Memorial · Day of liberation",
+      "url": "https://www.auschwitz.org/en/history/liberation/day-of-liberation/",
+      "note": "核对1945年1月27日苏军进入、营地疏散与幸存者处境。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-auschwitz-liberation"
+        }
+      ]
+    },
+    {
+      "title": "英格兰银行 · History",
+      "url": "https://www.bankofengland.co.uk/about/history",
+      "note": "1694年7月27日创设与8月1日营业条目，并注明最初私人银行性质。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-bank-england"
+        },
+        {
+          "kind": "event",
+          "id": "depth-british-gold-resumption"
+        }
+      ]
+    },
+    {
       "title": "西安半坡博物馆 · 遗址与功能分区",
       "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
       "references": [
@@ -2271,12 +4970,89 @@
       ]
     },
     {
+      "title": "Banque de France · L’histoire de la Banque de France",
+      "url": "https://www.banque-france.fr/fr/banque-de-france/institution-ancree-histoire/histoire-banque-de-france",
+      "note": "1800—1806、1806—1870小节，区分成立与发行特权。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-bank-france"
+        }
+      ]
+    },
+    {
+      "title": "Berlin · Gedenken an die Opfer der Berliner Mauer",
+      "url": "https://www.berlin.de/ba-mitte/ueber-den-bezirk/erinnerungskultur/gedenktage/artikel.110198.php",
+      "note": "核对1961年8月13日封锁及后续多阶段扩建，不把整个设施视为一天完成。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-berlin-wall-built"
+        }
+      ]
+    },
+    {
+      "title": "西班牙国家图书馆 · El ingenioso hidalgo don Quixote de la Mancha",
+      "url": "https://www.bne.es/es/colecciones/cervantes/ingenioso-hidalgo-don-quixote-mancha",
+      "note": "馆藏初版说明区分1604年底印成与1605年1月上市。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-quixote"
+        }
+      ]
+    },
+    {
+      "title": "日本银行 · History",
+      "url": "https://www.boj.or.jp/en/about/outline/history/",
+      "note": "1882年6月法律、10月10日开业；另参发行史区分1885年首批银行券。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-bank-japan"
+        }
+      ]
+    },
+    {
+      "title": "Bundesarchiv · Preußische und deutsche Streitkräfte 1867 bis 1918",
+      "url": "https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/preussische-und-deutsche-streitkraefte-1867-bis-1918/",
+      "note": "Kaiserliche Schutztruppen—Einsätze中的Maji-Maji-Aufstand 1905–07，用于军事时段核对。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-maji-maji"
+        }
+      ]
+    },
+    {
+      "title": "Cambridge University Press · The Textual History of Spinoza’s Ethics",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-companion-to-spinozas-ethics/textual-history-of-spinozas-ethics/DB85086DF14DD34231AC1D56270DBD3F",
+      "note": "Piet Steenbakkers，The Cambridge Companion to Spinoza’s Ethics，第1章，第26—41页；摘要明确1677年阿姆斯特丹《遗著集》刊行《伦理学》，并说明生前印前准备。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-spinoza-ethics"
+        }
+      ]
+    },
+    {
       "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
       "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
       "references": [
         {
           "kind": "world-polity",
           "id": "world-chagatai"
+        }
+      ]
+    },
+    {
+      "title": "Cambridge University Press · World Cities in History · Baghdad",
+      "url": "https://www.cambridge.org/core/books/abs/world-cities-in-history/baghdad/436F7DC281A07230C18E78D741E172E7",
+      "note": "第8章摘要明确曼苏尔762年建城，并讨论贸易与学术网络。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-baghdad-founded"
         }
       ]
     },
@@ -2308,6 +5084,17 @@
         {
           "kind": "event",
           "id": "world-canadian-confederation"
+        }
+      ]
+    },
+    {
+      "title": "Musée Carnavalet · Le parcours: La Commune de Paris",
+      "url": "https://www.carnavalet.paris.fr/le-nouveau-parcours",
+      "note": "巴黎围城与公社展厅，1871年3月18日至5月28日及展品说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-paris-commune"
         }
       ]
     },
@@ -2402,6 +5189,17 @@
       ]
     },
     {
+      "title": "中国国家博物馆 · 《日知录》",
+      "url": "https://www.chnmuseum.cn/zp/zpml/gjwxbt/202203/t20220301_254074.shtml",
+      "note": "馆藏说明：经史、吏治、财赋、典章制度等阅读范围与考证方法。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-gu-yanwu-rizhilu"
+        }
+      ]
+    },
+    {
       "title": "中国国家博物馆 · 江南制造局造船清单与创办背景",
       "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
       "references": [
@@ -2460,12 +5258,104 @@
       ]
     },
     {
+      "title": "James Clerk Maxwell Foundation · Facts about Maxwell",
+      "url": "https://www.clerkmaxwellfoundation.org/html/key_facts_about_maxwell.html",
+      "note": "年表1861/2、1864、1865条，区分电磁理论前期研究、宣读与正式发表。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-maxwell"
+        }
+      ]
+    },
+    {
+      "title": "Computer History Museum · ENIAC dedication",
+      "url": "https://www.computerhistory.org/tdih/february/16/",
+      "note": "馆方历史条目记1946年公开落成展示；不据此作有争议的“唯一第一台”判断。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-eniac"
+        }
+      ]
+    },
+    {
+      "title": "商务印书馆 · 《论道》内容简介",
+      "url": "https://www.cp.com.cn/book/3bf46e31-0.html",
+      "note": "介绍道、式、能范畴及逻辑推演的方法；该页面的2015年为重印本日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-jin-on-dao"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-jin"
+        }
+      ]
+    },
+    {
+      "title": "商务印书馆 · 《日知录》版本研究",
+      "url": "https://www.cp.com.cn/book/6df49904-d.html",
+      "note": "试读部分“自康熙九年（1670）初刻《日知录》八卷本，至康熙二十一年（1682）顾炎武卒”：初刻与持续修改应区分。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-gu-yanwu-rizhilu"
+        }
+      ]
+    },
+    {
+      "title": "中国政协网 · 毛泽东（1893—1976）",
+      "url": "https://www.cppcc.gov.cn/2011/06/27/ARTI1309159125046101.shtml",
+      "note": "官方人物年表列1893—1976年、新民学会、《湘江评论》、建党及中华人民共和国时期的主要职务。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-mao"
+        }
+      ]
+    },
+    {
       "title": "中国社会科学网 · 石峁遗址的考古发现与研究综述",
       "url": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
       "references": [
         {
           "kind": "event",
           "id": "shimao-city"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学网 · 王阳明《传习录》及其思想",
+      "url": "https://www.cssn.cn/zx/zx_rdkx/202505/t20250513_5873568.shtml",
+      "note": "高海波，2025-05-13，“有关《传习录》的刊刻”及初刻段落：1518年薛侃在赣州刊刻早期语录；1524、1555—1556与1572年的增编不能合并成首刻年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-wangyangming-chuanxilu"
+        }
+      ]
+    },
+    {
+      "title": "香港中文大学《译丛》 · Kumarajiva",
+      "url": "https://www.cuhk.edu.hk/renditions/authors/kuma.html",
+      "note": "人物介绍记401年入长安及译经；采用常用年序，并保留岁末换历限制。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-kumarajiva"
+        }
+      ]
+    },
+    {
+      "title": "香港中文大学校史馆 · 唐君毅先生",
+      "url": "https://www.cuhk.edu.hk/ugallery/sc/story/tang_chun_i.html",
+      "note": "生平与书院建设说明，明确1909年出生、1949年来港、1963年任哲学系主任和1978年去世。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-tang"
         }
       ]
     },
@@ -2488,6 +5378,17 @@
         {
           "kind": "event",
           "id": "world-darwin"
+        }
+      ]
+    },
+    {
+      "title": "University of Cambridge · Darwin Correspondence Project · About Darwin",
+      "url": "https://www.darwinproject.ac.uk/people/about-darwin",
+      "note": "生卒、1831—1836年航行、标本与通信网络、华莱士1858年来信及1859年出版。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-darwin"
         }
       ]
     },
@@ -2946,6 +5847,54 @@
       ]
     },
     {
+      "title": "University of Edinburgh · The Making of Christian Orthodoxy 325–451",
+      "url": "https://www.drps.ed.ac.uk/26-27/dpt/cxdivi10021.htm",
+      "note": "课程说明将迦克墩451年置于前四次会议与基督论形成中。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-chalcedon"
+        }
+      ]
+    },
+    {
+      "title": "中共中央党史和文献研究院 · 《辩证法唯物论（讲授提纲）》早期版本研究",
+      "url": "https://www.dswxyjy.org.cn/BIG5/n1/2019/0621/c423733-31173718.html",
+      "note": "奚景鹏《党的文献》2007年第4期文章：开头列1937年5—8月讲授，早期版本清单列1937年9月油印本；末段明确1950年《实践论》修改、1950年12月29日报刊发表与1952年《矛盾论》修改发表。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-mao-practice-contradiction-lectures"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-mao"
+        }
+      ]
+    },
+    {
+      "title": "European Central Bank · Our money",
+      "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+      "note": "ECB历史说明明确1999年1月1日启动、前三年记账用途与2002年现金发行；仅采用历史部分。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-euro-launch"
+        }
+      ]
+    },
+    {
+      "title": "Eisenhower Presidential Library · Korean War",
+      "url": "https://www.eisenhowerlibrary.gov/research/online-documents/korean-war",
+      "note": "导言明确1950年6月25日战争爆发及档案；停战文件见1953年7月27日记录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-korean-war"
+        }
+      ]
+    },
+    {
       "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
       "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -2957,6 +5906,50 @@
       ]
     },
     {
+      "title": "Euronext · 415th anniversary",
+      "url": "https://www.euronext.com/en/about/media/bell-ceremony-archive/415th-anniversary",
+      "note": "交易所机构史，1602年VOC发行股份与阿姆斯特丹证券交易传统；不把公司成立与后来的交易所建筑启用混同。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-voc-founded"
+        }
+      ]
+    },
+    {
+      "title": "European Parliament · Treaty of Rome",
+      "url": "https://www.europarl.europa.eu/about-parliament/en/in-the-past/the-parliament-and-the-treaties/treaty-of-rome",
+      "note": "核对1957年3月25日两项条约签署、六国与1958年生效。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-treaties-rome"
+        }
+      ]
+    },
+    {
+      "title": "Federal Reserve History · The Great Depression",
+      "url": "https://www.federalreservehistory.org/essays/great-depression",
+      "note": "核对1929年经济收缩、银行危机及1930年代持续衰退；保留各地复苏差异。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-great-depression"
+        }
+      ]
+    },
+    {
+      "title": "Folger Shakespeare Library · Shakespeare’s life",
+      "url": "https://www.folger.edu/explore/shakespeares-life/",
+      "note": "1564年洗礼与生日不确定性、1616年逝世、伦敦戏剧职业、剧团关系及1623年第一对开本。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-shakespeare"
+        }
+      ]
+    },
+    {
       "title": "福州市人民政府 · 严复",
       "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/mdrj/202202/t20220216_4310144.htm",
       "note": "用于船政与英国海军教育、归国教学和天演论译介；页面生年与基础身份纪年不同，部分童年年龄叙述也不自洽，不用于校订生卒日期或沿用宣传性评价。",
@@ -2964,6 +5957,50 @@
         {
           "kind": "person",
           "id": "q559957"
+        }
+      ]
+    },
+    {
+      "title": "CUNY Graduate Center · About the Saul Kripke Center",
+      "url": "https://www.gc.cuny.edu/saul-kripke-center/about-saul-kripke-center",
+      "note": "人物生卒1940—2022及逻辑、指称研究背景。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-kripke"
+        }
+      ]
+    },
+    {
+      "title": "NHGRI · Human Genome Project Fact Sheet",
+      "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
+      "note": "核对2000年6月草图公告、残留缺口与2003年项目结果，明确草图并非完整无缺口序列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-human-genome-draft"
+        }
+      ]
+    },
+    {
+      "title": "NHGRI · History and Timeline of Events",
+      "url": "https://www.genome.gov/about-nhgri/Brief-History-Timeline",
+      "note": "核对1953年DNA双螺旋结构及其与后续基因组研究的关系；不把后来的完整基因组等同于本次模型。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-dna-double-helix"
+        }
+      ]
+    },
+    {
+      "title": "NHGRI · Human Genome Project Timeline",
+      "url": "https://www.genome.gov/human-genome-project/timeline",
+      "note": "1990年部分明确10月1日正式启动与五年计划；伦理法律社会影响项目另列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-human-genome-project"
         }
       ]
     },
@@ -3012,6 +6049,17 @@
       ]
     },
     {
+      "title": "South African Government · Milestones of 20 Years of Freedom",
+      "url": "https://www.gov.za/issues/20years/milestones-20-years-freedom",
+      "note": "1994年条列4月27日选举与5月10日就职；1996年宪法另列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-south-africa-election"
+        }
+      ]
+    },
+    {
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "note": "自述中的机器采购与运送记载，和机构创办、后续生产分别理解。",
@@ -3038,6 +6086,17 @@
         {
           "kind": "dynasty",
           "id": "xia-early"
+        }
+      ]
+    },
+    {
+      "title": "Harvard University · History timeline",
+      "url": "https://www.harvard.edu/about/history/timeline/",
+      "note": "1636年议会拨款、1637年选址和1639年命名条目。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-harvard-founded"
         }
       ]
     },
@@ -3082,6 +6141,39 @@
       ]
     },
     {
+      "title": "澳门文化局 · 回归贺礼陈列馆",
+      "url": "https://www.icm.gov.mo/handovermuseum/en",
+      "note": "馆方说明明确1999年12月20日交接场地与2003—2004年陈列馆建设，区分历史事件和纪念设施。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-macao-handover"
+        }
+      ]
+    },
+    {
+      "title": "International Monetary Fund · The IMF in History",
+      "url": "https://www.imf.org/external/about/timeline/index.htm",
+      "note": "1944年7月Bretton Woods Conference条，核对44国代表及汇率与机构设计；1947年开始运营另列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-bretton-woods"
+        }
+      ]
+    },
+    {
+      "title": "香港政府新闻公报 · 1997年7月1日",
+      "url": "https://www.info.gov.hk/gia/general/dib/0701.htm",
+      "note": "当日档案第1—3项记主权恢复仪式、交接及特别行政区成立宣誓，不用后来的纪念活动代替原始日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-hong-kong-handover"
+        }
+      ]
+    },
+    {
       "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
       "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -3093,6 +6185,39 @@
       ]
     },
     {
+      "title": "Encyclopaedia Iranica · Salamis",
+      "url": "https://www.iranicaonline.org/articles/salamis/",
+      "note": "Christopher J. Tuplin，萨拉米斯条目；核对前480年海战、古代叙述及后续战争。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-salamis"
+        }
+      ]
+    },
+    {
+      "title": "Imperial War Museums · D-Day collection B 5165",
+      "url": "https://www.iwm.org.uk/collections/item/object/205193059",
+      "note": "馆藏日期1944年6月6日及Normandy Landings事件关联；不是后期纪念照片。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-normandy-landings"
+        }
+      ]
+    },
+    {
+      "title": "Imperial War Museums · Second World War galleries",
+      "url": "https://www.iwm.org.uk/sites/default/files/files/2023-10/second_world_war_galleries_large_print.pdf",
+      "note": "展厅文字“The Battle of Stalingrad”，1942年11月反攻与1943年2月投降段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-stalingrad"
+        }
+      ]
+    },
+    {
       "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
       "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3100,6 +6225,47 @@
         {
           "kind": "event",
           "id": "world-khalsa"
+        }
+      ]
+    },
+    {
+      "title": "金泽市铃木大拙馆 · 大拙年谱",
+      "url": "https://www.kanazawa-museum.jp/daisetz/about.html",
+      "note": "金泽市铃木大拙馆年谱1927、1933、1934条；坐标为京都思想网络，不宣称英文书在京都首印。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-suzuki-zen-essays"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-suzuki"
+        }
+      ]
+    },
+    {
+      "title": "北京大学图书馆 · 新文化运动与北京大学百年展",
+      "url": "https://www.lib.pku.edu.cn/portal/cn/news/0000001085",
+      "note": "北大图书馆2015年百年展说明：1915年9月15日《青年杂志》创刊，1916年9月第二卷起改名《新青年》。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-chenduxiu-youth-journal"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-chenduxiu"
+        }
+      ]
+    },
+    {
+      "title": "Library of Congress · Timeline of the Daguerreotype Era",
+      "url": "https://www.loc.gov/collections/daguerreotypes/articles-and-essays/timeline-of-the-daguerreotype-era/",
+      "note": "1839年公开段及同期塔尔博特路线；后续商业推广分年记录。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-daguerre-photography"
         }
       ]
     },
@@ -3147,6 +6313,17 @@
       ]
     },
     {
+      "title": "Library of Congress · National Recording Registry",
+      "url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/complete-national-recording-registry-listing/",
+      "note": "Kind of Blue条记唱片年份1959、类型Jazz与2002年入选保存名录；不把入选年误作创作年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-kind-of-blue"
+        }
+      ]
+    },
+    {
       "title": "美国国会图书馆 · 宽永行幸记",
       "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
       "references": [
@@ -3179,6 +6356,28 @@
       ]
     },
     {
+      "title": "The Metropolitan Museum of Art · Geometric Art in Ancient Greece",
+      "url": "https://www.metmuseum.org/essays/geometric-art-in-ancient-greece",
+      "note": "前8世纪史诗、贵族社会与艺术的段落；年代按世纪表示。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-homer-epics"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · Hagia Sophia, 532–37",
+      "url": "https://www.metmuseum.org/essays/hagia-sophia-532-37",
+      "note": "记537年12月27日启用，以及558年穹顶倒塌、562年重建。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-hagia-sophia"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · Heian Period (794–1185)",
       "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3194,12 +6393,34 @@
       ]
     },
     {
+      "title": "大都会艺术博物馆 · The Great Wave: Anatomy of an Icon",
+      "url": "https://www.metmuseum.org/essays/hokusai-great-wave",
+      "note": "开篇记1831年系列广告；图录断代约1830—1832年，并介绍普鲁士蓝和印刷。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-hokusai"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
       "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
       "references": [
         {
           "kind": "world-polity",
           "id": "world-timurid"
+        }
+      ]
+    },
+    {
+      "title": "The Metropolitan Museum of Art · The Later Ottomans and the Impact of Europe",
+      "url": "https://www.metmuseum.org/essays/the-later-ottomans-and-the-impact-of-europe",
+      "note": "阿卜杜勒迈吉德、Gülhane敕令与后续改革段；核对1839年改革起点。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-tanzimat"
         }
       ]
     },
@@ -3358,6 +6579,76 @@
       ]
     },
     {
+      "title": "Museum of Modern Art · The Starry Night",
+      "url": "https://www.moma.org/collection/works/79802",
+      "note": "馆藏472.1941，圣雷米1889年；About the work区分观察与想象。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-van-gogh-starry-night"
+        },
+        {
+          "kind": "person",
+          "id": "category-person-van-gogh"
+        }
+      ]
+    },
+    {
+      "title": "Musée d’Orsay · Marie Curie (203740)",
+      "url": "https://www.musee-orsay.fr/fr/ressources/repertoire-artistes-personnalites/marie-curie-203740",
+      "note": "人物规范记录核对原名、生卒年、华沙出生及波兰出生后归化法国的身份。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-marie-curie"
+        }
+      ]
+    },
+    {
+      "title": "Vatican Museums · Sistine Chapel: Ceiling",
+      "url": "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html",
+      "note": "1508年合同、天顶方案与1512年完成说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-sistine-ceiling"
+        }
+      ]
+    },
+    {
+      "title": "Museo Reina Sofía · Guernica",
+      "url": "https://www.museoreinasofia.es/colecciones/obra/guernica/",
+      "note": "馆藏DE00050，标1937年5月1日至6月4日于巴黎绘制，说明展览与保存经历。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-guernica"
+        }
+      ]
+    },
+    {
+      "title": "加泰罗尼亚国家艺术博物馆 · Ducat",
+      "url": "https://www.museunacional.cat/en/ducat",
+      "note": "钱币术语条目明确记1284年在威尼斯创设黄金货币单位。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-ducat"
+        }
+      ]
+    },
+    {
+      "title": "Texas Tech University · Jami al-Tawarikh: The Battle of Ayn Jalut",
+      "url": "https://www.myweb.ttu.edu/jhowe/syllabi/Ayn%20Jalut.html",
+      "note": "大学课程收录拉施特《史集》节译；核对1260年、主力撤离背景与战役叙事，日历换算不据此精确到日。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-ayn-jalut"
+        }
+      ]
+    },
+    {
       "title": "英国国家陆军博物馆 · Battle of Waterloo",
       "url": "https://www.nam.ac.uk/explore/battle-waterloo",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -3435,6 +6726,39 @@
       ]
     },
     {
+      "title": "NASA · Chronology of Sputnik/Vanguard/Explorer Events",
+      "url": "https://www.nasa.gov/history/sputnik/chronology.html",
+      "note": "1957年10月4日Sputnik 1条，区别随后Sputnik 2与美国Explorer任务。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-sputnik"
+        }
+      ]
+    },
+    {
+      "title": "NASA · Einstein and General Relativity",
+      "url": "https://www.nasa.gov/image-article/einstein-general-relativity/",
+      "note": "核对1915年11月理论突破与1916年发表的区别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-general-relativity"
+        }
+      ]
+    },
+    {
+      "title": "NASA · Apollo 11 Mission Overview",
+      "url": "https://www.nasa.gov/missions/apollo/apollo-11/apollo-11-mission-overview/",
+      "note": "核对1969年7月16—24日任务、静海着陆及返回日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-apollo11"
+        }
+      ]
+    },
+    {
       "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
       "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3442,6 +6766,17 @@
         {
           "kind": "event",
           "id": "world-batavia"
+        }
+      ]
+    },
+    {
+      "title": "The National Archives · Partition of British India",
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/partition-of-british-india/",
+      "note": "Background information及Regions affected by partition，1947年8月独立与旁遮普、孟加拉分治。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-india-partition"
         }
       ]
     },
@@ -3472,6 +6807,28 @@
       ]
     },
     {
+      "title": "National Gallery, London · Michelangelo",
+      "url": "https://www.nationalgallery.org.uk/artists/Michelangelo",
+      "note": "1475—1564年、绘画和雕塑训练、《圣殇》、1508—1512年穹顶与建筑、诗歌工作。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-michelangelo"
+        }
+      ]
+    },
+    {
+      "title": "The National WWII Museum · August–September 1945",
+      "url": "https://www.nationalww2museum.org/sites/default/files/2023-04/80001674_WWII_Brick%20Book%20Guts.pdf",
+      "note": "1945年8月部分列广岛6日、长崎9日及后续伤亡；本条不照录不同口径的死亡估计。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-atomic-bombings"
+        }
+      ]
+    },
+    {
       "title": "宁波博物院 · 河姆渡文化考古成果特展",
       "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
       "references": [
@@ -3488,6 +6845,17 @@
         {
           "kind": "event",
           "id": "hemudu-rice"
+        }
+      ]
+    },
+    {
+      "title": "国家图书馆 · 白先勇说红楼梦第二讲",
+      "url": "https://www.ncl.edu.tw/information_236_15182.html",
+      "note": "版本发展段明确乾隆五十六年1791年程甲本及次年程乙本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-honglou-chengjia"
         }
       ]
     },
@@ -3557,6 +6925,50 @@
       ]
     },
     {
+      "title": "Catholic Encyclopedia · Council of Chalcedon",
+      "url": "https://www.newadvent.org/cathen/03555a.htm",
+      "note": "会议日期与讨论事项；该文有天主教立场，本文不用其论敌标签作中性结论。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-chalcedon"
+        }
+      ]
+    },
+    {
+      "title": "National Gallery of Art · Vincent van Gogh",
+      "url": "https://www.nga.gov/artists/1349-vincent-van-gogh",
+      "note": "1853—1890年、早期职业、1886年巴黎、1888年阿尔勒与色彩、笔触的变化。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "category-person-van-gogh"
+        }
+      ]
+    },
+    {
+      "title": "National Gallery of Art · 1874: The Birth of Impressionism",
+      "url": "https://www.nga.gov/stories/articles/1874-birth-impressionism",
+      "note": "1874年展览、官方沙龙及巴黎社会背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-impressionist-exhibition"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Library of Medicine · Vesalius: Author and Title",
+      "url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_bio.html",
+      "note": "1543年巴塞尔出版及解剖学背景；另见馆藏书目信息。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-vesalius-fabrica"
+        }
+      ]
+    },
+    {
       "title": "澳大利亚国家博物馆 · Defining moments timeline",
       "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3568,6 +6980,61 @@
         {
           "kind": "event",
           "id": "world-federation"
+        }
+      ]
+    },
+    {
+      "title": "诺贝尔奖机构 · Marie and Pierre Curie and the discovery of polonium and radium",
+      "url": "https://www.nobelprize.org/prizes/lists/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/",
+      "note": "见“Marie and Pierre — a fruitful collaboration”和“Arduous work”，区分1898年报告与后续分离。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-curie"
+        }
+      ]
+    },
+    {
+      "title": "Nobel Foundation · Literature Prize 1913",
+      "url": "https://www.nobelprize.org/prizes/literature/1913/summary/",
+      "note": "1913年文学奖官方记录与作品英文传播说明；本条不转载颁奖词。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-tagore-nobel"
+        }
+      ]
+    },
+    {
+      "title": "Nobel Prize · Rabindranath Tagore: Facts",
+      "url": "https://www.nobelprize.org/prizes/literature/1913/tagore/facts/",
+      "note": "生卒1861—1941及作家、教育活动基本背景。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-tagore"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Park Service · Pearl Harbor",
+      "url": "https://www.nps.gov/articles/000/b-reactor-history-room-pearl-harbor.htm",
+      "note": "核对夏威夷当地12月7日袭击及美国12月8日宣战。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-pearl-harbor"
+        }
+      ]
+    },
+    {
+      "title": "U.S. National Park Service · Nineteenth Century Activism",
+      "url": "https://www.nps.gov/articles/featured_stories_wori.htm",
+      "note": "1848年7月19—20日大会、组织者及Declaration of Sentiments段。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-seneca-falls"
         }
       ]
     },
@@ -3605,6 +7072,39 @@
       ]
     },
     {
+      "title": "OHCHR · International Bill of Human Rights",
+      "url": "https://www.ohchr.org/sites/default/files/Documents/Publications/Compilation1.1en.pdf",
+      "note": "文件开头列1948年12月10日大会217 A(III)号决议及宣言全文。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-human-rights-declaration"
+        }
+      ]
+    },
+    {
+      "title": "University of Oxford · Our history",
+      "url": "https://www.ox.ac.uk/about/the-university/history",
+      "note": "1096 Evidence of teaching：明言无明确创立日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-oxford-teaching"
+        }
+      ]
+    },
+    {
+      "title": "Ville de Paris · Notre-Dame de Paris rouvre ses portes",
+      "url": "https://www.paris.fr/pages/cinq-ans-apres-notre-dame-de-paris-s-apprete-a-rouvrir-ses-portes-29209",
+      "note": "历史背景明确1163年至十四世纪中叶的营建过程；本条只呈现起点。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-notre-dame-begins"
+        }
+      ]
+    },
+    {
       "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
       "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
       "references": [
@@ -3630,12 +7130,93 @@
       ]
     },
     {
+      "title": "UK Parliament · The Chartist movement",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
+      "note": "1838年宪章六项要求、1839年请愿及后续运动。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-peoples-charter"
+        }
+      ]
+    },
+    {
+      "title": "UK Parliament · The 1833 Factory Act",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
+      "note": "年龄、工时、教育规定及Factory Inspectors执行局限。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-factory-act"
+        }
+      ]
+    },
+    {
+      "title": "UK Parliament · Parliament abolishes the slave trade",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
+      "note": "1807年法案提出及通过过程；禁止贸易与废除奴隶制度有别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-slave-trade-abolition"
+        }
+      ]
+    },
+    {
+      "title": "巴斯德研究所 · Notre histoire",
+      "url": "https://www.pasteur.fr/fr/nous-connaitre/notre-adn/histoire",
+      "note": "见“Un matin du 6 juillet 1885”及研究所创设背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-pasteur"
+        }
+      ]
+    },
+    {
       "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
       "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
       "references": [
         {
           "kind": "world-polity",
           "id": "world-kongo"
+        }
+      ]
+    },
+    {
+      "title": "清华大学哲学系 · 王路《论加字哲学》",
+      "url": "https://www.phil.tsinghua.edu.cn/info/1037/1306.htm",
+      "note": "§1讨论金岳霖1936年关于中国哲学史写作的区分，并交代其哲学与逻辑研究。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-jin"
+        }
+      ]
+    },
+    {
+      "title": "University of Zurich · Conrad Röntgen",
+      "url": "https://www.physik.uzh.ch/en/department/Nobel_Prizes/Conrad-R%C3%B6ntgen.html",
+      "note": "1895年11月实验及随后发表的《一种新的射线》。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-rontgen-xray"
+        }
+      ]
+    },
+    {
+      "title": "Princeton University · Rethinking the Twentieth Century Denigration",
+      "url": "https://www.princeton.edu/~elman/documents/Rethinking_the_Twentieth_Century_Denigration.pdf",
+      "note": "梁漱溟1920—1921年讲演及1921年末出书段；与某些条目采用1922年再版纪年区别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-liang-east-west"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-liang"
         }
       ]
     },
@@ -3650,6 +7231,17 @@
       ]
     },
     {
+      "title": "Royal Institution · Michael Faraday’s generator",
+      "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
+      "note": "1831年8月发现与10月装置记录，区别基础实验和后续工程应用。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-faraday-induction"
+        }
+      ]
+    },
+    {
       "title": "荷兰国立博物馆 · The Republic",
       "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -3657,6 +7249,135 @@
         {
           "kind": "event",
           "id": "world-dutch-abjuration"
+        }
+      ]
+    },
+    {
+      "title": "Rijksmuseum · 10 things about Rembrandt’s Night Watch",
+      "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",
+      "note": "作品纪年1642年、名称及保存史说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-rembrandt-nightwatch"
+        }
+      ]
+    },
+    {
+      "title": "Royal Shakespeare Company · Hamlet: Dates and sources",
+      "url": "https://www.rsc.org.uk/hamlet/about-the-play/dates-and-sources",
+      "note": "Dating the play小节，1601年推算、1602年登记及旧剧来源。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-hamlet"
+        },
+        {
+          "kind": "person",
+          "id": "category-person-shakespeare"
+        }
+      ]
+    },
+    {
+      "title": "Royal Society of Chemistry · Finding the periodic table",
+      "url": "https://www.rsc.org/news/2019/january/finding-the-periodic-table",
+      "note": "1869年提出、同事代为报告及留空预测的说明。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-mendeleev-periodic"
+        }
+      ]
+    },
+    {
+      "title": "中国国家档案局 · Huangdi Neijing世界记忆申报材料",
+      "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
+      "note": "见文本形成与历代整理传播的说明；申报资料以公元前2世纪定位早期成书。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-neijing"
+        }
+      ]
+    },
+    {
+      "title": "University of St Andrews · Dōgen (1200–1253)",
+      "url": "https://www.saet.ac.uk/Buddhism/Dogen",
+      "note": "生平与著作部分：1231年《辨道话》及1230年代以后的著述、修证与时间思想；《正法眼藏》是长期形成且有版本差异的文集。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "east-dogen-shobogenzo"
+        },
+        {
+          "kind": "person",
+          "id": "philosophy-dogen"
+        }
+      ]
+    },
+    {
+      "title": "圣安德鲁斯大学 · Council of Trent",
+      "url": "https://www.saet.ac.uk/Christianity/CouncilofTrent",
+      "note": "见会议三阶段与教义、纪律改革各节。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-trent"
+        }
+      ]
+    },
+    {
+      "title": "圣安德鲁斯大学 · The Theology of the Council of Nicaea",
+      "url": "https://www.saet.ac.uk/Christianity/TheTheologyoftheCouncilofNicaea",
+      "note": "见关于325年会议、阿里乌争论及信经形成的段落。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-nicaea"
+        }
+      ]
+    },
+    {
+      "title": "Science History Institute · Alexander Fleming",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
+      "note": "核对1928年发现、后续牛津团队研发及1945年获奖，区别发现与药物应用。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-penicillin"
+        }
+      ]
+    },
+    {
+      "title": "Science History Institute · Robert Boyle",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/robert-boyle/",
+      "note": "Sceptical Chymist (1661)及元素概念与后世差异。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-boyle-chymist"
+        }
+      ]
+    },
+    {
+      "title": "Shakespeare’s Globe · Globe Theatre",
+      "url": "https://www.shakespearesglobe.com/discover/about-us/globe-theatre/",
+      "note": "场馆历史与问答记1599年原剧场及可能的首批剧目。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-globe"
+        }
+      ]
+    },
+    {
+      "title": "Sikh Missionary Society · Guru Granth Sahib",
+      "url": "https://www.sikhmissionarysociety.org/sms/smsarticles/advisorypanel/gurmukhsinghsewauk/gurugranthsahib/",
+      "note": "开篇说明第五代古鲁于1604年整理Aad Granth，并区分后续版本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-adi-granth"
         }
       ]
     },
@@ -3693,6 +7414,105 @@
       ]
     },
     {
+      "title": "Sydney Opera House · Our story",
+      "url": "https://www.sydneyoperahouse.com/our-story",
+      "note": "馆方历史明确1973年开放，并说明乌松、后续建筑团队与工程挑战。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-sydney-opera-house"
+        }
+      ]
+    },
+    {
+      "title": "埃菲尔铁塔官方 · 1889–2019: 130 years of amazement",
+      "url": "https://www.toureiffel.paris/en/news/130-years/1889-2019-130-years-amazement",
+      "note": "“March 31, 1889”段区分主体完成、内部施工与电梯尚未安装。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-eiffel"
+        }
+      ]
+    },
+    {
+      "title": "The University of Tokyo · Chronology",
+      "url": "https://www.u-tokyo.ac.jp/en/about/chronology.html",
+      "note": "1877年成立及法理文医四部门、1886年改称条目。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-tokyo-university"
+        }
+      ]
+    },
+    {
+      "title": "University of California Press · Religion and Nothingness",
+      "url": "https://www.ucpress.edu/books/religion-and-nothingness/paper",
+      "note": "英译出版及作品问题说明，不把英译年份当作日文初版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-nishitani-religion"
+        }
+      ]
+    },
+    {
+      "title": "United Nations · From Independence to Long-term Stability",
+      "url": "https://www.un.org/en/chronicle/article/independence-long-term-stability-united-nations-efforts-africa",
+      "note": "核对1960年独立浪潮、大会去殖民宣言和同年刚果维和；不混用独立国家数与入会国家数。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-decolonization-declaration"
+        }
+      ]
+    },
+    {
+      "title": "United Nations · Millennium Declaration, Resolution 55/2",
+      "url": "https://www.un.org/en/ga/president/55/pdf/priorities/millenniumsummit.pdf",
+      "note": "大会55/2号决议全文，首脑于2000年9月6—8日在纽约聚会，9月8日通过；区别宣言和后来的指标体系。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-millennium-declaration"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · The Netherlands: Museums confront the country’s colonial past",
+      "url": "https://www.unesco.org/en/articles/netherlands-museums-confront-countrys-colonial-past-0",
+      "note": "An Indonesian hero’s dagger returned小节，明确1825—1830年战争及藏品背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-java-war"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Constitution",
+      "url": "https://www.unesco.org/en/legal-affairs/constitution",
+      "note": "组织法标题注明1945年11月16日伦敦通过；序言与宗旨条说明教育、科学、文化和和平的联系。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-unesco-constitution"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Archives of the Dutch East India Company",
+      "url": "https://www.unesco.org/en/memory-world/archives-dutch-east-india-company",
+      "note": "世界记忆项目说明，核对1602年成立及亚洲贸易档案范围。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-voc-founded"
+        }
+      ]
+    },
+    {
       "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
       "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3704,6 +7524,109 @@
       ]
     },
     {
+      "title": "UNESCO Memory of the World · Marx’s annotated Das Kapital",
+      "url": "https://www.unesco.org/en/memory-world/manifest-der-kommunistischen-partei-draft-manuscript-page-and-das-kapital-erster-band-karl-marxs",
+      "note": "馆藏图版说明第一卷首版为 Hamburg 1867；登记对象含作者批注本。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "phil-marx-capital"
+        }
+      ]
+    },
+    {
+      "title": "UNHCR · Final Act of the Conference on Refugees",
+      "url": "https://www.unhcr.org/publications/final-act-united-nations-conference-plenipotentiaries-status-refugees-and-stateless",
+      "note": "会议最后文件记1951年7月25日通过，7月28日起开放签署；本条标题保留两者区别。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-refugee-convention"
+        }
+      ]
+    },
+    {
+      "title": "Goethe University Frankfurt · Mourning Jürgen Habermas",
+      "url": "https://www.uni-frankfurt.de/en/newsroom/meldungen/pressemitteilungen/2026/die-goethe-universitaet-trauert-um-juergen-habermas",
+      "note": "大学正式悼念，核对2026年去世；与SEP当前条目1929—2026一致。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-habermas"
+        }
+      ]
+    },
+    {
+      "title": "University of Göttingen · Goethe: Faust I (1808)",
+      "url": "https://www.uni-goettingen.de/de/703224.html",
+      "note": "作品书目与教学介绍，明确第一部1808年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-faust-one"
+        }
+      ]
+    },
+    {
+      "title": "University of Potsdam · Maji Maji War",
+      "url": "https://www.uni-potsdam.de/en/botanischer-garten/unser-garten/kolonialismus/maji-maji-krieg",
+      "note": "大学植物园殖民史展，棉田、强制劳动、焦土镇压与饥荒；核对1905—1907年。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "world-maji-maji"
+        }
+      ]
+    },
+    {
+      "title": "博洛尼亚大学 · Our history",
+      "url": "https://www.unibo.it/en/university/who-we-are/our-history/our-history",
+      "note": "“Nine centuries of history”明确把1088年称为conventionally referred founding year。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-bologna"
+        }
+      ]
+    },
+    {
+      "title": "U.S. Bureau of Reclamation · Hoover Dam chronology",
+      "url": "https://www.usbr.gov/lc/hooverdam/history/articles/chrono.html",
+      "note": "1935年条记2月开始蓄水与9月30日典礼；后续发电和工程日期分列。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-hoover-dam"
+        }
+      ]
+    },
+    {
+      "title": "The Holy See · Fortieth anniversary of Vatican II",
+      "url": "https://www.vatican.va/content/benedict-xvi/en/homilies/2005/documents/hf_ben-xvi_hom_20051208_anniv-vat-council.html",
+      "note": "回顾明确1962年10月11日开幕、1965年12月8日闭幕，区别于后世纪念日期。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-vatican-ii"
+        }
+      ]
+    },
+    {
+      "title": "Visva-Bharati University · Tagore bibliography: English works",
+      "url": "https://www.visvabharati.ac.in/ENGLISH.html",
+      "note": "Visva-Bharati大学英文书目：Sadhana，London: Macmillan，1913年10月，说明美国演讲背景。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-tagore-sadhana"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-tagore"
+        }
+      ]
+    },
+    {
       "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
       "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
       "note": "博物馆的锡克帝国专题核实1699年纪年与团体性质；中文由本站独立编写。",
@@ -3711,6 +7634,83 @@
         {
           "kind": "event",
           "id": "world-khalsa"
+        }
+      ]
+    },
+    {
+      "title": "World Health Organization · Smallpox",
+      "url": "https://www.who.int/emergencies/situations/smallpox/",
+      "note": "核对1967年强化根除计划、1977年最后自然病例及1980年正式宣布。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-smallpox-eradication"
+        }
+      ]
+    },
+    {
+      "title": "World Health Organization · History of polio vaccination",
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-polio-vaccination",
+      "note": "核对1955年4月12日试验结果公布及同日许可，区别疫苗发展与全球根除。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-polio-vaccine"
+        }
+      ]
+    },
+    {
+      "title": "世界卫生组织 · History of smallpox vaccination",
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination",
+      "note": "见人痘接种传统、1796年5月试验与7月后续检验的段落。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-jenner"
+        }
+      ]
+    },
+    {
+      "title": "维也纳爱乐乐团 · 第九交响曲首演二百周年展",
+      "url": "https://www.wienerphilharmoniker.at/en/orchestra/exhibitions/exhibition1",
+      "note": "展览开篇确认1824年5月7日及Kärntnertor Theater首演地点。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-beethoven-ninth"
+        }
+      ]
+    },
+    {
+      "title": "World Trade Organization · GATT 1947 and GATT 1994",
+      "url": "https://www.wto.org/english/docs_e/legal_e/legalexplgatt1947_e.htm",
+      "note": "核对1947年协定、1948年1月1日临时适用及后来的制度关系。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-gatt"
+        }
+      ]
+    },
+    {
+      "title": "World Trade Organization · History of the multilateral trading system",
+      "url": "https://www.wto.org/english/thewto_e/history_e/history_e.htm",
+      "note": "Birth of the WTO部分明确1995年1月1日成立及货物、服务、知识产权和争端解决范围。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-wto"
+        }
+      ]
+    },
+    {
+      "title": "北京大学校史馆 · 陈独秀",
+      "url": "https://www.xsg.pku.edu.cn/heros/revolutionist/detail/514.html",
+      "note": "人物简介明确1879—1942年、1917年北大任职以及中共早期领导经历。",
+      "references": [
+        {
+          "kind": "person",
+          "id": "modern-phil-chenduxiu"
         }
       ]
     },
@@ -3750,6 +7750,17 @@
       ]
     },
     {
+      "title": "伽利略博物馆 · Sidereus Nuncius (1610)",
+      "url": "https://www2.museogalileo.it/en/library-and-research-institute/projects/meet-galileo/38-works/464-sidereus-nuncius-the-starry-messenger-1610.html",
+      "note": "作品介绍记1610年3月出版及1609—1610年望远镜观测。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "category-galileo"
+        }
+      ]
+    },
+    {
       "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
       "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -3757,6 +7768,28 @@
         {
           "kind": "event",
           "id": "world-newton"
+        }
+      ]
+    },
+    {
+      "title": "Cambridge University Library · Living at this Hour: John Milton",
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Milton/captions.html",
+      "note": "1667年《失乐园》初版展品说明，区别后续修订版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-paradise-lost"
+        }
+      ]
+    },
+    {
+      "title": "清华大学校史馆 · 金岳霖的西南联大时期",
+      "url": "https://xsg.tsinghua.edu.cn/info/1004/1945.htm",
+      "note": "胡军文章“潜心治学”部分列西南联大学术语境及《论道》1940年出版。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-jin-on-dao"
         }
       ]
     },
@@ -8042,6 +12075,17 @@
       ]
     },
     {
+      "title": "《琵琶行并序》",
+      "url": "https://zh.wikisource.org/wiki/琵琶行",
+      "note": "序开篇的元和十年与次年秋，支持816年；同时保留不同传本的文字差异。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "depth-bai-juyi-pipa"
+        }
+      ]
+    },
+    {
       "title": "《笔法记》· 传为荆浩所撰",
       "url": "https://zh.wikisource.org/wiki/筆法記",
       "note": "画论原文参考；叙事中的相对时间与洪谷场景不作为定年或个人路线证据。",
@@ -9167,6 +13211,21 @@
         {
           "kind": "person",
           "id": "q6697537"
+        }
+      ]
+    },
+    {
+      "title": "中国社会科学院大学 · 建党之前：陈独秀在上海",
+      "url": "https://ztjy.ucass.edu.cn/info/1006/1949.htm",
+      "note": "“创办《新青年》声名鹊起”部分引1915年创刊号《敬告青年》，讨论六项青年伦理、办刊取向与上海语境。",
+      "references": [
+        {
+          "kind": "event",
+          "id": "modern-chenduxiu-youth-journal"
+        },
+        {
+          "kind": "person",
+          "id": "modern-phil-chenduxiu"
         }
       ]
     }

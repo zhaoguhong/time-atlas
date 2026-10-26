@@ -33,14 +33,14 @@ describe('pillar automatic browsing', () => {
     expect(stops).toEqual([{ year: 1, event: ongoing }])
     expect(ongoing.year).toBe(-10)
   })
-  it('sorts across BCE/CE, retains year one and respects the 1912 limit', () => {
+  it('sorts across BCE/CE, retains year one and respects the 2000 reading limit', () => {
     const records = [
-      event('late', 1913, 5),
+      event('late', 2001, 5),
       event('ce', 1, 5),
       event('bce', -1, 5),
-      event('end', 1912, 5),
+      event('end', 2000, 5),
     ]
-    expect(pillarBrowseStops(records, 900, null).map((s) => s.year)).toEqual([-1, 1, 1912])
+    expect(pillarBrowseStops(records, 900, null).map((s) => s.year)).toEqual([-1, 1, 2000])
     expect(pillarBrowseStops(records, 900, [2, 1900])).toEqual([])
   })
 })

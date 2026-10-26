@@ -184,7 +184,7 @@ test('wheel, pointer drag, keyboard and BCE zoom retain shared state', async ({ 
   await page.keyboard.press('Home')
   await expect(canvas).toHaveAttribute('data-year', '-10000')
   await page.keyboard.press('End')
-  await expect(canvas).toHaveAttribute('data-year', '1912')
+  await expect(canvas).toHaveAttribute('data-year', '2000')
   await settings(page)
   await page.locator('#pillar-jump').fill('0')
   await page.getByRole('button', { name: '前往', exact: true }).click()
@@ -374,7 +374,7 @@ test('automatic browsing finishes at the final event without looping and preserv
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await ready(page, 'year=1910&span=50&play=years')
+  await ready(page, 'year=1910&span=50&play=years&range=1910,1912')
   await settings(page)
   await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1912', {
@@ -879,5 +879,139 @@ for (const width of [1440, 390]) {
     expect(background).toBeGreaterThan(0.5)
     expect(background).toBeLessThan(0.75)
     await page.screenshot({ path: info.outputPath(`simplified-tools-${width}.png`) })
+  })
+}
+
+for (const viewport of [
+  { name: 'desktop', width: 1440, height: 900 },
+  { name: 'phone', width: 390, height: 844 },
+  { name: 'landscape', width: 844, height: 390 },
+]) {
+  test(`topic category filters work directly and survive sharing on ${viewport.name}`, async ({
+    page,
+    context,
+  }, info) => {
+    await page.setViewportSize(viewport)
+    await ready(page, 'year=1190&span=100&scope=period&side=china')
+    await settings(page)
+    const category = page.getByLabel('时空柱事件类别', { exact: true })
+    await category.selectOption('哲学')
+    await expect(page.locator('.pillar-category-summary')).toContainText('哲学 · 当前画布 5 件')
+    await category.evaluate((element) => element.scrollIntoView({ block: 'center' }))
+    await expect(category).toBeInViewport()
+    await page.screenshot({ path: info.outputPath(`${viewport.name}-topic-settings.png`) })
+    await closeSettings(page)
+    const cards = page.locator('.pillar-card')
+    await expect(cards.first()).toBeVisible()
+    const expectedIds = [
+      'goose-lake-meeting',
+      'qingyuan-faction-ban',
+      'white-deer-academy',
+      'east-lu-jiuyuan-mind',
+      'east-zhuxi-four-books',
+    ]
+    const shownIds = await cards.evaluateAll((items) =>
+      items.map((item) => item.getAttribute('data-event-id')),
+    )
+    for (const id of shownIds) expect(expectedIds).toContain(id)
+    await geometry(page)
+    await page.screenshot({ path: info.outputPath(`${viewport.name}-philosophy.png`) })
+    const shared = await context.newPage()
+    await shared.setViewportSize(viewport)
+    await shared.goto(page.url())
+    await expect(shared.locator('.pillar-card').first()).toBeVisible()
+    await settings(shared)
+    await expect(shared.getByLabel('时空柱事件类别', { exact: true })).toHaveValue('哲学')
+    await expect(shared.locator('.pillar-category-summary')).toContainText('当前画布 5 件')
+    await shared.close()
+    await settings(page)
+    await page.locator('.pillar-cluster').click()
+    await expect(page.locator('.pillar-cluster-list button')).toHaveCount(5)
+    await expect(page.locator('.pillar-cluster-list')).toContainText('陆九渊')
+    await expect(page.locator('.pillar-cluster-list')).toContainText('朱熹')
+    await page.locator('.pillar-cluster-list button').filter({ hasText: '鹅湖之会' }).click()
+    await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
+    await expect
+      .poll(() => new URLSearchParams(new URL(page.url()).hash.slice(1)).get('category'))
+      .toBe('哲学')
+    await page.reload()
+    await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
+    await settings(page)
+    await expect(category).toHaveValue('哲学')
+    await category.selectOption('经济贸易')
+    await expect(page.locator('.pillar-category-summary')).toContainText('当前画布 0 件')
+    await closeSettings(page)
+    await expect(page.locator('.pillar-empty')).toContainText('当前范围与筛选下没有已收录的事件')
+    await settings(page)
+    await page.getByRole('button', { name: '清除时间、地区与类别筛选', exact: true }).click()
+    await expect(category).toHaveValue('全部')
+    await closeSettings(page)
+    await expect(page.locator('.pillar-empty')).toHaveCount(0)
+  })
+}
+
+test('philosophy automatic browsing uses the topic and stops when the category changes', async ({
+  page,
+}) => {
+  const pause = await installPillarClock(page)
+  await ready(page, 'year=1170&span=100&scope=period&side=china&category=哲学&range=1170,1200')
+  await pause()
+  await settings(page)
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await page.clock.runFor(1500)
+  const stage = page.locator('.pillar-stage')
+  await expect(stage).toHaveAttribute('data-browse-phase', 'reading')
+  await expect(stage).toHaveAttribute('data-year', '1175')
+  await settings(page)
+  await page.getByLabel('时空柱事件类别', { exact: true }).selectOption('战争')
+  await closeSettings(page)
+  await expect(stage).toHaveAttribute('data-browsing', 'false')
+  const year = await stage.getAttribute('data-year')
+  await page.clock.runFor(10000)
+  await expect(stage).toHaveAttribute('data-year', year!)
+})
+
+for (const viewport of [
+  { name: 'desktop', width: 1440, height: 900 },
+  { name: 'phone', width: 390, height: 844 },
+]) {
+  test(`expanded philosophy exposes Kant and Confucius across all dates on ${viewport.name}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize(viewport)
+    await ready(page, 'year=1785&span=50&scope=period&category=哲学&range=1770,1795')
+    await settings(page)
+    await expect(page.locator('.pillar-category-summary')).toContainText('全部年代 128 件')
+    const overview = page.getByRole('button', { name: '展开“哲学”的全部年代', exact: true })
+    await overview.evaluate((element) => element.scrollIntoView({ block: 'center' }))
+    await page.screenshot({ path: info.outputPath(`${viewport.name}-philosophy-total.png`) })
+    await overview.click()
+    await expect(page).not.toHaveURL(/range=/)
+    await expect
+      .poll(async () => Number(await page.locator('.pillar-stage').getAttribute('data-span')))
+      .toBeGreaterThan(2500)
+    await settings(page)
+    await page.locator('.pillar-cluster').click()
+    const search = page.getByRole('textbox', { name: '搜索聚合事件', exact: true })
+    await search.fill('康德')
+    await expect(page.locator('.pillar-cluster-list button')).toHaveCount(2)
+    await expect(page.locator('.pillar-cluster-list')).toContainText('纯粹理性批判')
+    await expect(page.locator('.pillar-cluster-list')).toContainText('实践理性批判')
+    await page.locator('.pillar-cluster-list button').filter({ hasText: '纯粹理性批判' }).click()
+    await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
+    await expect(page.locator('.event-narrative')).toBeVisible()
+    expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
+    await page.reload()
+    await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
+    await settings(page)
+    await expect(page.getByLabel('时空柱事件类别', { exact: true })).toHaveValue('哲学')
+    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('china')
+    await overview.click()
+    await settings(page)
+    await page.locator('.pillar-cluster').click()
+    await search.fill('孔子')
+    await expect(page.locator('.pillar-cluster-list button')).toHaveCount(1)
+    await page.locator('.pillar-cluster-list button').click()
+    await expect(page.locator('.event-detail h2')).toHaveText('孔子离鲁与周游诸国')
   })
 }

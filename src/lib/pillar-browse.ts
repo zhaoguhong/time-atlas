@@ -1,5 +1,5 @@
 import type { HistoryEvent } from '../types'
-import { MAX_YEAR, MIN_YEAR } from './history'
+import { PILLAR_MAX_YEAR as MAX_YEAR, MIN_YEAR } from './history'
 
 export type BrowseStop = { year: number; event: HistoryEvent }
 

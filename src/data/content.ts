@@ -1,3 +1,11 @@
+import { modernPhilosophyEvents, modernPhilosophyPeople } from './philosophy-modern'
+import { modernWorldEvents } from './world-modern'
+import { categoryDepthEvents } from './category-depth'
+import { categoryPeople, categoryEventPeople, categoryPeopleNotes } from './category-people'
+import { westernPhilosophyEvents, westernPhilosophyPeople } from './philosophy-west'
+import { easternPhilosophyEvents, easternPhilosophyPeople } from './philosophy-east'
+import { categoryExpansionEvents } from './category-expansion'
+import { worldMilestoneEvents } from './world-expansion-milestones'
 import { worldEvents } from './world-events'
 import { worldAsiaAfricaEvents } from './world-expansion-asia-africa'
 import { worldAtlanticEvents } from './world-expansion-atlantic'
@@ -2102,7 +2110,9 @@ export const people: Person[] = expandPersonContent(
       ),
     ),
   ),
-).map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
+)
+  .concat(westernPhilosophyPeople, easternPhilosophyPeople, modernPhilosophyPeople, categoryPeople)
+  .map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
 
 export const events: HistoryEvent[] = linkExpandedPersonEvents(
   enrichEventReading(
@@ -2120,8 +2130,30 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
   ),
 )
   .concat(worldEvents)
-  .concat(worldAsiaAfricaEvents, worldAtlanticEvents)
-  .map((event) => ({ ...event, sources: canonicalSources(event.sources) }))
+  .concat(
+    worldAsiaAfricaEvents,
+    worldAtlanticEvents,
+    westernPhilosophyEvents,
+    easternPhilosophyEvents,
+    categoryExpansionEvents,
+    worldMilestoneEvents,
+    modernPhilosophyEvents,
+    modernWorldEvents,
+    categoryDepthEvents,
+  )
+  .map((event) => {
+    const linkedPeople = categoryEventPeople[event.id] ?? []
+    if (!linkedPeople.length) return { ...event, sources: canonicalSources(event.sources) }
+    return {
+      ...event,
+      people: [...new Set([...event.people, ...linkedPeople])],
+      peopleNotes: {
+        ...event.peopleNotes,
+        ...Object.fromEntries(linkedPeople.map((id) => [id, categoryPeopleNotes[event.id]])),
+      },
+      sources: canonicalSources(event.sources),
+    }
+  })
   .sort((a, b) => a.year - b.year)
 
 export const eventById = new Map(events.map((event) => [event.id, event]))

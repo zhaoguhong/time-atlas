@@ -1,6 +1,6 @@
 import type { FeatureCollection, LineString } from 'geojson'
 import type { HistoryEvent, JourneyNode, JourneyView, Person, PersonJourney } from '../types'
-import { clampYear } from './history'
+import { clampYear, MAX_YEAR } from './history'
 import { periods } from '../data/periods'
 
 export function activeJourneyNode(nodes: JourneyNode[], year: number, selectedId?: string | null) {
@@ -45,14 +45,22 @@ export function journeyEvents(nodes: JourneyNode[], personId: string): HistoryEv
     importance: 5,
   }))
 }
-export function personFocusYear(person: Person, year: number, journey?: PersonJourney) {
+export function personFocusYear(
+  person: Person,
+  year: number,
+  journey?: PersonJourney,
+  maximum = MAX_YEAR,
+) {
   const era = periods.find((period) => period.id === person.era)
   const inLife =
     (person.birth === null || year >= person.birth) &&
     (person.death === null || year <= person.death)
   const completeDates = person.birth !== null && person.death !== null
   if (inLife && (completeDates || (era && year >= era.from && year <= era.to))) return year
-  return clampYear(journey?.nodes[0]?.year ?? person.birth ?? person.death ?? era?.focus ?? year)
+  return clampYear(
+    journey?.nodes[0]?.year ?? person.birth ?? person.death ?? era?.focus ?? year,
+    maximum,
+  )
 }
 export function matchesPerson(person: Person, query: string) {
   const text = query.trim().toLocaleLowerCase().replace(/\s+/g, '')

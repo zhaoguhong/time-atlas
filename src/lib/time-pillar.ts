@@ -1,5 +1,11 @@
 import type { HistoryEvent, HistoryRegion } from '../types'
-import { compactYear, fromOrdinal, MAX_YEAR, MIN_YEAR, toOrdinal } from './history'
+import {
+  compactYear,
+  fromOrdinal,
+  PILLAR_MAX_YEAR as MAX_YEAR,
+  MIN_YEAR,
+  toOrdinal,
+} from './history'
 
 export type PillarSide = 'compare' | 'china' | 'world'
 // Keep the source's primary date; axis-conversion and contextual notes stay in the reader.

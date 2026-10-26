@@ -1,5 +1,5 @@
 import type { HistoryEvent, Period } from '../types'
-import { toOrdinal } from './history'
+import { toOrdinal, MAX_YEAR, modernReadingPeriod } from './history'
 
 // Navigation windows only: societies do not share a single historical periodization.
 export const worldPeriods: Period[] = [
@@ -25,7 +25,9 @@ export const worldPeriods: Period[] = [
 }))
 
 export const worldPeriodAt = (year: number) =>
-  worldPeriods.find((period) => year >= period.from && year <= period.to) ?? worldPeriods[0]
+  year > MAX_YEAR
+    ? modernReadingPeriod
+    : (worldPeriods.find((period) => year >= period.from && year <= period.to) ?? worldPeriods[0])
 
 export function worldPeriodEvents(events: HistoryEvent[], year: number) {
   const period = worldPeriodAt(year)

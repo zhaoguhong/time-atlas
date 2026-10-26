@@ -1,3 +1,8 @@
+import {
+  eventCategories as categories,
+  matchesEventCategory,
+  type EventCategoryFilter,
+} from './lib/event-categories'
 import { eventsAtYear } from './lib/current-events'
 import { formatEventDate, eventDateRelation } from './lib/history'
 import { readingSourceUrl } from './lib/source-links'
@@ -102,7 +107,6 @@ import {
   visibleJourneyNodes,
 } from './lib/journeys'
 import type {
-  Category,
   EventScope,
   HistoryEvent,
   PanelMode,
@@ -115,6 +119,8 @@ import type {
 } from './types'
 import {
   clampYear,
+  clampPillarYear,
+  PILLAR_MAX_YEAR,
   compactYear,
   eventsInPeriod,
   formatYear,
@@ -142,7 +148,6 @@ type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
 const allTours = [...tours, ...periodCourses]
 const projectRepositoryUrl = 'https://github.com/zhaoguhong/time-atlas'
-const categories: ('全部' | Category)[] = ['全部', '战争', '政治', '文化', '交流', '社会']
 const categoryColors: Record<string, string> = {
   战争: '#a76f58',
   政治: '#4e796d',
@@ -169,8 +174,13 @@ function initialState() {
   const journey =
     hash.person && hash.journey === hash.person ? journeyByPerson.get(hash.person) : undefined
   if (journey) year = Math.min(journey.nodes.at(-1)!.year, Math.max(journey.nodes[0].year, year))
-  else if (selection?.type === 'person')
-    year = personFocusYear(personById.get(selection.id)!, year, journeyByPerson.get(selection.id))
+  else if (selection?.type === 'person' && hash.year === undefined)
+    year = personFocusYear(
+      personById.get(selection.id)!,
+      year,
+      journeyByPerson.get(selection.id),
+      view.visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR,
+    )
   const topic = allTours.find((item) => item.id === hash.tour)
   const step = topic
     ? Math.max(topic.chapters ? -1 : 0, Math.min(topic.steps.length - 1, hash.step ?? -1))
@@ -182,7 +192,7 @@ function initialState() {
   return {
     preferences,
     view,
-    year,
+    year: view.visualization === 'pillar' ? clampPillarYear(year) : clampYear(year),
     selection,
     scope: hash.scope ?? readScopePreferences(preferences.scope)[view.visualization],
     compare: hash.compare ?? null,
@@ -259,7 +269,7 @@ export default function App() {
     initial.view.mode ?? (initial.tour ? 'tours' : 'events'),
   )
   const [mobileView, setMobileView] = useState<'split' | 'map' | 'reading'>('map')
-  const [category, setCategory] = useState<'全部' | Category>(initial.view.category)
+  const [category, setCategory] = useState<EventCategoryFilter>(initial.view.category)
   const [scope, setScope] = useState<EventScope>(initial.scope)
   const [exploration, setExploration] = useState<ExplorationFilter>(initial.view.exploration)
   const [explorationOpen, setExplorationOpen] = useState(false)
@@ -376,7 +386,11 @@ export default function App() {
     pendingScroll.current = previous.scrollTop ?? 0
     setSelection(previous.selection)
     setMode(previous.mode)
-    setYear(previous.year)
+    setYear(
+      previous.visualization === 'pillar'
+        ? clampPillarYear(previous.year)
+        : clampYear(previous.year),
+    )
     setVisualization(previous.visualization ?? 'map')
     setPillarSide(previous.pillarSide ?? 'compare')
     setPillarRegion(previous.pillarRegion ?? 'all')
@@ -432,16 +446,32 @@ export default function App() {
     [historySide, historyRegion],
   )
   const worldPeriod = worldPeriodAt(year)
-  const profile = profiles[period.id]
   const periodEvents = useMemo(() => eventsInPeriod(events, year), [year])
-  const explorationEvents = useMemo(
+  const profile = profiles[period.id] ?? {
+    question: '怎样沿着事件、人物与思想阅读20世纪？',
+    context:
+      '使用类别、地区与时间筛选比较已收录的现代历史记录，并在每条记录中核对日期、背景与来源。',
+    focusReason: '这一分段用于组织现代事件阅读，不代表各地共同的政治分期。',
+    chronologyNote:
+      '时空柱和事件阅读延伸至2000年；现有历史疆域资料仍止于1912年，现代事件不能借用早期地图作为同期疆域。',
+    polities: [] as string[],
+    people: [] as string[],
+    steps: periodEvents.map((event) => event.id),
+  }
+  const allCategoryEvents = useMemo(
     () =>
-      filterExploration(events, exploration).filter(
+      filterExploration(events, { ...exploration, range: null }).filter(
         (event) =>
-          (category === '全部' || event.category === category) &&
+          (visualization === 'pillar' || event.year <= MAX_YEAR) &&
+          matchesEventCategory(event, category) &&
           pillarMatches(event, historySide, historyRegion),
       ),
-    [exploration, category, historySide, historyRegion],
+    [exploration.place, exploration.bounds, category, historySide, historyRegion, visualization],
+  )
+  const explorationEvents = useMemo(
+    () =>
+      filterExploration(allCategoryEvents, { place: '', bounds: null, range: exploration.range }),
+    [allCategoryEvents, exploration.range],
   )
   const filteredEvents = useMemo(() => {
     if (exploration.range) return explorationEvents
@@ -616,7 +646,7 @@ export default function App() {
       ...(/^-?\d+$/.test(text) &&
       Number(text) !== 0 &&
       Number(text) >= MIN_YEAR &&
-      Number(text) <= MAX_YEAR
+      Number(text) <= PILLAR_MAX_YEAR
         ? [
             {
               type: 'year' as const,
@@ -666,18 +696,27 @@ export default function App() {
       ),
     [],
   )
-  const changeYear = useCallback((value: number) => {
-    setYear(clampYear(value))
-    setExploration((previous) =>
-      previous.range && (value < previous.range[0] || value > previous.range[1])
-        ? { ...previous, range: null }
-        : previous,
-    )
-    setSelection(null)
-    setPlaying(false)
-    setTourState(null)
-    setTrailPerson(null)
-  }, [])
+  const changeYear = useCallback(
+    (value: number) => {
+      if (value > MAX_YEAR && visualization === 'map') {
+        setVisualization('pillar')
+        setScope(readScopePreferences(initial.preferences.scope).pillar)
+      }
+      setYear(
+        visualization === 'pillar' || value > MAX_YEAR ? clampPillarYear(value) : clampYear(value),
+      )
+      setExploration((previous) =>
+        previous.range && (value < previous.range[0] || value > previous.range[1])
+          ? { ...previous, range: null }
+          : previous,
+      )
+      setSelection(null)
+      setPlaying(false)
+      setTourState(null)
+      setTrailPerson(null)
+    },
+    [visualization, initial.preferences.scope],
+  )
   const navigateYear = useCallback(
     (value: number) => {
       if (!personJourney) {
@@ -708,7 +747,7 @@ export default function App() {
           setPillarSide('compare')
           setPillarRegion('all')
         }
-        if (category !== '全部' && category !== event.category) setCategory('全部')
+        if (!matchesEventCategory(event, category)) setCategory('全部')
         if (
           !keepPillarView &&
           exploration.range &&
@@ -716,7 +755,17 @@ export default function App() {
         )
           setExploration((old) => ({ ...old, range: null }))
       }
-      if (!keepPillarView) setYear(event.year)
+      if (!keepPillarView) {
+        if (event.year > MAX_YEAR) {
+          setVisualization('pillar')
+          setScope('period')
+          if (!pillarMatches(event, pillarSide, pillarRegion)) {
+            setPillarSide('compare')
+            setPillarRegion('all')
+          }
+        }
+        setYear(event.year)
+      }
       setMobileView((view) => (view === 'map' ? 'split' : view))
       setSelection({ type: 'event', id })
       setMode('events')
@@ -738,6 +787,17 @@ export default function App() {
     setPlaying(false)
     setScope(readScopePreferences(initial.preferences.scope)[value])
     setVisualization(value)
+    if (value === 'map') {
+      setYear(clampYear(year))
+      setExploration((old) =>
+        old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
+      )
+      if (year > MAX_YEAR)
+        setToast('历史疆域资料止于1912年，地图已切回1912年；现代事件仍可继续阅读。')
+    } else if (value === 'pillar' && selection?.type === 'event') {
+      const selected = eventById.get(selection.id)
+      if (selected && selected.year > MAX_YEAR) setYear(selected.year)
+    }
     setLayersOpen(false)
     setMoreOpen(false)
     setMobileView((view) => (view === 'reading' ? 'split' : view))
@@ -767,7 +827,29 @@ export default function App() {
         setPillarSide('compare')
         setPillarRegion('all')
       }
-      setYear(personFocusYear(person, year, journeyByPerson.get(id)))
+      const dated = events.filter((event) => event.people.includes(id))
+      const earliest = dated.length ? Math.min(...dated.map((event) => event.year)) : null
+      const focusedYear =
+        earliest !== null && earliest > MAX_YEAR
+          ? earliest
+          : personFocusYear(
+              person,
+              year,
+              journeyByPerson.get(id),
+              visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR,
+            )
+      if (focusedYear > MAX_YEAR) {
+        setVisualization('pillar')
+        setPillarSide('compare')
+        setPillarRegion('all')
+        setExploration((old) =>
+          old.range && (focusedYear < old.range[0] || focusedYear > old.range[1])
+            ? { ...old, range: null }
+            : old,
+        )
+        setScope('period')
+      }
+      setYear(focusedYear)
       setTourState(null)
       setMode('people')
       setFocus({ region: 'china', token: Date.now() })
@@ -1210,8 +1292,12 @@ export default function App() {
       if (yearRef.current >= eventYears.at(-1)!) setYear(eventYears[0])
       else if (!eventYears.includes(yearRef.current))
         setYear(eventYears.find((value) => value > yearRef.current) ?? eventYears[0])
-    } else if (!playing && !trail && yearRef.current >= (exploration.range?.[1] ?? MAX_YEAR))
-      setYear(exploration.range?.[0] ?? MIN_YEAR)
+    } else if (
+      !playing &&
+      !trail &&
+      yearRef.current >= Math.min(MAX_YEAR, exploration.range?.[1] ?? MAX_YEAR)
+    )
+      setYear(clampYear(exploration.range?.[0] ?? MIN_YEAR))
     setPlaying((value) => !value)
     setTourState(null)
     if (!trail) {
@@ -1417,7 +1503,7 @@ export default function App() {
         else setYear(next)
       } else {
         const next = fromOrdinal(toOrdinal(yearRef.current) + 1)
-        const end = exploration.range?.[1] ?? MAX_YEAR
+        const end = Math.min(MAX_YEAR, exploration.range?.[1] ?? MAX_YEAR)
         if (next >= end) {
           setYear(end)
           setPlaying(false)
@@ -2064,6 +2150,7 @@ export default function App() {
                   region={pillarRegion}
                   category={category}
                   events={explorationEvents}
+                  allCategoryEvents={allCategoryEvents}
                   hasSpatialFilter={!!exploration.place || !!exploration.bounds}
                   onClearSpatial={() => {
                     setExploration((old) => ({ ...old, place: '', bounds: null }))
@@ -2073,7 +2160,7 @@ export default function App() {
                   playing={playing}
                   range={exploration.range}
                   onNavigate={(value, span) => {
-                    setYear(clampYear(value))
+                    setYear(clampPillarYear(value))
                     setPillarSpan(span)
                     setPlaying(false)
                     setPlaybackReading(false)
@@ -2088,7 +2175,7 @@ export default function App() {
                     setMode('events')
                   }}
                   onBrowseNavigate={(value, span) => {
-                    setYear(clampYear(value))
+                    setYear(clampPillarYear(value))
                     setPillarSpan(span)
                   }}
                   onSide={(value) => {
@@ -2120,7 +2207,7 @@ export default function App() {
                 <HistoryMap
                   colorMode={colorMode}
                   wrapLongitude
-                  year={year}
+                  year={clampYear(year)}
                   events={mapEvents}
                   showCities={showCities}
                   showEvents={showEvents}
@@ -2544,6 +2631,12 @@ export default function App() {
                     {selectedEvent.location}
                   </p>
                   <p className="detail-lead">{selectedEvent.summary}</p>
+                  {visualization === 'map' && selectedEvent.year > MAX_YEAR && (
+                    <p className="evidence-note modern-map-note" role="note">
+                      本事件发生于{selectedEvent.year}年，超出历史疆域资料范围。当前地图年份为{year}
+                      年，所示疆域不代表事件当年，地点仅供参照。
+                    </p>
+                  )}
                   <button
                     className="event-map-link"
                     onClick={() => {
@@ -2551,15 +2644,28 @@ export default function App() {
                       // Reading stays at the pillar's current window; this explicit
                       // map action instead opens the geography at the event's date.
                       if (visualization === 'pillar') {
-                        setYear(selectedEvent.year)
+                        setYear(clampYear(selectedEvent.year))
                         setExploration((old) =>
                           old.range &&
-                          (selectedEvent.year < old.range[0] || selectedEvent.year > old.range[1])
+                          (old.range[1] > MAX_YEAR ||
+                            selectedEvent.year < old.range[0] ||
+                            selectedEvent.year > old.range[1])
                             ? { ...old, range: null }
                             : old,
                         )
                       }
                       const nextMode = visualization === 'pillar' ? 'map' : 'pillar'
+                      if (selectedEvent.year > MAX_YEAR) {
+                        setYear(
+                          nextMode === 'pillar' ? clampPillarYear(selectedEvent.year) : MAX_YEAR,
+                        )
+                        if (nextMode === 'map') {
+                          setExploration((old) =>
+                            old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
+                          )
+                          setToast('历史疆域资料止于1912年，当前地图只供地点参考。')
+                        }
+                      }
                       setScope(readScopePreferences(initial.preferences.scope)[nextMode])
                       setVisualization(nextMode)
                       setPlaying(false)
@@ -2707,7 +2813,7 @@ export default function App() {
                     }}
                   >
                     <Compass size={16} />
-                    回到这一年的地图
+                    {selectedEvent.year > MAX_YEAR ? '回到这一年的时空柱' : '回到这一年的地图'}
                     <ArrowRight size={14} />
                   </button>
                 </article>
@@ -2938,8 +3044,13 @@ export default function App() {
                   <div className="focus-info">
                     <strong>代表年份：{formatYear(period.focus)}</strong>
                     <p>{profile.focusReason}</p>
-                    <button className="outline-action" onClick={() => jumpPeriod(period.id)}>
-                      在地图上观察这一年
+                    <button
+                      className="outline-action"
+                      onClick={() =>
+                        period.from > MAX_YEAR ? changeYear(period.focus) : jumpPeriod(period.id)
+                      }
+                    >
+                      {period.from > MAX_YEAR ? '在时空柱中查看这一年' : '在地图上观察这一年'}
                       <Compass size={14} />
                     </button>
                   </div>
@@ -2947,18 +3058,24 @@ export default function App() {
                     <Info size={14} />
                     <p>{profile.chronologyNote}</p>
                   </div>
-                  <h3>{period.from < -2070 ? '文化与文明区域' : '这一时期的主要政权'}</h3>
-                  <div className="overview-polities">
-                    {profile.polities.map((name) => (
-                      <span key={name}>{name}</span>
-                    ))}
-                  </div>
+                  {profile.polities.length > 0 && (
+                    <>
+                      <h3>{period.from < -2070 ? '文化与文明区域' : '这一时期的主要政权'}</h3>
+                      <div className="overview-polities">
+                        {profile.polities.map((name) => (
+                          <span key={name}>{name}</span>
+                        ))}
+                      </div>
+                    </>
+                  )}
                   <div className="overview-heading">
                     <h3>沿着关键节点学习</h3>
-                    <button onClick={() => startTour(`period-${period.id}`)}>
-                      从开篇学习
-                      <ArrowRight size={13} />
-                    </button>
+                    {period.from <= MAX_YEAR && (
+                      <button onClick={() => startTour(`period-${period.id}`)}>
+                        从开篇学习
+                        <ArrowRight size={13} />
+                      </button>
+                    )}
                   </div>
                   <div className="overview-steps">
                     {profile.steps.map((id, index) => {
@@ -3373,7 +3490,7 @@ export default function App() {
                       <select
                         aria-label="筛选事件类别"
                         value={category}
-                        onChange={(event) => setCategory(event.target.value as '全部' | Category)}
+                        onChange={(event) => setCategory(event.target.value as EventCategoryFilter)}
                       >
                         {categories.map((item) => (
                           <option key={item} value={item}>
@@ -3414,7 +3531,11 @@ export default function App() {
                         ? '当前画布中的已收录事件'
                         : worldBrowsing && scope === 'period'
                           ? `${worldPeriod.name} · ${compactYear(worldPeriod.from)}—${compactYear(worldPeriod.to)}年`
-                          : scopeDescription(year, scope)}{' '}
+                          : scopeDescription(
+                              year,
+                              scope,
+                              visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR,
+                            )}{' '}
                     ·{' '}
                     {exploration.range || scope === 'period' ? '按时间顺序' : '距当前年份由近及远'}
                     <ArrowDown size={11} />
@@ -3425,6 +3546,7 @@ export default function App() {
                     onOpen={setExplorationOpen}
                     onChange={updateExploration}
                     bounds={mapBounds}
+                    maximum={visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR}
                   />
                   {filteredEvents.length ? (
                     filteredEvents.map(eventCard)

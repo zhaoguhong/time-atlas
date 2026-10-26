@@ -111,9 +111,9 @@ describe('stable pillar pan scene', () => {
     const window = { ...pillarWindow(-1, 80), year: -1 }
     const scene = createPillarScene(events, window, 400, 44, 'compare')
     expect(samplePillarScene(scene, pillarWindow(1, 80)).offset).toBe(5)
-    const endWindow = { ...pillarWindow(1912, 900), year: 1912 }
+    const endWindow = { ...pillarWindow(2000, 900), year: 2000 }
     const endScene = createPillarScene(events, endWindow, 400, 44, 'compare')
-    expect(samplePillarScene(endScene, pillarWindow(1900, 900)).offset).toBe(0)
+    expect(samplePillarScene(endScene, pillarWindow(1988, 900)).offset).toBe(0)
     expect(() => samplePillarScene(scene, pillarWindow(-1, 40))).toThrow(RangeError)
   })
 })

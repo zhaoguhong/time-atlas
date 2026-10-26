@@ -25,15 +25,21 @@ describe('important person biography expansion', () => {
     }
   })
 
-  it('does not turn undated traditions and technical works into guessed event or journey nodes', () => {
+  it('retains uncertain text periods without guessing biographical dates or journeys', () => {
     for (const id of ['q9333', 'q47739', 'q37151', 'q6697537']) {
       const person = personById.get(id)!
       expect(person.birth, person.name).toBeNull()
       expect(person.death, person.name).toBeNull()
-      expect(
-        events.some((event) => event.people.includes(id)),
-        person.name,
-      ).toBe(false)
+      const linked = events.filter((event) => event.people.includes(id))
+      if (id === 'q9333' || id === 'q47739') {
+        expect(linked.map((event) => event.id)).toEqual([
+          id === 'q9333' ? 'east-laozi-text' : 'east-zhuangzi-perspectives',
+        ])
+        expect(linked[0].endYear).toBeGreaterThan(linked[0].year)
+        expect(linked[0].dateLabel).toContain('约')
+        expect(linked[0].dateNote).toBeTruthy()
+        expect(linked[0].peopleNotes?.[id]).toBeTruthy()
+      } else expect(linked).toHaveLength(0)
     }
     for (const profile of expandedPersonProfiles)
       expect(

@@ -1,7 +1,8 @@
+import { parseEventCategory, type EventCategoryFilter } from './event-categories'
 import { useCallback, useEffect, useRef, useState, type RefObject } from 'react'
 import type { Camera } from '../components/HistoryMap'
-import type { Category, EventScope, ExplorationFilter, PanelMode, Selection } from '../types'
-import { MIN_YEAR, MAX_YEAR } from './history'
+import type { EventScope, ExplorationFilter, PanelMode, Selection } from '../types'
+import { MIN_YEAR, MAX_YEAR, PILLAR_MAX_YEAR } from './history'
 import { clampSpan, historyRegions, type PillarSide } from './time-pillar'
 import { createHistoryWriter } from './history-writer'
 
@@ -19,7 +20,7 @@ export interface NavigationView {
   mode: PanelMode
   year: number
   scope: EventScope
-  category: '全部' | Category
+  category: EventCategoryFilter
   exploration: ExplorationFilter
   explorationOpen: boolean
   camera: Camera | null
@@ -206,8 +207,9 @@ export function parseViewParams(hash: string) {
   const category = params.get('category')
   const bool = (key: string) =>
     params.get(key) === '1' ? true : params.get(key) === '0' ? false : undefined
+  const maximum = params.get('visual') === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR
   const pair = params.get('range')?.split(',').map(Number)
-  const validYear = (n: number) => Number.isInteger(n) && n !== 0 && n >= MIN_YEAR && n <= MAX_YEAR
+  const validYear = (n: number) => Number.isInteger(n) && n !== 0 && n >= MIN_YEAR && n <= maximum
   const range: [number, number] | null =
     pair?.length === 2 && pair.every(validYear) && pair[0] <= pair[1] ? [pair[0], pair[1]] : null
   const box = params.get('bounds')?.split(',').map(Number)
@@ -231,9 +233,7 @@ export function parseViewParams(hash: string) {
         ? params.get('region')!
         : 'all',
     pillarSpan: params.has('span') ? clampSpan(Number(params.get('span'))) : 600,
-    category: (['战争', '政治', '文化', '交流', '社会'].includes(category ?? '')
-      ? category
-      : '全部') as Category | '全部',
+    category: parseEventCategory(category),
     cities: bool('cities'),
     events: bool('events'),
     hidden: params

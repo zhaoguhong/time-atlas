@@ -1,41 +1,252 @@
 {
-  "generatedAt": "2026-10-23T07:00:43.320Z",
+  "generatedAt": "2026-10-25T17:43:42.248Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
   },
+  "readingRange": {
+    "from": -10000,
+    "to": 2000
+  },
   "people": {
-    "total": 673,
+    "total": 769,
     "importedSnapshot": 591,
-    "curatedIntroductions": 280,
+    "curatedIntroductions": 376,
     "basicRecords": 393,
-    "unknownBirth": 191,
-    "unknownDeath": 138,
-    "noLinkedEvents": 357,
-    "oneLinkedEvent": 195,
-    "outsideMapRange": 0
+    "unknownBirth": 202,
+    "unknownDeath": 145,
+    "noLinkedEvents": 342,
+    "oneLinkedEvent": 291,
+    "outsideMapRange": 8,
+    "outsideReadingRange": 0
   },
   "events": {
-    "total": 643,
-    "world": 198,
+    "total": 944,
+    "world": 449,
     "byRegion": {
-      "china": 445,
-      "europe": 59,
-      "west-asia": 28,
-      "central-asia": 9,
-      "south-asia": 14,
-      "east-asia": 13,
-      "southeast-asia": 12,
-      "africa": 26,
-      "americas": 28,
-      "oceania": 9
+      "china": 495,
+      "europe": 215,
+      "west-asia": 41,
+      "central-asia": 11,
+      "south-asia": 26,
+      "east-asia": 30,
+      "southeast-asia": 17,
+      "africa": 35,
+      "americas": 62,
+      "oceania": 12
+    },
+    "byFilterCategory": {
+      "战争": {
+        "total": 210,
+        "china": 142,
+        "world": 68,
+        "byRegion": {
+          "china": 142,
+          "europe": 21,
+          "west-asia": 13,
+          "central-asia": 2,
+          "south-asia": 3,
+          "east-asia": 3,
+          "southeast-asia": 3,
+          "africa": 8,
+          "americas": 13,
+          "oceania": 2
+        }
+      },
+      "政治": {
+        "total": 330,
+        "china": 177,
+        "world": 153,
+        "byRegion": {
+          "china": 177,
+          "europe": 51,
+          "west-asia": 19,
+          "central-asia": 4,
+          "south-asia": 6,
+          "east-asia": 12,
+          "southeast-asia": 9,
+          "africa": 15,
+          "americas": 29,
+          "oceania": 8
+        }
+      },
+      "哲学": {
+        "total": 128,
+        "china": 33,
+        "world": 95,
+        "byRegion": {
+          "china": 33,
+          "europe": 68,
+          "west-asia": 2,
+          "central-asia": 0,
+          "south-asia": 6,
+          "east-asia": 7,
+          "southeast-asia": 0,
+          "africa": 0,
+          "americas": 12,
+          "oceania": 0
+        }
+      },
+      "宗教": {
+        "total": 76,
+        "china": 15,
+        "world": 61,
+        "byRegion": {
+          "china": 15,
+          "europe": 23,
+          "west-asia": 8,
+          "central-asia": 1,
+          "south-asia": 15,
+          "east-asia": 4,
+          "southeast-asia": 4,
+          "africa": 5,
+          "americas": 1,
+          "oceania": 0
+        }
+      },
+      "文学艺术": {
+        "total": 69,
+        "china": 27,
+        "world": 42,
+        "byRegion": {
+          "china": 27,
+          "europe": 31,
+          "west-asia": 0,
+          "central-asia": 0,
+          "south-asia": 5,
+          "east-asia": 3,
+          "southeast-asia": 0,
+          "africa": 0,
+          "americas": 2,
+          "oceania": 1
+        }
+      },
+      "科技医学": {
+        "total": 87,
+        "china": 26,
+        "world": 61,
+        "byRegion": {
+          "china": 26,
+          "europe": 42,
+          "west-asia": 2,
+          "central-asia": 2,
+          "south-asia": 1,
+          "east-asia": 3,
+          "southeast-asia": 0,
+          "africa": 2,
+          "americas": 9,
+          "oceania": 0
+        }
+      },
+      "教育学术": {
+        "total": 116,
+        "china": 65,
+        "world": 51,
+        "byRegion": {
+          "china": 65,
+          "europe": 25,
+          "west-asia": 2,
+          "central-asia": 2,
+          "south-asia": 2,
+          "east-asia": 6,
+          "southeast-asia": 1,
+          "africa": 3,
+          "americas": 10,
+          "oceania": 0
+        }
+      },
+      "经济贸易": {
+        "total": 64,
+        "china": 27,
+        "world": 37,
+        "byRegion": {
+          "china": 27,
+          "europe": 20,
+          "west-asia": 2,
+          "central-asia": 1,
+          "south-asia": 0,
+          "east-asia": 2,
+          "southeast-asia": 3,
+          "africa": 3,
+          "americas": 5,
+          "oceania": 1
+        }
+      },
+      "工程建筑": {
+        "total": 62,
+        "china": 19,
+        "world": 43,
+        "byRegion": {
+          "china": 19,
+          "europe": 14,
+          "west-asia": 5,
+          "central-asia": 1,
+          "south-asia": 5,
+          "east-asia": 0,
+          "southeast-asia": 4,
+          "africa": 6,
+          "americas": 7,
+          "oceania": 1
+        }
+      },
+      "文化": {
+        "total": 300,
+        "china": 104,
+        "world": 196,
+        "byRegion": {
+          "china": 104,
+          "europe": 123,
+          "west-asia": 8,
+          "central-asia": 4,
+          "south-asia": 16,
+          "east-asia": 13,
+          "southeast-asia": 2,
+          "africa": 5,
+          "americas": 24,
+          "oceania": 1
+        }
+      },
+      "交流": {
+        "total": 106,
+        "china": 38,
+        "world": 68,
+        "byRegion": {
+          "china": 38,
+          "europe": 27,
+          "west-asia": 0,
+          "central-asia": 2,
+          "south-asia": 3,
+          "east-asia": 4,
+          "southeast-asia": 8,
+          "africa": 10,
+          "americas": 13,
+          "oceania": 1
+        }
+      },
+      "社会": {
+        "total": 163,
+        "china": 60,
+        "world": 103,
+        "byRegion": {
+          "china": 60,
+          "europe": 52,
+          "west-asia": 8,
+          "central-asia": 1,
+          "south-asia": 5,
+          "east-asia": 5,
+          "southeast-asia": 3,
+          "africa": 8,
+          "americas": 19,
+          "oceania": 2
+        }
+      }
     },
     "byCategory": {
-      "政治": 263,
-      "战争": 157,
-      "文化": 101,
-      "交流": 54,
-      "社会": 68
+      "政治": 286,
+      "战争": 177,
+      "文化": 299,
+      "交流": 79,
+      "社会": 103
     }
   },
   "dynasties": {
@@ -106,14 +317,14 @@
     {
       "id": "spring",
       "name": "春秋",
-      "events": 16,
+      "events": 19,
       "people": 4
     },
     {
       "id": "warring",
       "name": "战国",
-      "events": 33,
-      "people": 51
+      "events": 44,
+      "people": 54
     },
     {
       "id": "qin",
@@ -124,37 +335,37 @@
     {
       "id": "han",
       "name": "两汉",
-      "events": 53,
-      "people": 90
+      "events": 59,
+      "people": 91
     },
     {
       "id": "three",
       "name": "三国",
-      "events": 18,
-      "people": 48
+      "events": 20,
+      "people": 49
     },
     {
       "id": "jin",
       "name": "两晋 · 十六国",
-      "events": 20,
-      "people": 32
+      "events": 26,
+      "people": 33
     },
     {
       "id": "north-south",
       "name": "南北朝",
-      "events": 24,
-      "people": 41
+      "events": 27,
+      "people": 42
     },
     {
       "id": "sui",
       "name": "隋",
-      "events": 10,
+      "events": 11,
       "people": 34
     },
     {
       "id": "tang",
       "name": "唐",
-      "events": 47,
+      "events": 60,
       "people": 112
     },
     {
@@ -166,26 +377,32 @@
     {
       "id": "song",
       "name": "宋 · 辽 · 金 · 西夏",
-      "events": 84,
-      "people": 119
+      "events": 105,
+      "people": 121
     },
     {
       "id": "yuan",
       "name": "元",
-      "events": 22,
+      "events": 24,
       "people": 45
     },
     {
       "id": "ming",
       "name": "明",
-      "events": 70,
-      "people": 90
+      "events": 100,
+      "people": 103
     },
     {
       "id": "qing",
       "name": "清",
-      "events": 161,
-      "people": 135
+      "events": 234,
+      "people": 196
+    },
+    {
+      "id": "modern-reading",
+      "name": "20世纪",
+      "events": 130,
+      "people": 72
     }
   ],
   "checkedMajorPeople": [
@@ -271,13 +488,49 @@
       "eventYear": 1716,
       "deathYear": 1711,
       "explanation": "张玉书参与前期主持编纂，1711年去世；1716年刊成时已不在世。"
+    },
+    {
+      "person": "路德维希·维特根斯坦",
+      "personId": "modern-phil-wittgenstein",
+      "event": "维特根斯坦《哲学研究》身后出版",
+      "eventId": "modern-wittgenstein-investigations",
+      "eventYear": 1953,
+      "deathYear": 1951,
+      "explanation": "维特根斯坦1951年去世；此处关联其遗稿1953年的身后出版，不是本人当年活动。"
+    },
+    {
+      "person": "西蒙娜·薇依",
+      "personId": "modern-phil-weil",
+      "event": "薇依《压迫与自由》文集身后出版",
+      "eventId": "modern-weil-oppression-liberty",
+      "eventYear": 1955,
+      "deathYear": 1943,
+      "explanation": "薇依1943年去世；1955年为遗稿文集出版，非本人当年活动。"
+    },
+    {
+      "person": "约翰·朗肖·奥斯汀",
+      "personId": "modern-phil-austin",
+      "event": "奥斯汀《如何以言行事》身后出版",
+      "eventId": "modern-austin-words",
+      "eventYear": 1962,
+      "deathYear": 1960,
+      "explanation": "奥斯汀1960年去世；此处关联1955年讲稿在1962年的身后出版，不是本人当年活动。"
+    },
+    {
+      "person": "路德维希·维特根斯坦",
+      "personId": "modern-phil-wittgenstein",
+      "event": "维特根斯坦《论确定性》遗稿刊行",
+      "eventId": "modern-wittgenstein-certainty",
+      "eventYear": 1969,
+      "deathYear": 1951,
+      "explanation": "关联1949—1951年前后的晚年笔记与1969年身后出版；作者1951年已去世。"
     }
   ],
   "sourceRetention": {
-    "references": 585,
-    "retained": 536,
+    "references": 910,
+    "retained": 810,
     "unavailable": 0,
-    "failed": 49,
+    "failed": 100,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [
@@ -307,10 +560,11 @@
     }
   ],
   "notes": [
-    "数量表示当前覆盖范围，不能据此声明中国历史资料完整。",
+    "数量表示当前覆盖范围，不能据此声明中国或世界历史资料完整。",
     "基础人物档案有身份简介和出处；详细年谱只对已核对记录的三人提供。",
     "箭头表示记录的先后顺序，省略中间行程。相关事件地点不构成个人到访证明。",
     "时间轴延伸至约前10000年，史前遗址以考古区间表示，不据此虚构疆域。",
+    "时空柱与事件阅读延伸至2000年；历史疆域止于1912年，现代事件不能用早期疆域表示当年。",
     "事件与朝代介绍为有出处的整理稿，仍需持续核对文献与争议。"
   ]
 }

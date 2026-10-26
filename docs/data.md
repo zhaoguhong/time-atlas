@@ -25,6 +25,14 @@ Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保�
 - 人物与事件相关不等于本人在场。去世后的关联事件必须解释间接或身后关系；主题、年代相近的自动推荐不能宣称因果。
 - 事件坐标可能代表区域；城市位置不等于古城边界，现代海岸、河流和湖泊仅供参照。
 
+地图疆域仍止于1912年，事件阅读与时空柱延伸至2000年，两者在覆盖清单中分别使用 `mapRange` 与 `readingRange`。现代人物的事件关联按阅读范围审校，不因出生晚于地图上限就当作不可阅读；缺少同期疆域时必须保留界面说明。
+
+### 事件主题筛选
+
+`src/data/event-topics.ts` 按稳定事件 ID 维护既有记录的阅读主题，新增记录直接在 `themes` 中声明与筛选选项相同的精确标签；匹配不扫描正文关键词。分类以已引用来源的事件正文为依据；主题可以交叉归属，不改写事件原有的 `category`。哲学、宗教、文学艺术等可直接筛选；原归为政治、文化或交流、但直接描述战争的记录也明确补入战争筛选。不要靠正文提到某个关键词或人物就自动归类。新增事件或修订主题时同步检查这个映射；未细分的记录仍通过原类别与“全部”可达。
+
+`src/lib/event-categories.test.ts` 检查映射 ID、重复项、跨类别筛选和目录一致性；不把这些检查当作史料核验。
+
 ### 年谱与早期史的具体约束
 
 苏轼年谱参考[平顶山学院年谱](https://fns.pdsu.edu.cn/info/1062/1655.htm)，康熙参考[故宫生平与年表](https://www.dpm.org.cn/court/lineage/226256.html)，诸葛亮参考[《三国志》卷 35](https://zh.wikisource.org/wiki/三國志/卷35)。详细出处仍以每条记录为准。
@@ -91,7 +99,7 @@ npm run data:audit:ci
 
 `data/people.sources.json` 保留请求与哈希，`src/data/generated/people.json` 保留实体和 revision；这些可复现输出需要提交，与被忽略的原始响应缓存不同。人物“延伸阅读”来自同版本 Wikidata 的站点链接，生成在 `src/data/generated/person-reading-links.json`，不能按姓名猜测词条地址。编辑人物介绍位于 `person-reading.ts`、`depth-people.ts`、`person-expansion*.ts` 等集合。
 
-世界史事件位于 `src/data/world-events.ts` 和 `world-expansion-*.ts`，由 `content.ts` 汇总。每条记录独立提供出处、日期范围、代表地点与影响。参考网站的原文与插图不随网站分发；地区是阅读归属，不能仅按现代坐标自动推断。中国之外的既有早期事件分类也应与 `src/lib/time-pillar.ts` 中的映射一致。
+世界史事件位于 `src/data/world-events.ts` 和 `world-expansion-*.ts`，东西方哲学节点及编辑人物档案位于 `philosophy-west.ts`、`philosophy-east.ts`，跨类别阅读节点位于 `category-expansion.ts`、`category-depth.ts`，对应人物及有据的创作、研究关联位于 `category-people.ts`，现代哲学与世界史位于 `philosophy-modern.ts`、`world-modern.ts`，均由 `content.ts` 汇总。每条记录独立提供出处、日期范围、代表地点与影响。参考网站的原文与插图不随网站分发；地区是阅读归属，不能仅按现代坐标自动推断。中国之外的既有早期事件分类也应与 `src/lib/time-pillar.ts` 中的映射一致。
 
 ## 阅读目录与正文
 
@@ -105,7 +113,7 @@ npm run data:audit:ci
 
 普通贡献者与 CI 使用 `npm run data:audit:ci`：检查字段、纪年、关联、专题与来源元数据。存在的缓存会验证哈希，缺失文件明确统计为未核验；该命令不改写覆盖或审校报告。
 
-内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
+内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`。覆盖清单中的 `events.byFilterCategory` 按实际筛选规则列出各类别的中外与地区分布，主题可交叉，不能将这些计数相加当作独立事件总量。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
 
 `npm run data:references` 会请求参考网站并更新索引，可能耗时或遭拒绝访问，不是普通构建检查。原始参考资料通过 `scripts/collect-references.py` 留存。新抓取字节可能不同，不能替代旧快照后继续声称原哈希已验证。
 

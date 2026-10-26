@@ -35,6 +35,11 @@ const server = await createServer({
 try {
   const { events, people, personById } = await server.ssrLoadModule('/src/data/content.ts')
   const { eventRegion, historyRegions } = await server.ssrLoadModule('/src/lib/time-pillar.ts')
+  const { MIN_YEAR, MAX_YEAR, PILLAR_MAX_YEAR, modernReadingPeriod } =
+    await server.ssrLoadModule('/src/lib/history.ts')
+  const { eventCategories, matchesEventCategory } = await server.ssrLoadModule(
+    '/src/lib/event-categories.ts',
+  )
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
@@ -73,11 +78,15 @@ try {
     }
     assert(event.summary && event.background && event.impact && event.sources.length, event.id)
     validateSources(event)
-    assert(validYear(event.year) && event.year >= -10000 && event.year <= 1912, event.id)
+    assert(
+      validYear(event.year) && event.year >= MIN_YEAR && event.year <= PILLAR_MAX_YEAR,
+      event.id,
+    )
     if (event.endYear !== undefined)
       assert(
         validYear(event.endYear) &&
           event.endYear >= event.year &&
+          event.endYear <= PILLAR_MAX_YEAR &&
           event.dateLabel &&
           event.dateNote,
         event.id,
@@ -229,8 +238,11 @@ try {
   const personRecords = people.map((person) => {
     const related = events.filter((event) => event.people.includes(person.id))
     const outsideMap =
-      (person.death !== null && person.death < -10000) ||
-      (person.birth !== null && person.birth > 1912)
+      (person.death !== null && person.death < MIN_YEAR) ||
+      (person.birth !== null && person.birth > MAX_YEAR)
+    const outsideReading =
+      (person.death !== null && person.death < MIN_YEAR) ||
+      (person.birth !== null && person.birth > PILLAR_MAX_YEAR)
     return {
       id: person.id,
       name: person.name,
@@ -242,8 +254,10 @@ try {
       eventCount: related.length,
       eventIds: related.map((event) => event.id),
       journeyNodes: journeys.find((journey) => journey.personId === person.id)?.nodes.length ?? 0,
-      coverage: outsideMap
-        ? 'outside-map-range'
+      outsideMapRange: outsideMap,
+      outsideReadingRange: outsideReading,
+      coverage: outsideReading
+        ? 'outside-reading-range'
         : !related.length
           ? 'no-linked-events'
           : related.length === 1
@@ -372,7 +386,8 @@ try {
   }
   const report = {
     generatedAt,
-    mapRange: { from: -10000, to: 1912 },
+    mapRange: { from: MIN_YEAR, to: MAX_YEAR },
+    readingRange: { from: MIN_YEAR, to: PILLAR_MAX_YEAR },
     people: {
       total: people.length,
       importedSnapshot: snapshot.count,
@@ -384,8 +399,8 @@ try {
         .length,
       oneLinkedEvent: personRecords.filter((person) => person.coverage === 'one-linked-event')
         .length,
-      outsideMapRange: personRecords.filter((person) => person.coverage === 'outside-map-range')
-        .length,
+      outsideMapRange: personRecords.filter((person) => person.outsideMapRange).length,
+      outsideReadingRange: personRecords.filter((person) => person.outsideReadingRange).length,
     },
     events: {
       total: events.length,
@@ -395,6 +410,27 @@ try {
           region,
           events.filter((event) => eventRegion(event) === region).length,
         ]),
+      ),
+      byFilterCategory: Object.fromEntries(
+        eventCategories
+          .filter((category) => category !== '全部')
+          .map((category) => {
+            const matching = events.filter((event) => matchesEventCategory(event, category))
+            return [
+              category,
+              {
+                total: matching.length,
+                china: matching.filter((event) => eventRegion(event) === 'china').length,
+                world: matching.filter((event) => eventRegion(event) !== 'china').length,
+                byRegion: Object.fromEntries(
+                  Object.keys(historyRegions).map((region) => [
+                    region,
+                    matching.filter((event) => eventRegion(event) === region).length,
+                  ]),
+                ),
+              },
+            ]
+          }),
       ),
       byCategory: Object.fromEntries(
         ['政治', '战争', '文化', '交流', '社会'].map((category) => [
@@ -419,7 +455,7 @@ try {
         to: j.nodes.at(-1).year,
       })),
     },
-    periods: periods.map((period) => ({
+    periods: [...periods, modernReadingPeriod].map((period) => ({
       id: period.id,
       name: period.name,
       events: events.filter((e) => e.year >= period.from && e.year <= period.to).length,
@@ -445,10 +481,11 @@ try {
       availableEditorialRecord: people.some((p) => p.name === name || p.aliases?.includes(name)),
     })),
     notes: [
-      '数量表示当前覆盖范围，不能据此声明中国历史资料完整。',
+      '数量表示当前覆盖范围，不能据此声明中国或世界历史资料完整。',
       '基础人物档案有身份简介和出处；详细年谱只对已核对记录的三人提供。',
       '箭头表示记录的先后顺序，省略中间行程。相关事件地点不构成个人到访证明。',
       '时间轴延伸至约前10000年，史前遗址以考古区间表示，不据此虚构疆域。',
+      '时空柱与事件阅读延伸至2000年；历史疆域止于1912年，现代事件不能用早期疆域表示当年。',
       '事件与朝代介绍为有出处的整理稿，仍需持续核对文献与争议。',
     ],
   }

@@ -1030,3 +1030,15 @@
 html[data-color-mode='dark'] .pillar-continuing-chip {
   background: #182c32e8;
 }
+
+.pillar-category-summary {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.pillar-category-summary small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}

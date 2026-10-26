@@ -51,7 +51,7 @@ describe('source-supported person content', () => {
       ).toBe(false)
   })
 
-  it('keeps undated philosophical and artistic narratives outside the dated event graph', () => {
+  it('keeps undocumented episodes undated and identifies sourced philosophical periods', () => {
     for (const [personId, sourceUrl] of [
       ['mozi', 'https://zh.wikisource.org/wiki/墨子/公輸'],
       ['q2665475', 'https://zh.wikisource.org/wiki/筆法記'],
@@ -63,10 +63,17 @@ describe('source-supported person content', () => {
         person.sources.map((source) => source.url),
         personId,
       ).toContain(sourceUrl)
-      expect(
-        events.some((event) => event.people.includes(personId)),
-        personId,
-      ).toBe(false)
+      const linked = events.filter((event) => event.people.includes(personId))
+      if (personId === 'mozi') {
+        expect(linked.map((event) => event.id)).toEqual(['east-mozi-inclusive-care'])
+        expect(linked[0]).toMatchObject({ year: -430, endYear: -300 })
+        expect(linked[0].dateLabel).toContain('约')
+        expect(linked[0].dateNote).toContain('跨越多代')
+        expect(linked[0].peopleNotes?.mozi).toContain('不是墨子本人到访')
+        expect(linked[0].sources.some((source) => source.url.includes('plato.stanford.edu'))).toBe(
+          true,
+        )
+      } else expect(linked).toHaveLength(0)
       expect(
         journeys.some((journey) => journey.personId === personId),
         personId,

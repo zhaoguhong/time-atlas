@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-23T07:00:42.687Z",
-  "totalSourceLinks": 1249,
-  "referenceDocuments": 585,
-  "successfulSnapshots": 536,
+  "generatedAt": "2026-10-25T17:43:27.121Z",
+  "totalSourceLinks": 1574,
+  "referenceDocuments": 910,
+  "successfulSnapshots": 810,
   "unavailable": [
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
@@ -13,6 +13,16 @@
       "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
       "attemptedAt": "2026-10-23T06:45:08.687741+00:00",
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://academic.oup.com/reference/62399/reference-article-abstract/561732157",
+      "attemptedAt": "2026-10-25T16:46:22.067054+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://afe.easia.columbia.edu/ps/cup/lu_jiuyuan_mind.pdf",
+      "attemptedAt": "2026-10-25T16:49:43.130782+00:00",
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
@@ -35,6 +45,46 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://azhar.eg/alazharmosque/about_alazhar.htm",
+      "attemptedAt": "2026-10-25T16:49:54.744890+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://blogs.bodleian.ox.ac.uk/oxfordtrainees/wp-content/uploads/sites/133/2021/09/Exhibition-Handlist-Illustrating-Dantes-Divine-Comedy-October-2020.pdf",
+      "attemptedAt": "2026-10-25T16:51:11.484635+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1978-07-8-35",
+      "attemptedAt": "2026-10-25T16:48:41.787364+00:00",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://digitalarchive.npm.gov.tw/Antique/Content?Dept=U&uid=9499",
+      "attemptedAt": "2026-10-25T16:49:51.563532+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
+      "attemptedAt": "2026-10-25T16:51:32.506367+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://dmcb.dila.edu.tw/dmcb/Xiong_Shili_%E7%86%8A%E5%8D%81%E5%8A%9B",
+      "attemptedAt": "2026-10-25T17:23:07.929542+00:00",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+    },
+    {
+      "url": "https://doi.org/10.7312/columbia/9780231153973.003.0016",
+      "attemptedAt": "2026-10-25T16:50:03.669392+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://duomo.firenze.it/en/40/dome",
+      "attemptedAt": "2026-10-25T16:50:11.211047+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://expositions.nlr.ru/ve/RA6070/conquest-Samarkand",
       "attemptedAt": "2026-10-23T06:46:13.882602+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
@@ -43,6 +93,26 @@
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
       "attemptedAt": "2026-10-07T07:11:22.393274+00:00",
       "error": "IncompleteRead(81500 bytes read)"
+    },
+    {
+      "url": "https://guides.loc.gov/chronicling-america-brooklyn-bridge",
+      "attemptedAt": "2026-10-25T16:50:19.104887+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://guides.loc.gov/chronicling-america-telephone-invention",
+      "attemptedAt": "2026-10-25T17:16:25.526585+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
+      "attemptedAt": "2026-10-25T16:46:35.649972+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://history.rcp.ac.uk/timeline",
+      "attemptedAt": "2026-10-25T16:50:33.105941+00:00",
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://idp.bl.uk/references/DiamondSutra/",
@@ -60,6 +130,16 @@
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://mzzj.yn.gov.cn/html/2015/minjianxinyang_0629/9703.html",
+      "attemptedAt": "2026-10-25T17:16:53.064052+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://nzhistory.govt.nz/media/interactive/king-movement-map",
+      "attemptedAt": "2026-10-25T16:46:51.355054+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://nzhistory.govt.nz/people/james-cook",
       "attemptedAt": "2026-10-23T06:51:01.629785+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -75,6 +155,26 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "attemptedAt": "2026-10-25T17:23:21.003172+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://old.maa.org/node/1409908",
+      "attemptedAt": "2026-10-25T16:50:53.875994+00:00",
+      "error": "HTTP Error 521: <none>"
+    },
+    {
+      "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8265/CBP-8265.pdf",
+      "attemptedAt": "2026-10-25T16:46:39.303688+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://smarthistory.org/giant-buddha-leshan/",
+      "attemptedAt": "2026-10-25T17:16:44.113792+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
       "attemptedAt": "2026-10-23T06:54:35.535937+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -85,9 +185,34 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://tolstoymuseum.ru/news/2025/09/25/80115/",
+      "attemptedAt": "2026-10-25T17:17:18.318193+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://umma.umich.edu/objects/ushiwakamaru-and-jorurihime-mitate-1948-1-170/",
+      "attemptedAt": "2026-10-25T16:51:43.403619+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://uw.manifoldapp.org/system/resource/c/8/6/c86ddb44-a6ad-42f4-b7c7-b9e4f10754f1/attachment/e15c37e39a88fbda9cd4c2e24ff49311.pdf",
+      "attemptedAt": "2026-10-25T16:51:45.150036+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
       "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
       "attemptedAt": "2026-10-06T16:20:29.279260+00:00",
       "error": "HTTP Error 412: Precondition Failed"
+    },
+    {
+      "url": "https://www.amsterdam.nl/stadsarchief/stukken/handel/omwisselen/",
+      "attemptedAt": "2026-10-25T17:16:36.453723+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.bne.es/es/colecciones/cervantes/ingenioso-hidalgo-don-quixote-mancha",
+      "attemptedAt": "2026-10-25T16:51:51.388946+00:00",
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
@@ -95,9 +220,44 @@
       "error": "The read operation timed out"
     },
     {
+      "url": "https://www.cppcc.gov.cn/2011/06/27/ARTI1309159125046101.shtml",
+      "attemptedAt": "2026-10-25T17:33:19.065007+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cppcc.gov.cn'. (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.gc.cuny.edu/saul-kripke-center/about-saul-kripke-center",
+      "attemptedAt": "2026-10-25T17:24:06.994189+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.imf.org/external/about/timeline/index.htm",
+      "attemptedAt": "2026-10-25T17:24:13.476117+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.iwm.org.uk/collections/item/object/205193059",
+      "attemptedAt": "2026-10-25T17:24:14.137939+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.iwm.org.uk/sites/default/files/files/2023-10/second_world_war_galleries_large_print.pdf",
+      "attemptedAt": "2026-10-25T17:24:17.111472+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
       "attemptedAt": "2026-10-23T06:45:49.214582+00:00",
       "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.kanazawa-museum.jp/daisetz/about.html",
+      "attemptedAt": "2026-10-25T17:24:20.926660+00:00",
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.loc.gov/collections/daguerreotypes/articles-and-essays/timeline-of-the-daguerreotype-era/",
+      "attemptedAt": "2026-10-25T17:16:24.041662+00:00",
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
@@ -120,6 +280,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/complete-national-recording-registry-listing/",
+      "attemptedAt": "2026-10-25T17:24:21.093265+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
       "attemptedAt": "2026-10-23T06:54:43.413272+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -135,13 +300,33 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/essays/geometric-art-in-ancient-greece",
+      "attemptedAt": "2026-10-25T17:15:36.988024+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/hagia-sophia-532-37",
+      "attemptedAt": "2026-10-25T16:51:56.176437+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
       "attemptedAt": "2026-10-23T06:54:39.832640+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/essays/hokusai-great-wave",
+      "attemptedAt": "2026-10-25T16:51:56.556988+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
       "attemptedAt": "2026-10-23T06:54:59.227031+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-later-ottomans-and-the-impact-of-europe",
+      "attemptedAt": "2026-10-25T16:46:44.604923+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -215,8 +400,43 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.moma.org/collection/works/79802",
+      "attemptedAt": "2026-10-25T17:15:54.196250+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.musee-orsay.fr/fr/ressources/repertoire-artistes-personnalites/marie-curie-203740",
+      "attemptedAt": "2026-10-25T17:38:09.760420+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ncl.edu.tw/information_236_15182.html",
+      "attemptedAt": "2026-10-25T17:15:38.507541+00:00",
+      "error": "HTTP Error 302: Found"
+    },
+    {
+      "url": "https://www.nga.gov/artists/1349-vincent-van-gogh",
+      "attemptedAt": "2026-10-25T17:38:10.724214+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nga.gov/stories/articles/1874-birth-impressionism",
+      "attemptedAt": "2026-10-25T17:15:52.315910+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
       "attemptedAt": "2026-10-22T08:49:35.598235+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ohchr.org/sites/default/files/Documents/Publications/Compilation1.1en.pdf",
+      "attemptedAt": "2026-10-25T17:24:32.971249+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ox.ac.uk/about/the-university/history",
+      "attemptedAt": "2026-10-25T17:16:32.434553+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -230,8 +450,43 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
+      "attemptedAt": "2026-10-25T16:46:46.468509+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
+      "attemptedAt": "2026-10-25T17:16:40.486763+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
+      "attemptedAt": "2026-10-25T16:46:31.788560+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.rsc.org/news/2019/january/finding-the-periodic-table",
+      "attemptedAt": "2026-10-25T17:16:18.171785+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
+      "attemptedAt": "2026-10-25T16:52:03.599339+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+    },
+    {
       "url": "https://www.slam.org/collection/constituents/3919/",
       "attemptedAt": "2026-10-23T06:54:25.307099+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/news/130-years/1889-2019-130-years-amazement",
+      "attemptedAt": "2026-10-25T16:52:11.472991+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.unhcr.org/publications/final-act-united-nations-conference-plenipotentiaries-status-refugees-and-stateless",
+      "attemptedAt": "2026-10-25T17:24:39.369205+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -264,6 +519,32 @@
       "attemptedAt": "2026-10-23T06:45:08.687741+00:00"
     },
     {
+      "url": "https://academic.oup.com/reference/62399/reference-article-abstract/561732157",
+      "title": "Oxford Bibliographies · Battle of Manzikert",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:22.067054+00:00"
+    },
+    {
+      "url": "https://afe.easia.columbia.edu/ps/cup/lu_jiuyuan_mind.pdf",
+      "title": "Columbia University · Mind Is Principle by Lu Jiuyuan",
+      "error": "HTTP Error 404: Not Found",
+      "attemptedAt": "2026-10-25T16:49:43.130782+00:00"
+    },
+    {
+      "url": "https://afe.easia.columbia.edu/ps/japan/taika.pdf",
+      "title": "Columbia University · Excerpts from the Reform Edict of Taika",
+      "retrievedAt": "2026-10-25T16:46:21.615706+00:00",
+      "sha256": "50e07d44b8da624ff3a48bfebc3ae495636eee30941fa11b580231009f5c57de",
+      "revisionId": null
+    },
+    {
+      "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-rice.html",
+      "title": "哥伦比亚大学 Asia for Educators · Rice Cultivation in Song China",
+      "retrievedAt": "2026-10-25T16:49:34.567140+00:00",
+      "sha256": "c29f4afb2b7695750bd63ed3039e728f0d2bdbd0e850b9a8a57c5ce4658c0805",
+      "revisionId": null
+    },
+    {
       "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
       "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
       "error": "HTTP Error 403: Forbidden",
@@ -281,6 +562,13 @@
       "title": "芝加哥艺术博物馆 · Oba Ewuare and the Portuguese",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-23T06:46:45.885981+00:00"
+    },
+    {
+      "url": "https://archives.senat.fr/en-2025-le-senat-fete-ses-150-ans/victor-hugo-ecrivain-et-senateur.html",
+      "title": "Archives du Sénat · Victor Hugo, écrivain et sénateur",
+      "retrievedAt": "2026-10-25T17:37:59.976181+00:00",
+      "sha256": "fdb0d100d77f86c43cd195af0ab1365b1db933ba218bf8460e3287bd269912e7",
+      "revisionId": null
     },
     {
       "url": "https://armada.parliament.uk/history.html",
@@ -302,10 +590,91 @@
       "revisionId": null
     },
     {
+      "url": "https://azhar.eg/alazharmosque/about_alazhar.htm",
+      "title": "爱资哈尔官方门户 · الجامع الأزهر الشريف",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T16:49:54.744890+00:00"
+    },
+    {
+      "url": "https://bauhaus100.uni-weimar.de/en/history/",
+      "title": "Bauhaus-Universität Weimar · History",
+      "retrievedAt": "2026-10-25T17:33:11.397626+00:00",
+      "sha256": "3c1823472a370c3ee0522d4c0c00a465f9b591da3aa5e55d143823be2fbdccea",
+      "revisionId": null
+    },
+    {
       "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
       "title": "英国科学博物馆 · Sending messages across the Atlantic",
       "retrievedAt": "2026-10-23T06:51:01.656575+00:00",
       "sha256": "da6000d449de022631a61e6b81cc99315b7d0c1678feb05078c28d768911efef",
+      "revisionId": null
+    },
+    {
+      "url": "https://blogs.bodleian.ox.ac.uk/oxfordtrainees/wp-content/uploads/sites/133/2021/09/Exhibition-Handlist-Illustrating-Dantes-Divine-Comedy-October-2020.pdf",
+      "title": "牛津大学博德利图书馆 · Illustrating Dante’s Divine Comedy",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T16:51:11.484635+00:00"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb306255232",
+      "title": "Bibliothèque nationale de France · Les Misérables",
+      "retrievedAt": "2026-10-25T17:15:42.665566+00:00",
+      "sha256": "3c9ab9b72493c9861056632a689ccee58d4819b9e4304d39976d27a65b102916",
+      "revisionId": null
+    },
+    {
+      "url": "https://catalogues.royalsociety.org/CalmView/Record.aspx?id=PT%2F72%2F7&src=CalmView.Catalog",
+      "title": "英国皇家学会档案 · A dynamical theory of the electromagnetic field",
+      "retrievedAt": "2026-10-25T16:49:44.400630+00:00",
+      "sha256": "43587c24f0eb76c43bb264d95affc0a3fdc11551b92a6c9855697acd91585711",
+      "revisionId": null
+    },
+    {
+      "url": "https://ccnmtl.columbia.edu/projects/mmt/ambedkar/about.html",
+      "title": "Columbia University · Annihilation of Caste: About This MSE",
+      "retrievedAt": "2026-10-25T17:22:53.082242+00:00",
+      "sha256": "0ad5019d8dd6ef40410bfa9375bf35a54454a1e88c22e07ab16e010a4535590e",
+      "revisionId": null
+    },
+    {
+      "url": "https://cenacolovinciano.org/en/museum/the-works/the-last-supper-leonardo-da-vinci-1452-1519/",
+      "title": "Museo del Cenacolo Vinciano · The Last Supper",
+      "retrievedAt": "2026-10-25T17:15:44.291133+00:00",
+      "sha256": "e3c8409038079d17e7d439e64ee51afe496748a6100e4e97c94f4a01376eced1",
+      "revisionId": null
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BA0822464X",
+      "title": "CiNii Books · Sein und Zeit, 1. Hälfte (1927)",
+      "retrievedAt": "2026-10-25T17:41:42.208674+00:00",
+      "sha256": "7953ea146ea89a58ea8dc0ed191620c04df7e708c7751d4b5ba3ca45d4d9ecbc",
+      "revisionId": null
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BA56097962?l=en",
+      "title": "CiNii Books · 东京大学藏《论道》题录",
+      "retrievedAt": "2026-10-25T17:33:10.401038+00:00",
+      "sha256": "aec8bdecf4b18f2ac39fe64d73bd192a68220a6d337e30d1629bd7fc777276ce",
+      "revisionId": null
+    },
+    {
+      "url": "https://collaborate.princeton.edu/en/publications/saul-kripke-naming-and-necessity/",
+      "title": "Princeton University · Saul Kripke: Naming and Necessity",
+      "retrievedAt": "2026-10-25T17:22:52.657335+00:00",
+      "sha256": "9f3ebee121af7da62c3f0bf5493a74c44752a340944c4aab2c146637889a742b",
+      "revisionId": null
+    },
+    {
+      "url": "https://collection.nam.ac.uk/detail.php?acc=1978-07-8-35",
+      "title": "National Army Museum · Gold Coast Regiment Company arriving in Kumasi",
+      "error": "The read operation timed out",
+      "attemptedAt": "2026-10-25T16:48:41.787364+00:00"
+    },
+    {
+      "url": "https://dag.nanjing.gov.cn/daggk/gzjs/",
+      "title": "南京市档案馆 · 侵华日军南京大屠杀档案",
+      "retrievedAt": "2026-10-25T17:22:51.480609+00:00",
+      "sha256": "9543d8915a567ee728ac36230e75e8956eadaa6823964a4797e4d2f575fe404b",
       "revisionId": null
     },
     {
@@ -315,6 +684,57 @@
       "lastCacheCheckAt": "2026-10-07T06:45:07.104098+00:00",
       "sha256": "b58ec07ff7e5a1703cb5251ca99eb28c74ef4a9891a6b3e35b13c35a995523f5",
       "revisionId": null
+    },
+    {
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923622775887905.pdf",
+      "title": "陕西省地方志办公室 · 陕西省志相关医学史卷",
+      "retrievedAt": "2026-10-25T17:16:09.117217+00:00",
+      "sha256": "9d73075e76f5b33e22ac7557c84e64e4c16b3bf1fb66eae40395a028ec7733b9",
+      "revisionId": null
+    },
+    {
+      "url": "https://digital.sciencehistory.org/works/v979v4270",
+      "title": "Science History Institute · Traité Élémentaire de Chimie",
+      "retrievedAt": "2026-10-25T17:16:05.660307+00:00",
+      "sha256": "0128b20b7246ac4b1554c5d2c936d212d209bf7edddb4614ba4783288c8672ee",
+      "revisionId": null
+    },
+    {
+      "url": "https://digitalarchive.npm.gov.tw/Antique/Content?Dept=U&uid=9499",
+      "title": "台北故宫博物院 · 开元通宝",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:49:51.563532+00:00"
+    },
+    {
+      "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
+      "title": "意大利文化部罗马国家博物馆管理局 · Pantheon",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T16:51:32.506367+00:00"
+    },
+    {
+      "url": "https://dmcb.dila.edu.tw/dmcb/Xiong_Shili_%E7%86%8A%E5%8D%81%E5%8A%9B",
+      "title": "法鼓文理学院 · Database of Modern Chinese Buddhism · Xiong Shili",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily",
+      "attemptedAt": "2026-10-25T17:23:07.929542+00:00"
+    },
+    {
+      "url": "https://documents1.worldbank.org/curated/en/162201468236960426/pdf/418560CHA0Liberalization0WP401PUBLIC1.pdf",
+      "title": "World Bank · China: Liberalization of Services",
+      "retrievedAt": "2026-10-25T17:23:31.219226+00:00",
+      "sha256": "72bdad084c9190406f85c79ee31494f1729b443288a2799cd4596b34ab151c09",
+      "revisionId": null
+    },
+    {
+      "url": "https://doi.org/10.7312/columbia/9780231153973.003.0016",
+      "title": "Columbia University Press · Waiting for the Dawn",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:50:03.669392+00:00"
+    },
+    {
+      "url": "https://duomo.firenze.it/en/40/dome",
+      "title": "佛罗伦萨主教座堂工程处 · Dome",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:50:11.211047+00:00"
     },
     {
       "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/indo-greeks-sakas-and-kushanas/",
@@ -335,6 +755,13 @@
       "title": "印度 INFLIBNET · 笈多帝国",
       "retrievedAt": "2026-10-23T06:54:30.509929+00:00",
       "sha256": "47c3ca58e8966e987d408272c82356297a7a607002458d969f58330708ea4d80",
+      "revisionId": null
+    },
+    {
+      "url": "https://educationalgames.nobelprize.org/educational/medicine/tuberculosis/readmore.html",
+      "title": "Nobel Foundation · Robert Koch and Tuberculosis",
+      "retrievedAt": "2026-10-25T17:16:14.544492+00:00",
+      "sha256": "316ea020859a2e19a6446c122ed78e8f787446fa26957ebff59d8533babd18d8",
       "revisionId": null
     },
     {
@@ -375,10 +802,43 @@
       "revisionId": null
     },
     {
+      "url": "https://galileo.ou.edu/exhibits/new-astronomy.html",
+      "title": "University of Oklahoma Libraries · The New Astronomy",
+      "retrievedAt": "2026-10-25T17:16:00.099438+00:00",
+      "sha256": "f816ed2a15bc1c9f4dbcd6c9bc62c8d632a64f5eb601ec74223b2aaaa81d6623",
+      "revisionId": null
+    },
+    {
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-religious-peace-of-augsburg-september-25-1555",
+      "title": "German History in Documents and Images · Religious Peace of Augsburg",
+      "retrievedAt": "2026-10-25T17:16:46.948442+00:00",
+      "sha256": "fa9acac2ab7875dc7f2bae5c1e76a314f57f1b5879c6459dd9b1e13ba75aec0b",
+      "revisionId": null
+    },
+    {
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
       "title": "故宫博物院 · 凌家滩玉器展单元与墓葬说明",
       "error": "IncompleteRead(81500 bytes read)",
       "attemptedAt": "2026-10-07T07:11:22.393274+00:00"
+    },
+    {
+      "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_brahmagupta-brAhmasphuTasiddhAnta.htm",
+      "title": "University of Göttingen · GRETIL Brahmagupta",
+      "retrievedAt": "2026-10-25T17:15:56.602784+00:00",
+      "sha256": "a77b4d3c649f00f35e9e9673e936bc90b7b5a36e3284446dc5f3fda12b5b594c",
+      "revisionId": null
+    },
+    {
+      "url": "https://guides.loc.gov/chronicling-america-brooklyn-bridge",
+      "title": "美国国会图书馆 · Brooklyn Bridge, Fanfare and Fatalities",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:50:19.104887+00:00"
+    },
+    {
+      "url": "https://guides.loc.gov/chronicling-america-telephone-invention",
+      "title": "Library of Congress · Invention of the Telephone",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:25.526585+00:00"
     },
     {
       "url": "https://hd.housedivided.dickinson.edu/node/34893",
@@ -388,10 +848,50 @@
       "revisionId": null
     },
     {
+      "url": "https://healtheducationresources.unesco.org/sites/default/files/resources/planning_modules_vol_1_en.pdf",
+      "title": "UNESCO · Educational planning and management modules",
+      "retrievedAt": "2026-10-25T17:22:56.533731+00:00",
+      "sha256": "4a69469e20bc603d29b6567dc91191ec057972dcfdc06a3c111afbf76b6e7d89",
+      "revisionId": null
+    },
+    {
+      "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
+      "title": "UK Parliament · The Transatlantic Slave Trade",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:35.649972+00:00"
+    },
+    {
+      "url": "https://history.rcp.ac.uk/timeline",
+      "title": "英国皇家内科医师学会博物馆 · Timeline",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:50:33.105941+00:00"
+    },
+    {
       "url": "https://history.state.gov/countries/hawaii",
       "title": "美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations",
       "retrievedAt": "2026-10-23T06:50:54.310248+00:00",
       "sha256": "ab95b80fa44dfc407c2d791a79765eaa8e7d84935aa0af1f71d6ea7543f20861",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/countries/russia",
+      "title": "U.S. Office of the Historian · Russia: Dissolution of the Soviet Union",
+      "retrievedAt": "2026-10-25T17:22:57.697325+00:00",
+      "sha256": "8d974cab289331e193489416e7e376d2c2298d07cc46b5750f9ec05b28c6929a",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/departmenthistory/short-history/iraniancrises",
+      "title": "U.S. Office of the Historian · The Iranian Hostage Crisis",
+      "retrievedAt": "2026-10-25T17:22:58.827543+00:00",
+      "sha256": "3239fcdbcf754d080923c0350f1672f5a30d7c8b2411494a7a127843c9b10ffe",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1878/d523",
+      "title": "U.S. Department of State · FRUS 1878 · The Treaty of Berlin",
+      "retrievedAt": "2026-10-25T16:46:51.166478+00:00",
+      "sha256": "897dea6f31f5bca7999bf5e0fc3b8d6fc20403ca8992bedb3ac1b64d331d3d36",
       "revisionId": null
     },
     {
@@ -402,10 +902,115 @@
       "revisionId": null
     },
     {
+      "url": "https://history.state.gov/milestones/1914-1920/paris-peace",
+      "title": "U.S. Office of the Historian · The Paris Peace Conference and the Treaty of Versailles",
+      "retrievedAt": "2026-10-25T17:23:00.001193+00:00",
+      "sha256": "67b2c1f8b1ac703bcfbe7c120358786532e6401fd7aa9225436e2dc77a1adb5d",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1945-1952/chinese-rev",
+      "title": "U.S. Office of the Historian · The Chinese Revolution of 1949",
+      "retrievedAt": "2026-10-25T17:23:01.153638+00:00",
+      "sha256": "a030b7b6416d8abbcdf7823beabb8faa22c7cb714d20d51e912497e89e3ca7fb",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1945-1952/nato",
+      "title": "U.S. Office of the Historian · North Atlantic Treaty Organization, 1949",
+      "retrievedAt": "2026-10-25T17:23:02.326262+00:00",
+      "sha256": "463261c851e33c19bf0e5751ac5edfeb08525b2980f8a97d791043e05485aa4f",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1953-1960/bandung-conf",
+      "title": "U.S. Office of the Historian · Bandung Conference, 1955",
+      "retrievedAt": "2026-10-25T17:23:03.494696+00:00",
+      "sha256": "a62553b58423a8036f9d141a69e080dd1d0def030e07630ee36d21ca941f9e69",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1953-1960/dien-bien-phu",
+      "title": "U.S. Office of the Historian · Dien Bien Phu and the Fall of French Indochina",
+      "retrievedAt": "2026-10-25T17:23:04.644926+00:00",
+      "sha256": "84d83651d7739480c6c41ca493fd304e0388a6a8bbc3ab73b9bbd47baee09108",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1961-1968/cuban-missile-crisis",
+      "title": "U.S. Office of the Historian · The Cuban Missile Crisis, October 1962",
+      "retrievedAt": "2026-10-25T17:23:05.808045+00:00",
+      "sha256": "4b2ff5e24c81fb53860b1e258632d35c3e527a42bd0fdbb3cc5628d9c0a4945c",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1969-1976/oil-embargo",
+      "title": "U.S. Office of the Historian · Oil Embargo, 1973–1974",
+      "retrievedAt": "2026-10-25T17:23:06.972553+00:00",
+      "sha256": "16d6194bfd0f0bd9493de29c3f508a765fab12f5b937ee9f903bda2f58353362",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1977-1980/soviet-invasion-afghanistan",
+      "title": "U.S. Office of the Historian · The Soviet Invasion of Afghanistan and the U.S. Response",
+      "retrievedAt": "2026-10-25T17:23:08.131803+00:00",
+      "sha256": "b5c09977be3a8c5ebc7f743561a256a8c027de3a62dc4747784fc1a41af2402c",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1989-1992/fall-of-communism",
+      "title": "U.S. Office of the Historian · Fall of Communism in Eastern Europe, 1989",
+      "retrievedAt": "2026-10-25T17:23:09.115618+00:00",
+      "sha256": "7c4ae4a6be0c2b6420d2a4982add1a210dfae14312444af5c44ecca570e822c0",
+      "revisionId": null
+    },
+    {
+      "url": "https://hklit.lib.cuhk.edu.hk/wp-content/uploads/2020/10/litwalkd.pdf",
+      "title": "香港中文大学图书馆 · 文学散步：鲁迅",
+      "retrievedAt": "2026-10-25T17:23:09.071691+00:00",
+      "sha256": "40b081adcf46b00d89c0153803fffd612f1e29b9809889c3ad955280b8a78acf",
+      "revisionId": null
+    },
+    {
+      "url": "https://home.cern/century-quantum-mechanics/",
+      "title": "CERN · A century of quantum mechanics",
+      "retrievedAt": "2026-10-25T17:23:10.797695+00:00",
+      "sha256": "588aef410e5ec636e8ba8ae22fd9ebf01b983fea30a37df7beaaab677e381e29",
+      "revisionId": null
+    },
+    {
+      "url": "https://home.cern/science/computing/the-birth-of-the-web",
+      "title": "CERN · The birth of the Web",
+      "retrievedAt": "2026-10-25T17:23:10.847885+00:00",
+      "sha256": "e893f177547e0c89360c3da98ff35d1d6003f4e1f296bdc8c933a63b88856eeb",
+      "revisionId": null
+    },
+    {
       "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
       "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
       "retrievedAt": "2026-10-23T06:50:54.367606+00:00",
       "sha256": "ea5404b35f5b42c34908f5ba1fd9698fd579cd1f84e28acba3fe0a29f4f84922",
+      "revisionId": null
+    },
+    {
+      "url": "https://home.nps.gov/elmo/learn/historyculture/the-spaniards.htm",
+      "title": "U.S. National Park Service · The Spaniards, El Morro",
+      "retrievedAt": "2026-10-25T16:46:24.640450+00:00",
+      "sha256": "71626edd4385f0ce97cb684a91b0e791193e63c1a60455dc790fb82edcf067ad",
+      "revisionId": null
+    },
+    {
+      "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=116",
+      "title": "中央研究院胡适纪念馆 · 传略（著述年表）",
+      "retrievedAt": "2026-10-25T17:33:10.607868+00:00",
+      "sha256": "c3c810d3ed165201b868f70f431b5b45d7343c7857b1c1b6e1e9f83cd2a1f981",
+      "revisionId": null
+    },
+    {
+      "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=94",
+      "title": "中央研究院胡适纪念馆 · 整理国故运动的旗手",
+      "retrievedAt": "2026-10-25T17:33:11.217447+00:00",
+      "sha256": "fe694e628482c7d288acd93c3af8b0a1b1784ff63f8fd95c9dd5965a5eb98ed4",
       "revisionId": null
     },
     {
@@ -421,6 +1026,48 @@
       "title": "英国图书馆 · The Diamond Sutra",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-06T16:20:30.022765+00:00"
+    },
+    {
+      "url": "https://iep.utm.edu/chinese-philosophy-overview-of-history/",
+      "title": "Internet Encyclopedia of Philosophy · Chinese Philosophy: Overview of History",
+      "retrievedAt": "2026-10-25T17:23:12.468439+00:00",
+      "sha256": "fa8fb8dcfcfacdee4983f2b8c71f7e9191bcbf87a332b00ab7a229dca53f4d17",
+      "revisionId": null
+    },
+    {
+      "url": "https://iep.utm.edu/feng/",
+      "title": "Internet Encyclopedia of Philosophy · Feng Youlan",
+      "retrievedAt": "2026-10-25T17:23:12.408566+00:00",
+      "sha256": "b6b3f896f87548f0e84bd1cb155f6ed22706796fd8aa614f2ed09e11b78f7891",
+      "revisionId": null
+    },
+    {
+      "url": "https://iep.utm.edu/plato/",
+      "title": "Internet Encyclopedia of Philosophy · Plato",
+      "retrievedAt": "2026-10-25T16:50:35.961733+00:00",
+      "sha256": "90c972d3e254314bc7d6bf73da6e5fc2b26c68d1fb3088adda2ad0b468a00a95",
+      "revisionId": null
+    },
+    {
+      "url": "https://iep.utm.edu/zhang-zai-chang-tsai/",
+      "title": "Internet Encyclopedia of Philosophy · Zhang Zai",
+      "retrievedAt": "2026-10-25T16:50:38.427701+00:00",
+      "sha256": "131d4a91f53c502acafc3d326b13737d95aa120c6d1f9cba1b12172f67279b99",
+      "revisionId": null
+    },
+    {
+      "url": "https://iep.utm.edu/zhou-dun/",
+      "title": "Internet Encyclopedia of Philosophy · Zhou Dunyi",
+      "retrievedAt": "2026-10-25T16:50:40.711699+00:00",
+      "sha256": "2b1d2e8facdbb582a5235eec48c4306c566c75895c44df2ad689914a6609220d",
+      "revisionId": null
+    },
+    {
+      "url": "https://ihl-databases.icrc.org/assets/treaties/120-IHL-GC1864-EN.pdf",
+      "title": "International Committee of the Red Cross · Geneva Convention, 22 August 1864",
+      "retrievedAt": "2026-10-25T16:46:46.256607+00:00",
+      "sha256": "f916fda1c7a23aee640f5b6fe9f832fa69562a42959c3791a717bad914a918f0",
+      "revisionId": null
     },
     {
       "url": "https://img.cjyun.org.cn/a/10695/202303/76adee32725a5022b1ed8a5e15c15640.pdf?202102191717216666=",
@@ -444,11 +1091,25 @@
       "revisionId": null
     },
     {
+      "url": "https://iupress.org/9780253215277/the-peony-pavilion-second-edition/",
+      "title": "Indiana University Press · The Peony Pavilion, Second Edition",
+      "retrievedAt": "2026-10-25T17:42:56.453197+00:00",
+      "sha256": "fcf2877a451c19d176725e9b4d872bdf3c885692a00d336cc513ba6c29e8e2b9",
+      "revisionId": null
+    },
+    {
       "url": "https://jomon-japan.jp/en/learn/jomon-sites/sannai-maruyama",
       "title": "日本绳文遗址官方门户 · 三内丸山遗址",
       "retrievedAt": "2026-10-07T06:33:43.878592+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:13.899623+00:00",
       "sha256": "5d3e6561c71f331d3531d6355247cc076897ce86c512f4a3f9544cbb41fd956c",
+      "revisionId": null
+    },
+    {
+      "url": "https://kalliope.staatsbibliothek-berlin.de/ead?ead.id=DE-2060-BE-71-471226",
+      "title": "Kalliope · Goethe- und Schiller-Archiv · Zarathustra IV",
+      "retrievedAt": "2026-10-25T16:50:42.027446+00:00",
+      "sha256": "6efa40499b94c13d02f054a68c46b6c2325abe325fffb1d9e23c55325ec15e59",
       "revisionId": null
     },
     {
@@ -462,6 +1123,34 @@
       "title": "中国社会科学院考古研究所 · 陶寺考古报告与城址布局",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
       "attemptedAt": "2026-10-07T06:45:28.187592+00:00"
+    },
+    {
+      "url": "https://kfoundation.org/dissolution-speech/",
+      "title": "Krishnamurti Foundation Trust · Dissolution Speech",
+      "retrievedAt": "2026-10-25T17:23:16.112489+00:00",
+      "sha256": "bf1b4ac584e29b6e0409366da8735ed8285b6a6c19fe922beb59f39d73cc57d4",
+      "revisionId": null
+    },
+    {
+      "url": "https://kokusho.nijl.ac.jp/biblio/100391144/",
+      "title": "国文学研究资料馆 · 《辨道》国书数据库",
+      "retrievedAt": "2026-10-25T16:50:42.733027+00:00",
+      "sha256": "222abf03049e6a655b529929588b8760158873c66f1b614b92f1219af6784902",
+      "revisionId": null
+    },
+    {
+      "url": "https://kv.mozarteum.at/en/work/die-zauberflote-7137",
+      "title": "Mozarteum Foundation · Köchel catalogue KV 620",
+      "retrievedAt": "2026-10-25T17:15:54.141099+00:00",
+      "sha256": "15aec596be69a43b8041ba34842c02d4763c925d9d56936d114ff79647452171",
+      "revisionId": null
+    },
+    {
+      "url": "https://literarymaps.nijl.ac.jp/en/resources/567554dddddddddddddddd01/",
+      "title": "日本国文学研究资料馆 · 古今和歌集",
+      "retrievedAt": "2026-10-25T16:50:44.342476+00:00",
+      "sha256": "16091724e1fa55f40b990ca1748a6f5fcf60a97844075c5ddd7ed4e595a7af30",
+      "revisionId": null
     },
     {
       "url": "https://m-www.hbkgy.com/kgcz/p/10746.html",
@@ -487,12 +1176,115 @@
       "revisionId": null
     },
     {
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
+      "title": "University of St Andrews · MacTutor · Albert Einstein",
+      "retrievedAt": "2026-10-25T17:37:57.255226+00:00",
+      "sha256": "25c395d6389d85730f964fdb92f863e774d6b4f8ca050014a9706f7c12a7ee79",
+      "revisionId": null
+    },
+    {
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/",
+      "title": "圣安德鲁斯大学 MacTutor · Euclid",
+      "retrievedAt": "2026-10-25T16:50:45.886043+00:00",
+      "sha256": "5104340fd296b2c805d5a6b25d0851e4af2967ad92783d288bf6a3bb106e0ece",
+      "revisionId": null
+    },
+    {
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/",
+      "title": "University of St Andrews · MacTutor · Galileo Galilei",
+      "retrievedAt": "2026-10-25T17:37:57.119072+00:00",
+      "sha256": "c016e8f3d2576d803045024557cd854f6c4339c341a8e19612d578e2faa1beaa",
+      "revisionId": null
+    },
+    {
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/",
+      "title": "University of St Andrews · MacTutor · Johannes Kepler",
+      "retrievedAt": "2026-10-25T17:37:58.890295+00:00",
+      "sha256": "260adffe1ed3487c3770d376ada1d3ed805209b39fc462f2364dad49a1b82e95",
+      "revisionId": null
+    },
+    {
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Newton/",
+      "title": "University of St Andrews · MacTutor · Isaac Newton",
+      "retrievedAt": "2026-10-25T17:37:59.046126+00:00",
+      "sha256": "511999a10317b3318540241538bf783db9774e2b6920ddeba3c656cf0e63d346",
+      "revisionId": null
+    },
+    {
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/indonesia_netherlands_babad_diponegoro.pdf",
+      "title": "UNESCO · Babad Diponegoro nomination",
+      "retrievedAt": "2026-10-25T16:46:33.089381+00:00",
+      "sha256": "e7859a942c3d5cb7d25871a32f6c015de273ab744bdb2d401c660877147437d6",
+      "revisionId": null
+    },
+    {
+      "url": "https://mendelmuseum.muni.cz/o-muzeu/gregor-johann-mendel",
+      "title": "Masaryk University Mendel Museum · Gregor Johann Mendel",
+      "retrievedAt": "2026-10-25T17:16:09.117577+00:00",
+      "sha256": "1c7809d0a28466ca1f0b1d8eafd46048fef1be4ff2a53f4f8157a6c794842ccb",
+      "revisionId": null
+    },
+    {
+      "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
+      "title": "International Mozarteum Foundation · Wolfgang Amadé Mozart",
+      "retrievedAt": "2026-10-25T17:38:01.246791+00:00",
+      "sha256": "6a6d4154a24657fc60f31acbf52d77d8e9e11a0a196076861f71b65360e525fd",
+      "revisionId": null
+    },
+    {
+      "url": "https://museeprotestant.org/en/notice/the-edict-of-nantes-1598/",
+      "title": "Musée protestant · The Edict of Nantes (1598)",
+      "retrievedAt": "2026-10-25T17:16:47.659329+00:00",
+      "sha256": "05eee95b56c7a32a9a55f6da7d4c9438910bbcfbec0bb3f6956e88e03d3fbfec",
+      "revisionId": null
+    },
+    {
+      "url": "https://museoleonardiano.it/en/leonardo-in-vinci/biografia/",
+      "title": "Museo Leonardiano di Vinci · Leonardo’s biography",
+      "retrievedAt": "2026-10-25T17:38:02.502560+00:00",
+      "sha256": "cf22c7e9df1011dd8be736c972993ba89380f0bc4e784a038973c9aff2318d1c",
+      "revisionId": null
+    },
+    {
       "url": "https://museum.jty.edu.cn/Home/Content/20227",
       "title": "吉林铁路博物馆 · 第一条国有铁路干线",
       "retrievedAt": "2026-10-08T18:03:12.660129+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.617181+00:00",
       "sha256": "6273a737cb11749384698c5c38a3ac07e3f9242975264a5b5ef30e16af86c123",
       "revisionId": null
+    },
+    {
+      "url": "https://mzzj.yn.gov.cn/html/2015/minjianxinyang_0629/9703.html",
+      "title": "云南省民族宗教事务委员会 · 唐代云南的景教",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T17:16:53.064052+00:00"
+    },
+    {
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000039-I2975553",
+      "title": "日本国立国会图书馆 · 宗教論集 第1（宗教とは何か）",
+      "retrievedAt": "2026-10-25T17:23:13.248082+00:00",
+      "sha256": "52796f1a7bfe2e081a93a4094e404e23e64ebd89dcf43753f016a356e49252c0",
+      "revisionId": null
+    },
+    {
+      "url": "https://news.pku.edu.cn/info/1651/17081.htm",
+      "title": "北京大学新闻网 · 中华人民共和国大事记",
+      "retrievedAt": "2026-10-25T17:33:11.234356+00:00",
+      "sha256": "7978b8c68e4bd995f0a91564b6747c368add289c2736fdb035c450ce8dcc94d2",
+      "revisionId": null
+    },
+    {
+      "url": "https://news.pku.edu.cn/ztwz111/bnws/wsps/fd36130f9fd64d1e8e4ce4c5461f6487.htm",
+      "title": "北京大学 · 五四百年专题",
+      "retrievedAt": "2026-10-25T17:23:13.440080+00:00",
+      "sha256": "1955b90cb39c87243ce92e981fe3a0175bcd04907b0cfd7b49ca647d9bc55d1e",
+      "revisionId": null
+    },
+    {
+      "url": "https://nzhistory.govt.nz/media/interactive/king-movement-map",
+      "title": "New Zealand Ministry for Culture and Heritage · The search for a king",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:51.355054+00:00"
     },
     {
       "url": "https://nzhistory.govt.nz/people/james-cook",
@@ -511,6 +1303,25 @@
       "title": "新西兰文化与遗产部 · Women win the right to vote",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-22T08:49:46.449407+00:00"
+    },
+    {
+      "url": "https://oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "title": "World Council of Churches · First Assembly, Amsterdam 1948",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:23:21.003172+00:00"
+    },
+    {
+      "url": "https://old-digitalcollections.nypl.org/items/12311e40-df89-013a-e962-0242ac110004",
+      "title": "New York Public Library · Ulysses, first edition",
+      "retrievedAt": "2026-10-25T17:23:18.717655+00:00",
+      "sha256": "e6b1e2f113d744f0ac455450ffb609fb23f1619fb5e08284914edf5387a3d857",
+      "revisionId": null
+    },
+    {
+      "url": "https://old.maa.org/node/1409908",
+      "title": "美国数学协会 Convergence · Latin Manuscript of Al-Khwarizmi’s Algebra",
+      "error": "HTTP Error 521: <none>",
+      "attemptedAt": "2026-10-25T16:50:53.875994+00:00"
     },
     {
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift",
@@ -757,10 +1568,31 @@
       "revisionId": null
     },
     {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/11-2-the-collapse-of-the-ottomans-and-the-coming-of-war",
+      "title": "OpenStax · World History 2 · 11.2 The Coming of War",
+      "retrievedAt": "2026-10-25T17:23:21.153057+00:00",
+      "sha256": "365c9ad6f716f9e7f131afda4b0afbb5db7dfae37dc484a5fd324736a3ff2da0",
+      "revisionId": null
+    },
+    {
       "url": "https://openstax.org/books/world-history-volume-2/pages/11-5-the-war-ends",
       "title": "OpenStax · World History 2 · The War Ends: The Russian Revolution",
       "retrievedAt": "2026-10-23T06:50:30.628003+00:00",
       "sha256": "cbb967c8ef48ddacef1d0f8e62bbcbab0f4399bab5b0eb3035a6db207c3d64b8",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/13-2-theaters-of-war",
+      "title": "OpenStax · World History 2 · 13.2 Theaters of War",
+      "retrievedAt": "2026-10-25T17:23:22.857898+00:00",
+      "sha256": "7adb99fb9a75538dd085e8d0e20fb67a0120f6d01974d087193cfedb227dbab3",
+      "revisionId": null
+    },
+    {
+      "url": "https://openstax.org/books/world-history-volume-2/pages/14-2-the-spread-of-communism",
+      "title": "OpenStax · World History 2 · 14.2 The Spread of Communism",
+      "retrievedAt": "2026-10-25T17:23:22.830376+00:00",
+      "sha256": "dd83efc761953fd0175f603ea5c268049daf23d87644f06095e077bcce248e3d",
       "revisionId": null
     },
     {
@@ -923,10 +1755,38 @@
       "revisionId": null
     },
     {
+      "url": "https://oumnh.ox.ac.uk/learn-marie-curie",
+      "title": "Oxford University Museum of Natural History · Marie Curie",
+      "retrievedAt": "2026-10-25T17:38:02.257865+00:00",
+      "sha256": "6979cb584cfc0a65295c24751fb785cfe54306ea1cb03ac8d7921162f8bc86d5",
+      "revisionId": null
+    },
+    {
+      "url": "https://pancanal.com/preguntas-frecuentes/",
+      "title": "Autoridad del Canal de Panamá · Preguntas Frecuentes",
+      "retrievedAt": "2026-10-25T17:23:25.344801+00:00",
+      "sha256": "0fce0c09c8ac5c382c302a5253c42a38965c1d690c5a1788c6f7f430ffe902a7",
+      "revisionId": null
+    },
+    {
       "url": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture",
       "title": "加拿大国家公园管理局 · Culture and history: L’Anse aux Meadows",
       "retrievedAt": "2026-10-23T06:50:50.365593+00:00",
       "sha256": "fdd40f8672491ed8cb5d7e4c91178bdadac78ba60185c6b5db09c10a8890133c",
+      "revisionId": null
+    },
+    {
+      "url": "https://peacekeeping.un.org/en/node/109340",
+      "title": "United Nations · Ghanaian peacekeepers mark Independence Day",
+      "retrievedAt": "2026-10-25T17:23:26.885617+00:00",
+      "sha256": "5c015f33bbcbc2c7bda98ad48289f9faaf6c03b0f884a0bc79634bd22507e952",
+      "revisionId": null
+    },
+    {
+      "url": "https://peacekeeping.un.org/sites/default/files/past/ungomap/background.html",
+      "title": "United Nations · UNGOMAP background",
+      "retrievedAt": "2026-10-25T17:23:26.446040+00:00",
+      "sha256": "75ac35f274f237cd96c6e22902cdebb34f06cc3c0fe2e76b4c1081c323c6814f",
       "revisionId": null
     },
     {
@@ -937,10 +1797,611 @@
       "revisionId": null
     },
     {
+      "url": "https://plato.stanford.edu/entries/adorno/",
+      "title": "Stanford Encyclopedia of Philosophy · Theodor W. Adorno",
+      "retrievedAt": "2026-10-25T17:23:27.857057+00:00",
+      "sha256": "dd24b349d7cbb79d21cff81fe468ca0ca600e7fe9a6c989d6d6fdb3cb5708408",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/aquinas/",
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Aquinas",
+      "retrievedAt": "2026-10-25T16:50:55.469473+00:00",
+      "sha256": "79dc1c82782a1d0b26be8745adeef6e91a4d237328262cbb40c35bfe66a84f5f",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/arendt/",
+      "title": "Stanford Encyclopedia of Philosophy · Hannah Arendt",
+      "retrievedAt": "2026-10-25T17:23:28.222017+00:00",
+      "sha256": "db71cc8effe2b09a2c38669730e35fcf5fa7bc1bcb9c58667d281f0f0e95598e",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/aristotle/",
+      "title": "Stanford Encyclopedia of Philosophy · Aristotle",
+      "retrievedAt": "2026-10-25T16:50:57.167228+00:00",
+      "sha256": "7aca456a4883a3d96bc61ab28886cc28cc2e4b0552a227b7ad9662bf54fd86ff",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/augustine/",
+      "title": "Stanford Encyclopedia of Philosophy · Augustine of Hippo",
+      "retrievedAt": "2026-10-25T16:50:58.725730+00:00",
+      "sha256": "9e8908e82a8c1b0730373ef8cdd76858684a4b84e9fa461320c17e28634dc22d",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/austin-jl/",
+      "title": "Stanford Encyclopedia of Philosophy · John Langshaw Austin",
+      "retrievedAt": "2026-10-25T17:23:29.283543+00:00",
+      "sha256": "9387587bf51a1f286235fb9f4feaba6a3f4517a6c3786fea89140fcc14c3ab2b",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/beauvoir/",
+      "title": "Stanford Encyclopedia of Philosophy · Simone de Beauvoir",
+      "retrievedAt": "2026-10-25T17:23:29.648378+00:00",
+      "sha256": "d10d67e2a4b97526d4b8d043718cee37500628dec0804521e100ea6fbea856c6",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/bergson/",
+      "title": "Stanford Encyclopedia of Philosophy · Henri Bergson",
+      "retrievedAt": "2026-10-25T17:23:30.483720+00:00",
+      "sha256": "bd58aa97987ed673e1b6ab0d0fb444e3d9d25dcb2f3e0df8eee15265a218af5c",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/camus/",
+      "title": "Stanford Encyclopedia of Philosophy · Albert Camus",
+      "retrievedAt": "2026-10-25T17:23:30.848304+00:00",
+      "sha256": "dba358d835acc462148f92875e5e9166802f5d10c4d19308ec1927c0115cd167",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/chinese-legalism/",
+      "title": "Stanford Encyclopedia of Philosophy · Legalism in Chinese Philosophy",
+      "retrievedAt": "2026-10-25T16:51:00.075544+00:00",
+      "sha256": "d8f9614d64ce0abfe3149f8eb1fbbd461efbf27819454329e15744c6af1103c0",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/confucianism-modern/",
+      "title": "Stanford Encyclopedia of Philosophy · Modern Confucianism",
+      "retrievedAt": "2026-10-25T17:23:31.716422+00:00",
+      "sha256": "3928f3d4290fcd79513f74821a2296f37c49fe4ca5228e4072b59a977b5ef430",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/dai-zhen/",
+      "title": "Stanford Encyclopedia of Philosophy · Dai Zhen",
+      "retrievedAt": "2026-10-25T16:51:01.470943+00:00",
+      "sha256": "da05ced70a18602dd074dbde756ac6da8c76ce6ad6eab9001e9f1c3a7c1ccd73",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/derrida/",
+      "title": "Stanford Encyclopedia of Philosophy · Jacques Derrida",
+      "retrievedAt": "2026-10-25T17:23:32.060064+00:00",
+      "sha256": "a594f29e9832ddc40425b05df8ebf7341e64e8fee2fb247c383b811c124ab342",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/descartes/",
+      "title": "Stanford Encyclopedia of Philosophy · René Descartes",
+      "retrievedAt": "2026-10-25T16:51:02.950917+00:00",
+      "sha256": "bc45676114e87081e7a557f6092bef0011586a3529559f392712595cdb476a96",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/dewey/",
+      "title": "Stanford Encyclopedia of Philosophy · John Dewey",
+      "retrievedAt": "2026-10-25T17:23:32.648772+00:00",
+      "sha256": "eb445b11b6288d897b441f05091ab8171feb3dd3c97dbe87afb794ca75747dfd",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/epictetus/",
+      "title": "Stanford Encyclopedia of Philosophy · Epictetus",
+      "retrievedAt": "2026-10-25T17:23:32.797305+00:00",
+      "sha256": "ecd01d482e1aeac1e1c49fc9555cb406aae08fe3479426e044fc45e60cc0f183",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/epicurus/",
+      "title": "Stanford Encyclopedia of Philosophy · Epicurus",
+      "retrievedAt": "2026-10-25T16:51:04.186847+00:00",
+      "sha256": "edef494c9bcce6f8f84c26173740c2aa456207f86ee53ed0c6b32b1c369f3198",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/foucault/",
+      "title": "Stanford Encyclopedia of Philosophy · Michel Foucault",
+      "retrievedAt": "2026-10-25T17:23:33.311470+00:00",
+      "sha256": "1b8eca67b589f3ad27f68782a3da15bca5f4e9375cc5f47703903f4c1aef2d14",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/francis-bacon/",
+      "title": "Stanford Encyclopedia of Philosophy · Francis Bacon",
+      "retrievedAt": "2026-10-25T16:51:05.440319+00:00",
+      "sha256": "1294f9169fbfea29b0890937f4a040ef440d61e5f044888bed36324e610720a2",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/frege/",
+      "title": "Stanford Encyclopedia of Philosophy · Gottlob Frege",
+      "retrievedAt": "2026-10-25T16:51:06.870719+00:00",
+      "sha256": "7506f3cb7dd711df8a5f2f9540f9a5565e5bea1f7c25b5025fd79796070a472a",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/gadamer/",
+      "title": "Stanford Encyclopedia of Philosophy · Hans-Georg Gadamer",
+      "retrievedAt": "2026-10-25T17:23:33.857611+00:00",
+      "sha256": "1e4c1696d15c4bd6b0dcaf3086c73d251bcba86f5542b050ec3ade0bdc7eb084",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/habermas/",
+      "title": "Stanford Encyclopedia of Philosophy · Jürgen Habermas",
+      "retrievedAt": "2026-10-25T17:23:34.180154+00:00",
+      "sha256": "8f15af6efaba8c9c03cf4031227bee2bc57bc024c8a85739614571b611cebe32",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/hegel/",
+      "title": "Stanford Encyclopedia of Philosophy · Georg Wilhelm Friedrich Hegel",
+      "retrievedAt": "2026-10-25T16:51:08.282808+00:00",
+      "sha256": "aa5e9fa8934e979a621fb48565fd49385a5a5ebcf7bcea896a6de2a02647683c",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/heidegger/",
+      "title": "Stanford Encyclopedia of Philosophy · Martin Heidegger",
+      "retrievedAt": "2026-10-25T17:23:34.700126+00:00",
+      "sha256": "3b6a69857b036c10592fc6280c634d4197356391e1e92037072c98115e6e6c17",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/hobbes/",
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Hobbes",
+      "retrievedAt": "2026-10-25T16:51:09.798487+00:00",
+      "sha256": "890060d586b4f9eef1ff0bcceaac22b8945d1f41ff200e172b923e7d4d4a6aad",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/horkheimer/",
+      "title": "Stanford Encyclopedia of Philosophy · Max Horkheimer",
+      "retrievedAt": "2026-10-25T17:23:35.084325+00:00",
+      "sha256": "21d2c9af3bdc6e2f9fdf7eb3a7617ca0c6eef5125a85892d687079e70f58c903",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/hume/",
+      "title": "Stanford Encyclopedia of Philosophy · David Hume",
+      "retrievedAt": "2026-10-25T16:51:11.161242+00:00",
+      "sha256": "1f17d5878dd3f5a08b35e57aee6e31064d047777c11b1aa298b31a5017c35274",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/husserl/",
+      "title": "Stanford Encyclopedia of Philosophy · Edmund Husserl",
+      "retrievedAt": "2026-10-25T16:51:12.535122+00:00",
+      "sha256": "c711146c0a8646392df2d5172821f6679d92a336a6d9b0a6923bf9ae8ac79a53",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/ibn-rushd/",
+      "title": "Stanford Encyclopedia of Philosophy · Ibn Rushd [Averroes]",
+      "retrievedAt": "2026-10-25T16:51:12.928557+00:00",
+      "sha256": "512e97a349fcd400550719457c233fa291aa85bce32479b70a7c08ffae98735c",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/ibn-sina/",
+      "title": "Stanford Encyclopedia of Philosophy · Ibn Sina [Avicenna]",
+      "retrievedAt": "2026-10-25T16:51:13.736879+00:00",
+      "sha256": "d5ba9bb6d2d2f0565d662570acc322d974ee406695b572dfa87a9327a4d1a475",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/james/",
+      "title": "Stanford Encyclopedia of Philosophy · William James",
+      "retrievedAt": "2026-10-25T16:51:14.140132+00:00",
+      "sha256": "7c2ff8fdc94bf2a87e6da59e99f1cabe13917bd5251c33e02c45cf98c469bd67",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/japanese-confucian/",
+      "title": "Stanford Encyclopedia of Philosophy · Japanese Confucian Philosophy",
+      "retrievedAt": "2026-10-25T16:51:15.515489+00:00",
+      "sha256": "dfb30a350ce0917a0139b399b0dfa12c01e39c9dda84c034f77017a5f7f6b0cf",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/kant/",
+      "title": "Stanford Encyclopedia of Philosophy · Immanuel Kant",
+      "retrievedAt": "2026-10-25T16:51:15.539569+00:00",
+      "sha256": "ea0e46f8a27c83fc68647c77f9e6cedd8df7b887693c1597c6c1a4b2510a7d96",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/kierkegaard/",
+      "title": "Stanford Encyclopedia of Philosophy · Søren Kierkegaard",
+      "retrievedAt": "2026-10-25T16:51:16.781310+00:00",
+      "sha256": "2e705eeb7cd31d87c4d728dbf28759e46432ca70265a51b08436c947df0bef8f",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/korean-confucianism/",
+      "title": "Stanford Encyclopedia of Philosophy · Korean Confucianism",
+      "retrievedAt": "2026-10-25T16:51:16.779363+00:00",
+      "sha256": "513f16fef561b0bbaebeea35224911b1a26883502160f2667b3ff052a7839e57",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/kyoto-school/",
+      "title": "Stanford Encyclopedia of Philosophy · The Kyoto School",
+      "retrievedAt": "2026-10-25T17:23:35.778180+00:00",
+      "sha256": "0bf68b2c3e782090559d76588d53986cbd7dfe1be86289f0aad08359847795ac",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/laozi/",
+      "title": "Stanford Encyclopedia of Philosophy · Laozi",
+      "retrievedAt": "2026-10-25T16:51:18.191996+00:00",
+      "sha256": "72d7728e8a5e372bdac30acc3acbfebec6a70b26fc0b9b40b17bfecbe4c3defe",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/leibniz/",
+      "title": "Stanford Encyclopedia of Philosophy · Gottfried Wilhelm Leibniz",
+      "retrievedAt": "2026-10-25T16:51:18.115254+00:00",
+      "sha256": "d21fb982cf9a4b7c7d114108b4ed1bf8c8b5cfe4c2f2b9355db75268d75df322",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/levinas/",
+      "title": "Stanford Encyclopedia of Philosophy · Emmanuel Levinas",
+      "retrievedAt": "2026-10-25T17:23:36.263506+00:00",
+      "sha256": "f53d7a62ef885de73851992e66ec1226b74206e2670ed34c7f677c9041cb5ce7",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/locke/",
+      "title": "Stanford Encyclopedia of Philosophy · John Locke",
+      "retrievedAt": "2026-10-25T16:51:19.552069+00:00",
+      "sha256": "da8f414c23e5d652e458dd314e1815ff074d1d71f4353a15bdc6cf62ca995460",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/marcus-aurelius/",
+      "title": "Stanford Encyclopedia of Philosophy · Marcus Aurelius",
+      "retrievedAt": "2026-10-25T17:23:36.292373+00:00",
+      "sha256": "a55934778ce0bd1ad7c14b17c517537141120579ccfc67dc1272bb6ef110d872",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/marx/",
+      "title": "Stanford Encyclopedia of Philosophy · Karl Marx",
+      "retrievedAt": "2026-10-25T16:51:20.486421+00:00",
+      "sha256": "b971162e65ec208409d52baf6763f0b59d32b3b8bfa6836e2288d6a7c04cd631",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/merleau-ponty/",
+      "title": "Stanford Encyclopedia of Philosophy · Maurice Merleau-Ponty",
+      "retrievedAt": "2026-10-25T17:23:36.996084+00:00",
+      "sha256": "67e5c8ec54ba360a89cc37705b94b3fcb5a0b48ffc3e0d913e0f315619506643",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/mill/",
+      "title": "Stanford Encyclopedia of Philosophy · John Stuart Mill",
+      "retrievedAt": "2026-10-25T16:51:20.923574+00:00",
+      "sha256": "1c36ebb22ad91d89bb6774a90907d804ab1b51c3b613815545542f7d5b0bc89b",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/mohism/",
+      "title": "Stanford Encyclopedia of Philosophy · Mohism",
+      "retrievedAt": "2026-10-25T16:51:22.252445+00:00",
+      "sha256": "0a282839b67c28b0a087854caa4c03d940ee2444ad7bd205a18a2bd3d6696ecc",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/nagarjuna/",
+      "title": "Stanford Encyclopedia of Philosophy · Nāgārjuna",
+      "retrievedAt": "2026-10-25T16:51:23.261502+00:00",
+      "sha256": "b8a538489c25595c4843bcb46a1cfd9f49966ff188be7c0e01060777143961f2",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/neo-daoism/",
+      "title": "Stanford Encyclopedia of Philosophy · Neo-Daoism",
+      "retrievedAt": "2026-10-25T16:51:23.965955+00:00",
+      "sha256": "90da0daf121a158faf2edd1b0194acfb423ddf71698c22f12a3cfe3d014338b4",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/nietzsche/",
+      "title": "Stanford Encyclopedia of Philosophy · Friedrich Nietzsche",
+      "retrievedAt": "2026-10-25T16:51:24.609662+00:00",
+      "sha256": "7cafb8205dff01ef8d716dcfcc7e3dbf4b313e5ffdf928971babe1ff2d64fb2d",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/nishida-kitaro/",
+      "title": "Stanford Encyclopedia of Philosophy · Nishida Kitarō",
+      "retrievedAt": "2026-10-25T16:51:25.499824+00:00",
+      "sha256": "d935ea815bc8baa7ece1b452029569ec31cdc4c5086a5cb3abff86293fbddcc7",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/nozick-political/",
+      "title": "Stanford Encyclopedia of Philosophy · Robert Nozick’s Political Philosophy",
+      "retrievedAt": "2026-10-25T17:23:37.510311+00:00",
+      "sha256": "560c3b554eeb4b1c2b610ee84225f6dc79f9144eae32a6b7c304f3f0105579b7",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/peirce/",
+      "title": "Stanford Encyclopedia of Philosophy · Charles Sanders Peirce",
+      "retrievedAt": "2026-10-25T17:23:37.537832+00:00",
+      "sha256": "c411d3e14cea1e2b594e566f964ba6de5e9092a0fea165329f8f5fd2d413663c",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/plato/",
+      "title": "Stanford Encyclopedia of Philosophy · Plato",
+      "retrievedAt": "2026-10-25T16:51:25.803848+00:00",
+      "sha256": "0239e463ade775946668160f08ae241d8d62f3cd1abb455969c0b969c583fb1a",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/plotinus/",
+      "title": "Stanford Encyclopedia of Philosophy · Plotinus",
+      "retrievedAt": "2026-10-25T16:51:26.698815+00:00",
+      "sha256": "9241b42ad5355cb9b9c321d9bf4ea455ba1eb5b11ee52cb255879442b3afbbc6",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/popper/",
+      "title": "Stanford Encyclopedia of Philosophy · Karl Popper",
+      "retrievedAt": "2026-10-25T17:23:38.210143+00:00",
+      "sha256": "2c2d48c6891418c46c372a780ce2e76c00bcc9716bb7603f169976d61b6ec207",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/presocratics/",
+      "title": "Stanford Encyclopedia of Philosophy · Presocratic Philosophy",
+      "retrievedAt": "2026-10-25T16:51:27.075978+00:00",
+      "sha256": "e1056af3720d7b7776fadaa2262d1b27112c616eb86647bc677be214d5e95600",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/quine/",
+      "title": "Stanford Encyclopedia of Philosophy · Willard Van Orman Quine",
+      "retrievedAt": "2026-10-25T17:23:39.102773+00:00",
+      "sha256": "af660cba260d11beb1d4eb46de7bf6da5b051fcd79d90ee5098c2348e33c839b",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/rawls/",
+      "title": "Stanford Encyclopedia of Philosophy · John Rawls",
+      "retrievedAt": "2026-10-25T17:23:38.790385+00:00",
+      "sha256": "a714fb3e5ccca989b16fefa1ed85c6fd666967dfa8fd26645cdbef87ffae35a2",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/rousseau/",
+      "title": "Stanford Encyclopedia of Philosophy · Jean Jacques Rousseau",
+      "retrievedAt": "2026-10-25T16:51:28.181699+00:00",
+      "sha256": "3040c56568766ebc1b56ac3438e39a0fce95948b93ca85a0fb34fc41c346a2b0",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/russell/",
+      "title": "Stanford Encyclopedia of Philosophy · Bertrand Russell",
+      "retrievedAt": "2026-10-25T17:23:39.692022+00:00",
+      "sha256": "b59b66772396c79a2f7b34c9282497357ca7ca18f5fbb523750a7fc90d6ae768",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/ryle/",
+      "title": "Stanford Encyclopedia of Philosophy · Gilbert Ryle",
+      "retrievedAt": "2026-10-25T17:23:40.214881+00:00",
+      "sha256": "12b628005b35ce5723c41cd692c941ac6f8feda579718576c0d3ee9c59305860",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/sartre/",
+      "title": "Stanford Encyclopedia of Philosophy · Jean-Paul Sartre",
+      "retrievedAt": "2026-10-25T17:23:40.339642+00:00",
+      "sha256": "4ed69338099e755b6aa2a0a6662c1d9dbd04b05957e4f3ac50c7b456617060e5",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/schopenhauer/",
+      "title": "Stanford Encyclopedia of Philosophy · Arthur Schopenhauer",
+      "retrievedAt": "2026-10-25T16:51:28.302341+00:00",
+      "sha256": "db0095bd8f60322f6596bba37d521d40720f2e15fb2ed59e52221cbf52f4fa50",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/sextus-empiricus/",
+      "title": "Stanford Encyclopedia of Philosophy · Sextus Empiricus",
+      "retrievedAt": "2026-10-25T17:23:41.428878+00:00",
+      "sha256": "f821e155ec686119716ba04c59d8070114303ffdfdcdb2399530dc0932e9052f",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/shankara/",
+      "title": "Stanford Encyclopedia of Philosophy · Śaṅkara",
+      "retrievedAt": "2026-10-25T16:51:29.421253+00:00",
+      "sha256": "0f2584115a64ae1f60fe1666a25eadbdfbb034e3a2779c4ac5e41ef9709264ef",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/simone-weil/",
+      "title": "Stanford Encyclopedia of Philosophy · Simone Weil",
+      "retrievedAt": "2026-10-25T17:23:41.830373+00:00",
+      "sha256": "d3cef8e34cc5ae7ac4a10d6d65aea109774b65ec3ced9ae4eef709b28d9db6f2",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/socrates/",
+      "title": "Stanford Encyclopedia of Philosophy · Socrates",
+      "retrievedAt": "2026-10-25T16:51:29.689139+00:00",
+      "sha256": "66c1adbed21e237788c9c3fcb5a81c7bbb30b910e3f5b118c78dda95804daf17",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/song-ming-confucianism/",
+      "title": "Stanford Encyclopedia of Philosophy · Song-Ming Confucianism",
+      "retrievedAt": "2026-10-25T16:51:30.622375+00:00",
+      "sha256": "e60f3c44bd05c4a3e0c4fb444c9bfdb0d341c02e1839f8c60df654d6a992a64a",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/spinoza/",
+      "title": "Stanford Encyclopedia of Philosophy · Baruch Spinoza",
+      "retrievedAt": "2026-10-25T16:51:31.976657+00:00",
+      "sha256": "bede8d577ffaf69ce394d3746a5c01224d2a5d585ea909a7dee907afab2f5bb4",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/stoicism/",
+      "title": "Stanford Encyclopedia of Philosophy · Stoicism",
+      "retrievedAt": "2026-10-25T16:51:33.181528+00:00",
+      "sha256": "9e02fb50dc79fa8a0c3c8e01070edecf994f3cec884ca765d668f91e71d3abd3",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/thomas-kuhn/",
+      "title": "Stanford Encyclopedia of Philosophy · Thomas Kuhn",
+      "retrievedAt": "2026-10-25T17:23:41.620514+00:00",
+      "sha256": "b8411c6000bfae189bf93b7f4df1a2b21d4d461601f4255c8ce2b0fa5d2548d7",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/thomas-more/",
+      "title": "Stanford Encyclopedia of Philosophy · Thomas More",
+      "retrievedAt": "2026-10-25T17:23:42.653614+00:00",
+      "sha256": "8bd71e57a659afb00b285beb9919572168e630edae9d43b67a1d6e6109dffac1",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/tsongkhapa/",
+      "title": "斯坦福哲学百科 · Tsongkhapa",
+      "retrievedAt": "2026-10-25T16:51:33.199700+00:00",
+      "sha256": "414747cccf5fc99943431af8e9795e9f3a3bd1aa078e24a2b9ab92ed9ad475d5",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/vasubandhu/",
+      "title": "Stanford Encyclopedia of Philosophy · Vasubandhu",
+      "retrievedAt": "2026-10-25T16:51:33.884780+00:00",
+      "sha256": "396bc8f806749d084f0f6198ffc9637a8cdeb684b451927e0130f276f7c484e6",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/whitehead/",
+      "title": "Stanford Encyclopedia of Philosophy · Alfred North Whitehead",
+      "retrievedAt": "2026-10-25T17:23:42.992082+00:00",
+      "sha256": "d6eeb453608197b86669d5141b1a04eb4a811269a46f124ca12cf43b859c7626",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/wittgenstein/",
+      "title": "Stanford Encyclopedia of Philosophy · Ludwig Wittgenstein",
+      "retrievedAt": "2026-10-25T17:23:43.145704+00:00",
+      "sha256": "ec6822aad5090aa982e684002a921d14be7a70f6f9055f49898e260d88bf4b5c",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/wollstonecraft/",
+      "title": "Stanford Encyclopedia of Philosophy · Mary Wollstonecraft",
+      "retrievedAt": "2026-10-25T16:51:34.370752+00:00",
+      "sha256": "199241529131be87b35c3758b485d8a81f0292209e112b37433b2d9d51657ba8",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/xunzi/",
+      "title": "Stanford Encyclopedia of Philosophy · Xunzi",
+      "retrievedAt": "2026-10-25T16:51:34.392432+00:00",
+      "sha256": "aff334f830e9497e9be219b103592fc5c7e0edf5035796bb2b41033b10d9dc18",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/zhu-xi/",
+      "title": "Stanford Encyclopedia of Philosophy · Zhu Xi",
+      "retrievedAt": "2026-10-25T16:51:35.257736+00:00",
+      "sha256": "8c729abccaa3a2b2cbcee7ca63e4b3389b2e9a54c43e42feac29463db453f374",
+      "revisionId": null
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/zhuangzi/",
+      "title": "Stanford Encyclopedia of Philosophy · Zhuangzi",
+      "retrievedAt": "2026-10-25T16:51:35.729658+00:00",
+      "sha256": "797153704eed778d1643eac889d6132201ee1820d4c172b8edda2b77c5dc53dc",
+      "revisionId": null
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6074172/",
+      "title": "Annals of Saudi Medicine · Ibn Al-Haytham: Father of Modern Optics",
+      "retrievedAt": "2026-10-25T16:51:35.773757+00:00",
+      "sha256": "b6d57e27f0940bfd38d1ca19f52d132bf7f2b644085b2f3dc5eb9682f2434954",
+      "revisionId": null
+    },
+    {
+      "url": "https://press.getlinkgroup.com/assets/press-release-6may-30th-anniversary-channel-tunnel-pdf-f9f2-0791e.html?dl=1",
+      "title": "Getlink · The Channel Tunnel, 30 years of history",
+      "retrievedAt": "2026-10-25T17:23:52.839391+00:00",
+      "sha256": "b889459a2394584bd68996cc097c79186757492ec595fe7b20bd48d73f6a9b06",
+      "revisionId": null
+    },
+    {
+      "url": "https://press.hnu.edu.cn/info/1133/4271.htm",
+      "title": "湖南大学出版社 · 岳麓书院史",
+      "retrievedAt": "2026-10-25T16:51:35.869953+00:00",
+      "sha256": "379d1efb0ba1300a1eba2dd9f514397a49a0676ab5de6ccb1a1b0bdbf56f66fe",
+      "revisionId": null
+    },
+    {
+      "url": "https://pusdipres.anri.go.id/presidenpedia/",
+      "title": "Arsip Nasional Republik Indonesia · Presidenpedia",
+      "retrievedAt": "2026-10-25T17:23:46.838107+00:00",
+      "sha256": "355455fa3bf6a7e93d9cd7daca335a44ae94ea1f0c9c7fa4c7e69ffde81db6a6",
+      "revisionId": null
+    },
+    {
       "url": "https://qspfw.moe.gov.cn/html/comsense/20190623/15821.html",
       "title": "教育部 · 子产铸刑书",
       "retrievedAt": "2026-10-06T17:45:55.335171+00:00",
       "sha256": "4f41ba3984bc9dc894abe764105bb9e94827e2cb49771fa54243112d7d9e5cc3",
+      "revisionId": null
+    },
+    {
+      "url": "https://research.un.org/en/docs/uncharter/intro",
+      "title": "United Nations · Charter research guide",
+      "retrievedAt": "2026-10-25T17:23:45.122174+00:00",
+      "sha256": "93b26b0468a93ce893e2d909b76cb45fd54ccb763ccbf1872dc2d7befca90798",
+      "revisionId": null
+    },
+    {
+      "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8265/CBP-8265.pdf",
+      "title": "House of Commons Library · The public finances: a historical overview",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:39.303688+00:00"
+    },
+    {
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Roman_Art_A_Resource_for_Educators.pdf",
+      "title": "The Metropolitan Museum of Art · Roman Art: A Resource for Educators",
+      "retrievedAt": "2026-10-25T16:46:08.754898+00:00",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
       "revisionId": null
     },
     {
@@ -951,10 +2412,45 @@
       "revisionId": null
     },
     {
+      "url": "https://rpo.library.utoronto.ca/award/nobel-prize-literature",
+      "title": "University of Toronto Libraries · Nobel Prize for Literature",
+      "retrievedAt": "2026-10-25T17:15:43.713161+00:00",
+      "sha256": "bf23f5bb41e48455b64d0d7fb401deddc30cc8dd99d9bb58ac36829924ffdd6d",
+      "revisionId": null
+    },
+    {
+      "url": "https://ruzang.pku.edu.cn/info/1053/1985.htm",
+      "title": "北京大学《儒藏》中心 · 《明夷待访录》等五种",
+      "retrievedAt": "2026-10-25T16:51:35.926641+00:00",
+      "sha256": "8c2156e5f9df8db5f3ac1c653fb69bce46b12114948fa9e8a3b06a634492c7f2",
+      "revisionId": null
+    },
+    {
       "url": "https://science.nasa.gov/earth/earth-observatory/angkor-wat-5112/",
       "title": "NASA Earth Observatory · Angkor Wat：遗址及营建时期",
       "retrievedAt": "2026-10-23T06:59:35.270424+00:00",
       "sha256": "354ca5fac3821c28bc0143afb378a8e3418b207964c8021754b1881d7c52c1ce",
+      "revisionId": null
+    },
+    {
+      "url": "https://searcharchives.bl.uk/catalog/032-003720262",
+      "title": "British Library · Brahmasphutasiddhanta, IO SAN 2529d",
+      "retrievedAt": "2026-10-25T17:15:55.684715+00:00",
+      "sha256": "75009c6dfa9a8e8838e4ffd2f14edcc6afb12e6e82d202b26354ef805785d076",
+      "revisionId": null
+    },
+    {
+      "url": "https://searcharchives.bl.uk/catalog/036-000178601",
+      "title": "British Library · East India Company Charters, IOR/A/1",
+      "retrievedAt": "2026-10-25T16:46:18.854443+00:00",
+      "sha256": "81acc67800a744cd726df6a114a6dd118ed0929f97b5b1861b5e8b406ceffd86",
+      "revisionId": null
+    },
+    {
+      "url": "https://searchlibrary.ohchr.org/record/7990/files/7990.pdf",
+      "title": "OHCHR · Convention on the Elimination of All Forms of Discrimination against Women",
+      "retrievedAt": "2026-10-25T17:23:54.431703+00:00",
+      "sha256": "e2e42f99db62878fb29bd72576cc3dda21310a387a08556337ee82d995a526b0",
       "revisionId": null
     },
     {
@@ -982,11 +2478,45 @@
       "revisionId": null
     },
     {
+      "url": "https://smarthistory.org/giant-buddha-leshan/",
+      "title": "UNESCO / Smarthistory · Giant Buddha of Leshan",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:44.113792+00:00"
+    },
+    {
+      "url": "https://soundingchina.fas.harvard.edu/chinaobj6.html",
+      "title": "Harvard University · Sounding China: Score of Peony Pavilion",
+      "retrievedAt": "2026-10-25T17:15:30.165843+00:00",
+      "sha256": "656db7a8cbe1e6345218fb14b0bbf120eb0abf68255d1d545964be5784eeb274",
+      "revisionId": null
+    },
+    {
       "url": "https://source.nra.gov.cn/tlfc/tpsy/202204/t20220405_293018.shtml",
       "title": "国家铁路局 · 百年京张 世纪经典",
       "retrievedAt": "2026-10-08T18:03:12.381878+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.617099+00:00",
       "sha256": "048324480ad36936b40ff7bd60d1ceab66d957139e9ce32abf36d7cc999ad3b7",
+      "revisionId": null
+    },
+    {
+      "url": "https://sourcebooks.web.fordham.edu/source/yarmuk.asp",
+      "title": "Fordham University · Al-Baladhuri: The Battle of the Yarmuk",
+      "retrievedAt": "2026-10-25T16:46:09.423970+00:00",
+      "sha256": "b4000c4005268e6e140998b54ff8ba4cf9a0236886499328ab3d63055106764e",
+      "revisionId": null
+    },
+    {
+      "url": "https://store.kfoundation.org/about-us/",
+      "title": "Krishnamurti Foundation Trust · About Us",
+      "retrievedAt": "2026-10-25T17:23:50.785233+00:00",
+      "sha256": "b9291d0be460de655e9ea4a065b818a00e1e22958bbf596281b7d47e23520607",
+      "revisionId": null
+    },
+    {
+      "url": "https://taiwanebook.ncl.edu.tw/zh-tw/book/NCL-9910006682",
+      "title": "国家图书馆 · 台湾华文电子书库《论道》初版题录",
+      "retrievedAt": "2026-10-25T17:33:12.987677+00:00",
+      "sha256": "9a55c121c2f0b5add59335d77cecb7b794fd3cd22d7185fab9986b3f795bd19c",
       "revisionId": null
     },
     {
@@ -1002,10 +2532,56 @@
       "attemptedAt": "2026-10-23T06:50:45.703705+00:00"
     },
     {
+      "url": "https://tolstoymuseum.ru/news/2025/09/25/80115/",
+      "title": "State Museum of Leo Tolstoy · Fifteen beginnings of War and Peace",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T17:17:18.318193+00:00"
+    },
+    {
       "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
       "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
       "retrievedAt": "2026-10-23T06:46:50.946708+00:00",
       "sha256": "ec98d079ec1ef4f72fea0c06c51673c932ee829ccdd11ce2fa02a2fe159ebbff",
+      "revisionId": null
+    },
+    {
+      "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20507/volume-507-I-7395-English.pdf",
+      "title": "United Nations Treaty Series · France and Algeria, No.7395",
+      "retrievedAt": "2026-10-25T17:23:54.135939+00:00",
+      "sha256": "b20f1f320271a6f78b81ab855f4dd0986b7a3ed6b1886e8b0a7edc907bc7221f",
+      "revisionId": null
+    },
+    {
+      "url": "https://uhra.herts.ac.uk/id/eprint/12250/1/904279.pdf",
+      "title": "Wittgenstein Archives at Bergen · Working Papers No. 7 (1993)",
+      "retrievedAt": "2026-10-25T17:42:56.296560+00:00",
+      "sha256": "58216b83a95b4bfc016b1e8885112cab73985bc5e11cdd0a4cede037716b9235",
+      "revisionId": null
+    },
+    {
+      "url": "https://umma.umich.edu/objects/ushiwakamaru-and-jorurihime-mitate-1948-1-170/",
+      "title": "密歇根大学美术馆 · Ushiwakamaru and Jôrurihime",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:51:43.403619+00:00"
+    },
+    {
+      "url": "https://unfccc.int/process-and-meetings/the-kyoto-protocol",
+      "title": "UNFCCC · The Kyoto Protocol",
+      "retrievedAt": "2026-10-25T17:33:12.156123+00:00",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "revisionId": null
+    },
+    {
+      "url": "https://uw.manifoldapp.org/system/resource/c/8/6/c86ddb44-a6ad-42f4-b7c7-b9e4f10754f1/attachment/e15c37e39a88fbda9cd4c2e24ff49311.pdf",
+      "title": "University of Washington Press · Symptoms of an Unruly Age",
+      "error": "HTTP Error 404: Not Found",
+      "attemptedAt": "2026-10-25T16:51:45.150036+00:00"
+    },
+    {
+      "url": "https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly",
+      "title": "University of Edinburgh · The Life of Dolly",
+      "retrievedAt": "2026-10-25T17:33:12.989512+00:00",
+      "sha256": "8a230f92d48f8469eec7b48f47f1c2d1d81f62f5cb7f8fd7a09520a0f6e7237b",
       "revisionId": null
     },
     {
@@ -1020,6 +2596,13 @@
       "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
       "retrievedAt": "2026-10-23T06:49:35.306409+00:00",
       "sha256": "177b36fd35fb3b11761816f15f5594b68d7634f74a5d8bb5525101cd91dc4a19",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/document/153484",
+      "title": "ICOMOS · 莫高窟世界遗产评估",
+      "retrievedAt": "2026-10-25T16:51:36.655225+00:00",
+      "sha256": "972b8d64642dd534abfdbac6217ad40af6e37aff2dbc20b0368beb3238080075",
       "revisionId": null
     },
     {
@@ -1112,6 +2695,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/1502/",
+      "title": "UNESCO · Archaeological Site of Nalanda Mahavihara",
+      "retrievedAt": "2026-10-25T16:51:37.136822+00:00",
+      "sha256": "0d099065b8a20a01c76187b3a597e0496fac4562fd884519ae57d34eedc0e6db",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/1561/",
       "title": "UNESCO · 宋元中国的世界海洋商贸中心泉州",
       "retrievedAt": "2026-10-06T15:43:24.958303+00:00",
@@ -1177,10 +2767,24 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/252/",
+      "title": "UNESCO World Heritage Centre · Taj Mahal",
+      "retrievedAt": "2026-10-25T17:16:40.976447+00:00",
+      "sha256": "8221b2976a3d651225402cc6207ba91e2a3d29a4aafc87fcce8e70129f00d24c",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/274",
       "title": "UNESCO · Historic Sanctuary of Machu Picchu",
       "retrievedAt": "2026-10-23T06:50:51.116919+00:00",
       "sha256": "15e86e45613a831afc5c129f19b777faf5ed28a9623230a2b69bc83401ee3462",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/313/",
+      "title": "UNESCO World Heritage Centre · Historic Centre of Cordoba",
+      "retrievedAt": "2026-10-25T17:16:43.054089+00:00",
+      "sha256": "66ad5ca1f73a2455156a10b41bfb7593cbd92b3125f44e5b74fefececdd00b55",
       "revisionId": null
     },
     {
@@ -1235,6 +2839,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/737/",
+      "title": "UNESCO World Heritage Centre · Haeinsa Temple Janggyeong Panjeon",
+      "retrievedAt": "2026-10-25T17:16:43.827156+00:00",
+      "sha256": "2fe68e924a14fe5cc8e66256930ea7ced063a3bc8e1dc3bf43416e5575a26bd1",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/848/",
       "title": "UNESCO · 乔伊鲁科蒂亚",
       "retrievedAt": "2026-10-07T06:33:30.399373+00:00",
@@ -1266,6 +2877,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/tentativelists/5803/",
+      "title": "UNESCO预备清单 · Wooden Structures of Liao Dynasty",
+      "retrievedAt": "2026-10-25T16:51:39.674223+00:00",
+      "sha256": "37b77a9f7bb50ddaf8d4ce0e116622d2dc6281813a8b4cb62266ac88e006c71e",
+      "revisionId": null
+    },
+    {
       "url": "https://wlt.hubei.gov.cn/bmdt/mtjj/202208/t20220824_4277457.shtml",
       "title": "湖北省文旅厅 · 李时珍纪念馆所述本草纲目编撰与出版",
       "error": "HTTP Error 412: Precondition Failed",
@@ -1280,6 +2898,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1312_web.pdf",
+      "title": "International Atomic Energy Agency · Chernobyl: Looking Back to Go Forward",
+      "retrievedAt": "2026-10-25T17:23:55.389657+00:00",
+      "sha256": "73ca324d4b87961f7e751f800dad3bb3e5a687eaa981bee3511d0a502487f716",
+      "revisionId": null
+    },
+    {
       "url": "https://www.alhambra-patronato.es/en/discover/alhambra-y-generalife/history",
       "title": "阿尔罕布拉宫管理委员会 · History",
       "retrievedAt": "2026-10-23T06:50:18.818968+00:00",
@@ -1287,10 +2912,30 @@
       "revisionId": null
     },
     {
+      "url": "https://www.amsterdam.nl/stadsarchief/stukken/handel/omwisselen/",
+      "title": "Stadsarchief Amsterdam · Omwisselen",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:36.453723+00:00"
+    },
+    {
       "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
       "title": "美国国家档案馆 · The Treaty of Kanagawa",
       "retrievedAt": "2026-10-23T06:46:20.326591+00:00",
       "sha256": "82a09ee6b82e3a39661f9abddc5f983d6feaa0c98b24b555b0008591ebce2874",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/brown-v-board-of-education",
+      "title": "U.S. National Archives · Brown v. Board of Education",
+      "retrievedAt": "2026-10-25T17:23:55.407396+00:00",
+      "sha256": "120371d55f4df2215417b08fb397236c5efc8ab666d292db04270d8a8f2428b9",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/milestone-documents/civil-rights-act",
+      "title": "U.S. National Archives · Civil Rights Act",
+      "retrievedAt": "2026-10-25T17:23:55.217322+00:00",
+      "sha256": "01054028b33690b38f3a70f618f0d9300b424a2a23ddcb7a33518234dea3c6c4",
       "revisionId": null
     },
     {
@@ -1322,6 +2967,27 @@
       "revisionId": null
     },
     {
+      "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/zhaozhou-bridge",
+      "title": "美国土木工程师学会 · Zhaozhou Bridge",
+      "retrievedAt": "2026-10-25T16:51:41.721716+00:00",
+      "sha256": "823b8f14a354adbabeb8f02e3717f0d115a508d499a582770b58d3892f6314e5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.auschwitz.org/en/history/liberation/day-of-liberation/",
+      "title": "Auschwitz-Birkenau Memorial · Day of liberation",
+      "retrievedAt": "2026-10-25T17:23:57.667254+00:00",
+      "sha256": "064be1bbb462f060266376246c777c49b4ee58adf029f40651f63e2eaecfa1af",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.bankofengland.co.uk/about/history",
+      "title": "英格兰银行 · History",
+      "retrievedAt": "2026-10-25T16:51:42.906755+00:00",
+      "sha256": "8018f18ef1e6500a4150f257809453119ebc62ada73f22b093415f6917ac2054",
+      "revisionId": null
+    },
+    {
       "url": "https://www.banpomuseum.com.cn/index.php?a=lists&c=index&catid=8&kid=30&m=content",
       "title": "西安半坡博物馆 · 遗址与功能分区",
       "retrievedAt": "2026-10-07T06:33:31.712220+00:00",
@@ -1330,10 +2996,58 @@
       "revisionId": null
     },
     {
+      "url": "https://www.banque-france.fr/fr/banque-de-france/institution-ancree-histoire/histoire-banque-de-france",
+      "title": "Banque de France · L’histoire de la Banque de France",
+      "retrievedAt": "2026-10-25T17:16:33.464520+00:00",
+      "sha256": "23dbf123bdca8edadd2436974847e2a6a99e8856b3555ebfd94d242081093922",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.berlin.de/ba-mitte/ueber-den-bezirk/erinnerungskultur/gedenktage/artikel.110198.php",
+      "title": "Berlin · Gedenken an die Opfer der Berliner Mauer",
+      "retrievedAt": "2026-10-25T17:23:56.891128+00:00",
+      "sha256": "c518154bd2ad5ce9c5b6e188d106637971c1b0a70cc55317eace056ee1719c76",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.bne.es/es/colecciones/cervantes/ingenioso-hidalgo-don-quixote-mancha",
+      "title": "西班牙国家图书馆 · El ingenioso hidalgo don Quixote de la Mancha",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:51:51.388946+00:00"
+    },
+    {
+      "url": "https://www.boj.or.jp/en/about/outline/history/",
+      "title": "日本银行 · History",
+      "retrievedAt": "2026-10-25T16:51:44.842217+00:00",
+      "sha256": "16ebbc53496983e6f91836d5e2a077afcd6dafd16a3be99a5f3e1af0c47d6454",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.bundesarchiv.de/im-archiv-recherchieren/archivgut-recherchieren/nach-themen/preussische-und-deutsche-streitkraefte-1867-bis-1918/",
+      "title": "Bundesarchiv · Preußische und deutsche Streitkräfte 1867 bis 1918",
+      "retrievedAt": "2026-10-25T16:46:53.365251+00:00",
+      "sha256": "130435a477bad857d2ec65fa05fb82d815e32916a934f6a4d35a7017e11afa2c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-companion-to-spinozas-ethics/textual-history-of-spinozas-ethics/DB85086DF14DD34231AC1D56270DBD3F",
+      "title": "Cambridge University Press · The Textual History of Spinoza’s Ethics",
+      "retrievedAt": "2026-10-25T16:51:46.417338+00:00",
+      "sha256": "41871c6a084b59a0b41deecce491f5c17502a48494570b77e7b64c59b7e8bca0",
+      "revisionId": null
+    },
+    {
       "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/mongol-central-asia/D4970E08F6EAD86F9BF503BDDE2692BD",
       "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
       "retrievedAt": "2026-10-23T06:54:52.555532+00:00",
       "sha256": "5414a3268cad36c3186b07f06d96b72365a5b6a1343776f53cbdc72de9657f56",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/world-cities-in-history/baghdad/436F7DC281A07230C18E78D741E172E7",
+      "title": "Cambridge University Press · World Cities in History · Baghdad",
+      "retrievedAt": "2026-10-25T16:46:12.371331+00:00",
+      "sha256": "c568f98ee62f473d526cfc4fc636e2a8ae778f35fef4f79901b544c1fa9ea7be",
       "revisionId": null
     },
     {
@@ -1355,6 +3069,13 @@
       "title": "加拿大政府 · The history of Canada Day",
       "error": "The read operation timed out",
       "attemptedAt": "2026-10-23T06:52:35.110439+00:00"
+    },
+    {
+      "url": "https://www.carnavalet.paris.fr/le-nouveau-parcours",
+      "title": "Musée Carnavalet · Le parcours: La Commune de Paris",
+      "retrievedAt": "2026-10-25T16:46:48.367756+00:00",
+      "sha256": "f6210ef779796ecb2d7fe41ec34c34e5f65e1b354315f2231fcb69f35a8cd70f",
+      "revisionId": null
     },
     {
       "url": "https://www.cass.cn/xueshuchengguo/wenzhexuebulishixuebu/201707/t20170720_3585032.shtml",
@@ -1426,6 +3147,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.chnmuseum.cn/zp/zpml/gjwxbt/202203/t20220301_254074.shtml",
+      "title": "中国国家博物馆 · 《日知录》",
+      "retrievedAt": "2026-10-25T16:51:45.617794+00:00",
+      "sha256": "f64f149fdecb28f9f62429b17da3a817b85332a04c80240fc2a23953f9971fdd",
+      "revisionId": null
+    },
+    {
       "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
       "title": "中国国家博物馆 · 江南制造局造船清单",
       "retrievedAt": "2026-10-06T16:18:38.823473+00:00",
@@ -1464,11 +3192,66 @@
       "revisionId": null
     },
     {
+      "url": "https://www.clerkmaxwellfoundation.org/html/key_facts_about_maxwell.html",
+      "title": "James Clerk Maxwell Foundation · Facts about Maxwell",
+      "retrievedAt": "2026-10-25T16:51:47.632482+00:00",
+      "sha256": "7a021575718fa85a0defa492f99e18016e8991535e5c5be61068829aabdef45e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.computerhistory.org/tdih/february/16/",
+      "title": "Computer History Museum · ENIAC dedication",
+      "retrievedAt": "2026-10-25T17:23:57.888406+00:00",
+      "sha256": "f88fc4b64870d2255ffd6232303b72ab49af3eba69004804a9ffcf4e9d7bfdca",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cp.com.cn/book/3bf46e31-0.html",
+      "title": "商务印书馆 · 《论道》内容简介",
+      "retrievedAt": "2026-10-25T17:33:12.572427+00:00",
+      "sha256": "1429aeb330e6469ab93a7642e9c9f6e4470e1e0431cb5434bfc65119f70830bf",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cp.com.cn/book/6df49904-d.html",
+      "title": "商务印书馆 · 《日知录》版本研究",
+      "retrievedAt": "2026-10-25T16:51:47.000099+00:00",
+      "sha256": "e144746586119b415a014e16de7cb345d66da3fbed962758901c05b2e0c27b05",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cppcc.gov.cn/2011/06/27/ARTI1309159125046101.shtml",
+      "title": "中国政协网 · 毛泽东（1893—1976）",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cppcc.gov.cn'. (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T17:33:19.065007+00:00"
+    },
+    {
       "url": "https://www.cssn.cn/lsx/lsx_kgx/202210/t20221024_5552637.shtml",
       "title": "中国社会科学网 · 石峁遗址的考古发现与研究综述",
       "retrievedAt": "2026-10-07T06:33:42.620511+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:13.891651+00:00",
       "sha256": "a422c58db6d8fd0d66a328f8c129ab176ad0b3b9d2134812b4008464efb925fa",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cssn.cn/zx/zx_rdkx/202505/t20250513_5873568.shtml",
+      "title": "中国社会科学网 · 王阳明《传习录》及其思想",
+      "retrievedAt": "2026-10-25T16:51:47.489619+00:00",
+      "sha256": "b92d1c1c41d74c7974aad3b50dc003d00547c53954436caaa146a4775b48869c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cuhk.edu.hk/renditions/authors/kuma.html",
+      "title": "香港中文大学《译丛》 · Kumarajiva",
+      "retrievedAt": "2026-10-25T16:51:48.266022+00:00",
+      "sha256": "f271bf2a3223b5454302177e4d223d469b4484e9876fb5b8b71009423a7df878",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cuhk.edu.hk/ugallery/sc/story/tang_chun_i.html",
+      "title": "香港中文大学校史馆 · 唐君毅先生",
+      "retrievedAt": "2026-10-25T17:33:13.487055+00:00",
+      "sha256": "8fdc7cceba546bc41f453b17608ec24a35e2935f0e4b9e525549fd2d5131bf6e",
       "revisionId": null
     },
     {
@@ -1484,6 +3267,13 @@
       "retrievedAt": "2026-10-22T08:38:31.977446+00:00",
       "lastCacheCheckAt": "2026-10-22T08:49:27.264193+00:00",
       "sha256": "53f12a8e9f667ec001d02981158df2087fc664db083e11f6bd01b54ded21b541",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/people/about-darwin",
+      "title": "University of Cambridge · Darwin Correspondence Project · About Darwin",
+      "retrievedAt": "2026-10-25T17:38:02.789199+00:00",
+      "sha256": "22bb171b76410c2a3e6c90cc925f923af9999e94c470dac26ff21b3a7027ed0e",
       "revisionId": null
     },
     {
@@ -1660,10 +3450,66 @@
       "revisionId": null
     },
     {
+      "url": "https://www.drps.ed.ac.uk/26-27/dpt/cxdivi10021.htm",
+      "title": "University of Edinburgh · The Making of Christian Orthodoxy 325–451",
+      "retrievedAt": "2026-10-25T17:16:45.869195+00:00",
+      "sha256": "3e6be57bc1c21d43e515bc4f5fc9e192b562836b490df11d503e204448ba2ecd",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.dswxyjy.org.cn/BIG5/n1/2019/0621/c423733-31173718.html",
+      "title": "中共中央党史和文献研究院 · 《辩证法唯物论（讲授提纲）》早期版本研究",
+      "retrievedAt": "2026-10-25T17:33:13.274370+00:00",
+      "sha256": "cdbb0618c4f4839a38ecbfc1ca02c5e07512084c8bae34e5bcd69cae5990367d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+      "title": "European Central Bank · Our money",
+      "retrievedAt": "2026-10-25T17:33:14.837103+00:00",
+      "sha256": "b43d2dae2111dc00700cca950dbb2f685a9619515c256c81962e9d8f1495bbee",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.eisenhowerlibrary.gov/research/online-documents/korean-war",
+      "title": "Eisenhower Presidential Library · Korean War",
+      "retrievedAt": "2026-10-25T17:23:59.628958+00:00",
+      "sha256": "e60b0b05b936858f24b20ea3d63aa95a757cbf9566707a835b6c0051effab20e",
+      "revisionId": null
+    },
+    {
       "url": "https://www.english-heritage.org.uk/visit/places/1066-battle-of-hastings-abbey-and-battlefield/history-and-stories/history/",
       "title": "英国历史遗产委员会 · History of Battle Abbey and Battlefield",
       "retrievedAt": "2026-10-23T06:50:14.321138+00:00",
       "sha256": "f23ed7fec219e69e687f193273b83d70b453ed3c1d800b16471edd5d3e5e10dc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.euronext.com/en/about/media/bell-ceremony-archive/415th-anniversary",
+      "title": "Euronext · 415th anniversary",
+      "retrievedAt": "2026-10-25T16:51:49.503335+00:00",
+      "sha256": "5e914403dcc8580ca9f576bdd37cf0097dd6ffee37ac80bd0521ba9f48b4fa62",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.europarl.europa.eu/about-parliament/en/in-the-past/the-parliament-and-the-treaties/treaty-of-rome",
+      "title": "European Parliament · Treaty of Rome",
+      "retrievedAt": "2026-10-25T17:23:59.054949+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.federalreservehistory.org/essays/great-depression",
+      "title": "Federal Reserve History · The Great Depression",
+      "retrievedAt": "2026-10-25T17:24:00.489301+00:00",
+      "sha256": "4a527ba1b6d6add36e5a702e29ae30f5ff443a2c721830cb6c0beac11dc33a57",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.folger.edu/explore/shakespeares-life/",
+      "title": "Folger Shakespeare Library · Shakespeare’s life",
+      "retrievedAt": "2026-10-25T17:38:04.438426+00:00",
+      "sha256": "0bad4f04077a2a0baab40dc473ab83d905d3ce8cacf4cbade7dcc92cb2d44885",
       "revisionId": null
     },
     {
@@ -1672,6 +3518,33 @@
       "retrievedAt": "2026-10-08T18:03:11.747620+00:00",
       "lastCacheCheckAt": "2026-10-08T18:12:49.636790+00:00",
       "sha256": "469f65b254811bcc934b6abe4ae79f14c365e695547731efd1edac17ad447d98",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gc.cuny.edu/saul-kripke-center/about-saul-kripke-center",
+      "title": "CUNY Graduate Center · About the Saul Kripke Center",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:06.994189+00:00"
+    },
+    {
+      "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
+      "title": "NHGRI · Human Genome Project Fact Sheet",
+      "retrievedAt": "2026-10-25T17:33:15.372124+00:00",
+      "sha256": "9ac8b3c82735e7d0702695418a2e064837115fdf7d462e575ade930e366d88e5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.genome.gov/about-nhgri/Brief-History-Timeline",
+      "title": "NHGRI · History and Timeline of Events",
+      "retrievedAt": "2026-10-25T17:24:02.470076+00:00",
+      "sha256": "b404d947c67557a7e0c7fd3f62c730688335bb9caaf4df7d70b5208b2546465d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.genome.gov/human-genome-project/timeline",
+      "title": "NHGRI · Human Genome Project Timeline",
+      "retrievedAt": "2026-10-25T17:24:04.323434+00:00",
+      "sha256": "07af6b9ef81b2362955120b83abc424128ae3259b6b5a62ee6a41300ae8a4482",
       "revisionId": null
     },
     {
@@ -1703,6 +3576,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gov.za/issues/20years/milestones-20-years-freedom",
+      "title": "South African Government · Milestones of 20 Years of Freedom",
+      "retrievedAt": "2026-10-25T17:24:06.752994+00:00",
+      "sha256": "fb05657a8c25f5f4d261d032968809706b592b9f7737caa1bb217843f413ed3c",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "retrievedAt": "2026-10-08T17:25:10.424524+00:00",
@@ -1715,6 +3595,13 @@
       "title": "二里头遗址 · 考古发现与许宏访谈",
       "retrievedAt": "2026-10-06T17:35:46.682296+00:00",
       "sha256": "51911c4e4d6675296eedbfdf3d8dfcc690077ade7669d3a89d4a96893a954771",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.harvard.edu/about/history/timeline/",
+      "title": "Harvard University · History timeline",
+      "retrievedAt": "2026-10-25T17:16:26.575843+00:00",
+      "sha256": "4ee3122240bb772868661e8562a915e5f87bea51d59c185b607ebe6f9fc0c6cf",
       "revisionId": null
     },
     {
@@ -1749,6 +3636,26 @@
       "revisionId": null
     },
     {
+      "url": "https://www.icm.gov.mo/handovermuseum/en",
+      "title": "澳门文化局 · 回归贺礼陈列馆",
+      "retrievedAt": "2026-10-25T17:33:15.770192+00:00",
+      "sha256": "4c8e1d6cc6b5eb23a6449ab4557982d614ac0011ace691b1dc4e6dc0cd174069",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.imf.org/external/about/timeline/index.htm",
+      "title": "International Monetary Fund · The IMF in History",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:13.476117+00:00"
+    },
+    {
+      "url": "https://www.info.gov.hk/gia/general/dib/0701.htm",
+      "title": "香港政府新闻公报 · 1997年7月1日",
+      "retrievedAt": "2026-10-25T17:33:16.663634+00:00",
+      "sha256": "c2401b9e443f825da975c6ba9de5dfff40a0001cbf2e4ed2b0d03d349bddcb18",
+      "revisionId": null
+    },
+    {
       "url": "https://www.iranicaonline.org/articles/constitutional-revolution-iii/",
       "title": "Encyclopaedia Iranica · Constitutional Revolution: The Constitution",
       "retrievedAt": "2026-10-23T06:50:37.554525+00:00",
@@ -1756,10 +3663,48 @@
       "revisionId": null
     },
     {
+      "url": "https://www.iranicaonline.org/articles/salamis/",
+      "title": "Encyclopaedia Iranica · Salamis",
+      "retrievedAt": "2026-10-25T16:46:13.263463+00:00",
+      "sha256": "8f65c6fa46d0cc43e65f284a60426c181c2957bb96ca342ca9749320b272aab9",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.iwm.org.uk/collections/item/object/205193059",
+      "title": "Imperial War Museums · D-Day collection B 5165",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:14.137939+00:00"
+    },
+    {
+      "url": "https://www.iwm.org.uk/sites/default/files/files/2023-10/second_world_war_galleries_large_print.pdf",
+      "title": "Imperial War Museums · Second World War galleries",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:17.111472+00:00"
+    },
+    {
       "url": "https://www.judiciary.uk/reflections-on-vaisakhi-hhj-jinder-singh-boora-shares-his-experience/",
       "title": "英国司法机构 · Vaisakhi：Jinder Singh Boora 的社群说明",
       "error": "HTTP Error 503: Service Unavailable",
       "attemptedAt": "2026-10-23T06:45:49.214582+00:00"
+    },
+    {
+      "url": "https://www.kanazawa-museum.jp/daisetz/about.html",
+      "title": "金泽市铃木大拙馆 · 大拙年谱",
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T17:24:20.926660+00:00"
+    },
+    {
+      "url": "https://www.lib.pku.edu.cn/portal/cn/news/0000001085",
+      "title": "北京大学图书馆 · 新文化运动与北京大学百年展",
+      "retrievedAt": "2026-10-25T17:33:16.376781+00:00",
+      "sha256": "e4c167ec912a80da3a253631e5d9ab602776994c5923ab94f6cea5cfe1271798",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.loc.gov/collections/daguerreotypes/articles-and-essays/timeline-of-the-daguerreotype-era/",
+      "title": "Library of Congress · Timeline of the Daguerreotype Era",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:24.041662+00:00"
     },
     {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
@@ -1786,6 +3731,12 @@
       "attemptedAt": "2026-10-23T06:50:23.251988+00:00"
     },
     {
+      "url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/complete-national-recording-registry-listing/",
+      "title": "Library of Congress · National Recording Registry",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:21.093265+00:00"
+    },
+    {
       "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
       "title": "美国国会图书馆 · 宽永行幸记",
       "error": "HTTP Error 403: Forbidden",
@@ -1804,16 +3755,40 @@
       "attemptedAt": "2026-10-23T06:50:41.179301+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/essays/geometric-art-in-ancient-greece",
+      "title": "The Metropolitan Museum of Art · Geometric Art in Ancient Greece",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-25T17:15:36.988024+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/hagia-sophia-532-37",
+      "title": "大都会艺术博物馆 · Hagia Sophia, 532–37",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-25T16:51:56.176437+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
       "title": "大都会艺术博物馆 · 平安时代（794—1185）",
       "error": "HTTP Error 429: Too Many Requests",
       "attemptedAt": "2026-10-23T06:54:39.832640+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/essays/hokusai-great-wave",
+      "title": "大都会艺术博物馆 · The Great Wave: Anatomy of an Icon",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-25T16:51:56.556988+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/the-art-of-the-timurid-period-ca-1370-1507",
       "title": "大都会艺术博物馆 · 帖木儿时期艺术（约1370—1507）",
       "error": "HTTP Error 429: Too Many Requests",
       "attemptedAt": "2026-10-23T06:54:59.227031+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-later-ottomans-and-the-impact-of-europe",
+      "title": "The Metropolitan Museum of Art · The Later Ottomans and the Impact of Europe",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-10-25T16:46:44.604923+00:00"
     },
     {
       "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
@@ -1900,6 +3875,46 @@
       "attemptedAt": "2026-10-22T08:49:34.403575+00:00"
     },
     {
+      "url": "https://www.moma.org/collection/works/79802",
+      "title": "Museum of Modern Art · The Starry Night",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:15:54.196250+00:00"
+    },
+    {
+      "url": "https://www.musee-orsay.fr/fr/ressources/repertoire-artistes-personnalites/marie-curie-203740",
+      "title": "Musée d’Orsay · Marie Curie (203740)",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:38:09.760420+00:00"
+    },
+    {
+      "url": "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html",
+      "title": "Vatican Museums · Sistine Chapel: Ceiling",
+      "retrievedAt": "2026-10-25T17:15:45.267157+00:00",
+      "sha256": "5d3bc5611896bf40a1dd3d2b8ef184927f6b1b1b457edc3672d24cfcbc4cb0fa",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.museoreinasofia.es/colecciones/obra/guernica/",
+      "title": "Museo Reina Sofía · Guernica",
+      "retrievedAt": "2026-10-25T17:24:23.058283+00:00",
+      "sha256": "fd131b5207693d8c32b5ae10e8a50f5090c3f3e6ff9bb481318716a03ab2fa66",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.museunacional.cat/en/ducat",
+      "title": "加泰罗尼亚国家艺术博物馆 · Ducat",
+      "retrievedAt": "2026-10-25T16:51:57.245746+00:00",
+      "sha256": "a05ea01b737ec45899495d69c555d4578e019fb3b2df0fe303374ba31054a582",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.myweb.ttu.edu/jhowe/syllabi/Ayn%20Jalut.html",
+      "title": "Texas Tech University · Jami al-Tawarikh: The Battle of Ayn Jalut",
+      "retrievedAt": "2026-10-25T16:46:16.598556+00:00",
+      "sha256": "008eb1f2f81081dcbb84c3a70ba930229c264a023dfbd029126ed15079af397c",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nam.ac.uk/explore/battle-waterloo",
       "title": "英国国家陆军博物馆 · Battle of Waterloo",
       "retrievedAt": "2026-10-23T06:50:28.552756+00:00",
@@ -1949,10 +3964,38 @@
       "revisionId": null
     },
     {
+      "url": "https://www.nasa.gov/history/sputnik/chronology.html",
+      "title": "NASA · Chronology of Sputnik/Vanguard/Explorer Events",
+      "retrievedAt": "2026-10-25T17:24:21.983555+00:00",
+      "sha256": "54560a19a7ae7dcc94d95b8af47a995ec1e8b5ffac4cb7e7c88883fcbe385854",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nasa.gov/image-article/einstein-general-relativity/",
+      "title": "NASA · Einstein and General Relativity",
+      "retrievedAt": "2026-10-25T17:24:23.252202+00:00",
+      "sha256": "9256ac10b3637e13ae8f2e5b217fdc5fd95d4658452c535d68113a885f9a62a0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nasa.gov/missions/apollo/apollo-11/apollo-11-mission-overview/",
+      "title": "NASA · Apollo 11 Mission Overview",
+      "retrievedAt": "2026-10-25T17:24:23.627312+00:00",
+      "sha256": "886360daf257c1ce3e8165e8dae05f591cb15fc8db522de50638496ea5ee164d",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/coen-bouwt-fort-batavia-1619",
       "title": "荷兰国家档案馆 · Coen bouwt fort Batavia (1619)",
       "retrievedAt": "2026-10-23T06:46:32.795222+00:00",
       "sha256": "f1ec0314b3716651924f2a2addd179e6ef1374d93b1e7bee766f166baa90ef65",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/partition-of-british-india/",
+      "title": "The National Archives · Partition of British India",
+      "retrievedAt": "2026-10-25T17:24:25.028230+00:00",
+      "sha256": "604208e4d40d68bd3dcbc87af4b542d47997fc0b4993d7d33aac48b73ed35fbe",
       "revisionId": null
     },
     {
@@ -1971,6 +4014,20 @@
       "revisionId": null
     },
     {
+      "url": "https://www.nationalgallery.org.uk/artists/Michelangelo",
+      "title": "National Gallery, London · Michelangelo",
+      "retrievedAt": "2026-10-25T17:38:03.619667+00:00",
+      "sha256": "ea26d5f646f286ec8549def6cc77ddeccedd57377795321a9a9cb4fc78735712",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nationalww2museum.org/sites/default/files/2023-04/80001674_WWII_Brick%20Book%20Guts.pdf",
+      "title": "The National WWII Museum · August–September 1945",
+      "retrievedAt": "2026-10-25T17:24:26.163710+00:00",
+      "sha256": "043308f01064b1778917ebb664e73d5018c8764757077e52be7d56a3c41f2fdb",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nbmuseum.cn/art/2024/4/30/art_20380_3491.html",
       "title": "宁波博物院 · 河姆渡文化考古成果特展",
       "retrievedAt": "2026-10-07T06:33:31.124164+00:00",
@@ -1985,6 +4042,12 @@
       "lastCacheCheckAt": "2026-10-07T06:45:07.029776+00:00",
       "sha256": "c02e3fd53985569e764e68297f4ec8bab9aef22eed258291ac03c38452329ce4",
       "revisionId": null
+    },
+    {
+      "url": "https://www.ncl.edu.tw/information_236_15182.html",
+      "title": "国家图书馆 · 白先勇说红楼梦第二讲",
+      "error": "HTTP Error 302: Found",
+      "attemptedAt": "2026-10-25T17:15:38.507541+00:00"
     },
     {
       "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
@@ -2009,10 +4072,71 @@
       "revisionId": null
     },
     {
+      "url": "https://www.newadvent.org/cathen/03555a.htm",
+      "title": "Catholic Encyclopedia · Council of Chalcedon",
+      "retrievedAt": "2026-10-25T17:16:45.312657+00:00",
+      "sha256": "b119bd691b6bfb0be51e3e20299fbf530f3bb0eb18390658ea8d5995efca4bb4",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nga.gov/artists/1349-vincent-van-gogh",
+      "title": "National Gallery of Art · Vincent van Gogh",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:38:10.724214+00:00"
+    },
+    {
+      "url": "https://www.nga.gov/stories/articles/1874-birth-impressionism",
+      "title": "National Gallery of Art · 1874: The Birth of Impressionism",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:15:52.315910+00:00"
+    },
+    {
+      "url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_bio.html",
+      "title": "U.S. National Library of Medicine · Vesalius: Author and Title",
+      "retrievedAt": "2026-10-25T17:15:59.129885+00:00",
+      "sha256": "1bc8705cf701ded86b833b87cca5b85a061eb3d9188eb17e12430041e58ceac0",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nma.gov.au/defining-moments/defining-moments-timeline",
       "title": "澳大利亚国家博物馆 · Defining moments timeline",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-22T08:49:35.598235+00:00"
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/lists/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/",
+      "title": "诺贝尔奖机构 · Marie and Pierre Curie and the discovery of polonium and radium",
+      "retrievedAt": "2026-10-25T16:51:57.418746+00:00",
+      "sha256": "906a9bd8cdf611e6faca284bb205e55d8e9e837e693f333e5e79ecebd4a926bb",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/literature/1913/summary/",
+      "title": "Nobel Foundation · Literature Prize 1913",
+      "retrievedAt": "2026-10-25T17:24:24.613632+00:00",
+      "sha256": "eaf3e1502e1cb31df69c649b5a41a006ab03af7c4681aa8029ef7b63bd5b9353",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/literature/1913/tagore/facts/",
+      "title": "Nobel Prize · Rabindranath Tagore: Facts",
+      "retrievedAt": "2026-10-25T17:24:25.568330+00:00",
+      "sha256": "551e58632d0f21c20d71cfc568d1be25470c9bb67104a2db6e21075c72e9539d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nps.gov/articles/000/b-reactor-history-room-pearl-harbor.htm",
+      "title": "U.S. National Park Service · Pearl Harbor",
+      "retrievedAt": "2026-10-25T17:24:26.166736+00:00",
+      "sha256": "6c93ec6f18b04131b34a385749cbb47ed8e468510ad83653a7fe37be2dc0da68",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nps.gov/articles/featured_stories_wori.htm",
+      "title": "U.S. National Park Service · Nineteenth Century Activism",
+      "retrievedAt": "2026-10-25T16:46:42.382626+00:00",
+      "sha256": "33f4c063f0dab0eea52fe9562ea06ed39fab677102a0f1889ec97112a3c43c90",
+      "revisionId": null
     },
     {
       "url": "https://www.nps.gov/civilwar/overview.htm",
@@ -2037,6 +4161,25 @@
       "revisionId": null
     },
     {
+      "url": "https://www.ohchr.org/sites/default/files/Documents/Publications/Compilation1.1en.pdf",
+      "title": "OHCHR · International Bill of Human Rights",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:32.971249+00:00"
+    },
+    {
+      "url": "https://www.ox.ac.uk/about/the-university/history",
+      "title": "University of Oxford · Our history",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:32.434553+00:00"
+    },
+    {
+      "url": "https://www.paris.fr/pages/cinq-ans-apres-notre-dame-de-paris-s-apprete-a-rouvrir-ses-portes-29209",
+      "title": "Ville de Paris · Notre-Dame de Paris rouvre ses portes",
+      "retrievedAt": "2026-10-25T17:16:42.480065+00:00",
+      "sha256": "ad1cb977eb8a1411975ccb946d9ebed5f724724fa3b6d6f79d87c03ad2a8fa77",
+      "revisionId": null
+    },
+    {
       "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/the-articles-constitution-and-trade/",
       "title": "英国议会 · 1707年联合法案的条款、宪制与贸易",
       "error": "HTTP Error 403: Forbidden",
@@ -2049,10 +4192,56 @@
       "attemptedAt": "2026-10-23T06:50:27.749035+00:00"
     },
     {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
+      "title": "UK Parliament · The Chartist movement",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:46.468509+00:00"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
+      "title": "UK Parliament · The 1833 Factory Act",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:40.486763+00:00"
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
+      "title": "UK Parliament · Parliament abolishes the slave trade",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:46:31.788560+00:00"
+    },
+    {
+      "url": "https://www.pasteur.fr/fr/nous-connaitre/notre-adn/histoire",
+      "title": "巴斯德研究所 · Notre histoire",
+      "retrievedAt": "2026-10-25T16:51:58.209951+00:00",
+      "sha256": "ef87ca0b73e6b37de7f6260ec8dcc1850712530d187f001ac2a2378d2aaa229b",
+      "revisionId": null
+    },
+    {
       "url": "https://www.persee.fr/doc/cea_0008-0055_1982_num_22_87_3380",
       "title": "John K. Thornton · 刚果王国约1390—1678年的社会结构",
       "retrievedAt": "2026-10-23T06:54:41.816286+00:00",
       "sha256": "98e34858f9852863928ac4ff11baa18a7e506a98ec121bd0da328b9f91ef3b95",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.phil.tsinghua.edu.cn/info/1037/1306.htm",
+      "title": "清华大学哲学系 · 王路《论加字哲学》",
+      "retrievedAt": "2026-10-25T17:33:16.649165+00:00",
+      "sha256": "b4afc0fd2985d052154f36d0183d092eb1d442b74008652d1ebfd3a699bf928c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.physik.uzh.ch/en/department/Nobel_Prizes/Conrad-R%C3%B6ntgen.html",
+      "title": "University of Zurich · Conrad Röntgen",
+      "retrievedAt": "2026-10-25T17:16:16.846551+00:00",
+      "sha256": "5db205644383af82af7390e59d4a9c6ca5409603aaa2e183badfcd5eb38121e4",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.princeton.edu/~elman/documents/Rethinking_the_Twentieth_Century_Denigration.pdf",
+      "title": "Princeton University · Rethinking the Twentieth Century Denigration",
+      "retrievedAt": "2026-10-25T17:24:28.892601+00:00",
+      "sha256": "1bb3ecf462d0086a5545af70f377001226314370bd23cd69e696c680aa2849bd",
       "revisionId": null
     },
     {
@@ -2064,10 +4253,92 @@
       "revisionId": null
     },
     {
+      "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
+      "title": "Royal Institution · Michael Faraday’s generator",
+      "retrievedAt": "2026-10-25T17:16:06.876054+00:00",
+      "sha256": "43056ec888f6f94efd432bed6439beb3afffe21325c60a3b6572748df4319bf1",
+      "revisionId": null
+    },
+    {
       "url": "https://www.rijksmuseum.nl/en/collection/node/The-Republic--2447420802fc4934bd9db55c8c6cc003",
       "title": "荷兰国立博物馆 · The Republic",
       "retrievedAt": "2026-10-23T06:50:19.796361+00:00",
       "sha256": "c5420c23d7df9118bee1b832fefc46f63660f2f47f5d90e85f19210f2200d84d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",
+      "title": "Rijksmuseum · 10 things about Rembrandt’s Night Watch",
+      "retrievedAt": "2026-10-25T17:15:46.647637+00:00",
+      "sha256": "a4d6c7757bde55fe8ff78f16e2ef87a47cc5fe0d9307e7613a11595f82714489",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.rsc.org.uk/hamlet/about-the-play/dates-and-sources",
+      "title": "Royal Shakespeare Company · Hamlet: Dates and sources",
+      "retrievedAt": "2026-10-25T17:15:40.691007+00:00",
+      "sha256": "f8a045f28f9d3d773807c49f8bdaf1ba040483bb1d819623d2a7e1b99dcac1e5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.rsc.org/news/2019/january/finding-the-periodic-table",
+      "title": "Royal Society of Chemistry · Finding the periodic table",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:16:18.171785+00:00"
+    },
+    {
+      "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
+      "title": "中国国家档案局 · Huangdi Neijing世界记忆申报材料",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "attemptedAt": "2026-10-25T16:52:03.599339+00:00"
+    },
+    {
+      "url": "https://www.saet.ac.uk/Buddhism/Dogen",
+      "title": "University of St Andrews · Dōgen (1200–1253)",
+      "retrievedAt": "2026-10-25T16:52:02.386304+00:00",
+      "sha256": "a91408f8341e00e7c9f696c74c0c62fec9302efe5927b58e91a13c8a5dbda131",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saet.ac.uk/Christianity/CouncilofTrent",
+      "title": "圣安德鲁斯大学 · Council of Trent",
+      "retrievedAt": "2026-10-25T16:52:02.559160+00:00",
+      "sha256": "b85d21a1fc82355e18b843ea78c7d6552fa1d66eee86310c490a2b6690b05cf2",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saet.ac.uk/Christianity/TheTheologyoftheCouncilofNicaea",
+      "title": "圣安德鲁斯大学 · The Theology of the Council of Nicaea",
+      "retrievedAt": "2026-10-25T16:52:03.778258+00:00",
+      "sha256": "ed70426685aff0458b4e9e25587fba6a7c5fb63ddece08710b39a236017fa48c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
+      "title": "Science History Institute · Alexander Fleming",
+      "retrievedAt": "2026-10-25T17:24:27.506258+00:00",
+      "sha256": "9b28b4be5448bd9763b42c9d474653e23ab0f84cfbdbae6a923664a59115019e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/robert-boyle/",
+      "title": "Science History Institute · Robert Boyle",
+      "retrievedAt": "2026-10-25T17:16:03.551065+00:00",
+      "sha256": "2d6417c00323ba4f5d8a629205a0d028cddecd20eb2534c69b69a67a1a7ae2b5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shakespearesglobe.com/discover/about-us/globe-theatre/",
+      "title": "Shakespeare’s Globe · Globe Theatre",
+      "retrievedAt": "2026-10-25T16:52:04.789950+00:00",
+      "sha256": "bdcf3d4d03b61ce8a782f9819ecc35bc3a044d5628bd9672dd7a9e0674f68ba0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.sikhmissionarysociety.org/sms/smsarticles/advisorypanel/gurmukhsinghsewauk/gurugranthsahib/",
+      "title": "Sikh Missionary Society · Guru Granth Sahib",
+      "retrievedAt": "2026-10-25T16:52:05.601834+00:00",
+      "sha256": "6341f17f67cd52ae2fb656bc03f029efd3ffd41e1b305454b9d905e0557471df",
       "revisionId": null
     },
     {
@@ -2092,6 +4363,68 @@
       "revisionId": null
     },
     {
+      "url": "https://www.sydneyoperahouse.com/our-story",
+      "title": "Sydney Opera House · Our story",
+      "retrievedAt": "2026-10-25T17:24:28.139977+00:00",
+      "sha256": "9118e30b6b6a6ee9ed008b12e99f28f5f8e9f4eb4226111dd206b92a5795d0c4",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/news/130-years/1889-2019-130-years-amazement",
+      "title": "埃菲尔铁塔官方 · 1889–2019: 130 years of amazement",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T16:52:11.472991+00:00"
+    },
+    {
+      "url": "https://www.u-tokyo.ac.jp/en/about/chronology.html",
+      "title": "The University of Tokyo · Chronology",
+      "retrievedAt": "2026-10-25T17:16:28.005575+00:00",
+      "sha256": "10a1733f570f228cc4a3b0fcd017c9deddb38693c4a10058339ce61c21898c32",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ucpress.edu/books/religion-and-nothingness/paper",
+      "title": "University of California Press · Religion and Nothingness",
+      "retrievedAt": "2026-10-25T17:24:29.737218+00:00",
+      "sha256": "938358f2b17e7f141b11c2276d4ea9f69fa7b573d9793f9a483298b4a475a427",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.un.org/en/chronicle/article/independence-long-term-stability-united-nations-efforts-africa",
+      "title": "United Nations · From Independence to Long-term Stability",
+      "retrievedAt": "2026-10-25T17:24:31.053966+00:00",
+      "sha256": "0ad7809eab68b0df4aeb8eefbdb6198299091ff400e4ef0c717f6ef728187604",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.un.org/en/ga/president/55/pdf/priorities/millenniumsummit.pdf",
+      "title": "United Nations · Millennium Declaration, Resolution 55/2",
+      "retrievedAt": "2026-10-25T17:33:26.964032+00:00",
+      "sha256": "d2647c114c25afb21fb8e20f8c7ddc7cd3785a2d1499ec17853ad77c20bea203",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unesco.org/en/articles/netherlands-museums-confront-countrys-colonial-past-0",
+      "title": "UNESCO · The Netherlands: Museums confront the country’s colonial past",
+      "retrievedAt": "2026-10-25T16:46:24.146292+00:00",
+      "sha256": "fd4436a82dabe188312327028955223c0498712da34798c9f21770e999ee4f6a",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unesco.org/en/legal-affairs/constitution",
+      "title": "UNESCO · Constitution",
+      "retrievedAt": "2026-10-25T17:24:33.447454+00:00",
+      "sha256": "06f1b1c3f01248efe01d8fc5522b1475b1b3e5d3909020ef873bb3836a29ab61",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unesco.org/en/memory-world/archives-dutch-east-india-company",
+      "title": "UNESCO · Archives of the Dutch East India Company",
+      "retrievedAt": "2026-10-25T16:46:21.480412+00:00",
+      "sha256": "a08235a010d5dc5d027e9adc4ab5891b10cc7689e8f65f4c9db50e3af8ca2fed",
+      "revisionId": null
+    },
+    {
       "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
       "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
       "retrievedAt": "2026-10-23T06:46:12.358204+00:00",
@@ -2099,10 +4432,121 @@
       "revisionId": null
     },
     {
+      "url": "https://www.unesco.org/en/memory-world/manifest-der-kommunistischen-partei-draft-manuscript-page-and-das-kapital-erster-band-karl-marxs",
+      "title": "UNESCO Memory of the World · Marx’s annotated Das Kapital",
+      "retrievedAt": "2026-10-25T16:52:07.468263+00:00",
+      "sha256": "f2e3217568bd7daf9f888b87364c08ad88356b3f4e375b51a3ca71cc6fed17cc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unhcr.org/publications/final-act-united-nations-conference-plenipotentiaries-status-refugees-and-stateless",
+      "title": "UNHCR · Final Act of the Conference on Refugees",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-10-25T17:24:39.369205+00:00"
+    },
+    {
+      "url": "https://www.uni-frankfurt.de/en/newsroom/meldungen/pressemitteilungen/2026/die-goethe-universitaet-trauert-um-juergen-habermas",
+      "title": "Goethe University Frankfurt · Mourning Jürgen Habermas",
+      "retrievedAt": "2026-10-25T17:24:34.496646+00:00",
+      "sha256": "0b9b1c4dfeef32ffafe2d011d1c833577a113fc1ea637fbf66ac23795403c51e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.uni-goettingen.de/de/703224.html",
+      "title": "University of Göttingen · Goethe: Faust I (1808)",
+      "retrievedAt": "2026-10-25T17:15:40.871911+00:00",
+      "sha256": "2e8bc4cb7a63547a1db6a61b15e7f5432a40afab254bfe3dc01b3ac4588ca420",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.uni-potsdam.de/en/botanischer-garten/unser-garten/kolonialismus/maji-maji-krieg",
+      "title": "University of Potsdam · Maji Maji War",
+      "retrievedAt": "2026-10-25T16:46:58.447290+00:00",
+      "sha256": "b9f627bd5166a8cd11be0eed4db01f1797265496bd1146154a51485e219ac89b",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unibo.it/en/university/who-we-are/our-history/our-history",
+      "title": "博洛尼亚大学 · Our history",
+      "retrievedAt": "2026-10-25T16:52:08.417128+00:00",
+      "sha256": "3486104ce24340ef479f9a94efb4e8d531414f07dde0a63167ffabcbe4d2abd4",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.usbr.gov/lc/hooverdam/history/articles/chrono.html",
+      "title": "U.S. Bureau of Reclamation · Hoover Dam chronology",
+      "retrievedAt": "2026-10-25T17:24:35.650537+00:00",
+      "sha256": "ce87c13aa7c635ee19b92c5c32473a2e9badac0d2a6560abae34f552e36883b3",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.vatican.va/content/benedict-xvi/en/homilies/2005/documents/hf_ben-xvi_hom_20051208_anniv-vat-council.html",
+      "title": "The Holy See · Fortieth anniversary of Vatican II",
+      "retrievedAt": "2026-10-25T17:24:35.491185+00:00",
+      "sha256": "ed1b968b674bfd78124e7fdf80eee6fab27bb0063be406d634cd43a4a86643e1",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.visvabharati.ac.in/ENGLISH.html",
+      "title": "Visva-Bharati University · Tagore bibliography: English works",
+      "retrievedAt": "2026-10-25T17:24:36.415057+00:00",
+      "sha256": "951d6aae4e4e5eae575f9e294994e730cd5ef2e9de7add6ae1276dee4015205e",
+      "revisionId": null
+    },
+    {
       "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
       "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
       "retrievedAt": "2026-10-23T06:59:34.747894+00:00",
       "sha256": "d1ac06c7921ed1578002c1996ce4eb2fa9640865aa92aa5de64fc019bd040d9e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.who.int/emergencies/situations/smallpox/",
+      "title": "World Health Organization · Smallpox",
+      "retrievedAt": "2026-10-25T17:24:36.213970+00:00",
+      "sha256": "0deaf302dd6ea03e73bbbf5bbe69a490a08c0cfa4c82c929e28f32489a148212",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-polio-vaccination",
+      "title": "World Health Organization · History of polio vaccination",
+      "retrievedAt": "2026-10-25T17:24:36.709575+00:00",
+      "sha256": "b89ae04a24d69e7713710bf73b3d5b2d8211de87a1cd698973483b2eee30afca",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination",
+      "title": "世界卫生组织 · History of smallpox vaccination",
+      "retrievedAt": "2026-10-25T16:52:08.396074+00:00",
+      "sha256": "69d73c9b507463beb431a093933fe9e172a23995ceb065fc52901023ed485936",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.wienerphilharmoniker.at/en/orchestra/exhibitions/exhibition1",
+      "title": "维也纳爱乐乐团 · 第九交响曲首演二百周年展",
+      "retrievedAt": "2026-10-25T16:52:10.383696+00:00",
+      "sha256": "0189602400f17d73faa2f3387876ba10281a97ce1f6c5a90b32b8cd5c56db877",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.wto.org/english/docs_e/legal_e/legalexplgatt1947_e.htm",
+      "title": "World Trade Organization · GATT 1947 and GATT 1994",
+      "retrievedAt": "2026-10-25T17:24:37.054429+00:00",
+      "sha256": "20e856e127ba24b665da3e3b7fd2fc688d281b2aee7cec897f80e502c3f45c26",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.wto.org/english/thewto_e/history_e/history_e.htm",
+      "title": "World Trade Organization · History of the multilateral trading system",
+      "retrievedAt": "2026-10-25T17:24:37.681396+00:00",
+      "sha256": "169e4fc85d184681d23839d2b88a2b633da9c2b939a662cd4b54effe724c1c8c",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.xsg.pku.edu.cn/heros/revolutionist/detail/514.html",
+      "title": "北京大学校史馆 · 陈独秀",
+      "retrievedAt": "2026-10-25T17:33:16.939011+00:00",
+      "sha256": "537bf27963340762f628d6254418c4f0baaed13b1e3ec3b8735473381fe96c10",
       "revisionId": null
     },
     {
@@ -2126,10 +4570,31 @@
       "attemptedAt": "2026-10-06T16:22:05.948859+00:00"
     },
     {
+      "url": "https://www2.museogalileo.it/en/library-and-research-institute/projects/meet-galileo/38-works/464-sidereus-nuncius-the-starry-messenger-1610.html",
+      "title": "伽利略博物馆 · Sidereus Nuncius (1610)",
+      "retrievedAt": "2026-10-25T16:52:10.471571+00:00",
+      "sha256": "8285772a4d2e9434f0710abf1bfee97bf53360cbae2d08040cc60fb006fff20a",
+      "revisionId": null
+    },
+    {
       "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Footprints_of_the_Lion/gravity_glory.html",
       "title": "剑桥大学图书馆 · Newton: Gravity and Glory",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
       "attemptedAt": "2026-10-22T08:51:07.193830+00:00"
+    },
+    {
+      "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Milton/captions.html",
+      "title": "Cambridge University Library · Living at this Hour: John Milton",
+      "retrievedAt": "2026-10-25T17:15:38.586704+00:00",
+      "sha256": "0c4d1e461e95a6533cc77b069388f3824f860c8ea80cf1887ffb489c73978d81",
+      "revisionId": null
+    },
+    {
+      "url": "https://xsg.tsinghua.edu.cn/info/1004/1945.htm",
+      "title": "清华大学校史馆 · 金岳霖的西南联大时期",
+      "retrievedAt": "2026-10-25T17:33:17.119592+00:00",
+      "sha256": "bb7503c676b2b1a39ef986655e6a026a7a151794ee3ea2b77e9fec038e448f22",
+      "revisionId": null
     },
     {
       "url": "https://ysglxy.sdca.edu.cn/info/1049/1316.htm",
@@ -4137,6 +6602,13 @@
       "revisionId": 463219
     },
     {
+      "url": "https://zh.wikisource.org/wiki/琵琶行",
+      "title": "《琵琶行并序》",
+      "retrievedAt": "2026-10-25T17:15:30.306139+00:00",
+      "sha256": "8adb5b9b0abf629db4499e15890a1aee2efb56c1c735310d4d838075ad8d6482",
+      "revisionId": 9685214
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/筆法記",
       "title": "《笔法记》· 传为荆浩所撰",
       "retrievedAt": "2026-10-08T17:25:08.748762+00:00",
@@ -4691,6 +7163,13 @@
       "lastCacheCheckAt": "2026-10-08T18:12:50.025940+00:00",
       "sha256": "2a43dc45959ba37a97d1bc630a8d807f4d49b8d238c3ac204afbf2cd4752707c",
       "revisionId": 364607
+    },
+    {
+      "url": "https://ztjy.ucass.edu.cn/info/1006/1949.htm",
+      "title": "中国社会科学院大学 · 建党之前：陈独秀在上海",
+      "retrievedAt": "2026-10-25T17:33:17.679917+00:00",
+      "sha256": "71504d2f63e73bc45cc4bf37afe4d2b5f86bd34d0718d7a100bc7125d607e706",
+      "revisionId": null
     }
   ],
   "identitySnapshot": {

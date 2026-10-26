@@ -1,3 +1,4 @@
+import { eventCategories as categories, type EventCategoryFilter } from '../lib/event-categories'
 import { type CSSProperties, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import {
   Check,
@@ -14,13 +15,13 @@ import {
   Settings,
   X,
 } from 'lucide-react'
-import type { Category, HistoryEvent } from '../types'
+import type { HistoryEvent } from '../types'
 import {
   compactYear,
   matchesEvent,
   formatEventDate,
   fromOrdinal,
-  MAX_YEAR,
+  PILLAR_MAX_YEAR as MAX_YEAR,
   MIN_YEAR,
   toOrdinal,
 } from '../lib/history'
@@ -51,8 +52,9 @@ type Props = {
   span: number
   side: PillarSide
   region: string
-  category: Category | '全部'
+  category: EventCategoryFilter
   events: HistoryEvent[]
+  allCategoryEvents: HistoryEvent[]
   hasSpatialFilter: boolean
   onClearSpatial: () => void
   selectedId?: string
@@ -64,13 +66,12 @@ type Props = {
   onBrowseNavigate: (year: number, span: number) => void
   onSide: (side: PillarSide) => void
   onRegion: (region: string) => void
-  onCategory: (category: Category | '全部') => void
+  onCategory: (category: EventCategoryFilter) => void
   onRange: (range: [number, number] | null) => void
   onEvent: (id: string) => void
   readerCollapsed: boolean
   onToggleReader: () => void
 }
-const categories: (Category | '全部')[] = ['全部', '政治', '战争', '文化', '交流', '社会']
 const niceSpan = (n: number) =>
   n >= 1000 ? `${(n / 1000).toFixed(n % 1000 === 0 ? 0 : 1)} 千年` : `${Math.round(n)} 年`
 export default function TimePillar(p: Props) {
@@ -895,7 +896,7 @@ export default function TimePillar(p: Props) {
                   n < MIN_YEAR ||
                   n > MAX_YEAR
                 ) {
-                  setError('请输入前 10000 年至 1912 年之间的整数；公元前用负数，没有公元 0 年。')
+                  setError('请输入前 10000 年至 2000 年之间的整数；公元前用负数，没有公元 0 年。')
                   return
                 }
                 closeModal()
@@ -943,6 +944,8 @@ export default function TimePillar(p: Props) {
                   [1000, 1500, '交流与变迁'],
                   [1500, 1800, '跨洋联系'],
                   [1800, 1912, '工业时代'],
+                  [1913, 1945, '世界大战与思想变革'],
+                  [1946, 2000, '战后世界'],
                 ].map(([a, b, t]) => (
                   <option value={`${a},${b}`} key={t}>
                     {t}
@@ -975,7 +978,7 @@ export default function TimePillar(p: Props) {
               }}
             >
               查看历史全貌
-              <small>公元前10000年—1912年</small>
+              <small>公元前10000年—2000年</small>
             </button>
             {p.hasSpatialFilter && (
               <div className="pillar-filter-note">
@@ -1021,7 +1024,7 @@ export default function TimePillar(p: Props) {
                 <select
                   aria-label="时空柱事件类别"
                   value={p.category}
-                  onChange={(e) => p.onCategory(e.target.value as Category | '全部')}
+                  onChange={(e) => p.onCategory(e.target.value as EventCategoryFilter)}
                 >
                   {categories.map((c) => (
                     <option key={c} value={c}>
@@ -1031,6 +1034,34 @@ export default function TimePillar(p: Props) {
                 </select>
               </label>
             </div>
+            <p className="pillar-category-summary" role="status">
+              {p.category === '全部' ? '全部类别' : p.category} · 当前画布 {visibleCount} 件 /
+              全部年代 {p.allCategoryEvents.length} 件
+              <small>数量按当前地区与地点条件统计；主题可交叉归属。</small>
+            </p>
+            {p.category !== '全部' && (
+              <button
+                className="pillar-reset pillar-category-overview"
+                disabled={!p.allCategoryEvents.length}
+                onClick={() => {
+                  const first = Math.min(
+                    ...p.allCategoryEvents.map((event) => toOrdinal(event.year)),
+                  )
+                  const last = Math.max(
+                    ...p.allCategoryEvents.map((event) => toOrdinal(event.endYear ?? event.year)),
+                  )
+                  p.onRange(null)
+                  closeModal()
+                  pauseBrowsing()
+                  commit({
+                    year: limited((first + last) / 2),
+                    span: clampSpan(Math.max(60, last - first) * 1.1),
+                  })
+                }}
+              >
+                展开“{p.category}”的全部年代
+              </button>
+            )}
             <form
               onSubmit={(e) => {
                 e.preventDefault()
