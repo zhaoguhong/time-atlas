@@ -50,7 +50,7 @@ CI=1 npm run test:e2e:refinement -- --project chrome
 | `test:e2e:refinement` | 阅读布局、操作入口、独立范围与加载失败恢复，生产预览端口 4184 |
 | `test:e2e`            | 通用交互回归，使用开发服务端口 5173；不能代替生产包验证       |
 
-这些生产检查要求先构建 `dist/`，测试配置会启动并关闭预览服务。三个使用 4184 的套件应顺序执行；它们可用 `PLAYWRIGHT_PORT` 指定其他端口，或用 `PLAYWRIGHT_BASE_URL` 指向已启动的待测环境。不要误连无关服务。软件 WebGL 下保持配置中的单 worker，避免争用渲染资源。
+这些生产检查要求先构建 `dist/`，测试配置会启动并关闭预览服务。三个使用 4184 的套件应顺序执行；它们可用 `PLAYWRIGHT_PORT` 指定其他端口，或用 `PLAYWRIGHT_BASE_URL` 指向已启动的待测环境。不要误连无关服务。软件 WebGL 下保持配置中的单 worker，避免争用渲染资源。CI 将时空柱用例拆成两个分片，在独立的运行机上执行，每个分片仍使用单 worker；基础校验及其他浏览器套件由另一运行机执行，避免共享端口或软件渲染器。
 
 时空柱、世界历史和专项套件在未设置 `CI` 时，`chrome` 项目使用已安装的 Google Chrome；在 CI 模式下使用 Playwright Chromium，项目名仍叫 `chrome`。通用 `test:e2e` 的浏览器通道可通过 `PLAYWRIGHT_CHANNEL=chrome` 选择。
 

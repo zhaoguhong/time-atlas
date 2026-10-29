@@ -32,6 +32,26 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e:smoke
-      - run: npm run test:e2e:pillar -- --project chrome
       - run: npm run test:e2e:world -- --project chrome
       - run: npm run test:e2e:refinement -- --project chrome
+
+  pillar:
+    name: Pillar ${{ matrix.shard }}/2
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e:pillar -- --project chrome --shard=${{ matrix.shard }}/2
