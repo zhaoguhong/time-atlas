@@ -360,7 +360,7 @@ test('continuing events stay available after their start card leaves the viewpor
   await expect(page.locator('.pillar-card')).toHaveCount(0)
   const continuing = page.locator('.pillar-continuing')
   await expect(continuing).toBeVisible()
-  await expect(page.getByText('当前范围与筛选下没有已收录的事件。', { exact: true })).toHaveCount(0)
+  await expect(page.locator('.pillar-empty:not(.pillar-continuing)')).toHaveCount(0)
   const count = Number(
     (await continuing.getByRole('button').textContent())!.match(/(\d+) 个事件/)![1],
   )

@@ -113,7 +113,9 @@ npm run data:audit:ci
 
 普通贡献者与 CI 使用 `npm run data:audit:ci`：检查字段、纪年、关联、专题与来源元数据。存在的缓存会验证哈希，缺失文件明确统计为未核验；该命令不改写覆盖或审校报告。
 
-内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`。覆盖清单中的 `events.byFilterCategory` 按实际筛选规则列出各类别的中外与地区分布，主题可交叉，不能将这些计数相加当作独立事件总量。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
+内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`，并从覆盖清单同步 README 的收录统计。`npm run data:docs` 可单独同步该统计区块，`data:audit:ci` 检查其一致性。覆盖清单中的 `events.byFilterCategory` 按实际筛选规则列出各类别的中外与地区分布；`periods[].byRegion` 和 `periods[].byFilterCategory` 分别列出各导航分期内的地区、主题数量，以事件起始年归入分期，不表示该分期的独有或完整历史。主题可交叉，不能将这些计数相加当作独立事件总量。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
+
+内容汇总时，`canonicalSources` 先规范原典卷次链接，再合并相同 URL 的引用，保留不同的出处说明。不同卷次、页面锚点或查询参数不自动合并；该处理不修改来源快照及抓取记录。
 
 `npm run data:references` 会请求参考网站并更新索引，可能耗时或遭拒绝访问，不是普通构建检查。原始参考资料通过 `scripts/collect-references.py` 留存。新抓取字节可能不同，不能替代旧快照后继续声称原哈希已验证。
 

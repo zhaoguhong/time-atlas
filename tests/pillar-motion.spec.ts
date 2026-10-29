@@ -2,6 +2,12 @@ import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { installPillarClock } from './pillar-clock-helpers'
 
+async function zoomIn(page: Page) {
+  const button = page.getByRole('button', { name: '放大时间', exact: true })
+  if (await button.isVisible()) await button.click()
+  else await page.locator('.pillar-stage').press('+')
+}
+
 type MotionSample = {
   year: number
   span: number
@@ -103,18 +109,21 @@ for (const [width, height] of [
     expect(settingsBox.y).toBeGreaterThan(stageBox.y + stageBox.height - 80)
     await expect(page.getByRole('button', { name: '查看历史全貌', exact: true })).toHaveCount(0)
     const zoom = page.locator('.pillar-zoom')
-    await expect(page.locator('.pillar-controls .pillar-zoom')).toBeVisible()
+    if (width > 700) await expect(page.locator('.pillar-controls .pillar-zoom')).toBeVisible()
+    else await expect(page.locator('.pillar-controls .pillar-zoom')).toBeHidden()
     await expect(page.locator('.pillar-footer, .pillar-zoom-dock')).toHaveCount(0)
     const dock = (await page.locator('.pillar-controls').boundingBox())!
-    const zoomBox = (await zoom.boundingBox())!
-    expect(zoomBox.x).toBeGreaterThanOrEqual(dock.x)
-    expect(zoomBox.y).toBeGreaterThanOrEqual(dock.y)
-    expect(zoomBox.y + zoomBox.height).toBeLessThanOrEqual(dock.y + dock.height)
+    if (await zoom.isVisible()) {
+      const zoomBox = (await zoom.boundingBox())!
+      expect(zoomBox.x).toBeGreaterThanOrEqual(dock.x)
+      expect(zoomBox.y).toBeGreaterThanOrEqual(dock.y)
+      expect(zoomBox.y + zoomBox.height).toBeLessThanOrEqual(dock.y + dock.height)
+    }
     const pillarBox = (await page.locator('.time-pillar').boundingBox())!
     expect(Math.abs(stageBox.y + stageBox.height - pillarBox.y - pillarBox.height)).toBeLessThan(
       0.5,
     )
-    for (const name of ['放大时间', '缩小时间']) {
+    for (const name of width > 700 ? ['放大时间', '缩小时间'] : []) {
       const control = page.getByRole('button', { name, exact: true })
       await expect(control).toBeInViewport({ ratio: 1 })
       const bounds = (await control.boundingBox())!
@@ -123,7 +132,7 @@ for (const [width, height] of [
     }
 
     await recordMotion(page)
-    await page.getByRole('button', { name: '放大时间', exact: true }).click()
+    await zoomIn(page)
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'true')
     await page.screenshot({
       path: info.outputPath(`zoom-in-progress-${width}.png`),
@@ -148,13 +157,14 @@ for (const [width, height] of [
     await expect(overview).not.toHaveText('')
     await page.screenshot({ path: info.outputPath(`settings-overview-${width}.png`) })
     await overview.click()
-    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '11911')
+    // The reading chronology reaches 2000; 1912 is only the map's boundary.
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '11999')
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
     expect(errors).toEqual([])
   })
 }
 
-test('rapid zoom clicks preserve every requested scale and cancel superseded motion', async ({
+test('rapid zoom requests preserve every requested scale and cancel superseded motion', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 })
@@ -162,9 +172,7 @@ test('rapid zoom clicks preserve every requested scale and cancel superseded mot
   const errors = watchErrors(page)
   await ready(page)
   await recordMotion(page)
-  await page
-    .getByRole('button', { name: '放大时间', exact: true })
-    .click({ clickCount: 3, delay: 40 })
+  for (let i = 0; i < 3; i++) await zoomIn(page)
   const stage = page.locator('.pillar-stage')
   await expect(stage).toHaveAttribute('data-span', '194')
   await expect(stage).toHaveAttribute('data-motion', 'false')
@@ -188,8 +196,8 @@ test('drag interrupts zoom and commits the visible view without a delayed snap o
   await ready(page, -1)
   await pauseClock()
   await recordMotion(page)
-  await page.getByRole('button', { name: '放大时间', exact: true }).click()
   const stage = page.locator('.pillar-stage')
+  await stage.press('+')
   await expect(stage).toHaveAttribute('data-motion', 'true')
   // Hold an actual intermediate view through runner/protocol delays and pointer
   // actionability checks, rather than racing the 320 ms real-time tween.
@@ -244,7 +252,7 @@ test('pointer movement released before its preview frame commits without a secon
   await ready(page, -1)
   await pauseClock()
   const stage = page.locator('.pillar-stage')
-  await page.getByRole('button', { name: '放大时间', exact: true }).click()
+  await zoomIn(page)
   await expect(stage).toHaveAttribute('data-motion', 'true')
   await page.clock.runFor(128)
   const interruptedSpan = Number(await stage.getAttribute('data-span'))
@@ -320,7 +328,7 @@ test('reduced motion keeps navigation immediate and disables entrance animation'
   const initial = await samples(page)
   expect(initial.flatMap((sample) => sample.animations)).toEqual([])
   await recordMotion(page)
-  await page.getByRole('button', { name: '放大时间', exact: true }).click()
+  await zoomIn(page)
   const stage = page.locator('.pillar-stage')
   await expect(stage).toHaveAttribute('data-span', '540')
   await expect(stage).toHaveAttribute('data-motion', 'false')

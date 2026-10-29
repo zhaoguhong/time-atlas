@@ -143,18 +143,24 @@ async function nightTextContrast(page: Page) {
       background,
       ...translucent.map((color) => over(color, background)),
     ])
-    return [...document.querySelectorAll('.pillar-card time, .pillar-card strong')].map((text) => {
-      const card = text.closest('.pillar-card')!
-      const foreground = parse(getComputedStyle(text).color)
-      const surface = parse(getComputedStyle(card).backgroundColor)
-      return {
-        event: card.getAttribute('data-event-id'),
-        kind: text.tagName,
-        contrast: Math.min(
-          ...surfaces.map((background) => contrast(foreground, over(surface, background))),
-        ),
-      }
-    })
+    return [
+      ...document.querySelectorAll(
+        '.pillar-card time, .pillar-card strong, .pillar-controls button',
+      ),
+    ]
+      .filter((text) => text.getBoundingClientRect().width > 0)
+      .map((text) => {
+        const card = text.closest('.pillar-card') ?? text
+        const foreground = parse(getComputedStyle(text).color)
+        const surface = parse(getComputedStyle(card).backgroundColor)
+        return {
+          event: card.getAttribute('data-event-id'),
+          kind: text.tagName,
+          contrast: Math.min(
+            ...surfaces.map((background) => contrast(foreground, over(surface, background))),
+          ),
+        }
+      })
   })
   expect(results.length).toBeGreaterThan(0)
   expect(results.filter((result) => result.contrast < 4.5)).toEqual([])
@@ -192,11 +198,15 @@ for (const [width, height] of [
       await compactGeometry(page)
       if (id === 'column') {
         const scene = (await page.locator('.pillar-scenery').boundingBox())!
-        const dock = (await page.locator('.pillar-controls').boundingBox())!
-        expect(scene.y + scene.height).toBeGreaterThan(dock.y + 28)
+        const chronology = (await page.locator('.pillar-events').boundingBox())!
+        expect(scene.y + scene.height).toBeCloseTo(chronology.y + chronology.height, 0)
+        const stage = (await page.locator('.pillar-stage').boundingBox())!
+        expect(chronology.y + chronology.height).toBeCloseTo(stage.y + stage.height, 0)
         const settings = (await page.locator('.pillar-settings').boundingBox())!
-        const zoom = (await page.locator('.pillar-zoom').boundingBox())!
-        expect(settings.x).toBeGreaterThanOrEqual(zoom.x + zoom.width - 0.5)
+        if (await page.locator('.pillar-zoom').isVisible()) {
+          const zoom = (await page.locator('.pillar-zoom').boundingBox())!
+          expect(settings.y).toBeGreaterThanOrEqual(zoom.y + zoom.height - 0.5)
+        }
       }
       if (id === 'line') await expect(page.locator('.pillar-scenery')).not.toBeVisible()
       else await expect(page.locator('.pillar-scenery')).toBeVisible()

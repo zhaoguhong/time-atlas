@@ -5,10 +5,8 @@ import {
   ChevronsUpDown,
   List,
   Globe2,
-  PanelRightOpen,
   LocateFixed,
   Minus,
-  Pause,
   Play,
   Plus,
   Search,
@@ -90,6 +88,7 @@ export default function TimePillar(p: Props) {
   const [rangeTo, setRangeTo] = useState('')
   const [error, setError] = useState('')
   const [query, setQuery] = useState('')
+  const [continuingOnly, setContinuingOnly] = useState(false)
   const [dragging, setDragging] = useState(false)
   const [showSummary, setShowSummary] = useState(false)
   const [dwell, setDwell] = useState(6)
@@ -152,8 +151,9 @@ export default function TimePillar(p: Props) {
   const axis = single ? 40 : size.width / 2
   const railGap = narrow ? 29 : 42
   const padding = p.focused ? 78 : 34
-  const height = Math.max(48, size.height - padding - 12)
-  const cardHeight = Math.min(showSummary ? 76 : 44, height)
+  const bottomPadding = 0
+  const height = Math.max(48, size.height - padding - bottomPadding)
+  const cardHeight = Math.min(showSummary ? (narrow ? 96 : 76) : narrow ? 62 : 44, height)
   const summaryVisible = showSummary && cardHeight >= 64
   // Fractional ordinal time keeps even a four-year window pixel-smooth. Civil
   // years and shared URLs still use whole years, with no year zero.
@@ -192,18 +192,21 @@ export default function TimePillar(p: Props) {
     () => pillarTicks(windowRange.bottom, windowRange.top, height),
     [windowRange.bottom, windowRange.top, height],
   )
-  const continuingEvents = windowEvents.filter(
-    (event) => toOrdinal(event.year) < windowRange.bottom,
+  const clusterContinuing = cluster.filter(
+    (event) =>
+      toOrdinal(event.year) < windowRange.bottom &&
+      toOrdinal(event.endYear ?? event.year) >= windowRange.bottom,
   )
   const clusterResults = useMemo(
     () =>
       cluster.filter(
         (event) =>
-          !query.trim() ||
-          matchesEvent(event, query) ||
-          event.summary.toLowerCase().includes(query.trim().toLowerCase()),
+          (!continuingOnly || clusterContinuing.includes(event)) &&
+          (!query.trim() ||
+            matchesEvent(event, query) ||
+            event.summary.toLowerCase().includes(query.trim().toLowerCase())),
       ),
-    [cluster, query],
+    [cluster, query, continuingOnly, windowRange.bottom],
   )
   const visibleCount = windowEvents.length
   const nearestEvent = useMemo(() => {
@@ -389,6 +392,7 @@ export default function TimePillar(p: Props) {
     setModal(null)
     setError('')
     setQuery('')
+    setContinuingOnly(false)
     requestAnimationFrame(() =>
       (modalTrigger.current?.isConnected ? modalTrigger.current : optionsTrigger.current)?.focus(),
     )
@@ -398,6 +402,21 @@ export default function TimePillar(p: Props) {
     flush()
     setCluster([...records].sort((a, b) => a.year - b.year || b.importance - a.importance))
     openPanel('cluster', trigger)
+  }
+  function expandCategoryRange() {
+    if (!p.allCategoryEvents.length) return
+    const first = Math.min(...p.allCategoryEvents.map((event) => toOrdinal(event.year)))
+    const last = Math.max(
+      ...p.allCategoryEvents.map((event) => toOrdinal(event.endYear ?? event.year)),
+    )
+    pauseBrowsing()
+    flush()
+    p.onRange(null)
+    closeModal()
+    commit({
+      year: limited((first + last) / 2),
+      span: clampSpan(Math.max(60, last - first) * 1.1),
+    })
   }
   const zoomControls = (
     <div
@@ -444,7 +463,7 @@ export default function TimePillar(p: Props) {
         {
           '--axis': `${axis}px`,
           '--pillar-top': `${padding}px`,
-          '--pillar-bottom': '12px',
+          '--pillar-bottom': `${bottomPadding}px`,
           '--scene-zoom': 1 + Math.log(MAX_SPAN / span) * 0.015,
           '--scene-drift': `${(ordinal / MAX_SPAN) * 18}px`,
         } as CSSProperties
@@ -689,10 +708,14 @@ export default function TimePillar(p: Props) {
           </div>
         </div>
         {!visibleCount && !cards.length && (
-          <div className="pillar-empty">
+          <div className="pillar-empty" data-pillar-control>
             <Globe2 size={32} />
-            <h2>这一段，留给继续发现</h2>
-            <p>当前范围与筛选下没有已收录的事件。</p>
+            <h2>{p.allCategoryEvents.length ? '这段时间暂无记录' : '这个筛选暂无记录'}</h2>
+            <p>
+              {p.allCategoryEvents.length
+                ? `当前时间范围没有匹配事件，其他年代还有 ${p.allCategoryEvents.length} 件可读。`
+                : '当前地区、类别或地点组合在全部年代均无已收录事件；扩大时间范围不会增加结果。'}
+            </p>
             {nearestEvent && (
               <button
                 data-pillar-control
@@ -701,9 +724,26 @@ export default function TimePillar(p: Props) {
                 前往附近记录：{nearestEvent.title}
               </button>
             )}
-            <button data-pillar-control onClick={() => commit({ year: year, span: MAX_SPAN })}>
-              放眼历史全貌
-            </button>
+            {p.allCategoryEvents.length ? (
+              <button data-pillar-control onClick={expandCategoryRange}>
+                展开该筛选的全部年代
+              </button>
+            ) : (
+              <button
+                data-pillar-control
+                onClick={() => {
+                  pauseBrowsing()
+                  flush()
+                  p.onRange(null)
+                  p.onRegion('all')
+                  p.onCategory('全部')
+                  p.onClearSpatial()
+                  commit({ year, span: MAX_SPAN })
+                }}
+              >
+                清除筛选并查看已收录事件
+              </button>
+            )}
             <button
               data-pillar-control
               onClick={(event) => openPanel('settings', event.currentTarget)}
@@ -724,45 +764,8 @@ export default function TimePillar(p: Props) {
             </button>
           </div>
         )}
-        {!!continuingEvents.length && !!cards.length && (
-          <button
-            className="pillar-continuing-chip"
-            data-pillar-control
-            aria-label={`查看起点在视野之外、仍在延续的${continuingEvents.length}条记录`}
-            onClick={(event) => openCluster(continuingEvents, event.currentTarget)}
-          >
-            <List size={15} aria-hidden="true" /> 延续中的记录 · {continuingEvents.length}
-          </button>
-        )}
         <div className="pillar-controls" data-pillar-control role="group" aria-label="时空柱工具">
-          {p.playing && (
-            <button
-              className="pillar-browse-stop"
-              aria-label="停止自动浏览"
-              title={
-                browse.travelling
-                  ? '正在移向下一站，点击停止'
-                  : `当前停留：${browse.stop?.event.title ?? '历史事件'}，点击停止`
-              }
-              onClick={pauseBrowsing}
-            >
-              <Pause size={16} aria-hidden="true" />
-              <span>自动浏览</span>
-            </button>
-          )}
           {zoomControls}
-          {p.readerCollapsed && (
-            <button
-              className="pillar-reader"
-              aria-label="展开历史资料"
-              title="展开历史资料"
-              aria-expanded="false"
-              aria-controls="history-reading-content"
-              onClick={p.onToggleReader}
-            >
-              <PanelRightOpen size={18} aria-hidden="true" />
-            </button>
-          )}
           <button
             ref={optionsTrigger}
             className="pillar-settings"
@@ -813,6 +816,19 @@ export default function TimePillar(p: Props) {
         </div>
         {modal === 'cluster' ? (
           <>
+            <p className="pillar-directory-context">
+              本目录收录 {cluster.length} 件；当前画布展示 {cards.length} 个节点。
+            </p>
+            {!!clusterContinuing.length && (
+              <label className="pillar-continuing-filter">
+                <input
+                  type="checkbox"
+                  checked={continuingOnly}
+                  onChange={(event) => setContinuingOnly(event.target.checked)}
+                />
+                只看延续中的记录 · {clusterContinuing.length}
+              </label>
+            )}
             <label className="pillar-cluster-search">
               <Search size={16} />
               <input
@@ -823,7 +839,7 @@ export default function TimePillar(p: Props) {
               />
             </label>
             <p className="pillar-search-count" role="status">
-              {query.trim()
+              {query.trim() || continuingOnly
                 ? `找到 ${clusterResults.length} 件 · 共 ${cluster.length} 件`
                 : `共 ${cluster.length} 件事件`}
             </p>
@@ -881,6 +897,40 @@ export default function TimePillar(p: Props) {
           </>
         ) : (
           <div className="pillar-options">
+            {p.readerCollapsed && (
+              <button
+                className="pillar-reset"
+                aria-label="展开历史资料"
+                aria-expanded="false"
+                aria-controls="history-reading-content"
+                onClick={() => {
+                  closeModal()
+                  p.onToggleReader()
+                }}
+              >
+                展开历史资料
+              </button>
+            )}
+
+            <div className="pillar-settings-zoom" role="group" aria-label="调整时间跨度">
+              <span>时间跨度：{niceSpan(span)}</span>
+              <button
+                aria-label="放大时间范围"
+                disabled={p.span <= MIN_SPAN}
+                onClick={() => commit(zoom(0.6))}
+              >
+                <Plus size={18} />
+                放大
+              </button>
+              <button
+                aria-label="缩小时间范围"
+                disabled={p.span >= MAX_SPAN}
+                onClick={() => commit(zoom(1.6))}
+              >
+                <Minus size={18} />
+                缩小
+              </button>
+            </div>
             <p className="pillar-view-window">
               当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
               {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
@@ -1043,21 +1093,7 @@ export default function TimePillar(p: Props) {
               <button
                 className="pillar-reset pillar-category-overview"
                 disabled={!p.allCategoryEvents.length}
-                onClick={() => {
-                  const first = Math.min(
-                    ...p.allCategoryEvents.map((event) => toOrdinal(event.year)),
-                  )
-                  const last = Math.max(
-                    ...p.allCategoryEvents.map((event) => toOrdinal(event.endYear ?? event.year)),
-                  )
-                  p.onRange(null)
-                  closeModal()
-                  pauseBrowsing()
-                  commit({
-                    year: limited((first + last) / 2),
-                    span: clampSpan(Math.max(60, last - first) * 1.1),
-                  })
-                }}
+                onClick={expandCategoryRange}
               >
                 展开“{p.category}”的全部年代
               </button>

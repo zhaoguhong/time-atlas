@@ -1,4 +1,4 @@
-import type { HistoryEvent, HistoryRegion } from '../types'
+import type { HistoryEvent, HistoryRegion, Person } from '../types'
 import {
   compactYear,
   fromOrdinal,
@@ -254,18 +254,71 @@ export function layoutPillarWindow(
   return result
 }
 
-export function relatedReading(event: HistoryEvent, events: HistoryEvent[]) {
+export function relatedReading(
+  event: HistoryEvent,
+  events: HistoryEvent[],
+  people: Pick<Person, 'id' | 'name'>[] = [],
+) {
   const explicit = (event.relatedEvents ?? []).flatMap((relation) => {
     const target = events.find((e) => e.id === relation.id)
     return target ? [{ event: target, label: relation.label, note: relation.note }] : []
   })
   const used = new Set([event.id, ...explicit.map((r) => r.event.id)])
-  const themed = events
-    .filter((e) => !used.has(e.id) && e.themes?.some((t) => event.themes?.includes(t)))
-    .sort((a, b) => Math.abs(a.year - event.year) - Math.abs(b.year - event.year))
+  const distance = (e: HistoryEvent) => Math.abs(toOrdinal(e.year) - toOrdinal(event.year))
+  const contextual = events
+    .filter((e) => !used.has(e.id))
+    .flatMap((e) => {
+      const sharedPeople = e.people.filter((id) => event.people.includes(id))
+      if (sharedPeople.length) {
+        const names = sharedPeople
+          .map((id) => people.find((person) => person.id === id)?.name)
+          .filter(Boolean)
+        return [
+          {
+            event: e,
+            label: '同一人物',
+            note: `共同关联${names.length ? `：${names.join('、')}` : '人物'}；事件关联不代表本人到访。`,
+            rank: 0,
+          },
+        ]
+      }
+      if (
+        e.location === event.location &&
+        eventRegion(e) === eventRegion(event) &&
+        distance(e) <= 100
+      )
+        return [
+          {
+            event: e,
+            label: '同一地点',
+            note: `同样以${event.location}为地点参照，不表示两件事存在因果关系。`,
+            rank: 1,
+          },
+        ]
+      const themes = e.themes?.filter(
+        (theme) =>
+          event.themes?.includes(theme) &&
+          !['政治', '战争', '文化', '交流', '社会'].includes(theme),
+      )
+      return themes?.length
+        ? [
+            {
+              event: e,
+              label: '主题对照',
+              note: `共同主题：${themes.join('、')}。主题相近，不表示同一历史过程或因果关系。`,
+              rank: 2,
+            },
+          ]
+        : []
+    })
+    .sort(
+      (a, b) =>
+        a.rank - b.rank ||
+        distance(a.event) - distance(b.event) ||
+        b.event.importance - a.event.importance,
+    )
     .slice(0, 3)
-    .map((e) => ({ event: e, label: '同一主题', note: '主题相近，可沿这条线索继续阅读。' }))
-  themed.forEach((r) => used.add(r.event.id))
+  contextual.forEach((r) => used.add(r.event.id))
   const others = events
     .filter(
       (e) =>
@@ -273,16 +326,12 @@ export function relatedReading(event: HistoryEvent, events: HistoryEvent[]) {
         (eventRegion(e) === 'china') !== (eventRegion(event) === 'china') &&
         Math.abs(toOrdinal(e.year) - toOrdinal(event.year)) <= 30,
     )
-    .sort(
-      (a, b) =>
-        Math.abs(a.year - event.year) - Math.abs(b.year - event.year) ||
-        b.importance - a.importance,
-    )
+    .sort((a, b) => distance(a) - distance(b) || b.importance - a.importance)
     .slice(0, 2)
     .map((e) => ({
       event: e,
       label: e.year === event.year ? '同年对照' : '相近年代',
       note: '时间对照，不表示两件事存在因果关系。',
     }))
-  return [...explicit, ...themed, ...others]
+  return [...explicit, ...contextual, ...others]
 }

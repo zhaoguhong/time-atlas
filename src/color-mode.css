@@ -413,7 +413,7 @@
   color: var(--china);
 }
 :root[data-color-mode='dark'] .atlas-app .pillar-settings {
-  color: #233a45;
+  color: var(--pillar-ink);
 }
 :root[data-color-mode='dark'] .atlas-app .pillar-settings span {
   color: inherit;

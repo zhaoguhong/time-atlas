@@ -2132,6 +2132,15 @@ export default function App() {
             </button>
           </div>
         )}
+        {visualization === 'map' && selectedEvent && selectedEvent.year > MAX_YEAR && (
+          <div className="map-context-note" role="note" aria-label="地图年代说明">
+            <Info size={16} aria-hidden="true" />
+            <span>
+              地点参照 · 事件 {selectedEvent.year} 年 / 疆域 {year} 年
+              <small>所示疆域不代表事件当年</small>
+            </span>
+          </div>
+        )}
         <div className="map-stage">
           <CanvasBoundary key={visualization} onRetry={() => window.location.reload()}>
             <Suspense
@@ -2744,11 +2753,11 @@ export default function App() {
                       </div>
                     </>
                   )}
-                  {relatedReading(selectedEvent, events).length > 0 && (
+                  {relatedReading(selectedEvent, events, people).length > 0 && (
                     <section className="event-relations">
                       <span className="eyebrow">沿着线索，继续读</span>
                       <h3>历史不是孤立的时刻</h3>
-                      {relatedReading(selectedEvent, events).map((relation, index) => (
+                      {relatedReading(selectedEvent, events, people).map((relation, index) => (
                         <button
                           key={`${relation.event.id}-${index}`}
                           onClick={() => openEvent(relation.event.id)}
@@ -3463,7 +3472,7 @@ export default function App() {
                           : scope === 'year'
                             ? '当年事件'
                             : scope === 'nearby'
-                              ? '附近事件'
+                              ? '当前年份附近'
                               : visualization === 'pillar'
                                 ? '当前画布'
                                 : '这一时期'}
@@ -3528,7 +3537,7 @@ export default function App() {
                     {exploration.range
                       ? `${compactYear(exploration.range[0])}—${compactYear(exploration.range[1])}年`
                       : visualization === 'pillar' && scope === 'period'
-                        ? '当前画布中的已收录事件'
+                        ? '当前时间范围内的全部已收录事件，画布仅展示部分节点'
                         : worldBrowsing && scope === 'period'
                           ? `${worldPeriod.name} · ${compactYear(worldPeriod.from)}—${compactYear(worldPeriod.to)}年`
                           : scopeDescription(
@@ -3540,6 +3549,30 @@ export default function App() {
                     {exploration.range || scope === 'period' ? '按时间顺序' : '距当前年份由近及远'}
                     <ArrowDown size={11} />
                   </p>
+                  {visualization === 'map' && (
+                    <div className="map-event-scope">
+                      <button
+                        aria-pressed={!!exploration.bounds}
+                        disabled={!exploration.bounds && !mapBounds}
+                        onClick={() =>
+                          updateExploration({
+                            ...exploration,
+                            bounds: exploration.bounds ? null : mapBounds,
+                            place: '',
+                          })
+                        }
+                      >
+                        {exploration.bounds ? '取消地图范围限制' : '只看当前地图范围'}
+                      </button>
+                      <small>
+                        {exploration.bounds
+                          ? '已固定选取范围；移动地图后可在“地点与时间段”重新选取。'
+                          : exploration.place
+                            ? '当前按所选地点筛选。'
+                            : '尚未限定地图范围；“附近”指时间相近。'}
+                      </small>
+                    </div>
+                  )}
                   <ExplorationFilters
                     value={exploration}
                     open={explorationOpen}

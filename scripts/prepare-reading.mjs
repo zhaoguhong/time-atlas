@@ -5,7 +5,12 @@ import { resolve } from 'node:path'
 import { createServer } from 'vite'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
-const server = await createServer({ root, server: { middlewareMode: true }, logLevel: 'error' })
+const server = await createServer({
+  root,
+  server: { middlewareMode: true, ws: false },
+  optimizeDeps: { noDiscovery: true, include: [] },
+  logLevel: 'error',
+})
 async function writeChanged(path, text) {
   if ((await readFile(path, 'utf8').catch(() => null)) === text) return
   await mkdir(resolve(path, '..'), { recursive: true })

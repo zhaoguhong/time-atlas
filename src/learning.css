@@ -19,6 +19,49 @@
   min-height: 0;
   overflow: hidden;
 }
+.map-context-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  padding: 8px 14px;
+  color: var(--ink);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.map-context-note svg {
+  flex: none;
+}
+.map-context-note small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+.map-event-scope {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin-block: 10px;
+}
+.map-event-scope button {
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--ink);
+  font-size: 12px;
+}
+.map-event-scope button[aria-pressed='true'] {
+  background: var(--night-soft, #e9efdf);
+}
+.map-event-scope small {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
 .map-heading-row,
 .map-heading-meta {
   display: flex;

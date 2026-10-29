@@ -17,6 +17,39 @@ import {
 } from './time-pillar'
 
 describe('time pillar chronology and disclosure', () => {
+  it('explains shared people and does not turn broad political tags into a historical relationship', () => {
+    const origin = {
+      ...events[0],
+      id: 'origin',
+      year: 1978,
+      region: 'china' as const,
+      people: ['person'],
+      location: '北京',
+      themes: ['政治'],
+    }
+    const linked = { ...origin, id: 'linked', year: 1980, location: '杭州' }
+    const unrelated = {
+      ...origin,
+      id: 'unrelated',
+      year: 1979,
+      people: [],
+      region: 'west-asia' as const,
+      location: '德黑兰',
+    }
+    const result = relatedReading(
+      origin,
+      [origin, linked, unrelated],
+      [{ id: 'person', name: '关联人物' }],
+    )
+    expect(result.find((entry) => entry.event.id === 'linked')).toMatchObject({
+      label: '同一人物',
+      note: expect.stringContaining('关联人物'),
+    })
+    expect(result.find((entry) => entry.event.id === 'unrelated')).toMatchObject({
+      label: '相近年代',
+      note: expect.stringContaining('不表示两件事存在因果关系'),
+    })
+  })
   it('keeps primary archaeological dates compact without removing the full reading label', () => {
     const shangshan = events.find((event) => event.id === 'shangshan-culture')!
     expect(pillarDateLabel(shangshan)).toBe('距今约10000—8500年')

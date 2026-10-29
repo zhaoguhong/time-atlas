@@ -130,6 +130,8 @@ for (const [width, height] of [
     const topbar = (await page.locator('.topbar').boundingBox())!
     const canvas = (await page.locator('.pillar-stage').boundingBox())!
     expect(canvas.y).toBeCloseTo(topbar.y + topbar.height, 0)
+    for (const control of await page.locator('.pillar-controls button:visible').all())
+      await expectTouchControl(control)
     await page.screenshot({ path: info.outputPath(`header-pillar-${width}x${height}.png`) })
     await headerMode(page, '地图').click()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')

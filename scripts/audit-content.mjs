@@ -29,8 +29,9 @@ const verifySnapshot = async (file, expectedHash) => {
 const server = await createServer({
   configFile: false,
   logLevel: 'error',
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, ws: false },
   appType: 'custom',
+  optimizeDeps: { noDiscovery: true, include: [] },
 })
 try {
   const { events, people, personById } = await server.ssrLoadModule('/src/data/content.ts')
@@ -459,6 +460,28 @@ try {
       id: period.id,
       name: period.name,
       events: events.filter((e) => e.year >= period.from && e.year <= period.to).length,
+      byRegion: Object.fromEntries(
+        Object.keys(historyRegions).map((region) => [
+          region,
+          events.filter(
+            (event) =>
+              event.year >= period.from && event.year <= period.to && eventRegion(event) === region,
+          ).length,
+        ]),
+      ),
+      byFilterCategory: Object.fromEntries(
+        eventCategories
+          .filter((category) => category !== '全部')
+          .map((category) => [
+            category,
+            events.filter(
+              (event) =>
+                event.year >= period.from &&
+                event.year <= period.to &&
+                matchesEventCategory(event, category),
+            ).length,
+          ]),
+      ),
       people: people.filter(
         (p) =>
           p.era === period.id ||

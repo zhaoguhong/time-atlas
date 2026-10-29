@@ -4,6 +4,162 @@ import { setSheet } from './mobile-sheet-helpers'
 async function menu(page: Page) {
   await page.getByRole('button', { name: '更多操作', exact: true }).click()
 }
+
+test('map list shortcut fixes geographic bounds and can release them without losing category', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/#visual=map&year=1750&scope=nearby&category=战争')
+  await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+  const scope = page.locator('.map-event-scope')
+  await expect(scope).toContainText('“附近”指时间相近')
+  await scope.getByRole('button', { name: '只看当前地图范围', exact: true }).click()
+  await expect(page).toHaveURL(/bounds=/)
+  await expect(scope).toContainText('已固定选取范围')
+  await scope.getByRole('button', { name: '取消地图范围限制', exact: true }).click()
+  await expect(page).not.toHaveURL(/bounds=/)
+  await expect(page.locator('.category-filters button[aria-pressed="true"]')).toHaveText('战争')
+})
+
+for (const [width, height] of [
+  [1440, 900],
+  [390, 844],
+  [568, 320],
+]) {
+  test(`empty filters offer a usable recovery at ${width}x${height}`, async ({ page }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/#visual=pillar&year=208&span=216&side=world&region=africa&category=哲学')
+    if (width <= 700 || height <= 540) await setSheet(page, 'map')
+    const empty = page.locator('.pillar-empty')
+    await expect(empty).toContainText('全部年代均无已收录事件')
+    await expect(page.getByRole('button', { name: '放眼历史全貌', exact: true })).toHaveCount(0)
+    const recovery = page.getByRole('button', { name: '清除筛选并查看已收录事件' })
+    await recovery.scrollIntoViewIfNeeded()
+    await expect(recovery).toBeInViewport({ ratio: 1 })
+    if (height <= 540) {
+      const card = (await empty.boundingBox())!
+      const stage = (await page.locator('.pillar-stage').boundingBox())!
+      expect(card.y + card.height).toBeLessThanOrEqual(stage.y + stage.height)
+    }
+    await page.screenshot({ path: info.outputPath(`empty-recovery-${width}.png`) })
+    await recovery.click()
+    await expect(empty).toHaveCount(0)
+    await expect(page.locator('.pillar-card').first()).toBeVisible()
+    await expect(page).toHaveURL(/side=world/)
+    await expect(page).toHaveURL(/region=all/)
+  })
+}
+
+test('empty custom dates can expand matching records without discarding the category', async ({
+  page,
+}) => {
+  await page.goto('/#visual=pillar&year=-8100&span=4&range=-8102,-8098&category=战争')
+  await expect(page.locator('.pillar-empty')).toContainText('其他年代还有')
+  await page.getByRole('button', { name: '展开该筛选的全部年代', exact: true }).click()
+  await expect(page.locator('.pillar-card').first()).toBeVisible()
+  await expect(page).not.toHaveURL(/range=/)
+  await expect(page).toHaveURL(new RegExp(`category=${encodeURIComponent('战争')}`))
+})
+
+for (const [width, height] of [
+  [1440, 900],
+  [320, 700],
+  [390, 844],
+  [568, 320],
+  [844, 390],
+]) {
+  test(`direct pillar controls and modern map context remain usable at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/#visual=pillar&year=1943&span=80&event=modern-sartre-being-nothingness')
+    if (width <= 700 || height <= 540) await setSheet(page, 'map')
+    const actions = page.getByRole('group', { name: '时空柱工具' })
+    await expect(actions.getByRole('button', { name: /^打开事件目录/ })).toHaveCount(0)
+    const mobile = width <= 700 || height <= 540
+    await expect(actions.getByRole('button', { name: '自动浏览当前筛选' })).toHaveCount(0)
+    if (mobile)
+      await expect(actions.getByRole('button', { name: '放大时间', exact: true })).toHaveCount(0)
+    const buttons = await actions.getByRole('button').all()
+    let previousBottom = 0
+    for (const button of buttons) {
+      await expect(button).toBeInViewport({ ratio: 1 })
+      const box = (await button.boundingBox())!
+      expect(box.width).toBeGreaterThanOrEqual(44)
+      expect(box.height).toBeGreaterThanOrEqual(44)
+      expect(box.y).toBeGreaterThanOrEqual(previousBottom)
+      previousBottom = box.y + box.height
+    }
+    await expect(actions.getByRole('button')).toHaveCount(mobile ? 1 : 3)
+    const stage = (await page.locator('.pillar-stage').boundingBox())!
+    const clip = (await page.locator('.pillar-events').boundingBox())!
+    expect(clip.y + clip.height).toBeCloseTo(stage.y + stage.height, 0)
+    await expect(page.locator('[data-clear-tools]')).toHaveCount(0)
+    await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+    await page.locator('.pillar-cluster').click()
+    await expect(page.getByRole('textbox', { name: '搜索聚合事件' })).toBeFocused()
+    await page.getByRole('button', { name: '关闭时空柱面板' }).click()
+    await expect(page.getByRole('button', { name: '时空柱筛选与设置', exact: true })).toBeFocused()
+    await expect(page.locator('.pillar-quick-actions')).toHaveCount(0)
+    await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    if (mobile) {
+      await page.getByRole('button', { name: '放大时间范围', exact: true }).click()
+      await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '48')
+    }
+    await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
+    await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+    await expect(page.locator('.pillar-card.china')).toHaveCount(0)
+    await page.screenshot({ path: info.outputPath(`pillar-controls-${width}.png`) })
+    await page
+      .getByRole('group', { name: '探索模式', exact: true })
+      .getByRole('button', { name: '地图', exact: true })
+      .click()
+    if (width <= 700 || height <= 540) await setSheet(page, 'map')
+    else await page.getByRole('button', { name: '收起历史资料', exact: true }).click()
+    const context = page.getByRole('note', { name: '地图年代说明' })
+    await expect(context).toBeInViewport({ ratio: 1 })
+    await expect(context).toContainText('事件 1943 年 / 疆域 1912 年')
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+    await page.screenshot({ path: info.outputPath(`map-context-${width}.png`) })
+  })
+}
+
+test('settings starts and stops browsing without adding canvas controls', async ({ page }) => {
+  await page.goto('/#visual=pillar&year=1500&span=900')
+  const actions = page.getByRole('group', { name: '时空柱工具' })
+  await expect(actions.getByRole('button', { name: '自动浏览当前筛选', exact: true })).toHaveCount(
+    0,
+  )
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await page.getByText('自动浏览与停留', { exact: true }).click()
+  await page.getByRole('button', { name: '开始自动浏览', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'true')
+  await expect(actions.getByRole('button', { name: '停止自动浏览', exact: true })).toHaveCount(0)
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'false')
+})
+
+test('phone pillar titles use two lines with enough card height to read and open them', async ({
+  page,
+}, info) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/#visual=pillar&year=1978&span=54')
+  await setSheet(page, 'map')
+  const card = page.getByRole('button', {
+    name: '中国恢复高等学校统一招生考试，公元 1977 年',
+    exact: true,
+  })
+  const title = card.locator('strong')
+  await expect(card).toBeInViewport({ ratio: 1 })
+  const titleBox = await title.boundingBox()
+  const cardBox = await card.boundingBox()
+  expect(titleBox!.height).toBeGreaterThan(18)
+  expect(titleBox!.y + titleBox!.height).toBeLessThanOrEqual(cardBox!.y + cardBox!.height)
+  await page.screenshot({ path: info.outputPath('phone-two-line-titles.png') })
+  await card.click()
+  await expect(page.locator('.event-detail h2')).toHaveText('中国恢复高等学校统一招生考试')
+})
 for (const [width, height] of [
   [360, 640],
   [390, 844],
@@ -67,8 +223,10 @@ test('continuing records are discoverable alongside a visible start node', async
 }, info) => {
   await page.goto('/#visual=pillar&year=-3946&span=200.06&scope=period')
   await expect(page.locator('.pillar-card[data-event-id="sannai-maruyama"]')).toBeVisible()
-  await expect(page.locator('.pillar-continuing-chip')).toContainText('5')
-  await page.locator('.pillar-continuing-chip').click()
+  await expect(page.locator('.pillar-continuing-chip')).toHaveCount(0)
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await page.locator('.pillar-cluster').click()
+  await page.getByRole('checkbox', { name: '只看延续中的记录 · 5' }).check()
   await expect(page.locator('.pillar-cluster-list button')).toHaveCount(5)
   await expect(page.locator('.pillar-cluster-list')).toContainText('仰韶')
   await page.screenshot({ path: info.outputPath('continuing-records.png') })

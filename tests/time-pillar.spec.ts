@@ -86,8 +86,8 @@ async function geometry(page: Page) {
     }
     for (let i = 1; i < toolButtons.length; i++) {
       if (
-        toolButtons[i - 1].getBoundingClientRect().right >
-        toolButtons[i].getBoundingClientRect().left + 0.5
+        toolButtons[i - 1].getBoundingClientRect().bottom >
+        toolButtons[i].getBoundingClientRect().top + 0.5
       )
         problems.push('overlapping floating controls')
     }
@@ -126,21 +126,23 @@ for (const [width, height] of [
       await expect(page.locator('.pillar-header')).toHaveCount(0)
       const canvas = (await page.locator('.pillar-stage').boundingBox())!
       const header = (await page.locator('.topbar').boundingBox())!
-      expect(canvas.y).toBeLessThanOrEqual(header.y + header.height + 1)
-      expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
-        width === 390 ? 24 : 16,
-      )
+      expect(canvas.y).toBeCloseTo(header.y + header.height, 0)
       await expect(page.locator('.pillar-now')).toContainText('1500年')
     }
-    if (width === 1440 || width === 844)
-      expect(await page.locator('.pillar-card').count()).toBeGreaterThanOrEqual(
-        width === 1440 ? 28 : 8,
-      )
+    // Keep the dense chronology useful while accounting for two-line phone
+    // titles: compare occupied space, not 44px rows.
+    const eventViewport = (await page.locator('.pillar-events').boundingBox())!
+    const firstCard = (await page.locator('.pillar-card').first().boundingBox())!
+    const minimumRows = Math.max(1, Math.floor((eventViewport.height * 0.75) / firstCard.height))
+    for (const side of ['china', 'world'])
+      expect(await page.locator(`.pillar-card.${side}`).count()).toBeGreaterThanOrEqual(minimumRows)
     await page.screenshot({ path: info.outputPath(`compare-${width}x${height}.png`) })
     expect(await page.locator('.pillar-card').count()).toBeLessThanOrEqual(
       2 * Math.floor((await page.locator('.pillar-stage').boundingBox())!.height / 44),
     )
-    for (const control of ['放大时间', '缩小时间', '时空柱筛选与设置']) {
+    for (const control of width <= 700 || (width <= 1000 && height <= 540)
+      ? ['时空柱筛选与设置']
+      : ['放大时间', '缩小时间', '时空柱筛选与设置']) {
       const button = page.getByRole('button', { name: control, exact: true })
       await expect(button).toBeInViewport({ ratio: 1 })
       const box = (await button.boundingBox())!
@@ -336,7 +338,7 @@ for (const [width, height] of [
     await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'split')
     await expect(page.locator('.event-detail h2')).toBeInViewport({ ratio: 1 })
     await geometry(page)
-    for (const name of ['放大时间', '时空柱筛选与设置'])
+    for (const name of ['时空柱筛选与设置'])
       await expect(page.getByRole('button', { name, exact: true })).toBeInViewport({ ratio: 1 })
     await page.screenshot({ path: info.outputPath(`portrait-split-${width}.png`) })
   })
@@ -356,7 +358,8 @@ test('world-only reading uses the canvas range and header entry remains accessib
   await ready(page, 'year=1500&span=80&side=world')
   await expect(page.locator('.period-brief')).toHaveCount(0)
   await page.getByRole('button', { name: '当前画布', exact: true }).click()
-  await expect(page.locator('.list-description')).toContainText('当前画布')
+  await expect(page.locator('.list-description')).toContainText('当前时间范围内的全部已收录事件')
+  await expect(page.locator('.list-description')).toContainText('画布仅展示部分节点')
   await expect(page.locator('.event-card').filter({ hasText: '哥伦布' })).toBeVisible()
   await expect(page.locator('.event-card').filter({ hasText: '工业革命' })).toHaveCount(0)
   await page
@@ -492,7 +495,7 @@ for (const [width, height] of [
             height: rect.height,
           }))
       })
-      expect(controls.length).toBe(3)
+      expect(controls.length).toBe(1)
       for (const control of controls) {
         expect(control.left).toBeGreaterThanOrEqual(0)
         expect(control.right).toBeLessThanOrEqual(0)
@@ -615,10 +618,10 @@ for (const [width, height] of [
 }
 
 for (const width of [1440, 1024, 820, 701]) {
-  test(`pillar reader button toggles the existing reader at ${width}px`, async ({ page }, info) => {
+  test(`pillar settings restores the existing reader at ${width}px`, async ({ page }, info) => {
     await page.setViewportSize({ width, height: 900 })
     await ready(page, 'year=-3800&span=926&scope=period')
-    const button = page.locator('.pillar-reader')
+    const button = page.getByRole('button', { name: '展开历史资料', exact: true })
     const reader = page.locator('.story-panel')
     const url = page.url()
     const stageWidth = (await page.locator('.pillar-stage').boundingBox())!.width
@@ -626,6 +629,7 @@ for (const width of [1440, 1024, 820, 701]) {
     await expect(button).toHaveCount(0)
     await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
     await expect(reader).toBeHidden()
+    await settings(page)
     await expect(button).toHaveAttribute('aria-expanded', 'false')
     await expect(button).toHaveAccessibleName('展开历史资料')
     expect((await page.locator('.pillar-stage').boundingBox())!.width).toBeGreaterThan(stageWidth)
@@ -644,6 +648,7 @@ for (const width of [1440, 1024, 820, 701]) {
     await page.screenshot({ path: info.outputPath(`reader-expanded-${width}.png`) })
     await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
     await expect(reader).toBeHidden()
+    await settings(page)
     await button.focus()
     await button.press('Space')
     await expect(reader).toBeVisible()
@@ -656,6 +661,7 @@ for (const width of [1440, 1024, 820, 701]) {
       const selectedURL = page.url()
       await reader.getByRole('button', { name: '收起历史资料', exact: true }).click()
       await expect(reader).toBeHidden()
+      await settings(page)
       await button.click()
       await expect(heading).toHaveText(title!)
       await expect(page).toHaveURL(selectedURL)
@@ -747,7 +753,10 @@ for (const action of ['wheel', 'zoom', 'drag', 'stop', 'read'] as const) {
         'data-ordinal',
         (await stage.getAttribute('data-read-start'))!,
       )
-    } else await page.getByRole('button', { name: '停止自动浏览', exact: true }).click()
+    } else {
+      await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+      await closeSettings(page)
+    }
     await expect(stage).toHaveAttribute('data-browsing', 'false')
     await page.clock.runFor(1500)
     await expect(stage).toHaveAttribute('data-browsing', 'false')
@@ -765,7 +774,7 @@ test('automatic browsing reduced motion, empty range and keyboard stop', async (
   await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: 'dark' })
   await page.setViewportSize({ width: 320, height: 700 })
   await ready(page, 'year=1500&span=900')
-  await expect(page.locator('.pillar-controls button')).toHaveCount(3)
+  await expect(page.locator('.pillar-controls button:visible')).toHaveCount(1)
   await expect(page.locator('.pillar-controls .pillar-cluster')).toHaveCount(0)
   await page.clock.install()
   await settings(page)
@@ -840,7 +849,9 @@ for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 900 })
     await ready(page, 'year=1500&span=900&scope=period')
     if (width === 390) await setSheet(page, 'split')
-    await expect(page.locator('.pillar-controls button')).toHaveCount(3)
+    await expect(page.locator('.pillar-controls button:visible')).toHaveCount(
+      width === 1440 ? 3 : 1,
+    )
     await expect(
       page.locator('.pillar-controls .pillar-cluster, .pillar-controls .pillar-reader'),
     ).toHaveCount(0)
@@ -876,8 +887,17 @@ for (const width of [1440, 390]) {
       context.fillRect(0, 0, 1, 1)
       return context.getImageData(0, 0, 1, 1).data[3] / 255
     })
-    expect(background).toBeGreaterThan(0.5)
-    expect(background).toBeLessThan(0.75)
+    expect(background).toBe(0)
+    const buttonAlpha = await page.locator('.pillar-settings').evaluate((el) => {
+      const canvas = document.createElement('canvas')
+      canvas.width = canvas.height = 1
+      const context = canvas.getContext('2d')!
+      context.fillStyle = getComputedStyle(el).backgroundColor
+      context.fillRect(0, 0, 1, 1)
+      return context.getImageData(0, 0, 1, 1).data[3] / 255
+    })
+    expect(buttonAlpha).toBeGreaterThan(0)
+    expect(buttonAlpha).toBeLessThan(0.7)
     await page.screenshot({ path: info.outputPath(`simplified-tools-${width}.png`) })
   })
 }
@@ -941,7 +961,9 @@ for (const viewport of [
     await category.selectOption('经济贸易')
     await expect(page.locator('.pillar-category-summary')).toContainText('当前画布 0 件')
     await closeSettings(page)
-    await expect(page.locator('.pillar-empty')).toContainText('当前范围与筛选下没有已收录的事件')
+    await expect(page.locator('.pillar-empty')).toContainText(
+      '当前时间范围没有匹配事件，其他年代还有',
+    )
     await settings(page)
     await page.getByRole('button', { name: '清除时间、地区与类别筛选', exact: true }).click()
     await expect(category).toHaveValue('全部')

@@ -50,4 +50,16 @@ export function canonicalSource(source: Source): Source {
   const volume = match[1] === '後漢書' && Number(match[2]) === 1 ? '1上' : match[2]
   return { ...source, url: bookUrl(match[1], volume) }
 }
-export const canonicalSources = (sources: Source[]) => sources.map(canonicalSource)
+export function canonicalSources(sources: Source[]): Source[] {
+  const unique = new Map<string, Source>()
+  for (const original of sources) {
+    const source = canonicalSource(original)
+    const previous = unique.get(source.url)
+    if (!previous) unique.set(source.url, { ...source })
+    else {
+      const notes = [...new Set([previous.note, source.note].filter(Boolean))]
+      if (notes.length) previous.note = notes.join('；')
+    }
+  }
+  return [...unique.values()]
+}
