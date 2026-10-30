@@ -87,7 +87,8 @@
   background: var(--pillar-surface);
   border-radius: 3px;
 }
-.time-pillar .pillar-now {
+.time-pillar .pillar-now,
+:root[data-color-mode='dark'] .time-pillar .pillar-now {
   background: var(--pillar-now-bg);
   color: var(--pillar-now-ink);
 }

@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { installPillarClock } from './pillar-clock-helpers'
+import { expandPillarOptions } from './refinement-helpers'
 
 async function zoomIn(page: Page) {
   const button = page.getByRole('button', { name: '放大时间', exact: true })
@@ -162,11 +163,12 @@ for (const [width, height] of [
     await page.screenshot({ path: info.outputPath(`settled-${width}.png`) })
 
     await settings.click()
-    const overview = page.getByRole('button', { name: '查看历史全貌', exact: true })
-    await expect(overview).toBeVisible()
-    await expect(overview).not.toHaveText('')
+    await expandPillarOptions(page, '年份与时期')
+    const period = page.getByRole('combobox', { name: '时空柱历史时期', exact: true })
+    await period.scrollIntoViewIfNeeded()
+    await expect(period).toBeVisible()
     await page.screenshot({ path: info.outputPath(`settings-overview-${width}.png`) })
-    await overview.click()
+    await period.selectOption('all')
     await page.clock.runFor(368)
     // The reading chronology reaches 2000; 1912 is only the map's boundary.
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '11999')

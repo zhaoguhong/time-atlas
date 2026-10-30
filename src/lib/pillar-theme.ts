@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export type PillarTheme = 'column' | 'line' | 'scroll' | 'ribbon'
+export type PillarTheme =
+  'column' | 'line' | 'scroll' | 'ribbon' | 'minimal' | 'editorial' | 'observatory'
 
 export const DEFAULT_PILLAR_THEME: PillarTheme = 'column'
 export const PILLAR_THEME_STORAGE_KEY = 'time-atlas:pillar-theme:v1'
@@ -14,12 +15,13 @@ export const pillarThemes: ReadonlyArray<{
   { id: 'line', name: '素笺编年', description: '淡雅的纸面，清晰的细线' },
   { id: 'scroll', name: '山河长卷', description: '卷轴与印记，铺陈历史' },
   { id: 'ribbon', name: '经纬织带', description: '双轨与几何，交织时代' },
+  { id: 'minimal', name: '留白', description: '现代极简，专注文字与时间' },
+  { id: 'editorial', name: '大事记', description: '黑白刊物，大年份与宋体标题' },
+  { id: 'observatory', name: '观测站', description: '科学图谱，标尺与规整信息框' },
 ]
 
 export function parsePillarTheme(value: unknown): PillarTheme {
-  return value === 'column' || value === 'line' || value === 'scroll' || value === 'ribbon'
-    ? value
-    : DEFAULT_PILLAR_THEME
+  return pillarThemes.find((theme) => theme.id === value)?.id ?? DEFAULT_PILLAR_THEME
 }
 
 export function readPillarTheme(): PillarTheme {

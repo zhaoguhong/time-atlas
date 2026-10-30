@@ -1,4 +1,4 @@
-import { expandPillarOptions } from './refinement-helpers'
+import { expandPillarOptions, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
@@ -16,6 +16,7 @@ async function ready(page: Page, hash = 'year=1500&span=900') {
 async function settings(page: Page) {
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).toBeVisible()
+  await expandPillarOptions(page, '年份与时期')
   await expandPillarOptions(page, '外观与简介')
   await expandPillarOptions(page, '自动浏览与停留')
 }
@@ -150,7 +151,7 @@ for (const [width, height] of [
       expect(box.height).toBeGreaterThanOrEqual(44)
     }
     await settings(page)
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    await pillarSideButton(page, 'world').click()
     await closeSettings(page)
     await expect(page.locator('.pillar-card.china')).toHaveCount(0)
     const stage = (await page.locator('.pillar-stage').boundingBox())!,
@@ -159,7 +160,7 @@ for (const [width, height] of [
     await geometry(page)
     await page.screenshot({ path: info.outputPath(`world-${width}x${height}.png`) })
     await settings(page)
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('china')
+    await pillarSideButton(page, 'china').click()
     await closeSettings(page)
     await expect(page.locator('.pillar-card.world')).toHaveCount(0)
     await geometry(page)
@@ -415,7 +416,7 @@ for (const [width, height] of [
     await expect(page.locator('.atlas-app')).toHaveAttribute('data-focus-mode', 'true')
     await expect(page.locator('.visualization-switch')).toBeInViewport({ ratio: 1 })
     await settings(page)
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    await pillarSideButton(page, 'world').click()
     await closeSettings(page)
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
     await geometry(page)
@@ -480,7 +481,9 @@ for (const [width, height] of [
     for (const overview of [false, true]) {
       if (overview) {
         await settings(page)
-        await page.getByRole('button', { name: '查看历史全貌', exact: true }).click()
+        await page
+          .getByRole('combobox', { name: '时空柱历史时期', exact: true })
+          .selectOption('all')
         await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
       }
       const controls = await page.evaluate(() => {
@@ -537,9 +540,7 @@ test('compact labels are the default, summaries are optional, and years use Chin
   )
   expect(rows.every(Boolean)).toBe(true)
   await settings(page)
-  expect(
-    (await page.getByLabel('时空柱浏览方式', { exact: true }).boundingBox())!.height,
-  ).toBeGreaterThanOrEqual(44)
+  expect((await pillarSideButton(page, 'compare').boundingBox())!.height).toBeGreaterThanOrEqual(44)
   await page.getByRole('checkbox', { name: /^显示事件简介/ }).check()
   await closeSettings(page)
   await expect(page.locator('.pillar-event p').first()).toBeVisible()
@@ -791,7 +792,7 @@ test('automatic browsing reduced motion, empty range and keyboard stop', async (
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-browsing', 'false')
   await page.clock.runFor(20000)
   await settings(page)
-  await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+  await pillarSideButton(page, 'world').click()
   await page.getByLabel('世界历史地区', { exact: true }).selectOption('oceania')
   await page.getByLabel('时空柱起始年份', { exact: true }).fill('1912')
   await page.getByLabel('时空柱结束年份', { exact: true }).fill('1912')
@@ -1027,7 +1028,7 @@ for (const viewport of [
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
     await settings(page)
     await expect(page.getByLabel('时空柱事件类别', { exact: true })).toHaveValue('哲学')
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('china')
+    await pillarSideButton(page, 'china').click()
     await overview.click()
     await settings(page)
     await page.locator('.pillar-cluster').click()

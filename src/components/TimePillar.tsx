@@ -43,6 +43,7 @@ import { createPillarScene, samplePillarScene } from '../lib/pillar-scene'
 import { PillarAppearance, PillarScenery } from './PillarAppearance'
 import '../time-pillar.css'
 import '../pillar-themes.css'
+import '../pillar-modern-themes.css'
 
 type Props = {
   focused?: boolean
@@ -78,10 +79,12 @@ export default function TimePillar(p: Props) {
   const dialog = useRef<HTMLDialogElement>(null)
   const optionsTrigger = useRef<HTMLButtonElement>(null)
   const modalTrigger = useRef<HTMLElement | null>(null)
+  const focusYearOnOpen = useRef(false)
   const [size, setSize] = useState({ width: 800, height: 500 })
   const [draft, setDraft] = useState<PillarView | null>(null)
   const [precise, setPrecise] = useState<PillarView | null>(null)
   const [modal, setModal] = useState<'settings' | 'cluster' | null>(null)
+  const [timeOptionsOpen, setTimeOptionsOpen] = useState(false)
   const [cluster, setCluster] = useState<HistoryEvent[]>([])
   const [jump, setJump] = useState('')
   const [rangeFrom, setRangeFrom] = useState('')
@@ -108,6 +111,7 @@ export default function TimePillar(p: Props) {
     anchor: number
     top: number
     moved: boolean
+    priorityId?: string
   } | null>(null)
   const suppressClick = useRef(false)
   const targetOrdinal =
@@ -145,7 +149,19 @@ export default function TimePillar(p: Props) {
     },
     onStop: () => pauseRef.current(),
   })
-  const priorityId = p.selectedId ?? browse.stop?.event.id
+  // Keep the hit target in place from pointerdown through click, even when
+  // pointerdown pauses playback and restores the previous manual selection.
+  const priorityId = gesture.current
+    ? gesture.current.priorityId
+    : p.playing
+      ? browse.stop?.event.id
+      : p.selectedId
+  // Playback owns the reading highlight; travel must not retain an old selection's line.
+  const activeEventId = p.playing
+    ? browse.travelling
+      ? undefined
+      : browse.stop?.event.id
+    : p.selectedId
   const narrow = size.width < 560
   const single = p.side !== 'compare'
   const axis = single ? 40 : size.width / 2
@@ -355,8 +371,11 @@ export default function TimePillar(p: Props) {
     if (modal) {
       pauseRef.current()
       dialog.current?.showModal()
+      if (dialog.current) dialog.current.scrollTop = 0
       if (modal === 'cluster')
         dialog.current?.querySelector<HTMLInputElement>('.pillar-cluster-search input')?.focus()
+      else if (focusYearOnOpen.current)
+        dialog.current?.querySelector<HTMLInputElement>('#pillar-jump')?.focus()
     } else dialog.current?.close()
   }, [modal])
   useEffect(() => {
@@ -380,12 +399,17 @@ export default function TimePillar(p: Props) {
       anchor: w.top - fraction * w.span,
       top: w.top,
       moved: false,
+      priorityId,
     }
   }
-  function openPanel(type: 'settings' | 'cluster', trigger: HTMLElement) {
+  function openPanel(type: 'settings' | 'cluster', trigger: HTMLElement, focusYear = false) {
     pauseBrowsing()
     modalTrigger.current = trigger
-    if (type === 'settings') setJump(String(rendered.current.year))
+    if (type === 'settings') {
+      setJump(String(rendered.current.year))
+      focusYearOnOpen.current = focusYear
+      setTimeOptionsOpen(focusYear)
+    }
     setModal(type)
   }
   function closeModal() {
@@ -607,14 +631,22 @@ export default function TimePillar(p: Props) {
           <svg x={0} y={padding} width="100%" height={height} overflow="hidden">
             <g transform={`translate(0 ${offset})`}>
               {cards.map((c) => {
+                if (c.event.id !== activeEventId) return null
                 const direction = !single && c.side === 'world' ? -1 : 1
                 const start = axis + direction * 4
                 const end = single ? 72 : axis + direction * railGap
                 return (
-                  <g key={c.event.id} className={`pillar-connector ${c.side}`}>
+                  <g
+                    key={c.event.id}
+                    className={`pillar-connector ${c.side}`}
+                    data-event-id={c.event.id}
+                  >
                     <path
                       d={
-                        theme === 'ribbon'
+                        theme === 'ribbon' ||
+                        theme === 'minimal' ||
+                        theme === 'editorial' ||
+                        theme === 'observatory'
                           ? `M ${start} ${c.anchorY} L ${end} ${c.y}`
                           : theme === 'scroll'
                             ? `M ${start} ${c.anchorY} L ${start} ${c.y} L ${end} ${c.y}`
@@ -648,10 +680,7 @@ export default function TimePillar(p: Props) {
           title="点击选择年份或时期"
           onClick={(event) => {
             flush()
-            openPanel('settings', event.currentTarget)
-            requestAnimationFrame(() =>
-              dialog.current?.querySelector<HTMLInputElement>('#pillar-jump')?.focus(),
-            )
+            openPanel('settings', event.currentTarget, true)
           }}
         >
           <span>
@@ -667,7 +696,7 @@ export default function TimePillar(p: Props) {
             {cards.map((c) => (
               <div
                 key={c.event.id}
-                className={`pillar-card ${c.side} ${c.event.id === p.selectedId || (p.playing && !browse.travelling && c.event.id === browse.stop?.event.id) ? 'selected' : ''}`}
+                className={`pillar-card ${c.side} ${c.event.id === activeEventId ? 'selected' : ''}`}
                 data-event-id={c.event.id}
                 data-category={c.event.category}
                 style={
@@ -805,7 +834,6 @@ export default function TimePillar(p: Props) {
       >
         <div className="pillar-dialog-head">
           <div>
-            <span className="eyebrow">TIME ATLAS · 时空柱</span>
             <h2 id="pillar-dialog-title">
               {modal === 'cluster' ? `这段历史 · ${cluster.length} 件事件` : '时空柱设置'}
             </h2>
@@ -897,293 +925,273 @@ export default function TimePillar(p: Props) {
           </>
         ) : (
           <div className="pillar-options">
-            {p.readerCollapsed && (
-              <button
-                className="pillar-reset"
-                aria-label="展开历史资料"
-                aria-expanded="false"
-                aria-controls="history-reading-content"
-                onClick={() => {
-                  closeModal()
-                  p.onToggleReader()
-                }}
-              >
-                展开历史资料
-              </button>
-            )}
-
-            <div className="pillar-settings-zoom" role="group" aria-label="调整时间跨度">
-              <span>时间跨度：{niceSpan(span)}</span>
-              <button
-                aria-label="放大时间范围"
-                disabled={p.span <= MIN_SPAN}
-                onClick={() => commit(zoom(0.6))}
-              >
-                <Plus size={18} />
-                放大
-              </button>
-              <button
-                aria-label="缩小时间范围"
-                disabled={p.span >= MAX_SPAN}
-                onClick={() => commit(zoom(1.6))}
-              >
-                <Minus size={18} />
-                缩小
-              </button>
-            </div>
-            <p className="pillar-view-window">
-              当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
-              {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                const n = Number(jump)
-                if (
-                  !jump.trim() ||
-                  !Number.isInteger(n) ||
-                  n === 0 ||
-                  n < MIN_YEAR ||
-                  n > MAX_YEAR
-                ) {
-                  setError('请输入前 10000 年至 2000 年之间的整数；公元前用负数，没有公元 0 年。')
-                  return
-                }
-                closeModal()
-                commit({ year: n, span: p.span })
-              }}
-            >
-              <label htmlFor="pillar-jump">直接前往年份</label>
-              <div className="pillar-input-row">
-                <input
-                  id="pillar-jump"
-                  type="number"
-                  placeholder="例如 1453；公元前填负数"
-                  value={jump}
-                  onChange={(e) => setJump(e.target.value)}
-                />
-                <button className="pillar-primary" type="submit">
-                  <LocateFixed size={16} />
-                  前往
-                </button>
+            <section className="pillar-filter-options" aria-label="内容筛选">
+              <div>
+                <span className="pillar-option-label">浏览方式</span>
+                <div className="pillar-browse-mode" role="group" aria-label="时空柱浏览方式">
+                  {(
+                    [
+                      ['compare', '中外对照'],
+                      ['china', '中国'],
+                      ['world', '世界'],
+                    ] as const
+                  ).map(([side, label]) => (
+                    <button
+                      key={side}
+                      aria-pressed={p.side === side}
+                      onClick={() => p.onSide(side)}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </form>
-            <label>
-              快速展开时期
-              <select
-                aria-label="时空柱历史时期"
-                value=""
-                onChange={(e) => {
-                  const [a, b] = e.target.value.split(',').map(Number)
-                  if (!a || !b) return
-                  closeModal()
-                  commit({
-                    year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
-                    span: clampSpan(toOrdinal(b) - toOrdinal(a)),
-                  })
-                }}
-              >
-                <option value="" disabled>
-                  选择一段历史…
-                </option>
-                {[
-                  [-10000, -3000, '史前与早期聚落'],
-                  [-3000, -500, '早期文明'],
-                  [-500, 500, '古典时代'],
-                  [500, 1000, '中古世界'],
-                  [1000, 1500, '交流与变迁'],
-                  [1500, 1800, '跨洋联系'],
-                  [1800, 1912, '工业时代'],
-                  [1913, 1945, '世界大战与思想变革'],
-                  [1946, 2000, '战后世界'],
-                ].map(([a, b, t]) => (
-                  <option value={`${a},${b}`} key={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <button
-              className="pillar-reset pillar-cluster"
-              aria-label={`查看这段时间的全部${visibleCount}个事件`}
-              aria-haspopup="dialog"
-              disabled={!visibleCount}
-              onClick={(event) => openCluster(windowEvents, event.currentTarget)}
-            >
-              <List size={17} aria-hidden="true" />
-              <span>
-                全部事件 <small>{visibleCount} 件 · 搜索与阅读当前画布内的事件</small>
-              </span>
-            </button>
-            <button
-              className="pillar-reset pillar-overview"
-              aria-label="查看历史全貌"
-              onClick={() => {
-                closeModal()
-                pauseBrowsing()
-                commit({
-                  year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
-                  span: MAX_SPAN,
-                })
-              }}
-            >
-              查看历史全貌
-              <small>公元前10000年—2000年</small>
-            </button>
-            {p.hasSpatialFilter && (
-              <div className="pillar-filter-note">
-                <p>当前还保留着地点或地图视野筛选，可能只显示少数事件。</p>
-                <button className="pillar-reset" onClick={p.onClearSpatial}>
-                  解除地点与视野限制
-                </button>
-              </div>
-            )}
-            <label>
-              浏览方式
-              <select
-                aria-label="时空柱浏览方式"
-                value={p.side}
-                onChange={(e) => p.onSide(e.target.value as PillarSide)}
-              >
-                <option value="compare">中外对照</option>
-                <option value="world">仅世界历史</option>
-                <option value="china">仅中国历史</option>
-              </select>
-            </label>
-            <div className="pillar-option-grid">
-              <label>
-                世界历史地区
-                <select
-                  aria-label="世界历史地区"
-                  value={p.region}
-                  disabled={p.side === 'china'}
-                  onChange={(e) => p.onRegion(e.target.value)}
-                >
-                  <option value="all">所有地区</option>
-                  {Object.entries(historyRegions)
-                    .filter(([id]) => id !== 'china')
-                    .map(([id, label]) => (
-                      <option key={id} value={id}>
-                        {label}
+              <div className="pillar-option-grid" data-single={p.side === 'china'}>
+                {p.side !== 'china' && (
+                  <label>
+                    世界历史地区
+                    <select
+                      aria-label="世界历史地区"
+                      value={p.region}
+                      onChange={(e) => p.onRegion(e.target.value)}
+                    >
+                      <option value="all">所有地区</option>
+                      {Object.entries(historyRegions)
+                        .filter(([id]) => id !== 'china')
+                        .map(([id, label]) => (
+                          <option key={id} value={id}>
+                            {label}
+                          </option>
+                        ))}
+                    </select>
+                  </label>
+                )}
+                <label>
+                  事件类别
+                  <select
+                    aria-label="时空柱事件类别"
+                    value={p.category}
+                    onChange={(e) => p.onCategory(e.target.value as EventCategoryFilter)}
+                  >
+                    {categories.map((c) => (
+                      <option key={c} value={c}>
+                        {c === '全部' ? '全部类别' : c}
                       </option>
                     ))}
-                </select>
-              </label>
-              <label>
-                事件类别
-                <select
-                  aria-label="时空柱事件类别"
-                  value={p.category}
-                  onChange={(e) => p.onCategory(e.target.value as EventCategoryFilter)}
-                >
-                  {categories.map((c) => (
-                    <option key={c} value={c}>
-                      {c === '全部' ? '全部类别' : c}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-            <p className="pillar-category-summary" role="status">
-              {p.category === '全部' ? '全部类别' : p.category} · 当前画布 {visibleCount} 件 /
-              全部年代 {p.allCategoryEvents.length} 件
-              <small>数量按当前地区与地点条件统计；主题可交叉归属。</small>
-            </p>
-            {p.category !== '全部' && (
-              <button
-                className="pillar-reset pillar-category-overview"
-                disabled={!p.allCategoryEvents.length}
-                onClick={expandCategoryRange}
-              >
-                展开“{p.category}”的全部年代
-              </button>
-            )}
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                const a = Number(rangeFrom),
-                  b = Number(rangeTo)
-                if (
-                  !Number.isInteger(a) ||
-                  !Number.isInteger(b) ||
-                  !a ||
-                  !b ||
-                  a > b ||
-                  a < MIN_YEAR ||
-                  b > MAX_YEAR
-                ) {
-                  setError('请填写有效的起止年份，起始年不能晚于结束年。')
-                  return
-                }
-                p.onRange([a, b])
-                closeModal()
-                commit({
-                  year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
-                  span: clampSpan(toOrdinal(b) - toOrdinal(a)),
-                })
-              }}
-            >
-              <label>限定探索与自动浏览范围</label>
-              <div className="pillar-range-row">
-                <input
-                  aria-label="时空柱起始年份"
-                  type="number"
-                  placeholder="起始年"
-                  value={rangeFrom}
-                  onChange={(e) => setRangeFrom(e.target.value)}
-                />
-                <span>—</span>
-                <input
-                  aria-label="时空柱结束年份"
-                  type="number"
-                  placeholder="结束年"
-                  value={rangeTo}
-                  onChange={(e) => setRangeTo(e.target.value)}
-                />
-                <button type="submit" aria-label="应用时空柱时间范围">
-                  <Check size={18} />
-                </button>
+                  </select>
+                </label>
               </div>
-            </form>
-            {(p.range || p.region !== 'all' || p.category !== '全部') && (
-              <button
-                className="pillar-reset"
-                onClick={() => {
-                  p.onRange(null)
-                  p.onRegion('all')
-                  p.onCategory('全部')
-                  setError('')
-                }}
+              <p
+                className="pillar-category-summary"
+                role="status"
+                title="数量按当前地区与地点条件统计；主题可交叉归属。"
               >
-                清除时间、地区与类别筛选
-              </button>
-            )}
-            <details className="pillar-secondary-options">
-              <summary>外观与简介</summary>
-              <PillarAppearance value={theme} onChange={setTheme} />
-              <label className="pillar-summary-option">
+                {p.category === '全部' ? '全部类别' : p.category} · 当前画布 {visibleCount} 件 /
+                全部年代 {p.allCategoryEvents.length} 件
+              </p>
+              {p.category !== '全部' && (
+                <button
+                  className="pillar-text-action pillar-category-overview"
+                  disabled={!p.allCategoryEvents.length}
+                  onClick={expandCategoryRange}
+                >
+                  展开“{p.category}”的全部年代
+                </button>
+              )}
+              {(p.range || p.region !== 'all' || p.category !== '全部' || p.hasSpatialFilter) && (
+                <div className="pillar-filter-status" aria-label="已应用筛选">
+                  {p.range && (
+                    <p className="pillar-range-status">
+                      时间限制：{compactYear(p.range[0])}年—{compactYear(p.range[1])}年
+                    </p>
+                  )}
+                  {p.hasSpatialFilter && (
+                    <div className="pillar-filter-note">
+                      <p>当前还保留着地点或地图视野筛选，可能只显示少数事件。</p>
+                      <button className="pillar-reset" onClick={p.onClearSpatial}>
+                        解除地点与视野限制
+                      </button>
+                    </div>
+                  )}
+                  {(p.range || p.region !== 'all' || p.category !== '全部') && (
+                    <button
+                      className="pillar-text-action"
+                      onClick={() => {
+                        p.onRange(null)
+                        p.onRegion('all')
+                        p.onCategory('全部')
+                        setError('')
+                      }}
+                    >
+                      清除时间、地区与类别筛选
+                    </button>
+                  )}
+                </div>
+              )}
+            </section>
+            <section className="pillar-window-options" aria-label="当前画布">
+              <p className="pillar-view-window">
+                当前视野：{compactYear(fromOrdinal(Math.round(windowRange.bottom)))}年—
+                {compactYear(fromOrdinal(Math.round(windowRange.top)))}年 · {niceSpan(span)}
+              </p>
+              <button
+                className="pillar-reset pillar-cluster"
+                aria-label={`查看这段时间的全部${visibleCount}个事件`}
+                aria-haspopup="dialog"
+                disabled={!visibleCount}
+                onClick={(event) => openCluster(windowEvents, event.currentTarget)}
+              >
+                <List size={17} aria-hidden="true" />
                 <span>
-                  <strong>显示事件简介</strong>
-                  <small>默认只展示日期与标题，留出更多历史节点</small>
+                  当前范围事件 · {visibleCount} 件<small>搜索与阅读当前画布内的事件</small>
                 </span>
-                <span className="pillar-summary-toggle">
-                  <input
-                    type="checkbox"
-                    checked={showSummary}
-                    onChange={(event) => setShowSummary(event.target.checked)}
-                  />
-                  <span aria-hidden="true" />
-                </span>
-              </label>
+              </button>
+            </section>
+            <details
+              className="pillar-secondary-options"
+              open={timeOptionsOpen}
+              onToggle={(event) => setTimeOptionsOpen(event.currentTarget.open)}
+            >
+              <summary>年份与时期</summary>
+              <div className="pillar-time-options">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault()
+                    const n = Number(jump)
+                    if (
+                      !jump.trim() ||
+                      !Number.isInteger(n) ||
+                      n === 0 ||
+                      n < MIN_YEAR ||
+                      n > MAX_YEAR
+                    ) {
+                      setError(
+                        '请输入前 10000 年至 2000 年之间的整数；公元前用负数，没有公元 0 年。',
+                      )
+                      return
+                    }
+                    closeModal()
+                    commit({ year: n, span: p.span })
+                  }}
+                >
+                  <label htmlFor="pillar-jump">直接前往年份</label>
+                  <div className="pillar-input-row">
+                    <input
+                      id="pillar-jump"
+                      type="number"
+                      placeholder="例如 1453；公元前填负数"
+                      value={jump}
+                      onChange={(e) => setJump(e.target.value)}
+                    />
+                    <button className="pillar-primary" type="submit">
+                      <LocateFixed size={16} />
+                      前往
+                    </button>
+                  </div>
+                </form>
+                <label>
+                  快速展开时期
+                  <select
+                    aria-label="时空柱历史时期"
+                    value=""
+                    onChange={(e) => {
+                      if (e.target.value === 'all') {
+                        closeModal()
+                        commit({
+                          year: limited((toOrdinal(MAX_YEAR) + toOrdinal(MIN_YEAR)) / 2),
+                          span: MAX_SPAN,
+                        })
+                        return
+                      }
+                      const [a, b] = e.target.value.split(',').map(Number)
+                      if (!a || !b) return
+                      closeModal()
+                      commit({
+                        year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
+                        span: clampSpan(toOrdinal(b) - toOrdinal(a)),
+                      })
+                    }}
+                  >
+                    <option value="" disabled>
+                      选择一段历史…
+                    </option>
+                    <option value="all">全部年代 · 公元前10000年—2000年</option>
+                    {[
+                      [-10000, -3000, '史前与早期聚落'],
+                      [-3000, -500, '早期文明'],
+                      [-500, 500, '古典时代'],
+                      [500, 1000, '中古世界'],
+                      [1000, 1500, '交流与变迁'],
+                      [1500, 1800, '跨洋联系'],
+                      [1800, 1912, '工业时代'],
+                      [1913, 1945, '世界大战与思想变革'],
+                      [1946, 2000, '战后世界'],
+                    ].map(([a, b, t]) => (
+                      <option value={`${a},${b}`} key={t}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault()
+                    const a = Number(rangeFrom),
+                      b = Number(rangeTo)
+                    if (
+                      !Number.isInteger(a) ||
+                      !Number.isInteger(b) ||
+                      !a ||
+                      !b ||
+                      a > b ||
+                      a < MIN_YEAR ||
+                      b > MAX_YEAR
+                    ) {
+                      setError('请填写有效的起止年份，起始年不能晚于结束年。')
+                      return
+                    }
+                    p.onRange([a, b])
+                    closeModal()
+                    commit({
+                      year: limited((toOrdinal(a) + toOrdinal(b)) / 2),
+                      span: clampSpan(toOrdinal(b) - toOrdinal(a)),
+                    })
+                  }}
+                >
+                  <label>限定探索与自动浏览范围</label>
+                  <div className="pillar-range-row">
+                    <input
+                      aria-label="时空柱起始年份"
+                      type="number"
+                      placeholder="起始年"
+                      value={rangeFrom}
+                      onChange={(e) => setRangeFrom(e.target.value)}
+                    />
+                    <span>—</span>
+                    <input
+                      aria-label="时空柱结束年份"
+                      type="number"
+                      placeholder="结束年"
+                      value={rangeTo}
+                      onChange={(e) => setRangeTo(e.target.value)}
+                    />
+                    <button type="submit" aria-label="应用时空柱时间范围">
+                      <Check size={18} />
+                    </button>
+                  </div>
+                </form>
+                {error && (
+                  <p role="alert" className="pillar-error">
+                    {error}
+                  </p>
+                )}
+              </div>
             </details>
             <details className="pillar-secondary-options">
               <summary>自动浏览与停留</summary>
               <section className="pillar-browse-options" aria-labelledby="pillar-browse-title">
                 <h3 id="pillar-browse-title">自动浏览</h3>
-                <p>
-                  从当前年份向前，按事件逐站停留。大跨度优先重要事件，放大后纳入更多事件；到筛选范围末尾自动结束。
-                </p>
-                <p>拖动、缩放或打开事件会立即停止，留在原处慢慢读。</p>
+                <p>按当前筛选逐站浏览，到范围末尾结束；拖动、缩放或打开事件即停止。</p>
                 <div className="pillar-option-grid">
                   <label>
                     每站停留
@@ -1216,16 +1224,46 @@ export default function TimePillar(p: Props) {
                 )}
               </section>
             </details>
-            {error && (
-              <p role="alert" className="pillar-error">
-                {error}
-              </p>
+            <details className="pillar-secondary-options">
+              <summary>外观与简介</summary>
+              <PillarAppearance value={theme} onChange={setTheme} />
+              <label className="pillar-summary-option">
+                <span>
+                  <strong>显示事件简介</strong>
+                  <small>默认只展示日期与标题，留出更多历史节点</small>
+                </span>
+                <span className="pillar-summary-toggle">
+                  <input
+                    type="checkbox"
+                    checked={showSummary}
+                    onChange={(event) => setShowSummary(event.target.checked)}
+                  />
+                  <span aria-hidden="true" />
+                </span>
+              </label>
+            </details>
+            {p.readerCollapsed && (
+              <button
+                className="pillar-reset"
+                aria-label="展开历史资料"
+                aria-expanded="false"
+                aria-controls="history-reading-content"
+                onClick={() => {
+                  closeModal()
+                  p.onToggleReader()
+                }}
+              >
+                展开历史资料
+              </button>
             )}
-            <p className="pillar-help">
-              上下拖动或滚动，沿年代探索；手机双指捏合，或按住 Ctrl / ⌘ 滚动缩放。键盘方向键移动，＋
-              / − 缩放。较早的年代在下方，没有公元 0
-              年。时间范围越小，事件越展开；“＋”可查看聚合内容。
-            </p>
+            <details className="pillar-secondary-options">
+              <summary>操作说明</summary>
+              <p className="pillar-help">
+                上下拖动或滚动切换年代，较早的年代在下方。手机双指捏合缩放；桌面按住 Ctrl / ⌘
+                滚动缩放。键盘方向键移动，＋ / − 缩放。没有公元 0
+                年。画布未展示的事件可在“当前范围事件”中查找。
+              </p>
+            </details>
           </div>
         )}
       </dialog>

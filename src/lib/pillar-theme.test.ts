@@ -23,7 +23,15 @@ describe('saved pillar appearance', () => {
       1,
     ])
       expect(parsePillarTheme(value)).toBe('column')
-    for (const value of ['column', 'line', 'scroll', 'ribbon'])
+    for (const value of [
+      'column',
+      'line',
+      'scroll',
+      'ribbon',
+      'minimal',
+      'editorial',
+      'observatory',
+    ])
       expect(parsePillarTheme(value)).toBe(value)
   })
 
@@ -39,6 +47,10 @@ describe('saved pillar appearance', () => {
     writePillarTheme('line')
     expect(readPillarTheme()).toBe('line')
     expect(values.get('time-atlas:v1')).toBe('{"year":1450}')
+    for (const theme of ['minimal', 'editorial', 'observatory'] as const) {
+      writePillarTheme(theme)
+      expect(readPillarTheme()).toBe(theme)
+    }
     expect([...values.keys()]).toEqual(['time-atlas:v1', PILLAR_THEME_STORAGE_KEY])
     values.set(PILLAR_THEME_STORAGE_KEY, '{"theme":"night"}')
     expect(readPillarTheme()).toBe('column')

@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { pillarSideButton } from './refinement-helpers'
 
 async function menu(page: Page) {
   await page.getByRole('button', { name: '更多操作', exact: true }).click()
@@ -102,11 +103,7 @@ for (const [width, height] of [
     await expect(page.getByRole('button', { name: '时空柱筛选与设置', exact: true })).toBeFocused()
     await expect(page.locator('.pillar-quick-actions')).toHaveCount(0)
     await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
-    if (mobile) {
-      await page.getByRole('button', { name: '放大时间范围', exact: true }).click()
-      await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '48')
-    }
+    await pillarSideButton(page, 'world').click()
     await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
     await expect(page.locator('.pillar-card.china')).toHaveCount(0)
@@ -204,9 +201,28 @@ for (const [width, height] of [
   })
 }
 
-test('year navigation is direct and optional settings start collapsed', async ({ page }, info) => {
+test('content filters lead settings and year navigation opens its collapsed group', async ({
+  page,
+}, info) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/#visual=pillar&year=1500&span=900')
+  await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  const region = page.getByRole('combobox', { name: '世界历史地区', exact: true })
+  const category = page.getByRole('combobox', { name: '时空柱事件类别', exact: true })
+  await expect(pillarSideButton(page, 'compare')).toHaveAttribute('aria-pressed', 'true')
+  await expect(pillarSideButton(page, 'china')).toBeInViewport({ ratio: 1 })
+  await expect(region).toBeInViewport({ ratio: 1 })
+  await expect(category).toBeInViewport({ ratio: 1 })
+  await expect(page.locator('#pillar-jump')).toBeHidden()
+  await expect(page.getByRole('radio', { name: '琉璃时柱', exact: true })).toBeHidden()
+  await page.screenshot({ path: info.outputPath('content-first-settings.png') })
+  await region.selectOption('europe')
+  await pillarSideButton(page, 'china').click()
+  await expect(region).toHaveCount(0)
+  await expect(category).toBeVisible()
+  await pillarSideButton(page, 'world').click()
+  await expect(region).toHaveValue('europe')
+  await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
   await page.locator('.pillar-now').click()
   await expect(page.locator('#pillar-jump')).toBeFocused()
   await expect(page.getByRole('combobox', { name: '时空柱历史时期' })).toBeInViewport({ ratio: 1 })

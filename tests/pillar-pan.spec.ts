@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { expect, test, type Page, type TestInfo } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { expandPillarOptions } from './refinement-helpers'
 
 type CardSample = {
   id: string
@@ -323,6 +324,7 @@ test('explicit navigation to the rounded year clears a retained subyear pan', as
   ).toBeLessThan(1)
 
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
+  await expandPillarOptions(page, '年份与时期')
   await page.getByLabel('直接前往年份', { exact: true }).fill('-221')
   await page.getByRole('button', { name: '前往', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).not.toBeVisible()

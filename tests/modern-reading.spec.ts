@@ -1,10 +1,12 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { expandPillarOptions } from './refinement-helpers'
 
 test.use({ hasTouch: true })
 async function settings(page: Page) {
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).toBeVisible()
+  await expandPillarOptions(page, '年份与时期')
 }
 async function closeSettings(page: Page) {
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()

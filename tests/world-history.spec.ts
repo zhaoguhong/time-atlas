@@ -1,4 +1,4 @@
-import { openHeaderMenu } from './refinement-helpers'
+import { openHeaderMenu, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 
@@ -139,7 +139,7 @@ for (const [width, height] of [
     await page.goto('/#visual=pillar&year=1869&span=150&scope=period')
     await expect(page.locator('.pillar-stage')).toBeVisible()
     await pillarSettings(page)
-    await page.getByLabel('时空柱浏览方式', { exact: true }).selectOption('world')
+    await pillarSideButton(page, 'world').click()
     await page.getByLabel('世界历史地区', { exact: true }).selectOption('africa')
     await closePillarSettings(page)
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
@@ -199,7 +199,7 @@ for (const [width, height] of [
     await globalMapEvents(page)
     await switchMode(page, '时空柱')
     await pillarSettings(page)
-    await expect(page.getByLabel('时空柱浏览方式', { exact: true })).toHaveValue('world')
+    await expect(pillarSideButton(page, 'world')).toHaveAttribute('aria-pressed', 'true')
     await expect(page.getByLabel('世界历史地区', { exact: true })).toHaveValue('africa')
     await closePillarSettings(page)
     await page.goBack()
