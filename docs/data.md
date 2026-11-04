@@ -35,7 +35,7 @@ Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保�
 
 ### 年谱与早期史的具体约束
 
-苏轼年谱参考[平顶山学院年谱](https://fns.pdsu.edu.cn/info/1062/1655.htm)，康熙参考[故宫生平与年表](https://www.dpm.org.cn/court/lineage/226256.html)，诸葛亮参考[《三国志》卷 35](https://zh.wikisource.org/wiki/三國志/卷35)。详细出处仍以每条记录为准。
+苏轼年谱参考[平顶山学院年谱](https://fns.pdsu.edu.cn/info/1062/1655.htm)，康熙参考[故宫生平与年表](https://www.dpm.org.cn/court/lineage/226256.html)，诸葛亮参考[《三国志》卷 35](https://zh.wikisource.org/wiki/三國志/卷35)。徐霞客按《徐霞客游记》各篇亲历记载整理，节点保留原历日期；跨篇延续的年份同时引用前篇纪年，不按现代月日直接换算。详细出处仍以每条记录为准。
 
 只有独立核对的实际到访才能进入年谱。任命、相关战场、使臣谈判、文学地名或疆域不能自动转为本人行程。同年多条记录与重复地点保留顺序，动画仅表达记录先后，不推断道路、速度或中间活动。
 
@@ -97,15 +97,29 @@ npm run data:audit:ci
 
 导入器先通过中文维基百科接口解析名称及重定向，再获取 Wikidata 实体；它拒绝消歧义页、非人物和时代不符的同名记录。接口仅用于生成资料快照，浏览器不请求人物 API。默认重用 URL 与哈希一致的缓存，`--refresh` 才显式更新来源版本，不能为了清理仓库重新生成不同版本的快照。
 
-`data/people.sources.json` 保留请求与哈希，`src/data/generated/people.json` 保留实体和 revision；这些可复现输出需要提交，与被忽略的原始响应缓存不同。人物“延伸阅读”来自同版本 Wikidata 的站点链接，生成在 `src/data/generated/person-reading-links.json`，不能按姓名猜测词条地址。编辑人物介绍位于 `person-reading.ts`、`depth-people.ts`、`person-expansion*.ts` 等集合。
+`data/people.sources.json` 保留请求与哈希，`src/data/generated/people.json` 保留实体和 revision；这些可复现输出需要提交，与被忽略的原始响应缓存不同。人物“延伸阅读”来自同版本 Wikidata 的站点链接，生成在 `src/data/generated/person-reading-links.json`，不能按姓名猜测词条地址。编辑人物介绍位于 `person-reading.ts`、`depth-people.ts`、`person-expansion*.ts` 等集合；原先仅有身份描述的人物短传由 `catalog-reading-*.ts` 独立维护，经 `catalog-reading.ts` 汇入，保留导入快照和来源版本。地点介绍及出处位于 `place-reading.ts`。
 
 世界史事件位于 `src/data/world-events.ts` 和 `world-expansion-*.ts`，东西方哲学节点及编辑人物档案位于 `philosophy-west.ts`、`philosophy-east.ts`，跨类别阅读节点位于 `category-expansion.ts`、`category-depth.ts`，对应人物及有据的创作、研究关联位于 `category-people.ts`，现代哲学与世界史位于 `philosophy-modern.ts`、`world-modern.ts`，均由 `content.ts` 汇总。每条记录独立提供出处、日期范围、代表地点与影响。参考网站的原文与插图不随网站分发；地区是阅读归属，不能仅按现代坐标自动推断。中国之外的既有早期事件分类也应与 `src/lib/time-pillar.ts` 中的映射一致。
 
+针对领域缺口补充的事件与人物位于 `completeness-events.ts`；新增内容仍按各自事实和来源确定篇幅，不以地区或分类数量相等为目标。`content-connections.ts` 汇总依据既有正文及出处补入的人物关系、附有阅读理由的事件对读，以及稳定的地点关联。中国与世界人物关系分别维护在 `content-connections-china.ts`、`content-connections-world.ts`，对读及问题导向的专题路径维护在 `connected-reading-paths.ts`。关系说明区分作者、后方决策、参战等角色，不从名字匹配自动增加人物关联；新增关系与各专题复用原事件 ID。
+
+较大批次的新增事件与人物按中国早期、中国近现代与欧洲、其他世界地区拆为 `expansion-china-early*.ts`、`expansion-europe-modern*.ts` 和 `expansion-world-regions*.ts`，经 `expansion-content.ts` 汇入。`expansion-kit.ts` 只转换编辑者显式提供的字段，不生成史实、正文、人物关系或旅行路线。事件仍须逐条提供有实际内容的独立介绍与可定位出处；范围记录保留纪年与地点说明。新增人物先对照既有姓名、别名与生卒，不因换一种拼写重复创建同一人。
+
+扩充的地点介绍、标签和别名集中在 `place-expansion.ts`；新增专题位于 `topic-expansion.ts`，复用稳定事件 ID。`journey-expansion.ts` 保存新整理的独立活动记录，资料仅覆盖一段生平时应在导读说明范围，不能称为完整年谱。
+
+事件可用 `placeIds` 明确关联一个或多个 `src/lib/exploration.ts` 中的地点档案。已填写时优先使用该字段，空数组表示明确不归入城市档案；尚未整理的旧记录继续按地名匹配。地点关联表达阅读关系，不证明所有人物到访，也不要求代表坐标落在每个相关城市。帝国名称、区域性传播和书中地名不能自动归入同名城市。地图城市标签的显示区间与建城、改名及政权首都纪年分别理解，地点正文及来源维护在 `place-reading.ts`。
+
 ## 阅读目录与正文
 
-`scripts/prepare-reading.mjs` 从 `src/data/content.ts` 导出轻量目录 `src/data/generated/reading-catalog.json` 和 `public/data/reading/` 下的完整事件／人物正文。这两类运行生成物由 Git 忽略，在数据准备时自动生成。
+事件正文的语言、篇幅和叙述选择见[事件写作约定](event-writing.md)；人物、政权与导读遵守[介绍编辑约定](introduction-writing.md)。
 
-目录保留摘要、日期和检索字段，正文保留完整原始记录与来源。文件名使用稳定的 ASCII 标识和内容哈希；不要为了文件名修改原始记录 ID 或分享链接。`src/lib/reading-catalog.test.ts` 检查完整记录一致性、哈希与路径，浏览器请求由 `src/hooks/use-reading-record.ts` 管理。
+`scripts/prepare-reading.mjs` 从 `src/data/content.ts` 导出轻量目录 `src/data/generated/reading-catalog.json`、事件来源索引 `src/data/generated/reading-sources.json` 和 `public/data/reading/` 下的完整事件／人物正文。这些运行生成物由 Git 忽略，在数据准备时自动生成。来源索引供时期与地点等聚合页面按需加载，不进入首屏目录。
+
+目录按列紧凑存储摘要、日期、检索和证据说明字段，省去重复字段名、空来源及与摘要相同的人物占位正文；`src/data/catalog.ts` 同步还原兼容的运行记录，保留缺失字段与明确未知生卒年的区别。正文保留完整原始记录与来源。文件名使用稳定的 ASCII 标识和内容哈希；目录仅保存哈希及必要的 ASCII 标识，运行时重建原有正文路径，不修改原始记录 ID 或分享链接。`src/lib/reading-catalog.test.ts` 检查完整记录、来源索引、哈希、路径和目录体积，浏览器请求由 `src/hooks/use-reading-record.ts` 管理。
+
+所有当前正文及索引写入成功后，生成器将已不被目录引用、且文件名与内容哈希验证一致的旧正文移至 `.cache/reading-archives/`，保留原始字节，避免重复构建继续分发旧版本。只处理已验证的生成文件，不移动其他文件或研究缓存，不跟随符号链接，也不覆盖冲突归档。线上发布仍应按托管环境需要保留旧资源一段时间，以兼容已经打开的旧页面；本地归档不属于新构建的发布内容。
+
+事件独立的 `narrative` 正文由 `src/data/event-narratives.ts` 汇总，具体文章可拆分到 `event-narratives-china.ts`、`event-narratives-world.ts` 等模块。`content.ts` 合并中国、世界及现代事件集合后，再由 `event-reading.ts` 的 `enrichEventNarrative` 汇入正文与来源。每篇按事件需要选择段落数量、篇幅和可选的小标题，也可连续叙述；不按类别规定固定结构或字数。采用独立正文时，详情页不再追加旧的经过、背景和影响三个分节；摘要及日期、地点说明仍保留。原有 `background`、`impact` 字段用于记录兼容，审校中的阅读字数按实际展示的独立正文统计。`narrative` 与 `details` 一样只进入按需加载的完整正文，不进入轻量目录，史料出处仍汇入事件的 `sources`。
 
 内容修改应落在权威数据模块，不能手改运行目录、正文 JSON 或快照的哈希。加载和失败恢复设计见[架构说明](architecture.md#加载与构建)。
 
@@ -117,7 +131,11 @@ npm run data:audit:ci
 
 内容汇总时，`canonicalSources` 先规范原典卷次链接，再合并相同 URL 的引用，保留不同的出处说明。不同卷次、页面锚点或查询参数不自动合并；该处理不修改来源快照及抓取记录。
 
+覆盖清单同时统计地点档案及标签、包含世界事件的专题数、专题引用的去重事件数，以及具备人工阅读关系和明确地点关联的事件数。专题章数与去重事件数不同；这些连接计数仅表示已有内容的组织程度。完整审校会检查地点介绍、来源和 `placeIds` 的有效性，并在审校清单保留各地点实际关联的事件 ID。
+
 `npm run data:references` 会请求参考网站并更新索引，可能耗时或遭拒绝访问，不是普通构建检查。原始参考资料通过 `scripts/collect-references.py` 留存。新抓取字节可能不同，不能替代旧快照后继续声称原哈希已验证。
+
+大批内容扩充时，可先生成仅包含新增 URL 的本地引用清单，再用 `python3 scripts/collect-references.py <清单路径> --attempts 1 --timeout 12` 集中请求，避免重复重试既有失败。默认仍为最多三次尝试、35秒网络超时，成功缓存继续按原版本与哈希复用；减少重试不改变证据标准，失败仍保留为失败，不能记成来源已核验。
 
 | 文件或目录                                                                    | 用途与提交范围                                         |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------ |

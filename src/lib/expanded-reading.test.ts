@@ -87,6 +87,13 @@ describe('detailed historical and twentieth-century reading', () => {
     }
     expect(eventById.get('depth-oxford-teaching')?.dateNote).toContain('不据此宣称')
     expect(eventById.get('depth-hamlet')?.dateNote).toContain('1603年初版')
-    expect(eventById.get('depth-mendel-paper')?.details?.join('')).toContain('1865年报告')
+    const mendel = eventById.get('depth-mendel-paper')!
+    const mendelText = (
+      mendel.narrative?.sections.flatMap((section) => section.paragraphs) ??
+      mendel.details ??
+      []
+    ).join('')
+    expect(mendelText).toMatch(/1865年.{0,3}报告/)
+    expect(mendelText).toMatch(/1866年.*论文刊行/)
   })
 })

@@ -1,3 +1,7 @@
+import { enrichCatalogReading } from './catalog-reading'
+import { connectEventReading } from './content-connections'
+import { completenessEvents, completenessPeople } from './completeness-events'
+import { newExpandedEvents, newExpandedPeople } from './expansion-content'
 import { modernPhilosophyEvents, modernPhilosophyPeople } from './philosophy-modern'
 import { modernWorldEvents } from './world-modern'
 import { categoryDepthEvents } from './category-depth'
@@ -21,7 +25,7 @@ import { canonicalSources } from './sources'
 import { createReviewedEvents, reviewEventRelations } from './reviewed-events'
 import { enrichReviewedPeople } from './reviewed-people'
 import { createDepthEvents } from './depth-events'
-import { enrichEventReading } from './event-reading'
+import { enrichEventReading, enrichEventNarrative } from './event-reading'
 import { enrichPersonReading } from './person-reading'
 import { enrichDepthPeople } from './depth-people'
 import { expandPersonContent, linkExpandedPersonEvents } from './person-expansion'
@@ -159,7 +163,7 @@ const coreEvents: HistoryEvent[] = [
     '白起率秦军攻占楚国都城所在区域。楚国政治中心随后向东移动。',
     '秦楚之间的形势发生重大变化。',
     ['baiqi'],
-    [qin],
+    [book('史記', '073'), book('史記', '040')],
     3,
     { locationNote: '采用今湖北荆州一带的地理参照。' },
   ),
@@ -2097,22 +2101,29 @@ for (const record of importedPeople) {
     })
   } else mergedPeople.set(imported.id, imported)
 }
-export const people: Person[] = expandPersonContent(
-  enrichPersonReading(
-    enrichDepthPeople(
-      enrichReviewedPeople(
-        enrichAdditionalPeople(
-          [...mergedPeople.values()].map((person) => ({
-            ...person,
-            ...personEnrichment[person.id],
-          })),
+export const people: Person[] = enrichCatalogReading(
+  expandPersonContent(
+    enrichPersonReading(
+      enrichDepthPeople(
+        enrichReviewedPeople(
+          enrichAdditionalPeople(
+            [...mergedPeople.values()].map((person) => ({
+              ...person,
+              ...personEnrichment[person.id],
+            })),
+          ),
         ),
       ),
     ),
+  ).concat(
+    westernPhilosophyPeople,
+    easternPhilosophyPeople,
+    modernPhilosophyPeople,
+    categoryPeople,
+    completenessPeople,
+    newExpandedPeople,
   ),
-)
-  .concat(westernPhilosophyPeople, easternPhilosophyPeople, modernPhilosophyPeople, categoryPeople)
-  .map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
+).map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
 
 export const events: HistoryEvent[] = linkExpandedPersonEvents(
   enrichEventReading(
@@ -2140,7 +2151,10 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
     modernPhilosophyEvents,
     modernWorldEvents,
     categoryDepthEvents,
+    completenessEvents,
+    newExpandedEvents,
   )
+  .map(enrichEventNarrative)
   .map((event) => {
     const linkedPeople = categoryEventPeople[event.id] ?? []
     if (!linkedPeople.length) return { ...event, sources: canonicalSources(event.sources) }
@@ -2154,6 +2168,7 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
       sources: canonicalSources(event.sources),
     }
   })
+  .map(connectEventReading)
   .sort((a, b) => a.year - b.year)
 
 export const eventById = new Map(events.map((event) => [event.id, event]))

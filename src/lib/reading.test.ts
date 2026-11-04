@@ -3,8 +3,22 @@ import { events, people, eventById } from '../data/content'
 import { dynasties } from '../data/dynasties'
 import { tours, periods } from '../data/periods'
 import { matchesEvent } from './history'
+import { eventNarratives } from '../data/event-narratives'
 
 describe('historical reading and learning paths', () => {
+  it('keeps individual articles and their sources after combining regional and modern collections', () => {
+    for (const [id, article] of Object.entries(eventNarratives)) {
+      const event = eventById.get(id)
+      expect(event, id).toBeDefined()
+      expect(event!.narrative, id).toEqual(article.narrative)
+      expect(event!.details, id).toBeUndefined()
+      for (const source of article.sources)
+        expect(
+          event!.sources.some((entry) => entry.url === source.url),
+          id,
+        ).toBe(true)
+    }
+  })
   it('finds major events by their common names and ignores search spacing', () => {
     expect(matchesEvent(eventById.get('sino-japanese')!, '甲午中日战争')).toBe(true)
     expect(matchesEvent(eventById.get('opium-war')!, '第一次 鸦片战争')).toBe(true)
@@ -12,31 +26,47 @@ describe('historical reading and learning paths', () => {
     expect(matchesEvent(eventById.get('opium-war')!, '1840')).toBe(true)
     expect(matchesEvent(eventById.get('sino-japanese')!, '鸦片战争')).toBe(false)
   })
-  it('offers a distinct narrative plus background and impact for every event', () => {
+  it('keeps event-specific prose separate from summaries without a uniform length requirement', () => {
     for (const event of events) {
-      expect(event.details?.length, event.id).toBeGreaterThan(0)
-      const text = [event.summary, ...(event.details ?? []), event.background, event.impact].join(
-        '',
-      )
-      expect(text.length, event.id).toBeGreaterThan(125)
-      expect((text.match(/[。；！？]/g) ?? []).length, event.id).toBeGreaterThanOrEqual(4)
-      expect(event.details?.includes(event.summary), event.id).toBe(false)
+      const paragraphs = event.narrative
+        ? event.narrative.sections.flatMap((section) => section.paragraphs)
+        : (event.details ?? [])
+      expect(paragraphs.length, event.id).toBeGreaterThan(0)
+      // docs/event-writing.md assigns length and structure to the individual subject.
+      expect(
+        paragraphs.every((text) => text.trim().length > 0),
+        event.id,
+      ).toBe(true)
+      expect(new Set(paragraphs).size, event.id).toBe(paragraphs.length)
+      expect(paragraphs.includes(event.summary), event.id).toBe(false)
     }
     for (const id of ['opium-war', 'second-opium', 'sino-japanese', 'self-strengthening']) {
-      expect(eventById.get(id)!.details!.length, id).toBeGreaterThanOrEqual(2)
+      const event = eventById.get(id)!
+      const paragraphs = event.narrative
+        ? event.narrative.sections.flatMap((section) => section.paragraphs)
+        : (event.details ?? [])
+      expect(paragraphs.length, id).toBeGreaterThanOrEqual(2)
       expect(
         eventById.get(id)!.sources.some((source) => source.url.includes('wikisource.org')),
         id,
       ).toBe(true)
     }
   })
-  it('gives every dynasty political and social reading with useful depth', () => {
+  it('keeps dynasty introductions readable with optional section headings', () => {
     for (const dynasty of dynasties) {
-      expect(dynasty.sections?.length, dynasty.id).toBeGreaterThanOrEqual(2)
+      const paragraphs = [
+        dynasty.context,
+        ...(dynasty.sections ?? []).map((section) => section.text),
+      ]
+      expect(paragraphs.length, dynasty.id).toBeGreaterThanOrEqual(2)
       expect(
-        dynasty.sections!.every((section) => section.title && section.text.length > 45),
+        paragraphs.every((text) => text.trim().length > 0),
         dynasty.id,
       ).toBe(true)
+      const titles = (dynasty.sections ?? []).flatMap((section) =>
+        section.title ? [section.title] : [],
+      )
+      expect(new Set(titles).size, dynasty.id).toBe(titles.length)
     }
   })
   it('covers each navigation period and includes separate Qing wars and reform stages', () => {
@@ -62,8 +92,11 @@ describe('historical reading and learning paths', () => {
   it('provides source-backed introductions and map questions across chronological topic chapters', () => {
     expect(tours.length).toBeGreaterThanOrEqual(10)
     for (const topic of tours) {
-      expect(topic.introduction!.length, topic.id).toBeGreaterThanOrEqual(3)
-      expect(topic.introduction!.join('').length, topic.id).toBeGreaterThan(140)
+      expect(topic.introduction!.length, topic.id).toBeGreaterThan(0)
+      expect(
+        topic.introduction!.every((text) => text.trim()),
+        topic.id,
+      ).toBe(true)
       expect(topic.sources!.length, topic.id).toBeGreaterThan(0)
       expect(
         topic.chapters!.map((chapter) => chapter.eventId),
@@ -73,7 +106,10 @@ describe('historical reading and learning paths', () => {
       expect(years, topic.id).toEqual([...years].sort((a, b) => a - b))
       expect(
         topic.chapters!.every(
-          (chapter) => chapter.explanation.length > 20 && chapter.mapReading.length > 20,
+          (chapter) =>
+            chapter.explanation.trim() &&
+            chapter.mapReading.trim() &&
+            chapter.explanation.trim() !== chapter.mapReading.trim(),
         ),
         topic.id,
       ).toBe(true)
@@ -96,8 +132,8 @@ describe('historical reading and learning paths', () => {
       '利玛窦',
     ]) {
       const person = people.find((person) => person.name === name)!
-      expect(person.biography.length, name).toBeGreaterThan(160)
-      expect(person.biography.split('\n\n').length, name).toBeGreaterThanOrEqual(2)
+      expect(person.recordKind, name).toBe('curated')
+      expect(person.biography.trim(), name).not.toBe(person.summary.trim())
       expect(
         events.some((event) => event.people.includes(person.id)),
         name,

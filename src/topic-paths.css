@@ -1,0 +1,42 @@
+.event-topic-paths {
+  margin: 28px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.event-topic-paths > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.event-topic-paths > button > span {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.event-topic-paths small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.event-topic-paths strong {
+  font-size: 14px;
+}
+.event-topic-paths button span > span {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.event-topic-paths svg {
+  flex-shrink: 0;
+}

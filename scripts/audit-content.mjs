@@ -45,6 +45,8 @@ try {
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { periods, tours } = await server.ssrLoadModule('/src/data/periods.ts')
+  const { places, placeById, eventAtPlace } = await server.ssrLoadModule('/src/lib/exploration.ts')
+  const { placeReading } = await server.ssrLoadModule('/src/data/place-reading.ts')
   const snapshot = JSON.parse(await readFile('data/people.sources.json', 'utf8'))
   const generatedAt = new Date().toISOString()
   const validYear = (year) => Number.isInteger(year) && year !== 0
@@ -58,6 +60,14 @@ try {
   assert.equal(new Set(people.map((p) => p.id)).size, people.length)
   assert.equal(new Set(events.map((e) => e.id)).size, events.length)
   assert.equal(new Set(dynasties.map((d) => d.id)).size, dynasties.length)
+  assert.equal(placeById.size, places.length, 'Duplicate reading place ID')
+  for (const place of places) {
+    const reading = placeReading[place.id]
+    assert(reading?.text?.trim(), `Missing place introduction: ${place.id}`)
+    validateSources({ id: place.id, ...reading })
+  }
+  for (const id of Object.keys(placeReading))
+    assert(placeById.has(id), `Orphan place introduction: ${id}`)
   const posthumousRelations = []
   for (const person of people) {
     assert(person.name && person.role && person.summary && person.biography, person.id)
@@ -68,6 +78,11 @@ try {
       assert(person.birth <= person.death, `Reversed lifespan: ${person.id}`)
   }
   for (const event of events) {
+    if (event.placeIds !== undefined) {
+      assert.equal(new Set(event.placeIds).size, event.placeIds.length, event.id)
+      for (const id of event.placeIds)
+        assert(placeById.has(id), `Unknown event place: ${event.id} → ${id}`)
+    }
     if (event.region)
       assert(Object.hasOwn(historyRegions, event.region), `Invalid region: ${event.id}`)
     for (const relation of event.relatedEvents ?? []) {
@@ -79,6 +94,18 @@ try {
     }
     assert(event.summary && event.background && event.impact && event.sources.length, event.id)
     validateSources(event)
+    if (event.narrative) {
+      assert(event.narrative.sections.length, `Empty narrative: ${event.id}`)
+      for (const section of event.narrative.sections) {
+        assert(section.title === undefined || section.title.trim(), event.id)
+        assert(section.paragraphs.length, `Empty narrative section: ${event.id}`)
+        assert(
+          section.paragraphs.every((text) => text.trim()),
+          event.id,
+        )
+      }
+      assert(event.narrative.note === undefined || event.narrative.note.trim(), event.id)
+    }
     assert(
       validYear(event.year) && event.year >= MIN_YEAR && event.year <= PILLAR_MAX_YEAR,
       event.id,
@@ -124,7 +151,10 @@ try {
       dynasty.id,
     )
     validateSources(dynasty)
-    assert(dynasty.sections?.length >= 2, `Missing dynasty reading: ${dynasty.id}`)
+    assert(
+      dynasty.sections?.length && dynasty.sections.every((section) => section.text.trim()),
+      `Missing dynasty reading: ${dynasty.id}`,
+    )
   }
   assert.equal(new Set(worldPolities.map((polity) => polity.id)).size, worldPolities.length)
   for (const polity of worldPolities) {
@@ -138,7 +168,10 @@ try {
   for (const tour of tours) {
     validateSources(tour)
     assert(
-      tour.introduction?.length >= 3 && tour.conclusion && tour.question,
+      tour.introduction?.length &&
+        tour.introduction.every((text) => text.trim()) &&
+        tour.conclusion &&
+        tour.question,
       `Incomplete topic introduction: ${tour.id}`,
     )
     assert.equal(tour.chapters.length, tour.steps.length, tour.id)
@@ -316,6 +349,7 @@ try {
             retainedSourceHashes: missingSnapshots === 0,
             missingSnapshotFiles: missingSnapshots,
             topicChaptersAndChronology: true,
+            placeIntroductionsAndAssociations: true,
           },
           scope:
             'Structural and chronological validation of every record; editorial gaps are retained, not filled with guessed associations. This is not expert certification of all historical claims.',
@@ -331,12 +365,19 @@ try {
             sourceCount: event.sources.length,
             dateNote: event.dateNote,
             locationNote: event.locationNote,
+            placeIds: event.placeIds,
             peopleNotes: event.peopleNotes,
             readingCharacters: [
               event.summary,
-              event.background,
-              event.impact,
-              ...(event.details ?? []),
+              ...(event.narrative
+                ? [
+                    ...event.narrative.sections.flatMap((section) => [
+                      section.title ?? '',
+                      ...section.paragraphs,
+                    ]),
+                    event.narrative.note ?? '',
+                  ]
+                : [event.background, event.impact, ...(event.details ?? [])]),
             ].join('').length,
           })),
           dynasties: dynasties.map((dynasty) => ({
@@ -368,6 +409,16 @@ try {
             chapters: topic.steps.length,
             introductionCharacters: topic.introduction.join('').length,
             sourceCount: topic.sources.length,
+            worldEventIds: topic.steps.filter(
+              (id) => eventRegion(events.find((event) => event.id === id)) !== 'china',
+            ),
+          })),
+          places: places.map((place) => ({
+            id: place.id,
+            name: place.name,
+            labels: place.labels.map((label) => label.id),
+            eventIds: events.filter((event) => eventAtPlace(event, place)).map((event) => event.id),
+            sourceCount: placeReading[place.id].sources.length,
           })),
           sources: sourceRecords,
           editorialGaps: personRecords.filter((person) =>
@@ -439,12 +490,29 @@ try {
           events.filter((e) => e.category === category).length,
         ]),
       ),
+      withCuratedRelatedReading: events.filter((event) => event.relatedEvents?.length).length,
+      withExplicitPlaces: events.filter((event) => event.placeIds?.length).length,
     },
     dynasties: { total: dynasties.length },
     worldPolities: { total: worldPolities.length },
     topics: {
       total: tours.length,
       chapters: tours.reduce((count, topic) => count + topic.steps.length, 0),
+      withWorldEvents: tours.filter((topic) =>
+        topic.steps.some((id) => eventRegion(events.find((event) => event.id === id)) !== 'china'),
+      ).length,
+      uniqueEvents: new Set(tours.flatMap((topic) => topic.steps)).size,
+      uniqueWorldEvents: new Set(
+        tours
+          .flatMap((topic) => topic.steps)
+          .filter((id) => eventRegion(events.find((event) => event.id === id)) !== 'china'),
+      ).size,
+    },
+    places: {
+      total: places.length,
+      labels: places.reduce((count, place) => count + place.labels.length, 0),
+      withLinkedEvents: places.filter((place) => events.some((event) => eventAtPlace(event, place)))
+        .length,
     },
     journeys: {
       people: journeys.length,
@@ -505,7 +573,7 @@ try {
     })),
     notes: [
       '数量表示当前覆盖范围，不能据此声明中国或世界历史资料完整。',
-      '基础人物档案有身份简介和出处；详细年谱只对已核对记录的三人提供。',
+      '人物介绍保留基础身份与出处，编辑短传不等于完整传记；详细年谱只对独立核对记录的人物提供。',
       '箭头表示记录的先后顺序，省略中间行程。相关事件地点不构成个人到访证明。',
       '时间轴延伸至约前10000年，史前遗址以考古区间表示，不据此虚构疆域。',
       '时空柱与事件阅读延伸至2000年；历史疆域止于1912年，现代事件不能用早期疆域表示当年。',

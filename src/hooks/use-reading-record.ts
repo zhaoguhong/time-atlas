@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { HistoryEvent, Person } from '../types'
+import { fetchJson } from '../lib/fetch-json'
 
 type Record = HistoryEvent | Person
 const cache = new Map<string, Record>()
@@ -11,9 +12,7 @@ async function load(path: string, id: string) {
   const existing = pending.get(path)
   if (existing) return existing
   const request = (async () => {
-    const response = await fetch(`${import.meta.env.BASE_URL}${path}`)
-    if (!response.ok) throw new Error('Reading unavailable')
-    const record = (await response.json()) as Record
+    const record = await fetchJson<Record>(`${import.meta.env.BASE_URL}${path}`)
     if (record.id !== id || !Array.isArray(record.sources)) throw new Error('Invalid reading')
     cache.set(path, record)
     // Full articles are optional; bound memory while exploring a large collection.

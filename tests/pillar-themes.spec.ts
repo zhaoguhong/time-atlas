@@ -186,18 +186,26 @@ for (const [width, height] of [
   [390, 844],
   [568, 320],
 ]) {
-  test(`seven themes preserve dense reading and state at ${width}x${height}`, async ({
-    page,
-  }, info) => {
-    await page.setViewportSize({ width, height })
-    await ready(page, true)
-    await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
-    const state = await readingState(page)
-    expect(state.selected).toBe('world-printing')
-    const cardIds = await page
-      .locator('.pillar-card')
-      .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-event-id')))
-    for (const [id, name] of themes) {
+  // Each theme gets its own timeout and trace; seven complete screenshot matrices
+  // in one test exhausted the shared 60-second budget on the CI renderer.
+  for (const [index, [id, name]] of themes.entries()) {
+    test(`${id} theme preserves dense reading and state at ${width}x${height}`, async ({
+      page,
+    }, info) => {
+      await page.setViewportSize({ width, height })
+      await ready(page, true)
+      await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
+      const state = await readingState(page)
+      expect(state.selected).toBe('world-printing')
+      const cardIds = await page
+        .locator('.pillar-card')
+        .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-event-id')))
+      // Preserve the original adjacent-theme transitions as well as a fresh
+      // default state. The first case also checks the cycle back from the last.
+      await openSettings(page)
+      await choose(page, themes[(index + themes.length - 1) % themes.length][1])
+      await closeSettings(page)
+      expect(await readingState(page)).toEqual(state)
       await openSettings(page)
       await choose(page, name)
       await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', id)
@@ -218,6 +226,16 @@ for (const [width, height] of [
       )
       if (['minimal', 'editorial', 'observatory'].includes(id)) await nightTextContrast(page)
       if (id === 'column') {
+        // Revealing the cylinder restarts its finite scaleY entrance animation.
+        // Measure the settled geometry, not a frame partway through that reveal.
+        await page.locator('.pillar-scenery').evaluate(async (element) => {
+          await Promise.all(
+            element
+              .getAnimations()
+              .filter((animation) => animation.effect?.getComputedTiming().iterations !== Infinity)
+              .map((animation) => animation.finished.catch(() => {})),
+          )
+        })
         const scene = (await page.locator('.pillar-scenery').boundingBox())!
         const chronology = (await page.locator('.pillar-events').boundingBox())!
         expect(scene.y + scene.height).toBeCloseTo(chronology.y + chronology.height, 0)
@@ -247,8 +265,8 @@ for (const [width, height] of [
       await page.screenshot({ path: info.outputPath(`${id}-dark-${width}x${height}.png`) })
       await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
       await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'light')
-    }
-  })
+    })
+  }
 }
 
 test('appearance survives map navigation and reload, and radios support keyboard selection', async ({
@@ -291,12 +309,10 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await expect(page.getByRole('button', { name: '时空柱筛选与设置', exact: true })).toBeFocused()
 })
 
-test('single-side browsing keeps every selected theme in both color modes', async ({
-  page,
-}, info) => {
-  await page.setViewportSize({ width: 390, height: 844 })
-  await ready(page)
-  for (const [id, name] of themes) {
+for (const [id, name] of themes) {
+  test(`single-side browsing keeps ${id} theme in both color modes`, async ({ page }, info) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await ready(page)
     await openSettings(page)
     await choose(page, name)
     await closeSettings(page)
@@ -329,8 +345,8 @@ test('single-side browsing keeps every selected theme in both color modes', asyn
         }
       }
     }
-  }
-})
+  })
+}
 
 test('invalid saved themes recover and can be replaced with a valid selection', async ({
   page,

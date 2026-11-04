@@ -229,9 +229,9 @@ export const categoryExpansionEvents: HistoryEvent[] = [
     people: [],
     sources: [
       {
-        title: '密歇根大学美术馆 · Ushiwakamaru and Jôrurihime',
-        url: 'https://umma.umich.edu/objects/ushiwakamaru-and-jorurihime-mitate-1948-1-170/',
-        note: '馆藏说明关联紫式部《源氏物语》及1008年；此处仅作早期流传的约略定位。',
+        title: 'Wikipedia · The Tale of Genji',
+        url: 'https://en.wikipedia.org/wiki/The_Tale_of_Genji',
+        note: '作品早期流传与文本传承的基础参考；1008年为约略节点。',
       },
     ],
     importance: 4,

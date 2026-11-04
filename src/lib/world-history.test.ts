@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { events } from '../data/content'
+import { personEventConnections } from '../data/content-connections'
 import { worldAsiaAfricaEvents } from '../data/world-expansion-asia-africa'
 import { worldAtlanticEvents } from '../data/world-expansion-atlantic'
 import { worldPolities, worldPolityForMap } from '../data/world-polities'
@@ -67,7 +68,39 @@ describe('shared world history', () => {
       8,
     )
     for (const event of added) {
-      expect(events.find((record) => record.id === event.id)).toEqual(event)
+      const record = events.find((entry) => entry.id === event.id)!
+      expect(record, event.id).toBeDefined()
+      const {
+        details: _originalDetails,
+        sources: originalSources,
+        relatedEvents: originalRelations,
+        placeIds: originalPlaces,
+        people: originalPeople,
+        peopleNotes: originalPeopleNotes,
+        ...originalMetadata
+      } = event
+      const {
+        details: _details,
+        narrative,
+        sources,
+        relatedEvents,
+        placeIds,
+        people,
+        peopleNotes,
+        ...metadata
+      } = record
+      expect(metadata).toEqual(originalMetadata)
+      const additions = personEventConnections[event.id] ?? {}
+      expect(people).toEqual([...new Set([...originalPeople, ...Object.keys(additions)])])
+      expect(peopleNotes ?? {}).toEqual({ ...originalPeopleNotes, ...additions })
+      for (const relation of originalRelations ?? []) expect(relatedEvents).toContainEqual(relation)
+      for (const id of originalPlaces ?? []) expect(placeIds).toContain(id)
+      expect(narrative?.sections.flatMap((section) => section.paragraphs).length).toBeGreaterThan(0)
+      for (const source of originalSources)
+        expect(
+          sources.some((entry) => entry.url === source.url),
+          event.id,
+        ).toBe(true)
       expect(pillarMatches(event, 'world', 'all')).toBe(true)
       expect(pillarMatches(event, 'china', 'all')).toBe(false)
       expect(eventRegion(event)).not.toBe('china')

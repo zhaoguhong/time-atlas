@@ -20,6 +20,7 @@ import { compactYear, formatYear, periodAt, toOrdinal, fromOrdinal, MAX_YEAR } f
 import { groupMapEvents, intersects, type EventGroup } from '../lib/markers'
 import { activeMapFeatures, polityOrder } from '../lib/maps'
 import { eventsAtYear } from '../lib/current-events'
+import { fetchJson } from '../lib/fetch-json'
 import { journeySegments } from '../lib/journeys'
 import {
   interpolateJourneyCoordinates,
@@ -124,9 +125,7 @@ async function loadCollection(id: string): Promise<FeatureCollection> {
   const existing = pending.get(id)
   if (existing) return existing
   const request = (async () => {
-    const response = await fetch(`${base}data/maps/${id}.geojson`)
-    if (!response.ok) throw new Error(String(response.status))
-    const data = (await response.json()) as FeatureCollection
+    const data = await fetchJson<FeatureCollection>(`${base}data/maps/${id}.geojson`, 30_000)
     if (data.type !== 'FeatureCollection') throw new Error('Invalid map')
     cache.set(id, data)
     while (cache.size > 4) cache.delete(cache.keys().next().value!)

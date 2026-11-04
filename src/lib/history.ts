@@ -1,5 +1,6 @@
 import { periods } from '../data/periods'
 import type { EventScope, HistoryEvent, Person, Preferences, Period } from '../types'
+import { eventSearchMatch } from './search'
 
 export const MIN_YEAR = -10000
 // Historical borders stop at 1912; the pillar and reading chronology continue.
@@ -35,11 +36,12 @@ export const periodAt = (year: number) =>
 export const lifeDates = (person: Person) =>
   `${person.birth === null ? '?' : compactYear(person.birth)} — ${person.death === null ? '?' : compactYear(person.death)}`
 
-export function matchesEvent(event: HistoryEvent, query: string) {
-  const text = query.toLocaleLowerCase().replace(/\s+/g, '')
-  return [event.title, event.location, String(event.year), ...(event.aliases ?? [])].some((value) =>
-    value.toLocaleLowerCase().replace(/\s+/g, '').includes(text),
-  )
+export function matchesEvent(
+  event: HistoryEvent,
+  query: string,
+  peopleById?: ReadonlyMap<string, Person>,
+) {
+  return eventSearchMatch(event, query, peopleById) !== undefined
 }
 
 export function eventsInPeriod(events: HistoryEvent[], year: number) {

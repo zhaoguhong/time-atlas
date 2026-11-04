@@ -13,6 +13,35 @@
   line-height: 1.95;
   margin: 0 0 14px;
 }
+.event-article {
+  margin-top: 24px;
+}
+.event-article-section + .event-article-section {
+  margin-top: 28px;
+}
+.event-article-section h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.event-article-section p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+.event-article-note {
+  margin: 24px 0 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
 .person-further-reading {
   margin: 22px 0;
   padding: 15px;

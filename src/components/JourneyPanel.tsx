@@ -1,9 +1,9 @@
-import { readingSourceUrl } from '../lib/source-links'
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import type { ReactNode } from 'react'
 import type { JourneyView, PersonJourney } from '../types'
 import { compactYear, formatYear } from '../lib/history'
 import ReadingText from './ReadingText'
+import { SourceCitation } from './Sources'
 
 export default function JourneyPanel({
   journey,
@@ -49,15 +49,7 @@ export default function JourneyPanel({
           {active.dateNote && <p className="journey-date-note">{active.dateNote}</p>}
           <p className="journey-date-note">{active.locationNote}</p>
           {active.sources.map((source) => (
-            <a
-              className="journey-citation"
-              key={source.url}
-              href={readingSourceUrl(source.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {source.title}
-            </a>
+            <SourceCitation className="journey-citation" key={source.url} source={source} />
           ))}
           <div className="journey-step-controls">
             <button onClick={() => onStep(-1)} disabled={index <= 0}>

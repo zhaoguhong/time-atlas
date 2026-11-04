@@ -1,4 +1,5 @@
 import { topicTours } from './topics'
+import { expandedPlaceCities } from './place-expansion'
 import type { City, Period, Tour } from '../types'
 
 export const periods: Period[] = [
@@ -10,9 +11,9 @@ export const periods: Period[] = [
     to: -4001,
     focus: -7000,
     color: '#b9a889',
-    subtitle: '定居、农业与共同生活',
+    subtitle: '聚落、农业与共同生活',
     summary:
-      '从西亚与地中海岛屿聚落，到中国多区域的粟黍、稻作、彩陶与独木舟，再比较新几内亚高地农业，观察定居和共同生活的多种发展。考古文化不是王朝，遗址坐标不代表国家边界。',
+      '不同地区的人群逐渐发展定居、耕作与公共协作。房屋、植物遗存、陶器和独木舟，保存了黄河、长江、西亚及海岛社会各自的生活经验。',
   },
   {
     id: 'early-civilizations',
@@ -22,9 +23,9 @@ export const periods: Period[] = [
     to: -2071,
     focus: -3000,
     color: '#baa482',
-    subtitle: '城市、公共工程与区域社会',
+    subtitle: '城市、工艺与公共工程',
     summary:
-      '从中国的玉器、彩陶、水利和中心聚落，到两河书写、埃及金字塔与印度河城市，再对照日本绳文、欧洲石屋和美洲卡拉尔。不同社会并不同时形成，也不必具有同样的生计、制度或清晰疆界。',
+      '两河书写、埃及金字塔、印度河城市与中国多区域的玉器、水利和都邑，展示了组织资源的不同方式。跨区域比较也让绳文聚落、欧洲石屋和安第斯城市进入同一视野。',
   },
   {
     id: 'xia',
@@ -34,9 +35,9 @@ export const periods: Period[] = [
     to: -1601,
     focus: -1800,
     color: '#bba67e',
-    subtitle: '从传世记忆到早期都邑',
+    subtitle: '王朝记忆与早期都邑',
     summary:
-      '从传统夏代纪年出发，结合二里头等考古材料认识早期国家。王朝世系、遗址与考古文化的对应仍有讨论，不能据此绘制精确疆域。',
+      '传世文献以禹、启和世系保存夏的记忆，二里头等遗址则呈现宫殿、道路与作坊。王朝叙事与考古文化如何对应，仍是认识早期国家的重要问题。',
   },
   {
     id: 'shang',
@@ -46,9 +47,9 @@ export const periods: Period[] = [
     to: -1047,
     focus: -1250,
     color: '#a38f78',
-    subtitle: '甲骨与青铜留下的王朝',
+    subtitle: '甲骨、青铜与王室生活',
     summary:
-      '早商城市和晚商殷墟揭示了王权、祭祀与手工业的发展。甲骨文让我们能将一部分同时代记录与传世文献相互对照。',
+      '都邑、青铜器和甲骨卜辞，让王权、祭祀、战争与农事逐渐清晰。晚商殷墟的文字和遗址，提供了观察王室如何组织资源的直接线索。',
   },
   {
     id: 'western-zhou',
@@ -58,9 +59,9 @@ export const periods: Period[] = [
     to: -771,
     focus: -841,
     color: '#a59e7e',
-    subtitle: '封邦建国与礼乐秩序',
+    subtitle: '封邦、宗族与礼乐',
     summary:
-      '武王克商后，周人以王室、诸侯和宗族关系组织政治秩序。青铜铭文与传世文献共同呈现王权的建立、调整和危机。',
+      '周人克商后，通过封邦、婚姻和宗族礼仪连接各地。青铜铭文保存封赏与征伐，也映照王室、诸侯和贵族之间不断调整的关系。',
   },
   {
     id: 'spring',
@@ -70,9 +71,9 @@ export const periods: Period[] = [
     to: -476,
     focus: -651,
     color: '#99a187',
-    subtitle: '王室东迁，诸侯会盟',
+    subtitle: '诸侯会盟与区域竞争',
     summary:
-      '周王室东迁后，诸侯通过战争、会盟与改革竞争。区域经济与思想活动持续发展，为战国时代的新格局准备了条件。',
+      '王室东迁后，齐、晋、楚等诸侯以战争和会盟争取主导地位。地方治理、成文法与士人教学也在发展，政治竞争逐渐深入社会组织。',
   },
   {
     id: 'warring',
@@ -82,9 +83,9 @@ export const periods: Period[] = [
     to: -222,
     focus: -350,
     color: '#a99d79',
-    subtitle: '诸侯竞逐，思想生长',
+    subtitle: '变法、兼并与百家争论',
     summary:
-      '旧秩序逐渐瓦解，各国在战争与变法中争夺优势。与此同时，不同的思想传统留下了影响后世的讨论。',
+      '列国通过土地、赋税和军队改革动员资源，战争规模持续扩大。士人跨国游说，围绕人性、秩序与治理提出多种方案，与制度竞争相互回应。',
   },
   {
     id: 'qin',
@@ -94,8 +95,9 @@ export const periods: Period[] = [
     to: -207,
     focus: -210,
     color: '#889795',
-    subtitle: '从列国到统一帝国',
-    summary: '秦统一六国，将郡县、文字与制度推广到更大的地域。新的帝国秩序很快面临反抗与继承危机。',
+    subtitle: '统一后的治理与负担',
+    summary:
+      '秦兼并六国，以皇帝、郡县和统一标准组织更广地域。道路、扩张与大型工程加强联系，也叠加征发压力；继承危机使矛盾迅速转向反抗。',
   },
   {
     id: 'han',
@@ -105,9 +107,9 @@ export const periods: Period[] = [
     to: 219,
     focus: -100,
     color: '#b5a280',
-    subtitle: '帝国与世界的相遇',
+    subtitle: '帝国治理与欧亚交流',
     summary:
-      '从楚汉战争到东汉末年，政治与社会不断重组。向西的使节、商旅和沿途城市，让中国与更广阔的欧亚世界建立联系。',
+      '汉初重建政治和生产，随后不断调整诸侯、财政与边疆关系。使节、商旅和绿洲城市推动欧亚联系，新朝与东汉的转折又带来统治秩序的重组。',
   },
   {
     id: 'three',
@@ -117,9 +119,9 @@ export const periods: Period[] = [
     to: 280,
     focus: 230,
     color: '#91a8aa',
-    subtitle: '山河分合，英雄际会',
+    subtitle: '并立政权与山川通道',
     summary:
-      '汉末的战争逐渐形成魏、蜀、吴并立的格局。沿着长江与山川，观察三个政权的建立、竞争，以及重新统一的过程。',
+      '魏、蜀、吴在北方平原、四川盆地和长江流域建立基础。联盟、补给与山川通道影响战局，内部权力变化又推动政权更替和最终统一。',
   },
   {
     id: 'jin',
@@ -129,9 +131,9 @@ export const periods: Period[] = [
     to: 420,
     focus: 383,
     color: '#a2ac8f',
-    subtitle: '迁徙中的山河与人群',
+    subtitle: '战争、南迁与地方重组',
     summary:
-      '短暂统一之后，北方陷入长期竞争，晋室南渡。政权更替与人口迁徙，共同改变了南北的社会与文化。',
+      '西晋统一后陷入内战，北方多个政权兴起，晋室在江南延续。人口迁徙推动土地、家族与文化关系变化，南北社会在竞争中重新组织。',
   },
   {
     id: 'north-south',
@@ -141,9 +143,9 @@ export const periods: Period[] = [
     to: 580,
     focus: 500,
     color: '#ada0af',
-    subtitle: '南北并立，交流与融合',
+    subtitle: '南北政权与文化流动',
     summary:
-      '南北政权在竞争中发展不同制度。迁都、改革、佛教传播和文化交流，也在为下一次统一创造条件。',
+      '北方的迁都与制度改革、南方的政权更替共同改变资源配置。佛教、技术与文人活动跨越政治边界，南北各地在竞争和交流中形成新的社会面貌。',
   },
   {
     id: 'sui',
@@ -153,9 +155,9 @@ export const periods: Period[] = [
     to: 617,
     focus: 605,
     color: '#b3a78b',
-    subtitle: '重归一统，水路相连',
+    subtitle: '统一、运河与社会动员',
     summary:
-      '隋结束南北分立，通过运河与制度整合连接各地。大型工程、战争与社会负担也使统治迅速陷入危机。',
+      '隋重建南北统一，以官僚、律法和交通工程连接各地。运河加强运输，大规模建设与远征又使征发不断增长，最终与政治危机交织。',
   },
   {
     id: 'tang',
@@ -165,9 +167,9 @@ export const periods: Period[] = [
     to: 906,
     focus: 750,
     color: '#c1a38a',
-    subtitle: '长安连接着广阔世界',
+    subtitle: '城市、边地与帝国转折',
     summary:
-      '长安成为人口、宗教与文化相遇的城市。盛世、边疆战争与安史之乱之后的地方格局，构成唐代的多重面貌。',
+      '长安、洛阳与交通网络汇聚官员、商旅、僧侣和艺术。边地扩张与宫廷政治相互影响，安史之乱后，财政和地方军政关系转向新的安排。',
   },
   {
     id: 'five',
@@ -177,8 +179,9 @@ export const periods: Period[] = [
     to: 959,
     focus: 950,
     color: '#b5a2b0',
-    subtitle: '分立之中，南方生长',
-    summary: '北方朝代接连更替，南方多个政权长期并存。战争与地方建设并行，区域经济和文化继续发展。',
+    subtitle: '政权更替与区域经营',
+    summary:
+      '北方军事集团接连建立王朝，南方政权以各自资源经营地方。水利、贸易、刻书与文艺在分立中延续，形成此后宋代社会发展的多重基础。',
   },
   {
     id: 'song',
@@ -188,9 +191,9 @@ export const periods: Period[] = [
     to: 1278,
     focus: 1140,
     color: '#9eaf92',
-    subtitle: '多国并立的另一种繁盛',
+    subtitle: '盟约、市场与知识传播',
     summary:
-      '宋与辽、西夏、金等政权并存，战争、盟约与贸易交织。城市、技术、书籍与远距离交流呈现出新的活力。',
+      '宋、辽、西夏、金以战争、盟约和贸易维持复杂关系。城市市场、印刷、技术与学术不断发展，人口和政治中心的南移又改变区域重心。',
   },
   {
     id: 'yuan',
@@ -200,9 +203,9 @@ export const periods: Period[] = [
     to: 1367,
     focus: 1294,
     color: '#aaa2b8',
-    subtitle: '横贯欧亚的联系',
+    subtitle: '大都、交通与跨区域流动',
     summary:
-      '蒙古扩张与元朝的建立重塑政治地理。驿站、商旅与跨区域流动，让不同地区以新的方式发生联系。',
+      '蒙古扩张和元朝统一重组政治空间，大都成为重要中心。驿站、水运和商旅连接不同地区，治理方式与资源分配也呈现多层关系。',
   },
   {
     id: 'ming',
@@ -212,9 +215,9 @@ export const periods: Period[] = [
     to: 1643,
     focus: 1421,
     color: '#a2b093',
-    subtitle: '海洋、城市与新的秩序',
+    subtitle: '都城、海洋与白银贸易',
     summary:
-      '明朝建立新的统治秩序，迁都北京，并组织远洋航行。中后期的商业发展与全球白银贸易，也改变了日常生活。',
+      '明初重整皇权与地方治理，迁都和海上航行扩大资源动员。中后期城市、出版与白银流通不断发展，财政、海防和边疆压力也随之变化。',
   },
   {
     id: 'qing',
@@ -224,9 +227,9 @@ export const periods: Period[] = [
     to: 1912,
     focus: 1750,
     color: '#9baeb3',
-    subtitle: '广阔帝国与近代转折',
+    subtitle: '区域治理与近代变局',
     summary:
-      '清代的区域治理、人口增长与边疆扩展，随后遇到全球贸易、战争与制度变革。帝国的终结开启了新的历史阶段。',
+      '清廷以多种方式组织边疆和地方，人口增长与商业流通扩大社会联系。19世纪战争、内乱和改革交织，国家与社会在全球变化中重新定位。',
   },
 ]
 
@@ -478,6 +481,81 @@ export const cities: City[] = [
     to: 1912,
     capitals: [],
   },
+  // Editorial label windows begin with a documented phase used by the reading
+  // catalogue. They are not foundation dates or reconstructions of city limits.
+  {
+    id: 'rome',
+    name: '罗马',
+    modern: '今意大利罗马',
+    coordinates: [12.49, 41.89],
+    from: -509,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'athens',
+    name: '雅典',
+    modern: '今希腊雅典',
+    coordinates: [23.73, 37.98],
+    from: -508,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'baghdad',
+    name: '巴格达',
+    modern: '今伊拉克巴格达',
+    coordinates: [44.37, 33.32],
+    from: 762,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'cairo',
+    name: '开罗',
+    modern: '今埃及开罗',
+    coordinates: [31.24, 30.04],
+    from: 969,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'delhi',
+    name: '德里',
+    modern: '今印度德里地区',
+    coordinates: [77.23, 28.65],
+    from: 1206,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'london',
+    name: '伦敦',
+    modern: '今英国伦敦',
+    coordinates: [-0.13, 51.51],
+    from: 1100,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'paris',
+    name: '巴黎',
+    modern: '今法国巴黎',
+    coordinates: [2.35, 48.86],
+    from: 1100,
+    to: 1912,
+    capitals: [],
+  },
+  {
+    id: 'constantinople',
+    name: '君士坦丁堡',
+    modern: '今土耳其伊斯坦布尔历史城区一带',
+    coordinates: [28.98, 41.01],
+    from: 330,
+    to: 1912,
+    capitals: [],
+  },
+  ...expandedPlaceCities,
 ]
 
 export const tours: Tour[] = topicTours

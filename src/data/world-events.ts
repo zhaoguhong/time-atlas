@@ -543,8 +543,9 @@ export const worldEvents: HistoryEvent[] = [
     category: '文化',
     region: 'europe',
     themes: ['罗马', '宗教'],
-    location: '罗马',
-    coordinates: [12.49, 41.89],
+    location: '米兰',
+    coordinates: [9.19, 45.46],
+    placeIds: [],
     summary: '君士坦丁与李锡尼达成宗教宽容安排，基督徒获得更稳定的合法地位。',
     background: '罗马帝国曾在不同时期迫害基督徒，而帝国内战与皇权竞争也改变了宗教政策。',
     details: [
@@ -607,8 +608,8 @@ export const worldEvents: HistoryEvent[] = [
     people: [],
     sources: [
       {
-        title: 'OpenStax · World History 1 · 10-1-the-eastward-shift',
-        url: 'https://openstax.org/books/world-history-volume-1/pages/10-1-the-eastward-shift',
+        title: 'Wikipedia · Deposition of Romulus Augustus',
+        url: 'https://en.wikipedia.org/wiki/Deposition_of_Romulus_Augustulus',
         note: '史实与年代参考；中文叙述由本站独立编写。',
       },
     ],
@@ -1107,8 +1108,9 @@ export const worldEvents: HistoryEvent[] = [
     category: '政治',
     region: 'west-asia',
     themes: ['伊斯兰', '知识传播'],
-    location: '巴格达',
-    coordinates: [44.36, 33.32],
+    location: '伊拉克与呼罗珊等地',
+    coordinates: [44.4, 32.03],
+    placeIds: [],
     summary: '阿拔斯势力推翻倭马亚在帝国核心地区的统治，政治重心进一步向东方转移。',
     background: '不同群体对税收、身份与王权的不满汇合为反对运动，伊朗等地区的力量发挥重要作用。',
     details: [
@@ -1125,7 +1127,8 @@ export const worldEvents: HistoryEvent[] = [
       },
     ],
     importance: 5,
-    locationNote: '坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。',
+    locationNote:
+      '坐标取伊拉克库法一带作革命后政治中心的区域参照；750年巴格达尚未营建，呼罗珊及其他战场不集中于此。',
     relatedEvents: [
       {
         id: 'world-baghdad',
@@ -1152,8 +1155,8 @@ export const worldEvents: HistoryEvent[] = [
     people: [],
     sources: [
       {
-        title: 'OpenStax · World History 1 · 12-1-the-indian-ocean-world-in-the-early-middle-ages',
-        url: 'https://openstax.org/books/world-history-volume-1/pages/12-1-the-indian-ocean-world-in-the-early-middle-ages',
+        title: 'Encyclopaedia Iranica · Sogdian Trade',
+        url: 'https://www.iranicaonline.org/articles/sogdian-trade/',
         note: '史实与年代参考；中文叙述由本站独立编写。',
       },
     ],
@@ -1442,8 +1445,9 @@ export const worldEvents: HistoryEvent[] = [
     category: '社会',
     region: 'europe',
     themes: ['疾病与社会'],
-    location: '罗马',
+    location: '欧洲与地中海地区',
     coordinates: [12.49, 41.89],
+    placeIds: [],
     summary: '鼠疫沿贸易与交通网络传播，欧洲多地经历严重人口损失。',
     background:
       '欧亚和地中海交流促进商品流动，也使病原体跨地区传播；疫情在其他地区亦有复杂的历史。',
@@ -1460,7 +1464,7 @@ export const worldEvents: HistoryEvent[] = [
       },
     ],
     importance: 5,
-    locationNote: '坐标为所述地点或区域的阅读参照，不表示事件只发生于此，也不构成人物行迹。',
+    locationNote: '坐标仅取意大利半岛作跨地区传播的参照，不表示1347年疫情在罗马发生或始于罗马。',
     endYear: 1351,
     dateLabel: '1347—1351 年',
     dateNote: '所标时间为这一过程的观察区间；不同地区的变化并不同时发生。',

@@ -1,8 +1,8 @@
-import { readingSourceUrl } from '../lib/source-links'
-import { ArrowRight, BookOpen } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { useRef } from 'react'
 import type { Dynasty, HistoryEvent } from '../types'
 import ReadingText from './ReadingText'
+import Sources from './Sources'
 import { compactYear, matchesEvent, MAX_YEAR, MIN_YEAR } from '../lib/history'
 export function DynastyIntroduction({ dynasty }: { dynasty: Dynasty }) {
   return (
@@ -20,11 +20,10 @@ export function DynastyIntroduction({ dynasty }: { dynasty: Dynasty }) {
         </span>
       </div>
       {dynasty.dateNote && <p className="dynasty-date-note">{dynasty.dateNote}</p>}
-      <h3>时代背景</h3>
-      <p className="dynasty-context">{dynasty.context}</p>
-      {dynasty.sections?.map((section) => (
-        <section className="dynasty-reading-section" key={section.title}>
-          <h3>{section.title}</h3>
+      {dynasty.context && <p className="dynasty-context">{dynasty.context}</p>}
+      {dynasty.sections?.map((section, index) => (
+        <section className="dynasty-reading-section" key={index}>
+          {section.title && <h3>{section.title}</h3>}
           <ReadingText text={section.text} />
         </section>
       ))}
@@ -126,20 +125,7 @@ export default function DynastyPanel({
           </ol>
         </section>
       )}
-      <div className="reference-list">
-        <span className="eyebrow">继续阅读 · 参考资料</span>
-        {dynasty.sources.map((source) => (
-          <a
-            key={source.url}
-            href={readingSourceUrl(source.url)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BookOpen size={14} />
-            <span>{source.title}</span>
-          </a>
-        ))}
-      </div>
+      <Sources sources={dynasty.sources} />
     </article>
   )
 }

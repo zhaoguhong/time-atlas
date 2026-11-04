@@ -54,7 +54,7 @@ def now():
     return dt.datetime.now(dt.timezone.utc).isoformat()
 
 
-def collect(source, previous):
+def collect(source, previous, attempts=3, timeout=35):
     url = source["url"]
     key = hashlib.sha256(url.encode()).hexdigest()[:24]
     old = previous.get(url)
@@ -69,11 +69,11 @@ def collect(source, previous):
                 "revisionId": int(revision_match.group(1)) if revision_match else old.get('revisionId'),
                 "textSha256": hashlib.sha256(text_path.read_bytes()).hexdigest() if text_path.exists() else None}
     encoded = urllib.parse.quote(url, safe=":/?&=%#@+;")
-    for attempt in range(3):
+    for attempt in range(attempts):
         started_at = now()
         try:
             request = urllib.request.Request(encoded, headers={"User-Agent": "TimeAtlas/0.1 (local educational reference audit)"})
-            with urllib.request.urlopen(request, timeout=35) as response:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
                 charset = response.headers.get_content_charset() or "utf-8"
                 content_type = response.headers.get_content_type()
                 resolved = response.url
@@ -130,7 +130,7 @@ def collect(source, previous):
                     pass
             record_request({"action": "fetch-failed", "url": url, "startedAt": started_at,
                             "attemptedAt": attempted_at, "attempt": attempt + 1, **failure})
-            if attempt == 2:
+            if attempt == attempts - 1:
                 return {"url": url, "title": source.get("title"), "attemptedAt": attempted_at, **failure,
                         "references": source.get("references", [])}
             time.sleep(2 * (attempt + 1))
@@ -139,7 +139,13 @@ def collect(source, previous):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", nargs="?", default="data/research/references.json")
+    parser.add_argument("--attempts", type=int, choices=range(1, 4), default=3,
+                        help="Maximum attempts per new request; every failure is retained.")
+    parser.add_argument("--timeout", type=int, default=35,
+                        help="Network timeout in seconds (2-120); does not change cache verification.")
     args = parser.parse_args()
+    if not 2 <= args.timeout <= 120:
+        parser.error("--timeout must be between 2 and 120 seconds")
     sources = json.loads((ROOT / args.manifest).read_text())["sources"]
     RAW.mkdir(parents=True, exist_ok=True)
     INDEX.parent.mkdir(parents=True, exist_ok=True)
@@ -148,7 +154,7 @@ def main():
     output = dict(previous)
     # Modest concurrency. Every response is retained, including redirects and failures.
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        futures = [executor.submit(collect, source, previous) for source in sources]
+        futures = [executor.submit(collect, source, previous, args.attempts, args.timeout) for source in sources]
         for future in concurrent.futures.as_completed(futures):
             source = future.result()
             output[source["url"]] = source

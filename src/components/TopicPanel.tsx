@@ -1,8 +1,8 @@
-import { formatEventDate } from '../lib/history'
-import { readingSourceUrl } from '../lib/source-links'
-import { ArrowRight, BookOpen, Compass } from 'lucide-react'
+import { formatEventDate, MAX_YEAR } from '../lib/history'
+import { ArrowRight, Compass } from 'lucide-react'
 import type { TopicProgress } from '../lib/reading-progress'
 import type { Tour, HistoryEvent } from '../types'
+import Sources from './Sources'
 
 export default function TopicPanel({
   topic,
@@ -43,7 +43,9 @@ export default function TopicPanel({
       )}
       <h3>学习路径 · {topic.steps.length} 章</h3>
       <p className="topic-reading-help">
-        每一章同步切换历史年份，标出专题相关地点，并说明应该观察什么。可以按顺序学习，也可以直接打开感兴趣的一章。
+        每一章同步切换阅读年份，并提供地理观察提示。可以按顺序学习，也可以直接打开感兴趣的一章。
+        {topic.steps.some((id) => eventById.get(id)!.year > MAX_YEAR) &&
+          '1912年后的章节在时空柱中阅读；历史疆域地图仍止于1912年。'}
       </p>
       <ol className="topic-chapter-list">
         {topic.steps.map((id, index) => {
@@ -76,22 +78,7 @@ export default function TopicPanel({
           <p>{topic.conclusion}</p>
         </div>
       )}
-      {topic.sources && (
-        <div className="reference-list">
-          <span className="eyebrow">专题参考资料</span>
-          {topic.sources.map((source) => (
-            <a
-              key={source.url}
-              href={readingSourceUrl(source.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BookOpen size={14} />
-              <span>{source.title}</span>
-            </a>
-          ))}
-        </div>
-      )}
+      <Sources sources={topic.sources ?? []} title="专题参考资料" />
     </article>
   )
 }

@@ -5,7 +5,11 @@ import {
 } from './lib/event-categories'
 import { eventsAtYear } from './lib/current-events'
 import { formatEventDate, eventDateRelation } from './lib/history'
-import { readingSourceUrl } from './lib/source-links'
+import Sources from './components/Sources'
+import EventSources from './components/EventSources'
+import EventTopicPaths from './components/EventTopicPaths'
+import { indexTopicPaths } from './lib/topic-paths'
+import { eventSearchMatch, normalizeSearchText } from './lib/search'
 import {
   lazy,
   Suspense,
@@ -68,6 +72,7 @@ const HistoryMap = lazy(() => import('./components/HistoryMap'))
 import Timeline from './components/Timeline'
 import MobileSheetHandle from './components/MobileSheetHandle'
 import DisplayControls from './components/DisplayControls'
+import EventNarrative from './components/EventNarrative'
 import { useReadingResize } from './hooks/use-reading-resize'
 import GitHubIcon from './components/GitHubIcon'
 import JourneyPanel from './components/JourneyPanel'
@@ -81,13 +86,18 @@ import ExplorationFilters from './components/ExplorationFilters'
 import {
   places,
   placeById,
-  namesPlace,
+  eventAtPlace,
   filterExploration,
   emptyExploration,
   insideBounds,
 } from './lib/exploration'
 import { parseViewParams, useNavigationHistory, type NavigationView } from './lib/navigation'
-import { readProgress, writeProgress, readingSelectionKey } from './lib/reading-progress'
+import {
+  readProgress,
+  writeProgress,
+  readingSelectionKey,
+  topicStepFromHash,
+} from './lib/reading-progress'
 import { events, eventById, people, personById } from './data/catalog'
 import { periods, tours } from './data/periods'
 import { profiles, periodCourses } from './data/learning'
@@ -112,7 +122,6 @@ import type {
   PanelMode,
   PolityProperties,
   Selection,
-  Source,
   JourneyView,
   MapBounds,
   ExplorationFilter,
@@ -124,7 +133,6 @@ import {
   compactYear,
   eventsInPeriod,
   formatYear,
-  matchesEvent,
   fromOrdinal,
   lifeDates,
   MAX_YEAR,
@@ -147,6 +155,7 @@ import { useColorMode } from './lib/color-mode'
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
 const allTours = [...tours, ...periodCourses]
+const topicPathsByEvent = indexTopicPaths(tours)
 const projectRepositoryUrl = 'https://github.com/zhaoguhong/time-atlas'
 const categoryColors: Record<string, string> = {
   战争: '#a76f58',
@@ -182,8 +191,13 @@ function initialState() {
       view.visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR,
     )
   const topic = allTours.find((item) => item.id === hash.tour)
+  const linkedStep =
+    topic && hash.step !== -1 ? topicStepFromHash(topic, window.location.hash) : undefined
   const step = topic
-    ? Math.max(topic.chapters ? -1 : 0, Math.min(topic.steps.length - 1, hash.step ?? -1))
+    ? Math.max(
+        topic.chapters ? -1 : 0,
+        Math.min(topic.steps.length - 1, linkedStep ?? hash.step ?? -1),
+      )
     : -1
   if (topic) {
     selection = step < 0 ? null : { type: 'event', id: topic.steps[step] }
@@ -222,26 +236,6 @@ function readCamera(): Camera | null {
     : null
 }
 
-function Sources({ sources }: { sources: Source[] }) {
-  if (!sources.length) return null
-  return (
-    <div className="reference-list">
-      <span className="eyebrow">继续阅读 · 参考资料</span>
-      {sources.map((source, i) => (
-        <a
-          key={`${source.url}-${i}`}
-          href={readingSourceUrl(source.url)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BookOpen size={14} />
-          <span>{source.title}</span>
-          <ExternalLink size={12} />
-        </a>
-      ))}
-    </div>
-  )
-}
 function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large' }) {
   const person = personById.get(id)
   if (!person) return null
@@ -281,7 +275,7 @@ export default function App() {
       : initial.view.playbackMode,
   )
   const [archiveFilters, setArchiveFilters] = useState(initial.view.archiveFilters)
-  const [progress, setProgress] = useState(readProgress)
+  const [progress, setProgress] = useState(() => readProgress(allTours))
   const [moreOpen, setMoreOpen] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const focusEnterRef = useRef<HTMLButtonElement>(null)
@@ -551,7 +545,7 @@ export default function App() {
         (peopleDepth === 'all' ||
           (peopleDepth === 'journey'
             ? journeyByPerson.has(person.id)
-            : person.biographyLength >= 160)),
+            : person.recordKind === 'curated')),
     )
   }, [periodEvents, period.id, period.from, period.to, peopleRange, peopleQuery, peopleDepth])
   const selectedEventIndex = selection?.type === 'event' ? eventById.get(selection.id) : undefined
@@ -587,20 +581,27 @@ export default function App() {
       ? (dynastyForMap(selection.id, year) ?? worldPolityForMap(selection.id, year))
       : undefined
   const searchResults = useMemo(() => {
-    const text = query.toLowerCase().replace(/\s+/g, '')
-    const exact = (names: string[]) =>
-      names.some((name) => name.toLowerCase().replace(/\s+/g, '') === text)
+    const text = normalizeSearchText(query)
+    const exact = (names: string[]) => names.some((name) => normalizeSearchText(name) === text)
+    const namesMatch = (names: string[]) =>
+      names.some((name) => normalizeSearchText(name).includes(text))
     if (!text) return []
     return [
-      ...events
-        .filter((event) => matchesEvent(event, text))
-        .map((event) => ({
-          type: 'event' as const,
-          id: event.id,
-          title: event.title,
-          sub: `${formatEventDate(event)} · ${event.location}`,
-          exact: exact([event.title, ...(event.aliases ?? [])]),
-        })),
+      ...events.flatMap((event) => {
+        const match = eventSearchMatch(event, query, personById)
+        return match
+          ? [
+              {
+                type: 'event' as const,
+                id: event.id,
+                title: event.title,
+                sub: `${formatEventDate(event)} · ${event.location}`,
+                rank: match.rank,
+                reason: match.reason,
+              },
+            ]
+          : []
+      }),
       ...people
         .filter((person) => matchesPerson(person, text))
         .map((person) => ({
@@ -608,7 +609,11 @@ export default function App() {
           id: person.id,
           title: person.name,
           sub: person.role,
-          exact: exact([person.name, person.courtesy ?? '', ...(person.aliases ?? [])]),
+          rank: exact([person.name, person.courtesy ?? '', ...(person.aliases ?? [])])
+            ? 0
+            : namesMatch([person.name, person.courtesy ?? '', ...(person.aliases ?? [])])
+              ? 1
+              : 4,
         })),
       ...[...dynasties, ...worldPolities]
         .filter((dynasty) =>
@@ -621,7 +626,7 @@ export default function App() {
           id: dynasty.id,
           title: dynasty.name,
           sub: `${compactYear(dynasty.from)}—${compactYear(dynasty.to)} · ${dynasty.capital}`,
-          exact: exact([dynasty.name, ...dynasty.aliases]),
+          rank: exact([dynasty.name, ...dynasty.aliases]) ? 0 : 1,
         })),
       ...places
         .filter((place) =>
@@ -632,7 +637,7 @@ export default function App() {
           id: place.id,
           title: place.name,
           sub: place.modern,
-          exact: exact([place.name, ...place.names]),
+          rank: exact([place.name, ...place.names]) ? 0 : 2,
         })),
       ...tours
         .filter((topic) => `${topic.name}${topic.description}`.includes(text))
@@ -641,7 +646,7 @@ export default function App() {
           id: topic.id,
           title: topic.name,
           sub: `${topic.steps.length} 章`,
-          exact: exact([topic.name]),
+          rank: exact([topic.name]) ? 0 : namesMatch([topic.name]) ? 1 : 5,
         })),
       ...(/^-?\d+$/.test(text) &&
       Number(text) !== 0 &&
@@ -653,11 +658,11 @@ export default function App() {
               id: text,
               title: `前往${formatYear(Number(text))}`,
               sub: '切换观察年份',
-              exact: true,
+              rank: 0,
             },
           ]
         : []),
-    ].sort((a, b) => Number(b.exact) - Number(a.exact))
+    ].sort((a, b) => a.rank - b.rank)
   }, [query])
 
   function chooseSearchResult(result: (typeof searchResults)[number]) {
@@ -1040,7 +1045,7 @@ export default function App() {
       setShowEvents(true)
       setCompareYear(null)
       setCategory('全部')
-      setFocus({ region: id === 'silk-road' ? 'silk' : 'china', token: Date.now() })
+      fitTopicMap(-1, item)
       return
     }
     setTourState({ id, step: 0 })
@@ -1062,21 +1067,19 @@ export default function App() {
     )
     startTour(id)
     setTourState({ id, step })
-    setSelection({ type: 'event', id: item.steps[step] })
-    setYear(eventById.get(item.steps[step])!.year)
+    openEvent(item.steps[step], true)
     setMobileView('split')
-    setFocus({
-      coordinates: eventById.get(item.steps[step])!.coordinates,
-      zoom: 4.6,
-      token: Date.now(),
-    })
+    fitTopicMap(step, item)
   }
   function continueReading(hash: string) {
     const state = parseHash(hash),
       shared = parseViewParams(hash)
-    if (state.tour)
-      resumeTopic(state.tour, state.step !== undefined && state.step >= 0 ? state.step : undefined)
-    else if (state.event) openEvent(state.event)
+    if (state.tour) {
+      const topic = allTours.find((item) => item.id === state.tour)
+      const step =
+        !progress.topics[state.tour] && topic ? topicStepFromHash(topic, hash) : undefined
+      resumeTopic(state.tour, step)
+    } else if (state.event) openEvent(state.event)
     else if (state.person) openPerson(state.person)
     else if (state.dynasty) openDynasty(state.dynasty)
     else if (shared.place) openPlace(shared.place)
@@ -1114,15 +1117,14 @@ export default function App() {
     openEvent(tour.steps[step], true)
     fitTopicMap(step)
   }
-  function fitTopicMap(step = tourState?.step ?? 0) {
-    if (!tour) return
-    if (tour.id === 'silk-road') {
+  function fitTopicMap(step = tourState?.step ?? 0, item = tour) {
+    if (!item) return
+    if (item.id === 'silk-road') {
       setFocus({ region: 'silk', token: Date.now() })
       return
     }
-    const coordinates = tour.steps
-      .slice(Math.max(0, step - 1), step + 2)
-      .map((id) => eventById.get(id)!.coordinates)
+    const steps = step < 0 ? item.steps : item.steps.slice(Math.max(0, step - 1), step + 2)
+    const coordinates = steps.map((id) => eventById.get(id)!.coordinates)
     setFocus({
       bounds: [
         [
@@ -1434,7 +1436,7 @@ export default function App() {
       recent: [{ key, title, hash }, ...old.recent.filter((item) => item.key !== key)].slice(0, 12),
     }))
   }, [selection, tourState])
-  useEffect(() => writeProgress(progress), [progress])
+  useEffect(() => writeProgress(progress, allTours), [progress])
   useEffect(() => {
     function hashChanged() {
       if (navigation.consumeHashChange()) return
@@ -1984,6 +1986,7 @@ export default function App() {
                           }{' '}
                           · {result.sub}
                         </small>
+                        {'reason' in result && result.reason && <small>{result.reason}</small>}
                       </span>
                       <ChevronRight size={14} />
                     </button>
@@ -2726,7 +2729,10 @@ export default function App() {
                     </section>
                   )}
                   <ReadingStatus {...eventReading} />
-                  {selectedEvent.details && (
+                  {selectedEvent.narrative && (
+                    <EventNarrative narrative={selectedEvent.narrative} />
+                  )}
+                  {!selectedEvent.narrative && selectedEvent.details && (
                     <section className="detail-section event-narrative">
                       <span className="section-number">01</span>
                       <h3>事情是怎样发生的？</h3>
@@ -2735,7 +2741,7 @@ export default function App() {
                       ))}
                     </section>
                   )}
-                  {eventReading.record && (
+                  {!selectedEvent.narrative && eventReading.record && (
                     <>
                       <div className="detail-section">
                         <span className="section-number">
@@ -2753,6 +2759,11 @@ export default function App() {
                       </div>
                     </>
                   )}
+                  <EventTopicPaths
+                    paths={topicPathsByEvent.get(selectedEvent.id) ?? []}
+                    activeTopicId={tour?.id}
+                    onRead={resumeTopic}
+                  />
                   {relatedReading(selectedEvent, events, people).length > 0 && (
                     <section className="event-relations">
                       <span className="eyebrow">沿着线索，继续读</span>
@@ -2795,11 +2806,11 @@ export default function App() {
                       })}
                     </div>
                   )}
-                  {places.some((place) => namesPlace(selectedEvent.location, place)) && (
+                  {places.some((place) => eventAtPlace(selectedEvent, place)) && (
                     <section className="related-places">
                       <h3>继续探索这个地方</h3>
                       {places
-                        .filter((place) => namesPlace(selectedEvent.location, place))
+                        .filter((place) => eventAtPlace(selectedEvent, place))
                         .map((place) => (
                           <button
                             className="outline-action"
@@ -3033,8 +3044,7 @@ export default function App() {
                         <strong>{place.name}</strong>
                         <small>{place.modern}</small>
                         <span>
-                          {events.filter((event) => namesPlace(event.location, place)).length}{' '}
-                          件相关事件
+                          {events.filter((event) => eventAtPlace(event, place)).length} 件相关事件
                         </span>
                         <ArrowRight size={15} />
                       </button>
@@ -3110,15 +3120,7 @@ export default function App() {
                       </button>
                     ))}
                   </div>
-                  <Sources
-                    sources={[
-                      ...new Map(
-                        profile.steps
-                          .flatMap((id) => eventById.get(id)!.sources)
-                          .map((source) => [source.url, source]),
-                      ).values(),
-                    ].slice(0, 6)}
-                  />
+                  <EventSources eventIds={profile.steps} initialLimit={6} />
                 </article>
               ) : mode === 'tours' ? (
                 <div className="tours-panel">
@@ -3356,7 +3358,7 @@ export default function App() {
                     {(
                       [
                         { id: 'all', label: '全部档案' },
-                        { id: 'reading', label: '较完整介绍' },
+                        { id: 'reading', label: '人物介绍' },
                         { id: 'journey', label: '可播放行迹' },
                       ] as const
                     ).map(({ id, label }) => (
@@ -3394,8 +3396,8 @@ export default function App() {
                           <span className="person-depth">
                             {journeyByPerson.has(person.id)
                               ? '可播放行迹'
-                              : person.biographyLength >= 160
-                                ? '较完整介绍'
+                              : person.recordKind === 'curated'
+                                ? '人物介绍'
                                 : '简要档案'}
                           </span>
                         </span>
@@ -3809,11 +3811,9 @@ export default function App() {
               </a>
             </div>
             <p className="coverage-note">
-              当前收录 {dynasties.length} 个朝代与政权档案、{journeyByPerson.size} 份详细行迹。其中{' '}
-              {people.filter((person) => person.recordKind === 'catalog').length}{' '}
-              份人物档案仅有基本身份，
-              {people.filter((person) => person.biographyLength >= 160).length}{' '}
-              份有较完整介绍。数量不等于历史资料完整，年谱仍按史料逐人核对。
+              当前收录 {dynasties.length} 个中国朝代与政权档案、{journeyByPerson.size} 份详细行迹。
+              {people.filter((person) => person.recordKind === 'curated').length}{' '}
+              份人物档案有编辑介绍。 简介不等于完整传记，年谱仍按史料逐人核对。
             </p>
             <p className="source-attribution">
               疆域资料：Cliopatria / Seshat，数据编辑 Ed Chalstrey、James Bennett、Erin Mutch

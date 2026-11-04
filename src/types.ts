@@ -28,6 +28,8 @@ export interface HistoryEvent {
   aliases?: string[]
   location: string
   coordinates: [number, number]
+  /** Explicit reading-place links. An empty list deliberately excludes name-based matches. */
+  placeIds?: string[]
   summary: string
   background: string
   impact: string
@@ -38,6 +40,11 @@ export interface HistoryEvent {
   dateNote?: string
   peopleNotes?: Record<string, string>
   details?: string[]
+  /** Event-specific prose; untitled sections keep a continuous narrative. */
+  narrative?: {
+    sections: { title?: string; paragraphs: string[] }[]
+    note?: string
+  }
   /** Curated reading geography, not inferred from modern borders or marker coordinates. */
   region?: HistoryRegion
   themes?: string[]

@@ -1,8 +1,10 @@
+import { placeReading } from '../data/place-reading'
 import { MapPin, ArrowRight } from 'lucide-react'
 import type { HistoryEvent, Person, PersonJourney } from '../types'
-import { namesPlace, type Place } from '../lib/exploration'
+import { eventAtPlace, namesPlace, type Place } from '../lib/exploration'
 import { compactYear, formatEventDate, periodAt } from '../lib/history'
-import { readingSourceUrl } from '../lib/source-links'
+import EventSources from './EventSources'
+import { SourceCitation } from './Sources'
 
 export default function PlacePanel({
   place,
@@ -25,7 +27,8 @@ export default function PlacePanel({
   period: string
   onPeriod: (value: string) => void
 }) {
-  const related = events.filter((event) => namesPlace(event.location, place))
+  const introduction = placeReading[place.id]
+  const related = events.filter((event) => eventAtPlace(event, place))
   const periods = [
     ...new Map(
       related.map((event) => {
@@ -42,12 +45,8 @@ export default function PlacePanel({
       .map((node) => ({ person: people.get(journey.personId)!, node })),
   )
   const sources = [
-    ...new Map(
-      [
-        ...related.flatMap((event) => event.sources),
-        ...visits.flatMap((visit) => visit.node.sources),
-      ].map((source) => [source.url, source]),
-    ).values(),
+    ...(introduction?.sources ?? []),
+    ...visits.flatMap((visit) => visit.node.sources),
   ]
   return (
     <article className="place-detail">
@@ -57,8 +56,9 @@ export default function PlacePanel({
         <MapPin size={14} />
         {place.modern}
       </p>
-      <p>
-        沿着地点读历史：这里汇集事件记录中明确提到的地名。不同年代的城址、城区和行政范围可能不同，地图坐标仅为区域参照。
+      {introduction && <p className="detail-lead">{introduction.text}</p>}
+      <p className="person-relation-note">
+        不同年代的城址与行政范围有所变化，地图坐标为区域参照。以下汇集本版收录的事件与独立核对的行迹。
       </p>
       <button className="outline-action" onClick={onLocate}>
         在地图上查看此地
@@ -124,34 +124,18 @@ export default function PlacePanel({
               <p>{node.summary}</p>
               <small>{node.locationNote}</small>
               {node.sources.map((source) => (
-                <a
-                  key={source.url}
-                  href={readingSourceUrl(source.url)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {source.title}
-                </a>
+                <SourceCitation key={source.url} source={source} />
               ))}
             </div>
           ))}
         </div>
       )}
-      {!!sources.length && (
-        <div className="reference-list">
-          <span className="eyebrow">地点线索的来源 · 各事件中保留完整引用</span>
-          {sources.slice(0, 8).map((source) => (
-            <a
-              key={source.url}
-              href={readingSourceUrl(source.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {source.title}
-            </a>
-          ))}
-        </div>
-      )}
+      <EventSources
+        eventIds={related.map((event) => event.id)}
+        sources={sources}
+        title="地点介绍与历史线索的来源"
+        initialLimit={8}
+      />
     </article>
   )
 }

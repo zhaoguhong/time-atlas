@@ -3,7 +3,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 const server = await createServer({
   configFile: false,
   logLevel: 'error',
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, ws: false },
+  optimizeDeps: { noDiscovery: true, include: [] },
   appType: 'custom',
 })
 try {
@@ -12,6 +13,7 @@ try {
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { topicTours } = await server.ssrLoadModule('/src/data/topics.ts')
+  const { placeReading } = await server.ssrLoadModule('/src/data/place-reading.ts')
   const sources = new Map()
   for (const [kind, records] of [
     ['event', events],
@@ -20,6 +22,7 @@ try {
     ['world-polity', worldPolities],
     ['journey', journeys.flatMap((j) => j.nodes)],
     ['topic', topicTours],
+    ['place', Object.entries(placeReading).map(([id, reading]) => ({ id, ...reading }))],
   ]) {
     for (const record of records)
       for (const source of record.sources) {

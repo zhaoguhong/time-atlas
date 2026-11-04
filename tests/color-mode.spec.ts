@@ -149,7 +149,12 @@ test('night pillar preferences migrate to a global dark mode and the default cyl
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await expandPillarOptions(page, '外观与简介')
   await readingContrast(page, '.pillar-dialog-head h2')
-  await expect(page.getByRole('radio')).toHaveCount(4)
+  const appearance = page.getByRole('group', { name: '时空柱主题', exact: true })
+  const themeNames = ['琉璃时柱', '素笺编年', '山河长卷', '经纬织带', '留白', '大事记', '观测站']
+  await expect(appearance.getByRole('radio')).toHaveCount(themeNames.length)
+  for (const name of themeNames)
+    await expect(appearance.getByRole('radio', { name, exact: true })).toBeVisible()
+  await expect(appearance.getByRole('radio', { name: '琉璃时柱', exact: true })).toBeChecked()
   await expect(page.getByRole('radio', { name: '星夜时柱', exact: true })).toHaveCount(0)
 })
 test('both modes remain usable without local storage', async ({ page }) => {

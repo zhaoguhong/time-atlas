@@ -2,6 +2,8 @@ import { openHeaderMenu } from './refinement-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { tours } from '../src/data/periods'
+import { eventById } from '../src/data/content'
+import { MAX_YEAR } from '../src/lib/history'
 import { readFileSync } from 'node:fs'
 const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
 
@@ -18,7 +20,7 @@ async function openTopics(page: Page) {
 }
 
 for (const topic of tours) {
-  test(`reads every chapter of ${topic.name} with the matching historical map`, async ({
+  test(`reads every chapter of ${topic.name} within its map or modern reading range`, async ({
     page,
   }) => {
     test.setTimeout(90000)
@@ -37,7 +39,11 @@ for (const topic of tours) {
     for (let index = 0; index < topic.steps.length; index++) {
       await expect(page.locator('.event-detail h2')).toHaveText(titles[index])
       await expect(page.locator('.event-detail h2')).toBeInViewport()
-      await expect(page.locator('.year-title')).toHaveText(dates[index])
+      const event = eventById.get(topic.steps[index])!
+      if (event.year > MAX_YEAR) {
+        await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', String(event.year))
+        await expect(page.locator('.map-canvas')).toHaveCount(0)
+      } else await expect(page.locator('.year-title')).toHaveText(dates[index])
       await expect(page).toHaveURL(new RegExp(`event=${topic.steps[index]}(?:&|$)`))
       await expect(page.locator('.topic-chapter-context')).toContainText(
         `第 ${index + 1} / ${topic.steps.length} 章`,
@@ -45,9 +51,11 @@ for (const topic of tours) {
       await expect(page.locator('.topic-map-reading')).toContainText(
         topic.chapters![index].mapReading,
       )
-      await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-      await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
-      expect(await page.locator('.topic-marker').count()).toBeGreaterThan(0)
+      if (event.year <= MAX_YEAR) {
+        await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+        await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
+        expect(await page.locator('.topic-marker').count()).toBeGreaterThan(0)
+      }
       if (index < topic.steps.length - 1) await page.locator('.tour-next').click()
     }
     await page.getByRole('button', { name: '完成旅程', exact: false }).click()
