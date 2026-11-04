@@ -1,8 +1,34 @@
 import { expandPillarOptions, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
 import { installPillarClock } from './pillar-clock-helpers'
+import { matchesEventCategory } from '../src/lib/event-categories'
+import { eventRegion } from '../src/lib/time-pillar'
+import type { HistoryEvent } from '../src/types'
+
+// Read the prepared records without importing the browser's JSON module graph
+// into Node. Only files referenced by the current catalog supply expectations.
+const eventCatalog = JSON.parse(readFileSync('src/data/generated/reading-catalog.json', 'utf8'))
+  .events as {
+  id: string[]
+  readingHash: string[]
+  readingId?: string[] | { values: (string | null)[] }
+}
+const events: HistoryEvent[] = eventCatalog.id.map((id, index) => {
+  const fileId =
+    (Array.isArray(eventCatalog.readingId)
+      ? eventCatalog.readingId[index]
+      : eventCatalog.readingId?.values[index]) ?? id
+  return JSON.parse(
+    readFileSync(
+      `public/data/reading/events/${fileId}-${eventCatalog.readingHash[index]}.json`,
+      'utf8',
+    ),
+  )
+})
+const eventById = new Map(events.map((event) => [event.id, event]))
 
 test.use({ hasTouch: true })
 async function ready(page: Page, hash = 'year=1500&span=900') {
@@ -23,6 +49,25 @@ async function settings(page: Page) {
 async function closeSettings(page: Page) {
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).not.toBeVisible()
+}
+async function completeEventArticle(page: Page, id: string) {
+  const event = eventById.get(id)
+  expect(event, `Selected event ${id} exists in the authoritative content`).toBeDefined()
+  const detail = page.locator('.event-detail')
+  await expect(detail.locator('h2')).toHaveText(event!.title)
+  if (event!.narrative) {
+    await expect(detail.locator('.event-article-section p')).toHaveText(
+      event!.narrative.sections.flatMap((section) => section.paragraphs),
+    )
+    if (event!.narrative.note)
+      await expect(detail.locator('.event-article-note')).toHaveText(event!.narrative.note)
+  } else {
+    if (event!.details)
+      await expect(detail.locator('.event-narrative p')).toHaveText(event!.details)
+    await expect(detail.getByText(event!.background, { exact: true })).toBeVisible()
+    await expect(detail.getByText(event!.impact, { exact: true })).toBeVisible()
+  }
+  await expect(detail.locator('.reading-status')).toHaveCount(0)
 }
 async function geometry(page: Page) {
   const problems = await page.evaluate(() => {
@@ -213,7 +258,9 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await page.locator('.pillar-cluster-list button').first().click()
   await expect(page.locator('.event-detail')).toBeVisible()
   const title = await page.locator('.event-detail h2').innerText()
-  await expect(page.locator('.event-narrative')).toBeVisible()
+  await expect(page).toHaveURL(/event=/)
+  const selectedId = new URLSearchParams(new URL(page.url()).hash.slice(1)).get('event')!
+  await completeEventArticle(page, selectedId)
   expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
   await expect(page.locator('.event-relations')).toBeVisible()
   await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
@@ -960,6 +1007,22 @@ for (const viewport of [
     await settings(page)
     await expect(category).toHaveValue('哲学')
     await category.selectOption('经济贸易')
+    // The expanded Song collection includes economic records. Use a bounded
+    // interval with political events so clearing the filters must restore content.
+    const emptyRange = [-1047, -1045]
+    const economicEvents = events.filter(
+      (event) => eventRegion(event) === 'china' && matchesEventCategory(event, '经济贸易'),
+    )
+    expect(
+      economicEvents.filter(
+        (event) => event.year <= emptyRange[1] && (event.endYear ?? event.year) >= emptyRange[0],
+      ),
+    ).toHaveLength(0)
+    await page.getByLabel('时空柱起始年份', { exact: true }).fill(String(emptyRange[0]))
+    await page.getByLabel('时空柱结束年份', { exact: true }).fill(String(emptyRange[1]))
+    await page.getByRole('button', { name: '应用时空柱时间范围', exact: true }).click()
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '-1046')
+    await settings(page)
     await expect(page.locator('.pillar-category-summary')).toContainText('当前画布 0 件')
     await closeSettings(page)
     await expect(page.locator('.pillar-empty')).toContainText(
@@ -970,6 +1033,7 @@ for (const viewport of [
     await expect(category).toHaveValue('全部')
     await closeSettings(page)
     await expect(page.locator('.pillar-empty')).toHaveCount(0)
+    await expect(page.locator('.pillar-card[data-event-id="muye"]')).toBeVisible()
   })
 }
 
@@ -1004,7 +1068,10 @@ for (const viewport of [
     await page.setViewportSize(viewport)
     await ready(page, 'year=1785&span=50&scope=period&category=哲学&range=1770,1795')
     await settings(page)
-    await expect(page.locator('.pillar-category-summary')).toContainText('全部年代 128 件')
+    const philosophyCount = events.filter((event) => matchesEventCategory(event, '哲学')).length
+    await expect(page.locator('.pillar-category-summary')).toContainText(
+      `全部年代 ${philosophyCount} 件`,
+    )
     const overview = page.getByRole('button', { name: '展开“哲学”的全部年代', exact: true })
     await overview.evaluate((element) => element.scrollIntoView({ block: 'center' }))
     await page.screenshot({ path: info.outputPath(`${viewport.name}-philosophy-total.png`) })
@@ -1022,7 +1089,7 @@ for (const viewport of [
     await expect(page.locator('.pillar-cluster-list')).toContainText('实践理性批判')
     await page.locator('.pillar-cluster-list button').filter({ hasText: '纯粹理性批判' }).click()
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
-    await expect(page.locator('.event-narrative')).toBeVisible()
+    await completeEventArticle(page, 'phil-kant-pure-reason')
     expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
     await page.reload()
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
