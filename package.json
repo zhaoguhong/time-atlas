@@ -31,7 +31,7 @@
     "test:e2e:journeys": "playwright test --config playwright.journeys.config.ts"
   },
   "dependencies": {
-    "lucide-react": "^1.52.0",
+    "lucide-react": "^1.70.0",
     "maplibre-gl": "^6.12.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
