@@ -1,5 +1,8 @@
 import type { JourneyNode, PersonJourney, Source } from '../types'
 import { expandedJourneys } from './journey-expansion'
+import { literaryJourneys } from './journey-literary'
+import { voyageJourneys } from './journey-voyages'
+import { confuciusJourney } from './journey-confucius'
 
 const suSource: Source = {
   title: '平顶山学院 · 伏牛山文化圈研究中心《苏轼年谱简编》',
@@ -52,7 +55,19 @@ const su = (
   title: string,
   summary: string,
   note?: string,
-) => node('sushi', key, year, place, coord, kind, title, summary, suSource, note)
+) =>
+  node(
+    'sushi',
+    key,
+    year,
+    place,
+    coord,
+    kind,
+    title,
+    summary,
+    { ...suSource, title: `${suSource.title} · ${year}年条` },
+    note,
+  )
 const k = (
   key: string,
   year: number,
@@ -63,7 +78,20 @@ const k = (
   summary: string,
   note?: string,
   locationNote?: string,
-) => node('kangxi', key, year, place, coord, kind, title, summary, kangxiSource, note, locationNote)
+) =>
+  node(
+    'kangxi',
+    key,
+    year,
+    place,
+    coord,
+    kind,
+    title,
+    summary,
+    { ...kangxiSource, title: `${kangxiSource.title} · ${year}年条` },
+    note,
+    locationNote,
+  )
 const z = (
   key: string,
   year: number,
@@ -127,6 +155,15 @@ export const journeys: PersonJourney[] = [
         '出生的农历纪年为景祐三年；换算公历为1037年1月。',
       ),
       su(
+        'chengdu-1055',
+        1055,
+        '成都',
+        [104.07, 30.67],
+        '到访',
+        '到成都拜见张方平',
+        '赴成都谒见张方平，得到赏识；这是进京应试之前有明确年谱记载的活动。',
+      ),
+      su(
         'exam',
         1057,
         '汴京 · 今开封',
@@ -144,7 +181,17 @@ export const journeys: PersonJourney[] = [
         '居住',
         '返乡为母守丧',
         '母亲去世，归返眉山。',
-        '同年四月，在应试之后。',
+        '年谱记四月母卒、奔丧归里，返乡月份未详；排在同年应试之后。',
+      ),
+      su(
+        'court-1060',
+        1060,
+        '汴京 · 今开封',
+        [114.31, 34.8],
+        '到访',
+        '守丧后再至汴京',
+        '与父亲、苏辙再赴京城，次年参加制科考试。获授福昌县主簿但未赴任，因此不设福昌到访点。',
+        '年谱1059年记启程，1060年记至京；采用到达年份。',
       ),
       su(
         'fengxiang',
@@ -155,6 +202,16 @@ export const journeys: PersonJourney[] = [
         '到任凤翔签判',
         '开始地方官的实际任职。',
         '年谱记载十二月到任。',
+      ),
+      su(
+        'changan-1064',
+        1064,
+        '长安 · 今西安',
+        [108.94, 34.26],
+        '到访',
+        '离凤翔后经长安',
+        '凤翔任满后赴长安，并游骊山，再向京城行进。',
+        '年谱记治平元年十二月，月份保留原历法。',
       ),
       su(
         'court-1065',
@@ -264,6 +321,16 @@ export const journeys: PersonJourney[] = [
         '当年改授汝州团练副使；任命本身不证明到过汝州。',
       ),
       su(
+        'shizhongshan',
+        1084,
+        '石钟山 · 今湖口',
+        [116.22, 29.75],
+        '到访',
+        '在湖口考察石钟山',
+        '离开黄州后的行程经过湖口，夜游石钟山，结合所见所闻讨论山名的由来。',
+        '年谱元丰七年记游庐山、石钟山，后过金陵。',
+      ),
+      su(
         'jinling',
         1084,
         '金陵 · 今南京',
@@ -271,6 +338,16 @@ export const journeys: PersonJourney[] = [
         '到访',
         '过金陵访王安石',
         '途中与王安石相见。',
+      ),
+      su(
+        'sizhou',
+        1084,
+        '泗州 · 今盱眙淮河一带',
+        [118.49, 33.01],
+        '到访',
+        '年底至泗州，求居常州',
+        '经过金陵后到泗州，上表请求在常州居住；获准与实际居常州的记录见下一年。',
+        '年谱记元丰七年年底到泗州。',
       ),
       su(
         'changzhou-1085',
@@ -371,6 +448,16 @@ export const journeys: PersonJourney[] = [
         '年谱记载十月到达；途中未到任英州，故不设英州到访点。',
       ),
       su(
+        'tengzhou',
+        1097,
+        '藤州 · 今藤县',
+        [110.91, 23.38],
+        '到访',
+        '赴海南途中与苏辙相见',
+        '离开惠州，经过藤州时与同样遭贬的苏辙相见，随后继续南行渡海。',
+        '年谱记五月相见，六月渡海、七月抵儋州；月份保留原历法。',
+      ),
+      su(
         'danzhou',
         1097,
         '儋州 · 今儋州中和镇',
@@ -399,6 +486,16 @@ export const journeys: PersonJourney[] = [
         '北归途中抵达虔州',
         '继续向北返程。',
         '年谱记载正月抵达。',
+      ),
+      su(
+        'zhenzhou',
+        1101,
+        '真州 · 今仪征',
+        [119.18, 32.27],
+        '到访',
+        '北归抵真州',
+        '北归经过真州，年谱将《自题金山画像》系于这一阶段；随后患病，留居常州。',
+        '年谱记五月至真州，七月卒于常州。',
       ),
       su(
         'death',
@@ -549,6 +646,26 @@ export const journeys: PersonJourney[] = [
         '同年四月，在杭州之后。',
       ),
       k(
+        'dezhou-1702',
+        1702,
+        '德州',
+        [116.36, 37.45],
+        '到访',
+        '南巡至德州后中途回銮',
+        '南巡途中因皇太子患病而返回；这次行程没有继续抵达江南。',
+        '年表记九月启行，十月行至德州后回銮。',
+      ),
+      k(
+        'xian-1703',
+        1703,
+        '西安',
+        [108.94, 34.26],
+        '到访',
+        '西巡驻西安阅兵',
+        '巡行山陕后驻西安，检阅驻防官兵骑射。祭西岳另由官员执行，不设为皇帝到访。',
+        '年表记十月西巡山陕，十一月驻西安。',
+      ),
+      k(
         'wutai-1710',
         1710,
         '五台山',
@@ -616,6 +733,17 @@ export const journeys: PersonJourney[] = [
         '刘备病重，从成都召诸葛亮至永安。',
       ),
       z(
+        'dianchi',
+        225,
+        '滇池地区 · 今昆明附近',
+        [102.71, 24.96],
+        '出行',
+        '南征到滇池地区',
+        '诸葛亮率军南征，本传裴注引《汉晋春秋》记行至滇池；地图只标所述地区，不推定具体营地。',
+        '本传建兴三年条及裴注《汉晋春秋》；有关孟获的叙述与本传分层阅读。',
+        '滇池为区域参照，古代郡县范围与今昆明城区不同；不绘制未经考定的渡泸地点。',
+      ),
+      z(
         'hanzhong',
         227,
         '汉中',
@@ -623,6 +751,49 @@ export const journeys: PersonJourney[] = [
         '出行',
         '北驻汉中',
         '北伐前上《出师表》，率军驻汉中。',
+      ),
+      z(
+        'qishan-228',
+        228,
+        '祁山 · 今礼县附近',
+        [105.2, 34.23],
+        '出行',
+        '首次北伐，亲率军攻祁山',
+        '诸葛亮本人率主力攻祁山，另派赵云、邓芝为疑军；街亭由马谡领军，不能据此算作诸葛亮到访。',
+        '《三国志》卷35建兴六年春条。',
+        '坐标为礼县祁山地区，不代表围攻营地或全部北伐战线。',
+      ),
+      z(
+        'hanzhong-228',
+        228,
+        '汉中',
+        [107.03, 33.07],
+        '出行',
+        '首次北伐失利后退回汉中',
+        '街亭战败后，诸葛亮迁西县居民返回汉中，整顿军队并自请贬职。',
+        '本传建兴六年春条，顺序在攻祁山之后。',
+      ),
+      z(
+        'chencang',
+        228,
+        '陈仓 · 今宝鸡陈仓一带',
+        [107.38, 34.35],
+        '出行',
+        '出散关围陈仓',
+        '冬季再次出兵，围攻陈仓，因粮尽而退。此次围城与同年春季祁山之役分列。',
+        '本传建兴六年冬条；按原典年序列于228年，不推定公历月份。',
+        '采用今宝鸡陈仓地区的阅读参照，不作为古城墙或营地遗址测绘。',
+      ),
+      z(
+        'qishan-231',
+        231,
+        '祁山 · 今礼县附近',
+        [105.2, 34.23],
+        '出行',
+        '再次出祁山，以木牛运粮',
+        '再次率军出祁山，利用木牛转运粮食，仍因粮尽退军。与228年的祁山行动分别保留。',
+        '《三国志》卷35建兴九年条。',
+        '坐标为祁山地区的参照，不测绘木牛运输道路。',
       ),
       z(
         'wuzhang',
@@ -759,5 +930,8 @@ export const journeys: PersonJourney[] = [
     ],
   },
   ...expandedJourneys,
+  ...literaryJourneys,
+  ...voyageJourneys,
+  confuciusJourney,
 ]
 export const journeyByPerson = new Map(journeys.map((journey) => [journey.personId, journey]))

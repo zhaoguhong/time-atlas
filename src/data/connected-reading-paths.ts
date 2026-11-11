@@ -292,12 +292,19 @@ export const connectedTopicTours: Tour[] = [
     question: '同样在写过去，史家怎样选择材料、安排次序并作出判断？',
     introduction: [
       '史书保存过去，也对过去作出选择。以人物为中心，还是按年排列；沿用旧说，还是比较异文；为朝廷提供鉴戒，还是保存共同体的记忆，都会改变读者看到的历史。',
-      '先看《汉书》和《三国志》怎样组织材料，再把注释、史学批评与编年写作放在一起。北非的《绪论》、基切人的《波波尔·乌》和现代中国哲学史，提出另外几种问题。这些作品不属于一条共同的演进路线，比较的是各自的材料、写作处境和解释方法。',
+      '先看《史记》《汉书》和《三国志》怎样组织材料，再把注释、史学批评与编年写作放在一起。北非的《绪论》、基切人的《波波尔·乌》和现代中国哲学史，提出另外几种问题。这些作品不属于一条共同的演进路线，比较的是各自的材料、写作处境和解释方法。',
     ],
     conclusion:
       '选两部书，分别指出它们保存了什么、用什么次序组织材料、希望回答什么问题。再想想，怎样的另一种史料能够补充它们？',
     color: '#7e7b92',
     chapters: [
+      {
+        eventId: 'simaqian-shiji-writing',
+        explanation:
+          '司马迁承接父亲的编史计划，以本纪、表、书、世家与列传贯通多时代的材料，受刑后仍继续著述。编史有持续的家学、文献与个人选择，不宜压成单年完稿。',
+        mapReading:
+          '以长安理解任官和文献环境，书中记述的地域与作者实际游历分别看待；前104年只是著述阶段的参照。',
+      },
       {
         eventId: 'early-plus-ban-gu-history',
         explanation:
@@ -356,6 +363,7 @@ export const connectedTopicTours: Tour[] = [
       },
     ],
     steps: [
+      'simaqian-shiji-writing',
       'early-plus-ban-gu-history',
       'chen-shou-history',
       'early-plus-yanshigu-hanshu',
@@ -366,6 +374,11 @@ export const connectedTopicTours: Tour[] = [
       'modern-hushi-history-chinese-philosophy',
     ],
     sources: [
+      { title: '《史记》卷130 · 太史公自序', url: 'https://zh.wikisource.org/wiki/史記/卷130' },
+      {
+        title: '《汉书》卷62 · 司马迁传及报任安书',
+        url: 'https://zh.wikisource.org/wiki/漢書/卷062',
+      },
       {
         title: '《後漢書》卷40上',
         url: 'https://zh.wikisource.org/wiki/後漢書/卷40上',
@@ -418,7 +431,7 @@ export const connectedTopicTours: Tour[] = [
       },
     ],
     icon: 'route',
-    subtitle: '8 章 · 问题与史事对读',
+    subtitle: '9 章 · 问题与史事对读',
     description:
       '史书保存过去，也对过去作出选择。以人物为中心，还是按年排列；沿用旧说，还是比较异文；为朝廷提供鉴戒，还是保存共同体的记忆，都会改变读者看到的历史。',
   },

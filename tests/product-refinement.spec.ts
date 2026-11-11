@@ -482,7 +482,9 @@ for (const [width, height] of [
         .click()
     }
     await page.locator('.tour-card').filter({ hasText: topic.name }).click()
-    await expect(page.locator('.topic-reading-help')).toContainText('1912年后的章节在时空柱中阅读')
+    await expect(page.locator('.topic-introduction > .topic-reading-help')).toContainText(
+      '1912年后的章节在时空柱中阅读',
+    )
     await page.locator('.resume-reading button').click()
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
     await expect(page).toHaveURL(/visual=pillar(?:&|$)/)

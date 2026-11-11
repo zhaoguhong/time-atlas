@@ -15,6 +15,7 @@ import './focus-mode.css'
 import './time-pillar.css'
 import './color-mode.css'
 import './product-refinement.css'
+import './mobile-navigation.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

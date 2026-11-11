@@ -35,6 +35,8 @@ async function readingContrast(page: Page, selector: string) {
   expect(ratios.every((ratio) => ratio >= 4.5)).toBe(true)
 }
 async function toggle(page: Page, target: 'dark' | 'light') {
+  if (!(await page.locator('.color-mode-toggle').isVisible()))
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
   await page
     .getByRole('button', {
       name: target === 'dark' ? '切换到夜间模式' : '切换到白天模式',

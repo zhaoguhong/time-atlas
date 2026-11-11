@@ -3,6 +3,12 @@ import { expect, test, type Page } from '@playwright/test'
 import { installPillarClock } from './pillar-clock-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 
+async function toggleAppearance(page: Page, name: string) {
+  if (!(await page.locator('.color-mode-toggle').isVisible()))
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+  await page.getByRole('button', { name, exact: true }).click()
+}
+
 const storageKey = 'time-atlas:pillar-theme:v1'
 const themes = [
   ['column', '琉璃时柱'],
@@ -252,7 +258,7 @@ for (const [width, height] of [
       else await expect(page.locator('.pillar-scenery')).toBeVisible()
 
       await page.screenshot({ path: info.outputPath(`${id}-light-${width}x${height}.png`) })
-      await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+      await toggleAppearance(page, '切换到夜间模式')
       await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'dark')
       await compactGeometry(page)
       await nightTextContrast(page)
@@ -263,7 +269,7 @@ for (const [width, height] of [
       }
       expect(await readingState(page)).toEqual(state)
       await page.screenshot({ path: info.outputPath(`${id}-dark-${width}x${height}.png`) })
-      await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+      await toggleAppearance(page, '切换到白天模式')
       await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'light')
     })
   }
@@ -321,8 +327,7 @@ for (const [id, name] of themes) {
       await pillarSideButton(page, side).click()
       await closeSettings(page)
       for (const mode of ['light', 'dark']) {
-        if (mode === 'dark')
-          await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+        if (mode === 'dark') await toggleAppearance(page, '切换到夜间模式')
         const surfaces = await page.evaluate(() => {
           const canvas = document.querySelector('.time-pillar')!
           const probe = document.createElement('span')
@@ -341,7 +346,7 @@ for (const [id, name] of themes) {
         if (mode === 'dark') {
           await nightTextContrast(page)
           await page.screenshot({ path: info.outputPath(`${id}-${side}-dark.png`) })
-          await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+          await toggleAppearance(page, '切换到白天模式')
         }
       }
     }

@@ -29,6 +29,9 @@ export default function JourneyPanel({
       <h3>
         有据可查的生平行迹 <small>{view.nodes.length} 条</small>
       </h3>
+      <p className="journey-reading-note">
+        动画按记录先后示意，连线不表示真实道路或航线；两条记录之间的行程与停留未作推断。
+      </p>
       {active && (
         <div className="journey-active-card" aria-live="polite">
           <span className="eyebrow">
@@ -68,9 +71,6 @@ export default function JourneyPanel({
         <summary>人物简介与行迹说明</summary>
         <ReadingText className="detail-lead" text={biography} />
         <p className="journey-introduction">{journey.introduction}</p>
-        <div className="journey-reading-note">
-          箭头表示两条记录的先后顺序，省略中间行程，不表示实际道路。未收录的年份与地点不作推断。
-        </div>
       </details>
       <ol className="journey-node-list">
         {view.nodes.map((node, i) => (

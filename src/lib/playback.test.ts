@@ -5,8 +5,10 @@ import { interpolateJourneyCoordinates, nextJourneyNode } from './playback'
 describe('chronological journey playback', () => {
   it('advances same-year records individually and stops after the last record', () => {
     const nodes = journeyByPerson.get('sushi')!.nodes
-    expect(nodes[1].year).toBe(nodes[2].year)
-    expect(nextJourneyNode(nodes, nodes[1].id)?.id).toBe(nodes[2].id)
+    const exam = nodes.find((node) => node.id === 'sushi-exam')!
+    const mourning = nodes.find((node) => node.id === 'sushi-mourning')!
+    expect(exam.year).toBe(mourning.year)
+    expect(nextJourneyNode(nodes, exam.id)?.id).toBe(mourning.id)
     expect(nextJourneyNode(nodes, nodes.at(-1)!.id)).toBeNull()
     expect(nextJourneyNode(nodes, null)?.id).toBe(nodes[0].id)
   })

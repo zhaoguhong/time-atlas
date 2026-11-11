@@ -105,10 +105,33 @@ for (const [width, height] of [
       await expectTouchControl(headerMode(page, name))
       await expect(headerMode(page, name)).toHaveText(name)
     }
-    await expectTouchControl(page.getByRole('button', { name: '切换到夜间模式', exact: true }))
+    await expectTouchControl(
+      page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true }),
+    )
+    if (mobile) {
+      await expect(page.getByRole('button', { name: '切换到夜间模式', exact: true })).toBeHidden()
+      await page.getByRole('button', { name: '更多操作', exact: true }).click()
+      await expectTouchControl(page.getByRole('button', { name: '切换到夜间模式', exact: true }))
+      await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    } else
+      await expectTouchControl(page.getByRole('button', { name: '切换到夜间模式', exact: true }))
     await expect(page.locator('.visualization-action')).toHaveCount(0)
     await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'true')
     await expectHeaderFit(page)
+    if (mobile) {
+      const brand = (await page.locator('.brand').boundingBox())!
+      for (const control of [
+        headerMode(page, '地图'),
+        headerMode(page, '时空柱'),
+        page.locator('[data-main-topics]'),
+        page.locator('.header-more'),
+      ]) {
+        const rect = (await control.boundingBox())!
+        expect(rect.y + rect.height / 2).toBeCloseTo(brand.y + brand.height / 2, 0)
+      }
+      const header = (await page.locator('.topbar').boundingBox())!
+      expect(header.height).toBe(60)
+    }
     await expect(page.locator('.map-mode-shortcut')).toHaveCount(0)
     if (mobile) {
       await setSheet(page, 'reading')
@@ -255,15 +278,19 @@ for (const [width, height] of [
   })
 }
 
-test('mobile topic and free-exploration actions stay discoverable in More', async ({ page }) => {
+test('mobile topics stay in the header and free exploration stays in More', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 640 })
   await mapReady(page, 'year=750')
-  await page.getByRole('button', { name: '更多操作', exact: true }).click()
-  const topics = page
-    .locator('.header-actions')
-    .getByRole('button', { name: '历史专题', exact: true })
+  const topics = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
   await expectTouchControl(topics)
   await topics.click()
+  await expect(topics).toHaveAttribute('aria-current', 'true')
+  await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'true')
+  await headerMode(page, '时空柱').click()
+  await expect(headerMode(page, '时空柱')).toHaveAttribute('aria-pressed', 'true')
+  await expect(topics).not.toHaveAttribute('aria-current')
+  await expect(page.locator('.tours-panel')).toBeVisible()
+  await headerMode(page, '地图').click()
   await expect(page.getByRole('button', { name: '更多操作', exact: true })).toHaveAttribute(
     'aria-expanded',
     'false',
@@ -274,6 +301,7 @@ test('mobile topic and free-exploration actions stay discoverable in More', asyn
   const free = page.getByRole('button', { name: '返回自由探索', exact: true })
   await expectTouchControl(free)
   await free.click()
+  await expect(topics).not.toHaveAttribute('aria-current')
   await expect(page.locator('.tour-banner')).toBeHidden()
   await expect(page.locator('.topic-introduction')).toBeHidden()
   await expect(page).not.toHaveURL(/tour=/)
@@ -311,3 +339,106 @@ test('narrow comparison remains actionable with errors and focus mode', async ({
     await page.screenshot({ path: info.outputPath(`narrow-comparison-focus-${focused}.png`) })
   }
 })
+
+for (const [width, height] of [
+  [320, 640],
+  [390, 844],
+  [844, 390],
+]) {
+  test(`mobile topic reading reclaims the playback area at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/#tour=zheng-he-voyages&step=-1')
+    await setSheet(page, 'reading')
+    await expect(page.locator('.topic-introduction h2')).toContainText('郑和下西洋')
+    await expect(page.locator('.timeline')).toBeHidden()
+    await expectHeaderFit(page)
+    const panel = (await page.locator('.story-panel').boundingBox())!
+    expect(panel.y + panel.height).toBeCloseTo(height, 0)
+    await page.screenshot({ path: info.outputPath(`topic-reading-header-${width}.png`) })
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+    await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'dark')
+    await expect(page.locator('.topic-introduction h2')).toContainText('郑和下西洋')
+    await expect(page.locator('.timeline')).toBeHidden()
+    await page.getByRole('button', { name: '开始地图学习', exact: true }).click()
+    await expect(page.locator('.timeline')).toBeVisible()
+    await expect(page.locator('.atlas-app')).toHaveAttribute('data-topic-overview', 'false')
+    await setSheet(page, 'reading')
+    await page.getByRole('button', { name: '专题导读与目录', exact: true }).click()
+    await expect(page.locator('.timeline')).toBeHidden()
+    await page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true }).click()
+    await expect(page.locator('.tours-panel')).toBeVisible()
+    await expect(page.locator('.timeline')).toBeHidden()
+    await page.screenshot({ path: info.outputPath(`topic-directory-dark-${width}.png`) })
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+    await page.getByRole('button', { name: '返回自由探索', exact: true }).click()
+    await expect(page.locator('.timeline')).toBeVisible()
+  })
+}
+
+for (const [width, height] of [
+  [320, 640],
+  [390, 844],
+  [568, 320],
+  [844, 390],
+]) {
+  test(`mobile search expands inside the header and can be dismissed at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/#visual=pillar&year=1687')
+    const input = page.getByRole('combobox', { name: '搜索历史事件、人物或地名' })
+    const search = page.locator('.top-search')
+    for (const colorScheme of ['light', 'dark'] as const) {
+      await page.emulateMedia({ colorScheme })
+      await input.click()
+      const header = (await page.locator('.topbar').boundingBox())!
+      const expanded = (await search.boundingBox())!
+      expect(expanded.y).toBeGreaterThanOrEqual(header.y)
+      expect(expanded.y + expanded.height).toBeLessThanOrEqual(header.y + header.height)
+      expect(expanded.width).toBeGreaterThan(width - 32)
+      await input.fill('苏轼')
+      await expect(page.getByRole('option').first()).toBeVisible()
+      const results = (await page.locator('.search-results').boundingBox())!
+      expect(results.width).toBeGreaterThan(width - 36)
+      expect(results.y).toBeGreaterThanOrEqual(header.y + header.height)
+      expect(results.y + results.height).toBeLessThanOrEqual(height)
+      await page.screenshot({ path: info.outputPath(`search-${colorScheme}-${width}.png`) })
+      await page.getByRole('button', { name: '清空搜索', exact: true }).click()
+      await expect(input).toBeFocused()
+      await expect(input).toHaveValue('')
+      await expect(page.locator('.search-results')).toBeHidden()
+      await page.getByRole('button', { name: '取消搜索', exact: true }).click()
+      await expect(search).toHaveJSProperty('offsetWidth', 44)
+      await expectHeaderFit(page)
+    }
+    await input.click()
+    await input.fill('苏轼')
+    await page.getByRole('option').filter({ hasText: '人物' }).first().click()
+    await expect(page.locator('.person-biography')).toContainText('苏轼')
+    await expect(page.locator('.search-results')).toBeHidden()
+    await expect(search).toHaveJSProperty('offsetWidth', 44)
+  })
+}
+
+for (const width of [390, 1440]) {
+  test(`view navigation clears the topic outline including the current view at ${width}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto('/#visual=pillar&year=1687')
+    const topics = page.locator('[data-main-topics]')
+    for (const name of ['时空柱', '地图', '地图', '时空柱'] as const) {
+      await topics.click()
+      await expect(topics).toHaveAttribute('aria-current', 'true')
+      await headerMode(page, name).click()
+      await expect(topics).not.toHaveAttribute('aria-current')
+      await expect(headerMode(page, name)).toHaveAttribute('aria-pressed', 'true')
+      await expect(page.locator('.tours-panel')).toBeVisible()
+    }
+    await page.mouse.move(0, 0)
+    await page.screenshot({ path: info.outputPath(`topics-after-view-${width}.png`) })
+  })
+}

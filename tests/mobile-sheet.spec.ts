@@ -206,3 +206,23 @@ test('shows a clean Five Dynasties label while retaining the combined-source exp
   await expect(page.locator('.polity-detail .evidence-note')).toContainText('不是一个统一政权')
   await expect(page.locator('.polity-english')).toHaveText('(Five Dynasties and Ten Kingdoms)')
 })
+
+test('topic introduction can drag to full reading without a bottom timeline', async ({ page }) => {
+  await page.goto('/#tour=zheng-he-voyages&step=-1')
+  await setSheet(page, 'split')
+  await expect(page.locator('.timeline')).toBeHidden()
+  const handle = page.locator('.mobile-sheet-handle')
+  const bounds = (await handle.boundingBox())!
+  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + 22)
+  await page.mouse.down()
+  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y - 178, { steps: 8 })
+  await expect(page.locator('.atlas-app')).toHaveAttribute('data-sheet-dragging', 'true')
+  const panel = (await page.locator('.story-panel').boundingBox())!
+  expect(panel.height).toBeGreaterThan(400)
+  await page.mouse.up()
+  await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'reading')
+  const expanded = (await page.locator('.story-panel').boundingBox())!
+  const header = (await page.locator('.topbar').boundingBox())!
+  expect(expanded.y).toBeCloseTo(header.y + header.height, 0)
+  expect(expanded.y + expanded.height).toBeCloseTo(844, 0)
+})

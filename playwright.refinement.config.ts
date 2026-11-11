@@ -4,6 +4,9 @@ export default defineConfig({
   ...base,
   testMatch: [
     'product-refinement.spec.ts',
+    'topic-articles.spec.ts',
+    'topic-routes.spec.ts',
+    'journey-refresh.spec.ts',
     'event-reading.spec.ts',
     'content-completeness.spec.ts',
     'scale-expansion.spec.ts',

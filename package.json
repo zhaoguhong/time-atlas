@@ -27,7 +27,8 @@
     "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts",
     "test:e2e:pillar": "playwright test --config playwright.pillar.config.ts",
     "test:e2e:world": "playwright test --config playwright.world.config.ts",
-    "test:e2e:refinement": "playwright test --config playwright.refinement.config.ts"
+    "test:e2e:refinement": "playwright test --config playwright.refinement.config.ts",
+    "test:e2e:journeys": "playwright test --config playwright.journeys.config.ts"
   },
   "dependencies": {
     "lucide-react": "^1.52.0",

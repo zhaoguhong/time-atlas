@@ -4,6 +4,7 @@
   border-top: 1px solid var(--line);
 }
 .event-topic-paths > button {
+  scroll-margin-block: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;

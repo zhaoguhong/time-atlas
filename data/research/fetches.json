@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T17:54:23.148596+00:00",
+  "updatedAt": "2026-11-06T03:44:09.681756+00:00",
   "sources": [
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
@@ -410,6 +410,55 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://chiculture.org.hk/sc/china-five-thousand-years/1408",
+      "resolvedUrl": "https://chiculture.org.hk/sc/china-five-thousand-years/1408",
+      "title": "中国文化研究院 · 袁行霈《李白非凡的一生》",
+      "retrievedAt": "2026-11-04T16:12:44.761993+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/bbc25609aa035440634c1e80.html",
+      "textPath": "data/raw/research/bbc25609aa035440634c1e80.txt",
+      "sha256": "bde6e17a2353d04a06c4dcbad36726c8df295c114c83521be293454b1e69dfd7",
+      "textSha256": "099c3531acb8ddfe91183307ef56f028b57ef0f9c90de40df2b10d0f0e1458e5",
+      "bytes": 45820,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-shu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-anlu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-lushan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-xunyang-prison"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu-death"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://chiculture.org.hk/tc/china-five-thousand-years/1384",
       "resolvedUrl": "https://chiculture.org.hk/tc/china-five-thousand-years/1384",
       "title": "中国文化研究院 · 杜甫一生的足迹",
@@ -533,6 +582,40 @@
       ]
     },
     {
+      "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
+      "resolvedUrl": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
+      "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
+      "retrievedAt": "2026-11-04T16:19:03.239634+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/d09dcae59778f4b3f69ac4ba.html",
+      "textPath": "data/raw/research/d09dcae59778f4b3f69ac4ba.txt",
+      "sha256": "35f405392fdf4aec858882d4660a5e7a2c2c0c77033e37f380c5aed898cc6c90",
+      "textSha256": "b2c2815a63879f5804c4d2d8679f3a601b169de860e499e0fa9c688862baa8ce",
+      "bytes": 47129,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-wuchang"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-zhenhai"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kaifeng-river"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-changsha"
+        }
+      ],
+      "transport": "system curl --fail --location (TLS-compatible fallback after recorded urllib failure)",
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://cssn.cn/kgxc/kgxc_kgxl/202211/t20221120_5565364.shtml",
       "resolvedUrl": "https://cssn.cn/kgxc/kgxc_kgxl/202211/t20221120_5565364.shtml",
       "title": "郑州商城 · 考古与机构资料",
@@ -579,6 +662,35 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://daj.fuzhou.gov.cn/zz/wszt/tslm/msfq/202306/t20230605_4614379.htm",
+      "resolvedUrl": "https://daj.fuzhou.gov.cn/zz/wszt/tslm/msfq/202306/t20230605_4614379.htm",
+      "title": "福州档案信息网 · 林则徐笔下的福州文化遗址",
+      "retrievedAt": "2026-11-04T16:12:42.809861+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/a470f377ea7704605bcc87dc.html",
+      "textPath": "data/raw/research/a470f377ea7704605bcc87dc.txt",
+      "sha256": "41f7090f696926a81b4c464dcd0f3278b1b998bff2c1746f8ed65352e12bf5f4",
+      "textSha256": "f922fe4737750aeae6cb8ce6ad94f6296759abecf285671750c23908996d9233",
+      "bytes": 37746,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-mourning"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-retirement"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-puning-death"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://depts.washington.edu/silkroad/texts/sogdlet.html",
       "resolvedUrl": "https://depts.washington.edu/silkroad/texts/sogdlet.html",
       "title": "University of Washington · Sogdian Ancient Letters（书信译文与导读）",
@@ -610,6 +722,31 @@
           "id": "completeness-kutadgu-bilig"
         }
       ]
+    },
+    {
+      "url": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
+      "resolvedUrl": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
+      "title": "南京市地方志工作办公室 · “官爱江南为六朝”——林则徐与南京",
+      "retrievedAt": "2026-11-04T16:12:42.975418+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/6ab912c4ac0a0d7e3213346c.html",
+      "textPath": "data/raw/research/6ab912c4ac0a0d7e3213346c.txt",
+      "sha256": "1fb2fc21f9246529fc5f4ed4afff6284ce978aab8cb10d67938a26ad5f8c1909",
+      "textSha256": "678d100d426d33271870ef47443350f869a5869cb4db7bf19dd82566c16b94d3",
+      "bytes": 44715,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-beijing-exam"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-suzhou"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
@@ -650,6 +787,27 @@
         {
           "kind": "event",
           "id": "depth-sun-simiao-qianjin"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=146341&q=1&word=%E5%AE%97",
+      "resolvedUrl": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=146341&q=1&word=%E5%AE%97",
+      "title": "教育部《重编国语辞典修订本》· 宋哲宗",
+      "retrievedAt": "2026-11-04T16:52:41.482463+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/3d0a831171f13182f6410c46.html",
+      "textPath": "data/raw/research/3d0a831171f13182f6410c46.txt",
+      "sha256": "42be0262b886b7e0556212efb8c14bf86f564112b87a540cff70d3fdb05b7e0b",
+      "textSha256": "5563fd74390bd8659694a55410bc15970e4eb5e35df097e94d36420b232d5613",
+      "bytes": 8382,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "person",
+          "id": "song-zhezong"
         }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."
@@ -928,6 +1086,35 @@
       "revisionId": null,
       "references": [
         "world-gupta"
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/caldb_s.cgi?year=754",
+      "resolvedUrl": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/caldb_s.cgi?year=754",
+      "title": "日本国立天文台历计算室 · 754年历月与节月",
+      "retrievedAt": "2026-11-04T16:12:45.074948+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/917175af93fa35f2181ea6c3.html",
+      "textPath": "data/raw/research/917175af93fa35f2181ea6c3.txt",
+      "sha256": "336910c3fe2487736edd5abe25ecefc799b5a4e22681f977494aa3cf7c550807",
+      "textSha256": "3ea0b9f4c4676fdd1bc48a6dc8f0771642bfe74325b228f24a47efbc7a95e935",
+      "bytes": 19078,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q714061-record-yakushima"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
@@ -2643,6 +2830,27 @@
       "textSha256": "df38f73ad0e918360a4b3a5972d8e553872b54757db832b2876030bff59b6e47"
     },
     {
+      "url": "https://maritimemuseum.sjtu.edu.cn/info/1161/5931.htm",
+      "resolvedUrl": "https://maritimemuseum.sjtu.edu.cn/info/1161/5931.htm",
+      "title": "上海交通大学董浩云航运博物馆 ·《天妃灵应之记》碑",
+      "retrievedAt": "2026-11-04T16:12:43.310599+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/ada2d7fa2099588b52a6ff1e.html",
+      "textPath": "data/raw/research/ada2d7fa2099588b52a6ff1e.txt",
+      "sha256": "1c0381bca8f4885446675f23d053a40aad7e5463b398faed9b30e15b3a92bc6e",
+      "textSha256": "06ad33d4c600523a2e88e636765be564fc17068255e8eb4b26d4a13b0f3e9a92",
+      "bytes": 8852,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-changle"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
       "resolvedUrl": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
       "title": "University of St Andrews · MacTutor · Albert Einstein",
@@ -3008,6 +3216,31 @@
         {
           "kind": "event",
           "id": "modern-may-fourth"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
+      "resolvedUrl": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
+      "title": "济宁市自然资源和规划局 · 轻舟已过万重山",
+      "retrievedAt": "2026-11-04T16:12:43.609222+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/27669a2295e2f3e5fffa3d33.html",
+      "textPath": "data/raw/research/27669a2295e2f3e5fffa3d33.txt",
+      "sha256": "1e9e03ed6393cbf6a8af290001fd2f9e40cc914c286910a64106292f2e32ebed",
+      "textSha256": "c288e032ddffc17ad9ec906dbad6b61b9d5c70da23aa822982ce90731a039902",
+      "bytes": 12757,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-baidi-pardon"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-jiangling-return"
         }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."
@@ -6930,6 +7163,83 @@
       "lastCacheCheckAt": "2026-10-07T06:45:07.148641+00:00"
     },
     {
+      "url": "https://shandong-chorography.org/database/a/section/87/article/9/",
+      "resolvedUrl": "https://shandong-chorography.org/database/a/section/87/article/9/",
+      "title": "山东地情档案 · 《李清照志》第二类生平",
+      "retrievedAt": "2026-11-04T16:12:46.241421+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/d5f853371b9cd530b13335fd.html",
+      "textPath": "data/raw/research/d5f853371b9cd530b13335fd.txt",
+      "sha256": "b82933a910106a2fd449ce51edc995213c085087a35fb76036a682fc83433f6c",
+      "textSha256": "79eff833ac2de335829bcef5904b6359dead10ea40c9e1fd4af596ba493c347f",
+      "bytes": 39297,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-bianjing-marriage"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-qingzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-laizhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-south"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wuhu"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-chiyang"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-illness"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-zhangan"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-first"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-quzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-return"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-linan"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jinhua"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jinhua-writing"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://shandong-chorography.org/database/c34/section/8/article/672/",
       "resolvedUrl": "https://shandong-chorography.org/database/c34/section/8/article/672/",
       "title": "后李 · 考古与机构资料",
@@ -7764,38 +8074,9 @@
       "textPath": "data/raw/research/6ecaa5d563a271932d3f46bc.txt",
       "sha256": "9b7ce1bade577e857a5d8b16d12b7fb1300d3a923c1a7dc1ee8201a49f784398",
       "bytes": 184780,
-      "references": [
-        {
-          "kind": "event",
-          "id": "zhangqian"
-        },
-        {
-          "kind": "event",
-          "id": "hexi"
-        },
-        {
-          "kind": "event",
-          "id": "zhangqian-second"
-        },
-        {
-          "kind": "event",
-          "id": "western-regions"
-        },
-        {
-          "kind": "event",
-          "id": "ban-chao"
-        },
-        {
-          "kind": "event",
-          "id": "xuanzang"
-        },
-        {
-          "kind": "topic",
-          "id": "silk-road"
-        }
-      ],
+      "references": [],
       "usage": "Local verification only; website contains project-authored summaries and links.",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.961429+00:00",
+      "lastCacheCheckAt": "2026-11-06T03:20:40.465839+00:00",
       "revisionId": null,
       "textSha256": "117ed8632baddfbbad0222e24ef805d0ebbb4e978acf70d4d0abb6c1bb5f086b"
     },
@@ -8853,6 +9134,28 @@
           "id": "q698925"
         }
       ]
+    },
+    {
+      "url": "https://wlt.hubei.gov.cn/bmdt/xydt/201911/t20191121_1370714.shtml",
+      "resolvedUrl": "https://wlt.hubei.gov.cn/bmdt/xydt/201911/t20191121_1370714.shtml",
+      "title": "湖北省文化和旅游厅 · 安陆李白文化旅游节侧记",
+      "retrievedAt": "2026-11-04T16:19:03.240760+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/54218f53d39e546f8a864cd1.html",
+      "textPath": "data/raw/research/54218f53d39e546f8a864cd1.txt",
+      "sha256": "2637c751438999add383d74ad2a3167d901b53dfd5acdbc39a196c9f0c618524",
+      "textSha256": "4844ce8ed1d13bfb491c3dae8dc6c0c3409d5c92476c289d487c6c8998f41156",
+      "bytes": 55733,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-anlu"
+        }
+      ],
+      "transport": "system curl --fail --location (TLS-compatible fallback after recorded urllib failure)",
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523544/index.html",
@@ -17424,6 +17727,27 @@
       "lastCacheCheckAt": "2026-10-07T06:45:07.023396+00:00"
     },
     {
+      "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/201912/t20191202_5051930.shtml",
+      "resolvedUrl": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/201912/t20191202_5051930.shtml",
+      "title": "中国社会科学院 · 郑和下西洋七至满剌加",
+      "retrievedAt": "2026-11-04T16:12:45.217262+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/7009901863bcd816012c7206.html",
+      "textPath": "data/raw/research/7009901863bcd816012c7206.txt",
+      "sha256": "e8614ad1b9b3bd93ba7be4dd18288ff399aee04cf9daa5fe21999298f25b725f",
+      "textSha256": "93dc8b6b05ccaea2f26a4f365ba0e8d0450e6bc161280d5f5455f57b8e967eac",
+      "bytes": 34515,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-longwan"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
       "resolvedUrl": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
       "title": "朝阳市人民政府 · 牛河梁遗址概述",
@@ -17865,6 +18189,22 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://www.confucius.taichung.gov.tw/834557/834568/834569/834576/834579/837742/post",
+      "resolvedUrl": "https://www.confucius.taichung.gov.tw/834557/834568/834569/834576/834579/837742/post",
+      "title": "台中市孔庙忠烈祠联合管理所 · 孔子年表",
+      "retrievedAt": "2026-11-04T16:11:38.471252+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/579ca53753bf301a1b21283f.html",
+      "textPath": "data/raw/research/579ca53753bf301a1b21283f.txt",
+      "sha256": "6e845e575d486e5490cc11e7dc3f0eb6e785e2ea5b55090728b11f1dd65d8f1e",
+      "textSha256": "2ada38657975997e48963389f841e4744006f4ec37e537810e251147f19559d0",
+      "bytes": 52578,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.cp.com.cn/book/3bf46e31-0.html",
       "resolvedUrl": "https://www.cp.com.cn/book/3bf46e31-0.html",
       "title": "商务印书馆 · 《论道》内容简介",
@@ -18084,6 +18424,48 @@
       "contentType": "text/html",
       "revisionId": null,
       "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links.",
+      "lastCacheCheckAt": "2026-11-06T03:20:40.492907+00:00"
+    },
+    {
+      "url": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
+      "resolvedUrl": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
+      "title": "扬州大明寺 · 鉴真年表",
+      "retrievedAt": "2026-11-04T16:12:45.539005+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/102616435d1d9fdc7840f095.html",
+      "textPath": "data/raw/research/102616435d1d9fdc7840f095.txt",
+      "sha256": "c0dc8405f82d1366ec5b948a9892e6d654b6c742d046421318a1c9d03618e245",
+      "textSha256": "8de3ce17a524b0074c2b9f4e2544159637da2b5c36ef7dd3363844d6a3d3f1dc",
+      "bytes": 30563,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q714061-record-first-preparation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-ayuwang"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-guoqing"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-zhenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-sixth-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-huangsipu"
+        }
+      ],
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
@@ -18997,6 +19379,31 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS2_09.pdf",
+      "resolvedUrl": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS2_09.pdf",
+      "title": "香港教育局 · 《早发白帝城》教学资料",
+      "retrievedAt": "2026-11-04T16:12:54.495851+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/2f61a0bb8e1cfdc8b3c35976.pdf",
+      "textPath": "data/raw/research/2f61a0bb8e1cfdc8b3c35976.txt",
+      "sha256": "85c3d7d167b1602cfcc66bebf79eb3eee4f1438c4bb21dd3068bd1655181ab0f",
+      "textSha256": "2a9cdb82d6df1e953cd9589d5a74a8aa38fc6db2396ef0bc81176f239f900101",
+      "bytes": 391375,
+      "contentType": "application/pdf",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-baidi-pardon"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-jiangling-return"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.edu.cn/jiao_yu_fa_lv_766/20060303/t20060303_165119.shtml",
       "title": "中国教育和科研计算机网 · 中华人民共和国义务教育法（1986年）",
       "attemptedAt": "2026-11-02T15:57:56.567512+00:00",
@@ -19130,6 +19537,31 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
+      "resolvedUrl": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
+      "title": "外交部 · 外交史上的今天（鉴真754年抵日）",
+      "retrievedAt": "2026-11-04T16:12:45.742565+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/9e06de20c6a9c91d3dce874d.html",
+      "textPath": "data/raw/research/9e06de20c6a9c91d3dce874d.txt",
+      "sha256": "bb9008dfabdefda3e5879769c775d8285c29dd722125c5c3e0a431a4413a63d5",
+      "textSha256": "d8193d051323c07afcc4960b17543a250d6b08e93768dbf9362b27b3b36613d5",
+      "bytes": 58832,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.folger.edu/explore/shakespeares-life/",
       "resolvedUrl": "https://www.folger.edu/explore/shakespeares-life/",
       "title": "Folger Shakespeare Library · Shakespeare’s life",
@@ -19186,6 +19618,31 @@
           "id": "modern-phil-kripke"
         }
       ]
+    },
+    {
+      "url": "https://www.gdwsw.gov.cn/rwcq/content/post_25879.html",
+      "resolvedUrl": "https://www.gdwsw.gov.cn/rwcq/content/post_25879.html",
+      "title": "广东省人民政府文史研究馆 · 林则徐在虎门",
+      "retrievedAt": "2026-11-04T16:12:46.283649+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/7f88548454b438ce9d2724f5.html",
+      "textPath": "data/raw/research/7f88548454b438ce9d2724f5.txt",
+      "sha256": "b73704fefd4b15b5025d3f494ec06dca9bd487ec0493c4080322e9e6f994160f",
+      "textSha256": "bb0d5c864c24c9ad6703454d6a660ab8e9baef666e6906d318534c17e2a8ad64",
+      "bytes": 31309,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-guangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-humen"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
@@ -19398,6 +19855,97 @@
       "lastCacheCheckAt": "2026-10-08T17:27:38.169526+00:00"
     },
     {
+      "url": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
+      "resolvedUrl": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
+      "title": "哥伦布首次航行日记及书信 · 1492—1493",
+      "retrievedAt": "2026-11-06T03:44:09.679513+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/c08a92e2f82c073e518d0358.html",
+      "textPath": "data/raw/research/c08a92e2f82c073e518d0358.txt",
+      "sha256": "4c7df3f54fdef8dfda810924ab6670bd94a6a7d03a24b02c59fc75c16550a3ab",
+      "textSha256": "1773f2212927a3a4b137bb8d77bde805405a38e9e9371efab6fd58ab821cdf1a",
+      "bytes": 1422796,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
+      "resolvedUrl": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 1519—1521年航段",
+      "retrievedAt": "2026-11-06T03:42:33.855710+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/6d9bf5906c4870d99f390c16.html",
+      "textPath": "data/raw/research/6d9bf5906c4870d99f390c16.txt",
+      "sha256": "f54cd0790a7b245b0aaea1287bef553eb79be0c1ee4f75f703578faf7affc001",
+      "textSha256": "88f037ff53a5fc0a59e2a67c6afb47930ee05d45fc07d5216af7adb54130c548",
+      "bytes": 870215,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
+      "resolvedUrl": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
+      "title": "达伽马首次航行日志",
+      "retrievedAt": "2026-11-06T03:20:57.699186+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/2771dc717edf5e2293991448.html",
+      "textPath": "data/raw/research/2771dc717edf5e2293991448.txt",
+      "sha256": "894e46fe88d353e8239e7de34bf5c83738f6c403f5a22aa34ab5ccdedf9813b2",
+      "textSha256": "5ee0252eb8826fdc4827eba9b97fa3197fdfdbb2ba33caf6455d2a639b61e7fd",
+      "bytes": 760680,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
+      "resolvedUrl": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 返航部分",
+      "retrievedAt": "2026-11-06T03:43:51.869159+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/b489906c126afc5ff91c0c40.html",
+      "textPath": "data/raw/research/b489906c126afc5ff91c0c40.txt",
+      "sha256": "e98419e4e7d1d1e86275338a09bda597c94d18b791bfb5955e51f53019e3a3e5",
+      "textSha256": "079bcef1d99a49f2026a7d99f008896eda7697e3397a36b7a8935149c97a74b6",
+      "bytes": 923343,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
       "resolvedUrl": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
       "title": "二里头遗址 · 考古发现与许宏访谈",
@@ -19567,6 +20115,22 @@
           "id": "modern-macao-handover"
         }
       ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
+      "resolvedUrl": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
+      "title": "西班牙国家地理研究所：环球航行图",
+      "retrievedAt": "2026-11-06T03:24:28.022246+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/33c808484a5392a2fa808768.pdf",
+      "textPath": "data/raw/research/33c808484a5392a2fa808768.txt",
+      "sha256": "3344a9643ec306d1f52ffa8b0b0c2e2db02dfcdb09b60a9359597c726b3e1bc3",
+      "textSha256": "2a9cdb82d6df1e953cd9589d5a74a8aa38fc6db2396ef0bc81176f239f900101",
+      "bytes": 16321826,
+      "contentType": "application/pdf",
+      "revisionId": null,
+      "references": [],
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
@@ -19813,6 +20377,22 @@
           "id": "depth-daguerre-photography"
         }
       ]
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/1492/columbus.html",
+      "resolvedUrl": "https://www.loc.gov/exhibits/1492/columbus.html",
+      "title": "哥伦布：人物与文献",
+      "retrievedAt": "2026-11-06T03:20:40.424988+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/78ef88e40df3cf0f3395197b.html",
+      "textPath": "data/raw/research/78ef88e40df3cf0f3395197b.txt",
+      "sha256": "20f19093a5e07ddb7f8c67d072e3434de27545c24dd5b3214f71b0e6d92b1f09",
+      "textSha256": "ad18715092624b27686f389d63c9656366d33ccfa223de428481a3848c923612",
+      "bytes": 20217,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
@@ -21591,6 +22171,48 @@
       "lastCacheCheckAt": "2026-10-06T16:20:23.021779+00:00"
     },
     {
+      "url": "https://www.quanzhou.gov.cn/lyb/lytj/rmjdtj/202202/t20220224_2699971.htm",
+      "resolvedUrl": "https://www.quanzhou.gov.cn/lyb/lytj/rmjdtj/202202/t20220224_2699971.htm",
+      "title": "泉州市人民政府 · 伊斯兰教圣墓（郑和行香碑）",
+      "retrievedAt": "2026-11-04T16:12:46.570181+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/0f1bd1024e187745638009bc.html",
+      "textPath": "data/raw/research/0f1bd1024e187745638009bc.txt",
+      "sha256": "f8e43f3b034ccca5158e73a41e1baef0e60ead4d676b6ba769b3c0fafe515c16",
+      "textSha256": "1028b36e220391c07a597641886e22a4092d455b57560c8658a667ecd1040c78",
+      "bytes": 56407,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-quanzhou"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://www.quanzhou.gov.cn/lyb/lyxw/202107/t20210712_2586392.htm",
+      "resolvedUrl": "https://www.quanzhou.gov.cn/lyb/lyxw/202107/t20210712_2586392.htm",
+      "title": "泉州市人民政府 · 石湖码头（附郑和行香碑文）",
+      "retrievedAt": "2026-11-04T16:12:46.612480+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/ecdc5f28a8e3d69357e0133f.html",
+      "textPath": "data/raw/research/ecdc5f28a8e3d69357e0133f.txt",
+      "sha256": "cbe6c0d7b7bbd37f10a5c1276f98024ee763b83e4d0651fe0fa4dcac8710cde4",
+      "textSha256": "cd4a6cf81fa8d183f6fccb391dcb40abca3c1d0e6c55e958117cc92157bdb5ee",
+      "bytes": 54997,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-quanzhou"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
       "resolvedUrl": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
       "title": "Royal Institution · Michael Faraday’s generator",
@@ -21683,6 +22305,39 @@
           "id": "depth-mendeleev-periodic"
         }
       ]
+    },
+    {
+      "url": "https://www.rxgdyjy.sdu.edu.cn/info/1053/4146.htm",
+      "resolvedUrl": "https://www.rxgdyjy.sdu.edu.cn/info/1053/4146.htm",
+      "title": "山东大学 · 赵睿才《“饮中八仙”的演化与李白为“翰林供奉”的时间问题》",
+      "retrievedAt": "2026-11-04T16:12:46.992921+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/245278c520701b72e54fd8bd.html",
+      "textPath": "data/raw/research/245278c520701b72e54fd8bd.txt",
+      "sha256": "80a0083e92feda49e41d63d2cc8df60e732a8319523151e563dbcf9dd2f05790",
+      "textSha256": "e6a77feb6b6d4818770414f0a4018a88df21284c587e0d8508e46cd4e133008a",
+      "bytes": 44570,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-luoyang-dufu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-yanzhou-dufu"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
@@ -22675,6 +23330,39 @@
       ]
     },
     {
+      "url": "https://www.xjyl.gov.cn/xjylz/c112431/202212/751ebaa462b746ca8d1755f1d00529c7.shtml",
+      "resolvedUrl": "https://www.xjyl.gov.cn/xjylz/c112431/202212/751ebaa462b746ca8d1755f1d00529c7.shtml",
+      "title": "伊犁州人民政府 · 格登山色伊江水——纪念林则徐遣戍新疆180周年",
+      "retrievedAt": "2026-11-04T16:12:47.246965+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/bf7cd57c11d52f70f0fc79b9.html",
+      "textPath": "data/raw/research/bf7cd57c11d52f70f0fc79b9.txt",
+      "sha256": "e2551c7b5735f78c12006d6c6d1badfe95b1daf4c6e32f8216ac778de04da00d",
+      "textSha256": "0a53822bafff47bdc86284799333f4951eba214149025bd46eb6968c5b9c9c89",
+      "bytes": 89044,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-xian-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-huiyuan"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-dihua"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kashgar"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://www.xsg.pku.edu.cn/heros/revolutionist/detail/514.html",
       "resolvedUrl": "https://www.xsg.pku.edu.cn/heros/revolutionist/detail/514.html",
       "title": "北京大学校史馆 · 陈独秀",
@@ -22867,18 +23555,69 @@
     },
     {
       "url": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
-      "title": "美国国会图书馆 · Columbus and the Taíno（航行报告与原住民社会）",
-      "attemptedAt": "2026-11-01T09:32:22.304756+00:00",
-      "error": "HTTP Error 403: Forbidden",
-      "status": 403,
-      "failureRawPath": "data/raw/research/36c4ec00cbfebafae4748ca3-error-403-7c2bd47f12c5.html",
-      "failureSha256": "7c2bd47f12c528d48982cc90dab18ab4ae1ec75755157ee5c1bb6e1266c1a0c1",
+      "resolvedUrl": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
+      "title": "哥伦布与泰诺社会",
+      "retrievedAt": "2026-11-06T03:20:36.150116+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/36c4ec00cbfebafae4748ca3.html",
+      "textPath": "data/raw/research/36c4ec00cbfebafae4748ca3.txt",
+      "sha256": "5c1c7382966860205cee0f9907173ade1dd29092a4e49e2d1855edee92fb251e",
+      "textSha256": "c506258f280190f146b74844736801258758e93362b41002d4a7674a2c14ba61",
+      "bytes": 57594,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://xbzs.ecnu.edu.cn/CN/html/2018-2-1.htm",
+      "resolvedUrl": "https://xbzs.ecnu.edu.cn/CN/html/2018-2-1.htm",
+      "title": "陈明《郑和下西洋与明朝的“麒麟外交”》",
+      "retrievedAt": "2026-11-04T16:12:47.286634+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/72bb638e5393608c21c23188.html",
+      "textPath": "data/raw/research/72bb638e5393608c21c23188.txt",
+      "sha256": "0a5443e090b60785240a51213571b7fd55f57ab468cc2c139121a973ece180f0",
+      "textSha256": "9acf6367cd9fc500b09582f8ec41c7bfc14842c4306bbae22e64cbbced6278f8",
+      "bytes": 89631,
+      "contentType": "text/html",
+      "revisionId": null,
       "references": [
         {
-          "kind": "event",
-          "id": "world-columbus"
+          "kind": "journey",
+          "id": "zhenghe-record-hormuz"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-samudra"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-fourth-return"
         }
-      ]
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://xian.qinfeng.gov.cn/info/1279/17704.htm",
+      "resolvedUrl": "https://xian.qinfeng.gov.cn/info/1279/17704.htm",
+      "title": "西安市纪委 · 林则徐荷戈西戍",
+      "retrievedAt": "2026-11-04T16:12:47.754844+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/3c9d4412e160fb428bf2e548.html",
+      "textPath": "data/raw/research/3c9d4412e160fb428bf2e548.txt",
+      "sha256": "3ec0b3cd3d8d7482ec4b42b47085b42e62305bbe033905a5164df0aa93125373",
+      "textSha256": "f55d521934a31cbb01dddbcdb448c286ed628dc959889abfa767e6d49f84d04b",
+      "bytes": 52146,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-hami-return"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://xsg.tsinghua.edu.cn/info/1004/1945.htm",
@@ -22923,6 +23662,27 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://ylj.suzhou.gov.cn/szsylj/ylwh/201604/4c21f7192a50467fa863edd7683f17d6.shtml",
+      "resolvedUrl": "https://ylj.suzhou.gov.cn/szsylj/ylwh/201604/4c21f7192a50467fa863edd7683f17d6.shtml",
+      "title": "苏州市园林和绿化管理局 · 白公祠",
+      "retrievedAt": "2026-11-04T16:12:47.528584+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/99360a4fdf31ffe8a0316d68.html",
+      "textPath": "data/raw/research/99360a4fdf31ffe8a0316d68.txt",
+      "sha256": "e4fde57d85a422d13a8eb296765d7f39d0147cbb9b59993ba472017f763be703",
+      "textSha256": "1c7a1c1f3c1b48552060d82e55b59063569a83fdbf907ffa6d9ea3a8f082a4eb",
+      "bytes": 28527,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q313324-record-suzhou"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://ysglxy.sdca.edu.cn/info/1049/1316.htm",
       "resolvedUrl": "https://ysglxy.sdca.edu.cn/info/1049/1316.htm",
       "title": "山东艺术学院 · 荆浩与《笔法记》",
@@ -22942,6 +23702,22 @@
       "lastCacheCheckAt": "2026-10-06T16:20:30.036627+00:00",
       "revisionId": null,
       "textSha256": "a5f4eb09bf11df233d1b805bb9cc616bd64b9a90a6b74d7f8d3080cb4b0c115c"
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/白居易",
+      "resolvedUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E5%B1%85%E6%98%93",
+      "title": "白居易 · 生平与年表",
+      "retrievedAt": "2026-11-04T16:11:30.962940+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/281deeaa224ff1af5e761451.html",
+      "textPath": "data/raw/research/281deeaa224ff1af5e761451.txt",
+      "sha256": "535551fe94b964fd5396944c908c552e384a7d37b11cdde92beacffa602570e1",
+      "textSha256": "11f4d85a695c565e08ece56ebf6a3e257eea4ec0109c5f46f046076f714bed10",
+      "bytes": 403100,
+      "contentType": "text/html",
+      "revisionId": 95353239,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/一切經音義",
@@ -24696,6 +25472,27 @@
           "id": "early-plus-person-lu-fayan"
         }
       ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/前聞記",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%89%8D%E8%81%9E%E8%A8%98",
+      "title": "祝允明《前闻记》· 下西洋",
+      "retrievedAt": "2026-11-04T16:12:49.242180+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/696c8494bcdfffb6c8a0115d.html",
+      "textPath": "data/raw/research/696c8494bcdfffb6c8a0115d.txt",
+      "sha256": "20eaeaf03a86fababb14aadae21e78bcd28529177ec0649ef4261900e83a8f08",
+      "textSha256": "c5fe978fca9655da2b07b6de9e1db47b782de7c7a1b475cbd17195e0d5f4b114",
+      "bytes": 190758,
+      "contentType": "text/html",
+      "revisionId": 1753281,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-longwan"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/北史",
@@ -27229,6 +28026,91 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/唐大和上東征傳",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%94%90%E5%A4%A7%E5%92%8C%E4%B8%8A%E6%9D%B1%E5%BE%81%E5%82%B3",
+      "title": "《唐大和上东征传》",
+      "retrievedAt": "2026-11-04T16:12:49.370866+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/c5243e214637eff88b3840db.html",
+      "textPath": "data/raw/research/c5243e214637eff88b3840db.txt",
+      "sha256": "224141f9c6c5a5a235a467406bf9963add59c7dd35c45e84c03585f827046a88",
+      "textSha256": "8b838674b4012bbe46b585610d92bf495c1a5f9c1124e839baa6bcdaf1806ba6",
+      "bytes": 98224,
+      "contentType": "text/html",
+      "revisionId": 1542163,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q714061-record-yangzhou-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-first-preparation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-ayuwang"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yuezhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-guoqing"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-fifth-departure"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-zhenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-shaoguan"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-sixth-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-huangsipu"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yakushima"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-naniwa"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-todaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-toshodaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-death"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/唐律疏議/卷1",
       "title": "《唐律疏議》卷1",
       "attemptedAt": "2026-11-02T17:53:09.807562+00:00",
@@ -27534,6 +28416,54 @@
       "usage": "Local verification only; project-authored summaries are published."
     },
     {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷02",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%A4%A7%E5%94%90%E5%A4%A7%E6%85%88%E6%81%A9%E5%AF%BA%E4%B8%89%E8%97%8F%E6%B3%95%E5%B8%AB%E5%82%B3/%E5%8D%B702",
+      "title": "《大唐大慈恩寺三藏法师传》卷2",
+      "retrievedAt": "2026-11-04T16:11:29.578477+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/97332ba2c4431e62ddfaee56.html",
+      "textPath": "data/raw/research/97332ba2c4431e62ddfaee56.txt",
+      "sha256": "f42e0094c491de8c4455c699c7b252df7f2b999c54ef6412cdf53bc6e7be51dd",
+      "textSha256": "df9ce6fcbb8445f88484407b1c0c79da8d2614850f1a08e74a6d3ed58631a80e",
+      "bytes": 93170,
+      "contentType": "text/html",
+      "revisionId": 1308133,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷03",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%A4%A7%E5%94%90%E5%A4%A7%E6%85%88%E6%81%A9%E5%AF%BA%E4%B8%89%E8%97%8F%E6%B3%95%E5%B8%AB%E5%82%B3/%E5%8D%B703",
+      "title": "《大唐大慈恩寺三藏法师传》卷3",
+      "retrievedAt": "2026-11-04T16:11:28.348049+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/4273e697c9b7162695042c3e.html",
+      "textPath": "data/raw/research/4273e697c9b7162695042c3e.txt",
+      "sha256": "775e2ace27f2b698a96ff68e68bdf010416c2f3e74c6ee2b00b616687dc4a5e8",
+      "textSha256": "5b71ce79dbbd8c002312bcc3dce8e58df2e028b431136302783aa9ce1e13539c",
+      "bytes": 90782,
+      "contentType": "text/html",
+      "revisionId": 1376015,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷05",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%A4%A7%E5%94%90%E5%A4%A7%E6%85%88%E6%81%A9%E5%AF%BA%E4%B8%89%E8%97%8F%E6%B3%95%E5%B8%AB%E5%82%B3/%E5%8D%B705",
+      "title": "《大唐大慈恩寺三藏法师传》卷5",
+      "retrievedAt": "2026-11-04T16:11:28.303037+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/680f86a082c37a70149b11a7.html",
+      "textPath": "data/raw/research/680f86a082c37a70149b11a7.txt",
+      "sha256": "8df1ba7b44932b8fa23535bdfa8731e10a488e337eb5d3edd01d97b76bf1d0e4",
+      "textSha256": "717267a0a1bb0f31cee706e5afd327999bf46f2fb35f0ccc747fde3d6f7349b1",
+      "bytes": 87563,
+      "contentType": "text/html",
+      "revisionId": 1504164,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷06",
       "retrievedAt": "2026-11-01T14:22:03.992861+00:00",
       "status": 200,
@@ -27680,6 +28610,27 @@
         {
           "kind": "event",
           "id": "early-plus-daguan-tea"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天妃之神靈應記",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%A4%A9%E5%A6%83%E4%B9%8B%E7%A5%9E%E9%9D%88%E6%87%89%E8%A8%98",
+      "title": "郑和等《天妃之神灵应记》",
+      "retrievedAt": "2026-11-04T16:12:50.509034+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/06258a5c4282834c5b946ef4.html",
+      "textPath": "data/raw/research/06258a5c4282834c5b946ef4.txt",
+      "sha256": "c25def7724c772fad1a73706f99ed1c3367b80095041ab08997f4103b6e73cf3",
+      "textSha256": "660bab95d8dc4a93092477f7d78c3204cdbccd7613827d826ea689d7189e1a52",
+      "bytes": 70767,
+      "contentType": "text/html",
+      "revisionId": 2077888,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-changle"
         }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."
@@ -27989,6 +28940,43 @@
         {
           "kind": "journey",
           "id": "q337773-record-west-hill"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/婁東劉家港天妃宮石刻通番事蹟記",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%A9%81%E6%9D%B1%E5%8A%89%E5%AE%B6%E6%B8%AF%E5%A4%A9%E5%A6%83%E5%AE%AE%E7%9F%B3%E5%88%BB%E9%80%9A%E7%95%AA%E4%BA%8B%E8%B9%9F%E8%A8%98",
+      "title": "郑和等《娄东刘家港天妃宫石刻通番事迹记》",
+      "retrievedAt": "2026-11-04T16:12:50.599495+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/921d91df12529849bfb3b775.html",
+      "textPath": "data/raw/research/921d91df12529849bfb3b775.txt",
+      "sha256": "0bc9271ead85db2dbf91eace1c5a44d60ccc74afc08af62fc2c0786addcbe898",
+      "textSha256": "68b283afd3af52000bd6fbfcb0f4566c9a1030a8dee7c1b985016d560bb5b9a5",
+      "bytes": 60351,
+      "contentType": "text/html",
+      "revisionId": 1758473,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-first-liujiagang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-ceylon-captives"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-hormuz"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-samudra"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-liujiagang"
         }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."
@@ -28338,6 +29326,68 @@
       ],
       "title": "《宋史》卷7 · 真宗纪（景德元年北巡、交战与定和）",
       "usage": "Local verification only; project-authored summaries are published."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷017",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%AE%8B%E5%8F%B2/%E5%8D%B7017",
+      "title": "《宋史》卷17",
+      "retrievedAt": "2026-11-04T16:52:41.100368+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/17204f242397395ba1db2d3e.html",
+      "textPath": "data/raw/research/17204f242397395ba1db2d3e.txt",
+      "sha256": "b5da1584742919cfcbceaf21bc82f93392f1a68a7a1d4af59c73a679ce5ace3e",
+      "textSha256": "7fe3099b9530051ee52d5eb746bb20df04d28c948a9040a71bd58bbb776c80bf",
+      "bytes": 99744,
+      "contentType": "text/html",
+      "revisionId": 7908323,
+      "references": [
+        {
+          "kind": "event",
+          "id": "early-plus-yuanyou-change"
+        },
+        {
+          "kind": "event",
+          "id": "shaosheng-policy-reversal"
+        },
+        {
+          "kind": "person",
+          "id": "song-zhezong"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷018",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%AE%8B%E5%8F%B2/%E5%8D%B7018",
+      "title": "《宋史》卷18",
+      "retrievedAt": "2026-11-04T16:52:41.069165+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/24d64214d3082333a5a68fb7.html",
+      "textPath": "data/raw/research/24d64214d3082333a5a68fb7.txt",
+      "sha256": "05fdf0c4df1bdb62728e060f3a0eabf44b0719d54ebc1813393bc5d78a5de8f5",
+      "textSha256": "59169a70a5ee791d4feab3a5af8e5ea89fc8e61e7e7332f3f1a43d380407b91d",
+      "bytes": 92985,
+      "contentType": "text/html",
+      "revisionId": 7908324,
+      "references": [
+        {
+          "kind": "event",
+          "id": "shaosheng-policy-reversal"
+        },
+        {
+          "kind": "person",
+          "id": "song-zhezong"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史/卷019",
@@ -28997,6 +30047,27 @@
       "lastCacheCheckAt": "2026-10-06T16:20:36.256301+00:00",
       "revisionId": 1525603,
       "textSha256": "f4a49c215d5efdc19a55d983ff75ff7ced038970548f21b922951c1fda5577d8"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷472",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E5%AE%8B%E5%8F%B2/%E5%8D%B7472",
+      "title": "《宋史》卷472",
+      "retrievedAt": "2026-11-04T16:52:42.485928+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/aab09fd255081ddb905d3256.html",
+      "textPath": "data/raw/research/aab09fd255081ddb905d3256.txt",
+      "sha256": "588ce820cbd085ab73da1d1a074057de30f7c73cdd953ac8578bedab0df56aa3",
+      "textSha256": "2530621822ad59ad0f403c21c020c16ac9506b5ad9f51de2b4bac084ac1e35a0",
+      "bytes": 97935,
+      "contentType": "text/html",
+      "revisionId": 2004306,
+      "references": [
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史/卷474",
@@ -31132,6 +32203,27 @@
       "usage": "Local verification only; project-authored summaries are published."
     },
     {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷119",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E6%96%B0%E5%94%90%E6%9B%B8/%E5%8D%B7119",
+      "title": "《新唐書》卷119",
+      "retrievedAt": "2026-11-04T16:12:54.468325+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/a54d8b2e7731b8a524396abf.html",
+      "textPath": "data/raw/research/a54d8b2e7731b8a524396abf.txt",
+      "sha256": "fc96f8617b8cde74811fe9291d90b41c04f0662f5617476c6e5a9ce9df3ea14a",
+      "textSha256": "4155864c5c4020d4b1a38c474bff537552d0603072c96a4bff606c01a1cd044d",
+      "bytes": 95617,
+      "contentType": "text/html",
+      "revisionId": 3827258,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q313324-record-luoyang-death"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷135",
       "retrievedAt": "2026-11-01T14:23:02.556480+00:00",
       "status": 200,
@@ -31190,6 +32282,27 @@
       ],
       "usage": "Local verification only; website contains project-authored summaries and links.",
       "lastCacheCheckAt": "2026-10-08T18:12:49.809687+00:00"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷201",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E6%96%B0%E5%94%90%E6%9B%B8/%E5%8D%B7201",
+      "title": "《新唐書》卷201",
+      "retrievedAt": "2026-11-04T16:52:42.833283+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/766712e189d865aa5c182294.html",
+      "textPath": "data/raw/research/766712e189d865aa5c182294.txt",
+      "sha256": "b8d102e9ac4f65d0f7d67a1e870e27045fc882c27aa6339b565edeb2493c29b7",
+      "textSha256": "b1cc8acef0481774e1cfc6600a9340919058d1667b7c3c2b63fb90113cb8755d",
+      "bytes": 118396,
+      "contentType": "text/html",
+      "revisionId": 2446706,
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-dufu-meeting"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
@@ -35943,6 +37056,27 @@
       "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
+      "url": "https://zh.wikisource.org/wiki/瀛涯勝覽",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E7%80%9B%E6%B6%AF%E5%8B%9D%E8%A6%BD",
+      "title": "马欢《瀛涯胜览》· 旧港国",
+      "retrievedAt": "2026-11-04T16:12:52.388211+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/f77b86d969be49338efefed9.html",
+      "textPath": "data/raw/research/f77b86d969be49338efefed9.txt",
+      "sha256": "f65082d92cad8b27cdd94158228dc26c52d33bdf526ac5381fb90dc6eff3115c",
+      "textSha256": "35bfee4a20538887dc43ef53654a2e3a993fccf137c1e9ac804a35905307d957",
+      "bytes": 141469,
+      "contentType": "text/html",
+      "revisionId": 2697570,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-palembang"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/為徐敬業討武曌檄",
       "resolvedUrl": "https://zh.wikisource.org/wiki/%E7%82%BA%E5%BE%90%E6%95%AC%E6%A5%AD%E8%A8%8E%E6%AD%A6%E6%9B%8C%E6%AA%84",
       "title": "《為徐敬業討武曌檄》",
@@ -36099,6 +37233,22 @@
       ],
       "usage": "Local verification only; website contains project-authored summaries and links.",
       "lastCacheCheckAt": "2026-10-06T16:20:58.385506+00:00"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/王陽明集/卷26",
+      "resolvedUrl": "https://zh.wikisource.org/wiki/%E7%8E%8B%E9%99%BD%E6%98%8E%E9%9B%86/%E5%8D%B726",
+      "title": "《王阳明集》卷26 · 寄正宪男手墨",
+      "retrievedAt": "2026-11-04T16:11:31.845079+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/38758a1de25f1a007aa2e5a3.html",
+      "textPath": "data/raw/research/38758a1de25f1a007aa2e5a3.txt",
+      "sha256": "a6ee99dbe5a407cce76f595e957f0c3ccc1b96ec86728c5d0bc5e8de6e520042",
+      "textSha256": "38dbaad57de80e5524d7877c4e121e615e6ede932916244a6a664e39744d21da",
+      "bytes": 127812,
+      "contentType": "text/html",
+      "revisionId": 7904491,
+      "references": [],
+      "usage": "Local verification only; website contains project-authored summaries and links."
     },
     {
       "url": "https://zh.wikisource.org/wiki/琵琶行",
@@ -40837,6 +41987,27 @@
         {
           "kind": "person",
           "id": "modern-phil-chenduxiu"
+        }
+      ],
+      "usage": "Local verification only; website contains project-authored summaries and links."
+    },
+    {
+      "url": "https://zx.huaian.gov.cn/col/14069_277241/art/m/16855488/1686706454756gYGpT7lO.html",
+      "resolvedUrl": "https://zx.huaian.gov.cn/col/14069_277241/art/m/16855488/1686706454756gYGpT7lO.html",
+      "title": "淮安政协文史网 · 林则徐治水记述",
+      "retrievedAt": "2026-11-04T16:12:52.580016+00:00",
+      "status": 200,
+      "rawPath": "data/raw/research/8795b1e3b8b71e9215a7c4f8.html",
+      "textPath": "data/raw/research/8795b1e3b8b71e9215a7c4f8.txt",
+      "sha256": "7567656946c289238f0616a2418c52f811e5f0f398dfd4c222369d6e89425821",
+      "textSha256": "bedd360230eb3621154a09c7660d72f72e03f9fb396bd91e6c74dd1a2c9babb4",
+      "bytes": 12868,
+      "contentType": "text/html",
+      "revisionId": null,
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kaifeng-river"
         }
       ],
       "usage": "Local verification only; website contains project-authored summaries and links."

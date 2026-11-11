@@ -432,3 +432,36 @@
     padding: 12px;
   }
 }
+
+.topic-article p {
+  margin: 0 0 1em;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+.topic-map-stop {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+.topic-map-stop svg {
+  flex-shrink: 0;
+}
+.topic-subject-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+  font-size: 13px;
+}
+.topic-subject-filter select {
+  min-height: 40px;
+  max-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: inherit;
+}

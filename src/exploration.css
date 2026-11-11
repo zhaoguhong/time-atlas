@@ -498,14 +498,6 @@
   .topbar {
     gap: 4px;
   }
-  .main-nav {
-    margin-left: auto;
-    gap: 6px;
-  }
-  .main-nav button {
-    min-height: 44px;
-    font-size: 11px;
-  }
   .top-search:not(:focus-within):not([data-search-open='true']) {
     flex: 0 0 44px;
     width: 44px;
@@ -608,9 +600,6 @@
   }
   .brand > span:last-child {
     font-size: 15px;
-  }
-  .main-nav button {
-    font-size: 10px;
   }
 }
 

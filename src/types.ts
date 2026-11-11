@@ -137,6 +137,14 @@ export interface Tour {
   question?: string
   introduction?: string[]
   conclusion?: string
+  subject?: string
+  routeIds?: string[]
+  article?: {
+    paragraphs: string[]
+    headings?: Record<number, string>
+    eventIds: string[]
+    mapStops?: { afterParagraph: number; eventId: string; label: string }[]
+  }
   chapters?: { eventId: string; explanation: string; mapReading: string }[]
   sources?: Source[]
 }

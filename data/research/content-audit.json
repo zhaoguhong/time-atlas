@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T16:43:48.991Z",
+  "generatedAt": "2026-11-06T03:47:59.512Z",
   "validation": {
     "allIntroductionsAndSources": true,
     "datesAndCoordinates": true,
@@ -275,9 +275,10 @@
       "death": null,
       "sourceCount": 2,
       "biographyCharacters": 192,
-      "eventCount": 3,
+      "eventCount": 4,
       "eventIds": [
         "calendar",
+        "simaqian-shiji-writing",
         "early-plus-han-merchant-networks",
         "liling-affair"
       ],
@@ -522,7 +523,7 @@
         "northern-expedition",
         "wuzhang"
       ],
-      "journeyNodes": 6,
+      "journeyNodes": 11,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -788,7 +789,7 @@
         "xuanzang-return",
         "great-tang-western-records"
       ],
-      "journeyNodes": 8,
+      "journeyNodes": 27,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -896,8 +897,9 @@
       "death": 770,
       "sourceCount": 3,
       "biographyCharacters": 172,
-      "eventCount": 5,
+      "eventCount": 6,
       "eventIds": [
+        "libai-dufu-meeting",
         "an-lushan",
         "dufu-chengdu",
         "early-plus-dufu-three-officers",
@@ -1108,7 +1110,7 @@
         "zhenghe",
         "zhenghe-seventh-voyage"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -1197,7 +1199,7 @@
         "qing-tibet-1720",
         "yongzheng"
       ],
-      "journeyNodes": 15,
+      "journeyNodes": 17,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -1238,7 +1240,7 @@
         "opium-war",
         "linzexu-xinjiang"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 16,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -6659,11 +6661,13 @@
       "death": 1086,
       "sourceCount": 1,
       "biographyCharacters": 177,
-      "eventCount": 3,
+      "eventCount": 5,
       "eventIds": [
         "simaguang-tongzhi",
+        "wanganshi",
         "zizhi-tongjian",
-        "early-plus-yuanyou-change"
+        "early-plus-yuanyou-change",
+        "early-plus-party-stele"
       ],
       "journeyNodes": 0,
       "outsideMapRange": false,
@@ -6763,14 +6767,17 @@
       "death": 1101,
       "sourceCount": 2,
       "biographyCharacters": 281,
-      "eventCount": 4,
+      "eventCount": 7,
       "eventIds": [
         "ouyang-exam-1057",
         "wutai-poetry",
         "sushi-red-cliff",
-        "sudi"
+        "early-plus-yuanyou-change",
+        "sudi",
+        "shaosheng-policy-reversal",
+        "early-plus-party-stele"
       ],
-      "journeyNodes": 31,
+      "journeyNodes": 38,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -6830,14 +6837,15 @@
       "death": 1085,
       "sourceCount": 2,
       "biographyCharacters": 105,
-      "eventCount": 1,
+      "eventCount": 2,
       "eventIds": [
+        "wanganshi",
         "wanganshi-second-resignation"
       ],
       "journeyNodes": 0,
       "outsideMapRange": false,
       "outsideReadingRange": false,
-      "coverage": "one-linked-event"
+      "coverage": "multiple-linked-events"
     },
     {
       "id": "q832770",
@@ -6951,7 +6959,7 @@
         "liqingzhao-south",
         "zhao-mingcheng-death"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 16,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -8336,7 +8344,7 @@
       "eventIds": [
         "jianzhen"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 17,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "one-linked-event"
@@ -8399,13 +8407,15 @@
       "death": 762,
       "sourceCount": 1,
       "biographyCharacters": 190,
-      "eventCount": 3,
+      "eventCount": 5,
       "eventIds": [
         "libai-changan",
         "libai-leaves-court",
-        "libai-yongwang"
+        "libai-dufu-meeting",
+        "libai-yongwang",
+        "libai-pardoned"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -8657,10 +8667,11 @@
       "death": 846,
       "sourceCount": 2,
       "biographyCharacters": 180,
-      "eventCount": 2,
+      "eventCount": 3,
       "eventIds": [
         "early-plus-new-yuefu",
-        "bai-juyi-jiangzhou"
+        "bai-juyi-jiangzhou",
+        "depth-bai-juyi-pipa"
       ],
       "journeyNodes": 5,
       "outsideMapRange": false,
@@ -8680,7 +8691,7 @@
         "yongzhen-reform",
         "early-plus-liuzongyuan-yongzhou"
       ],
-      "journeyNodes": 4,
+      "journeyNodes": 0,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -9333,7 +9344,7 @@
       "eventIds": [
         "kongzi-teaching"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "one-linked-event"
@@ -13093,6 +13104,24 @@
       "coverage": "one-linked-event"
     },
     {
+      "id": "song-zhezong",
+      "name": "宋哲宗",
+      "recordKind": "curated",
+      "birth": 1077,
+      "death": 1100,
+      "sourceCount": 3,
+      "biographyCharacters": 202,
+      "eventCount": 2,
+      "eventIds": [
+        "early-plus-yuanyou-change",
+        "shaosheng-policy-reversal"
+      ],
+      "journeyNodes": 0,
+      "outsideMapRange": false,
+      "outsideReadingRange": false,
+      "coverage": "multiple-linked-events"
+    },
+    {
       "id": "early-plus-person-zichan",
       "name": "子产",
       "recordKind": "curated",
@@ -13678,12 +13707,14 @@
       "death": -110,
       "sourceCount": 1,
       "biographyCharacters": 70,
-      "eventCount": 0,
-      "eventIds": [],
+      "eventCount": 1,
+      "eventIds": [
+        "simaqian-shiji-writing"
+      ],
       "journeyNodes": 0,
       "outsideMapRange": false,
       "outsideReadingRange": false,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "early-plus-person-zhang-tang",
@@ -24739,6 +24770,15 @@
   ],
   "posthumousRelations": [
     {
+      "person": "司马谈",
+      "personId": "early-plus-person-sima-tan",
+      "event": "司马迁承接父志，持续编纂《史记》",
+      "eventId": "simaqian-shiji-writing",
+      "eventYear": -104,
+      "deathYear": -110,
+      "explanation": "司马谈在前110年去世；此处关联他留下的编史计划及家学，属于身后承接，不表示他参与前104年以后的写作。"
+    },
+    {
       "person": "陈寿",
       "personId": "q468890",
       "event": "裴松之完成《三国志注》",
@@ -24764,6 +24804,24 @@
       "eventYear": 653,
       "deathYear": 648,
       "explanation": "孔颖达主持前期经典注疏整理，648年去世；653年进入官学是其身后成果的采用，不是当年本人活动。"
+    },
+    {
+      "person": "苏轼",
+      "personId": "sushi",
+      "event": "元祐党籍与政治排斥",
+      "eventId": "early-plus-party-stele",
+      "eventYear": 1102,
+      "deathYear": 1101,
+      "explanation": "苏轼1101年已去世；被列入元祐党籍是身后政治评价与排斥，不是本人当年活动。"
+    },
+    {
+      "person": "司马光",
+      "personId": "simaguang",
+      "event": "元祐党籍与政治排斥",
+      "eventId": "early-plus-party-stele",
+      "eventYear": 1102,
+      "deathYear": 1086,
+      "explanation": "司马光1086年已去世，元祐党籍将其列为追究对象，属于身后关系。"
     },
     {
       "person": "钱乙",
@@ -27905,8 +27963,57 @@
         "simaqian"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "simaqian-shiji-writing",
+          "label": "历法之外的史官著述",
+          "note": "司马迁同时参与史官知识工作和编史，两条记录共享前104年参照，不认定改历当天开始撰史。"
+        }
+      ],
       "sourceCount": 2,
       "readingCharacters": 337
+    },
+    {
+      "id": "simaqian-shiji-writing",
+      "title": "司马迁承接父志，持续编纂《史记》",
+      "year": -104,
+      "people": [
+        "simaqian",
+        "early-plus-person-sima-tan"
+      ],
+      "region": "china",
+      "relatedEvents": [
+        {
+          "id": "calendar",
+          "label": "同一阶段的改历工作",
+          "note": "司马迁同时参与史官知识工作和编史，两条记录共享前104年参照，不认定改历当天开始撰史。"
+        },
+        {
+          "id": "liling-affair",
+          "label": "著述中的个人灾难",
+          "note": "《史记》的编写先于李陵事件，受刑后继续著述；不能把灾难写成全书的唯一起因。"
+        },
+        {
+          "id": "early-plus-han-merchant-networks",
+          "label": "一部书怎样记述经济生活",
+          "note": "《货殖列传》是《史记》中的一篇，单篇的约略系年不等于全书完成时间。"
+        },
+        {
+          "id": "early-plus-ban-gu-history",
+          "label": "从通史到西汉断代史",
+          "note": "《汉书》沿用并改造纪传体，以一朝为主要范围；班昭等接续的工作也属于成书过程。"
+        }
+      ],
+      "sourceCount": 2,
+      "dateNote": "前104年对应太初改历及《自序》所述论次史料阶段；承接父志在此前，受刑与继续写作在此后，不以该年标记全书完成。",
+      "locationNote": "长安代表任官、接触文献与编纂的主要环境；早年游历和书中各地史事不据此还原为个人足迹。",
+      "placeIds": [
+        "changan"
+      ],
+      "peopleNotes": {
+        "early-plus-person-sima-tan": "司马谈在前110年去世；此处关联他留下的编史计划及家学，属于身后承接，不表示他参与前104年以后的写作。"
+      },
+      "readingCharacters": 354
     },
     {
       "id": "early-plus-han-merchant-networks",
@@ -27916,6 +28023,13 @@
         "simaqian"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "simaqian-shiji-writing",
+          "label": "把篇章放回全书体例",
+          "note": "《货殖列传》是《史记》中的一篇，单篇的约略系年不等于全书完成时间。"
+        }
+      ],
       "sourceCount": 1,
       "dateNote": "此为文献活动或作品形成的大致阶段，起止年不代表同一天发生的单次事件。",
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
@@ -27972,6 +28086,13 @@
         "hanwudi"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "simaqian-shiji-writing",
+          "label": "受刑之前已开始的编史",
+          "note": "《史记》的编写先于李陵事件，受刑后继续著述；不能把灾难写成全书的唯一起因。"
+        }
+      ],
       "sourceCount": 2,
       "locationNote": "标记朝廷议论与审判地长安，不将李陵北方战场画作司马迁行迹。",
       "readingCharacters": 451
@@ -28359,6 +28480,11 @@
       ],
       "region": "china",
       "relatedEvents": [
+        {
+          "id": "simaqian-shiji-writing",
+          "label": "《汉书》之前的纪传组织",
+          "note": "《汉书》沿用并改造纪传体，以一朝为主要范围；班昭等接续的工作也属于成书过程。"
+        },
         {
           "id": "chen-shou-history",
           "label": "从断代史到三国纪传",
@@ -32106,6 +32232,13 @@
         "q1268388"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "libai-leaves-court",
+          "label": "宫廷生活怎样结束",
+          "note": "入京与离京分属742年和744年，合读文学声名与政治处境的变化。"
+        }
+      ],
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 257
@@ -32119,10 +32252,51 @@
         "lilongji"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "libai-changan",
+          "label": "此前的奉召入京",
+          "note": "入京与离京分属742年和744年，合读文学声名与政治处境的变化。"
+        },
+        {
+          "id": "libai-dufu-meeting",
+          "label": "离京后的李杜交游",
+          "note": "离开朝廷后李白在洛阳结识杜甫，交游成为理解其继续游历和写作的入口。"
+        }
+      ],
       "sourceCount": 2,
       "dateNote": "采用天宝三载（744年）的通行年谱纪年；列传叙事与纪年需结合阅读。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 302
+    },
+    {
+      "id": "libai-dufu-meeting",
+      "title": "李白与杜甫在洛阳相会",
+      "year": 744,
+      "people": [
+        "libai",
+        "dufu"
+      ],
+      "region": "china",
+      "relatedEvents": [
+        {
+          "id": "libai-leaves-court",
+          "label": "相识之前的长安经历",
+          "note": "离开朝廷后李白在洛阳结识杜甫，交游成为理解其继续游历和写作的入口。"
+        },
+        {
+          "id": "libai-yongwang",
+          "label": "战乱中不同的人生选择",
+          "note": "两位诗人后来各有战争经历；李白入永王幕府不代表杜甫参与。"
+        }
+      ],
+      "sourceCount": 2,
+      "dateNote": "采用天宝三载（744）洛阳相识的通行系年；次年东鲁再会为后续经历，不并作同日活动。",
+      "locationNote": "洛阳为相识地点的城市参照；后续梁宋与东鲁游历不以此点代替，也不推定具体会面遗址。",
+      "placeIds": [
+        "luoyang"
+      ],
+      "readingCharacters": 242
     },
     {
       "id": "world-abbasid",
@@ -32190,15 +32364,15 @@
     {
       "id": "jianzhen",
       "title": "鉴真第六次东渡抵达日本",
-      "year": 753,
+      "year": 754,
       "people": [
         "q714061"
       ],
       "region": "china",
-      "sourceCount": 2,
-      "dateNote": "渡海抵达为753年，进入奈良为754年，两项记录应分开。",
+      "sourceCount": 5,
+      "dateNote": "原记天平胜宝五年十二月二十日抵秋妻屋浦，常简称753年抵日；该原历年末已对应西历754年初，本版按西历年定位，随后进入奈良另有记录。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
-      "readingCharacters": 283
+      "readingCharacters": 333
     },
     {
       "id": "an-lushan",
@@ -32213,6 +32387,13 @@
         "q1290765"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "early-plus-dufu-three-officers",
+          "label": "征发怎样进入诗歌",
+          "note": "安史之乱持续期间的征发和离散进入杜甫作品，诗篇仍有文学组织。"
+        }
+      ],
       "sourceCount": 5,
       "peopleNotes": {
         "q313605": "王维在安史之乱期间陷于叛军控制，被拘并授以伪职，此后受唐廷追究。这是战争后续阶段的经历；755年是事件起始纪年，并非其被俘年份，也不表示他在范阳起兵现场。",
@@ -32230,6 +32411,18 @@
         "reviewed-永王李璘"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "libai-dufu-meeting",
+          "label": "战乱之前的交游",
+          "note": "两位诗人后来各有战争经历；李白入永王幕府不代表杜甫参与。"
+        },
+        {
+          "id": "libai-pardoned",
+          "label": "从幕府获罪到遇赦",
+          "note": "入幕、被追究与流放遇赦跨越数年，按先后阅读个人处境怎样改变。"
+        }
+      ],
       "sourceCount": 2,
       "dateNote": "756年为进入幕府的通行纪年；追究、流放和遇赦是此后数年的过程。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -32268,10 +32461,43 @@
         "dufu"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "early-plus-dufu-three-officers",
+          "label": "入蜀前的战争见闻",
+          "note": "两件事都在759年，先读春季返华州途中的诗作，再读年底抵成都的生活转向。"
+        },
+        {
+          "id": "early-plus-dufu-autumn",
+          "label": "沿江东下后的夔州写作",
+          "note": "成都与夔州是不同生活阶段，作品中的乡思和时局关切随迁居继续变化。"
+        }
+      ],
       "sourceCount": 1,
       "dateNote": "抵达采用759年末的通行年谱纪年，草堂营建在次年。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 308
+    },
+    {
+      "id": "libai-pardoned",
+      "title": "李白流放途中遇赦东归",
+      "year": 759,
+      "people": [
+        "libai"
+      ],
+      "region": "china",
+      "relatedEvents": [
+        {
+          "id": "libai-yongwang",
+          "label": "流放之前的永王事件",
+          "note": "入幕、被追究与流放遇赦跨越数年，按先后阅读个人处境怎样改变。"
+        }
+      ],
+      "sourceCount": 3,
+      "dateNote": "遇赦采用乾元二年（759）春的通行纪年；《早发白帝城》写作时间保留异说。",
+      "locationNote": "坐标为三峡白帝城附近参照，不精确定位接诏处；夜郎是判流目的地，不据判罚认定李白已到访。",
+      "placeIds": [],
+      "readingCharacters": 255
     },
     {
       "id": "early-plus-dufu-three-officers",
@@ -32281,6 +32507,18 @@
         "dufu"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "an-lushan",
+          "label": "作品中的战争背景",
+          "note": "安史之乱持续期间的征发和离散进入杜甫作品，诗篇仍有文学组织。"
+        },
+        {
+          "id": "dufu-chengdu",
+          "label": "战乱之后寻找居所",
+          "note": "两件事都在759年，先读春季返华州途中的诗作，再读年底抵成都的生活转向。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
       "readingCharacters": 89
@@ -32385,6 +32623,13 @@
         "dufu"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "dufu-chengdu",
+          "label": "此前在成都的生活",
+          "note": "成都与夔州是不同生活阶段，作品中的乡思和时局关切随迁居继续变化。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
       "readingCharacters": 72
@@ -32666,6 +32911,13 @@
         "q468709"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "bai-juyi-jiangzhou",
+          "label": "谏官生涯的转折",
+          "note": "先看白居易以诗议政，再看815年朝廷冲突；不把新乐府直接认作贬谪的唯一原因。"
+        }
+      ],
       "sourceCount": 2,
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
       "readingCharacters": 86
@@ -32691,6 +32943,18 @@
         "q313324"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "early-plus-new-yuefu",
+          "label": "贬谪之前的讽谕写作",
+          "note": "先看白居易以诗议政，再看815年朝廷冲突；不把新乐府直接认作贬谪的唯一原因。"
+        },
+        {
+          "id": "depth-bai-juyi-pipa",
+          "label": "次年的江州写作",
+          "note": "815年的贬江州与816年的《琵琶行》相接，政治处分与文学叙事分别阅读。"
+        }
+      ],
       "sourceCount": 1,
       "dateNote": "815年为贬谪年；《琵琶行》作于次年，未合为同一日期。",
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
@@ -32700,10 +32964,22 @@
       "id": "depth-bai-juyi-pipa",
       "title": "白居易写《琵琶行》",
       "year": 816,
-      "people": [],
+      "people": [
+        "q313324"
+      ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "bai-juyi-jiangzhou",
+          "label": "写作之前的贬谪",
+          "note": "815年的贬江州与816年的《琵琶行》相接，政治处分与文学叙事分别阅读。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "坐标为作品形成、出版、机构或工程所在区域的阅读参照，不据此推断作者的实际行程。",
+      "peopleNotes": {
+        "q313324": "白居易为《琵琶行》作者；816年的写作与815年贬江州是前后相接的两件事。"
+      },
       "readingCharacters": 267
     },
     {
@@ -34189,10 +34465,28 @@
       "year": 1069,
       "people": [
         "wanganshi",
-        "shenkuo"
+        "shenkuo",
+        "q7483",
+        "simaguang"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "wanganshi-second-resignation",
+          "label": "改革主持者的进退",
+          "note": "王安石离相并未使全部新法停止，皇帝支持、政策执行与个人仕途需要分开考察。"
+        },
+        {
+          "id": "wutai-poetry",
+          "label": "政策争论中的文字案件",
+          "note": "乌台诗案把苏轼的诗文当作政治指控材料，不能将案件归为王安石个人直接主持。"
+        }
+      ],
       "sourceCount": 3,
+      "peopleNotes": {
+        "q7483": "宋神宗任用并支持王安石推动新法，关联中央决策。",
+        "simaguang": "司马光与王安石就新法及国家干预方式争论，关联反对意见，不表示参与主持变法。"
+      },
       "readingCharacters": 674
     },
     {
@@ -34296,6 +34590,18 @@
         "q7483"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "wanganshi",
+          "label": "此前的新法措施与争论",
+          "note": "王安石离相并未使全部新法停止，皇帝支持、政策执行与个人仕途需要分开考察。"
+        },
+        {
+          "id": "early-plus-yuanyou-change",
+          "label": "神宗去世后的调整",
+          "note": "1076年离相与1085年后朝廷转向相隔多年，不能合为一次废法。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 252
@@ -34330,6 +34636,18 @@
         "sushi"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "wanganshi",
+          "label": "理解苏轼的政治处境",
+          "note": "乌台诗案把苏轼的诗文当作政治指控材料，不能将案件归为王安石个人直接主持。"
+        },
+        {
+          "id": "sushi-red-cliff",
+          "label": "贬居黄州后的写作",
+          "note": "1079年的诗案改变苏轼处境，1082年的赤壁赋在贬居生活中写成。"
+        }
+      ],
       "sourceCount": 2,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 255
@@ -34354,6 +34672,13 @@
         "sushi"
       ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "wutai-poetry",
+          "label": "黄州生活之前的诗案",
+          "note": "1079年的诗案改变苏轼处境，1082年的赤壁赋在贬居生活中写成。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "黄州东坡赤壁为文学地点，不与三国赤壁之战的战场混同。",
       "readingCharacters": 282
@@ -34413,12 +34738,30 @@
       "title": "元祐初年调整新法",
       "year": 1086,
       "people": [
-        "simaguang"
+        "simaguang",
+        "song-zhezong",
+        "sushi"
       ],
       "region": "china",
-      "sourceCount": 1,
+      "relatedEvents": [
+        {
+          "id": "wanganshi-second-resignation",
+          "label": "王安石离相后的政策延续",
+          "note": "1076年离相与1085年后朝廷转向相隔多年，不能合为一次废法。"
+        },
+        {
+          "id": "shaosheng-policy-reversal",
+          "label": "哲宗亲政后的再次转向",
+          "note": "高太后听政与哲宗亲政的权力条件不同，赋役政策和用人方向随之反复。"
+        }
+      ],
+      "sourceCount": 3,
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
-      "readingCharacters": 86
+      "peopleNotes": {
+        "song-zhezong": "哲宗此时年幼，由高太后听政；政策调整由高太后支持的执政者推进，不等同其后来亲政立场。",
+        "sushi": "苏轼反对部分新法，也对骤然废改免役法等有不同意见；不能把元祐官员视作立场完全一致。"
+      },
+      "readingCharacters": 146
     },
     {
       "id": "quanzhou-office",
@@ -34502,6 +34845,38 @@
       "sourceCount": 3,
       "locationNote": "地点为城市或地区参照，不表示事件只发生在这一坐标。",
       "readingCharacters": 253
+    },
+    {
+      "id": "shaosheng-policy-reversal",
+      "title": "绍圣改元与恢复新法",
+      "year": 1094,
+      "people": [
+        "song-zhezong",
+        "sushi"
+      ],
+      "region": "china",
+      "relatedEvents": [
+        {
+          "id": "early-plus-yuanyou-change",
+          "label": "恢复新法之前的元祐调整",
+          "note": "高太后听政与哲宗亲政的权力条件不同，赋役政策和用人方向随之反复。"
+        },
+        {
+          "id": "early-plus-party-stele",
+          "label": "徽宗朝的党籍限制",
+          "note": "绍圣转向发生在哲宗朝，1102年起的元祐党籍属于徽宗朝后续措施。"
+        }
+      ],
+      "sourceCount": 3,
+      "dateNote": "1094年为绍圣改元、章惇任相及恢复免役法的节点；哲宗亲政始于1093年高太后去世后，后续贬逐延续多年。",
+      "locationNote": "开封代表朝廷决策中心；苏轼的惠州、儋州贬居地点需另看个人年谱。",
+      "placeIds": [
+        "kaifeng"
+      ],
+      "peopleNotes": {
+        "sushi": "苏轼在这次政治转向中被贬惠州；关联朝廷处分及其遭遇，不表示他参与主持恢复新法。"
+      },
+      "readingCharacters": 324
     },
     {
       "id": "region-ghazali-reconsideration",
@@ -34676,10 +35051,24 @@
       "id": "early-plus-party-stele",
       "title": "元祐党籍与政治排斥",
       "year": 1102,
-      "people": [],
+      "people": [
+        "sushi",
+        "simaguang"
+      ],
       "region": "china",
+      "relatedEvents": [
+        {
+          "id": "shaosheng-policy-reversal",
+          "label": "党籍之前的绍圣清算",
+          "note": "绍圣转向发生在哲宗朝，1102年起的元祐党籍属于徽宗朝后续措施。"
+        }
+      ],
       "sourceCount": 1,
       "locationNote": "坐标为所述政治、生产或知识活动的地域参照；涉及多地时不据此限定全部活动范围。",
+      "peopleNotes": {
+        "sushi": "苏轼1101年已去世；被列入元祐党籍是身后政治评价与排斥，不是本人当年活动。",
+        "simaguang": "司马光1086年已去世，元祐党籍将其列为追究对象，属于身后关系。"
+      },
       "readingCharacters": 85
     },
     {
@@ -50597,6 +50986,22 @@
   ],
   "topics": [
     {
+      "id": "tang-poets-lives",
+      "name": "唐代诗人：交游、战乱与写作",
+      "chapters": 10,
+      "introductionCharacters": 106,
+      "sourceCount": 6,
+      "worldEventIds": []
+    },
+    {
+      "id": "northern-song-reform-reversals",
+      "name": "北宋新法：争论、进退与反复",
+      "chapters": 7,
+      "introductionCharacters": 116,
+      "sourceCount": 7,
+      "worldEventIds": []
+    },
+    {
       "id": "three-kingdoms",
       "name": "三国，从群雄到归一",
       "chapters": 9,
@@ -50609,7 +51014,7 @@
       "name": "向西，走进丝绸之路",
       "chapters": 6,
       "introductionCharacters": 184,
-      "sourceCount": 3,
+      "sourceCount": 10,
       "worldEventIds": []
     },
     {
@@ -50657,7 +51062,7 @@
       "name": "从宋元海港到郑和航海",
       "chapters": 6,
       "introductionCharacters": 174,
-      "sourceCount": 4,
+      "sourceCount": 7,
       "worldEventIds": []
     },
     {
@@ -50717,7 +51122,7 @@
       "name": "印度洋：港口、货物与地方社会",
       "chapters": 8,
       "introductionCharacters": 213,
-      "sourceCount": 8,
+      "sourceCount": 11,
       "worldEventIds": [
         "world-srivijaya",
         "world-kilwa-trade",
@@ -50952,9 +51357,9 @@
     {
       "id": "how-history-is-written",
       "name": "史书怎样组织过去",
-      "chapters": 8,
-      "introductionCharacters": 185,
-      "sourceCount": 10,
+      "chapters": 9,
+      "introductionCharacters": 189,
+      "sourceCount": 12,
       "worldEventIds": [
         "region-ibn-khaldun-muqaddimah",
         "region-popol-vuh"
@@ -51005,6 +51410,236 @@
         "region-japan-constitution",
         "region-india-constitution"
       ]
+    },
+    {
+      "id": "chibi-and-alliance",
+      "name": "赤壁之后，孙刘为什么还会交战？",
+      "chapters": 5,
+      "introductionCharacters": 55,
+      "sourceCount": 2,
+      "worldEventIds": []
+    },
+    {
+      "id": "qin-conquest-and-government",
+      "name": "打下六国以后，秦怎样把命令送到地方？",
+      "chapters": 5,
+      "introductionCharacters": 47,
+      "sourceCount": 11,
+      "worldEventIds": []
+    },
+    {
+      "id": "hexi-and-oases",
+      "name": "河西走廊为什么如此重要？",
+      "chapters": 5,
+      "introductionCharacters": 51,
+      "sourceCount": 3,
+      "worldEventIds": []
+    },
+    {
+      "id": "capital-and-grain",
+      "name": "都城为什么离不开远方的粮食？",
+      "chapters": 6,
+      "introductionCharacters": 53,
+      "sourceCount": 4,
+      "worldEventIds": []
+    },
+    {
+      "id": "tax-enters-household",
+      "name": "赋税怎样改变一家人的生活？",
+      "chapters": 5,
+      "introductionCharacters": 52,
+      "sourceCount": 16,
+      "worldEventIds": []
+    },
+    {
+      "id": "paper-money-and-trust",
+      "name": "一张纸为什么能当钱用？",
+      "chapters": 3,
+      "introductionCharacters": 55,
+      "sourceCount": 14,
+      "worldEventIds": []
+    },
+    {
+      "id": "poetry-in-exile",
+      "name": "贬居怎样进入诗文？",
+      "chapters": 4,
+      "introductionCharacters": 59,
+      "sourceCount": 13,
+      "worldEventIds": []
+    },
+    {
+      "id": "translation-workshops",
+      "name": "经典怎样被译成另一种语言？",
+      "chapters": 5,
+      "introductionCharacters": 46,
+      "sourceCount": 7,
+      "worldEventIds": [
+        "category-nalanda"
+      ]
+    },
+    {
+      "id": "port-and-hinterland",
+      "name": "一座港口靠什么繁荣？",
+      "chapters": 5,
+      "introductionCharacters": 55,
+      "sourceCount": 8,
+      "worldEventIds": [
+        "world-kilwa-trade",
+        "world-malacca",
+        "completeness-indian-textiles",
+        "world-malacca-conquest"
+      ]
+    },
+    {
+      "id": "factory-city-sanitation",
+      "name": "工厂增多以后，城市怎样应对污水和疾病？",
+      "chapters": 3,
+      "introductionCharacters": 59,
+      "sourceCount": 9,
+      "worldEventIds": [
+        "world-industrial",
+        "world-public-health",
+        "world-second-industrial"
+      ]
+    },
+    {
+      "id": "vaccine-to-eradication",
+      "name": "从接种到根除天花，还要走多远？",
+      "chapters": 3,
+      "introductionCharacters": 58,
+      "sourceCount": 9,
+      "worldEventIds": [
+        "category-jenner",
+        "modern-polio-vaccine",
+        "modern-smallpox-eradication"
+      ]
+    },
+    {
+      "id": "school-and-access",
+      "name": "有了学校，谁能真正走进课堂？",
+      "chapters": 4,
+      "introductionCharacters": 57,
+      "sourceCount": 14,
+      "worldEventIds": [
+        "region-phule-girls-school",
+        "region-tsuda-college"
+      ]
+    },
+    {
+      "id": "history-and-commentary",
+      "name": "读史为什么要连注释一起读？",
+      "chapters": 4,
+      "introductionCharacters": 56,
+      "sourceCount": 12,
+      "worldEventIds": []
+    },
+    {
+      "id": "longitude-and-clock",
+      "name": "航海者怎样用时间找位置？",
+      "chapters": 3,
+      "introductionCharacters": 54,
+      "sourceCount": 8,
+      "worldEventIds": [
+        "exp-em-greenwich",
+        "exp-em-longitude-act",
+        "exp-em-harrison-h4"
+      ]
+    },
+    {
+      "id": "abolition-and-livelihood",
+      "name": "摆脱奴役以后，人们怎样谋生？",
+      "chapters": 5,
+      "introductionCharacters": 61,
+      "sourceCount": 10,
+      "worldEventIds": [
+        "world-slave-trade-abolition",
+        "world-slavery-abolition-act",
+        "world-russian-emancipation",
+        "world-brazil-abolition",
+        "region-siam-slavery-abolition"
+      ]
+    },
+    {
+      "id": "city-water-and-labor",
+      "name": "古代城市怎样组织水与劳动？",
+      "chapters": 4,
+      "introductionCharacters": 51,
+      "sourceCount": 29,
+      "worldEventIds": [
+        "moenjodaro-city",
+        "world-tenochtitlan"
+      ]
+    },
+    {
+      "id": "age-of-exploration",
+      "name": "大航海时代：几片海洋怎样连成一个世界",
+      "chapters": 5,
+      "introductionCharacters": 66,
+      "sourceCount": 10,
+      "worldEventIds": [
+        "world-dias",
+        "world-columbus",
+        "world-tordesillas",
+        "world-dagama",
+        "world-circumnavigation"
+      ]
+    },
+    {
+      "id": "columbus-atlantic",
+      "name": "哥伦布西航：为什么想去亚洲，却到了加勒比",
+      "chapters": 2,
+      "introductionCharacters": 66,
+      "sourceCount": 5,
+      "worldEventIds": [
+        "world-columbus",
+        "world-tordesillas"
+      ]
+    },
+    {
+      "id": "gama-indian-ocean",
+      "name": "达·伽马赴印度：绕过好望角以后，还有什么难关",
+      "chapters": 2,
+      "introductionCharacters": 64,
+      "sourceCount": 2,
+      "worldEventIds": [
+        "world-dias",
+        "world-dagama"
+      ]
+    },
+    {
+      "id": "magellan-elcano",
+      "name": "首次环球航行：麦哲伦出发，埃尔卡诺归来",
+      "chapters": 2,
+      "introductionCharacters": 55,
+      "sourceCount": 4,
+      "worldEventIds": [
+        "world-tordesillas",
+        "world-circumnavigation"
+      ]
+    },
+    {
+      "id": "zheng-he-voyages",
+      "name": "郑和下西洋：船队为什么出海，又怎样往返",
+      "chapters": 2,
+      "introductionCharacters": 66,
+      "sourceCount": 3,
+      "worldEventIds": []
+    },
+    {
+      "id": "xuanzang-pilgrimage",
+      "name": "玄奘西行：经书怎样从印度来到长安",
+      "chapters": 2,
+      "introductionCharacters": 54,
+      "sourceCount": 6,
+      "worldEventIds": []
+    },
+    {
+      "id": "ganjin-crossing",
+      "name": "鉴真东渡：六次尝试之后，怎样把戒律带到日本",
+      "chapters": 1,
+      "introductionCharacters": 64,
+      "sourceCount": 5,
+      "worldEventIds": []
     }
   ],
   "places": [
@@ -51044,6 +51679,7 @@
         "early-plus-han-junzhu",
         "early-plus-han-cishi",
         "calendar",
+        "simaqian-shiji-writing",
         "early-plus-han-merchant-networks",
         "liling-affair",
         "early-plus-han-monopoly-liquor",
@@ -51272,6 +51908,7 @@
         "zizhi-tongjian",
         "early-plus-yuanyou-change",
         "early-plus-song-water-clock",
+        "shaosheng-policy-reversal",
         "early-plus-qingming-scroll",
         "early-plus-song-market-fire",
         "liqingzhao-jinshi-study",
@@ -51635,6 +52272,7 @@
         "wu-zhou",
         "early-plus-wuke",
         "shenlong",
+        "libai-dufu-meeting",
         "early-plus-dufu-three-officers",
         "an-shi-ends",
         "early-plus-lihe-poetry",
@@ -52957,6 +53595,14 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -53039,6 +53685,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -53129,6 +53779,10 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -53198,6 +53852,47 @@
         {
           "kind": "event",
           "id": "depth-leonardo-supper"
+        }
+      ]
+    },
+    {
+      "url": "https://chiculture.org.hk/sc/china-five-thousand-years/1408",
+      "title": "中国文化研究院 · 袁行霈《李白非凡的一生》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:44.761993+00:00",
+      "sha256": "bde6e17a2353d04a06c4dcbad36726c8df295c114c83521be293454b1e69dfd7",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-shu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-anlu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-lushan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-xunyang-prison"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu-death"
         }
       ]
     },
@@ -53287,6 +53982,31 @@
       ]
     },
     {
+      "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
+      "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:19:03.239634+00:00",
+      "sha256": "35f405392fdf4aec858882d4660a5e7a2c2c0c77033e37f380c5aed898cc6c90",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-wuchang"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-zhenhai"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kaifeng-river"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-changsha"
+        }
+      ]
+    },
+    {
       "url": "https://cssn.cn/kgxc/kgxc_kgxl/202211/t20221120_5565364.shtml",
       "title": "郑州商城 · 考古与机构资料",
       "status": "retained-and-hash-verified",
@@ -53313,6 +54033,27 @@
         {
           "kind": "event",
           "id": "modern-nanjing-massacre"
+        }
+      ]
+    },
+    {
+      "url": "https://daj.fuzhou.gov.cn/zz/wszt/tslm/msfq/202306/t20230605_4614379.htm",
+      "title": "福州档案信息网 · 林则徐笔下的福州文化遗址",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:42.809861+00:00",
+      "sha256": "41f7090f696926a81b4c464dcd0f3278b1b998bff2c1746f8ed65352e12bf5f4",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-mourning"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-retirement"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-puning-death"
         }
       ]
     },
@@ -53351,6 +54092,23 @@
       ]
     },
     {
+      "url": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
+      "title": "南京市地方志工作办公室 · “官爱江南为六朝”——林则徐与南京",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:42.975418+00:00",
+      "sha256": "1fb2fc21f9246529fc5f4ed4afff6284ce978aab8cb10d67938a26ad5f8c1909",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-beijing-exam"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-suzhou"
+        }
+      ]
+    },
+    {
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
       "title": "陕西省地方志 · 半坡类型仰韶文化年代",
       "status": "retained-and-hash-verified",
@@ -53373,6 +54131,19 @@
         {
           "kind": "event",
           "id": "depth-sun-simiao-qianjin"
+        }
+      ]
+    },
+    {
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=146341&q=1&word=%E5%AE%97",
+      "title": "教育部《重编国语辞典修订本》· 宋哲宗",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:52:41.482463+00:00",
+      "sha256": "42be0262b886b7e0556212efb8c14bf86f564112b87a540cff70d3fdb05b7e0b",
+      "references": [
+        {
+          "kind": "person",
+          "id": "song-zhezong"
         }
       ]
     },
@@ -53450,6 +54221,82 @@
       "references": [
         {
           "kind": "journey",
+          "id": "xuanzang-record-changan-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-liangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-guazhou"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-yiwu"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-gaochang"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kucha"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-suyab"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-samarkand"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-balkh"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-bamiyan"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kashmir"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-bodhgaya"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-nalanda"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kannauj-assembly"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-prayaga"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kapisa-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kashgar-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-khotan-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-dunhuang-return"
+        },
+        {
+          "kind": "journey",
           "id": "xuanzang-record-changan-return"
         },
         {
@@ -53479,6 +54326,14 @@
         {
           "kind": "journey",
           "id": "xuanzang-record-yuhua-death"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
         }
       ]
     },
@@ -53578,6 +54433,35 @@
       ]
     },
     {
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/caldb_s.cgi?year=754",
+      "title": "日本国立天文台历计算室 · 754年历月与节月",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:45.074948+00:00",
+      "sha256": "336910c3fe2487736edd5abe25ecefc799b5a4e22681f977494aa3cf7c550807",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jianzhen"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yakushima"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        },
+        {
+          "kind": "topic",
+          "id": "ganjin-crossing"
+        }
+      ]
+    },
+    {
       "url": "https://educationalgames.nobelprize.org/educational/medicine/tuberculosis/readmore.html",
       "title": "Nobel Foundation · Robert Koch and Tuberculosis",
       "status": "retained-and-hash-verified",
@@ -53643,6 +54527,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -53701,6 +54593,10 @@
         },
         {
           "kind": "journey",
+          "id": "sushi-chengdu-1055"
+        },
+        {
+          "kind": "journey",
           "id": "sushi-exam"
         },
         {
@@ -53709,7 +54605,15 @@
         },
         {
           "kind": "journey",
+          "id": "sushi-court-1060"
+        },
+        {
+          "kind": "journey",
           "id": "sushi-fengxiang"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-changan-1064"
         },
         {
           "kind": "journey",
@@ -53757,7 +54661,15 @@
         },
         {
           "kind": "journey",
+          "id": "sushi-shizhongshan"
+        },
+        {
+          "kind": "journey",
           "id": "sushi-jinling"
+        },
+        {
+          "kind": "journey",
+          "id": "sushi-sizhou"
         },
         {
           "kind": "journey",
@@ -53805,6 +54717,10 @@
         },
         {
           "kind": "journey",
+          "id": "sushi-tengzhou"
+        },
+        {
+          "kind": "journey",
           "id": "sushi-danzhou"
         },
         {
@@ -53817,6 +54733,10 @@
         },
         {
           "kind": "journey",
+          "id": "sushi-zhenzhou"
+        },
+        {
+          "kind": "journey",
           "id": "sushi-death"
         },
         {
@@ -53826,6 +54746,10 @@
         {
           "kind": "topic",
           "id": "chinese-literature-and-performance"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -53843,6 +54767,10 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
+        },
+        {
+          "kind": "topic",
+          "id": "longitude-and-clock"
         }
       ]
     },
@@ -53886,6 +54814,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -53942,6 +54874,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -53972,6 +54908,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -54244,6 +55184,10 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -54278,6 +55222,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -54299,6 +55247,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -54648,6 +55600,19 @@
       ]
     },
     {
+      "url": "https://maritimemuseum.sjtu.edu.cn/info/1161/5931.htm",
+      "title": "上海交通大学董浩云航运博物馆 ·《天妃灵应之记》碑",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:43.310599+00:00",
+      "sha256": "1c0381bca8f4885446675f23d053a40aad7e5463b398faed9b30e15b3a92bc6e",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-changle"
+        }
+      ]
+    },
+    {
       "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
       "title": "University of St Andrews · MacTutor · Albert Einstein",
       "status": "retained-and-hash-verified",
@@ -54881,6 +55846,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -54894,6 +55863,35 @@
         {
           "kind": "event",
           "id": "modern-may-fourth"
+        }
+      ]
+    },
+    {
+      "url": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
+      "title": "济宁市自然资源和规划局 · 轻舟已过万重山",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:43.609222+00:00",
+      "sha256": "1e9e03ed6393cbf6a8af290001fd2f9e40cc914c286910a64106292f2e32ebed",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-pardoned"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-baidi-pardon"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-jiangling-return"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-poets-lives"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -55090,6 +56088,10 @@
         {
           "kind": "topic",
           "id": "central-asian-oases"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
         }
       ]
     },
@@ -55312,6 +56314,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -55466,6 +56472,10 @@
         {
           "kind": "topic",
           "id": "southeast-asian-centres"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
         }
       ]
     },
@@ -55499,6 +56509,14 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -55658,6 +56676,10 @@
         {
           "kind": "topic",
           "id": "american-urban-traditions"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -55691,6 +56713,10 @@
         {
           "kind": "topic",
           "id": "american-urban-traditions"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -55737,6 +56763,14 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -55851,6 +56885,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -55876,6 +56914,10 @@
         {
           "kind": "topic",
           "id": "southeast-asian-centres"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
         }
       ]
     },
@@ -56043,6 +57085,18 @@
         {
           "kind": "world-polity",
           "id": "world-inca"
+        },
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
+        },
+        {
+          "kind": "topic",
+          "id": "gama-indian-ocean"
         }
       ]
     },
@@ -56077,6 +57131,10 @@
         {
           "kind": "topic",
           "id": "american-urban-traditions"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -56119,6 +57177,10 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -56169,6 +57231,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -56248,6 +57314,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -56277,6 +57347,14 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -57882,6 +58960,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -57929,6 +59011,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -58002,6 +59088,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -58101,6 +59191,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -58157,6 +59251,75 @@
         {
           "kind": "event",
           "id": "chengziya-longshan"
+        }
+      ]
+    },
+    {
+      "url": "https://shandong-chorography.org/database/a/section/87/article/9/",
+      "title": "山东地情档案 · 《李清照志》第二类生平",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:46.241421+00:00",
+      "sha256": "b82933a910106a2fd449ce51edc995213c085087a35fb76036a682fc83433f6c",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-bianjing-marriage"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-qingzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-laizhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-south"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wuhu"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-chiyang"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-illness"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-zhangan"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-first"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-quzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-return"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-linan"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jinhua"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jinhua-writing"
         }
       ]
     },
@@ -58497,6 +59660,10 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
+        },
+        {
+          "kind": "topic",
+          "id": "longitude-and-clock"
         }
       ]
     },
@@ -58527,6 +59694,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -58651,6 +59822,10 @@
         {
           "kind": "topic",
           "id": "american-urban-traditions"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -58694,6 +59869,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -58724,6 +59903,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -58754,6 +59937,10 @@
         {
           "kind": "topic",
           "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
         },
         {
           "kind": "place",
@@ -58795,6 +59982,10 @@
         {
           "kind": "topic",
           "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "hexi-and-oases"
         }
       ]
     },
@@ -58812,6 +60003,10 @@
         {
           "kind": "topic",
           "id": "grand-canal"
+        },
+        {
+          "kind": "topic",
+          "id": "capital-and-grain"
         }
       ]
     },
@@ -58855,6 +60050,10 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
         }
       ]
     },
@@ -58880,6 +60079,10 @@
         {
           "kind": "topic",
           "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
         },
         {
           "kind": "place",
@@ -59130,6 +60333,10 @@
         {
           "kind": "topic",
           "id": "american-urban-traditions"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -59550,6 +60757,19 @@
       ]
     },
     {
+      "url": "https://wlt.hubei.gov.cn/bmdt/xydt/201911/t20191121_1370714.shtml",
+      "title": "湖北省文化和旅游厅 · 安陆李白文化旅游节侧记",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:19:03.240760+00:00",
+      "sha256": "2637c751438999add383d74ad2a3167d901b53dfd5acdbc39a196c9f0c618524",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "libai-record-anlu"
+        }
+      ]
+    },
+    {
       "url": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523544/index.html",
       "title": "北京市文物局 · 京张铁路南口段至八达岭段",
       "status": "retained-and-hash-verified",
@@ -59667,6 +60887,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -60662,6 +61886,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -61302,6 +62530,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -62243,6 +63475,10 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
+        },
+        {
+          "kind": "topic",
+          "id": "longitude-and-clock"
         }
       ]
     },
@@ -62952,6 +64188,14 @@
         {
           "kind": "topic",
           "id": "women-public-life"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -63459,6 +64703,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -64717,6 +65965,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -65911,6 +67163,10 @@
         {
           "kind": "topic",
           "id": "messages-distance-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
         }
       ]
     },
@@ -66387,6 +67643,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -66993,6 +68253,19 @@
       ]
     },
     {
+      "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/201912/t20191202_5051930.shtml",
+      "title": "中国社会科学院 · 郑和下西洋七至满剌加",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:45.217262+00:00",
+      "sha256": "e8614ad1b9b3bd93ba7be4dd18288ff399aee04cf9daa5fe21999298f25b725f",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-longwan"
+        }
+      ]
+    },
+    {
       "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
       "title": "朝阳市人民政府 · 牛河梁遗址概述",
       "status": "retained-and-hash-verified",
@@ -67100,6 +68373,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -67130,6 +68411,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -67177,6 +68466,10 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -67289,6 +68582,63 @@
         {
           "kind": "event",
           "id": "modern-eniac"
+        }
+      ]
+    },
+    {
+      "url": "https://www.confucius.taichung.gov.tw/834557/834568/834569/834576/834579/837742/post",
+      "title": "台中市孔庙忠烈祠联合管理所 · 孔子年表",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:11:38.471252+00:00",
+      "sha256": "6e845e575d486e5490cc11e7dc3f0eb6e785e2ea5b55090728b11f1dd65d8f1e",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "confucius-record-zhongdu"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-first"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-kuang"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-return"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-song"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-zheng"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-chen"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-chen-cai"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-late"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-return"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-death"
         }
       ]
     },
@@ -67414,6 +68764,10 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
         }
       ]
     },
@@ -67440,6 +68794,51 @@
         {
           "kind": "event",
           "id": "world-circumnavigation"
+        },
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
+        }
+      ]
+    },
+    {
+      "url": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
+      "title": "扬州大明寺 · 鉴真年表",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:45.539005+00:00",
+      "sha256": "c0dc8405f82d1366ec5b948a9892e6d654b6c742d046421318a1c9d03618e245",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q714061-record-first-preparation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-ayuwang"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-guoqing"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-zhenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-sixth-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-huangsipu"
+        },
+        {
+          "kind": "topic",
+          "id": "ganjin-crossing"
         }
       ]
     },
@@ -67776,6 +69175,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -67884,6 +69287,14 @@
         },
         {
           "kind": "journey",
+          "id": "kangxi-dezhou-1702"
+        },
+        {
+          "kind": "journey",
+          "id": "kangxi-xian-1703"
+        },
+        {
+          "kind": "journey",
           "id": "kangxi-wutai-1710"
         },
         {
@@ -67893,6 +69304,10 @@
         {
           "kind": "topic",
           "id": "qing-state"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
         }
       ]
     },
@@ -68091,6 +69506,35 @@
       ]
     },
     {
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS2_09.pdf",
+      "title": "香港教育局 · 《早发白帝城》教学资料",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:54.495851+00:00",
+      "sha256": "85c3d7d167b1602cfcc66bebf79eb3eee4f1438c4bb21dd3068bd1655181ab0f",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-pardoned"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-baidi-pardon"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-jiangling-return"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-poets-lives"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        }
+      ]
+    },
+    {
       "url": "https://www.edu.cn/jiao_yu_fa_lv_766/20060303/t20060303_165119.shtml",
       "title": "中国教育和科研计算机网 · 中华人民共和国义务教育法（1986年）",
       "status": "request-failed",
@@ -68104,6 +69548,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -68186,6 +69634,31 @@
       ]
     },
     {
+      "url": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
+      "title": "外交部 · 外交史上的今天（鉴真754年抵日）",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:45.742565+00:00",
+      "sha256": "bb9008dfabdefda3e5879769c775d8285c29dd722125c5c3e0a431a4413a63d5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jianzhen"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        },
+        {
+          "kind": "topic",
+          "id": "ganjin-crossing"
+        }
+      ]
+    },
+    {
       "url": "https://www.folger.edu/explore/shakespeares-life/",
       "title": "Folger Shakespeare Library · Shakespeare’s life",
       "status": "retained-and-hash-verified",
@@ -68221,6 +69694,23 @@
         {
           "kind": "person",
           "id": "modern-phil-kripke"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gdwsw.gov.cn/rwcq/content/post_25879.html",
+      "title": "广东省人民政府文史研究馆 · 林则徐在虎门",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:46.283649+00:00",
+      "sha256": "b73704fefd4b15b5025d3f494ec06dca9bd487ec0493c4080322e9e6f994160f",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-guangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-humen"
         }
       ]
     },
@@ -68359,6 +69849,78 @@
       ]
     },
     {
+      "url": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
+      "title": "哥伦布首次航行日记及书信 · 1492—1493",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:44:09.679513+00:00",
+      "sha256": "4c7df3f54fdef8dfda810924ab6670bd94a6a7d03a24b02c59fc75c16550a3ab",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 1519—1521年航段",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:42:33.855710+00:00",
+      "sha256": "f54cd0790a7b245b0aaea1287bef553eb79be0c1ee4f75f703578faf7affc001",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
+      "title": "《达·伽马首次航行日记，1497—1499》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:20:57.699186+00:00",
+      "sha256": "894e46fe88d353e8239e7de34bf5c83738f6c403f5a22aa34ab5ccdedf9813b2",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "gama-indian-ocean"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 返航部分",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:43:51.869159+00:00",
+      "sha256": "e98419e4e7d1d1e86275338a09bda597c94d18b791bfb5955e51f53019e3a3e5",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
+        }
+      ]
+    },
+    {
       "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
       "title": "二里头遗址 · 考古发现与许宏访谈",
       "status": "retained-and-hash-verified",
@@ -68463,6 +70025,23 @@
         {
           "kind": "event",
           "id": "modern-macao-handover"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
+      "title": "西班牙国家地理研究所 · 首次环球航行图",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:24:28.022246+00:00",
+      "sha256": "3344a9643ec306d1f52ffa8b0b0c2e2db02dfcdb09b60a9359597c726b3e1bc3",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "magellan-elcano"
         }
       ]
     },
@@ -68677,6 +70256,23 @@
       ]
     },
     {
+      "url": "https://www.loc.gov/exhibits/1492/columbus.html",
+      "title": "美国国会图书馆 · 1492: Christopher Columbus",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:20:40.424988+00:00",
+      "sha256": "20f19093a5e07ddb7f8c67d072e3434de27545c24dd5b3214f71b0e6d92b1f09",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
+        }
+      ]
+    },
+    {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
       "title": "美国国会图书馆 · 皮萨罗与印加人",
       "status": "request-failed",
@@ -68811,6 +70407,10 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -69026,6 +70626,14 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -69803,6 +71411,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -69872,6 +71484,14 @@
         {
           "kind": "event",
           "id": "world-columbus"
+        },
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
         }
       ]
     },
@@ -69975,6 +71595,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -70005,6 +71629,10 @@
         {
           "kind": "topic",
           "id": "labor-rights-citizenship"
+        },
+        {
+          "kind": "topic",
+          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -70039,6 +71667,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -70099,6 +71731,14 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -70142,6 +71782,32 @@
         {
           "kind": "event",
           "id": "quanzhou-office"
+        }
+      ]
+    },
+    {
+      "url": "https://www.quanzhou.gov.cn/lyb/lytj/rmjdtj/202202/t20220224_2699971.htm",
+      "title": "泉州市人民政府 · 伊斯兰教圣墓（郑和行香碑）",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:46.570181+00:00",
+      "sha256": "f8e43f3b034ccca5158e73a41e1baef0e60ead4d676b6ba769b3c0fafe515c16",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-quanzhou"
+        }
+      ]
+    },
+    {
+      "url": "https://www.quanzhou.gov.cn/lyb/lyxw/202107/t20210712_2586392.htm",
+      "title": "泉州市人民政府 · 石湖码头（附郑和行香碑文）",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:46.612480+00:00",
+      "sha256": "cbe6c0d7b7bbd37f10a5c1276f98024ee763b83e4d0651fe0fa4dcac8710cde4",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-quanzhou"
         }
       ]
     },
@@ -70215,6 +71881,43 @@
       ]
     },
     {
+      "url": "https://www.rxgdyjy.sdu.edu.cn/info/1053/4146.htm",
+      "title": "山东大学 · 赵睿才《“饮中八仙”的演化与李白为“翰林供奉”的时间问题》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:46.992921+00:00",
+      "sha256": "80a0083e92feda49e41d63d2cc8df60e732a8319523151e563dbcf9dd2f05790",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-dufu-meeting"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-leave-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-luoyang-dufu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-yanzhou-dufu"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-poets-lives"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        }
+      ]
+    },
+    {
       "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
       "title": "中国国家档案局 · Huangdi Neijing世界记忆申报材料",
       "status": "request-failed",
@@ -70284,6 +71987,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -70405,6 +72112,10 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -70436,7 +72147,7 @@
     },
     {
       "url": "https://www.toshodaiji.jp/ganjin.html",
-      "title": "唐招提寺 · 鉴真大和上（六次东渡、753年抵日及传戒）",
+      "title": "唐招提寺 · 鉴真大和上（六次东渡、天平胜宝五年抵日及传戒）",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-11-01T15:20:21.293296+00:00",
       "sha256": "1bc54832bf89e7203a4206f7752dac5fa65f84c8e9fc0ed7ae230ea95b540755",
@@ -70446,8 +72157,32 @@
           "id": "jianzhen"
         },
         {
+          "kind": "journey",
+          "id": "q714061-record-yangzhou-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-todaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-toshodaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-death"
+        },
+        {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
+        },
+        {
+          "kind": "topic",
+          "id": "ganjin-crossing"
         }
       ]
     },
@@ -70478,6 +72213,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -70732,6 +72471,14 @@
         {
           "kind": "topic",
           "id": "south-asian-societies"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -70792,6 +72539,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -70809,6 +72560,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -70826,6 +72581,10 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
+        },
+        {
+          "kind": "topic",
+          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -70882,6 +72641,35 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xjyl.gov.cn/xjylz/c112431/202212/751ebaa462b746ca8d1755f1d00529c7.shtml",
+      "title": "伊犁州人民政府 · 格登山色伊江水——纪念林则徐遣戍新疆180周年",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:47.246965+00:00",
+      "sha256": "e2551c7b5735f78c12006d6c6d1badfe95b1daf4c6e32f8216ac778de04da00d",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-xian-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-huiyuan"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-dihua"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kashgar"
         }
       ]
     },
@@ -70981,6 +72769,10 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
+        },
+        {
+          "kind": "topic",
+          "id": "longitude-and-clock"
         }
       ]
     },
@@ -71030,13 +72822,55 @@
     {
       "url": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
       "title": "美国国会图书馆 · Columbus and the Taíno（航行报告与原住民社会）",
-      "status": "request-failed",
-      "attemptedAt": "2026-11-01T09:32:22.304756+00:00",
-      "error": "HTTP Error 403: Forbidden",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-06T03:20:36.150116+00:00",
+      "sha256": "5c1c7382966860205cee0f9907173ade1dd29092a4e49e2d1855edee92fb251e",
       "references": [
         {
           "kind": "event",
           "id": "world-columbus"
+        },
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "columbus-atlantic"
+        }
+      ]
+    },
+    {
+      "url": "https://xbzs.ecnu.edu.cn/CN/html/2018-2-1.htm",
+      "title": "邹振环《郑和下西洋与明朝的“麒麟外交”》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:47.286634+00:00",
+      "sha256": "0a5443e090b60785240a51213571b7fd55f57ab468cc2c139121a973ece180f0",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-hormuz"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-samudra"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-fourth-return"
+        }
+      ]
+    },
+    {
+      "url": "https://xian.qinfeng.gov.cn/info/1279/17704.htm",
+      "title": "西安市纪委 · 林则徐荷戈西戍",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:47.754844+00:00",
+      "sha256": "3ec0b3cd3d8d7482ec4b42b47085b42e62305bbe033905a5164df0aa93125373",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-hami-return"
         }
       ]
     },
@@ -71067,6 +72901,23 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
+        }
+      ]
+    },
+    {
+      "url": "https://ylj.suzhou.gov.cn/szsylj/ylwh/201604/4c21f7192a50467fa863edd7683f17d6.shtml",
+      "title": "苏州市园林和绿化管理局 · 白公祠",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:47.528584+00:00",
+      "sha256": "e4fde57d85a422d13a8eb296765d7f39d0147cbb9b59993ba472017f763be703",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q313324-record-suzhou"
         }
       ]
     },
@@ -71135,6 +72986,10 @@
         {
           "kind": "topic",
           "id": "three-kingdoms"
+        },
+        {
+          "kind": "topic",
+          "id": "chibi-and-alliance"
         },
         {
           "kind": "place",
@@ -71505,7 +73360,27 @@
         },
         {
           "kind": "journey",
+          "id": "zhugeliang-dianchi"
+        },
+        {
+          "kind": "journey",
           "id": "zhugeliang-hanzhong"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-qishan-228"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-hanzhong-228"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-chencang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhugeliang-qishan-231"
         },
         {
           "kind": "journey",
@@ -71997,6 +73872,10 @@
         {
           "kind": "topic",
           "id": "maritime-connections"
+        },
+        {
+          "kind": "topic",
+          "id": "capital-and-grain"
         }
       ]
     },
@@ -72185,6 +74064,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -72227,6 +74110,10 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
+        },
+        {
+          "kind": "topic",
+          "id": "longitude-and-clock"
         }
       ]
     },
@@ -72252,6 +74139,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -72429,6 +74320,31 @@
         {
           "kind": "person",
           "id": "early-plus-person-lu-fayan"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/前聞記",
+      "title": "祝允明《前闻记》· 下西洋",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:49.242180+00:00",
+      "sha256": "20eaeaf03a86fababb14aadae21e78bcd28529177ec0649ef4261900e83a8f08",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-longwan"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        },
+        {
+          "kind": "topic",
+          "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "zheng-he-voyages"
         }
       ]
     },
@@ -72684,6 +74600,14 @@
           "id": "qin-unification"
         },
         {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
+        },
+        {
+          "kind": "topic",
+          "id": "hexi-and-oases"
+        },
+        {
           "kind": "place",
           "id": "xianyang"
         },
@@ -72903,6 +74827,18 @@
         {
           "kind": "topic",
           "id": "messages-distance-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -73072,6 +75008,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -73101,6 +75041,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -73172,6 +75120,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -73368,6 +75324,54 @@
         {
           "kind": "person",
           "id": "early-plus-person-zisi"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-zhongdu"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-first"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-kuang"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-return"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-song"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-zheng"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-chen"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-chen-cai"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-wei-late"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-return"
+        },
+        {
+          "kind": "journey",
+          "id": "confucius-record-lu-death"
         },
         {
           "kind": "topic",
@@ -74162,6 +76166,14 @@
           "id": "tax-money-markets"
         },
         {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
+        },
+        {
           "kind": "place",
           "id": "yangzhou"
         }
@@ -74175,12 +76187,24 @@
       "sha256": "3c31b00ae5de6001130bd1933db269cf026c70efe1040940d634ab914e0dbe59",
       "references": [
         {
+          "kind": "event",
+          "id": "simaqian-shiji-writing"
+        },
+        {
           "kind": "person",
           "id": "simaqian"
         },
         {
           "kind": "person",
           "id": "early-plus-person-sima-tan"
+        },
+        {
+          "kind": "topic",
+          "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -74198,6 +76222,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -74413,6 +76441,95 @@
         {
           "kind": "topic",
           "id": "messages-distance-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/唐大和上東征傳",
+      "title": "《唐大和上东征传》· 末次渡海与抵日活动",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:49.370866+00:00",
+      "sha256": "224141f9c6c5a5a235a467406bf9963add59c7dd35c45e84c03585f827046a88",
+      "references": [
+        {
+          "kind": "event",
+          "id": "jianzhen"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yangzhou-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-first-preparation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-ayuwang"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yuezhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-guoqing"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-fifth-departure"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-zhenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-shaoguan"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-sixth-invitation"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-huangsipu"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-yakushima"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-akime"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-dazaifu"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-naniwa"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-todaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-toshodaiji"
+        },
+        {
+          "kind": "journey",
+          "id": "q714061-record-death"
+        },
+        {
+          "kind": "topic",
+          "id": "ganjin-crossing"
         }
       ]
     },
@@ -74640,8 +76757,147 @@
           "id": "xuanzang"
         },
         {
+          "kind": "journey",
+          "id": "xuanzang-record-changan-depart"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-liangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-guazhou"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-yiwu"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-gaochang"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷02",
+      "title": "《大唐大慈恩寺三藏法师传》卷2",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:11:29.578477+00:00",
+      "sha256": "f42e0094c491de8c4455c699c7b252df7f2b999c54ef6412cdf53bc6e7be51dd",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kucha"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-suyab"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-samarkand"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-balkh"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-bamiyan"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kashmir"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷03",
+      "title": "《大唐大慈恩寺三藏法师传》卷3",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:11:28.348049+00:00",
+      "sha256": "775e2ace27f2b698a96ff68e68bdf010416c2f3e74c6ee2b00b616687dc4a5e8",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-bodhgaya"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-nalanda"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷05",
+      "title": "《大唐大慈恩寺三藏法师传》卷5",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:11:28.303037+00:00",
+      "sha256": "8df1ba7b44932b8fa23535bdfa8731e10a488e337eb5d3edd01d97b76bf1d0e4",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kannauj-assembly"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-prayaga"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kapisa-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-kashgar-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-khotan-return"
+        },
+        {
+          "kind": "journey",
+          "id": "xuanzang-record-dunhuang-return"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
         }
       ]
     },
@@ -74666,7 +76922,19 @@
         },
         {
           "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
           "id": "buddhist-texts-and-networks"
+        },
+        {
+          "kind": "topic",
+          "id": "translation-workshops"
+        },
+        {
+          "kind": "topic",
+          "id": "xuanzang-pilgrimage"
         }
       ]
     },
@@ -74765,6 +77033,31 @@
         {
           "kind": "event",
           "id": "early-plus-daguan-tea"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天妃之神靈應記",
+      "title": "郑和等《天妃之神灵应记》",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:50.509034+00:00",
+      "sha256": "c25def7724c772fad1a73706f99ed1c3367b80095041ab08997f4103b6e73cf3",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-changle"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        },
+        {
+          "kind": "topic",
+          "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "zheng-he-voyages"
         }
       ]
     },
@@ -74971,15 +77264,31 @@
       ]
     },
     {
-      "url": "https://zh.wikisource.org/wiki/始得西山宴遊記",
-      "title": "柳宗元《始得西山宴游记》",
+      "url": "https://zh.wikisource.org/wiki/婁東劉家港天妃宮石刻通番事蹟記",
+      "title": "郑和等《娄东刘家港天妃宫石刻通番事迹记》",
       "status": "retained-and-hash-verified",
-      "retrievedAt": "2026-11-02T17:22:06.244321+00:00",
-      "sha256": "3506cf75304dcf4c3f8fc4a46b178e2ae318357b5dcdf5baa312da0eb0f8100c",
+      "retrievedAt": "2026-11-04T16:12:50.599495+00:00",
+      "sha256": "0bc9271ead85db2dbf91eace1c5a44d60ccc74afc08af62fc2c0786addcbe898",
       "references": [
         {
           "kind": "journey",
-          "id": "q337773-record-west-hill"
+          "id": "zhenghe-record-first-liujiagang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-ceylon-captives"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-hormuz"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-samudra"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-last-liujiagang"
         }
       ]
     },
@@ -75076,10 +77385,6 @@
         {
           "kind": "event",
           "id": "early-plus-song-shibi"
-        },
-        {
-          "kind": "event",
-          "id": "early-plus-yuanyou-change"
         },
         {
           "kind": "event",
@@ -75470,6 +77775,60 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷017",
+      "title": "《宋史》卷17",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:52:41.100368+00:00",
+      "sha256": "b5da1584742919cfcbceaf21bc82f93392f1a68a7a1d4af59c73a679ce5ace3e",
+      "references": [
+        {
+          "kind": "event",
+          "id": "early-plus-yuanyou-change"
+        },
+        {
+          "kind": "event",
+          "id": "shaosheng-policy-reversal"
+        },
+        {
+          "kind": "person",
+          "id": "song-zhezong"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷018",
+      "title": "《宋史》卷18",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:52:41.069165+00:00",
+      "sha256": "05fdf0c4df1bdb62728e060f3a0eabf44b0719d54ebc1813393bc5d78a5de8f5",
+      "references": [
+        {
+          "kind": "event",
+          "id": "shaosheng-policy-reversal"
+        },
+        {
+          "kind": "person",
+          "id": "song-zhezong"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/宋史/卷019",
       "title": "《宋史》卷19 · 徽宗一",
       "status": "retained-and-hash-verified",
@@ -75577,6 +77936,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -75724,6 +78091,14 @@
         {
           "kind": "person",
           "id": "wanganshi"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -75760,6 +78135,10 @@
           "id": "zizhi-tongjian"
         },
         {
+          "kind": "event",
+          "id": "early-plus-yuanyou-change"
+        },
+        {
           "kind": "person",
           "id": "simaguang"
         },
@@ -75769,7 +78148,19 @@
         },
         {
           "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -75790,7 +78181,15 @@
         },
         {
           "kind": "event",
+          "id": "early-plus-yuanyou-change"
+        },
+        {
+          "kind": "event",
           "id": "sudi"
+        },
+        {
+          "kind": "event",
+          "id": "shaosheng-policy-reversal"
         },
         {
           "kind": "person",
@@ -75798,7 +78197,19 @@
         },
         {
           "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -75933,6 +78344,27 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷472",
+      "title": "《宋史》卷472",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:52:42.485928+00:00",
+      "sha256": "588ce820cbd085ab73da1d1a074057de30f7c73cdd953ac8578bedab0df56aa3",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -76400,6 +78832,10 @@
         {
           "kind": "topic",
           "id": "silk-road"
+        },
+        {
+          "kind": "topic",
+          "id": "hexi-and-oases"
         }
       ]
     },
@@ -76498,6 +78934,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -76562,6 +79002,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -76655,6 +79099,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -76838,6 +79286,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -77379,6 +79831,27 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷119",
+      "title": "《新唐書》卷119",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:54.468325+00:00",
+      "sha256": "fc96f8617b8cde74811fe9291d90b41c04f0662f5617476c6e5a9ce9df3ea14a",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "q313324-record-luoyang-death"
         }
       ]
     },
@@ -77430,6 +79903,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷201",
+      "title": "《新唐書》卷201",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:52:42.833283+00:00",
+      "sha256": "b8d102e9ac4f65d0f7d67a1e870e27045fc882c27aa6339b565edeb2493c29b7",
+      "references": [
+        {
+          "kind": "event",
+          "id": "libai-dufu-meeting"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
       "title": "《新唐书》卷202 · 李白传（召见与供奉）",
       "status": "retained-and-hash-verified",
@@ -77447,6 +79933,26 @@
         {
           "kind": "event",
           "id": "libai-yongwang"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-changan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-lushan"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-xunyang-prison"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu"
+        },
+        {
+          "kind": "journey",
+          "id": "libai-record-dangtu-death"
         }
       ]
     },
@@ -77557,6 +80063,10 @@
         {
           "kind": "topic",
           "id": "maritime-connections"
+        },
+        {
+          "kind": "topic",
+          "id": "capital-and-grain"
         },
         {
           "kind": "place",
@@ -77888,8 +80398,48 @@
           "id": "zhenghe"
         },
         {
+          "kind": "journey",
+          "id": "zhenghe-record-first-liujiagang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-palembang"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-first-return"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-ceylon-captives"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-samudra"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-fourth-return"
+        },
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-nanjing-guard"
+        },
+        {
+          "kind": "topic",
+          "id": "maritime-connections"
+        },
+        {
           "kind": "topic",
           "id": "indian-ocean-ports"
+        },
+        {
+          "kind": "topic",
+          "id": "port-and-hinterland"
+        },
+        {
+          "kind": "topic",
+          "id": "zheng-he-voyages"
         }
       ]
     },
@@ -78046,6 +80596,10 @@
         {
           "kind": "topic",
           "id": "three-kingdoms"
+        },
+        {
+          "kind": "topic",
+          "id": "chibi-and-alliance"
         },
         {
           "kind": "place",
@@ -78462,6 +81016,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -79414,6 +81972,18 @@
           "id": "schools-and-examinations"
         },
         {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "factory-city-sanitation"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
+        },
+        {
           "kind": "place",
           "id": "guangzhou"
         }
@@ -79764,6 +82334,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -79840,6 +82414,54 @@
         {
           "kind": "person",
           "id": "linzexu"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-beijing-exam"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-mourning"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-suzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-wuchang"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-guangzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-humen"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-zhenhai"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kaifeng-river"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-huiyuan"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kashgar"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-fuzhou-retirement"
+        },
+        {
+          "kind": "journey",
+          "id": "linzexu-record-puning-death"
         }
       ]
     },
@@ -80145,6 +82767,10 @@
           "id": "qin-unification"
         },
         {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
+        },
+        {
           "kind": "place",
           "id": "changan"
         },
@@ -80214,6 +82840,10 @@
         {
           "kind": "topic",
           "id": "messages-distance-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
         }
       ]
     },
@@ -80263,6 +82893,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -80308,6 +82946,14 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
+        },
+        {
+          "kind": "topic",
+          "id": "tax-enters-household"
+        },
+        {
+          "kind": "topic",
+          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -80487,11 +83133,15 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/漢書/卷062",
-      "title": "《汉书》卷62 · 司马迁传（著述及报任安书）",
+      "title": "《漢書》卷62",
       "status": "retained-and-hash-verified",
       "retrievedAt": "2026-10-06T12:19:34.568048+00:00",
       "sha256": "22d53655682718bb2aeb1b9d74c9b41795704ad69f46b4da95c715a4c40bfb30",
       "references": [
+        {
+          "kind": "event",
+          "id": "simaqian-shiji-writing"
+        },
         {
           "kind": "event",
           "id": "liling-affair"
@@ -80499,6 +83149,14 @@
         {
           "kind": "person",
           "id": "reviewed-李陵"
+        },
+        {
+          "kind": "topic",
+          "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -80653,6 +83311,10 @@
         {
           "kind": "topic",
           "id": "schools-and-examinations"
+        },
+        {
+          "kind": "topic",
+          "id": "school-and-access"
         }
       ]
     },
@@ -80692,6 +83354,10 @@
         {
           "kind": "event",
           "id": "western-regions"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
         }
       ]
     },
@@ -80781,6 +83447,19 @@
         {
           "kind": "event",
           "id": "early-plus-xin-measures"
+        }
+      ]
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/瀛涯勝覽",
+      "title": "马欢《瀛涯胜览》· 旧港国",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:52.388211+00:00",
+      "sha256": "f65082d92cad8b27cdd94158228dc26c52d33bdf526ac5381fb90dc6eff3115c",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "zhenghe-record-palembang"
         }
       ]
     },
@@ -80889,6 +83568,19 @@
       ]
     },
     {
+      "url": "https://zh.wikisource.org/wiki/王陽明集/卷26",
+      "title": "《王阳明集》卷26 · 寄正宪男手墨",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:11:31.845079+00:00",
+      "sha256": "a6ee99dbe5a407cce76f595e957f0c3ccc1b96ec86728c5d0bc5e8de6e520042",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "wangyangming-record-nanning"
+        }
+      ]
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/琵琶行",
       "title": "白居易《琵琶行》及序（元和十一年、江州送客与全诗叙事）",
       "status": "retained-and-hash-verified",
@@ -80902,6 +83594,14 @@
         {
           "kind": "journey",
           "id": "q313324-record-jiangzhou"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-poets-lives"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -81122,6 +83822,14 @@
         {
           "kind": "event",
           "id": "wanganshi"
+        },
+        {
+          "kind": "topic",
+          "id": "northern-song-reform-reversals"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -81753,6 +84461,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -82025,18 +84737,6 @@
         {
           "kind": "journey",
           "id": "q318998-record-changan-death"
-        },
-        {
-          "kind": "journey",
-          "id": "q337773-record-yongzhou"
-        },
-        {
-          "kind": "journey",
-          "id": "q337773-record-liuzhou"
-        },
-        {
-          "kind": "journey",
-          "id": "q337773-record-liuzhou-death"
         }
       ]
     },
@@ -82085,12 +84785,16 @@
           "id": "q313324-record-luoyang"
         },
         {
-          "kind": "journey",
-          "id": "q313324-record-luoyang-death"
+          "kind": "topic",
+          "id": "tang-poets-lives"
         },
         {
           "kind": "topic",
           "id": "chinese-literature-and-performance"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -82198,6 +84902,10 @@
           "id": "dufu-chengdu"
         },
         {
+          "kind": "event",
+          "id": "libai-pardoned"
+        },
+        {
           "kind": "person",
           "id": "dufu"
         },
@@ -82244,6 +84952,14 @@
         {
           "kind": "journey",
           "id": "dufu-record-chengdu"
+        },
+        {
+          "kind": "topic",
+          "id": "tang-poets-lives"
+        },
+        {
+          "kind": "topic",
+          "id": "poetry-in-exile"
         }
       ]
     },
@@ -82677,6 +85393,10 @@
         {
           "kind": "topic",
           "id": "how-history-is-written"
+        },
+        {
+          "kind": "topic",
+          "id": "history-and-commentary"
         }
       ]
     },
@@ -83168,6 +85888,10 @@
         {
           "kind": "topic",
           "id": "messages-distance-and-access"
+        },
+        {
+          "kind": "topic",
+          "id": "qin-conquest-and-government"
         }
       ]
     },
@@ -83417,6 +86141,62 @@
         {
           "kind": "person",
           "id": "reviewed-赵明诚"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-bianjing-marriage"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-qingzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-laizhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-south"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wuhu"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-gushu"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-chiyang"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-jiankang-illness"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-zhangan"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-wenzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-first"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-quzhou"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-yue-return"
+        },
+        {
+          "kind": "journey",
+          "id": "liqingzhao-record-linan"
         }
       ]
     },
@@ -83543,6 +86323,10 @@
           "id": "grand-canal"
         },
         {
+          "kind": "topic",
+          "id": "capital-and-grain"
+        },
+        {
           "kind": "place",
           "id": "luoyang"
         }
@@ -83608,6 +86392,10 @@
         {
           "kind": "topic",
           "id": "water-food-cities"
+        },
+        {
+          "kind": "topic",
+          "id": "city-water-and-labor"
         }
       ]
     },
@@ -84261,6 +87049,19 @@
         {
           "kind": "person",
           "id": "modern-phil-chenduxiu"
+        }
+      ]
+    },
+    {
+      "url": "https://zx.huaian.gov.cn/col/14069_277241/art/m/16855488/1686706454756gYGpT7lO.html",
+      "title": "淮安政协文史网 · 林则徐治水记述",
+      "status": "retained-and-hash-verified",
+      "retrievedAt": "2026-11-04T16:12:52.580016+00:00",
+      "sha256": "7567656946c289238f0616a2418c52f811e5f0f398dfd4c222369d6e89425821",
+      "references": [
+        {
+          "kind": "journey",
+          "id": "linzexu-record-kaifeng-river"
         }
       ]
     }
@@ -88780,23 +91581,6 @@
       "coverage": "no-linked-events"
     },
     {
-      "id": "q7483",
-      "name": "宋神宗",
-      "recordKind": "curated",
-      "birth": 1048,
-      "death": 1085,
-      "sourceCount": 2,
-      "biographyCharacters": 105,
-      "eventCount": 1,
-      "eventIds": [
-        "wanganshi-second-resignation"
-      ],
-      "journeyNodes": 0,
-      "outsideMapRange": false,
-      "outsideReadingRange": false,
-      "coverage": "one-linked-event"
-    },
-    {
       "id": "q832770",
       "name": "秦观",
       "recordKind": "curated",
@@ -90106,7 +92890,7 @@
       "eventIds": [
         "jianzhen"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 17,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "one-linked-event"
@@ -90938,7 +93722,7 @@
       "eventIds": [
         "kongzi-teaching"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "one-linked-event"
@@ -94606,12 +97390,14 @@
       "death": -110,
       "sourceCount": 1,
       "biographyCharacters": 70,
-      "eventCount": 0,
-      "eventIds": [],
+      "eventCount": 1,
+      "eventIds": [
+        "simaqian-shiji-writing"
+      ],
       "journeyNodes": 0,
       "outsideMapRange": false,
       "outsideReadingRange": false,
-      "coverage": "no-linked-events"
+      "coverage": "one-linked-event"
     },
     {
       "id": "early-plus-person-zhang-tang",
@@ -105295,7 +108081,7 @@
       "eventIds": [
         "kongzi-teaching"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "one-linked-event"
@@ -105465,9 +108251,10 @@
       "death": null,
       "sourceCount": 2,
       "biographyCharacters": 192,
-      "eventCount": 3,
+      "eventCount": 4,
       "eventIds": [
         "calendar",
+        "simaqian-shiji-writing",
         "early-plus-han-merchant-networks",
         "liling-affair"
       ],
@@ -105563,7 +108350,7 @@
         "northern-expedition",
         "wuzhang"
       ],
-      "journeyNodes": 6,
+      "journeyNodes": 11,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -105720,7 +108507,7 @@
         "xuanzang-return",
         "great-tang-western-records"
       ],
-      "journeyNodes": 8,
+      "journeyNodes": 27,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -105733,13 +108520,15 @@
       "death": 762,
       "sourceCount": 1,
       "biographyCharacters": 190,
-      "eventCount": 3,
+      "eventCount": 5,
       "eventIds": [
         "libai-changan",
         "libai-leaves-court",
-        "libai-yongwang"
+        "libai-dufu-meeting",
+        "libai-yongwang",
+        "libai-pardoned"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -105752,8 +108541,9 @@
       "death": 770,
       "sourceCount": 3,
       "biographyCharacters": 172,
-      "eventCount": 5,
+      "eventCount": 6,
       "eventIds": [
+        "libai-dufu-meeting",
         "an-lushan",
         "dufu-chengdu",
         "early-plus-dufu-three-officers",
@@ -105859,14 +108649,17 @@
       "death": 1101,
       "sourceCount": 2,
       "biographyCharacters": 281,
-      "eventCount": 4,
+      "eventCount": 7,
       "eventIds": [
         "ouyang-exam-1057",
         "wutai-poetry",
         "sushi-red-cliff",
-        "sudi"
+        "early-plus-yuanyou-change",
+        "sudi",
+        "shaosheng-policy-reversal",
+        "early-plus-party-stele"
       ],
-      "journeyNodes": 31,
+      "journeyNodes": 38,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -105897,11 +108690,13 @@
       "death": 1086,
       "sourceCount": 1,
       "biographyCharacters": 177,
-      "eventCount": 3,
+      "eventCount": 5,
       "eventIds": [
         "simaguang-tongzhi",
+        "wanganshi",
         "zizhi-tongjian",
-        "early-plus-yuanyou-change"
+        "early-plus-yuanyou-change",
+        "early-plus-party-stele"
       ],
       "journeyNodes": 0,
       "outsideMapRange": false,
@@ -105922,7 +108717,7 @@
         "liqingzhao-south",
         "zhao-mingcheng-death"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 16,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -106084,7 +108879,7 @@
         "zhenghe",
         "zhenghe-seventh-voyage"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 12,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -106224,7 +109019,7 @@
         "qing-tibet-1720",
         "yongzheng"
       ],
-      "journeyNodes": 15,
+      "journeyNodes": 17,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"
@@ -106303,7 +109098,7 @@
         "opium-war",
         "linzexu-xinjiang"
       ],
-      "journeyNodes": 0,
+      "journeyNodes": 16,
       "outsideMapRange": false,
       "outsideReadingRange": false,
       "coverage": "multiple-linked-events"

@@ -21,6 +21,29 @@ function view(id: string, year: number, point: string | null = null, future = fa
   }
 }
 describe('evidence-based person journeys', () => {
+  it('includes the requested journeys and retires only Liu Zongyuan’s playable trail', () => {
+    for (const id of ['libai', 'liqingzhao', 'q714061', 'linzexu', 'confucius', 'zhenghe'])
+      expect(journeyByPerson.has(id), id).toBe(true)
+    expect(journeyByPerson.has('q337773')).toBe(false)
+    expect(personById.get('q337773')?.name).toBe('柳宗元')
+    expect(new Set(journeys.map((journey) => journey.personId)).size).toBe(journeys.length)
+    const ids = journeys.flatMap((journey) => journey.nodes.map((node) => node.id))
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+  it('retains independent episodes rather than treating appointments and other people’s actions as visits', () => {
+    const zhuge = journeyByPerson.get('zhugeliang')!
+    expect(zhuge.nodes.filter((node) => node.year === 228).map((node) => node.location)).toEqual([
+      '祁山 · 今礼县附近',
+      '汉中',
+      '陈仓 · 今宝鸡陈仓一带',
+    ])
+    expect(zhuge.nodes.some((node) => /街亭/.test(node.location))).toBe(false)
+    const su = journeyByPerson.get('sushi')!
+    expect(su.nodes.filter((node) => node.year === 1097).map((node) => node.id)).toEqual([
+      'sushi-tengzhou',
+      'sushi-danzhou',
+    ])
+  })
   it('never uses Kangxi’s associated military or diplomatic event locations as his presence', () => {
     const kangxi = journeyByPerson.get('kangxi')!
     expect(kangxi.nodes.map((node) => node.location).join(' ')).not.toMatch(/台湾|尼布楚|昭莫多/)
@@ -52,6 +75,7 @@ describe('evidence-based person journeys', () => {
     const selected = view('sushi', 1057, 'sushi-exam')
     expect(visibleJourneyNodes(selected).map((node) => node.id)).toEqual([
       'sushi-birth',
+      'sushi-chengdu-1055',
       'sushi-exam',
     ])
     const returned = journeySegments(view('sushi', 1057, 'sushi-mourning')).features.at(-1)!
@@ -90,6 +114,11 @@ describe('evidence-based person journeys', () => {
       )
       expect(new Set(journey.nodes.map((node) => node.id)).size).toBe(journey.nodes.length)
       for (const node of journey.nodes) {
+        expect(Number.isInteger(node.year) && node.year !== 0, node.id).toBe(true)
+        expect(node.coordinates[0], node.id).toBeGreaterThanOrEqual(-180)
+        expect(node.coordinates[0], node.id).toBeLessThanOrEqual(180)
+        expect(node.coordinates[1], node.id).toBeGreaterThanOrEqual(-85)
+        expect(node.coordinates[1], node.id).toBeLessThanOrEqual(85)
         expect(node.sources.length).toBeGreaterThan(0)
         expect(node.locationNote.length).toBeGreaterThan(0)
         if (person.birth !== null) expect(node.year).toBeGreaterThanOrEqual(person.birth)

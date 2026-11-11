@@ -612,6 +612,10 @@ export default function HistoryMap(props: Props) {
             Math.max(0, viewport.left + 8 - rect.left),
             viewport.right - 8 - rect.right,
           )
+          const verticalFit = Math.min(
+            Math.max(0, viewport.top + 8 - rect.top),
+            viewport.bottom - 12 - rect.bottom,
+          )
           const offsets = item.element.classList.contains('polity-label')
             ? [
                 [-90, 0],
@@ -623,10 +627,16 @@ export default function HistoryMap(props: Props) {
               ]
             : item.element.classList.contains('journey-marker')
               ? [
+                  [horizontalFit, 0],
+                  [horizontalFit, rect.height + 8],
                   [-70, 32],
                   [70, 32],
                   [-70, 52],
                   [70, 52],
+                  [horizontalFit, verticalFit],
+                  // A clustered label may start above a short mobile map.
+                  // Try the free space immediately below each fixed control.
+                  ...obstacles.map((obstacle) => [horizontalFit, obstacle.bottom + 6 - rect.top]),
                 ]
               : [
                   [horizontalFit, 0],

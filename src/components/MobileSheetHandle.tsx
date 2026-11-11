@@ -49,9 +49,9 @@ export default function MobileSheetHandle({
     const start = (x: number, y: number, fromContent: boolean) => {
       if (!media.matches || landscape.matches) return
       suppressClick.current = false
-      const maximum =
-        app.querySelector('.timeline')!.getBoundingClientRect().top -
-        app.querySelector('.topbar')!.getBoundingClientRect().bottom
+      const timeline = app.querySelector('.timeline')!.getBoundingClientRect()
+      const bottom = timeline.height > 0 ? timeline.top : app.getBoundingClientRect().bottom
+      const maximum = bottom - app.querySelector('.topbar')!.getBoundingClientRect().bottom
       gesture = {
         x,
         y,

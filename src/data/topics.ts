@@ -1,3 +1,7 @@
+import { voyageTopics, addRouteReading } from './voyage-topics'
+import { deepenTopics } from './topic-articles'
+import { createFocusedTopics } from './focused-topics'
+import { continuityTopicTours } from './continuity-content'
 import { expandedTopicTours } from './topic-expansion'
 import { connectedTopicTours } from './connected-reading-paths'
 import type { Source, Tour } from '../types'
@@ -37,7 +41,8 @@ function topic(
     description: introduction[0],
   }
 }
-export const topicTours: Tour[] = [
+const existingTopics: Tour[] = [
+  ...continuityTopicTours,
   topic(
     'three-kingdoms',
     '三国，从群雄到归一',
@@ -1199,4 +1204,10 @@ export const topicTours: Tour[] = [
   ),
   ...expandedTopicTours,
   ...connectedTopicTours,
+]
+
+export const topicTours: Tour[] = [
+  ...deepenTopics(existingTopics).map(addRouteReading),
+  ...createFocusedTopics(existingTopics),
+  ...voyageTopics,
 ]

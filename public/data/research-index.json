@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-03T16:38:56.772Z",
-  "totalSourceLinks": 3564,
-  "referenceDocuments": 1910,
-  "successfulSnapshots": 1201,
+  "generatedAt": "2026-11-06T03:47:58.359Z",
+  "totalSourceLinks": 3606,
+  "referenceDocuments": 1953,
+  "successfulSnapshots": 1245,
   "unavailable": [
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
@@ -3115,11 +3115,6 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
-      "attemptedAt": "2026-11-01T09:32:22.304756+00:00",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "url": "https://zh.wikisource.org/wiki/一切經音義",
       "attemptedAt": "2026-11-02T17:53:12.055691+00:00",
       "error": "HTTP Error 404: Not Found"
@@ -3703,6 +3698,13 @@
       "revisionId": null
     },
     {
+      "url": "https://chiculture.org.hk/sc/china-five-thousand-years/1408",
+      "title": "中国文化研究院 · 袁行霈《李白非凡的一生》",
+      "retrievedAt": "2026-11-04T16:12:44.761993+00:00",
+      "sha256": "bde6e17a2353d04a06c4dcbad36726c8df295c114c83521be293454b1e69dfd7",
+      "revisionId": null
+    },
+    {
       "url": "https://chiculture.org.hk/tc/china-five-thousand-years/1384",
       "title": "中国文化研究院 · 杜甫一生的足迹",
       "retrievedAt": "2026-11-02T17:22:03.010504+00:00",
@@ -3737,6 +3739,13 @@
       "attemptedAt": "2026-10-25T16:48:41.787364+00:00"
     },
     {
+      "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
+      "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
+      "retrievedAt": "2026-11-04T16:19:03.239634+00:00",
+      "sha256": "35f405392fdf4aec858882d4660a5e7a2c2c0c77033e37f380c5aed898cc6c90",
+      "revisionId": null
+    },
+    {
       "url": "https://cssn.cn/kgxc/kgxc_kgxl/202211/t20221120_5565364.shtml",
       "title": "郑州商城 · 考古与机构资料",
       "retrievedAt": "2026-11-02T17:52:28.401048+00:00",
@@ -3748,6 +3757,13 @@
       "title": "南京市档案馆 · 侵华日军南京大屠杀档案",
       "retrievedAt": "2026-10-25T17:22:51.480609+00:00",
       "sha256": "9543d8915a567ee728ac36230e75e8956eadaa6823964a4797e4d2f575fe404b",
+      "revisionId": null
+    },
+    {
+      "url": "https://daj.fuzhou.gov.cn/zz/wszt/tslm/msfq/202306/t20230605_4614379.htm",
+      "title": "福州档案信息网 · 林则徐笔下的福州文化遗址",
+      "retrievedAt": "2026-11-04T16:12:42.809861+00:00",
+      "sha256": "41f7090f696926a81b4c464dcd0f3278b1b998bff2c1746f8ed65352e12bf5f4",
       "revisionId": null
     },
     {
@@ -3764,6 +3780,13 @@
       "attemptedAt": "2026-11-02T15:55:52.611147+00:00"
     },
     {
+      "url": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
+      "title": "南京市地方志工作办公室 · “官爱江南为六朝”——林则徐与南京",
+      "retrievedAt": "2026-11-04T16:12:42.975418+00:00",
+      "sha256": "1fb2fc21f9246529fc5f4ed4afff6284ce978aab8cb10d67938a26ad5f8c1909",
+      "revisionId": null
+    },
+    {
       "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923616206405975.pdf",
       "title": "陕西省地方志 · 半坡类型仰韶文化年代",
       "retrievedAt": "2026-10-07T06:33:41.603600+00:00",
@@ -3776,6 +3799,13 @@
       "title": "陕西省地方志办公室 · 陕西省志相关医学史卷",
       "retrievedAt": "2026-10-25T17:16:09.117217+00:00",
       "sha256": "9d73075e76f5b33e22ac7557c84e64e4c16b3bf1fb66eae40395a028ec7733b9",
+      "revisionId": null
+    },
+    {
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=146341&q=1&word=%E5%AE%97",
+      "title": "教育部《重编国语辞典修订本》· 宋哲宗",
+      "retrievedAt": "2026-11-04T16:52:41.482463+00:00",
+      "sha256": "42be0262b886b7e0556212efb8c14bf86f564112b87a540cff70d3fdb05b7e0b",
       "revisionId": null
     },
     {
@@ -3862,6 +3892,13 @@
       "title": "印度 INFLIBNET · 笈多帝国",
       "retrievedAt": "2026-10-23T06:54:30.509929+00:00",
       "sha256": "47c3ca58e8966e987d408272c82356297a7a607002458d969f58330708ea4d80",
+      "revisionId": null
+    },
+    {
+      "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/caldb_s.cgi?year=754",
+      "title": "日本国立天文台历计算室 · 754年历月与节月",
+      "retrievedAt": "2026-11-04T16:12:45.074948+00:00",
+      "sha256": "336910c3fe2487736edd5abe25ecefc799b5a4e22681f977494aa3cf7c550807",
       "revisionId": null
     },
     {
@@ -4323,6 +4360,13 @@
       "revisionId": null
     },
     {
+      "url": "https://maritimemuseum.sjtu.edu.cn/info/1161/5931.htm",
+      "title": "上海交通大学董浩云航运博物馆 ·《天妃灵应之记》碑",
+      "retrievedAt": "2026-11-04T16:12:43.310599+00:00",
+      "sha256": "1c0381bca8f4885446675f23d053a40aad7e5463b398faed9b30e15b3a92bc6e",
+      "revisionId": null
+    },
+    {
       "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Einstein/",
       "title": "University of St Andrews · MacTutor · Albert Einstein",
       "retrievedAt": "2026-10-25T17:37:57.255226+00:00",
@@ -4446,6 +4490,13 @@
       "title": "北京大学 · 五四百年专题",
       "retrievedAt": "2026-10-25T17:23:13.440080+00:00",
       "sha256": "1955b90cb39c87243ce92e981fe3a0175bcd04907b0cfd7b49ca647d9bc55d1e",
+      "revisionId": null
+    },
+    {
+      "url": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
+      "title": "济宁市自然资源和规划局 · 轻舟已过万重山",
+      "retrievedAt": "2026-11-04T16:12:43.609222+00:00",
+      "sha256": "1e9e03ed6393cbf6a8af290001fd2f9e40cc914c286910a64106292f2e32ebed",
       "revisionId": null
     },
     {
@@ -5671,6 +5722,13 @@
       "revisionId": null
     },
     {
+      "url": "https://shandong-chorography.org/database/a/section/87/article/9/",
+      "title": "山东地情档案 · 《李清照志》第二类生平",
+      "retrievedAt": "2026-11-04T16:12:46.241421+00:00",
+      "sha256": "b82933a910106a2fd449ce51edc995213c085087a35fb76036a682fc83433f6c",
+      "revisionId": null
+    },
+    {
       "url": "https://shandong-chorography.org/database/c34/section/8/article/672/",
       "title": "后李 · 考古与机构资料",
       "retrievedAt": "2026-11-02T17:52:27.725851+00:00",
@@ -5959,7 +6017,7 @@
       "url": "https://whc.unesco.org/en/list/1442/",
       "title": "UNESCO · 长安—天山廊道",
       "retrievedAt": "2026-10-06T12:09:08.598625+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.961429+00:00",
+      "lastCacheCheckAt": "2026-11-06T03:20:40.465839+00:00",
       "sha256": "9b7ce1bade577e857a5d8b16d12b7fb1300d3a923c1a7dc1ee8201a49f784398",
       "revisionId": null
     },
@@ -6326,6 +6384,13 @@
       "title": "湖北省文旅厅 · 李时珍纪念馆所述本草纲目编撰与出版",
       "error": "HTTP Error 412: Precondition Failed",
       "attemptedAt": "2026-10-06T16:20:29.279260+00:00"
+    },
+    {
+      "url": "https://wlt.hubei.gov.cn/bmdt/xydt/201911/t20191121_1370714.shtml",
+      "title": "湖北省文化和旅游厅 · 安陆李白文化旅游节侧记",
+      "retrievedAt": "2026-11-04T16:19:03.240760+00:00",
+      "sha256": "2637c751438999add383d74ad2a3167d901b53dfd5acdbc39a196c9f0c618524",
+      "revisionId": null
     },
     {
       "url": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523544/index.html",
@@ -9568,6 +9633,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.cass.cn/xueshuchengguo/xscg_lsyjy/201912/t20191202_5051930.shtml",
+      "title": "中国社会科学院 · 郑和下西洋七至满剌加",
+      "retrievedAt": "2026-11-04T16:12:45.217262+00:00",
+      "sha256": "e8614ad1b9b3bd93ba7be4dd18288ff399aee04cf9daa5fe21999298f25b725f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
       "title": "朝阳市人民政府 · 牛河梁遗址概述",
       "retrievedAt": "2026-10-07T06:33:37.992381+00:00",
@@ -9717,6 +9789,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.confucius.taichung.gov.tw/834557/834568/834569/834576/834579/837742/post",
+      "title": "台中市孔庙忠烈祠联合管理所 · 孔子年表",
+      "retrievedAt": "2026-11-04T16:11:38.471252+00:00",
+      "sha256": "6e845e575d486e5490cc11e7dc3f0eb6e785e2ea5b55090728b11f1dd65d8f1e",
+      "revisionId": null
+    },
+    {
       "url": "https://www.cp.com.cn/book/3bf46e31-0.html",
       "title": "商务印书馆 · 《论道》内容简介",
       "retrievedAt": "2026-10-25T17:33:12.572427+00:00",
@@ -9790,7 +9869,15 @@
       "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
       "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
       "retrievedAt": "2026-10-23T06:50:15.841194+00:00",
+      "lastCacheCheckAt": "2026-11-06T03:20:40.492907+00:00",
       "sha256": "a990c7ded14b0ed04766f700c50908108738c76de587cefbda0ba8cddec07e1f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
+      "title": "扬州大明寺 · 鉴真年表",
+      "retrievedAt": "2026-11-04T16:12:45.539005+00:00",
+      "sha256": "c0dc8405f82d1366ec5b948a9892e6d654b6c742d046421318a1c9d03618e245",
       "revisionId": null
     },
     {
@@ -10031,6 +10118,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS2_09.pdf",
+      "title": "香港教育局 · 《早发白帝城》教学资料",
+      "retrievedAt": "2026-11-04T16:12:54.495851+00:00",
+      "sha256": "85c3d7d167b1602cfcc66bebf79eb3eee4f1438c4bb21dd3068bd1655181ab0f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.edu.cn/jiao_yu_fa_lv_766/20060303/t20060303_165119.shtml",
       "title": "中国教育和科研计算机网 · 中华人民共和国义务教育法（1986年）",
       "error": "The read operation timed out",
@@ -10079,6 +10173,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
+      "title": "外交部 · 外交史上的今天（鉴真754年抵日）",
+      "retrievedAt": "2026-11-04T16:12:45.742565+00:00",
+      "sha256": "bb9008dfabdefda3e5879769c775d8285c29dd722125c5c3e0a431a4413a63d5",
+      "revisionId": null
+    },
+    {
       "url": "https://www.folger.edu/explore/shakespeares-life/",
       "title": "Folger Shakespeare Library · Shakespeare’s life",
       "retrievedAt": "2026-10-25T17:38:04.438426+00:00",
@@ -10098,6 +10199,13 @@
       "title": "CUNY Graduate Center · About the Saul Kripke Center",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T17:24:06.994189+00:00"
+    },
+    {
+      "url": "https://www.gdwsw.gov.cn/rwcq/content/post_25879.html",
+      "title": "广东省人民政府文史研究馆 · 林则徐在虎门",
+      "retrievedAt": "2026-11-04T16:12:46.283649+00:00",
+      "sha256": "b73704fefd4b15b5025d3f494ec06dca9bd487ec0493c4080322e9e6f994160f",
+      "revisionId": null
     },
     {
       "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
@@ -10171,6 +10279,34 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
+      "title": "哥伦布首次航行日记及书信 · 1492—1493",
+      "retrievedAt": "2026-11-06T03:44:09.679513+00:00",
+      "sha256": "4c7df3f54fdef8dfda810924ab6670bd94a6a7d03a24b02c59fc75c16550a3ab",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 1519—1521年航段",
+      "retrievedAt": "2026-11-06T03:42:33.855710+00:00",
+      "sha256": "f54cd0790a7b245b0aaea1287bef553eb79be0c1ee4f75f703578faf7affc001",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
+      "title": "达伽马首次航行日志",
+      "retrievedAt": "2026-11-06T03:20:57.699186+00:00",
+      "sha256": "894e46fe88d353e8239e7de34bf5c83738f6c403f5a22aa34ab5ccdedf9813b2",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
+      "title": "皮加费塔《首次环球航行记》· 返航部分",
+      "retrievedAt": "2026-11-06T03:43:51.869159+00:00",
+      "sha256": "e98419e4e7d1d1e86275338a09bda597c94d18b791bfb5955e51f53019e3a3e5",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
       "title": "二里头遗址 · 考古发现与许宏访谈",
       "retrievedAt": "2026-10-06T17:35:46.682296+00:00",
@@ -10227,6 +10363,13 @@
       "title": "澳门文化局 · 回归贺礼陈列馆",
       "retrievedAt": "2026-10-25T17:33:15.770192+00:00",
       "sha256": "4c8e1d6cc6b5eb23a6449ab4557982d614ac0011ace691b1dc4e6dc0cd174069",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
+      "title": "西班牙国家地理研究所：环球航行图",
+      "retrievedAt": "2026-11-06T03:24:28.022246+00:00",
+      "sha256": "3344a9643ec306d1f52ffa8b0b0c2e2db02dfcdb09b60a9359597c726b3e1bc3",
       "revisionId": null
     },
     {
@@ -10317,6 +10460,13 @@
       "title": "Library of Congress · Timeline of the Daguerreotype Era",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T17:16:24.041662+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/exhibits/1492/columbus.html",
+      "title": "哥伦布：人物与文献",
+      "retrievedAt": "2026-11-06T03:20:40.424988+00:00",
+      "sha256": "20f19093a5e07ddb7f8c67d072e3434de27545c24dd5b3214f71b0e6d92b1f09",
+      "revisionId": null
     },
     {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
@@ -10987,6 +11137,20 @@
       "revisionId": null
     },
     {
+      "url": "https://www.quanzhou.gov.cn/lyb/lytj/rmjdtj/202202/t20220224_2699971.htm",
+      "title": "泉州市人民政府 · 伊斯兰教圣墓（郑和行香碑）",
+      "retrievedAt": "2026-11-04T16:12:46.570181+00:00",
+      "sha256": "f8e43f3b034ccca5158e73a41e1baef0e60ead4d676b6ba769b3c0fafe515c16",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.quanzhou.gov.cn/lyb/lyxw/202107/t20210712_2586392.htm",
+      "title": "泉州市人民政府 · 石湖码头（附郑和行香碑文）",
+      "retrievedAt": "2026-11-04T16:12:46.612480+00:00",
+      "sha256": "cbe6c0d7b7bbd37f10a5c1276f98024ee763b83e4d0651fe0fa4dcac8710cde4",
+      "revisionId": null
+    },
+    {
       "url": "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator",
       "title": "Royal Institution · Michael Faraday’s generator",
       "retrievedAt": "2026-10-25T17:16:06.876054+00:00",
@@ -11019,6 +11183,13 @@
       "title": "Royal Society of Chemistry · Finding the periodic table",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T17:16:18.171785+00:00"
+    },
+    {
+      "url": "https://www.rxgdyjy.sdu.edu.cn/info/1053/4146.htm",
+      "title": "山东大学 · 赵睿才《“饮中八仙”的演化与李白为“翰林供奉”的时间问题》",
+      "retrievedAt": "2026-11-04T16:12:46.992921+00:00",
+      "sha256": "80a0083e92feda49e41d63d2cc8df60e732a8319523151e563dbcf9dd2f05790",
+      "revisionId": null
     },
     {
       "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
@@ -11345,6 +11516,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.xjyl.gov.cn/xjylz/c112431/202212/751ebaa462b746ca8d1755f1d00529c7.shtml",
+      "title": "伊犁州人民政府 · 格登山色伊江水——纪念林则徐遣戍新疆180周年",
+      "retrievedAt": "2026-11-04T16:12:47.246965+00:00",
+      "sha256": "e2551c7b5735f78c12006d6c6d1badfe95b1daf4c6e32f8216ac778de04da00d",
+      "revisionId": null
+    },
+    {
       "url": "https://www.xsg.pku.edu.cn/heros/revolutionist/detail/514.html",
       "title": "北京大学校史馆 · 陈独秀",
       "retrievedAt": "2026-10-25T17:33:16.939011+00:00",
@@ -11415,9 +11593,24 @@
     },
     {
       "url": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
-      "title": "美国国会图书馆 · Columbus and the Taíno（航行报告与原住民社会）",
-      "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-01T09:32:22.304756+00:00"
+      "title": "哥伦布与泰诺社会",
+      "retrievedAt": "2026-11-06T03:20:36.150116+00:00",
+      "sha256": "5c1c7382966860205cee0f9907173ade1dd29092a4e49e2d1855edee92fb251e",
+      "revisionId": null
+    },
+    {
+      "url": "https://xbzs.ecnu.edu.cn/CN/html/2018-2-1.htm",
+      "title": "陈明《郑和下西洋与明朝的“麒麟外交”》",
+      "retrievedAt": "2026-11-04T16:12:47.286634+00:00",
+      "sha256": "0a5443e090b60785240a51213571b7fd55f57ab468cc2c139121a973ece180f0",
+      "revisionId": null
+    },
+    {
+      "url": "https://xian.qinfeng.gov.cn/info/1279/17704.htm",
+      "title": "西安市纪委 · 林则徐荷戈西戍",
+      "retrievedAt": "2026-11-04T16:12:47.754844+00:00",
+      "sha256": "3ec0b3cd3d8d7482ec4b42b47085b42e62305bbe033905a5164df0aa93125373",
+      "revisionId": null
     },
     {
       "url": "https://xsg.tsinghua.edu.cn/info/1004/1945.htm",
@@ -11431,6 +11624,13 @@
       "title": "清华大学校史馆 · 父亲袁复礼的西南联大情结",
       "retrievedAt": "2026-11-02T15:58:08.198172+00:00",
       "sha256": "54f3053d168e7d1d47f706a1080a308f80d92acfc622c99ff8f027ab2df8e0d0",
+      "revisionId": null
+    },
+    {
+      "url": "https://ylj.suzhou.gov.cn/szsylj/ylwh/201604/4c21f7192a50467fa863edd7683f17d6.shtml",
+      "title": "苏州市园林和绿化管理局 · 白公祠",
+      "retrievedAt": "2026-11-04T16:12:47.528584+00:00",
+      "sha256": "e4fde57d85a422d13a8eb296765d7f39d0147cbb9b59993ba472017f763be703",
       "revisionId": null
     },
     {
@@ -11973,6 +12173,13 @@
       "title": "《切韻》",
       "error": "HTTP Error 404: Not Found",
       "attemptedAt": "2026-11-02T17:53:07.621834+00:00"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/前聞記",
+      "title": "祝允明《前闻记》· 下西洋",
+      "retrievedAt": "2026-11-04T16:12:49.242180+00:00",
+      "sha256": "20eaeaf03a86fababb14aadae21e78bcd28529177ec0649ef4261900e83a8f08",
+      "revisionId": 1753281
     },
     {
       "url": "https://zh.wikisource.org/wiki/北史",
@@ -12692,6 +12899,13 @@
       "attemptedAt": "2026-11-02T17:53:19.537208+00:00"
     },
     {
+      "url": "https://zh.wikisource.org/wiki/唐大和上東征傳",
+      "title": "《唐大和上东征传》",
+      "retrievedAt": "2026-11-04T16:12:49.370866+00:00",
+      "sha256": "224141f9c6c5a5a235a467406bf9963add59c7dd35c45e84c03585f827046a88",
+      "revisionId": 1542163
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/唐律疏議/卷1",
       "title": "《唐律疏議》卷1",
       "error": "HTTP Error 404: Not Found",
@@ -12785,6 +12999,27 @@
       "sha256": "9ab37edd851ec542e925fd2df7c7d910c85b442dc533bb54fcd316288e2cd270"
     },
     {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷02",
+      "title": "《大唐大慈恩寺三藏法师传》卷2",
+      "retrievedAt": "2026-11-04T16:11:29.578477+00:00",
+      "sha256": "f42e0094c491de8c4455c699c7b252df7f2b999c54ef6412cdf53bc6e7be51dd",
+      "revisionId": 1308133
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷03",
+      "title": "《大唐大慈恩寺三藏法师传》卷3",
+      "retrievedAt": "2026-11-04T16:11:28.348049+00:00",
+      "sha256": "775e2ace27f2b698a96ff68e68bdf010416c2f3e74c6ee2b00b616687dc4a5e8",
+      "revisionId": 1376015
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷05",
+      "title": "《大唐大慈恩寺三藏法师传》卷5",
+      "retrievedAt": "2026-11-04T16:11:28.303037+00:00",
+      "sha256": "8df1ba7b44932b8fa23535bdfa8731e10a488e337eb5d3edd01d97b76bf1d0e4",
+      "revisionId": 1504164
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷06",
       "title": "《大唐大慈恩寺三藏法师传》卷6（归京、经像与译场）",
       "retrievedAt": "2026-11-01T14:22:03.992861+00:00",
@@ -12831,6 +13066,13 @@
       "retrievedAt": "2026-11-02T17:52:43.818484+00:00",
       "sha256": "f9ef31abe2d856971ebdf55aecac41121cc247eb625f11be57ac9d032fad1f85",
       "revisionId": 2111159
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/天妃之神靈應記",
+      "title": "郑和等《天妃之神灵应记》",
+      "retrievedAt": "2026-11-04T16:12:50.509034+00:00",
+      "sha256": "c25def7724c772fad1a73706f99ed1c3367b80095041ab08997f4103b6e73cf3",
+      "revisionId": 2077888
     },
     {
       "url": "https://zh.wikisource.org/wiki/天工開物",
@@ -12931,11 +13173,11 @@
       "revisionId": 2458103
     },
     {
-      "url": "https://zh.wikisource.org/wiki/始得西山宴遊記",
-      "title": "柳宗元《始得西山宴游记》",
-      "retrievedAt": "2026-11-02T17:22:06.244321+00:00",
-      "sha256": "3506cf75304dcf4c3f8fc4a46b178e2ae318357b5dcdf5baa312da0eb0f8100c",
-      "revisionId": 2509167
+      "url": "https://zh.wikisource.org/wiki/婁東劉家港天妃宮石刻通番事蹟記",
+      "title": "郑和等《娄东刘家港天妃宫石刻通番事迹记》",
+      "retrievedAt": "2026-11-04T16:12:50.599495+00:00",
+      "sha256": "0bc9271ead85db2dbf91eace1c5a44d60ccc74afc08af62fc2c0786addcbe898",
+      "revisionId": 1758473
     },
     {
       "url": "https://zh.wikisource.org/wiki/婦人大全良方",
@@ -13012,6 +13254,20 @@
       "title": "《宋史》卷7 · 真宗纪（景德元年北巡、交战与定和）",
       "retrievedAt": "2026-11-01T14:19:45.139831+00:00",
       "sha256": "bc927b8466c24f8d56334d8a108bff6cf8cfd825def2d43fc619b68196f9b88c"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷017",
+      "title": "《宋史》卷17",
+      "retrievedAt": "2026-11-04T16:52:41.100368+00:00",
+      "sha256": "b5da1584742919cfcbceaf21bc82f93392f1a68a7a1d4af59c73a679ce5ace3e",
+      "revisionId": 7908323
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷018",
+      "title": "《宋史》卷18",
+      "retrievedAt": "2026-11-04T16:52:41.069165+00:00",
+      "sha256": "05fdf0c4df1bdb62728e060f3a0eabf44b0719d54ebc1813393bc5d78a5de8f5",
+      "revisionId": 7908324
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史/卷019",
@@ -13195,6 +13451,13 @@
       "lastCacheCheckAt": "2026-10-06T16:20:36.256301+00:00",
       "sha256": "12cac85c86f2e27cb8d05de95985e9acbaa466bb551898735525fa4a8592ccff",
       "revisionId": 1525603
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷472",
+      "title": "《宋史》卷472",
+      "retrievedAt": "2026-11-04T16:52:42.485928+00:00",
+      "sha256": "588ce820cbd085ab73da1d1a074057de30f7c73cdd953ac8578bedab0df56aa3",
+      "revisionId": 2004306
     },
     {
       "url": "https://zh.wikisource.org/wiki/宋史/卷474",
@@ -13803,6 +14066,13 @@
       "sha256": "a7c9985cf31eab7732c82f34965de851c65a61abb972c0b2a4e376d8c147eed2"
     },
     {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷119",
+      "title": "《新唐書》卷119",
+      "retrievedAt": "2026-11-04T16:12:54.468325+00:00",
+      "sha256": "fc96f8617b8cde74811fe9291d90b41c04f0662f5617476c6e5a9ce9df3ea14a",
+      "revisionId": 3827258
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷135",
       "title": "《新唐书》卷135 · 高仙芝传（石国与怛逻斯）",
       "retrievedAt": "2026-11-01T14:23:02.556480+00:00",
@@ -13822,6 +14092,13 @@
       "lastCacheCheckAt": "2026-10-08T18:12:49.809687+00:00",
       "sha256": "9b3c20c0bb74eea231796b1f974f3e75fc33c8228875bc7ff31851e28fca06b8",
       "revisionId": 2605994
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/新唐書/卷201",
+      "title": "《新唐書》卷201",
+      "retrievedAt": "2026-11-04T16:52:42.833283+00:00",
+      "sha256": "b8d102e9ac4f65d0f7d67a1e870e27045fc882c27aa6339b565edeb2493c29b7",
+      "revisionId": 2446706
     },
     {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷202",
@@ -15166,6 +15443,13 @@
       "revisionId": 5978173
     },
     {
+      "url": "https://zh.wikisource.org/wiki/瀛涯勝覽",
+      "title": "马欢《瀛涯胜览》· 旧港国",
+      "retrievedAt": "2026-11-04T16:12:52.388211+00:00",
+      "sha256": "f65082d92cad8b27cdd94158228dc26c52d33bdf526ac5381fb90dc6eff3115c",
+      "revisionId": 2697570
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/為徐敬業討武曌檄",
       "title": "《為徐敬業討武曌檄》",
       "retrievedAt": "2026-11-02T17:53:22.736792+00:00",
@@ -15220,6 +15504,13 @@
       "lastCacheCheckAt": "2026-10-06T16:20:58.385506+00:00",
       "sha256": "3b6e564bf8fdd039e13ca22812ea61d028f0ba1dfd311f0fc2d9503a84855345",
       "revisionId": 463219
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/王陽明集/卷26",
+      "title": "《王阳明集》卷26 · 寄正宪男手墨",
+      "retrievedAt": "2026-11-04T16:11:31.845079+00:00",
+      "sha256": "a6ee99dbe5a407cce76f595e957f0c3ccc1b96ec86728c5d0bc5e8de6e520042",
+      "revisionId": 7904491
     },
     {
       "url": "https://zh.wikisource.org/wiki/琵琶行",
@@ -16582,6 +16873,13 @@
       "title": "中国社会科学院大学 · 建党之前：陈独秀在上海",
       "retrievedAt": "2026-10-25T17:33:17.679917+00:00",
       "sha256": "71504d2f63e73bc45cc4bf37afe4d2b5f86bd34d0718d7a100bc7125d607e706",
+      "revisionId": null
+    },
+    {
+      "url": "https://zx.huaian.gov.cn/col/14069_277241/art/m/16855488/1686706454756gYGpT7lO.html",
+      "title": "淮安政协文史网 · 林则徐治水记述",
+      "retrievedAt": "2026-11-04T16:12:52.580016+00:00",
+      "sha256": "7567656946c289238f0616a2418c52f811e5f0f398dfd4c222369d6e89425821",
       "revisionId": null
     }
   ],

@@ -1,3 +1,4 @@
+import { journeyByPerson } from '../src/data/journeys'
 import { expect, test } from '@playwright/test'
 import { newExpandedEvents, newExpandedPeople } from '../src/data/expansion-content'
 import { setSheet } from './mobile-sheet-helpers'
@@ -57,7 +58,9 @@ for (const [width, height] of [
       '/#visual=map&year=659&person=xuanzang&journey=xuanzang&point=xuanzang-record-yuhua-final',
     )
     if (width <= 700 || height <= 540) await setSheet(page, 'reading')
-    await expect(page.locator('.journey-node-list button')).toHaveCount(8)
+    await expect(page.locator('.journey-node-list button')).toHaveCount(
+      journeyByPerson.get('xuanzang')!.nodes.length,
+    )
     await expect(page.locator('.journey-active-card h4')).toHaveText('移住玉华寺主持翻译')
     await expect(page.locator('.journey-active-card .journey-citation').first()).toBeAttached()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '659')

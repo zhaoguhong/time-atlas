@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T16:43:48.991Z",
+  "generatedAt": "2026-11-06T03:47:59.512Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -9,22 +9,22 @@
     "to": 2000
   },
   "people": {
-    "total": 1503,
+    "total": 1504,
     "importedSnapshot": 591,
-    "curatedIntroductions": 1503,
+    "curatedIntroductions": 1504,
     "basicRecords": 0,
     "unknownBirth": 424,
     "unknownDeath": 290,
-    "noLinkedEvents": 619,
+    "noLinkedEvents": 618,
     "oneLinkedEvent": 690,
     "outsideMapRange": 50,
     "outsideReadingRange": 0
   },
   "events": {
-    "total": 2020,
+    "total": 2024,
     "world": 1019,
     "byRegion": {
-      "china": 1001,
+      "china": 1005,
       "europe": 425,
       "west-asia": 99,
       "central-asia": 26,
@@ -54,11 +54,11 @@
         }
       },
       "政治": {
-        "total": 601,
-        "china": 286,
+        "total": 603,
+        "china": 288,
         "world": 315,
         "byRegion": {
-          "china": 286,
+          "china": 288,
           "europe": 80,
           "west-asia": 43,
           "central-asia": 9,
@@ -105,11 +105,11 @@
         }
       },
       "文学艺术": {
-        "total": 310,
-        "china": 155,
+        "total": 313,
+        "china": 158,
         "world": 155,
         "byRegion": {
-          "china": 155,
+          "china": 158,
           "europe": 53,
           "west-asia": 13,
           "central-asia": 5,
@@ -139,11 +139,11 @@
         }
       },
       "教育学术": {
-        "total": 336,
-        "china": 183,
+        "total": 337,
+        "china": 184,
         "world": 153,
         "byRegion": {
-          "china": 183,
+          "china": 184,
           "europe": 40,
           "west-asia": 19,
           "central-asia": 7,
@@ -156,11 +156,11 @@
         }
       },
       "经济贸易": {
-        "total": 267,
-        "china": 135,
+        "total": 268,
+        "china": 136,
         "world": 132,
         "byRegion": {
-          "china": 135,
+          "china": 136,
           "europe": 28,
           "west-asia": 18,
           "central-asia": 6,
@@ -190,11 +190,11 @@
         }
       },
       "文化": {
-        "total": 882,
-        "china": 387,
+        "total": 885,
+        "china": 390,
         "world": 495,
         "byRegion": {
-          "china": 387,
+          "china": 390,
           "europe": 248,
           "west-asia": 38,
           "central-asia": 12,
@@ -242,14 +242,14 @@
       }
     },
     "byCategory": {
-      "政治": 474,
+      "政治": 475,
       "战争": 217,
-      "文化": 881,
+      "文化": 884,
       "交流": 101,
       "社会": 347
     },
-    "withCuratedRelatedReading": 109,
-    "withExplicitPlaces": 96
+    "withCuratedRelatedReading": 132,
+    "withExplicitPlaces": 99
   },
   "dynasties": {
     "total": 53
@@ -258,11 +258,14 @@
     "total": 55
   },
   "topics": {
-    "total": 34,
-    "chapters": 285,
-    "withWorldEvents": 18,
-    "uniqueEvents": 258,
-    "uniqueWorldEvents": 112
+    "total": 59,
+    "withRouteMaps": 10,
+    "routeMaps": 8,
+    "routeStops": 82,
+    "chapters": 388,
+    "withWorldEvents": 30,
+    "uniqueEvents": 278,
+    "uniqueWorldEvents": 117
   },
   "places": {
     "total": 80,
@@ -270,24 +273,24 @@
     "withLinkedEvents": 76
   },
   "journeys": {
-    "people": 10,
-    "nodes": 98,
+    "people": 15,
+    "nodes": 212,
     "records": [
       {
         "person": "苏轼",
-        "nodes": 31,
+        "nodes": 38,
         "from": 1037,
         "to": 1101
       },
       {
         "person": "康熙帝",
-        "nodes": 15,
+        "nodes": 17,
         "from": 1654,
         "to": 1722
       },
       {
         "person": "诸葛亮",
-        "nodes": 6,
+        "nodes": 11,
         "from": 207,
         "to": 234
       },
@@ -299,8 +302,8 @@
       },
       {
         "person": "玄奘",
-        "nodes": 8,
-        "from": 645,
+        "nodes": 27,
+        "from": 629,
         "to": 664
       },
       {
@@ -322,16 +325,46 @@
         "to": 824
       },
       {
-        "person": "柳宗元",
-        "nodes": 4,
-        "from": 805,
-        "to": 819
-      },
-      {
         "person": "王守仁",
         "nodes": 7,
         "from": 1506,
         "to": 1529
+      },
+      {
+        "person": "李白",
+        "nodes": 12,
+        "from": 725,
+        "to": 762
+      },
+      {
+        "person": "李清照",
+        "nodes": 16,
+        "from": 1101,
+        "to": 1135
+      },
+      {
+        "person": "林则徐",
+        "nodes": 16,
+        "from": 1811,
+        "to": 1850
+      },
+      {
+        "person": "鉴真",
+        "nodes": 17,
+        "from": 742,
+        "to": 763
+      },
+      {
+        "person": "郑和",
+        "nodes": 12,
+        "from": 1405,
+        "to": 1431
+      },
+      {
+        "person": "孔子",
+        "nodes": 12,
+        "from": -501,
+        "to": -479
       }
     ]
   },
@@ -595,9 +628,9 @@
     {
       "id": "han",
       "name": "两汉",
-      "events": 124,
+      "events": 125,
       "byRegion": {
-        "china": 100,
+        "china": 101,
         "europe": 6,
         "west-asia": 2,
         "central-asia": 1,
@@ -613,12 +646,12 @@
         "政治": 42,
         "哲学": 9,
         "宗教": 9,
-        "文学艺术": 9,
+        "文学艺术": 10,
         "科技医学": 14,
-        "教育学术": 20,
+        "教育学术": 21,
         "经济贸易": 26,
         "工程建筑": 6,
-        "文化": 37,
+        "文化": 38,
         "交流": 11,
         "社会": 37
       },
@@ -755,9 +788,9 @@
     {
       "id": "tang",
       "name": "唐",
-      "events": 144,
+      "events": 146,
       "byRegion": {
-        "china": 101,
+        "china": 103,
         "europe": 3,
         "west-asia": 13,
         "central-asia": 4,
@@ -770,15 +803,15 @@
       },
       "byFilterCategory": {
         "战争": 14,
-        "政治": 40,
+        "政治": 41,
         "哲学": 4,
         "宗教": 29,
-        "文学艺术": 46,
+        "文学艺术": 48,
         "科技医学": 8,
         "教育学术": 30,
         "经济贸易": 19,
         "工程建筑": 17,
-        "文化": 80,
+        "文化": 82,
         "交流": 14,
         "社会": 25
       },
@@ -819,9 +852,9 @@
     {
       "id": "song",
       "name": "宋 · 辽 · 金 · 西夏",
-      "events": 225,
+      "events": 226,
       "byRegion": {
-        "china": 165,
+        "china": 166,
         "europe": 8,
         "west-asia": 14,
         "central-asia": 6,
@@ -834,19 +867,19 @@
       },
       "byFilterCategory": {
         "战争": 35,
-        "政治": 50,
+        "政治": 51,
         "哲学": 15,
         "宗教": 20,
         "文学艺术": 39,
         "科技医学": 41,
         "教育学术": 51,
-        "经济贸易": 32,
+        "经济贸易": 33,
         "工程建筑": 25,
         "文化": 121,
         "交流": 17,
         "社会": 42
       },
-      "people": 162
+      "people": 163
     },
     {
       "id": "yuan",
@@ -1035,6 +1068,15 @@
   ],
   "posthumousRelations": [
     {
+      "person": "司马谈",
+      "personId": "early-plus-person-sima-tan",
+      "event": "司马迁承接父志，持续编纂《史记》",
+      "eventId": "simaqian-shiji-writing",
+      "eventYear": -104,
+      "deathYear": -110,
+      "explanation": "司马谈在前110年去世；此处关联他留下的编史计划及家学，属于身后承接，不表示他参与前104年以后的写作。"
+    },
+    {
       "person": "陈寿",
       "personId": "q468890",
       "event": "裴松之完成《三国志注》",
@@ -1060,6 +1102,24 @@
       "eventYear": 653,
       "deathYear": 648,
       "explanation": "孔颖达主持前期经典注疏整理，648年去世；653年进入官学是其身后成果的采用，不是当年本人活动。"
+    },
+    {
+      "person": "苏轼",
+      "personId": "sushi",
+      "event": "元祐党籍与政治排斥",
+      "eventId": "early-plus-party-stele",
+      "eventYear": 1102,
+      "deathYear": 1101,
+      "explanation": "苏轼1101年已去世；被列入元祐党籍是身后政治评价与排斥，不是本人当年活动。"
+    },
+    {
+      "person": "司马光",
+      "personId": "simaguang",
+      "event": "元祐党籍与政治排斥",
+      "eventId": "early-plus-party-stele",
+      "eventYear": 1102,
+      "deathYear": 1086,
+      "explanation": "司马光1086年已去世，元祐党籍将其列为追究对象，属于身后关系。"
     },
     {
       "person": "钱乙",
@@ -1153,10 +1213,10 @@
     }
   ],
   "sourceRetention": {
-    "references": 1910,
-    "retained": 1201,
+    "references": 1953,
+    "retained": 1245,
     "unavailable": 0,
-    "failed": 709,
+    "failed": 708,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [

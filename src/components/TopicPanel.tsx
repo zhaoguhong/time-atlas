@@ -1,8 +1,12 @@
+import { lazy, Suspense, useState } from 'react'
 import { formatEventDate, MAX_YEAR } from '../lib/history'
 import { ArrowRight, Compass } from 'lucide-react'
 import type { TopicProgress } from '../lib/reading-progress'
 import type { Tour, HistoryEvent } from '../types'
 import Sources from './Sources'
+import CanvasBoundary from './CanvasBoundary'
+import '../topic-routes.css'
+const TopicRouteReader = lazy(() => import('./TopicRouteReader'))
 
 export default function TopicPanel({
   topic,
@@ -17,14 +21,63 @@ export default function TopicPanel({
   progress?: TopicProgress
   onResume: () => void
 }) {
+  const [routeOpen, setRouteOpen] = useState(false)
   return (
     <article className="topic-introduction">
-      <span className="eyebrow">历史专题 · 导读</span>
+      <span className="eyebrow">历史专题{topic.subject ? ` · ${topic.subject}` : ' · 导读'}</span>
       <h2>{topic.name}</h2>
       <p className="topic-question">{topic.question}</p>
       {(topic.introduction ?? [topic.description]).map((text, index) => (
         <p key={index}>{text}</p>
       ))}
+      {topic.routeIds?.length ? (
+        <div className="topic-route-entry">
+          <p>想看看途中经过哪里，可以打开路线地图，逐站阅读后再回来继续。</p>
+          <button className="outline-action" onClick={() => setRouteOpen(true)}>
+            <Compass size={16} />
+            查看路线地图
+            <ArrowRight size={15} />
+          </button>
+          {routeOpen && (
+            <CanvasBoundary onRetry={() => window.location.reload()}>
+              <Suspense fallback={<p role="status">正在打开路线…</p>}>
+                <TopicRouteReader
+                  key={topic.id}
+                  routeIds={topic.routeIds}
+                  onClose={() => setRouteOpen(false)}
+                />
+              </Suspense>
+            </CanvasBoundary>
+          )}
+        </div>
+      ) : null}
+      {topic.article && (
+        <section className="topic-article" aria-label="专题讲解">
+          {topic.article.paragraphs.map((paragraph, index) => (
+            <div key={index}>
+              {topic.article?.headings?.[index] && <h3>{topic.article.headings[index]}</h3>}
+              <p>{paragraph}</p>
+              {topic.article?.mapStops
+                ?.filter((stop) => stop.afterParagraph === index)
+                .map((stop) => (
+                  <button
+                    key={stop.eventId}
+                    className="outline-action topic-map-stop"
+                    onClick={() => onChapter(topic.steps.indexOf(stop.eventId))}
+                  >
+                    <Compass size={16} />
+                    {stop.label}
+                    <ArrowRight size={15} />
+                  </button>
+                ))}
+            </div>
+          ))}
+          <div className="topic-conclusion">
+            <p>{topic.conclusion}</p>
+          </div>
+          <p className="topic-reading-help">沿下面的史事继续阅读，可以查看相关地点、人物和出处。</p>
+        </section>
+      )}
       <button className="outline-action" onClick={() => onChapter(0)}>
         <Compass size={16} />
         开始地图学习
@@ -72,7 +125,7 @@ export default function TopicPanel({
           )
         })}
       </ol>
-      {topic.conclusion && (
+      {topic.conclusion && !topic.article && (
         <div className="topic-conclusion">
           <h3>读完后再想一想</h3>
           <p>{topic.conclusion}</p>

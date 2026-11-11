@@ -1,3 +1,4 @@
+import { continuityPersonConnections, continuityReadings } from './continuity-content'
 import type { HistoryEvent } from '../types'
 import { chinesePersonEventConnections } from './content-connections-china'
 import { worldPersonEventConnections } from './content-connections-world'
@@ -72,7 +73,11 @@ export const personEventConnections: Record<string, Record<string, string>> = {
   'wuxu-coup': { q1191225: '谭嗣同为政变后被杀的六人之一；具体事前密谋仍保留材料分歧。' },
 }
 
-for (const additions of [chinesePersonEventConnections, worldPersonEventConnections])
+for (const additions of [
+  chinesePersonEventConnections,
+  worldPersonEventConnections,
+  continuityPersonConnections,
+])
   for (const [eventId, people] of Object.entries(additions))
     personEventConnections[eventId] = { ...personEventConnections[eventId], ...people }
 
@@ -80,6 +85,7 @@ for (const additions of [chinesePersonEventConnections, worldPersonEventConnecti
 // keyword linking and no requirement that a later development had a single cause.
 type ReadingPair = [string, string, string, string, string]
 export const connectedReadings: ReadingPair[] = [
+  ...continuityReadings,
   [
     'zhangqian',
     'western-regions',

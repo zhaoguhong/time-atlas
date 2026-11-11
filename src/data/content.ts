@@ -1,3 +1,4 @@
+import { continuityEvents, continuityPeople } from './continuity-content'
 import { enrichCatalogReading } from './catalog-reading'
 import { connectEventReading } from './content-connections'
 import { completenessEvents, completenessPeople } from './completeness-events'
@@ -17,7 +18,7 @@ import { civilizationEvents } from './civilizations'
 import { earlyEvents, earlyPeople } from './early-history'
 import type { Category, HistoryEvent, Person, Source } from '../types'
 import { eventBackgrounds } from './backgrounds'
-import importedPeople from './generated/people.json'
+import importedPeople from './generated/people.json' with { type: 'json' }
 import { personEnrichment } from './people-enrichment'
 import { createExpandedEvents } from './expanded-events'
 import { enrichAdditionalPeople } from './people-additions'
@@ -2121,6 +2122,7 @@ export const people: Person[] = enrichCatalogReading(
     modernPhilosophyPeople,
     categoryPeople,
     completenessPeople,
+    continuityPeople,
     newExpandedPeople,
   ),
 ).map((person) => ({ ...person, sources: canonicalSources(person.sources) }))
@@ -2152,6 +2154,7 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
     modernWorldEvents,
     categoryDepthEvents,
     completenessEvents,
+    continuityEvents,
     newExpandedEvents,
   )
   .map(enrichEventNarrative)

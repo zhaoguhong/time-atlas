@@ -3,7 +3,7 @@ import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { tours } from '../src/data/periods'
 import { eventById } from '../src/data/content'
-import { MAX_YEAR } from '../src/lib/history'
+import { MAX_YEAR, formatEventDate, formatYear } from '../src/lib/history'
 import { readFileSync } from 'node:fs'
 const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
 
@@ -43,7 +43,8 @@ for (const topic of tours) {
       if (event.year > MAX_YEAR) {
         await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', String(event.year))
         await expect(page.locator('.map-canvas')).toHaveCount(0)
-      } else await expect(page.locator('.year-title')).toHaveText(dates[index])
+      } else await expect(page.locator('.year-title')).toHaveText(formatYear(event.year))
+      expect(dates[index]).toBe(formatEventDate(event))
       await expect(page).toHaveURL(new RegExp(`event=${topic.steps[index]}(?:&|$)`))
       await expect(page.locator('.topic-chapter-context')).toContainText(
         `第 ${index + 1} / ${topic.steps.length} 章`,
@@ -56,7 +57,7 @@ for (const topic of tours) {
         await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
         expect(await page.locator('.topic-marker').count()).toBeGreaterThan(0)
       }
-      if (index < topic.steps.length - 1) await page.locator('.tour-next').click()
+      if (index < topic.steps.length - 1) await page.locator('.tour-next:visible').click()
     }
     await page.getByRole('button', { name: '完成旅程', exact: false }).click()
     await expect(page.locator('.topic-introduction h2')).toBeInViewport()
@@ -425,7 +426,7 @@ test('finds Su Shi by alias and preserves yearly journeys, same-year order and s
   page,
 }) => {
   await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('苏东坡')
-  await page.locator('.search-results button').filter({ hasText: '苏轼' }).click()
+  await page.getByRole('option', { name: /^苏轼 人物/ }).click()
   await expect(page.locator('.person-detail')).toContainText('眉山')
   await expect(page.locator('.year-title')).toContainText('1037')
   await page.getByRole('button', { name: '在地图上看人物经历' }).click()
@@ -461,7 +462,7 @@ test('fixes Kangxi’s map period and excludes others’ battlefield and treaty 
   page,
 }) => {
   await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('玄烨')
-  await page.locator('.search-results button').filter({ hasText: '康熙帝' }).click()
+  await page.getByRole('option', { name: /^康熙帝 人物/ }).click()
   await expect(page.locator('.year-title')).toContainText('1654')
   await page.getByRole('button', { name: '在地图上看人物经历' }).click()
   await page.locator('.journey-node-list button').filter({ hasText: '亲赴多伦' }).click()
@@ -474,7 +475,7 @@ test('fixes Kangxi’s map period and excludes others’ battlefield and treaty 
   await expect(page.locator('.journey-toolbar')).toHaveCount(0)
 })
 
-test('browses all people, finds literary figures by alias and does not fabricate an unreviewed route', async ({
+test('browses all people, finds literary aliases and keeps a retired journey unavailable', async ({
   page,
 }) => {
   await page.getByRole('button', { name: '人物', exact: true }).click()
@@ -484,9 +485,9 @@ test('browses all people, finds literary figures by alias and does not fabricate
   await expect(page.locator('.person-list-card')).toHaveCount(1)
   await page.locator('.person-list-card').click()
   await expect(page.locator('.person-hero h2')).toContainText('苏轼')
-  await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('李清照')
-  await page.locator('.search-results button').filter({ hasText: '李清照' }).first().click()
-  await expect(page.locator('.person-detail .detail-lead')).toContainText('词')
+  await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('柳宗元')
+  await page.locator('.search-results button').filter({ hasText: '柳宗元' }).first().click()
+  await expect(page.locator('.person-detail .detail-lead')).toContainText('永州')
   await expect(page.locator('.person-record-status')).toContainText('尚未整理可绘制的年谱')
   await expect(page.getByRole('button', { name: '在地图上看人物经历' })).toHaveCount(0)
   await expect(page.locator('.reference-list a').first()).toHaveAttribute('href', /^https:/)

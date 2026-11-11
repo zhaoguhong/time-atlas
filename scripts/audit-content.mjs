@@ -44,6 +44,7 @@ try {
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
+  const { topicRoutes, topicRouteById } = await server.ssrLoadModule('/src/data/topic-routes.ts')
   const { periods, tours } = await server.ssrLoadModule('/src/data/periods.ts')
   const { places, placeById, eventAtPlace } = await server.ssrLoadModule('/src/lib/exploration.ts')
   const { placeReading } = await server.ssrLoadModule('/src/data/place-reading.ts')
@@ -165,8 +166,65 @@ try {
     assert(polity.mapNames.length && polity.sections?.length >= 1, polity.id)
     validateSources(polity)
   }
+  assert.equal(new Set(topicRoutes.map((route) => route.id)).size, topicRoutes.length)
+  for (const route of topicRoutes) {
+    validateSources(route)
+    assert(route.name && route.period && route.note && route.stops.length > 1, route.id)
+    assert.equal(new Set(route.stops.map((stop) => stop.id)).size, route.stops.length)
+    for (const stop of route.stops) {
+      validateSources(stop)
+      assert(stop.name && stop.dateLabel && stop.text, stop.id)
+      for (const point of [stop.coordinates, ...(stop.via ?? [])]) {
+        assert(
+          point.length === 2 &&
+            point.every(Number.isFinite) &&
+            Math.abs(point[0]) <= 180 &&
+            Math.abs(point[1]) < 90,
+          stop.id,
+        )
+      }
+    }
+  }
   for (const tour of tours) {
+    for (const id of tour.routeIds ?? []) {
+      const route = topicRouteById.get(id)
+      assert(route, `Missing route: ${tour.id}/${id}`)
+      for (const source of route.sources)
+        assert(
+          tour.sources.some((s) => s.url === source.url),
+          `Unindexed route source: ${id}`,
+        )
+    }
+    for (const [index, heading] of Object.entries(tour.article?.headings ?? {})) {
+      assert(
+        Number.isInteger(Number(index)) &&
+          Number(index) >= 0 &&
+          Number(index) < tour.article.paragraphs.length &&
+          heading.trim(),
+        `Invalid article heading: ${tour.id}`,
+      )
+    }
     validateSources(tour)
+    assert(tour.subject?.trim(), `Missing topic subject: ${tour.id}`)
+    assert(
+      tour.article?.paragraphs.length && tour.article.paragraphs.every((text) => text.trim()),
+      `Missing topic article: ${tour.id}`,
+    )
+    assert.deepEqual(
+      tour.article.eventIds,
+      tour.steps,
+      `Invalid topic article evidence: ${tour.id}`,
+    )
+    for (const stop of tour.article.mapStops ?? []) {
+      assert(
+        Number.isInteger(stop.afterParagraph) &&
+          stop.afterParagraph >= 0 &&
+          stop.afterParagraph < tour.article.paragraphs.length &&
+          tour.steps.includes(stop.eventId) &&
+          stop.label.trim(),
+        `Invalid topic map stop: ${tour.id}`,
+      )
+    }
     assert(
       tour.introduction?.length &&
         tour.introduction.every((text) => text.trim()) &&
@@ -497,6 +555,9 @@ try {
     worldPolities: { total: worldPolities.length },
     topics: {
       total: tours.length,
+      withRouteMaps: tours.filter((tour) => tour.routeIds?.length).length,
+      routeMaps: topicRoutes.length,
+      routeStops: topicRoutes.reduce((sum, route) => sum + route.stops.length, 0),
       chapters: tours.reduce((count, topic) => count + topic.steps.length, 0),
       withWorldEvents: tours.filter((topic) =>
         topic.steps.some((id) => eventRegion(events.find((event) => event.id === id)) !== 'china'),

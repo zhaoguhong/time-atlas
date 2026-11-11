@@ -1,7 +1,9 @@
+import { journeys } from '../src/data/journeys'
 import { setSheet } from './mobile-sheet-helpers'
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
-const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
+const coverage = JSON.parse(readFileSync('public/data/coverage.json', 'utf8'))
+const peopleCount = coverage.people.total
 
 async function openTopics(page: Page) {
   const direct = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
@@ -112,8 +114,11 @@ test('makes verified journeys discoverable and describes an empty filter honestl
 }) => {
   await page.locator('.panel-tabs').getByRole('button', { name: '人物', exact: true }).click()
   await page.getByRole('button', { name: '可播放行迹', exact: true }).click()
-  await expect(page.locator('.person-list-card')).toHaveCount(3)
-  await expect(page.locator('.person-list-card')).toContainText(['诸葛亮', '康熙帝', '苏轼'])
+  await expect(page.locator('.person-list-card')).toHaveCount(journeys.length)
+  for (const record of coverage.journeys.records)
+    await expect(page.locator('.person-list-card').filter({ hasText: record.person })).toHaveCount(
+      1,
+    )
   await page.getByRole('textbox', { name: '筛选人物', exact: true }).fill('未收录测试')
   await expect(page.locator('.empty-state')).toContainText('当前筛选下没有匹配的人物')
   await page.getByRole('button', { name: '查看全部人物', exact: true }).click()

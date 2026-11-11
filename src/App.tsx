@@ -253,6 +253,8 @@ function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large'
 export default function App() {
   const [colorMode, toggleColorMode] = useColorMode()
   const [initial] = useState(initialState)
+  const [topicSubject, setTopicSubject] = useState('全部')
+  const [topicEntrySelected, setTopicEntrySelected] = useState(true)
   const [year, setYear] = useState(initial.year)
   const [visualization, setVisualization] = useState<'map' | 'pillar'>(initial.view.visualization)
   const [pillarSide, setPillarSide] = useState<PillarSide>(initial.view.pillarSide)
@@ -783,6 +785,7 @@ export default function App() {
     [rememberView, visualization, pillarSide, pillarRegion, category, exploration.range],
   )
   function switchVisualization(value: 'map' | 'pillar') {
+    setTopicEntrySelected(false)
     if (value === visualization) {
       setMoreOpen(false)
       setMobileView((view) => (view === 'reading' ? 'split' : view))
@@ -960,6 +963,7 @@ export default function App() {
     setToast(exists ? '已从收藏中移除' : '已收藏，下次回来继续探索')
   }
   function navigateMode(value: PanelMode) {
+    setTopicEntrySelected(value === 'tours')
     rememberView()
     setMoreOpen(false)
     setPlaybackReading(false)
@@ -1027,6 +1031,7 @@ export default function App() {
     } else setMode('overview')
   }
   function startTour(id: string) {
+    setTopicEntrySelected(true)
     rememberView()
     setScope(readScopePreferences(initial.preferences.scope).map)
     setVisualization('map')
@@ -1832,6 +1837,7 @@ export default function App() {
       data-focus-mode={focusMode}
       data-visualization={visualization}
       data-reading-detail={!!selection}
+      data-topic-overview={tour?.chapters ? tourState?.step === -1 : mode === 'tours' && !selection}
     >
       {focusMode && (
         <button
@@ -1870,18 +1876,24 @@ export default function App() {
                 aria-pressed={visualization === value}
                 onClick={() => switchVisualization(value)}
               >
-                {value === 'map' ? <MapIcon size={15} /> : <Layers3 size={15} />}
+                {value === 'map' ? (
+                  <MapIcon size={15} aria-hidden="true" />
+                ) : (
+                  <Layers3 size={15} aria-hidden="true" />
+                )}
                 <span>{value === 'map' ? '地图' : '时空柱'}</span>
               </button>
             ))}
           </div>
           <button
             data-main-topics
-            className={mode === 'tours' || tour?.chapters ? 'active' : ''}
+            aria-current={
+              topicEntrySelected && (mode === 'tours' || !!tour?.chapters) ? 'true' : undefined
+            }
             onClick={() => navigateMode('tours')}
           >
-            历史专题
-            <span className="nav-dot" />
+            <BookOpen size={15} aria-hidden="true" />
+            <span>历史专题</span>
           </button>
         </nav>
         <div className="top-search" ref={searchRef} data-search-open={searchOpen && !!query.trim()}>
@@ -1944,6 +1956,15 @@ export default function App() {
           ) : (
             <kbd>探索</kbd>
           )}
+          <button
+            className="search-dismiss"
+            onClick={(event) => {
+              setSearchOpen(false)
+              event.currentTarget.blur()
+            }}
+          >
+            取消搜索
+          </button>
           {searchOpen && query.trim() && (
             <div className="search-results" id="history-search-results">
               <span className="eyebrow">找到 {searchResults.length} 项结果</span>
@@ -2021,14 +2042,22 @@ export default function App() {
           >
             <Compass size={18} />
           </button>
-          <button
-            className="icon-button topics-menu-entry"
-            aria-label="历史专题"
-            onClick={() => navigateMode('tours')}
-          >
-            <BookOpen size={18} />
-          </button>
           <span className="menu-group-label">显示方式</span>
+          <button
+            className="icon-button color-mode-menu-entry"
+            aria-label={colorMode === 'light' ? '切换到夜间模式' : '切换到白天模式'}
+            aria-pressed={colorMode === 'dark'}
+            onClick={() => {
+              setMoreOpen(false)
+              toggleColorMode()
+            }}
+          >
+            {colorMode === 'light' ? (
+              <Moon size={18} aria-hidden="true" />
+            ) : (
+              <Sun size={18} aria-hidden="true" />
+            )}
+          </button>
           <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
           <button
             ref={focusEnterRef}
@@ -2602,13 +2631,21 @@ export default function App() {
                 </div>
               )}
               {tour?.chapters && tourState?.step === -1 ? (
-                <TopicPanel
-                  topic={tour}
-                  eventById={eventById}
-                  onChapter={openTourChapter}
-                  progress={progress.topics[tour.id]}
-                  onResume={() => resumeTopic(tour.id)}
-                />
+                <>
+                  {visualization === 'pillar' && (
+                    <div className="detail-navigation">
+                      <button onClick={stopTour}>退出导览</button>
+                    </div>
+                  )}
+                  <TopicPanel
+                    key={tour.id}
+                    topic={tour}
+                    eventById={eventById}
+                    onChapter={openTourChapter}
+                    progress={progress.topics[tour.id]}
+                    onResume={() => resumeTopic(tour.id)}
+                  />
+                </>
               ) : selectedPlace ? (
                 <PlacePanel
                   key={selectedPlace.id}
@@ -2716,6 +2753,21 @@ export default function App() {
                       <div className="topic-chapter-links">
                         <button onClick={() => fitTopicMap()}>重新定位专题地点</button>
                         <button onClick={() => openTourChapter(-1)}>专题导读与目录</button>
+                        {visualization === 'pillar' && (
+                          <>
+                            <button
+                              aria-label="专题上一章"
+                              disabled={tourState.step === 0}
+                              onClick={() => tourStep(-1)}
+                            >
+                              上一章
+                            </button>
+                            <button className="tour-next" onClick={() => tourStep(1)}>
+                              {tourState.step === tour.steps.length - 1 ? '完成旅程' : '下一章'}
+                            </button>
+                            <button onClick={stopTour}>退出导览</button>
+                          </>
+                        )}
                         <button
                           className="chapter-read"
                           aria-pressed={!!progress.topics[tour.id]?.read.includes(tourState.step)}
@@ -3127,6 +3179,32 @@ export default function App() {
                   <span className="eyebrow">跟随历史的线索</span>
                   <h2>走一段历史旅程</h2>
                   <p className="panel-intro">从一个问题出发，把时间、地点和人物连接起来。</p>
+                  <label className="topic-subject-filter">
+                    专题分类
+                    <select
+                      value={topicSubject}
+                      onChange={(event) => setTopicSubject(event.target.value)}
+                    >
+                      <option value="全部">全部专题</option>
+                      {[
+                        ...new Set(
+                          tours.flatMap((topic) => (topic.subject ? [topic.subject] : [])),
+                        ),
+                      ].map((subject) => (
+                        <option key={subject} value={subject}>
+                          {subject}
+                        </option>
+                      ))}
+                    </select>
+                    <span>
+                      {
+                        tours.filter(
+                          (topic) => topicSubject === '全部' || topic.subject === topicSubject,
+                        ).length
+                      }{' '}
+                      个专题
+                    </span>
+                  </label>
                   {progress.recent.some((item) => item.key.startsWith('topic:')) && (
                     <section className="resume-reading">
                       <h3>继续上次的专题</h3>
@@ -3141,48 +3219,51 @@ export default function App() {
                         ))}
                     </section>
                   )}
-                  {tours.map((item) => (
-                    <button
-                      key={item.id}
-                      className="tour-card"
-                      style={{ '--tour-color': item.color } as React.CSSProperties}
-                      onClick={() => startTour(item.id)}
-                    >
-                      <div className="tour-card-art">
-                        {item.icon === 'swords' ? (
-                          <Swords size={46} strokeWidth={1} />
-                        ) : (
-                          <Route size={46} strokeWidth={1} />
-                        )}
-                        <span className="tour-art-circle" />
-                        <span className="tour-art-small-circle" />
-                        <span className="tour-card-number">
-                          {String(tours.indexOf(item) + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-                      <div className="tour-card-body">
-                        <span className="eyebrow">{item.subtitle}</span>
-                        <h3>{item.name}</h3>
-                        {progress.topics[item.id] && (
-                          <small className="topic-reading-progress">
-                            已读{' '}
-                            {
-                              progress.topics[item.id].read.filter(
-                                (step) => step < item.steps.length,
-                              ).length
-                            }{' '}
-                            / {item.steps.length} 章 · 上次停在第{' '}
-                            {Math.min(item.steps.length, progress.topics[item.id].lastStep + 1)} 章
-                          </small>
-                        )}
-                        <p>{item.description}</p>
-                        <span className="tour-card-action">
-                          阅读导读与地图章节
-                          <ArrowRight size={15} />
-                        </span>
-                      </div>
-                    </button>
-                  ))}
+                  {tours
+                    .filter((item) => topicSubject === '全部' || item.subject === topicSubject)
+                    .map((item) => (
+                      <button
+                        key={item.id}
+                        className="tour-card"
+                        style={{ '--tour-color': item.color } as React.CSSProperties}
+                        onClick={() => startTour(item.id)}
+                      >
+                        <div className="tour-card-art">
+                          {item.icon === 'swords' ? (
+                            <Swords size={46} strokeWidth={1} />
+                          ) : (
+                            <Route size={46} strokeWidth={1} />
+                          )}
+                          <span className="tour-art-circle" />
+                          <span className="tour-art-small-circle" />
+                          <span className="tour-card-number">
+                            {String(tours.indexOf(item) + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+                        <div className="tour-card-body">
+                          <span className="eyebrow">{item.subtitle}</span>
+                          <h3>{item.name}</h3>
+                          {progress.topics[item.id] && (
+                            <small className="topic-reading-progress">
+                              已读{' '}
+                              {
+                                progress.topics[item.id].read.filter(
+                                  (step) => step < item.steps.length,
+                                ).length
+                              }{' '}
+                              / {item.steps.length} 章 · 上次停在第{' '}
+                              {Math.min(item.steps.length, progress.topics[item.id].lastStep + 1)}{' '}
+                              章
+                            </small>
+                          )}
+                          <p>{item.description}</p>
+                          <span className="tour-card-action">
+                            阅读导读与地图章节
+                            <ArrowRight size={15} />
+                          </span>
+                        </div>
+                      </button>
+                    ))}
                 </div>
               ) : mode === 'saved' ? (
                 <div className="saved-panel">
