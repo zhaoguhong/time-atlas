@@ -26,7 +26,7 @@ export function setupReader(root: HTMLElement, startAtlas: () => Promise<unknown
       localStorage.setItem('time-atlas:reading:v2', JSON.stringify(progress))
       const saved = Number(localStorage.getItem(positionKey))
       if (Number.isFinite(saved) && saved > 0 && !location.hash)
-        requestAnimationFrame(() => window.scrollTo(0, saved))
+        requestAnimationFrame(() => window.scrollTo({ top: saved, behavior: 'instant' }))
     } catch {
       /* Reading works without local storage. */
     }
