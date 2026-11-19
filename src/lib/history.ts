@@ -23,9 +23,35 @@ export const fromOrdinal = (ordinal: number) => (ordinal >= 0 ? ordinal + 1 : or
 export const formatYear = (year: number) =>
   year < 0 ? `公元前 ${Math.abs(year)} 年` : `公元 ${year} 年`
 export const compactYear = (year: number) => (year < 0 ? `前${Math.abs(year)}` : `${year}`)
-export const formatEventDate = (event: HistoryEvent) => event.dateLabel ?? formatYear(event.year)
-export const eventDateRelation = (event: HistoryEvent, year: number) =>
-  event.dateLabel ? (event.endYear ? '阶段记录' : '约定纪年') : eventRelation(event.year, year)
+export const formatEventDate = (event: Pick<HistoryEvent, 'dateLabel' | 'year'>) =>
+  event.dateLabel ?? formatYear(event.year)
+// Keep the primary date in compact labels, leaving axis conversions and other notes to the reader.
+export function compactEventDate(event: HistoryEvent) {
+  if (event.dateLabel)
+    return event.dateLabel
+      .split('·')[0]
+      .replace(/\s+/g, '')
+      .replace(/公元前/g, '前')
+  const end =
+    event.endYear !== undefined && event.endYear !== event.year
+      ? `—${compactYear(event.endYear)}`
+      : ''
+  return `${compactYear(event.year)}${end}年`
+}
+export function eventHasCertainYear(event: HistoryEvent) {
+  // A date note may qualify a single-year anchor even without a custom label.
+  return (
+    (event.endYear ?? event.year) === event.year &&
+    !event.dateNote &&
+    (!event.dateLabel ||
+      event.dateLabel.replace(/\s+/g, '').replace(/^公元/, '').replace(/年$/, '') ===
+        compactYear(event.year))
+  )
+}
+export function eventDateRelation(event: HistoryEvent, year: number) {
+  if ((event.endYear ?? event.year) > event.year) return '阶段记录'
+  return eventHasCertainYear(event) ? eventRelation(event.year, year) : '约定纪年'
+}
 export const clampYear = (year: number, maximum = MAX_YEAR) =>
   Math.min(maximum, Math.max(MIN_YEAR, year === 0 ? 1 : Math.round(year)))
 export const clampPillarYear = (year: number) => clampYear(year, PILLAR_MAX_YEAR)

@@ -188,12 +188,12 @@ for (const [width, height] of [
   }, info) => {
     await page.setViewportSize({ width, height })
     await page.addInitScript((key) => localStorage.setItem(key, 'dark'), key)
-    for (const [name, hash, selector] of [
-      ['person', 'person=sushi&year=1082', '.person-biography'],
-      ['dynasty', 'dynasty=xia-early&year=-1800', '.dynasty-detail'],
-      ['topic', 'tour=opium-wars&step=-1&year=1839', '.topic-introduction'],
+    for (const [name, url, selector] of [
+      ['person', '/#person=sushi&year=1082', '.person-biography'],
+      ['dynasty', '/#dynasty=xia-early&year=-1800', '.dynasty-detail'],
+      ['topic', '/topics/late-qing-reforms/', '.topic-introduction'],
     ]) {
-      await page.goto(`/#${hash}`)
+      await page.goto(url)
       if (width < 700) await setSheet(page, 'reading')
       await expect(page.locator(selector)).toBeVisible()
       if (await page.locator('.reference-list a').count())

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T03:47:59.512Z",
+  "generatedAt": "2026-11-18T17:42:33.897Z",
   "mapRange": {
     "from": -10000,
     "to": 1912
@@ -249,7 +249,7 @@
       "社会": 347
     },
     "withCuratedRelatedReading": 132,
-    "withExplicitPlaces": 99
+    "withExplicitPlaces": 102
   },
   "dynasties": {
     "total": 53
@@ -258,14 +258,22 @@
     "total": 55
   },
   "topics": {
-    "total": 59,
-    "withRouteMaps": 10,
+    "total": 22,
+    "withRelatedEvents": 15,
+    "withRouteMaps": 3,
     "routeMaps": 8,
     "routeStops": 82,
-    "chapters": 388,
-    "withWorldEvents": 30,
-    "uniqueEvents": 278,
-    "uniqueWorldEvents": 117
+    "withCovers": 22,
+    "withMedia": 22,
+    "media": 28,
+    "aiIllustrations": 0,
+    "withInlineMaps": 10,
+    "inlineMaps": 11,
+    "withMapOverview": 9,
+    "chapters": 267,
+    "withWorldEvents": 12,
+    "uniqueEvents": 249,
+    "uniqueWorldEvents": 125
   },
   "places": {
     "total": 80,
@@ -1213,10 +1221,10 @@
     }
   ],
   "sourceRetention": {
-    "references": 1953,
-    "retained": 1245,
+    "references": 2053,
+    "retained": 1323,
     "unavailable": 0,
-    "failed": 708,
+    "failed": 730,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [

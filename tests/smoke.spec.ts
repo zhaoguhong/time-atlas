@@ -23,7 +23,8 @@ for (const [name, width, height] of [
     await expect(page.locator('.year-title')).toContainText('230')
     await page.screenshot({ path: testInfo.outputPath(`${name}.png`) })
     const readingMap = page.waitForResponse(/\/data\/maps\/song\/6\.geojson$/)
-    await page.goto('/#person=sushi&year=1082')
+    await page.goto('/people/su-shi/#year=1082')
+    await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
     if (name === 'mobile') await setSheet(page, 'reading')
     await expect(page.locator('.person-biography')).toContainText('苏轼')
     // Reading can appear before its map bytes arrive. Let that transfer finish
@@ -32,6 +33,8 @@ for (const [name, width, height] of [
     expect(await (await readingMap).finished()).toBeNull()
     const reloadedMap = page.waitForResponse(/\/data\/maps\/song\/6\.geojson$/)
     await page.reload()
+    await expect(page.locator('.reader-body h1')).toHaveText('苏轼')
+    await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     if (name === 'mobile') await setSheet(page, 'reading')
     await expect(page.locator('.person-biography')).toContainText('苏轼')

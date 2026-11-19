@@ -234,6 +234,7 @@ connectedReadings.push(...expandedConnectedReadings)
 // Several records span more than one city; [] intentionally leaves regional
 // processes out of city dossiers despite their representative map coordinate.
 const placeEvents: Record<string, string[]> = {
+  kaifeng: ['song-founded', 'wanganshi', 'jingkang'],
   rome: [
     'world-roman-republic',
     'world-caesar',

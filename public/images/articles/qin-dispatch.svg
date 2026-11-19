@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" role="img" aria-labelledby="title desc">
+  <title id="title">迁陵怎样报一声“收到了”</title>
+  <desc id="desc">洞庭郡守要求在新武陵抄成四份，分路传递。图中选取其中一路的相邻两县：酉阳将公文送到迁陵，迁陵确认收件并回报酉阳。</desc>
+  <rect width="600" height="480" rx="14" fill="#f8f5eb"/>
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#233d37">
+    <text x="30" y="59" font-size="35" font-weight="650">迁陵怎样报一声“收到了”</text>
+    <path d="M30 84 H570" stroke="#c6c7ad" stroke-width="2"/>
+    <text x="30" y="137" font-size="27">洞庭郡守下书，新武陵县抄成四份。</text>
+    <text x="30" y="183" font-size="27">分路传递，其中一路经过这两县：</text>
+    <rect x="30" y="266" width="145" height="74" rx="8" fill="#e2e7d8"/>
+    <rect x="425" y="266" width="145" height="74" rx="8" fill="#e2e7d8"/>
+    <g text-anchor="middle" font-weight="650" font-size="32">
+      <text x="102" y="314">酉阳</text>
+      <text x="497" y="314">迁陵</text>
+    </g>
+    <path d="M175 282H415m-12 -9 12 9 -12 9" fill="none" stroke="#176454" stroke-width="5"/>
+    <path d="M425 328H185m12 -9 -12 9 12 9" fill="none" stroke="#904625" stroke-width="5"/>
+    <g font-size="26" text-anchor="middle">
+      <text x="300" y="262" fill="#176454">送去公文</text>
+      <text x="300" y="370" fill="#904625">回复已到</text>
+    </g>
+    <path d="M30 404 H570" stroke="#c6c7ad" stroke-width="2"/>
+    <text x="30" y="450" font-size="25">若等不到回报，上一县还要发文追问。</text>
+  </g>
+</svg>

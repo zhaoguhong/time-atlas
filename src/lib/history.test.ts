@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { events, people } from '../data/content'
-import { periods, tours } from '../data/periods'
+import { periods } from '../data/periods'
+import { topicTours as tours } from '../data/topics'
 import { profiles, periodCourses } from '../data/learning'
 import {
   clampYear,

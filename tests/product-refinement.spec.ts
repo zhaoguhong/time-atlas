@@ -1,9 +1,16 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { pillarSideButton } from './refinement-helpers'
-import { tours } from '../src/data/periods'
-import { readFileSync, readdirSync } from 'node:fs'
-import type { HistoryEvent } from '../src/types'
+import { events } from '../src/data/content'
+import { recordFromHtml } from '../src/lib/record-html'
+import type { Person } from '../src/types'
+import {
+  articleGuides as tours,
+  expectExploration,
+  isReadingRequest,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 async function menu(page: Page) {
   await page.getByRole('button', { name: '更多操作', exact: true }).click()
@@ -251,10 +258,6 @@ test('continuing records are discoverable alongside a visible start node', async
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await page.locator('.pillar-cluster').click()
   // The 200.06-year window is [-4046.03, -3845.97]; compare against source dates.
-  const articles = new URL('../public/data/reading/events/', import.meta.url)
-  const events: HistoryEvent[] = readdirSync(articles)
-    .filter((name) => name.endsWith('.json'))
-    .map((name) => JSON.parse(readFileSync(new URL(name, articles), 'utf8')))
   const continuing = events.filter(
     (event) => event.year < -4046.03 && (event.endYear ?? event.year) >= -4046.03,
   )
@@ -321,20 +324,29 @@ test('cold catalog loads no article and failed reading can retry without losing 
 }) => {
   const articles: string[] = []
   page.on('request', (request) => {
-    if (request.url().includes('/data/reading/')) articles.push(request.url())
+    const path = new URL(request.url()).pathname
+    if (request.resourceType() === 'fetch' && /^\/(events|people|data\/reading)\//.test(path))
+      articles.push(path)
   })
   await page.goto('/#visual=pillar&year=1687&span=200')
   await expect(page.locator('.pillar-stage')).toBeVisible()
   expect(articles).toHaveLength(0)
-  await page.route('**/data/reading/events/**', (route) =>
-    route.fulfill({ status: 503, headers: { 'Cache-Control': 'no-store' }, body: 'Unavailable' }),
+  const selector = /\/(?:events\/world-newton\/|data\/reading\/events\/.*)$/
+  await page.route(selector, (route) =>
+    isReadingRequest(route.request(), 'events', 'world-newton')
+      ? route.fulfill({
+          status: 503,
+          headers: { 'Cache-Control': 'no-store' },
+          body: 'Unavailable',
+        })
+      : route.continue(),
   )
   const card = page.locator('.pillar-card[data-event-id="world-newton"] .pillar-event')
   await card.click()
   await expect(page.locator('.event-detail > .detail-lead')).toContainText('牛顿')
   await expect(page.locator('.reading-status')).toContainText('正文暂未加载')
   const url = page.url()
-  await page.unroute('**/data/reading/events/**')
+  await page.unroute(selector)
   await page.getByRole('button', { name: '重新加载正文', exact: true }).click()
   await expect(page.locator('.event-article')).toContainText('哈雷协助处理伦敦的出版事务')
   await expect(page.locator('.event-detail .reference-list a').first()).toBeVisible()
@@ -383,23 +395,26 @@ test('desktop actions use one menu and an empty map reports its actual state', a
 test('a non-ASCII person ID keeps its shared address and loads an ASCII article path', async ({
   page,
 }) => {
+  const id = 'reviewed-梁惠王'
+  const path = recordPath('people', id)
   const article = page.waitForResponse(
-    (response) =>
-      response.url().includes('/data/reading/people/record-') && response.status() === 200,
+    (response) => isReadingRequest(response.request(), 'people', id) && response.status() === 200,
   )
-  await page.goto(`/#visual=pillar&year=-350&person=${encodeURIComponent('reviewed-梁惠王')}`)
+  await page.goto(`/#visual=pillar&year=-350&person=${encodeURIComponent(id)}`)
   const response = await article
-  expect(new URL(response.url()).pathname).toMatch(
-    /^\/data\/reading\/people\/[a-zA-Z0-9_-]+\.json$/,
+  const responsePath = new URL(response.url()).pathname
+  const fromJson = responsePath.startsWith('/data/reading/')
+  expect(responsePath).toMatch(
+    fromJson
+      ? /^\/data\/reading\/people\/record-[a-f0-9]+-[a-f0-9]+\.json$/
+      : /^\/people\/[a-z0-9-]+\/$/,
   )
-  const record = await response.json()
-  expect(record.id).toBe('reviewed-梁惠王')
+  const record: Person = fromJson ? await response.json() : recordFromHtml(await response.text())
+  expect(record.id).toBe(id)
   await expect(page.locator('.person-hero h2')).toContainText('梁惠王')
   await expect(page.locator('.person-biography')).toHaveText(record.biography)
   await expect(page.locator('.person-detail .reference-list a').first()).toBeVisible()
-  expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('person')).toBe(
-    'reviewed-梁惠王',
-  )
+  await expect(page).toHaveURL(path)
 })
 
 for (const [width, height] of [
@@ -422,9 +437,11 @@ for (const [width, height] of [
         .getByRole('button', { name: '历史专题', exact: true })
         .click()
     }
-    await page.locator('.tour-card').filter({ hasText: '印度洋：港口、货物与地方社会' }).click()
-    await expect(page.locator('.topic-introduction h2')).toHaveText('印度洋：港口、货物与地方社会')
-    if (width <= 700 || height <= 540) await setSheet(page, 'map')
+    await page.locator('.tour-card[href="/topics/silk-road/"]').click()
+    await expect(page.locator('.topic-introduction h2')).toHaveText(
+      '丝绸之路：陆海之间的贸易与文明交流',
+    )
+    await page.getByRole('button', { name: '查看专题地点', exact: true }).click()
     // Check geographic anchors even when colliding labels are intentionally hidden.
     // The old China-only overview leaves the East African chapter off screen.
     for (const id of ['world-kilwa-trade', 'quanzhou-office']) {
@@ -482,20 +499,20 @@ for (const [width, height] of [
         .click()
     }
     await page.locator('.tour-card').filter({ hasText: topic.name }).click()
-    await expect(page.locator('.topic-introduction > .topic-reading-help')).toContainText(
-      '1912年后的章节在时空柱中阅读',
+    await page.locator('#topic-events summary').click()
+    await expect(page.locator('#topic-events details .topic-reading-help')).toContainText(
+      '1912年后的史事在时空柱中阅读',
     )
-    await page.locator('.resume-reading button').click()
+    await page.getByRole('button', { name: `继续第 ${step + 1} 则史事`, exact: true }).click()
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
-    await expect(page).toHaveURL(/visual=pillar(?:&|$)/)
-    await expect(page).toHaveURL(new RegExp(`tour=${topic.id}(?:&|$)`))
-    await expect(page).toHaveURL(/event=modern-smallpox-eradication(?:&|$)/)
+    await expect(page).toHaveURL(recordPath('events', 'modern-smallpox-eradication'))
+    await expectExploration(page, { visual: 'pillar', tour: topic.id })
     if (width <= 700) await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText('世界卫生组织宣布天花被根除')
     await expect(page.locator('.topic-chapter-context')).toContainText(
       `第 ${step + 1} / ${topic.steps.length} 章`,
     )
-    await page.reload()
+    await reloadExploration(page)
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
     if (width <= 700) await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText('世界卫生组织宣布天花被根除')

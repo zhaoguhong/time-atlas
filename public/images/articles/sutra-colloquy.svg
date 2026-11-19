@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-labelledby="title desc">
+  <title id="title">逍遥园里怎样对读经本</title><desc id="desc">鸠摩罗什持外文经本口译，姚兴对照汉语旧译，参与译事的学僧讨论意思，再将汉语译句落笔。</desc>
+  <style>text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243e36} .head {font-size:34px;font-weight:700} .body {font-size:27px} .label {font-size:23px} .line {fill:none;stroke:#62776b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round} .rule {stroke:#cbbfa6;stroke-width:2}</style>
+  <rect width="600" height="450" rx="12" fill="#f8f5eb"/>
+  <text class="head" x="30" y="52">逍遥园里怎样对读经本</text><path class="rule" d="M30 73H570"/>
+  <path d="M52 104h206v112H52z" fill="#efe7d4" stroke="#9c8668" stroke-width="2"/>
+  <path d="M342 104h206v112H342z" fill="#e3ece1" stroke="#748576" stroke-width="2"/>
+  <text class="body" x="155" y="150" text-anchor="middle">鸠摩罗什</text><text class="label" x="155" y="190" text-anchor="middle">拿外文经本口译</text>
+  <text class="body" x="445" y="150" text-anchor="middle">姚兴</text><text class="label" x="445" y="190" text-anchor="middle">对读已有汉译</text>
+  <path class="line" d="M156 222v36h289v-36M300 258v24m-7-8 7 8 7-8"/>
+  <text class="body" x="300" y="329" text-anchor="middle">学僧一起商量文意</text>
+  <path class="line" d="M300 345v25m-7-8 7 8 7-8"/>
+  <text class="head" x="300" y="420" text-anchor="middle">定下汉语译句</text>
+</svg>

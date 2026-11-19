@@ -45,9 +45,28 @@ try {
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
   const { topicRoutes, topicRouteById } = await server.ssrLoadModule('/src/data/topic-routes.ts')
-  const { periods, tours } = await server.ssrLoadModule('/src/data/periods.ts')
+  const { periods } = await server.ssrLoadModule('/src/data/periods.ts')
+  const { topicTours: tours } = await server.ssrLoadModule('/src/data/topics.ts')
+  const { readingArticles, articleGuides } = await server.ssrLoadModule('/src/data/articles.ts')
   const { places, placeById, eventAtPlace } = await server.ssrLoadModule('/src/lib/exploration.ts')
   const { placeReading } = await server.ssrLoadModule('/src/data/place-reading.ts')
+  const imageManifest = JSON.parse(await readFile('data/article-images.json', 'utf8'))
+  for (const image of imageManifest.images) {
+    assert(
+      image.isPublicDomain === true && image.license === 'CC0 1.0',
+      `Uncleared museum image: ${image.file}`,
+    )
+    assert.match(image.file, /^public\/images\/articles\/met-\d+\.jpg$/)
+    await verifySnapshot(image.file, image.sha256)
+    assert(
+      readingArticles.some((article) =>
+        article.article.media?.some(
+          (media) => media.src === image.file.slice(7) && media.sourceUrl === image.sourceUrl,
+        ),
+      ),
+      `Unused museum license record: ${image.file}`,
+    )
+  }
   const snapshot = JSON.parse(await readFile('data/people.sources.json', 'utf8'))
   const generatedAt = new Date().toISOString()
   const validYear = (year) => Number.isInteger(year) && year !== 0
@@ -246,6 +265,208 @@ try {
         )
     })
   }
+  const eventById = new Map(events.map((event) => [event.id, event]))
+  const guideById = new Map([...tours, ...articleGuides].map((guide) => [guide.id, guide]))
+  const articleEventIds = (article) => [
+    ...new Set([
+      ...(article.relatedEventIds ?? []),
+      ...(article.article.mapStops ?? []).map((stop) => stop.eventId),
+      ...(article.article.maps ?? []).flatMap((map) => map.eventIds ?? []),
+    ]),
+  ]
+  const validParagraph = (index, article) =>
+    Number.isInteger(index) && index >= 0 && index < article.article.paragraphs.length
+  assert.equal(new Set(readingArticles.map((article) => article.id)).size, readingArticles.length)
+  for (const article of readingArticles) {
+    assert(
+      article.id?.trim() &&
+        article.name?.trim() &&
+        article.description?.trim() &&
+        article.subject?.trim(),
+      `Incomplete article metadata: ${article.id}`,
+    )
+    assert(
+      article.article?.paragraphs.length &&
+        article.article.paragraphs.every((text) => typeof text === 'string' && text.trim()),
+      `Missing independent article body: ${article.id}`,
+    )
+    if (article.introduction !== undefined)
+      assert(
+        Array.isArray(article.introduction) &&
+          article.introduction.every((text) => typeof text === 'string' && text.trim()),
+        `Invalid article introduction: ${article.id}`,
+      )
+    for (const field of ['question', 'conclusion'])
+      if (article[field] !== undefined)
+        assert(
+          typeof article[field] === 'string' && article[field].trim(),
+          `Empty article ${field}: ${article.id}`,
+        )
+    validateSources(article)
+    for (const [index, heading] of Object.entries(article.article.headings ?? {}))
+      assert(
+        validParagraph(Number(index), article) && typeof heading === 'string' && heading.trim(),
+        `Invalid independent article heading: ${article.id}/${index}`,
+      )
+    if (article.guideId !== undefined)
+      assert(
+        guideById.has(article.guideId),
+        `Missing article guide: ${article.id}/${article.guideId}`,
+      )
+    if (article.mapOverview !== undefined)
+      assert.equal(
+        typeof article.mapOverview,
+        'boolean',
+        `Invalid article map overview: ${article.id}`,
+      )
+    assert.equal(
+      new Set(article.relatedEventIds ?? []).size,
+      (article.relatedEventIds ?? []).length,
+      `Duplicate related article event: ${article.id}`,
+    )
+    for (const id of articleEventIds(article))
+      assert(eventById.has(id), `Unknown article event: ${article.id}/${id}`)
+    for (const stop of article.article.mapStops ?? [])
+      assert(
+        validParagraph(stop.afterParagraph, article) && stop.label?.trim(),
+        `Invalid article event link: ${article.id}/${stop.eventId}`,
+      )
+    assert.equal(
+      new Set((article.article.media ?? []).map((media) => media.id)).size,
+      (article.article.media ?? []).length,
+      `Duplicate article media: ${article.id}`,
+    )
+    assert(
+      article.cover?.src && article.article.media?.some((media) => media.src === article.cover.src),
+      `Cover missing or without a captioned figure: ${article.id}`,
+    )
+    for (const media of article.article.media ?? []) {
+      assert(
+        media.id?.trim() && validParagraph(media.afterParagraph, article),
+        `Invalid article media position: ${article.id}`,
+      )
+      assert(
+        media.src?.trim() && media.alt?.trim() && media.caption?.trim(),
+        `Incomplete article media: ${article.id}/${media.id}`,
+      )
+      assert(
+        Number.isInteger(media.width) &&
+          media.width > 0 &&
+          Number.isInteger(media.height) &&
+          media.height > 0,
+        `Missing article image dimensions: ${article.id}/${media.id}`,
+      )
+      assert(
+        media.credit?.trim() || media.sourceUrl,
+        `Missing article image attribution: ${article.id}/${media.id}`,
+      )
+      if (media.sourceUrl !== undefined)
+        assert.equal(
+          new URL(media.sourceUrl).protocol,
+          'https:',
+          `Invalid article image source: ${article.id}/${media.id}`,
+        )
+      if (media.aiGenerated !== undefined)
+        assert.equal(
+          typeof media.aiGenerated,
+          'boolean',
+          `Invalid AI image flag: ${article.id}/${media.id}`,
+        )
+      if (media.src.startsWith('data:'))
+        assert.match(
+          media.src,
+          /^data:image\/(?:svg\+xml|png|jpeg|webp|gif)(?:;charset=[^;,]+)?(?:;base64)?,.+/i,
+          `Invalid embedded article image: ${article.id}/${media.id}`,
+        )
+      else if (/^[a-z][a-z\d+.-]*:/i.test(media.src))
+        assert.equal(
+          new URL(media.src).protocol,
+          'https:',
+          `Invalid article image URL: ${article.id}/${media.id}`,
+        )
+      else {
+        assert(
+          !media.src.split('/').includes('..') && !media.src.includes('\\'),
+          `Invalid article image path: ${article.id}/${media.id}`,
+        )
+        await readFile(`public/${media.src.replace(/^\/+/, '')}`)
+      }
+    }
+    assert.equal(
+      new Set((article.article.maps ?? []).map((map) => map.id)).size,
+      (article.article.maps ?? []).length,
+      `Duplicate article map: ${article.id}`,
+    )
+    for (const map of article.article.maps ?? []) {
+      assert(
+        map.id?.trim() && map.title?.trim() && validParagraph(map.afterParagraph, article),
+        `Invalid inline map metadata: ${article.id}`,
+      )
+      assert(
+        validYear(map.year) && map.year >= MIN_YEAR && map.year <= PILLAR_MAX_YEAR,
+        `Invalid inline map year: ${article.id}/${map.id}`,
+      )
+      assert(
+        Array.isArray(map.center) &&
+          map.center.length === 2 &&
+          map.center.every(Number.isFinite) &&
+          Math.abs(map.center[0]) <= 180 &&
+          Math.abs(map.center[1]) <= 85.051129,
+        `Invalid inline map center: ${article.id}/${map.id}`,
+      )
+      if (map.zoom !== undefined)
+        assert(
+          Number.isFinite(map.zoom) && map.zoom >= -1 && map.zoom <= 8,
+          `Invalid inline map zoom: ${article.id}/${map.id}`,
+        )
+      assert.equal(
+        new Set(map.eventIds ?? []).size,
+        (map.eventIds ?? []).length,
+        `Duplicate inline map event: ${article.id}/${map.id}`,
+      )
+      for (const id of map.routeIds ?? [])
+        assert(topicRouteById.has(id), `Unknown inline route: ${article.id}/${id}`)
+      for (const place of map.places ?? [])
+        assert(
+          place.name?.trim() &&
+            place.coordinates.length === 2 &&
+            place.coordinates.every(Number.isFinite) &&
+            Math.abs(place.coordinates[0]) <= 180 &&
+            Math.abs(place.coordinates[1]) < 90,
+          `Invalid inline place: ${article.id}/${map.id}`,
+        )
+      if (map.bounds)
+        assert(
+          map.bounds.length === 2 &&
+            map.bounds.every(
+              (point) =>
+                point.length === 2 &&
+                point.every(Number.isFinite) &&
+                Math.abs(point[0]) <= 180 &&
+                Math.abs(point[1]) <= 85.051129,
+            ) &&
+            map.bounds[0][0] < map.bounds[1][0] &&
+            map.bounds[0][1] < map.bounds[1][1],
+          `Invalid inline bounds: ${article.id}/${map.id}`,
+        )
+      if (map.caption !== undefined)
+        assert(map.caption.trim(), `Empty inline map caption: ${article.id}/${map.id}`)
+      if (map.sources?.length)
+        validateSources({ id: `${article.id}/${map.id}`, sources: map.sources })
+    }
+    for (const id of article.routeIds ?? []) {
+      const route = topicRouteById.get(id)
+      assert(route, `Missing article route: ${article.id}/${id}`)
+      for (const source of route.sources)
+        assert(
+          article.sources.some((item) => item.url === source.url),
+          `Unindexed article route source: ${article.id}/${id}`,
+        )
+    }
+  }
+  const articleRoutes = [
+    ...new Set(readingArticles.flatMap((article) => article.routeIds ?? [])),
+  ].map((id) => topicRouteById.get(id))
   for (const journey of journeys) {
     assert(
       personById.has(journey.personId) && journey.introduction && journey.nodes.length,
@@ -407,6 +628,8 @@ try {
             retainedSourceHashes: missingSnapshots === 0,
             missingSnapshotFiles: missingSnapshots,
             topicChaptersAndChronology: true,
+            independentArticlesAndOptionalReferences: true,
+            articleMediaAndMaps: true,
             placeIntroductionsAndAssociations: true,
           },
           scope:
@@ -461,14 +684,30 @@ try {
             sourceCount: polity.sources.length,
             dateNote: polity.dateNote,
           })),
-          topics: tours.map((topic) => ({
+          topics: readingArticles.map((topic) => ({
             id: topic.id,
             name: topic.name,
-            chapters: topic.steps.length,
-            introductionCharacters: topic.introduction.join('').length,
+            guideId: topic.guideId,
+            relatedEventIds: topic.relatedEventIds ?? [],
+            chapters: (topic.relatedEventIds ?? []).length,
+            paragraphCount: topic.article.paragraphs.length,
+            headingCount: Object.keys(topic.article.headings ?? {}).length,
+            mediaCount: (topic.article.media ?? []).length,
+            aiImageCount: (topic.article.media ?? []).filter((media) => media.aiGenerated).length,
+            inlineMapCount: (topic.article.maps ?? []).length,
+            mapOverview: !!topic.mapOverview,
+            routeIds: topic.routeIds ?? [],
+            introductionCharacters: (topic.introduction ?? []).join('').length,
+            readingCharacters: [
+              ...(topic.introduction ?? []),
+              ...Object.values(topic.article.headings ?? {}),
+              ...topic.article.paragraphs,
+              topic.conclusion ?? '',
+            ].join('').length,
             sourceCount: topic.sources.length,
-            worldEventIds: topic.steps.filter(
-              (id) => eventRegion(events.find((event) => event.id === id)) !== 'china',
+            eventIds: articleEventIds(topic),
+            worldEventIds: articleEventIds(topic).filter(
+              (id) => eventRegion(eventById.get(id)) !== 'china',
             ),
           })),
           places: places.map((place) => ({
@@ -554,19 +793,37 @@ try {
     dynasties: { total: dynasties.length },
     worldPolities: { total: worldPolities.length },
     topics: {
-      total: tours.length,
-      withRouteMaps: tours.filter((tour) => tour.routeIds?.length).length,
-      routeMaps: topicRoutes.length,
-      routeStops: topicRoutes.reduce((sum, route) => sum + route.stops.length, 0),
-      chapters: tours.reduce((count, topic) => count + topic.steps.length, 0),
-      withWorldEvents: tours.filter((topic) =>
-        topic.steps.some((id) => eventRegion(events.find((event) => event.id === id)) !== 'china'),
+      total: readingArticles.length,
+      withRelatedEvents: readingArticles.filter((topic) => topic.relatedEventIds?.length).length,
+      withRouteMaps: readingArticles.filter((topic) => topic.routeIds?.length).length,
+      routeMaps: articleRoutes.length,
+      routeStops: articleRoutes.reduce((sum, route) => sum + route.stops.length, 0),
+      withCovers: readingArticles.filter((topic) => topic.cover).length,
+      withMedia: readingArticles.filter((topic) => topic.article.media?.length).length,
+      media: readingArticles.reduce((sum, topic) => sum + (topic.article.media ?? []).length, 0),
+      aiIllustrations: readingArticles.reduce(
+        (sum, topic) =>
+          sum + (topic.article.media ?? []).filter((media) => media.aiGenerated).length,
+        0,
+      ),
+      withInlineMaps: readingArticles.filter((topic) => topic.article.maps?.length).length,
+      inlineMaps: readingArticles.reduce(
+        (sum, topic) => sum + (topic.article.maps ?? []).length,
+        0,
+      ),
+      withMapOverview: readingArticles.filter((topic) => topic.mapOverview).length,
+      chapters: readingArticles.reduce(
+        (count, topic) => count + (topic.relatedEventIds ?? []).length,
+        0,
+      ),
+      withWorldEvents: readingArticles.filter((topic) =>
+        articleEventIds(topic).some((id) => eventRegion(eventById.get(id)) !== 'china'),
       ).length,
-      uniqueEvents: new Set(tours.flatMap((topic) => topic.steps)).size,
+      uniqueEvents: new Set(readingArticles.flatMap(articleEventIds)).size,
       uniqueWorldEvents: new Set(
-        tours
-          .flatMap((topic) => topic.steps)
-          .filter((id) => eventRegion(events.find((event) => event.id === id)) !== 'china'),
+        readingArticles
+          .flatMap(articleEventIds)
+          .filter((id) => eventRegion(eventById.get(id)) !== 'china'),
       ).size,
     },
     places: {

@@ -1,7 +1,7 @@
-import { formatEventDate, eventDateRelation } from '../lib/history'
 import type { ColorMode } from '../lib/color-mode'
 import { useEffect, useRef, useState } from 'react'
 import * as maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import type { FeatureCollection, LineString } from 'geojson'
 import { Minus, Plus, LocateFixed, Compass, AlertCircle, LoaderCircle, Globe2 } from 'lucide-react'
@@ -16,7 +16,17 @@ import type {
 } from '../types'
 import { placeForCity, placeById } from '../lib/exploration'
 import { cities, silkRoadCoordinates } from '../data/periods'
-import { compactYear, formatYear, periodAt, toOrdinal, fromOrdinal, MAX_YEAR } from '../lib/history'
+import {
+  compactEventDate,
+  compactYear,
+  eventDateRelation,
+  formatEventDate,
+  formatYear,
+  fromOrdinal,
+  MAX_YEAR,
+  periodAt,
+  toOrdinal,
+} from '../lib/history'
 import { groupMapEvents, intersects, type EventGroup } from '../lib/markers'
 import { activeMapFeatures, polityOrder } from '../lib/maps'
 import { eventsAtYear } from '../lib/current-events'
@@ -246,6 +256,8 @@ export default function HistoryMap(props: Props) {
     try {
       const camera = current.current.initialCamera ?? defaultCamera(container.current)
       instance = new maplibregl.Map({
+        pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        maxTileCacheSize: 32,
         container: container.current,
         center: [camera.lng, camera.lat],
         zoom: camera.zoom,
@@ -908,13 +920,14 @@ export default function HistoryMap(props: Props) {
               eventsAtYear(group.events, current.current.year)[0] ??
               (single && (single.importance >= 5 || instance.getZoom() >= 4) ? single : null))
             : null
+        const present = !!single && eventDateRelation(single, current.current.year) === '当年'
         const key = [
           group.events.map((e) => e.id).join(','),
           selected,
           current.current.trail?.activeId ?? '',
           topicEvent?.id ?? '',
           namedEvent?.id ?? '',
-          single ? eventDateRelation(single, current.current.year) === '当年' : '',
+          present,
           single ? single.year > current.current.year : '',
         ].join('|')
         const retained = previous.get(key)
@@ -930,7 +943,7 @@ export default function HistoryMap(props: Props) {
         const relation = single
           ? eventDateRelation(single, current.current.year)
           : `${compactYear(group.events[0].year)}—${compactYear(group.events.at(-1)!.year)}`
-        element.className = `event-marker ${current.current.trail ? 'journey-marker' : current.current.topicSteps ? 'topic-marker' : namedEvent ? 'named-event' : ''} ${selected ? 'selected' : ''} ${single && single.year > current.current.year ? 'future' : ''} ${single && single.year === current.current.year ? 'present' : ''}`
+        element.className = `event-marker ${current.current.trail ? 'journey-marker' : current.current.topicSteps ? 'topic-marker' : namedEvent ? 'named-event' : ''} ${selected ? 'selected' : ''} ${single && single.year > current.current.year ? 'future' : ''} ${present ? 'present' : ''}`
         const dot = document.createElement('span')
         dot.className = 'event-marker-dot'
         dot.textContent =
@@ -949,7 +962,7 @@ export default function HistoryMap(props: Props) {
                   : String(group.events.length)
         const date = document.createElement('small')
         date.textContent = single
-          ? compactYear(single.year)
+          ? compactEventDate(single)
           : current.current.trail
             ? '行迹'
             : '事件'
@@ -984,14 +997,14 @@ export default function HistoryMap(props: Props) {
           const title = document.createElement('strong')
           title.className = 'topic-marker-label'
           title.textContent = topicEvent.title
-          date.textContent = `${compactYear(topicEvent.year)}${single ? '' : ` · 另 ${group.events.length - 1} 章`}`
+          date.textContent = `${compactEventDate(topicEvent)}${single ? '' : ` · 另 ${group.events.length - 1} 章`}`
           element.dataset.activeEvent = topicEvent.id
           element.append(title)
         } else if (namedEvent) {
           const title = document.createElement('strong')
           title.className = 'named-event-title'
           title.textContent = namedEvent.title
-          date.textContent = `${namedEvent.dateLabel ? '约' : ''}${compactYear(namedEvent.year)}${namedEvent.endYear ? '—' + compactYear(namedEvent.endYear) : ''} · ${namedEvent.category}${single ? '' : ` · 另${group.events.length - 1}件`}`
+          date.textContent = `${compactEventDate(namedEvent)} · ${namedEvent.category}${single ? '' : ` · 另${group.events.length - 1}件`}`
           element.dataset.activeEvent = namedEvent.id
           element.append(title)
         }

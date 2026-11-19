@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="494" viewBox="0 0 600 494" role="img" aria-labelledby="title desc">
+<title id="title">当地正午，港口已经下午两点</title>
+<desc id="desc">船的当地时刻十二点，港口同一时刻十四点。港口先过正午，船在它的西方，地方时相差两小时相当于经度三十度。</desc>
+<rect x="0" y="0" width="600" height="494" rx="0" fill="#fbf7ee"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="36" y="58" font-size="34" fill="#273c37" text-anchor="start" font-weight="650">当地正午，港口已经下午两点</text>
+<path d="M36 79H564" fill="none" stroke="#bfbda8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="151" y="139" font-size="28" fill="#1b6055" text-anchor="middle" font-weight="650">船的地方时</text>
+<text x="450" y="139" font-size="28" fill="#99462f" text-anchor="middle" font-weight="650">港口的地方时</text>
+<circle cx="150" cy="248" r="83" fill="#fffdf6" stroke="#bfbda8" stroke-width="3"/>
+<path d="M150.00 176.00L150.00 170.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M186.00 185.65L189.00 180.45" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M212.35 212.00L217.55 209.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222.00 248.00L228.00 248.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M212.35 284.00L217.55 287.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M186.00 310.35L189.00 315.55" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150.00 320.00L150.00 326.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114.00 310.35L111.00 315.55" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M87.65 284.00L82.45 287.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78.00 248.00L72.00 248.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M87.65 212.00L82.45 209.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114.00 185.65L111.00 180.45" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 248V188" fill="none" stroke="#1b6055" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 248V208" fill="none" stroke="#99462f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="150" cy="248" r="5" fill="#273c37" stroke="none" stroke-width="0"/>
+<circle cx="450" cy="248" r="83" fill="#fffdf6" stroke="#bfbda8" stroke-width="3"/>
+<path d="M450.00 176.00L450.00 170.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M486.00 185.65L489.00 180.45" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M512.35 212.00L517.55 209.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M522.00 248.00L528.00 248.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M512.35 284.00L517.55 287.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M486.00 310.35L489.00 315.55" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450.00 320.00L450.00 326.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M414.00 310.35L411.00 315.55" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M387.65 284.00L382.45 287.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M378.00 248.00L372.00 248.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M387.65 212.00L382.45 209.00" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M414.00 185.65L411.00 180.45" fill="none" stroke="#535d54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 248V188" fill="none" stroke="#1b6055" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450 248l35 -20" fill="none" stroke="#99462f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="450" cy="248" r="5" fill="#273c37" stroke="none" stroke-width="0"/>
+<text x="150" y="302" font-size="22" fill="#273c37" text-anchor="middle" font-weight="600">12:00</text>
+<text x="450" y="302" font-size="22" fill="#273c37" text-anchor="middle" font-weight="600">14:00</text>
+<path d="M36 356H564" fill="none" stroke="#bfbda8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="300" y="405" font-size="30" fill="#273c37" text-anchor="middle" font-weight="600">相差 2 小时 × 每小时 15° = 30°</text>
+<text x="300" y="459" font-size="26" fill="#1b6055" text-anchor="middle" font-weight="400">港口先迎来正午，船在港口以西。</text>
+</g>
+</svg>

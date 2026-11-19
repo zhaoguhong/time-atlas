@@ -47,7 +47,7 @@ for (const [width, height] of [
     await page.goto('/#visual=map&year=1872&place=shanghai&view=places')
     if (width <= 700 || height <= 540) await setSheet(page, 'reading')
     await expect(page.locator('.place-detail h2')).toHaveText('上海')
-    const item = page.locator('.place-detail .archive-event-list button').first()
+    const item = page.locator('.place-detail .archive-event-list a').first()
     await expect(item).toBeAttached()
     const title = await item.locator('strong').innerText()
     await item.click()

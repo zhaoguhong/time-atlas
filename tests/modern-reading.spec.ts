@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { expandPillarOptions } from './refinement-helpers'
+import { expectExploration, recordPath, reloadExploration } from './reading-url-helpers'
 
 test.use({ hasTouch: true })
 async function settings(page: Page) {
@@ -27,12 +28,12 @@ for (const viewport of [
     await stage.focus()
     await stage.press('End')
     await expect(stage).toHaveAttribute('data-year', '2000')
-    await expect(page).toHaveURL(/year=2000(?:&|$)/)
-    await expect(page).toHaveURL(/person=modern-phil-sartre(?:&|$)/)
-    await page.reload()
+    await expect(page).toHaveURL(recordPath('people', 'modern-phil-sartre'))
+    await expectExploration(page, { year: '2000' })
+    await reloadExploration(page)
     await expect(stage).toHaveAttribute('data-year', '2000')
     await expect(page.locator('.person-detail h2')).toContainText('萨特')
-    await expect(page).toHaveURL(/year=2000(?:&|$)/)
+    await expectExploration(page, { year: '2000' })
   })
 
   for (const entry of ['mode switch', 'event map link']) {
@@ -56,20 +57,20 @@ for (const viewport of [
       }
       await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
       await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1911')
-      await expect(page).not.toHaveURL(/range=/)
+      await expectExploration(page, { range: null })
       await page.clock.install()
       await page.getByRole('button', { name: '播放时间', exact: true }).click()
       await expect(page.getByRole('button', { name: '暂停时间播放', exact: true })).toBeVisible()
       await page.clock.runFor(1000)
       await expect(page.getByRole('button', { name: '播放时间', exact: true })).toBeVisible()
-      await expect(page).toHaveURL(/year=1912(?:&|$)/)
+      await expectExploration(page, { year: '1912' })
       await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1912')
       await page.clock.runFor(9000)
-      await expect(page).toHaveURL(/year=1912(?:&|$)/)
+      await expectExploration(page, { year: '1912' })
       await expect(page.getByRole('button', { name: '播放时间', exact: true })).toBeVisible()
-      await page.reload()
+      await reloadExploration(page)
       await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1912')
-      await expect(page).not.toHaveURL(/range=/)
+      await expectExploration(page, { range: null })
     })
   }
 
@@ -119,7 +120,7 @@ for (const viewport of [
     if (viewport.name === 'phone') await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText(record.title)
     await expect(page.locator('.event-detail .reference-list a').first()).toBeVisible()
-    await page.reload()
+    await reloadExploration(page)
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1943')
     if (viewport.name === 'phone') await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText(record.title)

@@ -1,17 +1,12 @@
-import { readFileSync, readdirSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
 import { connectedTopicTours, expandedConnectedReadings } from '../src/data/connected-reading-paths'
-import type { HistoryEvent } from '../src/types'
+import { eventById } from '../src/data/content'
+import { canonicalArticleId } from '../src/data/article-groups'
 import { setSheet } from './mobile-sheet-helpers'
-
-function article(id: string): HistoryEvent {
-  const directory = new URL('../public/data/reading/events/', import.meta.url)
-  const files = readdirSync(directory).filter(
-    (name) => name.startsWith(`${id}-`) && name.endsWith('.json'),
-  )
-  expect(files, `one prepared article for ${id}`).toHaveLength(1)
-  return JSON.parse(readFileSync(new URL(files[0], directory), 'utf8'))
-}
+import { articleGuides, recordPath, reloadExploration } from './reading-url-helpers'
+const mainTopics = connectedTopicTours.map(({ id }) =>
+  articleGuides.find((guide) => guide.id === canonicalArticleId.get(id))!,
+)
 
 for (const [width, height] of [
   [1440, 900],
@@ -23,27 +18,27 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    const algebra = article('category-algebra')
+    const algebra = eventById.get('category-algebra')!
     await page.goto(`/#visual=pillar&year=${algebra.year}&person=region-person-khwarizmi`)
     if (compact) await setSheet(page, 'reading')
-    const authored = page.locator('.person-events button').filter({ hasText: algebra.title })
+    const authored = page.locator('.person-events a').filter({ hasText: algebra.title })
     await authored.scrollIntoViewIfNeeded()
     await expect(authored).toContainText('撰写代数学')
     await authored.click()
     if (compact) await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText(algebra.title)
     await page.getByRole('button', { name: '返回人物', exact: true }).click()
-    await expect(page).toHaveURL(/person=region-person-khwarizmi/)
+    await expect(page).toHaveURL(recordPath('people', 'region-person-khwarizmi'))
     await expect(page.locator('.person-journey')).toHaveCount(0)
 
     const [firstId, secondId, forward, backward, note] = expandedConnectedReadings[0]
-    const first = article(firstId)
-    const second = article(secondId)
+    const first = eventById.get(firstId)!
+    const second = eventById.get(secondId)!
     await page.goto(`/#visual=pillar&year=${first.year}&event=${firstId}`)
     if (compact) await setSheet(page, 'reading')
     await expect(page.locator('.event-article')).toBeVisible()
     const link = page
-      .locator('.event-relations button')
+      .locator('.event-relations a')
       .filter({ has: page.getByText(second.title, { exact: true }) })
     await link.scrollIntoViewIfNeeded()
     await expect(link).toContainText(forward)
@@ -52,7 +47,7 @@ for (const [width, height] of [
     if (compact) await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText(second.title)
     const reverse = page
-      .locator('.event-relations button')
+      .locator('.event-relations a')
       .filter({ has: page.getByText(first.title, { exact: true }) })
     await reverse.scrollIntoViewIfNeeded()
     await expect(reverse).toContainText(backward)
@@ -64,13 +59,13 @@ for (const [width, height] of [
     await page.screenshot({ path: info.outputPath(`reading-pair-${width}.png`) })
   })
 
-  for (const topic of connectedTopicTours) {
+  for (const topic of mainTopics) {
     test(`enters ${topic.id} at the current article and retains chapter progress at ${width}x${height}`, async ({
       page,
     }, info) => {
       const chapter = 1
-      const event = article(topic.steps[chapter])
-      const visual = topic.id === 'how-history-is-written' ? 'map' : 'pillar'
+      const event = eventById.get(topic.steps[chapter])!
+      const visual = topic.id === 'writing-and-knowledge' ? 'map' : 'pillar'
       await page.setViewportSize({ width, height })
       await page.goto(`/#visual=${visual}&year=${event.year}&event=${event.id}`)
       if (compact) await setSheet(page, 'reading')
@@ -85,21 +80,41 @@ for (const [width, height] of [
       if (compact) await setSheet(page, 'reading')
       await expect(page.locator('.event-detail h2')).toHaveText(event.title)
       await expect(page.locator('.topic-chapter-context')).toContainText(`第 ${chapter + 1} /`)
-      await expect(page).toHaveURL(new RegExp(`tour=${topic.id}`))
+      await expect(page).toHaveURL(recordPath('events', event.id))
       await expect(
         page.getByRole('button', { name: `从本章进入专题：${topic.name}`, exact: true }),
       ).toHaveCount(0)
       await page.getByRole('button', { name: '标记本章已读', exact: true }).click()
-      await page.getByRole('button', { name: '专题下一章', exact: true }).click()
-      await expect(page).toHaveURL(new RegExp(`event=${topic.steps[chapter + 1]}`))
-      await page.reload()
+      const activeMap =
+        (await page.locator('.atlas-app').getAttribute('data-visualization')) === 'map'
+      if (compact && activeMap) await setSheet(page, 'split')
+      const next = activeMap ? '专题下一章' : '下一章'
+      await page.getByRole('button', { name: next, exact: true }).click()
+      await expect(page).toHaveURL(recordPath('events', topic.steps[chapter + 1]))
+      await reloadExploration(page)
       if (compact) await setSheet(page, 'reading')
       await expect(page.locator('.topic-chapter-context')).toContainText(`第 ${chapter + 2} /`)
       await page.getByRole('button', { name: '专题导读与目录', exact: true }).click()
       if (compact) await setSheet(page, 'reading')
       await expect(page.locator('.topic-introduction h2')).toHaveText(topic.name)
-      await expect(page.locator('.topic-chapter-list li').nth(chapter)).toContainText('已读')
-      await expect(page.locator('.topic-chapter-list li')).toHaveCount(topic.steps.length)
+      await expect
+        .poll(() =>
+          page.evaluate(
+            (id) =>
+              JSON.parse(localStorage.getItem('time-atlas:reading:v2') ?? '{}').topics?.[id]
+                ?.readEventIds,
+            topic.id,
+          ),
+        )
+        .toContain(event.id)
+      const index = page.locator('.topic-related-events details')
+      if (['writing-and-knowledge', 'observing-sky-measuring-position'].includes(topic.id))
+        await expect(index).toHaveCount(0)
+      else {
+        await index.locator('summary').click()
+        await expect(index.locator(`[data-event-id="${event.id}"]`)).toContainText('已读')
+        await expect(index.locator('.topic-chapter-list li')).toHaveCount(topic.steps.length)
+      }
       const source = page.locator('.topic-introduction .reference-list a').first()
       await source.scrollIntoViewIfNeeded()
       await expect(source).toBeInViewport({ ratio: 1 })

@@ -99,7 +99,7 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await mapReady(page, 'year=1687&event=world-newton&span=200')
+    await mapReady(page, 'year=1687&span=200')
     const mobile = width <= 700 || (width <= 1000 && height <= 540)
     for (const name of ['地图', '时空柱'] as const) {
       await expectTouchControl(headerMode(page, name))
@@ -136,11 +136,16 @@ for (const [width, height] of [
     if (mobile) {
       await setSheet(page, 'reading')
       await expect(page.locator('.map-shell')).toBeHidden()
+    }
+    const event = page.locator('.event-card[href="/events/world-newton/"]')
+    const title = await event.locator('h3').innerText()
+    await event.click()
+    await expect(page.locator('.event-detail h2')).toHaveText(title)
+    if (mobile) {
       await expectTouchControl(headerMode(page, '地图'))
       await headerMode(page, '地图').click()
       await expect(page.locator('.atlas-app')).toHaveAttribute('data-mobile-view', 'split')
     }
-    const title = await page.locator('.event-detail h2').innerText()
     await headerMode(page, '时空柱').click()
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1687')
     await expect(page.locator('.pillar-card.selected')).toHaveAttribute(
@@ -159,8 +164,7 @@ for (const [width, height] of [
     await headerMode(page, '地图').click()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     await expect(page.locator('.event-detail h2')).toHaveText(title)
-    await expect(page).toHaveURL(/year=1687(?:&|$)/)
-    await expect(page).toHaveURL(/event=world-newton(?:&|$)/)
+    await expect(page).toHaveURL(/\/events\/world-newton\/$/)
   })
 }
 
@@ -235,8 +239,12 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#visual=pillar&year=1687&span=200&event=world-newton')
-    await expect(page.locator('.pillar-card.selected')).toBeVisible()
+    await page.goto('/#visual=pillar&year=1687&span=200')
+    await page.locator('.pillar-card[data-event-id="world-newton"]').click()
+    await expect(page.locator('.pillar-card.selected')).toHaveAttribute(
+      'data-event-id',
+      'world-newton',
+    )
     await setSheet(page, 'split')
     const title = await page.locator('.event-detail h2').innerText()
     await page.getByRole('button', { name: '更多操作', exact: true }).click()
@@ -274,7 +282,7 @@ for (const [width, height] of [
     await expectTouchControl(headerMode(page, '地图'))
     await expectTouchControl(headerMode(page, '时空柱'))
     await expectHeaderFit(page)
-    await expect(page).toHaveURL(/year=1687(?:&|$)/)
+    await expect(page).toHaveURL(/\/events\/world-newton\/$/)
   })
 }
 
@@ -285,22 +293,28 @@ test('mobile topics stay in the header and free exploration stays in More', asyn
   await expectTouchControl(topics)
   await topics.click()
   await expect(topics).toHaveAttribute('aria-current', 'true')
-  await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'true')
+  await expect(headerMode(page, '地图')).toHaveAttribute('aria-pressed', 'false')
+  await expect(headerMode(page, '时空柱')).toHaveAttribute('aria-pressed', 'false')
   await headerMode(page, '时空柱').click()
   await expect(headerMode(page, '时空柱')).toHaveAttribute('aria-pressed', 'true')
   await expect(topics).not.toHaveAttribute('aria-current')
-  await expect(page.locator('.tours-panel')).toBeVisible()
+  await expect(page.locator('.pillar-stage')).toBeVisible()
+  await expect(page.locator('.tours-panel')).toHaveCount(0)
   await headerMode(page, '地图').click()
   await expect(page.getByRole('button', { name: '更多操作', exact: true })).toHaveAttribute(
     'aria-expanded',
     'false',
   )
-  await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
-  await expect(page.locator('.topic-introduction h2')).toHaveText('两次鸦片战争与条约体系')
+  await topics.click()
+  await page.getByRole('link', { name: '阅读专题：从福州船政到甲午：清朝怎样学着办海军' }).click()
+  await expect(page.locator('.topic-introduction h2')).toHaveText(
+    '从福州船政到甲午：清朝怎样学着办海军',
+  )
   await page.getByRole('button', { name: '更多操作', exact: true }).click()
   const free = page.getByRole('button', { name: '返回自由探索', exact: true })
   await expectTouchControl(free)
   await free.click()
+  await expect(page.locator('.atlas-app')).toHaveAttribute('data-canvas-enabled', 'true')
   await expect(topics).not.toHaveAttribute('aria-current')
   await expect(page.locator('.tour-banner')).toBeHidden()
   await expect(page.locator('.topic-introduction')).toBeHidden()
@@ -351,7 +365,7 @@ for (const [width, height] of [
     await page.setViewportSize({ width, height })
     await page.goto('/#tour=zheng-he-voyages&step=-1')
     await setSheet(page, 'reading')
-    await expect(page.locator('.topic-introduction h2')).toContainText('郑和下西洋')
+    await expect(page.locator('.topic-introduction h2')).toContainText('丝绸之路')
     await expect(page.locator('.timeline')).toBeHidden()
     await expectHeaderFit(page)
     const panel = (await page.locator('.story-panel').boundingBox())!
@@ -360,9 +374,13 @@ for (const [width, height] of [
     await page.getByRole('button', { name: '更多操作', exact: true }).click()
     await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
     await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'dark')
-    await expect(page.locator('.topic-introduction h2')).toContainText('郑和下西洋')
+    await expect(page.locator('.topic-introduction h2')).toContainText('丝绸之路')
     await expect(page.locator('.timeline')).toBeHidden()
-    await page.getByRole('button', { name: '开始地图学习', exact: true }).click()
+    await page.getByRole('button', { name: '查看专题地点', exact: true }).click()
+    await page
+      .locator('.tour-banner')
+      .getByRole('button', { name: '开始学习', exact: true })
+      .click()
     await expect(page.locator('.timeline')).toBeVisible()
     await expect(page.locator('.atlas-app')).toHaveAttribute('data-topic-overview', 'false')
     await setSheet(page, 'reading')
@@ -436,9 +454,52 @@ for (const width of [390, 1440]) {
       await headerMode(page, name).click()
       await expect(topics).not.toHaveAttribute('aria-current')
       await expect(headerMode(page, name)).toHaveAttribute('aria-pressed', 'true')
-      await expect(page.locator('.tours-panel')).toBeVisible()
+      await expect(page.locator('.tours-panel')).toHaveCount(0)
+      await expect(page.locator(name === '地图' ? '.map-canvas' : '.pillar-stage')).toBeVisible()
     }
     await page.mouse.move(0, 0)
     await page.screenshot({ path: info.outputPath(`topics-after-view-${width}.png`) })
+  })
+}
+
+for (const width of [320, 390, 430]) {
+  test(`专题直达、目录选读和刷新使用同一行手机导航 ${width}`, async ({ page }, info) => {
+    await page.setViewportSize({ width, height: 844 })
+    await page.goto('/topics/tang-turning-point/')
+    const masthead = page.getByRole('navigation', { name: '主导航' })
+    const buttons = masthead.getByRole('button')
+    async function checkReadingHeader() {
+      await expect(page.locator('.topic-introduction h2')).toBeInViewport()
+      await expect(page.locator('.topic-reader-introduction p').first()).toBeInViewport()
+      await expect(buttons).toHaveCount(3)
+      for (const button of await buttons.all()) await expectTouchControl(button)
+      const centers = await buttons.evaluateAll((items) =>
+        items.map((item) => {
+          const box = item.getBoundingClientRect()
+          return box.top + box.height / 2
+        }),
+      )
+      expect(Math.max(...centers) - Math.min(...centers)).toBeLessThan(1)
+      await expectHeaderFit(page)
+    }
+    await checkReadingHeader()
+    await page.screenshot({ path: info.outputPath(`direct-article-${width}.png`) })
+    await page.getByRole('button', { name: '全部专题', exact: true }).click()
+    const selection = page.getByRole('region', { name: '选读专题' })
+    await expect(selection.getByRole('link')).toHaveCount(3)
+    await expect(page.getByRole('searchbox', { name: '搜索历史专题' })).toBeInViewport()
+    await page.screenshot({ path: info.outputPath(`topic-library-${width}.png`) })
+    await selection.getByRole('link', { name: /侨批/ }).click()
+    await expect(page).toHaveURL(/\/topics\/qiaopi-remittances\/$/)
+    await checkReadingHeader()
+    await page.reload()
+    await checkReadingHeader()
+    const nav = page.getByRole('navigation', { name: '文章目录' })
+    await nav.getByRole('button', { name: '文章目录', exact: true }).click()
+    const target = nav.locator('.topic-contents-links button').nth(2)
+    const title = await target.innerText()
+    await target.click()
+    await expect(page.getByRole('heading', { name: title, exact: true })).toBeInViewport()
+    await expect(nav.locator('.topic-contents-toggle')).toHaveAttribute('aria-expanded', 'false')
   })
 }

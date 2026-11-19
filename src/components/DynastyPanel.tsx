@@ -1,3 +1,5 @@
+import ReadingLink from './ReadingLink'
+import { eventUrl } from '../lib/record-url'
 import { ArrowRight } from 'lucide-react'
 import { useRef } from 'react'
 import type { Dynasty, HistoryEvent } from '../types'
@@ -110,7 +112,7 @@ export default function DynastyPanel({
           <ol>
             {chronology.map((event) => (
               <li key={event.id}>
-                <button onClick={() => onEvent(event.id)}>
+                <ReadingLink href={eventUrl(event.id)} onNavigate={() => onEvent(event.id)}>
                   <span>{event.dateLabel ?? compactYear(event.year)}</span>
                   <div>
                     <small>
@@ -119,7 +121,7 @@ export default function DynastyPanel({
                     <strong>{event.title}</strong>
                   </div>
                   <ArrowRight size={13} />
-                </button>
+                </ReadingLink>
               </li>
             ))}
           </ol>

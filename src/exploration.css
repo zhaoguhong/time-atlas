@@ -256,8 +256,8 @@
   display: grid;
   gap: 12px;
 }
-.place-directory > button,
-.archive-event-list > button {
+.place-directory > :is(button, a.reading-link),
+.archive-event-list > :is(button, a.reading-link) {
   display: grid;
   gap: 8px;
   padding: 16px;
@@ -266,8 +266,8 @@
   text-align: left;
   background: #fffefb;
 }
-.place-directory > button:hover,
-.archive-event-list > button:hover {
+.place-directory > :is(button, a.reading-link):hover,
+.archive-event-list > :is(button, a.reading-link):hover {
   border-color: #91a183;
   background: #f2f5ec;
 }
@@ -321,7 +321,7 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-.place-people button,
+.place-people :is(button, a.reading-link),
 .comparison-years button {
   padding: 9px 12px;
   background: #edf2e5;
@@ -340,7 +340,7 @@
   font-size: 12px;
   line-height: 1.7;
 }
-.place-visits button,
+.place-visits :is(button, a.reading-link),
 .place-visits a {
   color: #345b48;
   text-decoration: underline;
@@ -580,7 +580,7 @@
   .atlas-app[data-mobile-view='reading'] .panel-intro {
     margin-bottom: 16px;
   }
-  .place-directory > button {
+  .place-directory > :is(button, a.reading-link) {
     padding: 12px;
   }
   .exploration-filters input,

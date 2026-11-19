@@ -19,7 +19,7 @@ const section = `<!-- coverage:start -->
 | 历史事件 | ${coverage.events.total} 个，其中中国之外的事件 ${coverage.events.world} 个 |
 | 人物 | ${coverage.people.total} 位，其中 ${coverage.people.curatedIntroductions} 份有编辑介绍、${coverage.people.basicRecords} 份为基础身份记录 |
 | 朝代与政权档案 | 中国 ${coverage.dynasties.total} 个、世界 ${coverage.worldPolities.total} 个 |
-| 历史专题 | ${coverage.topics.total} 个，共 ${coverage.topics.chapters} 章 |
+| 历史专题 | ${coverage.topics.total} 篇文章，${coverage.topics.chapters} 则关联史事 |
 | 地点档案 | ${coverage.places.total} 个，地图地名标签 ${coverage.places.labels} 个 |
 | 已核对活动年谱 | ${coverage.journeys.people} 位人物，共 ${coverage.journeys.nodes} 条活动记录 |
 

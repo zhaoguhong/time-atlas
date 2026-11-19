@@ -1,34 +1,17 @@
 import { expandPillarOptions, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
-import { readFileSync } from 'node:fs'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
 import { installPillarClock } from './pillar-clock-helpers'
 import { matchesEventCategory } from '../src/lib/event-categories'
 import { eventRegion } from '../src/lib/time-pillar'
-import type { HistoryEvent } from '../src/types'
-
-// Read the prepared records without importing the browser's JSON module graph
-// into Node. Only files referenced by the current catalog supply expectations.
-const eventCatalog = JSON.parse(readFileSync('src/data/generated/reading-catalog.json', 'utf8'))
-  .events as {
-  id: string[]
-  readingHash: string[]
-  readingId?: string[] | { values: (string | null)[] }
-}
-const events: HistoryEvent[] = eventCatalog.id.map((id, index) => {
-  const fileId =
-    (Array.isArray(eventCatalog.readingId)
-      ? eventCatalog.readingId[index]
-      : eventCatalog.readingId?.values[index]) ?? id
-  return JSON.parse(
-    readFileSync(
-      `public/data/reading/events/${fileId}-${eventCatalog.readingHash[index]}.json`,
-      'utf8',
-    ),
-  )
-})
-const eventById = new Map(events.map((event) => [event.id, event]))
+import { events, eventById } from '../src/data/content'
+import {
+  expectExploration,
+  explorationParams,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 test.use({ hasTouch: true })
 async function ready(page: Page, hash = 'year=1500&span=900') {
@@ -258,8 +241,8 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await page.locator('.pillar-cluster-list button').first().click()
   await expect(page.locator('.event-detail')).toBeVisible()
   const title = await page.locator('.event-detail h2').innerText()
-  await expect(page).toHaveURL(/event=/)
-  const selectedId = new URLSearchParams(new URL(page.url()).hash.slice(1)).get('event')!
+  await expect(page).toHaveURL(/\/events\/[^/]+\/$/)
+  const selectedId = (await explorationParams(page)).event
   await completeEventArticle(page, selectedId)
   expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
   await expect(page.locator('.event-relations')).toBeVisible()
@@ -269,7 +252,7 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await page.getByRole('button', { name: '在时空柱中对照', exact: true }).click()
   await expect(page.locator('.time-pillar')).toBeVisible()
   await expect(page.locator('.event-detail h2')).toHaveText(title)
-  await page.reload()
+  await reloadExploration(page)
   await expect(page.locator('.event-detail h2')).toHaveText(title)
   await page.screenshot({ path: info.outputPath('detail-and-pillar.png') })
 })
@@ -316,7 +299,7 @@ test('mobile reading remains usable through rotation and supports split canvas',
   await page.setViewportSize({ width: 390, height: 844 })
   await setSheet(page, 'reading')
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
-  await expect(page).toHaveURL(/event=world-newton/)
+  await expect(page).toHaveURL(recordPath('events', 'world-newton'))
   await setSheet(page, 'map')
   await geometry(page)
 })
@@ -604,7 +587,7 @@ test('compact labels are the default, summaries are optional, and years use Chin
   await closeSettings(page)
   await expect(page.locator('.pillar-event p')).toHaveCount(0)
   await page.goto('/#visual=pillar&year=-221&span=800')
-  await expect(page.locator('.pillar-now')).toHaveText('公元前221年')
+  await expect(page.locator('.pillar-now')).toHaveText('前221年')
   expect(
     (await page.locator('.pillar-tick').allTextContents()).some((t) => t.startsWith('公元前')),
   ).toBe(true)
@@ -886,7 +869,7 @@ test('pillar reading stays in place while explicit map reading uses the event da
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1700')
   await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-  await expect(page).toHaveURL(/year=1687/)
+  await expectExploration(page, { year: '1687' })
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
 })
 
@@ -999,10 +982,8 @@ for (const viewport of [
     await expect(page.locator('.pillar-cluster-list')).toContainText('朱熹')
     await page.locator('.pillar-cluster-list button').filter({ hasText: '鹅湖之会' }).click()
     await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
-    await expect
-      .poll(() => new URLSearchParams(new URL(page.url()).hash.slice(1)).get('category'))
-      .toBe('哲学')
-    await page.reload()
+    await expectExploration(page, { category: '哲学' })
+    await reloadExploration(page)
     await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
     await settings(page)
     await expect(category).toHaveValue('哲学')
@@ -1091,7 +1072,7 @@ for (const viewport of [
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
     await completeEventArticle(page, 'phil-kant-pure-reason')
     expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
-    await page.reload()
+    await reloadExploration(page)
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
     await settings(page)
     await expect(page.getByLabel('时空柱事件类别', { exact: true })).toHaveValue('哲学')

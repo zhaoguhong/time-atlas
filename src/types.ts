@@ -148,6 +148,49 @@ export interface Tour {
   chapters?: { eventId: string; explanation: string; mapReading: string }[]
   sources?: Source[]
 }
+export interface ArticleMedia {
+  id: string
+  afterParagraph: number
+  src: string
+  alt: string
+  caption: string
+  credit?: string
+  sourceUrl?: string
+  aiGenerated?: boolean
+  width?: number
+  height?: number
+}
+export interface ArticleMap {
+  bounds?: [[number, number], [number, number]]
+  id: string
+  afterParagraph: number
+  title: string
+  year: number
+  center: [number, number]
+  zoom?: number
+  eventIds?: string[]
+  routeIds?: string[]
+  places?: { name: string; coordinates: [number, number] }[]
+  caption?: string
+  sources?: Source[]
+}
+/** An independent essay; events and geographic exploration are optional. */
+export interface ReadingArticle extends Omit<Tour, 'steps' | 'chapters' | 'article'> {
+  cover?: Omit<ArticleMedia, 'afterParagraph'>
+  legacyIds?: string[]
+  searchTerms?: string[]
+  guideId?: string
+  relatedEventIds?: string[]
+  relatedArticles?: { id: string; name: string }[]
+  mapOverview?: boolean
+  article: {
+    paragraphs: string[]
+    headings?: Record<number, string>
+    mapStops?: { afterParagraph: number; eventId: string; label: string }[]
+    media?: ArticleMedia[]
+    maps?: ArticleMap[]
+  }
+}
 export interface PeriodProfile {
   focusReason: string
   question: string

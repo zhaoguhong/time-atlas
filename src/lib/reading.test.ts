@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { events, people, eventById } from '../data/content'
 import { dynasties } from '../data/dynasties'
-import { tours, periods } from '../data/periods'
+import { periods } from '../data/periods'
+import { topicTours as tours } from '../data/topics'
 import { matchesEvent } from './history'
 import { eventNarratives } from '../data/event-narratives'
 

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-06T03:47:58.359Z",
-  "totalSourceLinks": 3606,
-  "referenceDocuments": 1953,
-  "successfulSnapshots": 1245,
+  "generatedAt": "2026-11-18T17:42:31.625Z",
+  "totalSourceLinks": 3706,
+  "referenceDocuments": 2053,
+  "successfulSnapshots": 1323,
   "unavailable": [
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
@@ -11,7 +11,7 @@
     },
     {
       "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
-      "attemptedAt": "2026-10-23T06:45:08.687741+00:00",
+      "attemptedAt": "2026-11-18T17:36:43.503579+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
-      "attemptedAt": "2026-10-23T06:59:40.484608+00:00",
+      "attemptedAt": "2026-11-18T17:36:43.633762+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -60,8 +60,13 @@
       "error": "The read operation timed out"
     },
     {
+      "url": "https://collection.sciencemuseumgroup.org.uk/documents/aa110050516/union-patriotic-envelope-no-2-cotton-is-king",
+      "attemptedAt": "2026-11-18T17:36:43.726227+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://dergipark.org.tr/en/pub/asobid/article/937743",
-      "attemptedAt": "2026-11-02T15:55:52.611147+00:00",
+      "attemptedAt": "2026-11-18T17:36:55.736182+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
@@ -95,6 +100,11 @@
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/grievances-and-demands-the-twelve-articles-of-the-swabian-peasants-february-27-march-1-1525",
+      "attemptedAt": "2026-11-18T16:19:58.491766+00:00",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    },
+    {
       "url": "https://ggzl.dpm.org.cn/app/api/app/exhibitionListPc/681",
       "attemptedAt": "2026-10-07T07:11:22.393274+00:00",
       "error": "IncompleteRead(81500 bytes read)"
@@ -110,8 +120,13 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://heritage.bnf.fr/france-ameriques/dette-lindependance-dhaiti-lesclave-comme-unite-compte-1794-1922",
+      "attemptedAt": "2026-11-13T16:21:34.219089+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
       "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
-      "attemptedAt": "2026-10-25T16:46:35.649972+00:00",
+      "attemptedAt": "2026-11-18T17:36:46.903752+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -125,8 +140,18 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://idp.bl.uk/blog/the-diamond-sutra-on-display-text-panel-6-with-colophon/",
+      "attemptedAt": "2026-11-18T16:19:30.474107+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://idp.bl.uk/collection/51FDAEAFB4A24E2E9981692A98130BC8/",
+      "attemptedAt": "2026-11-18T16:19:33.004698+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://idp.bl.uk/discover/learning/buddhism-on-the-silk-roads/articles/buddhism-on-the-ground/buddhist-texts-the-diamond-sutra/",
-      "attemptedAt": "2026-11-01T15:20:15.432153+00:00",
+      "attemptedAt": "2026-11-18T17:36:46.640190+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -166,7 +191,7 @@
     },
     {
       "url": "https://nzhistory.govt.nz/womens-suffrage-day",
-      "attemptedAt": "2026-10-22T08:49:46.449407+00:00",
+      "attemptedAt": "2026-11-18T17:36:49.526091+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -176,7 +201,7 @@
     },
     {
       "url": "https://old.maa.org/node/1409908",
-      "attemptedAt": "2026-10-25T16:50:53.875994+00:00",
+      "attemptedAt": "2026-11-18T17:36:52.730854+00:00",
       "error": "HTTP Error 521: <none>"
     },
     {
@@ -186,17 +211,22 @@
     },
     {
       "url": "https://repositori.kemendikdasmen.go.id/9924/",
-      "attemptedAt": "2026-11-02T15:57:26.989830+00:00",
-      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+      "attemptedAt": "2026-11-18T17:37:24.651224+00:00",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8265/CBP-8265.pdf",
-      "attemptedAt": "2026-10-25T16:46:39.303688+00:00",
+      "attemptedAt": "2026-11-18T17:36:56.302781+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://sjfw.mct.gov.cn/site/dataservice/culdetails?curId=10&id=35049",
       "attemptedAt": "2026-11-01T15:20:16.546684+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://smarthistory.org/chinese-porcelain-production-and-export/",
+      "attemptedAt": "2026-11-13T17:47:24.763097+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -235,6 +265,11 @@
       "error": "HTTP Error 412: Precondition Failed"
     },
     {
+      "url": "https://wp.stu.ca/worldhistory/wp-content/uploads/sites/4/2015/07/Constitution-dHaiti-1801-French.pdf",
+      "attemptedAt": "2026-11-18T17:42:29.668528+00:00",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    },
+    {
       "url": "https://www.amsterdam.nl/stadsarchief/stukken/handel/omwisselen/",
       "attemptedAt": "2026-10-25T17:16:36.453723+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -251,7 +286,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Abbas-I-shah-of-Persia",
-      "attemptedAt": "2026-11-02T17:21:41.298496+00:00",
+      "attemptedAt": "2026-11-18T17:36:59.123760+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -386,7 +421,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Ashurbanipal",
-      "attemptedAt": "2026-11-02T17:21:36.015625+00:00",
+      "attemptedAt": "2026-11-18T17:37:01.915460+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -486,7 +521,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Chulalongkorn",
-      "attemptedAt": "2026-11-02T17:54:13.351153+00:00",
+      "attemptedAt": "2026-11-18T17:37:01.635313+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -531,7 +566,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Enheduanna",
-      "attemptedAt": "2026-11-02T17:21:34.568377+00:00",
+      "attemptedAt": "2026-11-18T17:37:04.340881+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -706,7 +741,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Ibn-Khaldun",
-      "attemptedAt": "2026-11-02T17:53:43.701654+00:00",
+      "attemptedAt": "2026-11-18T17:37:04.393397+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1026,12 +1061,12 @@
     },
     {
       "url": "https://www.britannica.com/biography/Narai",
-      "attemptedAt": "2026-11-02T17:54:13.390527+00:00",
+      "attemptedAt": "2026-11-18T17:37:06.864030+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.britannica.com/biography/Nasir-al-Din-al-Tusi",
-      "attemptedAt": "2026-11-02T17:21:40.377263+00:00",
+      "attemptedAt": "2026-11-18T17:37:08.249347+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1276,7 +1311,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Savitribai-Phule",
-      "attemptedAt": "2026-11-02T17:21:25.534535+00:00",
+      "attemptedAt": "2026-11-18T17:37:09.301330+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1451,7 +1486,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/Tsuda-Umeko",
-      "attemptedAt": "2026-11-02T17:54:08.218219+00:00",
+      "attemptedAt": "2026-11-18T17:37:10.717967+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1556,7 +1591,7 @@
     },
     {
       "url": "https://www.britannica.com/biography/al-Biruni",
-      "attemptedAt": "2026-11-02T17:21:39.501284+00:00",
+      "attemptedAt": "2026-11-18T17:36:59.204847+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1911,12 +1946,12 @@
     },
     {
       "url": "https://www.britannica.com/place/Japan/The-constitution-of-Japan",
-      "attemptedAt": "2026-11-02T17:54:08.991794+00:00",
+      "attemptedAt": "2026-11-18T17:37:11.778239+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.britannica.com/place/Japan/Women-in-postwar-Japan",
-      "attemptedAt": "2026-11-02T17:54:08.555052+00:00",
+      "attemptedAt": "2026-11-18T17:37:13.163771+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -1951,7 +1986,7 @@
     },
     {
       "url": "https://www.britannica.com/place/Lothal",
-      "attemptedAt": "2026-11-02T17:21:19.363494+00:00",
+      "attemptedAt": "2026-11-18T17:37:14.223313+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2161,7 +2196,7 @@
     },
     {
       "url": "https://www.britannica.com/place/Vietnam/The-later-Le-dynasty",
-      "attemptedAt": "2026-11-02T17:54:13.730894+00:00",
+      "attemptedAt": "2026-11-18T17:37:15.636286+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2256,12 +2291,12 @@
     },
     {
       "url": "https://www.britannica.com/topic/Constitution-of-1917",
-      "attemptedAt": "2026-11-02T17:53:56.424097+00:00",
+      "attemptedAt": "2026-11-18T17:37:16.652008+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.britannica.com/topic/Constitution-of-India",
-      "attemptedAt": "2026-11-02T17:21:26.280601+00:00",
+      "attemptedAt": "2026-11-18T17:37:18.061868+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2331,7 +2366,7 @@
     },
     {
       "url": "https://www.britannica.com/topic/Haiti-Constitution-of-1805",
-      "attemptedAt": "2026-11-02T17:53:56.158769+00:00",
+      "attemptedAt": "2026-11-18T17:37:20.404986+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2356,7 +2391,7 @@
     },
     {
       "url": "https://www.britannica.com/topic/Inca-road-system",
-      "attemptedAt": "2026-11-02T17:53:55.034786+00:00",
+      "attemptedAt": "2026-11-18T17:37:20.490459+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2471,7 +2506,7 @@
     },
     {
       "url": "https://www.britannica.com/topic/Nizamiyyah",
-      "attemptedAt": "2026-11-02T17:21:39.657040+00:00",
+      "attemptedAt": "2026-11-18T17:37:22.836978+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2516,7 +2551,7 @@
     },
     {
       "url": "https://www.britannica.com/topic/Popol-Vuh",
-      "attemptedAt": "2026-11-02T17:53:55.290587+00:00",
+      "attemptedAt": "2026-11-18T17:37:22.967666+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2775,13 +2810,18 @@
       "error": "The read operation timed out"
     },
     {
+      "url": "https://www.cdc.gov/smallpox/about/history.html",
+      "attemptedAt": "2026-11-18T17:37:25.480651+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.cppcc.gov.cn/2011/06/27/ARTI1309159125046101.shtml",
       "attemptedAt": "2026-10-25T17:33:19.065007+00:00",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cppcc.gov.cn'. (_ssl.c:1010)>"
     },
     {
       "url": "https://www.edu.cn/jiao_yu_fa_lv_766/20060303/t20060303_165119.shtml",
-      "attemptedAt": "2026-11-02T15:57:56.567512+00:00",
+      "attemptedAt": "2026-11-18T17:37:56.143305+00:00",
       "error": "The read operation timed out"
     },
     {
@@ -2870,8 +2910,48 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.luther2017.de/de/martin-luther/texte-quellen/die-95-thesen/",
+      "attemptedAt": "2026-11-13T16:19:58.170189+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/202581",
+      "attemptedAt": "2026-11-14T03:21:50.719480+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/327384",
+      "attemptedAt": "2026-11-18T16:19:42.419053+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/338712",
+      "attemptedAt": "2026-11-14T03:21:49.936283+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/art/collection/search/38198",
-      "attemptedAt": "2026-10-23T06:59:40.480295+00:00",
+      "attemptedAt": "2026-11-18T17:37:27.656959+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/39624",
+      "attemptedAt": "2026-11-14T03:21:49.918495+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/41493",
+      "attemptedAt": "2026-11-14T03:21:50.631592+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/444408",
+      "attemptedAt": "2026-11-14T03:21:50.671659+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/447109",
+      "attemptedAt": "2026-11-14T03:21:50.914367+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2880,8 +2960,33 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/art/collection/search/49368",
+      "attemptedAt": "2026-11-14T03:21:50.983935+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/690059",
+      "attemptedAt": "2026-11-18T17:37:27.984611+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/701291",
+      "attemptedAt": "2026-11-14T03:21:51.168346+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/728348",
+      "attemptedAt": "2026-11-14T03:21:51.252059+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/art/collection/search/853977",
       "attemptedAt": "2026-11-02T15:57:44.328061+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "attemptedAt": "2026-11-13T17:47:27.019879+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2920,8 +3025,13 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+      "attemptedAt": "2026-11-13T16:19:53.006013+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
-      "attemptedAt": "2026-10-07T06:45:21.038044+00:00",
+      "attemptedAt": "2026-11-18T17:37:30.137806+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2931,7 +3041,7 @@
     },
     {
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
-      "attemptedAt": "2026-10-06T18:33:54.455335+00:00",
+      "attemptedAt": "2026-11-18T17:37:30.441084+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2946,7 +3056,7 @@
     },
     {
       "url": "https://www.metmuseum.org/ja/essays/indian-textiles-trade-and-production",
-      "attemptedAt": "2026-11-02T15:58:00.794680+00:00",
+      "attemptedAt": "2026-11-18T17:37:32.707456+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2961,7 +3071,7 @@
     },
     {
       "url": "https://www.metmuseum.org/toah/ht/06/nc",
-      "attemptedAt": "2026-10-23T06:45:06.037336+00:00",
+      "attemptedAt": "2026-11-18T17:37:32.985874+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -2981,7 +3091,7 @@
     },
     {
       "url": "https://www.metmuseum.org/toah/ht/07/sse",
-      "attemptedAt": "2026-10-23T06:46:29.569816+00:00",
+      "attemptedAt": "2026-11-18T17:37:35.192978+00:00",
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
@@ -3006,7 +3116,7 @@
     },
     {
       "url": "https://www.ncl.edu.tw/information_236_15182.html",
-      "attemptedAt": "2026-10-25T17:15:38.507541+00:00",
+      "attemptedAt": "2026-11-18T17:37:36.861341+00:00",
       "error": "HTTP Error 302: Found"
     },
     {
@@ -3041,12 +3151,12 @@
     },
     {
       "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
-      "attemptedAt": "2026-10-23T06:50:27.749035+00:00",
+      "attemptedAt": "2026-11-18T17:37:38.688650+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
-      "attemptedAt": "2026-10-25T16:46:46.468509+00:00",
+      "attemptedAt": "2026-11-18T17:37:39.340731+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -3055,13 +3165,18 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/towns/tyne-and-wear-case-study/about-the-group/public-administration/the-1848-public-health-act/",
+      "attemptedAt": "2026-11-18T16:19:44.712245+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
-      "attemptedAt": "2026-10-25T16:46:31.788560+00:00",
+      "attemptedAt": "2026-11-18T17:37:42.187408+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://www.parliament.uk/magnacarta/",
-      "attemptedAt": "2026-11-01T09:32:19.861754+00:00",
+      "attemptedAt": "2026-11-18T17:37:41.832533+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -3108,11 +3223,6 @@
       "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/4184hnGgNFN.pdf",
       "attemptedAt": "2026-10-06T16:22:05.948859+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
-    },
-    {
-      "url": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
-      "attemptedAt": "2026-11-01T09:32:22.746939+00:00",
-      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://zh.wikisource.org/wiki/一切經音義",
@@ -3181,7 +3291,7 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/唐六典/卷5",
-      "attemptedAt": "2026-11-02T17:53:19.537208+00:00",
+      "attemptedAt": "2026-11-18T17:37:48.258413+00:00",
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -3501,7 +3611,7 @@
     },
     {
       "url": "https://zh.wikisource.org/wiki/通典/卷34",
-      "attemptedAt": "2026-11-02T17:53:19.110523+00:00",
+      "attemptedAt": "2026-11-18T17:37:54.468124+00:00",
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -3556,7 +3666,7 @@
       "url": "https://academic.oup.com/edited-volume/61799/chapter-abstract/546289926",
       "title": "Oxford Research Encyclopedia · Tamerlane and the Timurids（作者摘要）",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-23T06:45:08.687741+00:00"
+      "attemptedAt": "2026-11-18T17:36:43.503579+00:00"
     },
     {
       "url": "https://academic.oup.com/reference/62399/reference-article-abstract/561732157",
@@ -3581,6 +3691,7 @@
       "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-rice.html",
       "title": "哥伦比亚大学 Asia for Educators · Rice Cultivation in Song China",
       "retrievedAt": "2026-10-25T16:49:34.567140+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:40.036554+00:00",
       "sha256": "c29f4afb2b7695750bd63ed3039e728f0d2bdbd0e850b9a8a57c5ce4658c0805",
       "revisionId": null
     },
@@ -3589,6 +3700,14 @@
       "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-23T06:54:51.991716+00:00"
+    },
+    {
+      "url": "https://amr.jining.gov.cn/art/2022/4/26/art_77206_2704724.html",
+      "title": "江苏省计量科学研究院赵波等 · 从《长安十二时辰》浅谈时间计量",
+      "retrievedAt": "2026-11-13T13:37:58.237931+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:40.036592+00:00",
+      "sha256": "4100f615a411367d4a2418eed93a25c6caf61fa2348dad8847877b15de546034",
+      "revisionId": null
     },
     {
       "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/703982e8-be07-4f7a-9265-b11e0121c461",
@@ -3618,15 +3737,22 @@
     },
     {
       "url": "https://artmuseum.princeton.edu/art/collections/objects/33030",
-      "title": "普林斯顿大学艺术博物馆 · Seated male figure：笈多时代背景",
+      "title": "Princeton University Art Museum · Seated Male Figure（笈多陶塑与宗教艺术）",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-23T06:59:40.484608+00:00"
+      "attemptedAt": "2026-11-18T17:36:43.633762+00:00"
     },
     {
       "url": "https://asia-archive.si.edu/collections/new/acquisitions-2017/s2017-8-12/",
       "title": "史密森尼国立亚洲艺术博物馆 · 满者伯夷陶塑与贸易社会",
       "retrievedAt": "2026-10-23T06:54:35.260517+00:00",
       "sha256": "9d99a2ddbda3d45edf8e5488ce17726520c51b376e70cc3cf5c295e1f9766273",
+      "revisionId": null
+    },
+    {
+      "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+      "title": "Smithsonian · Porcelain Production at Jingdezhen（生产中心与海外竞争）",
+      "retrievedAt": "2026-11-13T17:47:27.319016+00:00",
+      "sha256": "9f0c34eda6b71cb33bd10dcaf4421776ca8e13c19326fec389ec5338a8dca2e4",
       "revisionId": null
     },
     {
@@ -3660,6 +3786,7 @@
       "url": "https://blog.sciencemuseum.org.uk/sending-messages-across-the-atlantic-156-years-on-from-the-first-transatlantic-cable/",
       "title": "英国科学博物馆 · Sending messages across the Atlantic",
       "retrievedAt": "2026-10-23T06:51:01.656575+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:40.061499+00:00",
       "sha256": "da6000d449de022631a61e6b81cc99315b7d0c1678feb05078c28d768911efef",
       "revisionId": null
     },
@@ -3681,6 +3808,27 @@
       "title": "英国皇家学会档案 · A dynamical theory of the electromagnetic field",
       "retrievedAt": "2026-10-25T16:49:44.400630+00:00",
       "sha256": "43587c24f0eb76c43bb264d95affc0a3fdc11551b92a6c9855697acd91585711",
+      "revisionId": null
+    },
+    {
+      "url": "https://cbetaonline.dila.edu.tw/zh/T0220_577",
+      "title": "玄奘译《大般若波罗蜜多经》卷五百七十七",
+      "retrievedAt": "2026-11-18T17:30:03.903273+00:00",
+      "sha256": "626720070163cf3d358aef5cc92cac78e93252c4270e841a5f37aec249942d26",
+      "revisionId": null
+    },
+    {
+      "url": "https://cbetaonline.dila.edu.tw/zh/T0235_001",
+      "title": "鸠摩罗什译《金刚般若波罗蜜经》",
+      "retrievedAt": "2026-11-18T17:30:03.867077+00:00",
+      "sha256": "626720070163cf3d358aef5cc92cac78e93252c4270e841a5f37aec249942d26",
+      "revisionId": null
+    },
+    {
+      "url": "https://cbetaonline.dila.edu.tw/zh/T2145_008",
+      "title": "僧叡《大品经序》 · 僧祐《出三藏记集》卷八",
+      "retrievedAt": "2026-11-18T17:30:03.778849+00:00",
+      "sha256": "626720070163cf3d358aef5cc92cac78e93252c4270e841a5f37aec249942d26",
       "revisionId": null
     },
     {
@@ -3739,6 +3887,90 @@
       "attemptedAt": "2026-10-25T16:48:41.787364+00:00"
     },
     {
+      "url": "https://collection.sciencemuseumgroup.org.uk/documents/aa110050516/union-patriotic-envelope-no-2-cotton-is-king",
+      "title": "英国科学博物馆集团 · 1861年“Cotton Is King!”政治宣传信封",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-18T17:36:43.726227+00:00"
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/202581",
+      "title": "馆藏元数据 · Jug with Portuguese arms",
+      "retrievedAt": "2026-11-14T03:23:20.705455+00:00",
+      "sha256": "7343489664dd7db7efc56534c41250dea1d9bf086beb7cd18048bec60dc379d9",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/327384",
+      "title": "馆藏元数据 · Cuneiform tablet: administrative account concerning the distribution of barley and emmer",
+      "retrievedAt": "2026-11-18T17:36:44.030005+00:00",
+      "sha256": "34f7ff12a5af1cc847c1de006868d61448a6194d34f491015ebd6fcbc99f9049",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/338712",
+      "title": "馆藏元数据 · Four-master and Two Three-masters Anchored near a Fortified Island, from \"The Sailing Vessels\"",
+      "retrievedAt": "2026-11-14T03:23:21.194336+00:00",
+      "sha256": "c3c1e3522c33c86fa0799897d5a07cba30ee37decf08d125cb3532ba894219a6",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/39624",
+      "title": "馆藏元数据 · Safe Conduct Pass (Paiza) with Inscription in Phakpa Script",
+      "retrievedAt": "2026-11-14T03:23:21.220290+00:00",
+      "sha256": "35c2f49bbfb73bc380b164da087e1d85c2eebf79de77e7bc51a88f30f0e141e0",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/41493",
+      "title": "馆藏元数据 · The Qianlong Emperor's Southern Inspection Tour, Scroll Six: Entering Suzhou along the Grand Canal",
+      "retrievedAt": "2026-11-14T03:23:22.342946+00:00",
+      "sha256": "454486db3138a4609b6a39db667539edb1236b2ac0084c75252498a394a15855",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/444408",
+      "title": "馆藏元数据 · Astrolabe of ‘Umar ibn Yusuf ibn ‘Umar ibn ‘Ali ibn Rasul al-Muzaffari",
+      "retrievedAt": "2026-11-14T03:23:22.827442+00:00",
+      "sha256": "a0bb3056e09f3ac3129d26203c23857abb0d2d7b2aa6f99f36f2cd6b1dc60689",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/447109",
+      "title": "馆藏元数据 · Textile Fragment",
+      "retrievedAt": "2026-11-14T03:23:22.745655+00:00",
+      "sha256": "4d561e5db474b4564b48cca483fed79bb6dd8797175a538c64a8f2d9457b0bc1",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/49368",
+      "title": "馆藏元数据 · Camel",
+      "retrievedAt": "2026-11-14T03:23:22.801670+00:00",
+      "sha256": "55905315bd54b6f5f8b18ecaf01cf75ade08e9c0c7fd6847e3a24013a6c57448",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/690059",
+      "title": "馆藏元数据 · “The Historical Buddha Preaching,” a section from The Illustrated Sutra of Past and Present Karma (Kako genzai inga kyō emaki)",
+      "retrievedAt": "2026-11-14T03:23:23.214701+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.657203+00:00",
+      "sha256": "1a936fc206fb928f04c7a545a0214e9c4f6984fd8700e4df38545097ff429814",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/701291",
+      "title": "馆藏元数据 · Square-form vase with decoration of Su Shi’s first and second “Rhapsody on Red Cliff”",
+      "retrievedAt": "2026-11-14T03:23:23.261459+00:00",
+      "sha256": "bb5833236b01ff5775fec4c1856e10c5c0ee118fec59050b95885a38f9ba28c3",
+      "revisionId": null
+    },
+    {
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/728348",
+      "title": "馆藏元数据 · Prince Kung. Emperor of China",
+      "retrievedAt": "2026-11-14T03:23:23.322223+00:00",
+      "sha256": "d39baa1a268820b18e4994a94dd19a16743a516aeb9c865443c59cb655f3b707",
+      "revisionId": null
+    },
+    {
       "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
       "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
       "retrievedAt": "2026-11-04T16:19:03.239634+00:00",
@@ -3750,6 +3982,13 @@
       "title": "郑州商城 · 考古与机构资料",
       "retrievedAt": "2026-11-02T17:52:28.401048+00:00",
       "sha256": "8540a93da124b43ddb9727aee9ba688088ff102043a6978a3c1302417b85c0a9",
+      "revisionId": null
+    },
+    {
+      "url": "https://culturepaedia.singaporeccc.org.sg/communities/qiaopi-remittance-letters-from-chinese-migrants/",
+      "title": "新加坡华族文化百科 · Zhang Huimei, Qiaopi: Remittance letters from Chinese migrants",
+      "retrievedAt": "2026-11-18T17:30:05.286723+00:00",
+      "sha256": "4b338072445739c650b4e6af0647475df04484742997fa975e70c3b0e0e04213",
       "revisionId": null
     },
     {
@@ -3767,9 +4006,17 @@
       "revisionId": null
     },
     {
+      "url": "https://depts.washington.edu/silkroad/exhibit/mongols/essay.html",
+      "title": "华盛顿大学 · Daniel C. Waugh, The Mongols",
+      "retrievedAt": "2026-11-13T16:19:39.547121+00:00",
+      "sha256": "d9c556c5988f1a82e0e9f6ebd0b7ba81f6926257e87457b772d93ceed7efbec4",
+      "revisionId": null
+    },
+    {
       "url": "https://depts.washington.edu/silkroad/texts/sogdlet.html",
       "title": "University of Washington · Sogdian Ancient Letters（书信译文与导读）",
       "retrievedAt": "2026-11-01T15:20:09.439422+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.679378+00:00",
       "sha256": "2663c75388d0a85fa9bd81d58f52aa15fa5584397ee152531ee70752d31bae0a",
       "revisionId": null
     },
@@ -3777,7 +4024,7 @@
       "url": "https://dergipark.org.tr/en/pub/asobid/article/937743",
       "title": "Amasya Üniversitesi Sosyal Bilimler Dergisi · Fergana Nüshasından Kutadgu Bilig’in Söz Varlığına Katkılar",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
-      "attemptedAt": "2026-11-02T15:55:52.611147+00:00"
+      "attemptedAt": "2026-11-18T17:36:55.736182+00:00"
     },
     {
       "url": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
@@ -3845,6 +4092,7 @@
       "url": "https://dlbs.liberal.ntu.edu.tw/museum/silk/db/index-year-table2.html",
       "title": "台湾大学佛学数字图书馆 · 玄奘年表",
       "retrievedAt": "2026-11-02T17:22:00.119367+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.750459+00:00",
       "sha256": "8292fd651a654f1c9a87c741bbf7b2e1a2ad5fc359880df116547a7ca0530bc0",
       "revisionId": null
     },
@@ -3898,7 +4146,15 @@
       "url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/caldb_s.cgi?year=754",
       "title": "日本国立天文台历计算室 · 754年历月与节月",
       "retrievedAt": "2026-11-04T16:12:45.074948+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.773733+00:00",
       "sha256": "336910c3fe2487736edd5abe25ecefc799b5a4e22681f977494aa3cf7c550807",
+      "revisionId": null
+    },
+    {
+      "url": "https://editions.mml.ox.ac.uk/editions/ablassgnade6/",
+      "title": "牛津大学 Taylor Editions · Ein Sermon von Ablass und Gnade",
+      "retrievedAt": "2026-11-13T16:20:26.741295+00:00",
+      "sha256": "7c22fcbcb0791deadb6803b53da5286c1d7dbb087a809be3b8b3fa137811c81b",
       "revisionId": null
     },
     {
@@ -3935,6 +4191,7 @@
       "url": "https://english.sse.com.cn/aboutsse/overview/",
       "title": "上海证券交易所 · Overview",
       "retrievedAt": "2026-11-02T15:55:31.977336+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.797097+00:00",
       "sha256": "f06a3e79a0578a3bad70c0f4c67e0f6beb30fece89d54ee7f44cdd37c960107f",
       "revisionId": null
     },
@@ -3955,7 +4212,7 @@
       "url": "https://fns.pdsu.edu.cn/info/1062/1655.htm",
       "title": "平顶山学院 · 苏轼年谱简编",
       "retrievedAt": "2026-10-06T12:09:55.310114+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.912089+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.819625+00:00",
       "sha256": "4f500c72002061ab0076b30a9c351363f8be6ec94014bf41fd53f789ce01214a",
       "revisionId": null
     },
@@ -3963,13 +4220,21 @@
       "url": "https://galileo.ou.edu/exhibits/new-astronomy.html",
       "title": "University of Oklahoma Libraries · The New Astronomy",
       "retrievedAt": "2026-10-25T17:16:00.099438+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.843329+00:00",
       "sha256": "f816ed2a15bc1c9f4dbcd6c9bc62c8d632a64f5eb601ec74223b2aaaa81d6623",
       "revisionId": null
+    },
+    {
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/grievances-and-demands-the-twelve-articles-of-the-swabian-peasants-february-27-march-1-1525",
+      "title": "德国史文献与图像 · 施瓦本农民《十二条款》（1525年）",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "attemptedAt": "2026-11-18T16:19:58.491766+00:00"
     },
     {
       "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-religious-peace-of-augsburg-september-25-1555",
       "title": "German History in Documents and Images · Religious Peace of Augsburg",
       "retrievedAt": "2026-10-25T17:16:46.948442+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.866606+00:00",
       "sha256": "fa9acac2ab7875dc7f2bae5c1e76a314f57f1b5879c6459dd9b1e13ba75aec0b",
       "revisionId": null
     },
@@ -3983,6 +4248,7 @@
       "url": "https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_brahmagupta-brAhmasphuTasiddhAnta.htm",
       "title": "University of Göttingen · GRETIL Brahmagupta",
       "retrievedAt": "2026-10-25T17:15:56.602784+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.890441+00:00",
       "sha256": "a77b4d3c649f00f35e9e9673e936bc90b7b5a36e3284446dc5f3fda12b5b594c",
       "revisionId": null
     },
@@ -3999,6 +4265,14 @@
       "attemptedAt": "2026-10-25T17:16:25.526585+00:00"
     },
     {
+      "url": "https://gwh.pku.edu.cn/info/1159/1222.htm",
+      "title": "全国高等院校古籍整理研究工作委员会 · 装帧制度",
+      "retrievedAt": "2026-11-13T13:37:59.619362+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.912656+00:00",
+      "sha256": "da4e9862cc05c321242ff601656fb33c6abaa9c8152f36b8302bb1845211fb76",
+      "revisionId": null
+    },
+    {
       "url": "https://hbww.org.cn/zgzb/p/4695.html",
       "title": "湖北省博物馆 · 曾侯乙编钟",
       "retrievedAt": "2026-11-02T17:52:33.843645+00:00",
@@ -4009,6 +4283,7 @@
       "url": "https://hd.housedivided.dickinson.edu/node/34893",
       "title": "狄金森学院 · Tsar Alexander II signs the legislation ending serfdom",
       "retrievedAt": "2026-10-23T06:50:31.888034+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:43.914023+00:00",
       "sha256": "473825dff09166b35fb5e4819abaa2228ffd2bb0772fc15a4fc0f8e14948209f",
       "revisionId": null
     },
@@ -4020,10 +4295,16 @@
       "revisionId": null
     },
     {
+      "url": "https://heritage.bnf.fr/france-ameriques/dette-lindependance-dhaiti-lesclave-comme-unite-compte-1794-1922",
+      "title": "法国国家图书馆 · La dette de l’indépendance d’Haïti",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-13T16:21:34.219089+00:00"
+    },
+    {
       "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
       "title": "UK Parliament · The Transatlantic Slave Trade",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-25T16:46:35.649972+00:00"
+      "attemptedAt": "2026-11-18T17:36:46.903752+00:00"
     },
     {
       "url": "https://history.rcp.ac.uk/timeline",
@@ -4057,6 +4338,41 @@
       "title": "U.S. Department of State · FRUS 1878 · The Treaty of Berlin",
       "retrievedAt": "2026-10-25T16:46:51.166478+00:00",
       "sha256": "897dea6f31f5bca7999bf5e0fc3b8d6fc20403ca8992bedb3ac1b64d331d3d36",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv05/d32",
+      "title": "巴黎和会会议记录 · 1919年4月30日关于胶州湾和山东的交涉",
+      "retrievedAt": "2026-11-18T16:19:32.686801+00:00",
+      "sha256": "3eab036dcd8dfef5d3f1daa7defe445d7843ac333634816829582c55a893c015",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv06/d75",
+      "title": "巴黎和会记录，1919年6月下旬，中国代表提出保留山东条款",
+      "retrievedAt": "2026-11-18T17:30:05.509699+00:00",
+      "sha256": "932e9ebfadcddc733bcefbba7e9c76e7deafd961dfb513aa598a6101836cc7c4",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch13subch8",
+      "title": "《凡尔赛条约》山东条款第156—158条及1922年交接记录",
+      "retrievedAt": "2026-11-18T17:30:05.283379+00:00",
+      "sha256": "9a590c97896b7efd9dae9010294d0134614132f851bd11d6f3dceb1a418e32b7",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1922v01/d88",
+      "title": "华盛顿会议记录，1922年山东交涉及胶济铁路赎回条件",
+      "retrievedAt": "2026-11-18T17:30:08.456094+00:00",
+      "sha256": "a7bd951c0bfdd2ffc9b14743e3dbc9015eb0380cb8c8075dc6be78c4a5fb46c6",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
+      "title": "美国国务院历史办公室 · The United States and the Haitian Revolution, 1791–1804",
+      "retrievedAt": "2026-11-13T16:19:40.786230+00:00",
+      "sha256": "a62bf28babc321abd5274353bc2571594068773cb4a753e0fdab08eb92ca65b1",
       "revisionId": null
     },
     {
@@ -4139,6 +4455,7 @@
       "url": "https://hklit.lib.cuhk.edu.hk/wp-content/uploads/2020/10/litwalkd.pdf",
       "title": "香港中文大学图书馆 · 文学散步：鲁迅",
       "retrievedAt": "2026-10-25T17:23:09.071691+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:44.054984+00:00",
       "sha256": "40b081adcf46b00d89c0153803fffd612f1e29b9809889c3ad955280b8a78acf",
       "revisionId": null
     },
@@ -4160,6 +4477,7 @@
       "url": "https://home.nps.gov/articles/archeology-of-chinese-laborers-connected-country.htm",
       "title": "美国国家公园管理局 · The Archeology of Chinese Laborers Who Connected the Country",
       "retrievedAt": "2026-10-23T06:50:54.367606+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:44.078789+00:00",
       "sha256": "ea5404b35f5b42c34908f5ba1fd9698fd579cd1f84e28acba3fe0a29f4f84922",
       "revisionId": null
     },
@@ -4174,6 +4492,7 @@
       "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=116",
       "title": "中央研究院胡适纪念馆 · 传略（著述年表）",
       "retrievedAt": "2026-10-25T17:33:10.607868+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:44.101750+00:00",
       "sha256": "c3c810d3ed165201b868f70f431b5b45d7343c7857b1c1b6e1e9f83cd2a1f981",
       "revisionId": null
     },
@@ -4181,6 +4500,7 @@
       "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=94",
       "title": "中央研究院胡适纪念馆 · 整理国故运动的旗手",
       "retrievedAt": "2026-10-25T17:33:11.217447+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:44.124766+00:00",
       "sha256": "fe694e628482c7d288acd93c3af8b0a1b1784ff63f8fd95c9dd5965a5eb98ed4",
       "revisionId": null
     },
@@ -4193,10 +4513,22 @@
       "revisionId": null
     },
     {
+      "url": "https://idp.bl.uk/blog/the-diamond-sutra-on-display-text-panel-6-with-colophon/",
+      "title": "英国图书馆国际敦煌项目 · 《金刚经》卷末题记（王玠施印缘起与纪年）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-18T16:19:30.474107+00:00"
+    },
+    {
+      "url": "https://idp.bl.uk/collection/51FDAEAFB4A24E2E9981692A98130BC8/",
+      "title": "英国图书馆国际敦煌项目 · Or.8210/P.2《金刚经》（尺寸、材质与发现地点）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-18T16:19:33.004698+00:00"
+    },
+    {
       "url": "https://idp.bl.uk/discover/learning/buddhism-on-the-silk-roads/articles/buddhism-on-the-ground/buddhist-texts-the-diamond-sutra/",
       "title": "英国图书馆国际敦煌项目 · Buddhist texts: The Diamond Sutra（868年题记、王玠与印制）",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-01T15:20:15.432153+00:00"
+      "attemptedAt": "2026-11-18T17:36:46.640190+00:00"
     },
     {
       "url": "https://idp.bl.uk/references/DiamondSutra/",
@@ -4254,6 +4586,13 @@
       "revisionId": null
     },
     {
+      "url": "https://img.dpm.org.cn/Uploads/file/2025/06/19/1750318605QEZMgXdaY260.pdf",
+      "title": "陈靖云、肖达顺 · 《“南海Ⅰ号”沉船遗址形成过程的考古学观察》",
+      "retrievedAt": "2026-11-18T17:30:08.332147+00:00",
+      "sha256": "0bb260f6342e17c52e65a37415c98cb6c108ff18c29f5bcbe3647f60e7cc90a3",
+      "revisionId": null
+    },
+    {
       "url": "https://inc.in/brief-history-of-congress/1885-1895",
       "title": "印度国民大会党 · 1885—1895年创立时期",
       "retrievedAt": "2026-10-23T06:45:52.665829+00:00",
@@ -4268,6 +4607,13 @@
       "revisionId": null
     },
     {
+      "url": "https://iris.who.int/bitstream/handle/10665/261900/PMC2395794.pdf",
+      "title": "世界卫生组织公报 · Deria等记录索马里最后一例地方性天花的调查，1980，58卷，279—283页",
+      "retrievedAt": "2026-11-18T16:19:42.090716+00:00",
+      "sha256": "a859cc83d11508435744f1ce4fb6f39396083c22e60bea3f872887eb2dd1863f",
+      "revisionId": null
+    },
+    {
       "url": "https://islamic-art.smb.museum/en/story/hauptstadt-weltreich?lang=en",
       "title": "柏林伊斯兰艺术博物馆 · 帝国中心的变迁",
       "retrievedAt": "2026-11-02T15:55:34.963345+00:00",
@@ -4278,6 +4624,7 @@
       "url": "https://iupress.org/9780253215277/the-peony-pavilion-second-edition/",
       "title": "Indiana University Press · The Peony Pavilion, Second Edition",
       "retrievedAt": "2026-10-25T17:42:56.453197+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.667860+00:00",
       "sha256": "fcf2877a451c19d176725e9b4d872bdf3c885692a00d336cc513ba6c29e8e2b9",
       "revisionId": null
     },
@@ -4405,6 +4752,7 @@
       "url": "https://mcp.anu.edu.au/N/SM_bib.html",
       "title": "澳大利亚国立大学 Malay Concordance Project · Sejarah Melayu bibliography",
       "retrievedAt": "2026-11-02T15:55:37.611234+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.691387+00:00",
       "sha256": "01de322688149d29b9aa3c7df8725a56e7344c658b40d0cdcf95f10b90490d9f",
       "revisionId": null
     },
@@ -4419,6 +4767,7 @@
       "url": "https://media.unesco.org/sites/default/files/webform/mow001/malaysia_sejarah_melayu.pdf",
       "title": "UNESCO 世界记忆 · Sejarah Melayu申报资料",
       "retrievedAt": "2026-11-02T15:55:39.548262+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.714740+00:00",
       "sha256": "34e7bcb5b26f3bb74dc8158dbb25f05c2ab4d357f3146819046d55ffca411b29",
       "revisionId": null
     },
@@ -4426,6 +4775,7 @@
       "url": "https://media.unesco.org/sites/default/files/webform/mow001/turkey_compendium_eng.pdf",
       "title": "UNESCO 世界记忆 · Diwan Lughat al-Turk申报表",
       "retrievedAt": "2026-11-02T15:55:42.193140+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.738214+00:00",
       "sha256": "15042ffb8e35a28711defcf7c8c69029bd3da4174441cad23520d93b383ca0f8",
       "revisionId": null
     },
@@ -4437,10 +4787,31 @@
       "revisionId": null
     },
     {
+      "url": "https://mjp.univ-perp.fr/constit/ht1801.htm",
+      "title": "法国佩皮尼昂大学法律文库 · 圣多明各1801年宪法全文，第1、3、14—16、28条",
+      "retrievedAt": "2026-11-18T17:42:08.573313+00:00",
+      "sha256": "b9c28690778bd8d28ac04744bd5710d218ad38dc8e7e778b20b6a8431f143a84",
+      "revisionId": null
+    },
+    {
       "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
       "title": "International Mozarteum Foundation · Wolfgang Amadé Mozart",
       "retrievedAt": "2026-10-25T17:38:01.246791+00:00",
       "sha256": "6a6d4154a24657fc60f31acbf52d77d8e9e11a0a196076861f71b65360e525fd",
+      "revisionId": null
+    },
+    {
+      "url": "https://msrmuseum.com/News/Detailed/59",
+      "title": "广东海上丝绸之路博物馆 · “南海Ⅰ号”沉船考古发掘与保护",
+      "retrievedAt": "2026-11-18T17:30:06.079362+00:00",
+      "sha256": "c473c83cb32da0acafba50dab01533e4b415f786c72b7465b1c1d02101b94763",
+      "revisionId": null
+    },
+    {
+      "url": "https://museeprotestant.org/en/notice/martin-luther-1483-1546/",
+      "title": "Musée protestant · Martin Luther (1483–1546)",
+      "retrievedAt": "2026-11-13T16:19:47.636830+00:00",
+      "sha256": "4f515b369e72376baf7ce0deceaf58db13b7506310d7623f0e24303f72590098",
       "revisionId": null
     },
     {
@@ -4482,6 +4853,7 @@
       "url": "https://news.pku.edu.cn/info/1651/17081.htm",
       "title": "北京大学新闻网 · 中华人民共和国大事记",
       "retrievedAt": "2026-10-25T17:33:11.234356+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.928036+00:00",
       "sha256": "7978b8c68e4bd995f0a91564b6747c368add289c2736fdb035c450ce8dcc94d2",
       "revisionId": null
     },
@@ -4496,6 +4868,7 @@
       "url": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
       "title": "济宁市自然资源和规划局 · 轻舟已过万重山",
       "retrievedAt": "2026-11-04T16:12:43.609222+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:46.951077+00:00",
       "sha256": "1e9e03ed6393cbf6a8af290001fd2f9e40cc914c286910a64106292f2e32ebed",
       "revisionId": null
     },
@@ -4521,7 +4894,7 @@
       "url": "https://nzhistory.govt.nz/womens-suffrage-day",
       "title": "新西兰文化与遗产部 · Women win the right to vote",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-22T08:49:46.449407+00:00"
+      "attemptedAt": "2026-11-18T17:36:49.526091+00:00"
     },
     {
       "url": "https://oikoumene.org/about-the-wcc/organizational-structure/assembly",
@@ -4540,7 +4913,14 @@
       "url": "https://old.maa.org/node/1409908",
       "title": "美国数学协会 Convergence · Latin Manuscript of Al-Khwarizmi’s Algebra",
       "error": "HTTP Error 521: <none>",
-      "attemptedAt": "2026-10-25T16:50:53.875994+00:00"
+      "attemptedAt": "2026-11-18T17:36:52.730854+00:00"
+    },
+    {
+      "url": "https://oldnews.pku.edu.cn/wyyd/dslt/c27ffcd01d69482bbd40e9b5c3b05648.htm",
+      "title": "章永乐 · 重审辛亥革命中的南北议和（北京大学）",
+      "retrievedAt": "2026-11-13T16:19:47.914721+00:00",
+      "sha256": "d0a99bdbb034b91ae2397cbbfbb315280c5c21b1820d40ceb2f1e3939490a8f7",
+      "revisionId": null
     },
     {
       "url": "https://onlinelibrary.wiley.com/doi/10.1111/pbr.13134",
@@ -4568,7 +4948,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-3-the-kingdoms-of-aksum-and-himyar",
       "title": "OpenStax · World History 1 · 10-3-the-kingdoms-of-aksum-and-himyar",
       "retrievedAt": "2026-10-22T08:05:49.198541+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:39.894145+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.786454+00:00",
       "sha256": "02137a80ea0f0ce9a1ccdeb713fd5ecbbfab7d2a246d0d696a61c5e7b70c99d7",
       "revisionId": null
     },
@@ -4576,6 +4956,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/10-4-the-margins-of-empire",
       "title": "OpenStax · The Margins of Empire：贵霜",
       "retrievedAt": "2026-10-23T06:44:56.823919+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.811190+00:00",
       "sha256": "19f445fb1ae08409ff9bee9ddb0b919be5e1048f1d4cc2c596761d94083d4d28",
       "revisionId": null
     },
@@ -4590,7 +4971,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
       "title": "OpenStax · World History 1 · 11-2-the-arab-islamic-conquests-and-the-first-islamic-states",
       "retrievedAt": "2026-10-22T08:05:49.377241+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:09.205745+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.834825+00:00",
       "sha256": "46e9364a810a8bbe06cdf93df75e4d20a96289e8c3c04fab254710b990b96575",
       "revisionId": null
     },
@@ -4632,10 +5013,18 @@
       "revisionId": null
     },
     {
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-2-chinggis-khan-and-the-early-mongol-empire",
+      "title": "OpenStax · World History 1 · 14-2-chinggis-khan-and-the-early-mongol-empire",
+      "retrievedAt": "2026-10-22T08:05:52.852265+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.860460+00:00",
+      "sha256": "2cad2ccb65068983de30ac8de3c280f95705394bd5029591ee4f9efab8b01eb2",
+      "revisionId": null
+    },
+    {
       "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
       "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
       "retrievedAt": "2026-10-22T08:05:52.014002+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:18.611071+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.883737+00:00",
       "sha256": "24644cc3a7b181476af9248fff95522aba5060d6ca5c020c6a00544ee6f9b220",
       "revisionId": null
     },
@@ -4643,7 +5032,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa",
       "title": "OpenStax · World History 1 · 15-2-medieval-sub-saharan-africa",
       "retrievedAt": "2026-10-22T08:05:52.537465+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:39.907904+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.907087+00:00",
       "sha256": "11d012e0150bbd7e2984b603d2ada68cc0120f28039324356fdd46823c1ff93b",
       "revisionId": null
     },
@@ -4651,6 +5040,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/16-3-the-black-death-from-east-to-west",
       "title": "OpenStax · World History 1 · 16-3-the-black-death-from-east-to-west",
       "retrievedAt": "2026-10-22T08:05:54.608965+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.930653+00:00",
       "sha256": "3de42ed578732cd3987fcd2060cf956f5425fef9a36f6a1d539e5e741e0d8d96",
       "revisionId": null
     },
@@ -4674,7 +5064,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/4-1-from-old-babylon-to-the-medes",
       "title": "OpenStax · World History 1 · 4-1-from-old-babylon-to-the-medes",
       "retrievedAt": "2026-10-22T08:05:41.115833+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.889864+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.955780+00:00",
       "sha256": "e0061437bcfae2e499b23924f36a98ce35657bdec43035da0255997f18a1f84a",
       "revisionId": null
     },
@@ -4698,7 +5088,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/5-3-korea-japan-and-southeast-asia",
       "title": "OpenStax · World History 1 · 5-3-korea-japan-and-southeast-asia",
       "retrievedAt": "2026-10-22T08:05:38.811963+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:31.544724+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:49.979732+00:00",
       "sha256": "fde0869729f6cd1c4bddbb0cfd33c1d89d5d59f152483cd3b1de2cb00febf334",
       "revisionId": null
     },
@@ -4706,7 +5096,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/5-4-vedic-india-to-the-fall-of-the-maurya-empire",
       "title": "OpenStax · World History 1 · 5-4-vedic-india-to-the-fall-of-the-maurya-empire",
       "retrievedAt": "2026-10-22T08:05:43.591525+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:28.139180+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.004344+00:00",
       "sha256": "76d00dc664fc2ac129d73f028564db6dec7e18c18885c235ff560fc03f60c6b1",
       "revisionId": null
     },
@@ -4759,6 +5149,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/8-2-early-cultures-and-civilizations-in-the-americas",
       "title": "OpenStax · World History 1 · 8-2-early-cultures-and-civilizations-in-the-americas",
       "retrievedAt": "2026-10-22T08:05:45.567139+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.026889+00:00",
       "sha256": "f5e398e3ee8c6c1e231a3cda63cbf104c2ec1d8116833889534e218fd5f85be8",
       "revisionId": null
     },
@@ -4766,7 +5157,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/8-3-the-age-of-empires-in-the-americas",
       "title": "OpenStax · World History 1 · 8-3-the-age-of-empires-in-the-americas",
       "retrievedAt": "2026-10-22T08:05:45.697377+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:43.435860+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.051376+00:00",
       "sha256": "d099e8c1e89fe64dea2843e49f4072dbbfc02d18687f08a1801fccb36bef3702",
       "revisionId": null
     },
@@ -4774,6 +5165,7 @@
       "url": "https://openstax.org/books/world-history-volume-1/pages/9-3-the-kingdom-of-kush",
       "title": "OpenStax · World History 1 · 9-3-the-kingdom-of-kush",
       "retrievedAt": "2026-10-22T08:05:47.945971+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.075200+00:00",
       "sha256": "c6d5df8b73bf7774b91f77e93ab1e28e4d0e0dd984ac940275051bc54b722f17",
       "revisionId": null
     },
@@ -4781,6 +5173,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/10-5-regulation-reform-and-revolutionary-ideologies",
       "title": "OpenStax · World History 2 · 10-5-regulation-reform-and-revolutionary-ideologies",
       "retrievedAt": "2026-10-22T08:06:03.037186+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.100300+00:00",
       "sha256": "082c2a373d7b84a8fa269eebd69193eb3eeef9816ac94b918375a0ae5f2fef11",
       "revisionId": null
     },
@@ -4824,7 +5217,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-1-india-and-international-connections",
       "title": "OpenStax · World History 2 · 2-1-india-and-international-connections",
       "retrievedAt": "2026-10-22T08:05:54.797338+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:31.533548+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.123959+00:00",
       "sha256": "74726a8d58d1800f6e9eaf1823803f8bd8cf4643d88a8461f226f2c735c9c61c",
       "revisionId": null
     },
@@ -4832,6 +5225,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/2-2-the-malacca-sultanate",
       "title": "OpenStax · World History 2 · 2-2-the-malacca-sultanate",
       "retrievedAt": "2026-10-22T08:05:55.135755+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.147443+00:00",
       "sha256": "1fd8ec9cabc98e23d6d8dd15d84b91a9b49cda256a07d110d13f492edd85fa8b",
       "revisionId": null
     },
@@ -4847,7 +5241,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire",
       "title": "OpenStax · World History 2 · 3-2-the-songhai-empire",
       "retrievedAt": "2026-10-22T08:05:56.439112+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:39.919381+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.170618+00:00",
       "sha256": "d0690498fb78a26e37c973575ef54159ed0bb0c8d3151e84a3c4e515ec887edd",
       "revisionId": null
     },
@@ -4855,6 +5249,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/3-introduction",
       "title": "OpenStax · Early Modern Africa 年代图",
       "retrievedAt": "2026-10-23T06:46:34.383613+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.193829+00:00",
       "sha256": "596e5ae7889fa84b5d6ae4a603375f40eeaca629e7217e2f562c4d633bda1d4f",
       "revisionId": null
     },
@@ -4878,7 +5273,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
       "title": "OpenStax · World History 2 · 5-1-the-protestant-reformation",
       "retrievedAt": "2026-10-22T08:05:57.399226+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.902393+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.217035+00:00",
       "sha256": "6e6cde8957511b48af689203e3b769dad61d87a1749350fdde67e949835a7f2e",
       "revisionId": null
     },
@@ -4886,7 +5281,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
       "title": "OpenStax · World History 2 · 5-2-crossing-the-atlantic",
       "retrievedAt": "2026-10-22T08:05:56.996672+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.915253+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.240765+00:00",
       "sha256": "6967fa7276c2f82d2fb79493b9cbe216a5ed08452e061a0938071dddf66386db",
       "revisionId": null
     },
@@ -4901,6 +5296,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/6-1-european-colonization-in-the-americas",
       "title": "OpenStax · World History 2 · 6-1-european-colonization-in-the-americas",
       "retrievedAt": "2026-10-22T08:05:57.923063+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.264974+00:00",
       "sha256": "ef4a9a4280538b614c341a7b592925c510ec8030df0b5c5a434f1dce26fb158d",
       "revisionId": null
     },
@@ -4915,7 +5311,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/6-3-capitalism-and-the-first-industrial-revolution",
       "title": "OpenStax · World History 2 · 6-3-capitalism-and-the-first-industrial-revolution",
       "retrievedAt": "2026-10-22T08:05:58.447572+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.926960+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.290606+00:00",
       "sha256": "3741e23fbd8dc089a28c7bd3778221f74819fc770621f60194b58f1895840b4b",
       "revisionId": null
     },
@@ -4930,7 +5326,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/7-3-revolutions-america-france-and-haiti",
       "title": "OpenStax · World History 2 · 7-3-revolutions-america-france-and-haiti",
       "retrievedAt": "2026-10-22T08:05:58.921542+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.938489+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.313851+00:00",
       "sha256": "3001926349a47ab24bea80265ead8670a248d1da8b47ec711f0f9a6577dbfbbc",
       "revisionId": null
     },
@@ -4953,6 +5349,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/8-4-portuguese-south-america",
       "title": "OpenStax · World History 2 · 8-4-portuguese-south-america",
       "retrievedAt": "2026-10-22T08:06:00.927539+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.337640+00:00",
       "sha256": "b626e6ef200794fa47351cbdb3fbf9f49b73e3fab9cd0d0e5d8c7fbfb7640870",
       "revisionId": null
     },
@@ -4960,7 +5357,7 @@
       "url": "https://openstax.org/books/world-history-volume-2/pages/9-1-the-second-industrial-revolution",
       "title": "OpenStax · World History 2 · 9-1-the-second-industrial-revolution",
       "retrievedAt": "2026-10-22T08:06:01.436623+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:50:29.939644+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.361529+00:00",
       "sha256": "1443c443c9b2eb5705dd8da67e1c9e343c8e33cc7bbc819887b3c16e3daa3d7e",
       "revisionId": null
     },
@@ -5557,6 +5954,7 @@
       "url": "https://plato.stanford.edu/entries/wollstonecraft/",
       "title": "Stanford Encyclopedia of Philosophy · Mary Wollstonecraft",
       "retrievedAt": "2026-10-25T16:51:34.370752+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.384950+00:00",
       "sha256": "199241529131be87b35c3758b485d8a81f0292209e112b37433b2d9d51657ba8",
       "revisionId": null
     },
@@ -5585,6 +5983,7 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4291938/",
       "title": "Singapore Medical Journal · Dr Wu Lien-teh: modernising post-1911 China’s public health service",
       "retrievedAt": "2026-11-02T15:55:49.880121+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.407606+00:00",
       "sha256": "a1df3c0e9993f8e89a3731e6edef0afd73f41f7611c9c3523a45c83e7a506003",
       "revisionId": null
     },
@@ -5592,6 +5991,7 @@
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6074172/",
       "title": "Annals of Saudi Medicine · Ibn Al-Haytham: Father of Modern Optics",
       "retrievedAt": "2026-10-25T16:51:35.773757+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.431114+00:00",
       "sha256": "b6d57e27f0940bfd38d1ca19f52d132bf7f2b644085b2f3dc5eb9682f2434954",
       "revisionId": null
     },
@@ -5606,6 +6006,7 @@
       "url": "https://press.hnu.edu.cn/info/1133/4271.htm",
       "title": "湖南大学出版社 · 岳麓书院史",
       "retrievedAt": "2026-10-25T16:51:35.869953+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:50.432436+00:00",
       "sha256": "379d1efb0ba1300a1eba2dd9f514397a49a0676ab5de6ccb1a1b0bdbf56f66fe",
       "revisionId": null
     },
@@ -5624,10 +6025,17 @@
       "revisionId": null
     },
     {
+      "url": "https://qsyj.ruc.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2948",
+      "title": "高龙 · 川绅路事主张分歧与四川保路运动的演变",
+      "retrievedAt": "2026-11-18T17:36:52.613378+00:00",
+      "sha256": "5b03cdd39e45494f30686138230da11969d9679d10780d568accd433cc6d88bb",
+      "revisionId": null
+    },
+    {
       "url": "https://repositori.kemendikdasmen.go.id/9924/",
       "title": "印度尼西亚教育文化部文献库 · Nagarakertagama dan Trowulan",
-      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
-      "attemptedAt": "2026-11-02T15:57:26.989830+00:00"
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "attemptedAt": "2026-11-18T17:37:24.651224+00:00"
     },
     {
       "url": "https://research.un.org/en/docs/uncharter/intro",
@@ -5640,7 +6048,7 @@
       "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8265/CBP-8265.pdf",
       "title": "House of Commons Library · The public finances: a historical overview",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-25T16:46:39.303688+00:00"
+      "attemptedAt": "2026-11-18T17:36:56.302781+00:00"
     },
     {
       "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Roman_Art_A_Resource_for_Educators.pdf",
@@ -5661,6 +6069,13 @@
       "title": "英国皇家军械博物馆 · The Hundred Years’ War",
       "retrievedAt": "2026-10-23T06:50:15.373524+00:00",
       "sha256": "0cf7635db47c1fa32b5b67a945f85c245b46b293386d8376bcbc3c25db2b4ecb",
+      "revisionId": null
+    },
+    {
+      "url": "https://royalporcelaincollection.skd.museum/catalogue/1/text/122",
+      "title": "德累斯顿国家艺术收藏 · 中国瓷器生产与贸易",
+      "retrievedAt": "2026-11-13T17:47:26.544562+00:00",
+      "sha256": "3197645538db36269d2ccf5303bc4d209fdc4cd34d5939ef6385042660225916",
       "revisionId": null
     },
     {
@@ -5688,6 +6103,7 @@
       "url": "https://searcharchives.bl.uk/catalog/032-003720262",
       "title": "British Library · Brahmasphutasiddhanta, IO SAN 2529d",
       "retrievedAt": "2026-10-25T17:15:55.684715+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.760847+00:00",
       "sha256": "75009c6dfa9a8e8838e4ffd2f14edcc6afb12e6e82d202b26354ef805785d076",
       "revisionId": null
     },
@@ -5702,6 +6118,7 @@
       "url": "https://searchlibrary.ohchr.org/record/7990/files/7990.pdf",
       "title": "OHCHR · Convention on the Elimination of All Forms of Discrimination against Women",
       "retrievedAt": "2026-10-25T17:23:54.431703+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.812387+00:00",
       "sha256": "e2e42f99db62878fb29bd72576cc3dda21310a387a08556337ee82d995a526b0",
       "revisionId": null
     },
@@ -5764,6 +6181,12 @@
       "attemptedAt": "2026-11-01T15:20:16.546684+00:00"
     },
     {
+      "url": "https://smarthistory.org/chinese-porcelain-production-and-export/",
+      "title": "英国博物馆 / Smarthistory · Chinese porcelain: production and export（胎釉、生产与外销）",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-13T17:47:24.763097+00:00"
+    },
+    {
       "url": "https://smarthistory.org/giant-buddha-leshan/",
       "title": "UNESCO / Smarthistory · Giant Buddha of Leshan",
       "error": "HTTP Error 403: Forbidden",
@@ -5773,6 +6196,7 @@
       "url": "https://soundingchina.fas.harvard.edu/chinaobj6.html",
       "title": "Harvard University · Sounding China: Score of Peony Pavilion",
       "retrievedAt": "2026-10-25T17:15:30.165843+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.835907+00:00",
       "sha256": "656db7a8cbe1e6345218fb14b0bbf120eb0abf68255d1d545964be5784eeb274",
       "revisionId": null
     },
@@ -5827,6 +6251,7 @@
       "url": "https://tombouctoumanuscripts.uct.ac.za/overview/timbuktus-history",
       "title": "开普敦大学手稿研究项目 · Timbuktu’s History",
       "retrievedAt": "2026-10-23T06:46:50.946708+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.859993+00:00",
       "sha256": "ec98d079ec1ef4f72fea0c06c51673c932ee829ccdd11ce2fa02a2fe159ebbff",
       "revisionId": null
     },
@@ -5848,6 +6273,7 @@
       "url": "https://ui.edu.ng/content/about-us",
       "title": "伊巴丹大学 · About Us",
       "retrievedAt": "2026-11-02T15:55:54.526043+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.883971+00:00",
       "sha256": "64301f5de94d63fc1a8779cd4e652b33ee26b590416d46ed148226876c03c50c",
       "revisionId": null
     },
@@ -5855,6 +6281,7 @@
       "url": "https://ui.edu.ng/sites/default/files/2018%20University%20Calendar%2023%20May%2018.pdf",
       "title": "伊巴丹大学 · University Calendar · History of the University",
       "retrievedAt": "2026-11-02T15:56:26.493122+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.911735+00:00",
       "sha256": "8f9daeba4c4dc62142d758d8d8807c8fcb6ec8edd79411e61fa4ea6eabbd5f93",
       "revisionId": null
     },
@@ -5889,6 +6316,7 @@
       "url": "https://whc.unesco.org/document/104639",
       "title": "ICOMOS–IAU · Astronomical Heritage：Ulugh Beg’s Observatory",
       "retrievedAt": "2026-10-23T06:49:35.306409+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:55.980593+00:00",
       "sha256": "177b36fd35fb3b11761816f15f5594b68d7634f74a5d8bb5525101cd91dc4a19",
       "revisionId": null
     },
@@ -5903,7 +6331,7 @@
       "url": "https://whc.unesco.org/en/list/1001/",
       "title": "UNESCO · 青城山与都江堰",
       "retrievedAt": "2026-10-06T12:09:05.879673+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:31:58.949994+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.004960+00:00",
       "sha256": "58536043f8226c69970e9eb60283e645e497f78cf6d1e3d365adce9beb37e202",
       "revisionId": null
     },
@@ -5918,6 +6346,7 @@
       "url": "https://whc.unesco.org/en/list/1081/",
       "title": "UNESCO · 鄂尔浑河谷文化景观",
       "retrievedAt": "2026-10-23T06:44:56.149871+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.031532+00:00",
       "sha256": "20a8853291a4535ee4ea255ed61a39e53085e41d12b5d8062ced73f6b1f5c149",
       "revisionId": null
     },
@@ -5925,6 +6354,7 @@
       "url": "https://whc.unesco.org/en/list/1114/",
       "title": "UNESCO · 殷墟",
       "retrievedAt": "2026-10-06T17:35:46.612603+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.056502+00:00",
       "sha256": "2cc2de8f2eb6c5443edeafad093b1680dbf37be9561c67c26d7947ba6b0bf537",
       "revisionId": null
     },
@@ -5960,7 +6390,7 @@
       "url": "https://whc.unesco.org/en/list/1269/",
       "title": "UNESCO · 卡拉尔—苏佩圣城",
       "retrievedAt": "2026-10-07T06:33:47.593186+00:00",
-      "lastCacheCheckAt": "2026-10-07T06:45:13.920697+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.081682+00:00",
       "sha256": "1c2d7c08ae915733755d3497a1be05e085b4ff5931c0fa9bb67de81c677ac6af",
       "revisionId": null
     },
@@ -5982,7 +6412,7 @@
       "url": "https://whc.unesco.org/en/list/1334/",
       "title": "UNESCO · 杭州西湖文化景观",
       "retrievedAt": "2026-10-06T12:09:56.494576+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.921574+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.105262+00:00",
       "sha256": "7bc160668c388f702673d1757402969beed62b50410ca21df306a9fee64ba78e",
       "revisionId": null
     },
@@ -5996,6 +6426,7 @@
       "url": "https://whc.unesco.org/en/list/138/",
       "title": "UNESCO · 摩亨佐达罗考古遗址",
       "retrievedAt": "2026-10-06T18:33:46.119648+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.129459+00:00",
       "sha256": "534e6424d812c6e18e858276ee3eaab76c55ca0eabc35033e7ffae3314314867",
       "revisionId": null
     },
@@ -6010,6 +6441,7 @@
       "url": "https://whc.unesco.org/en/list/144/",
       "title": "UNESCO · 基尔瓦基斯瓦尼与松戈马拉遗址",
       "retrievedAt": "2026-10-23T06:46:36.588022+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.154349+00:00",
       "sha256": "416caa67d57b7e9596354007e286074bf72a9728cebb751a07430c2d6440d14f",
       "revisionId": null
     },
@@ -6017,7 +6449,7 @@
       "url": "https://whc.unesco.org/en/list/1442/",
       "title": "UNESCO · 长安—天山廊道",
       "retrievedAt": "2026-10-06T12:09:08.598625+00:00",
-      "lastCacheCheckAt": "2026-11-06T03:20:40.465839+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.178037+00:00",
       "sha256": "9b7ce1bade577e857a5d8b16d12b7fb1300d3a923c1a7dc1ee8201a49f784398",
       "revisionId": null
     },
@@ -6047,6 +6479,7 @@
       "url": "https://whc.unesco.org/en/list/1502/",
       "title": "UNESCO · Archaeological Site of Nalanda Mahavihara",
       "retrievedAt": "2026-10-25T16:51:37.136822+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.203226+00:00",
       "sha256": "0d099065b8a20a01c76187b3a597e0496fac4562fd884519ae57d34eedc0e6db",
       "revisionId": null
     },
@@ -6054,7 +6487,7 @@
       "url": "https://whc.unesco.org/en/list/1561/",
       "title": "UNESCO · 宋元中国的世界海洋商贸中心泉州",
       "retrievedAt": "2026-10-06T15:43:24.958303+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.940329+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.227603+00:00",
       "sha256": "7b2ad6bf824c2a81641159d2e5fa8bf514a7e3b7f8cb6e65bf65bd044bb70cf4",
       "revisionId": null
     },
@@ -6069,6 +6502,7 @@
       "url": "https://whc.unesco.org/en/list/1588/",
       "title": "UNESCO · 蒲甘",
       "retrievedAt": "2026-10-23T06:46:20.908894+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.251817+00:00",
       "sha256": "796e1bdffc3b24c4b74e6c4b746c5772d5e9e326b0bf4e341d1adad02a99e4b0",
       "revisionId": null
     },
@@ -6106,6 +6540,13 @@
       "title": "UNESCO · 佛罗伦萨历史中心",
       "retrievedAt": "2026-11-02T17:21:55.256090+00:00",
       "sha256": "614832b3f5ebfb16e71d654e33d74f7b1bd9fc2175ed0f38e224f0f26a04db33",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1765/",
+      "title": "UNESCO · Jingdezhen Handicraft Porcelain Industry Sites（原料、工序及水运体系）",
+      "retrievedAt": "2026-11-13T17:47:26.084881+00:00",
+      "sha256": "8f28b32794ecd22b7630f91bebf4653a32964dc0b2d8d64c701a2108dc1e3b9d",
       "revisionId": null
     },
     {
@@ -6182,6 +6623,7 @@
       "url": "https://whc.unesco.org/en/list/274",
       "title": "UNESCO · Historic Sanctuary of Machu Picchu",
       "retrievedAt": "2026-10-23T06:50:51.116919+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.279172+00:00",
       "sha256": "15e86e45613a831afc5c129f19b777faf5ed28a9623230a2b69bc83401ee3462",
       "revisionId": null
     },
@@ -6267,6 +6709,7 @@
       "url": "https://whc.unesco.org/en/list/576/",
       "title": "UNESCO · 阿瑜陀耶古城",
       "retrievedAt": "2026-10-23T06:46:22.401546+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.304093+00:00",
       "sha256": "8a871132ac0d6a564fd44b3f97f3c96984e32da5eac7081ec2f16bc23afbe2d8",
       "revisionId": null
     },
@@ -6281,6 +6724,7 @@
       "url": "https://whc.unesco.org/en/list/602/",
       "title": "UNESCO · 布哈拉历史中心",
       "retrievedAt": "2026-10-23T06:44:57.002188+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.328579+00:00",
       "sha256": "fdfdbd5b654c12f2616f0bb39356ba1cf20b1e834ab7011a36f573d72686675c",
       "revisionId": null
     },
@@ -6288,6 +6732,7 @@
       "url": "https://whc.unesco.org/en/list/603/",
       "title": "UNESCO · 撒马尔罕：文化的十字路口",
       "retrievedAt": "2026-10-23T06:45:05.464266+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.328765+00:00",
       "sha256": "772da192636d8451391aa51f4e6ce32c1214e96057909dff3a39647feb8bf304",
       "revisionId": null
     },
@@ -6295,7 +6740,7 @@
       "url": "https://whc.unesco.org/en/list/668/",
       "title": "UNESCO · 吴哥",
       "retrievedAt": "2026-10-23T06:46:15.362174+00:00",
-      "lastCacheCheckAt": "2026-10-23T06:54:31.555940+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.377268+00:00",
       "sha256": "e8bc0601ffddd8e04e149aa03c33a5de2b1af6485fedbb4c9ad072c2488a5eb3",
       "revisionId": null
     },
@@ -6393,6 +6838,19 @@
       "revisionId": null
     },
     {
+      "url": "https://wp.stu.ca/worldhistory/wp-content/uploads/sites/4/2015/07/Constitution-dHaiti-1801-French.pdf",
+      "title": "圣多明各1801年宪法，法文文本另本",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "attemptedAt": "2026-11-18T17:42:29.668528+00:00"
+    },
+    {
+      "url": "https://wwj.beijing.gov.cn/bjww/362771/362778/364359/",
+      "title": "北京市文物局 · 大运河",
+      "retrievedAt": "2026-11-18T17:36:56.632269+00:00",
+      "sha256": "b301006ee18c19e757b09d9a7a403eeb7945ebdc36637d644886a83d94256d01",
+      "revisionId": null
+    },
+    {
       "url": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523544/index.html",
       "title": "北京市文物局 · 京张铁路南口段至八达岭段",
       "retrievedAt": "2026-11-02T15:56:00.985217+00:00",
@@ -6412,6 +6870,13 @@
       "title": "International Atomic Energy Agency · Chernobyl: Looking Back to Go Forward",
       "retrievedAt": "2026-10-25T17:23:55.389657+00:00",
       "sha256": "73ca324d4b87961f7e751f800dad3bb3e5a687eaa981bee3511d0a502487f716",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.1911museum.cn/view_59.html",
+      "title": "辛亥革命博物院 · 共和之基——辛亥革命历史陈列",
+      "retrievedAt": "2026-11-13T16:19:50.571708+00:00",
+      "sha256": "60c356b85fb01c4bcd6f084024997497140b2fdb5d4ee4b3f515452552c2e63a",
       "revisionId": null
     },
     {
@@ -6451,6 +6916,7 @@
       "url": "https://www.archives.gov/milestone-documents/brown-v-board-of-education",
       "title": "U.S. National Archives · Brown v. Board of Education",
       "retrievedAt": "2026-10-25T17:23:55.407396+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.401462+00:00",
       "sha256": "120371d55f4df2215417b08fb397236c5efc8ab666d292db04270d8a8f2428b9",
       "revisionId": null
     },
@@ -6465,6 +6931,7 @@
       "url": "https://www.archives.gov/milestone-documents/constitution",
       "title": "美国国家档案馆 · Constitution of the United States (1787)",
       "retrievedAt": "2026-10-23T06:50:39.657957+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:36:56.427705+00:00",
       "sha256": "d977283fb996e16995e0fbbeb6e8c9287a8bce3da51124ab22014edd864ca25a",
       "revisionId": null
     },
@@ -6549,7 +7016,7 @@
       "url": "https://www.britannica.com/biography/Abbas-I-shah-of-Persia",
       "title": "大英百科全书 · 阿拔斯一世迁都伊斯法罕",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:41.298496+00:00"
+      "attemptedAt": "2026-11-18T17:36:59.123760+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Abd-al-Malik-Umayyad-caliph",
@@ -6711,7 +7178,7 @@
       "url": "https://www.britannica.com/biography/Ashurbanipal",
       "title": "大英百科全书 · 亚述巴尼拔收集泥板文献",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:36.015625+00:00"
+      "attemptedAt": "2026-11-18T17:37:01.915460+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Aung-San",
@@ -6831,7 +7298,7 @@
       "url": "https://www.britannica.com/biography/Chulalongkorn",
       "title": "大英百科全书 · 暹罗立法完成奴役身份的渐进废除",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:13.351153+00:00"
+      "attemptedAt": "2026-11-18T17:37:01.635313+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Clarice-Lispector",
@@ -6885,7 +7352,7 @@
       "url": "https://www.britannica.com/biography/Enheduanna",
       "title": "大英百科全书 · 恩赫杜安娜与苏美尔赞美诗传统",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:34.568377+00:00"
+      "attemptedAt": "2026-11-18T17:37:04.340881+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Epeli-Hauofa",
@@ -7095,7 +7562,7 @@
       "url": "https://www.britannica.com/biography/Ibn-Khaldun",
       "title": "大英百科全书 · 伊本·赫勒敦写作《绪论》",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:53:43.701654+00:00"
+      "attemptedAt": "2026-11-18T17:37:04.393397+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Ibn-Saud",
@@ -7479,13 +7946,13 @@
       "url": "https://www.britannica.com/biography/Narai",
       "title": "大英百科全书 · 阿瑜陀耶向法国派遣使团",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:13.390527+00:00"
+      "attemptedAt": "2026-11-18T17:37:06.864030+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Nasir-al-Din-al-Tusi",
       "title": "大英百科全书 · 纳西尔丁·图西主持马拉盖天文台",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:40.377263+00:00"
+      "attemptedAt": "2026-11-18T17:37:08.249347+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Natsume-Soseki",
@@ -7779,7 +8246,7 @@
       "url": "https://www.britannica.com/biography/Savitribai-Phule",
       "title": "大英百科全书 · 萨维特丽拜与乔蒂拉奥在浦那办女子学校",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:25.534535+00:00"
+      "attemptedAt": "2026-11-18T17:37:09.301330+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Sei-Shonagon",
@@ -7989,7 +8456,7 @@
       "url": "https://www.britannica.com/biography/Tsuda-Umeko",
       "title": "大英百科全书 · 津田梅子开办女子英学塾",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:08.218219+00:00"
+      "attemptedAt": "2026-11-18T17:37:10.717967+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/Tupac-Amaru-II",
@@ -8115,7 +8582,7 @@
       "url": "https://www.britannica.com/biography/al-Biruni",
       "title": "大英百科全书 · 比鲁尼撰书介绍印度知识与社会",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:39.501284+00:00"
+      "attemptedAt": "2026-11-18T17:36:59.204847+00:00"
     },
     {
       "url": "https://www.britannica.com/biography/al-Farabi",
@@ -8541,13 +9008,13 @@
       "url": "https://www.britannica.com/place/Japan/The-constitution-of-Japan",
       "title": "大英百科全书 · 日本战后宪法生效",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:08.991794+00:00"
+      "attemptedAt": "2026-11-18T17:37:11.778239+00:00"
     },
     {
       "url": "https://www.britannica.com/place/Japan/Women-in-postwar-Japan",
       "title": "大英百科全书 · 日本选举制度改革赋予女性投票权",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:08.555052+00:00"
+      "attemptedAt": "2026-11-18T17:37:13.163771+00:00"
     },
     {
       "url": "https://www.britannica.com/place/Jenne-jeno",
@@ -8589,7 +9056,7 @@
       "url": "https://www.britannica.com/place/Lothal",
       "title": "大英百科全书 · 洛塔尔的珠饰生产与远距离交换",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:19.363494+00:00"
+      "attemptedAt": "2026-11-18T17:37:14.223313+00:00"
     },
     {
       "url": "https://www.britannica.com/place/Madagascar/History",
@@ -8841,7 +9308,7 @@
       "url": "https://www.britannica.com/place/Vietnam/The-later-Le-dynasty",
       "title": "大英百科全书 · 黎朝《国朝刑律》整理法律秩序",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:54:13.730894+00:00"
+      "attemptedAt": "2026-11-18T17:37:15.636286+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/ASEAN",
@@ -8955,13 +9422,13 @@
       "url": "https://www.britannica.com/topic/Constitution-of-1917",
       "title": "大英百科全书 · 墨西哥革命宪法纳入土地与劳动权利",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:53:56.424097+00:00"
+      "attemptedAt": "2026-11-18T17:37:16.652008+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Constitution-of-India",
       "title": "大英百科全书 · 印度宪法生效并建立共和国",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:26.280601+00:00"
+      "attemptedAt": "2026-11-18T17:37:18.061868+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Daedong-law",
@@ -9045,7 +9512,7 @@
       "url": "https://www.britannica.com/topic/Haiti-Constitution-of-1805",
       "title": "大英百科全书 · 海地宪法以独立国家回应奴隶制世界",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:53:56.158769+00:00"
+      "attemptedAt": "2026-11-18T17:37:20.404986+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Heike-monogatari",
@@ -9075,7 +9542,7 @@
       "url": "https://www.britannica.com/topic/Inca-road-system",
       "title": "大英百科全书 · 印加道路与驿站连接多种安第斯地形",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:53:55.034786+00:00"
+      "attemptedAt": "2026-11-18T17:37:20.490459+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Jikji",
@@ -9213,7 +9680,7 @@
       "url": "https://www.britannica.com/topic/Nizamiyyah",
       "title": "大英百科全书 · 巴格达尼扎米亚学院开办",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:21:39.657040+00:00"
+      "attemptedAt": "2026-11-18T17:37:22.836978+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Nok-culture",
@@ -9267,7 +9734,7 @@
       "url": "https://www.britannica.com/topic/Popol-Vuh",
       "title": "大英百科全书 · 基切人的《波波尔·乌》以书写保存起源与历史",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-02T17:53:55.290587+00:00"
+      "attemptedAt": "2026-11-18T17:37:22.967666+00:00"
     },
     {
       "url": "https://www.britannica.com/topic/Qarakhanid-dynasty",
@@ -9594,6 +10061,7 @@
       "url": "https://www.cambridge.org/core/books/abs/world-cities-in-history/baghdad/436F7DC281A07230C18E78D741E172E7",
       "title": "Cambridge University Press · World Cities in History · Baghdad",
       "retrievedAt": "2026-10-25T16:46:12.371331+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:22.861554+00:00",
       "sha256": "c568f98ee62f473d526cfc4fc636e2a8ae778f35fef4f79901b544c1fa9ea7be",
       "revisionId": null
     },
@@ -9609,6 +10077,13 @@
       "title": "剑桥大学出版社 · 英格兰王国的起源",
       "retrievedAt": "2026-10-23T06:54:20.929058+00:00",
       "sha256": "e397a7153b26ce22ca9f790650ba762f6d89ccf29696393784feda45f2135c6f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/revista-de-historia-economica-journal-of-iberian-and-latin-american-economic-history/article/manila-correspondencia-and-the-institutional-underpinnings-of-the-transpacific-silver-trade-in-the-long-eighteenth-century/E47FEA5FE9C9E0B73968B8F2E6581D8D",
+      "title": "Cambridge · The Manila correspondencia and the institutional underpinnings of the trans-Pacific silver trade（马尼拉与跨太平洋白银交换）",
+      "retrievedAt": "2026-11-13T17:47:28.790141+00:00",
+      "sha256": "7db91669686e44bc5ca79e7240d7e569707b6b48b953ed915529d36e1f7a8ccd",
       "revisionId": null
     },
     {
@@ -9640,6 +10115,20 @@
       "revisionId": null
     },
     {
+      "url": "https://www.cdc.gov/smallpox/about/history.html",
+      "title": "美国疾控中心 · 天花史",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-18T17:37:25.480651+00:00"
+    },
+    {
+      "url": "https://www.cdmuseum.com/xinwen/202204/2721.html",
+      "title": "成都博物馆 · 看展丨“钱眼”看成都",
+      "retrievedAt": "2026-11-13T12:51:46.672782+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:22.996049+00:00",
+      "sha256": "71400dd228e2fe59876a5646cd6b7dcedbe970a5fe59d78296f2a339ebe0059b",
+      "revisionId": null
+    },
+    {
       "url": "https://www.chaoyang.gov.cn/html/CYSZF/202105/0162104991559936.html",
       "title": "朝阳市人民政府 · 牛河梁遗址概述",
       "retrievedAt": "2026-10-07T06:33:37.992381+00:00",
@@ -9651,6 +10140,7 @@
       "url": "https://www.chncpa.org/cgyl_278/yszl/wqzl/201508/t20150819_158895.shtml",
       "title": "国家大剧院 · 跨越世纪的经典——《雷雨》的前生今世",
       "retrievedAt": "2026-11-02T15:56:01.215265+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.019789+00:00",
       "sha256": "ec2f5ee8e5e89f361e97a50a7e0a8a7c934a0e69f2a030df2804176eabb68d16",
       "revisionId": null
     },
@@ -9680,7 +10170,7 @@
       "url": "https://www.chnmuseum.cn/portals/0/web/zt/202012kxyjs/",
       "title": "中国国家博物馆 · 科技的力量（造纸术与旱滩坡带字纸）",
       "retrievedAt": "2026-11-01T09:30:34.639283+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:07.192311+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.045281+00:00",
       "sha256": "7aba13ee9db95f77cf59c0426b57c743ce9ef9a128d110ad1bf4223469f7415b",
       "revisionId": null
     },
@@ -9688,7 +10178,7 @@
       "url": "https://www.chnmuseum.cn/portals/0/web/zt/202102gdqianbi/",
       "title": "中国国家博物馆 · 中国古代钱币展",
       "retrievedAt": "2026-10-06T16:18:38.572187+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.948985+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.071363+00:00",
       "sha256": "d21b379be1076b7056bd0459e6f849820147870a190f8075d604050811861813",
       "revisionId": null
     },
@@ -9703,7 +10193,7 @@
       "url": "https://www.chnmuseum.cn/portals/0/web/zt/gudai/detail4.html",
       "title": "中国国家博物馆 · 秦汉时期",
       "retrievedAt": "2026-10-06T15:43:31.315787+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.953275+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.097296+00:00",
       "sha256": "ed9572955105e0a3f1d1f9c9b808d253a8ba55009df22e16b2c3594971186aa6",
       "revisionId": null
     },
@@ -9713,6 +10203,36 @@
       "retrievedAt": "2026-10-07T06:33:38.522319+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:07.116127+00:00",
       "sha256": "b930f03b1702589148ce0814d1fdd2ced3c3c1c8ebdbf590e958fc9e39d5d0a0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_33123.shtml",
+      "title": "中国国家博物馆 · 王永红《五夜漏声催晓箭》",
+      "retrievedAt": "2026-11-13T13:37:57.620563+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.120211+00:00",
+      "sha256": "8841cf68147d045cfbfbfbe779005df79ee1d2f92d314f277859735b1203effd",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/jzrgs/202203/t20220317_254392.shtml",
+      "title": "中国国家博物馆 · 蔡少明先生捐赠的侨批文物入藏国博",
+      "retrievedAt": "2026-11-18T17:30:08.579418+00:00",
+      "sha256": "b72b8d648a576c8ecc5ab6fd9e2daf59b3eba491733ab58a59cb29e3c8cfd918",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_25374.shtml",
+      "title": "中国国家博物馆 · 大明通行宝钞",
+      "retrievedAt": "2026-11-13T12:50:31.884377+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.144062+00:00",
+      "sha256": "2e520cd9c07122b70d3a3fc89c89a2fb0090af94197b5bc9393d6981381dfa48",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/gjwxbt/202203/t20220301_254053.shtml",
+      "title": "中国国家博物馆 ·《农书》（成书、结构与农器图谱）",
+      "retrievedAt": "2026-11-18T17:37:23.479460+00:00",
+      "sha256": "d9fbdcb55063bde64cacb2b76de48e27b1ce40a98fbb7a770e148069874436ff",
       "revisionId": null
     },
     {
@@ -9726,7 +10246,7 @@
       "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202104/t20210406_249554.shtml",
       "title": "中国国家博物馆 · 江南制造局造船清单",
       "retrievedAt": "2026-10-06T16:18:38.823473+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.957456+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.504713+00:00",
       "sha256": "ada7bd27f697fa515736fd9be5d20f361b758d041abdf401668166430b02e146",
       "revisionId": null
     },
@@ -9734,6 +10254,7 @@
       "url": "https://www.chnmuseum.cn/zp/zpml/gshww/202103/t20210331_249352.shtml",
       "title": "中国国家博物馆 · 《中华人民共和国婚姻法》",
       "retrievedAt": "2026-11-02T16:00:04.926556+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.528436+00:00",
       "sha256": "7c1688a4672c33a102ba2e99f1dc346056b680d0518754835c1aa9e4035ffd8b",
       "revisionId": null
     },
@@ -9743,6 +10264,14 @@
       "retrievedAt": "2026-10-07T06:33:31.988545+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:07.041205+00:00",
       "sha256": "90bc06dbb80d74e0dc7111e7c42b082b7cc302295540178331270f11624b0fae",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202010/t20201028_247937.shtml",
+      "title": "中国国家博物馆 · 铜壶滴漏",
+      "retrievedAt": "2026-11-13T13:37:59.383468+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.554263+00:00",
+      "sha256": "ada8e98f128d63d083317eaf790a61639393fbf0ebcfd120e5dd8e2952803a7e",
       "revisionId": null
     },
     {
@@ -9765,6 +10294,14 @@
       "title": "中国国家博物馆 · 利簋与武王克商",
       "retrievedAt": "2026-10-06T17:35:46.384493+00:00",
       "sha256": "a63db6cc9cfd3ef534f96afc7435aef204ccd0d7b9ba36b37d95cc67a1cf55d0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202110/t20211029_251999.shtml",
+      "title": "中国国家博物馆 · 日晷",
+      "retrievedAt": "2026-11-13T13:37:57.882854+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.571452+00:00",
+      "sha256": "e72d93c9b761e421f6074d493cf15dc422a24521a84981e149e58a4c2334260e",
       "revisionId": null
     },
     {
@@ -9855,6 +10392,7 @@
       "url": "https://www.cuhk.edu.hk/renditions/authors/kuma.html",
       "title": "香港中文大学《译丛》 · Kumarajiva",
       "retrievedAt": "2026-10-25T16:51:48.266022+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.593736+00:00",
       "sha256": "f271bf2a3223b5454302177e4d223d469b4484e9876fb5b8b71009423a7df878",
       "revisionId": null
     },
@@ -9869,7 +10407,7 @@
       "url": "https://www.cultura.gob.es/cultura/archivos/difusion/registro-memoria-unesco/2023/vuelta-mundo-magallanes-elcano.html",
       "title": "西班牙文化部 · Primera vuelta al mundo de Magallanes y Elcano",
       "retrievedAt": "2026-10-23T06:50:15.841194+00:00",
-      "lastCacheCheckAt": "2026-11-06T03:20:40.492907+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.633264+00:00",
       "sha256": "a990c7ded14b0ed04766f700c50908108738c76de587cefbda0ba8cddec07e1f",
       "revisionId": null
     },
@@ -9877,6 +10415,7 @@
       "url": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
       "title": "扬州大明寺 · 鉴真年表",
       "retrievedAt": "2026-11-04T16:12:45.539005+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.662180+00:00",
       "sha256": "c0dc8405f82d1366ec5b948a9892e6d654b6c742d046421318a1c9d03618e245",
       "revisionId": null
     },
@@ -9936,7 +10475,7 @@
       "url": "https://www.dpm.org.cn/ancient/mingqing/149329.html",
       "title": "故宫博物院 · 《营造法式》",
       "retrievedAt": "2026-10-06T12:10:25.117130+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.970001+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.687716+00:00",
       "sha256": "e61bfb083d00d0e7be943f84e85a65dfdf195b33fc6ae776624ed1b64f7bf9b6",
       "revisionId": null
     },
@@ -9944,6 +10483,7 @@
       "url": "https://www.dpm.org.cn/collection/handwriting/228279.html",
       "title": "故宫博物院 · 冯承素行书摹兰亭序卷（传统归属及摹本流传）",
       "retrievedAt": "2026-11-01T09:16:35.282315+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.713781+00:00",
       "sha256": "bcfec45fb2c0cfaf8dd568c75846cfb8f81ca7168fe55b55b309d3ceb60daf0e",
       "revisionId": null
     },
@@ -9965,7 +10505,7 @@
       "url": "https://www.dpm.org.cn/court/event/161110.html",
       "title": "故宫博物院 · 同治中兴与洋务",
       "retrievedAt": "2026-10-06T16:18:39.427756+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.974241+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.738868+00:00",
       "sha256": "69eeb8ac6d9bada17e6cad124ee1aba39e386a717dd62d79334967f19375a115",
       "revisionId": null
     },
@@ -9997,7 +10537,7 @@
       "url": "https://www.dpm.org.cn/court/lineage/226254.html",
       "title": "故宫博物院 · 光绪皇帝大事年表",
       "retrievedAt": "2026-10-06T15:43:31.881292+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.991070+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.766198+00:00",
       "sha256": "8968998c357b16107c1f62df17d95363e630876ae7946424dc862a8a53203d12",
       "revisionId": null
     },
@@ -10005,7 +10545,7 @@
       "url": "https://www.dpm.org.cn/court/lineage/226256.html",
       "title": "故宫博物院 · 康熙皇帝生平与大事年表",
       "retrievedAt": "2026-10-06T12:10:11.947999+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:22.995815+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.790747+00:00",
       "sha256": "60efedeb5ee75cd98c8ebf0754eb0ec9eb0d192a44ae4b941e80a7ed0c5c8e2c",
       "revisionId": null
     },
@@ -10121,6 +10661,7 @@
       "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/chi-edu/recommended-passages/KS2_09.pdf",
       "title": "香港教育局 · 《早发白帝城》教学资料",
       "retrievedAt": "2026-11-04T16:12:54.495851+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:23.816351+00:00",
       "sha256": "85c3d7d167b1602cfcc66bebf79eb3eee4f1438c4bb21dd3068bd1655181ab0f",
       "revisionId": null
     },
@@ -10128,7 +10669,7 @@
       "url": "https://www.edu.cn/jiao_yu_fa_lv_766/20060303/t20060303_165119.shtml",
       "title": "中国教育和科研计算机网 · 中华人民共和国义务教育法（1986年）",
       "error": "The read operation timed out",
-      "attemptedAt": "2026-11-02T15:57:56.567512+00:00"
+      "attemptedAt": "2026-11-18T17:37:56.143305+00:00"
     },
     {
       "url": "https://www.eisenhowerlibrary.gov/research/online-documents/korean-war",
@@ -10173,9 +10714,17 @@
       "revisionId": null
     },
     {
+      "url": "https://www.fj.gov.cn/jdhy/zcjd/202110/P020211015373827252740.pdf",
+      "title": "福建省档案局 · 《福建省侨批档案保护与利用办法》解读",
+      "retrievedAt": "2026-11-18T17:30:14.934882+00:00",
+      "sha256": "a212ad8b02ff32f71db24c685e82115b49ad70dfeb636c389f22554bdfc830b1",
+      "revisionId": null
+    },
+    {
       "url": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
       "title": "外交部 · 外交史上的今天（鉴真754年抵日）",
       "retrievedAt": "2026-11-04T16:12:45.742565+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:24.675469+00:00",
       "sha256": "bb9008dfabdefda3e5879769c775d8285c29dd722125c5c3e0a431a4413a63d5",
       "revisionId": null
     },
@@ -10184,6 +10733,13 @@
       "title": "Folger Shakespeare Library · Shakespeare’s life",
       "retrievedAt": "2026-10-25T17:38:04.438426+00:00",
       "sha256": "0bad4f04077a2a0baab40dc473ab83d905d3ce8cacf4cbade7dcc92cb2d44885",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/lswh/201809/t20180928_2624963.htm",
+      "title": "福州市人民政府 · 船政创办的历史背景和发展过程",
+      "retrievedAt": "2026-11-18T17:37:24.917999+00:00",
+      "sha256": "85cd1ee184165e19076ef1856110840272a28099e2cfb5b9712c92ecd89366f6",
       "revisionId": null
     },
     {
@@ -10271,6 +10827,14 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gutenberg.org/cache/epub/25273/pg25273-images.html",
+      "title": "宋应星《天工开物》· 杀青（古腾堡计划原典录文）",
+      "retrievedAt": "2026-11-13T12:50:33.801170+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:24.942952+00:00",
+      "sha256": "391b98d974cc491186827986a2dd59e9256b177cfe0c8a5ef6b5da2e71bb6252",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "retrievedAt": "2026-10-08T17:25:10.424524+00:00",
@@ -10282,6 +10846,7 @@
       "url": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
       "title": "哥伦布首次航行日记及书信 · 1492—1493",
       "retrievedAt": "2026-11-06T03:44:09.679513+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:24.969906+00:00",
       "sha256": "4c7df3f54fdef8dfda810924ab6670bd94a6a7d03a24b02c59fc75c16550a3ab",
       "revisionId": null
     },
@@ -10289,6 +10854,7 @@
       "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
       "title": "皮加费塔《首次环球航行记》· 1519—1521年航段",
       "retrievedAt": "2026-11-06T03:42:33.855710+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:24.996651+00:00",
       "sha256": "f54cd0790a7b245b0aaea1287bef553eb79be0c1ee4f75f703578faf7affc001",
       "revisionId": null
     },
@@ -10296,6 +10862,7 @@
       "url": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
       "title": "达伽马首次航行日志",
       "retrievedAt": "2026-11-06T03:20:57.699186+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.023434+00:00",
       "sha256": "894e46fe88d353e8239e7de34bf5c83738f6c403f5a22aa34ab5ccdedf9813b2",
       "revisionId": null
     },
@@ -10303,6 +10870,7 @@
       "url": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
       "title": "皮加费塔《首次环球航行记》· 返航部分",
       "retrievedAt": "2026-11-06T03:43:51.869159+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.050222+00:00",
       "sha256": "e98419e4e7d1d1e86275338a09bda597c94d18b791bfb5955e51f53019e3a3e5",
       "revisionId": null
     },
@@ -10359,6 +10927,14 @@
       "revisionId": null
     },
     {
+      "url": "https://www.hko.gov.hk/sc/gts/time/basicterms-apparentsolartime.htm",
+      "title": "香港天文台 · 视太阳时",
+      "retrievedAt": "2026-11-13T13:37:59.643838+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.074651+00:00",
+      "sha256": "5a325eebc8299cef00e666a311576e00f0ea05d51ca28521247546c9ce20bb82",
+      "revisionId": null
+    },
+    {
       "url": "https://www.icm.gov.mo/handovermuseum/en",
       "title": "澳门文化局 · 回归贺礼陈列馆",
       "retrievedAt": "2026-10-25T17:33:15.770192+00:00",
@@ -10369,6 +10945,7 @@
       "url": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
       "title": "西班牙国家地理研究所：环球航行图",
       "retrievedAt": "2026-11-06T03:24:28.022246+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.116805+00:00",
       "sha256": "3344a9643ec306d1f52ffa8b0b0c2e2db02dfcdb09b60a9359597c726b3e1bc3",
       "revisionId": null
     },
@@ -10403,6 +10980,7 @@
       "url": "https://www.iranicaonline.org/articles/sogdian-trade/",
       "title": "Encyclopaedia Iranica · Sogdian Trade（古信札、移民与商路网络）",
       "retrievedAt": "2026-11-01T15:20:19.173973+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.143249+00:00",
       "sha256": "4dbc9ddb14a39af0a4fdaf33bf86a477f1877364c266a647fee19702ec53de4c",
       "revisionId": null
     },
@@ -10465,6 +11043,7 @@
       "url": "https://www.loc.gov/exhibits/1492/columbus.html",
       "title": "哥伦布：人物与文献",
       "retrievedAt": "2026-11-06T03:20:40.424988+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.170998+00:00",
       "sha256": "20f19093a5e07ddb7f8c67d072e3434de27545c24dd5b3214f71b0e6d92b1f09",
       "revisionId": null
     },
@@ -10521,14 +11100,63 @@
       "url": "https://www.louvre.fr/en/the-code-of-hammurabi",
       "title": "卢浮宫 · The Code of Hammurabi（条文结构、浮雕与出土流传）",
       "retrievedAt": "2026-11-01T09:32:12.243696+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:25.196306+00:00",
       "sha256": "4a17fc777947f9ab120bf4b0a595404841e21a57c15a0165e41eefdf45762b54",
       "revisionId": null
     },
     {
-      "url": "https://www.metmuseum.org/art/collection/search/38198",
-      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection：秣菟罗笈多造像",
+      "url": "https://www.luther2017.de/de/martin-luther/texte-quellen/die-95-thesen/",
+      "title": "路德 · 九十五条论题（Luther2017 原典）",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-13T16:19:58.170189+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/202581",
+      "title": "图片来源 · 带葡萄牙王室纹章的青花执壶，约1520—1540年。注意壶身纹章与器形：远方的身份标志进入中国窑场，图稿的理解与烧成技术在同一件器物上相遇。",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-10-23T06:59:40.480295+00:00"
+      "attemptedAt": "2026-11-14T03:21:50.719480+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/327384",
+      "title": "大都会艺术博物馆 · 约公元前3100—前2900年的谷物账板，1988.433.2（可能出自乌鲁克）",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-18T16:19:42.419053+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/338712",
+      "title": "图片来源 · 弗兰斯·许斯据老彼得·勃鲁盖尔图样制作的船舶版画，1561—1565年。船与沿岸防御同时入画，适合观察贸易和武装的相邻关系；图中不是哥伦布或达·伽马的某艘实船。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:49.936283+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/38198",
+      "title": "大都会艺术博物馆 · Standing Buddha Offering Protection（5世纪马图拉佛像）",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-18T17:37:27.656959+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/39624",
+      "title": "图片来源 · 元代八思巴字通行牌，13世纪晚期。牌面可携带权力的凭证；沿途提供马匹与食物的责任，则由具体的人承担。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:49.918495+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/41493",
+      "title": "图片来源 · 徐扬《乾隆南巡图》第六卷局部，1770年绘制，表现1751年南巡时苏州与运河的景象。这是清代画家组织的城市图景，不是隋代工程现场或精确水利测绘。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:50.631592+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/444408",
+      "title": "图片来源 · 也门1291年星盘。观察者须把天体位置与刻度、计算配合使用；它能帮助理解“测量需要器具与知识”，不能把它误作解决海上经度问题的航海钟。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:50.671659+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/447109",
+      "title": "图片来源 · 印度18世纪印花棉织物残片。消费者对棉布、颜色和纹样的需求早于英国工厂体系；这件手工艺传统中的商品不作为机器生产的样本。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:50.914367+00:00"
     },
     {
       "url": "https://www.metmuseum.org/art/collection/search/455304",
@@ -10537,10 +11165,40 @@
       "attemptedAt": "2026-10-23T06:50:41.179301+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/art/collection/search/49368",
+      "title": "图片来源 · 唐代骆驼陶俑，8世纪。驮载形象让运输有了可见的细节，但一件陶俑不能告诉我们整支商队载了多少、走过哪些地方。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:50.983935+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/690059",
+      "title": "图片来源 · 日本8世纪中叶《因果经》绘卷。上排画释迦说法，下排抄录经文，是鉴真生活的时代在日本流传佛教故事的一种形式。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-18T17:37:27.984611+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/701291",
+      "title": "图片来源 · 清康熙时期（1662—1722）青花方瓶，书苏轼前后《赤壁赋》。文章在数百年后进入陈设器物，读者与观看方式都变了；瓶上的书写不属于苏轼手迹。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:51.168346+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/728348",
+      "title": "图片来源 · 费利斯·比托拍摄的恭亲王奕訢，1860年。照片保留相册装裱；馆藏英文题名中的“Emperor of China”有误，奕訢并非皇帝。人物照片与当时外交安排应分开核对。",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-14T03:21:51.252059+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/art/collection/search/853977",
       "title": "大都会艺术博物馆 · Bowl with peony design（2021.180）",
       "error": "HTTP Error 429: Too Many Requests",
       "attemptedAt": "2026-11-02T15:57:44.328061+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "title": "大都会艺术博物馆 · East and West: Chinese Export Porcelain",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-13T17:47:27.019879+00:00"
     },
     {
       "url": "https://www.metmuseum.org/essays/geometric-art-in-ancient-greece",
@@ -10585,10 +11243,16 @@
       "attemptedAt": "2026-10-25T16:46:44.604923+00:00"
     },
     {
-      "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
-      "title": "大都会艺术博物馆 · 书写的起源",
+      "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+      "title": "大都会艺术博物馆 · The Legacy of Genghis Khan",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-10-07T06:45:21.038044+00:00"
+      "attemptedAt": "2026-11-13T16:19:53.006013+00:00"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
+      "title": "大都会艺术博物馆 · The Origins of Writing（记账、表意符号与语音化）",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-18T17:37:30.137806+00:00"
     },
     {
       "url": "https://www.metmuseum.org/essays/the-seleucid-empire-323-64-b-c",
@@ -10598,9 +11262,9 @@
     },
     {
       "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
-      "title": "大都会艺术博物馆 · Uruk: The First City",
+      "title": "大都会艺术博物馆 · Uruk: The First City（城市组织、物资记录与传播）",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-10-06T18:33:54.455335+00:00"
+      "attemptedAt": "2026-11-18T17:37:30.441084+00:00"
     },
     {
       "url": "https://www.metmuseum.org/exhibitions/arts-of-africa/inside-the-exhibition",
@@ -10618,7 +11282,7 @@
       "url": "https://www.metmuseum.org/ja/essays/indian-textiles-trade-and-production",
       "title": "大都会艺术博物馆 · Indian Textiles: Trade and Production",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-11-02T15:58:00.794680+00:00"
+      "attemptedAt": "2026-11-18T17:37:32.707456+00:00"
     },
     {
       "url": "https://www.metmuseum.org/learn/educators/curriculum-resources/art-of-the-islamic-world/unit-five/chapter-two/the-ottoman-empire",
@@ -10636,7 +11300,7 @@
       "url": "https://www.metmuseum.org/toah/ht/06/nc",
       "title": "大都会艺术博物馆 · Central and North Asia, 500–1000",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-10-23T06:45:06.037336+00:00"
+      "attemptedAt": "2026-11-18T17:37:32.985874+00:00"
     },
     {
       "url": "https://www.metmuseum.org/toah/ht/07/eaj",
@@ -10660,7 +11324,7 @@
       "url": "https://www.metmuseum.org/toah/ht/07/sse",
       "title": "大都会艺术博物馆 · Southeast Asia, 1000–1400",
       "error": "HTTP Error 429: Too Many Requests",
-      "attemptedAt": "2026-10-23T06:46:29.569816+00:00"
+      "attemptedAt": "2026-11-18T17:37:35.192978+00:00"
     },
     {
       "url": "https://www.metmuseum.org/toah/ht/08/eusi",
@@ -10684,7 +11348,22 @@
       "url": "https://www.mowcapunesco.org/register/nagara-kertagama-or-description-of-the-country-1365-ad/",
       "title": "UNESCO 亚太世界记忆委员会 · Nāgarakrĕtāgama or Description of the Country",
       "retrievedAt": "2026-11-02T15:57:57.666524+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:33.041459+00:00",
       "sha256": "084b6f5bf1c6393a81ddbc69d3ebf621ff0aa42a6d6515d6239de892d0b0246f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.msrmuseum.com/News/Detailed/1220",
+      "title": "广东海上丝绸之路博物馆 · 海上丝绸之路上的宋代陶瓷",
+      "retrievedAt": "2026-11-18T17:30:15.494795+00:00",
+      "sha256": "fb077376fd11ab91ea2260adb6ea1e30c0d8181c07852069bc84b78f812f4291",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.msrmuseum.com/News/Special/2",
+      "title": "广东海上丝绸之路博物馆 · 大事记（2018年修复档案）",
+      "retrievedAt": "2026-11-18T17:37:33.654352+00:00",
+      "sha256": "5bdbb36d87f2e9e614958709f3df9d23f35cfaf3470a56bbc5ec32f9ec8b4260",
       "revisionId": null
     },
     {
@@ -10817,6 +11496,7 @@
       "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/magna-carta-1214-1225/",
       "title": "英国国家档案馆 · Magna Carta 1214–1225（文本与重颁年表）",
       "retrievedAt": "2026-11-01T09:32:14.116824+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:33.678904+00:00",
       "sha256": "ab13da128dbd89f65450f08d7fe7020e95010ecf617a7463766f3676442c84bf",
       "revisionId": null
     },
@@ -10831,7 +11511,7 @@
       "url": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/magna-carta/",
       "title": "英国国家档案馆 · Magna Carta",
       "retrievedAt": "2026-10-22T08:38:30.551343+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:12.522254+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:33.709775+00:00",
       "sha256": "f02ff2f72a4f71af36594584e37a31fe92860165f3bb5b1d785e18ae43cd503f",
       "revisionId": null
     },
@@ -10881,9 +11561,9 @@
     },
     {
       "url": "https://www.ncl.edu.tw/information_236_15182.html",
-      "title": "国家图书馆 · 白先勇说红楼梦第二讲",
+      "title": "台湾图书馆 · 红楼梦版本与程甲本相关介绍",
       "error": "HTTP Error 302: Found",
-      "attemptedAt": "2026-10-25T17:15:38.507541+00:00"
+      "attemptedAt": "2026-11-18T17:37:36.861341+00:00"
     },
     {
       "url": "https://www.ndl.go.jp/modern/e/cha2/description26.html",
@@ -10934,6 +11614,22 @@
       "attemptedAt": "2026-10-25T17:15:52.315910+00:00"
     },
     {
+      "url": "https://www.nlc.cn/migrated/pcab.nlc.cn/gjbhzs/bm/201412/P020150309516939790893.pdf",
+      "title": "《古籍著录规则》GB/T 3792.7—2008",
+      "retrievedAt": "2026-11-13T13:38:00.182468+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.216288+00:00",
+      "sha256": "b6cbb3091eb04dabd0307cc0b4842854c95d9615c6446abb3ca9b19b6678f49e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nlc.cn/migrated/www.nlc.cn/newhxjy/wjsy/wjls/wjqcsy/wjd77q/bhxf/202201/P020220128478508525288.pdf",
+      "title": "宋晶 · 中国传统书籍装帧形式发展简述",
+      "retrievedAt": "2026-11-13T13:38:44.324463+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.245290+00:00",
+      "sha256": "91fd8f019009f95930967109dce6ef72904e29e5a11e6bc334db85140e7ef725",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_bio.html",
       "title": "U.S. National Library of Medicine · Vesalius: Author and Title",
       "retrievedAt": "2026-10-25T17:15:59.129885+00:00",
@@ -10950,6 +11646,7 @@
       "url": "https://www.nobelprize.org/prizes/lists/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/",
       "title": "诺贝尔奖机构 · Marie and Pierre Curie and the discovery of polonium and radium",
       "retrievedAt": "2026-10-25T16:51:57.418746+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.274927+00:00",
       "sha256": "906a9bd8cdf611e6faca284bb205e55d8e9e837e693f333e5e79ecebd4a926bb",
       "revisionId": null
     },
@@ -10978,7 +11675,16 @@
       "url": "https://www.nobelprize.org/prizes/themes/the-nobel-prize-and-the-discovery-of-vitamins/",
       "title": "诺贝尔奖机构 · The Nobel Prize and the discovery of vitamins",
       "retrievedAt": "2026-11-02T15:58:00.832795+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.307869+00:00",
       "sha256": "396e14f7b61bfd1c2858cecaa164d546f0439e2243aa9e066fa4454cf568a136",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+      "title": "霍宏伟 · 隋唐洛阳城空间体系研究",
+      "retrievedAt": "2026-11-13T12:50:31.565669+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.322029+00:00",
+      "sha256": "f6f9a2851a1127966d189fbf9754b606ab1f0254682bd654181da5af5c651c00",
       "revisionId": null
     },
     {
@@ -10992,7 +11698,15 @@
       "url": "https://www.nps.gov/articles/featured_stories_wori.htm",
       "title": "U.S. National Park Service · Nineteenth Century Activism",
       "retrievedAt": "2026-10-25T16:46:42.382626+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.348627+00:00",
       "sha256": "33f4c063f0dab0eea52fe9562ea06ed39fab677102a0f1889ec97112a3c43c90",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nps.gov/articles/lowell-handbook-industrial-revolution-in-england.htm",
+      "title": "美国国家公园管理局 · Lowell: The Industrial Revolution in England（水力棉纺厂与蒸汽动力）",
+      "retrievedAt": "2026-11-13T16:19:54.046063+00:00",
+      "sha256": "761f1050e90f5336a3a83176e5d98ac55dd00d6749dc2ead17982e338d341856",
       "revisionId": null
     },
     {
@@ -11013,6 +11727,7 @@
       "url": "https://www.nps.gov/places/the-ta%C3%ADno-legacy-lives.htm",
       "title": "美国国家公园管理局 · The Taíno Legacy Lives（文化与社群延续）",
       "retrievedAt": "2026-11-01T09:34:35.015547+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:35.395307+00:00",
       "sha256": "7bce9788410ad0903da7568fd9648ff9b7d13788d31fb62e7a0a8d9a09c21280",
       "revisionId": null
     },
@@ -11022,6 +11737,13 @@
       "retrievedAt": "2026-10-22T08:38:33.155521+00:00",
       "lastCacheCheckAt": "2026-10-22T08:49:27.272511+00:00",
       "sha256": "37cb908667b4c6fd93573de6a12ec92301bb67d444f8f40a7c30ffc3e2c38bfb",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ocmuseum.cn/a/diancang/reservation/wenzhang/2024/0130/1208.html",
+      "title": "中国华侨历史博物馆 · 馆藏黄宝世家信与新加坡长安旅店账册",
+      "retrievedAt": "2026-11-18T17:30:16.166465+00:00",
+      "sha256": "7254502c2064ece4c65be7ebdc3fce2ef3257339bc5bd0ab6378b116c359abb6",
       "revisionId": null
     },
     {
@@ -11053,13 +11775,13 @@
       "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/",
       "title": "英国议会 · Overview of the Glorious Revolution",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-23T06:50:27.749035+00:00"
+      "attemptedAt": "2026-11-18T17:37:38.688650+00:00"
     },
     {
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/electionsvoting/chartists/overview/chartistmovement/",
       "title": "UK Parliament · The Chartist movement",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-25T16:46:46.468509+00:00"
+      "attemptedAt": "2026-11-18T17:37:39.340731+00:00"
     },
     {
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
@@ -11068,21 +11790,28 @@
       "attemptedAt": "2026-10-25T17:16:40.486763+00:00"
     },
     {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/towns/tyne-and-wear-case-study/about-the-group/public-administration/the-1848-public-health-act/",
+      "title": "英国议会 · The 1848 Public Health Act",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-18T16:19:44.712245+00:00"
+    },
+    {
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
       "title": "UK Parliament · Parliament abolishes the slave trade",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-10-25T16:46:31.788560+00:00"
+      "attemptedAt": "2026-11-18T17:37:42.187408+00:00"
     },
     {
       "url": "https://www.parliament.uk/magnacarta/",
       "title": "英国议会 · Magna Carta（形成背景与适用对象）",
       "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-01T09:32:19.861754+00:00"
+      "attemptedAt": "2026-11-18T17:37:41.832533+00:00"
     },
     {
       "url": "https://www.pasteur.fr/fr/nous-connaitre/notre-adn/histoire",
       "title": "巴斯德研究所 · Notre histoire",
       "retrievedAt": "2026-10-25T16:51:58.209951+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.858138+00:00",
       "sha256": "ef87ca0b73e6b37de7f6260ec8dcc1850712530d187f001ac2a2378d2aaa229b",
       "revisionId": null
     },
@@ -11111,6 +11840,7 @@
       "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=3&relid=46428",
       "title": "印度铁道部新闻局 · Milestones in Glorious History of Indian Railways",
       "retrievedAt": "2026-11-02T15:58:02.022963+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.884921+00:00",
       "sha256": "645113263be43766986e66af291fd18e5461e5984846ff42eb6b5bb9dff99755",
       "revisionId": null
     },
@@ -11172,6 +11902,27 @@
       "revisionId": null
     },
     {
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-478820",
+      "title": "格林尼治皇家博物馆 · 经度委员会讨论支付奖励与公开制造原理的文书 BGN/9",
+      "retrievedAt": "2026-11-18T17:30:17.594349+00:00",
+      "sha256": "883ea28a13d2dca9959efd5d487d82a8e39729234ab5956533508ebcad9729cc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.rmg.co.uk/sites/default/files/import/media/pdf/K1.pdf",
+      "title": "格林尼治皇家博物馆 · 肯德尔复制的 K1",
+      "retrievedAt": "2026-11-18T17:30:18.304100+00:00",
+      "sha256": "cb3ab1006c36121c167dec543e357ef4b6e2d81adfd8060b9a40b9354939e671",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.rmg.co.uk/stories/time/harrisons-clocks-longitude-problem",
+      "title": "格林尼治皇家博物馆 · 哈里森的航海计时器（H4试航与复试争议）",
+      "retrievedAt": "2026-11-18T16:19:44.578425+00:00",
+      "sha256": "79b9de5add5ef0246eb72ccf840671ca70bca91ce5a6c94aa4e41f30b34ea231",
+      "revisionId": null
+    },
+    {
       "url": "https://www.rsc.org.uk/hamlet/about-the-play/dates-and-sources",
       "title": "Royal Shakespeare Company · Hamlet: Dates and sources",
       "retrievedAt": "2026-10-25T17:15:40.691007+00:00",
@@ -11188,6 +11939,7 @@
       "url": "https://www.rxgdyjy.sdu.edu.cn/info/1053/4146.htm",
       "title": "山东大学 · 赵睿才《“饮中八仙”的演化与李白为“翰林供奉”的时间问题》",
       "retrievedAt": "2026-11-04T16:12:46.992921+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.913177+00:00",
       "sha256": "80a0083e92feda49e41d63d2cc8df60e732a8319523151e563dbcf9dd2f05790",
       "revisionId": null
     },
@@ -11208,6 +11960,7 @@
       "url": "https://www.saet.ac.uk/Christianity/CouncilofTrent",
       "title": "圣安德鲁斯大学 · Council of Trent",
       "retrievedAt": "2026-10-25T16:52:02.559160+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.941231+00:00",
       "sha256": "b85d21a1fc82355e18b843ea78c7d6552fa1d66eee86310c490a2b6690b05cf2",
       "revisionId": null
     },
@@ -11222,6 +11975,7 @@
       "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
       "title": "Science History Institute · Alexander Fleming",
       "retrievedAt": "2026-10-25T17:24:27.506258+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.968045+00:00",
       "sha256": "9b28b4be5448bd9763b42c9d474653e23ab0f84cfbdbae6a923664a59115019e",
       "revisionId": null
     },
@@ -11284,6 +12038,7 @@
       "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
       "title": "苏伊士运河管理局 · Canal History",
       "retrievedAt": "2026-10-23T06:46:55.997648+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:41.995474+00:00",
       "sha256": "c5991d9b0e015ef53d09d52d85bc2cba7aa9549d027ff298acaea550eeb57424",
       "revisionId": null
     },
@@ -11304,6 +12059,7 @@
       "url": "https://www.toshodaiji.jp/ganjin.html",
       "title": "唐招提寺 · 鉴真大和上（六次东渡、753年抵日及传戒）",
       "retrievedAt": "2026-11-01T15:20:21.293296+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.019661+00:00",
       "sha256": "1bc54832bf89e7203a4206f7752dac5fa65f84c8e9fc0ed7ae230ea95b540755",
       "revisionId": null
     },
@@ -11317,6 +12073,7 @@
       "url": "https://www.tsinghua.edu.cn/info/1771/71988.htm",
       "title": "清华大学 · 辗转西南，离乱弦歌不辍",
       "retrievedAt": "2026-11-02T15:58:02.216482+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.045238+00:00",
       "sha256": "0c41dc7c28e8b7723e4915a28b0ecc22bac6ff7900d1d1b1e5e6ca9607e3fc89",
       "revisionId": null
     },
@@ -11352,6 +12109,7 @@
       "url": "https://www.unesco.org.tr/Pages/2000/1393/Anma-ve-Kutlama-Y%C4%B1l-D%C3%B6n%C3%BCmleri",
       "title": "土耳其联合国教科文组织全国委员会 · 《福乐智慧》成书950周年",
       "retrievedAt": "2026-11-02T15:58:05.456158+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.072654+00:00",
       "sha256": "c0a2b5750a5e9327d14033c573670f8fcc1134b94a279745ea08f9b55268d287",
       "revisionId": null
     },
@@ -11380,6 +12138,7 @@
       "url": "https://www.unesco.org/en/memory-world/diwan-lughat-al-turk-compendium-turkic-dialects",
       "title": "UNESCO 世界记忆 · Diwan Lughat al-Turk",
       "retrievedAt": "2026-11-02T15:58:07.834624+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.099907+00:00",
       "sha256": "639eb28e31acb0274a570624aac5c3cd83d3825013d6bed1f992117f2adcdc9e",
       "revisionId": null
     },
@@ -11387,6 +12146,7 @@
       "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081",
       "title": "UNESCO 世界记忆 · Hunminjeongum Manuscript",
       "retrievedAt": "2026-10-23T06:46:12.358204+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.126790+00:00",
       "sha256": "05dc7a369fa776488a8355b5592834b0020cc3a98e70ed6248e2ca367cef8775",
       "revisionId": null
     },
@@ -11395,6 +12155,13 @@
       "title": "UNESCO Memory of the World · Marx’s annotated Das Kapital",
       "retrievedAt": "2026-10-25T16:52:07.468263+00:00",
       "sha256": "f2e3217568bd7daf9f888b87364c08ad88356b3f4e375b51a3ca71cc6fed17cc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.unesco.org/en/silk-roads/about-silk-roads",
+      "title": "UNESCO · About the Silk Roads（陆海网络、商旅与文化传播）",
+      "retrievedAt": "2026-11-13T17:47:31.698745+00:00",
+      "sha256": "770a62832e2a8426412db79acc5a147dbe2da94702e5b09f93dccb838c1681b5",
       "revisionId": null
     },
     {
@@ -11442,6 +12209,7 @@
       "url": "https://www.vam.ac.uk/articles/indian-textiles/",
       "title": "V&A · Indian textiles",
       "retrievedAt": "2026-11-02T15:58:12.734580+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.158282+00:00",
       "sha256": "6246326ed0afd70250fdc2c0605d1cdfd19d839d000680b5593978100b78dfb6",
       "revisionId": null
     },
@@ -11470,13 +12238,22 @@
       "url": "https://www.who.int/emergencies/situations/smallpox/",
       "title": "World Health Organization · Smallpox",
       "retrievedAt": "2026-10-25T17:24:36.213970+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.188818+00:00",
       "sha256": "0deaf302dd6ea03e73bbbf5bbe69a490a08c0cfa4c82c929e28f32489a148212",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.who.int/news-room/events/detail/2020/05/08/default-calendar/commemorating-the-40th-anniversary-of-smallpox-eradication",
+      "title": "世界卫生组织 · 天花根除四十周年（1977年最后自然病例、1979年认证及1980年正式宣告）",
+      "retrievedAt": "2026-11-18T16:19:46.312714+00:00",
+      "sha256": "2fc0db93d13ce5a3ec363e1bf53343f6931cc683e2a810554c6eab11b75e5554",
       "revisionId": null
     },
     {
       "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-polio-vaccination",
       "title": "World Health Organization · History of polio vaccination",
       "retrievedAt": "2026-10-25T17:24:36.709575+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.216450+00:00",
       "sha256": "b89ae04a24d69e7713710bf73b3d5b2d8211de87a1cd698973483b2eee30afca",
       "revisionId": null
     },
@@ -11484,7 +12261,15 @@
       "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination",
       "title": "世界卫生组织 · History of smallpox vaccination",
       "retrievedAt": "2026-10-25T16:52:08.396074+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.234197+00:00",
       "sha256": "69d73c9b507463beb431a093933fe9e172a23995ceb065fc52901023ed485936",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.who.int/news/item/17-05-2010-statue-commemorates-smallpox-eradication",
+      "title": "世界卫生组织 · 根除天花纪念碑揭幕说明",
+      "retrievedAt": "2026-11-18T17:37:42.652917+00:00",
+      "sha256": "8349b6029c93cee57707ba56ccde84a6188fc72179554267e9c5f2aa523e428c",
       "revisionId": null
     },
     {
@@ -11512,6 +12297,7 @@
       "url": "https://www.wuhan.gov.cn/ztzl/25zt/qiao/whzjdq/index.shtml",
       "title": "武汉市人民政府 · 武汉长江大桥",
       "retrievedAt": "2026-11-02T15:58:07.969341+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.252086+00:00",
       "sha256": "de7ebed54f56f68760bf63467e83f6f711fd832dee223a35ebb276b60f5f45d6",
       "revisionId": null
     },
@@ -11537,10 +12323,25 @@
       "revisionId": null
     },
     {
+      "url": "https://www.zhangye.gov.cn/lyj/dzdt/shyzl/202404/t20240410_1215842_ghb.html",
+      "title": "张掖市林业和草原局 · 祁连山水资源现状特征及保护建议",
+      "retrievedAt": "2026-11-13T12:50:31.963233+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.298171+00:00",
+      "sha256": "54ca61f21b0811e4a100001ce8112f001d462a68d75c4d878d61b124f7677229",
+      "revisionId": null
+    },
+    {
       "url": "https://www.zhmuseum.org.cn/yanjiu/mrgsInfo?id=7",
       "title": "珠海博物馆 · 容闳",
       "error": "HTTP Error 502: Bad Gateway",
       "attemptedAt": "2026-10-06T16:21:32.915323+00:00"
+    },
+    {
+      "url": "https://www.zonacaral.gob.pe/downloads/publicaciones/LA-CIUDAD-SAGRADA-DE-CARAL-SUPE-LOS-ORIGENES-DE-LA-CIVILIZACION-ANDINA-Y-LA-FORMACION-DEL-ESTADO-PRISTINO-EN-EL-ANTIGUO-PERU-2003.pdf",
+      "title": "秘鲁卡拉尔考古区 · 《苏佩的卡拉尔圣城》发掘研究",
+      "retrievedAt": "2026-11-18T17:37:52.130841+00:00",
+      "sha256": "2a6405e24571b5e86fe5a64fa8bc57fcede7ac1a9cfcbc509d177c320d403f86",
+      "revisionId": null
     },
     {
       "url": "https://www.zs.gov.cn/zjzs/zsmr/content/post_220052.html",
@@ -11567,6 +12368,7 @@
       "url": "https://www2.museogalileo.it/en/library-and-research-institute/projects/meet-galileo/38-works/464-sidereus-nuncius-the-starry-messenger-1610.html",
       "title": "伽利略博物馆 · Sidereus Nuncius (1610)",
       "retrievedAt": "2026-10-25T16:52:10.471571+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:42.679971+00:00",
       "sha256": "8285772a4d2e9434f0710abf1bfee97bf53360cbae2d08040cc60fb006fff20a",
       "revisionId": null
     },
@@ -11588,14 +12390,23 @@
     {
       "url": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
       "title": "美国国会图书馆 · The Gutenberg Bible（工艺与约1455年印本）",
-      "error": "HTTP Error 403: Forbidden",
-      "attemptedAt": "2026-11-01T09:32:22.746939+00:00"
+      "retrievedAt": "2026-11-18T17:37:43.710092+00:00",
+      "sha256": "b4a1e9635a22d0a9d2c6df962650f457423d32b4902e9affa8fe6c3d3da2844b",
+      "revisionId": null
     },
     {
       "url": "https://wwws.loc.gov/exhibits/exploring-the-early-americas/columbus-and-the-taino.html",
       "title": "哥伦布与泰诺社会",
       "retrievedAt": "2026-11-06T03:20:36.150116+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.726998+00:00",
       "sha256": "5c1c7382966860205cee0f9907173ade1dd29092a4e49e2d1855edee92fb251e",
+      "revisionId": null
+    },
+    {
+      "url": "https://xbbjb.ucass.edu.cn/__local/0/42/DD/7F8FAA0AB0D00177659EB143818_070B9074_144F63.pdf",
+      "title": "杨振红《秦汉公文书传达的“报”“重”“追”制》",
+      "retrievedAt": "2026-11-18T16:19:47.500182+00:00",
+      "sha256": "8e4a02ec202a80c525faa69b008f9c5bdd155d9c2a48ecef95771b831d512668",
       "revisionId": null
     },
     {
@@ -11623,6 +12434,7 @@
       "url": "https://xsg.tsinghua.edu.cn/info/1004/3408.htm",
       "title": "清华大学校史馆 · 父亲袁复礼的西南联大情结",
       "retrievedAt": "2026-11-02T15:58:08.198172+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.741993+00:00",
       "sha256": "54f3053d168e7d1d47f706a1080a308f80d92acfc622c99ff8f027ab2df8e0d0",
       "revisionId": null
     },
@@ -11657,7 +12469,7 @@
       "url": "https://zh.wikisource.org/wiki/三國志",
       "title": "《三國志》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:17.288827+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:30.045727+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.793430+00:00",
       "sha256": "6bb6920003e3eab476f62769a3989600e1430c1b64c4241fecfb823b1dbc6a3e",
       "revisionId": 2643802
     },
@@ -11717,6 +12529,7 @@
       "url": "https://zh.wikisource.org/wiki/三國志/卷21",
       "title": "《三國志》卷21",
       "retrievedAt": "2026-11-02T17:20:37.563837+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.819619+00:00",
       "sha256": "b38d587a5108eccfd47eb65c7e25523deff3bd88479c32e3ac8022a9e132eb13",
       "revisionId": 2333888
     },
@@ -11845,7 +12658,7 @@
       "url": "https://zh.wikisource.org/wiki/三國志/卷54",
       "title": "《三國志》卷54",
       "retrievedAt": "2026-10-06T12:09:20.200941+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:16:34.688042+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.838650+00:00",
       "sha256": "14860e39ad2aecfb6c70cf41533a1bfdcc4d1376812d8252c356f56ea893649c",
       "revisionId": 2387393
     },
@@ -11882,6 +12695,7 @@
       "url": "https://zh.wikisource.org/wiki/中华人民共和国婚姻法_(1950年)",
       "title": "《中华人民共和国婚姻法》（1950年）",
       "retrievedAt": "2026-11-02T15:58:09.881339+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.866611+00:00",
       "sha256": "05908cb5c3d8927b11490f208f5a089216af0f868a715fc111bf826f2daa1973",
       "revisionId": 8730731
     },
@@ -11917,6 +12731,7 @@
       "url": "https://zh.wikisource.org/wiki/五代會要/卷八",
       "title": "《五代会要》卷八 · 经籍",
       "retrievedAt": "2026-10-08T17:27:38.880061+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.903399+00:00",
       "sha256": "a283cbb637b39696226404d4803f71788acb6cf9a45f294d3bb41a75fe225449",
       "revisionId": 2265751
     },
@@ -11968,7 +12783,7 @@
       "url": "https://zh.wikisource.org/wiki/元史",
       "title": "《元史》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:21.541039+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:30.125802+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.930126+00:00",
       "sha256": "49faea21f1f9597ca97d1f16e8781cbc613f94d28031af935acb83855d520184",
       "revisionId": 9685906
     },
@@ -11976,6 +12791,7 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷001",
       "title": "《元史》卷1",
       "retrievedAt": "2026-10-06T16:20:32.328305+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.958021+00:00",
       "sha256": "781cdb3600a17e0e169fcb00341482cb52d97b127ff2ab398f708a10509e2ae9",
       "revisionId": 2259382
     },
@@ -11998,7 +12814,7 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷007",
       "title": "《元史》卷7",
       "retrievedAt": "2026-10-06T12:20:08.102929+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.830681+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.964414+00:00",
       "sha256": "1ab3113a84b09fae868693aac571e3631a4ec7fe4af3a483600bc1643cf553ef",
       "revisionId": 1812913
     },
@@ -12006,7 +12822,7 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷008",
       "title": "《元史》卷8",
       "retrievedAt": "2026-10-06T12:10:01.032039+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.838088+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:43.992478+00:00",
       "sha256": "69be14c4678a4d0b97114268a4dde20a128d83b0acdf1998422e2fe77814aeaa",
       "revisionId": 2307786
     },
@@ -12062,15 +12878,22 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷093",
       "title": "《元史》卷93",
       "retrievedAt": "2026-10-06T12:20:09.342540+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.877993+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.019539+00:00",
       "sha256": "6f7d1cbfe26c674e654ccde590c315e7055ed2d510185f957a4da0cf06c621ac",
       "revisionId": 2258492
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/元史/卷101",
+      "title": "《元史》卷一百零一《兵志四·站赤》",
+      "retrievedAt": "2026-11-18T17:37:44.764509+00:00",
+      "sha256": "cb39dbba745c2a6a7d7610c5d32defa1ce59f8bc8987ab20e36c48a80022161b",
+      "revisionId": 2258488
     },
     {
       "url": "https://zh.wikisource.org/wiki/元史/卷157",
       "title": "《元史》卷157",
       "retrievedAt": "2026-10-06T12:20:08.273906+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.882767+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.792220+00:00",
       "sha256": "8fef5bc5be12a11f50fda6381c2736251d7377e47bf1b9b4c3d61b57d4a1a305",
       "revisionId": 2291224
     },
@@ -12078,7 +12901,7 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷164",
       "title": "《元史》卷164",
       "retrievedAt": "2026-10-06T12:20:08.429568+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.887423+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.802114+00:00",
       "sha256": "17c250997a9f2a6477e7f7d31e9e90614278f0108f88134f272dfcb8d28583fb",
       "revisionId": 2315473
     },
@@ -12086,7 +12909,7 @@
       "url": "https://zh.wikisource.org/wiki/元史/卷187",
       "title": "《元史》卷187",
       "retrievedAt": "2026-10-06T12:20:10.626756+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.891914+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.848502+00:00",
       "sha256": "7104de9dc170f966e229686b02025858302ead72996d5e3b6ec5a58840a3a4da",
       "revisionId": 1961396
     },
@@ -12178,6 +13001,7 @@
       "url": "https://zh.wikisource.org/wiki/前聞記",
       "title": "祝允明《前闻记》· 下西洋",
       "retrievedAt": "2026-11-04T16:12:49.242180+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.877470+00:00",
       "sha256": "20eaeaf03a86fababb14aadae21e78bcd28529177ec0649ef4261900e83a8f08",
       "revisionId": 1753281
     },
@@ -12210,6 +13034,13 @@
       "retrievedAt": "2026-11-02T17:21:19.024154+00:00",
       "sha256": "754af00941747c23a7d605697272725b11a303d73bb285736b24705687f0f0f6",
       "revisionId": 2432486
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/南京條約",
+      "title": "《南京条约》中文本 · 第2—7、10条",
+      "retrievedAt": "2026-11-18T16:19:48.265893+00:00",
+      "sha256": "71e22f736971c5844a7e3428613b477f033b21d936192a4470a03ae533d21464",
+      "revisionId": 8750955
     },
     {
       "url": "https://zh.wikisource.org/wiki/南唐二主詞",
@@ -12273,7 +13104,7 @@
       "url": "https://zh.wikisource.org/wiki/史記",
       "title": "《史記》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:13.886348+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:32.923411+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.906287+00:00",
       "sha256": "991b16c7f41aef3f722a65fb3234ef4ffa91979539f6fdda8b5ad6d65221d573",
       "revisionId": 8732448
     },
@@ -12311,7 +13142,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷006",
       "title": "《史記》卷6",
       "retrievedAt": "2026-10-06T12:09:04.603229+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.016201+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.934752+00:00",
       "sha256": "54c9526d4889ef9fb3cabea60907eb01ebe1ef39da0b9e11b6a9c24d0e914982",
       "revisionId": 7907969
     },
@@ -12379,7 +13210,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷029",
       "title": "《史記》卷29",
       "retrievedAt": "2026-10-06T12:09:06.095862+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.032045+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.960814+00:00",
       "sha256": "726b770c03ecacb427345adf188cd8fd81478e48c26817a3abdb66b57e2a9480",
       "revisionId": 1513337
     },
@@ -12387,7 +13218,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷030",
       "title": "《史記》卷30",
       "retrievedAt": "2026-10-06T15:43:38.625107+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.637655+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:44.986195+00:00",
       "sha256": "e13dcf1f6c6b3211ffdb51b4e6ae6778b772909b559d2589eca3d459aa589aba",
       "revisionId": 8730259
     },
@@ -12409,6 +13240,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷033",
       "title": "《史记》· 鲁周公世家",
       "retrievedAt": "2026-10-06T17:35:49.756287+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.011984+00:00",
       "sha256": "88d92ef1a5e0b5a575bca1faa1efe621680a785de68b14c274da50e51fbd44c2",
       "revisionId": 7909289
     },
@@ -12468,7 +13300,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷047",
       "title": "《史記》卷47",
       "retrievedAt": "2026-10-06T12:10:31.522071+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.660861+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.013623+00:00",
       "sha256": "b1f94621d9d0ee0f0ffe84bb8fc1cc4bf559e3cecb4f98491cfda7b052f3cbe5",
       "revisionId": 7903609
     },
@@ -12742,7 +13574,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷111",
       "title": "《史記》卷111",
       "retrievedAt": "2026-10-06T12:09:09.002334+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.745554+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.057427+00:00",
       "sha256": "48929e530d2993e9ecd8b4a7273599a1ca3ceb682fe272b9e39b4cfc4515e536",
       "revisionId": 8730225
     },
@@ -12750,7 +13582,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷123",
       "title": "《史記》卷123",
       "retrievedAt": "2026-10-06T12:09:08.596197+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.046043+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.091110+00:00",
       "sha256": "c5a54d5587a5599347b6aecd21c6c4c2f26d8cda00ff600bbc23226b7192927d",
       "revisionId": 8736799
     },
@@ -12772,6 +13604,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷129",
       "title": "《史記》卷129",
       "retrievedAt": "2026-11-02T17:20:23.847403+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.119221+00:00",
       "sha256": "f4da231c989a0801034ae7802d31517a226e3e82e31a3dd2c4037f109085f8bc",
       "revisionId": 11132204
     },
@@ -12779,7 +13612,7 @@
       "url": "https://zh.wikisource.org/wiki/史記/卷130",
       "title": "《史記》卷130",
       "retrievedAt": "2026-10-06T12:10:21.811695+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.754398+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.141377+00:00",
       "sha256": "3c31b00ae5de6001130bd1933db269cf026c70efe1040940d634ab914e0dbe59",
       "revisionId": 2609362
     },
@@ -12787,6 +13620,7 @@
       "url": "https://zh.wikisource.org/wiki/史通",
       "title": "《史通》",
       "retrievedAt": "2026-11-02T17:53:15.509152+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.173539+00:00",
       "sha256": "3e13a3dd1775b816ff706fb75b8c8562f9a6ba2ee70decc52ebab2ceff629ce1",
       "revisionId": 2595720
     },
@@ -12823,7 +13657,7 @@
       "url": "https://zh.wikisource.org/wiki/周書",
       "title": "《周書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:09:29.155861+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:34.763193+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:45.201939+00:00",
       "sha256": "b71b2af196bfa09395ab2350b136a2f91ffae8f0ef5bc9c2d2c25271251d9061",
       "revisionId": 2138418
     },
@@ -12896,12 +13730,13 @@
       "url": "https://zh.wikisource.org/wiki/唐六典/卷5",
       "title": "《唐六典》卷5",
       "error": "HTTP Error 404: Not Found",
-      "attemptedAt": "2026-11-02T17:53:19.537208+00:00"
+      "attemptedAt": "2026-11-18T17:37:48.258413+00:00"
     },
     {
       "url": "https://zh.wikisource.org/wiki/唐大和上東征傳",
       "title": "《唐大和上东征传》",
       "retrievedAt": "2026-11-04T16:12:49.370866+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.322954+00:00",
       "sha256": "224141f9c6c5a5a235a467406bf9963add59c7dd35c45e84c03585f827046a88",
       "revisionId": 1542163
     },
@@ -12996,12 +13831,15 @@
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷01",
       "title": "《大唐大慈恩寺三藏法师传》卷1（求法动机、贞观三年出行及河西阻行）",
       "retrievedAt": "2026-11-01T14:22:03.292393+00:00",
-      "sha256": "9ab37edd851ec542e925fd2df7c7d910c85b442dc533bb54fcd316288e2cd270"
+      "lastCacheCheckAt": "2026-11-18T17:37:48.324057+00:00",
+      "sha256": "9ab37edd851ec542e925fd2df7c7d910c85b442dc533bb54fcd316288e2cd270",
+      "revisionId": 1967242
     },
     {
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷02",
       "title": "《大唐大慈恩寺三藏法师传》卷2",
       "retrievedAt": "2026-11-04T16:11:29.578477+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.359520+00:00",
       "sha256": "f42e0094c491de8c4455c699c7b252df7f2b999c54ef6412cdf53bc6e7be51dd",
       "revisionId": 1308133
     },
@@ -13009,6 +13847,7 @@
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷03",
       "title": "《大唐大慈恩寺三藏法师传》卷3",
       "retrievedAt": "2026-11-04T16:11:28.348049+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.404998+00:00",
       "sha256": "775e2ace27f2b698a96ff68e68bdf010416c2f3e74c6ee2b00b616687dc4a5e8",
       "revisionId": 1376015
     },
@@ -13016,6 +13855,7 @@
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷05",
       "title": "《大唐大慈恩寺三藏法师传》卷5",
       "retrievedAt": "2026-11-04T16:11:28.303037+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.446970+00:00",
       "sha256": "8df1ba7b44932b8fa23535bdfa8731e10a488e337eb5d3edd01d97b76bf1d0e4",
       "revisionId": 1504164
     },
@@ -13023,7 +13863,9 @@
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷06",
       "title": "《大唐大慈恩寺三藏法师传》卷6（归京、经像与译场）",
       "retrievedAt": "2026-11-01T14:22:03.992861+00:00",
-      "sha256": "a154cef71a3702638051306c2667edbe8796961f2be103d7787433292dd19c76"
+      "lastCacheCheckAt": "2026-11-18T17:37:48.475166+00:00",
+      "sha256": "a154cef71a3702638051306c2667edbe8796961f2be103d7787433292dd19c76",
+      "revisionId": 1375952
     },
     {
       "url": "https://zh.wikisource.org/wiki/大唐大慈恩寺三藏法師傳/卷07",
@@ -13071,6 +13913,7 @@
       "url": "https://zh.wikisource.org/wiki/天妃之神靈應記",
       "title": "郑和等《天妃之神灵应记》",
       "retrievedAt": "2026-11-04T16:12:50.509034+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.502158+00:00",
       "sha256": "c25def7724c772fad1a73706f99ed1c3367b80095041ab08997f4103b6e73cf3",
       "revisionId": 2077888
     },
@@ -13094,7 +13937,7 @@
       "url": "https://zh.wikisource.org/wiki/天工開物/自序",
       "title": "《天工开物》· 自序",
       "retrievedAt": "2026-10-08T18:03:08.427648+00:00",
-      "lastCacheCheckAt": "2026-10-08T18:12:49.742094+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.504047+00:00",
       "sha256": "86639a499d3ccd618001fdc7d1cc0c52f5e56ef078cd887e9c73b0bf393df187",
       "revisionId": 2174121
     },
@@ -13205,7 +14048,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史",
       "title": "《宋史》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:09:56.013293+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.140462+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.550005+00:00",
       "sha256": "35f50570888cd383bd1b992b2292f4863ae2b68f6ab298f636939d9cad30d7f0",
       "revisionId": 9685955
     },
@@ -13259,6 +14102,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷017",
       "title": "《宋史》卷17",
       "retrievedAt": "2026-11-04T16:52:41.100368+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.589339+00:00",
       "sha256": "b5da1584742919cfcbceaf21bc82f93392f1a68a7a1d4af59c73a679ce5ace3e",
       "revisionId": 7908323
     },
@@ -13266,6 +14110,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷018",
       "title": "《宋史》卷18",
       "retrievedAt": "2026-11-04T16:52:41.069165+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:48.600288+00:00",
       "sha256": "05fdf0c4df1bdb62728e060f3a0eabf44b0719d54ebc1813393bc5d78a5de8f5",
       "revisionId": 7908324
     },
@@ -13317,10 +14162,17 @@
       "revisionId": 2483734
     },
     {
+      "url": "https://zh.wikisource.org/wiki/宋史/卷176",
+      "title": "《宋史》卷一百七十六《食货志·常平》",
+      "retrievedAt": "2026-11-18T17:37:49.466848+00:00",
+      "sha256": "6dcb9f8613d8895ee6f9dd4942f8e98c59361652a59942bf05a36c2031cb05e1",
+      "revisionId": 2709723
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/宋史/卷181",
       "title": "《宋史》卷181",
       "retrievedAt": "2026-10-06T15:43:41.634344+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.191218+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.494321+00:00",
       "sha256": "7739f19aab89e6c6e369d9aeb58ed7a8619cf3c3cbce51fb612816618eb72d35",
       "revisionId": 2706555
     },
@@ -13376,7 +14228,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷327",
       "title": "《宋史》卷327",
       "retrievedAt": "2026-10-06T12:20:03.331819+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.058868+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.521988+00:00",
       "sha256": "7df6458782c84d6a19a35df6bb297ad2fe3e5441714f74857ae0a5365cbf9934",
       "revisionId": 1439330
     },
@@ -13392,7 +14244,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷336",
       "title": "《宋史》卷336",
       "retrievedAt": "2026-10-06T12:09:56.300819+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.230816+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.548855+00:00",
       "sha256": "80b09893cebe79b65140e75c1fa54b78389060b199dc192e1e0f47757951762f",
       "revisionId": 2058350
     },
@@ -13400,7 +14252,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷338",
       "title": "《宋史》卷338",
       "retrievedAt": "2026-10-06T12:10:26.562193+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.234980+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.577679+00:00",
       "sha256": "3cf5f878652f8161273e465bba9f1583126a0605f7a21978b150472490642edb",
       "revisionId": 1458054
     },
@@ -13448,7 +14300,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷429",
       "title": "《宋史》卷429",
       "retrievedAt": "2026-10-06T12:10:28.120046+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.256301+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.612629+00:00",
       "sha256": "12cac85c86f2e27cb8d05de95985e9acbaa466bb551898735525fa4a8592ccff",
       "revisionId": 1525603
     },
@@ -13456,6 +14308,7 @@
       "url": "https://zh.wikisource.org/wiki/宋史/卷472",
       "title": "《宋史》卷472",
       "retrievedAt": "2026-11-04T16:52:42.485928+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.641367+00:00",
       "sha256": "588ce820cbd085ab73da1d1a074057de30f7c73cdd953ac8578bedab0df56aa3",
       "revisionId": 2004306
     },
@@ -13716,6 +14569,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷31",
       "title": "《後漢書》卷31",
       "retrievedAt": "2026-11-02T17:20:35.728379+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.674943+00:00",
       "sha256": "59724ec2a28ee09f88e5922cac07f7425de2dcfb0a7578cd52b5853a49f5b8f3",
       "revisionId": 2180445
     },
@@ -13744,7 +14598,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷40上",
       "title": "《后汉书》卷40上 · 班彪班固列传",
       "retrievedAt": "2026-10-08T18:04:06.121515+00:00",
-      "lastCacheCheckAt": "2026-10-08T18:12:49.790540+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.709003+00:00",
       "sha256": "4f70eaa901377ed5e382e3b62b0398750cb9d5b11244eaa34f9700898edab670",
       "revisionId": 1761071
     },
@@ -13752,7 +14606,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷47",
       "title": "《後漢書》卷47",
       "retrievedAt": "2026-10-06T12:09:10.985982+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:36.294637+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.731273+00:00",
       "sha256": "503079404b851cdd8fe7ce4f3226a77c613d6d44890ff8ff9ac3c28c742d36c0",
       "revisionId": 2621211
     },
@@ -13782,6 +14636,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷60下",
       "title": "《後漢書》卷60下",
       "retrievedAt": "2026-11-02T17:20:23.301012+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.756641+00:00",
       "sha256": "381388dd991660e778b7709b1f23cd09049afd900dd73c6e98c0c05d5071b6f4",
       "revisionId": 2608284
     },
@@ -13848,7 +14703,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷78",
       "title": "《後漢書》卷78",
       "retrievedAt": "2026-10-06T12:09:19.303674+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.071667+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.789404+00:00",
       "sha256": "7b362af373ec45aa3a47709f5953985fee42bc0e9c9dfa0a4a5a9dc83d931de2",
       "revisionId": 2008116
     },
@@ -13863,6 +14718,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷8",
       "title": "《後漢書》卷8",
       "retrievedAt": "2026-11-02T17:20:27.596289+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.812758+00:00",
       "sha256": "b3c05d5f3bc0a5b86dfaeaf18acf65491e1099689ebea7b7edd41e4c6e8241e9",
       "revisionId": 2457393
     },
@@ -13870,7 +14726,7 @@
       "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
       "title": "《后汉书》卷84 · 列女传班昭",
       "retrievedAt": "2026-10-08T18:04:07.125874+00:00",
-      "lastCacheCheckAt": "2026-10-08T18:12:49.809317+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.873501+00:00",
       "sha256": "b047c20728bf589304d66dc182d23917eb071718452ffc8c210c9c77365d5294",
       "revisionId": 2621158
     },
@@ -13881,6 +14737,14 @@
       "lastCacheCheckAt": "2026-10-06T16:20:38.062067+00:00",
       "sha256": "9d7f9f553d08135dd27e36a4c3ad2f297d7b81f9226795bda7fcf85162911a0d",
       "revisionId": 2642024
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/後赤壁賦",
+      "title": "苏轼《后赤壁赋》",
+      "retrievedAt": "2026-11-13T12:50:32.450289+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.877591+00:00",
+      "sha256": "8c880df3c5aefdfc9aba0214c0202acdf0d9478d032e33768d416e8c6acf9621",
+      "revisionId": 1964892
     },
     {
       "url": "https://zh.wikisource.org/wiki/徐霞客遊記",
@@ -14055,7 +14919,7 @@
       "url": "https://zh.wikisource.org/wiki/新唐書",
       "title": "《新唐書》· 专题相关本纪、列传与制度志",
       "retrievedAt": "2026-10-06T16:18:48.832272+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:38.079972+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.909190+00:00",
       "sha256": "b2282dbc0d2ea8417374c1c1175a2f863f95992fffda2b63b909de6e77e24954",
       "revisionId": 2693686
     },
@@ -14063,7 +14927,9 @@
       "url": "https://zh.wikisource.org/wiki/新唐書/卷052",
       "title": "《新唐书》卷52 · 食货志（两税法及陆贽论其弊）",
       "retrievedAt": "2026-11-01T14:23:02.555585+00:00",
-      "sha256": "a7c9985cf31eab7732c82f34965de851c65a61abb972c0b2a4e376d8c147eed2"
+      "lastCacheCheckAt": "2026-11-18T17:37:49.919918+00:00",
+      "sha256": "a7c9985cf31eab7732c82f34965de851c65a61abb972c0b2a4e376d8c147eed2",
+      "revisionId": 2017601
     },
     {
       "url": "https://zh.wikisource.org/wiki/新唐書/卷119",
@@ -14143,7 +15009,7 @@
       "url": "https://zh.wikisource.org/wiki/明史",
       "title": "《明史》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:21.345311+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:38.095834+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:49.970784+00:00",
       "sha256": "09c64fecd3b9c0cd90b61eeaffb3363aa865a8ac90dda0c2fd153b7c5f23e84f",
       "revisionId": 8749077
     },
@@ -14277,7 +15143,7 @@
       "url": "https://zh.wikisource.org/wiki/明史/卷304",
       "title": "《明史》卷304",
       "retrievedAt": "2026-10-06T12:20:12.755197+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.084014+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.014515+00:00",
       "sha256": "ff8c91101df0f3e49f57a355612b33e8255f640275c9aa8ec900a8751bc503e7",
       "revisionId": 7902201
     },
@@ -14304,6 +15170,22 @@
       "lastCacheCheckAt": "2026-10-06T16:20:39.190247+00:00",
       "sha256": "1a78967b6ea3dc4a2336a81ade20ee3f7ec2bd438520d79e5d066f8c262fe8f4",
       "revisionId": 2594618
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷7",
+      "title": "《明史》卷7 · 成祖纪（运木、营建与正式迁都）",
+      "retrievedAt": "2026-11-13T12:50:39.640154+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.071719+00:00",
+      "sha256": "a58dbcca875fab4f66914ca312a5245007183ecb1e3cfb5be77def69910f35a9",
+      "revisionId": 2594620
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷72",
+      "title": "《明史》卷72 · 职官志（迁都后的南北官署）",
+      "retrievedAt": "2026-11-13T12:50:33.275916+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.108643+00:00",
+      "sha256": "e80dc36cf19b80e970a94abe253d8efc94875348f770b55e265fbbc6f5070324",
+      "revisionId": 11119353
     },
     {
       "url": "https://zh.wikisource.org/wiki/明史/卷77",
@@ -14340,7 +15222,7 @@
       "url": "https://zh.wikisource.org/wiki/晉書",
       "title": "《晉書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:19.298693+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:39.203463+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.124341+00:00",
       "sha256": "3574f65f80854c75e5da9c51ed384f3d1a5ff51381f2097837e67c4cef68500b",
       "revisionId": 9685952
     },
@@ -14512,7 +15394,7 @@
       "url": "https://zh.wikisource.org/wiki/晉書/卷082",
       "title": "《晉書》卷82",
       "retrievedAt": "2026-10-06T12:19:39.212222+00:00",
-      "lastCacheCheckAt": "2026-10-08T18:12:49.859795+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.169001+00:00",
       "sha256": "45e3536fe34163c51d000f79bba3238617e273234523b89375d4174ebe3be741",
       "revisionId": 1777407
     },
@@ -14790,7 +15672,7 @@
       "url": "https://zh.wikisource.org/wiki/欽定憲法大綱",
       "title": "钦定宪法大纲",
       "retrievedAt": "2026-10-06T15:43:56.276772+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:44.191071+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.180642+00:00",
       "sha256": "5378fc6acaa5e00f14b4df15aff61e9426394496b5fe55b24fd6e30ed11a2353",
       "revisionId": 2603060
     },
@@ -14836,7 +15718,7 @@
       "url": "https://zh.wikisource.org/wiki/歸去來兮辭",
       "title": "陶渊明 ·《归去来兮辞》并序",
       "retrievedAt": "2026-10-06T12:09:26.826901+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:44.197162+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.188187+00:00",
       "sha256": "0769a40f507a5c48264e9f46ab943154849269d659f17491982d09dff8e4a4fc",
       "revisionId": 424048
     },
@@ -14889,7 +15771,7 @@
       "url": "https://zh.wikisource.org/wiki/清史稿",
       "title": "《清史稿》",
       "retrievedAt": "2026-10-06T12:10:11.813098+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:44.203382+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.191911+00:00",
       "sha256": "677fd64ac55d250d5e69ec5a910698699efbe0053aed6566ba6e591f085cb611",
       "revisionId": 2692360
     },
@@ -15014,7 +15896,7 @@
       "url": "https://zh.wikisource.org/wiki/清史稿/卷24",
       "title": "《清史稿》卷24",
       "retrievedAt": "2026-10-06T15:44:07.031194+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:49.304211+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.196181+00:00",
       "sha256": "cbf4d2cb145c9810dcfe712c0c63c5794f45c10a55bd359a11cac632fe626042",
       "revisionId": 2170948
     },
@@ -15022,7 +15904,7 @@
       "url": "https://zh.wikisource.org/wiki/清史稿/卷25",
       "title": "《清史稿》卷25",
       "retrievedAt": "2026-10-06T12:23:23.407334+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:49.310378+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.199450+00:00",
       "sha256": "23f7f47bceba1f1460ce39e6c2efa4acb2d0103f96b68effe718ed2bf3627b60",
       "revisionId": 2692357
     },
@@ -15190,7 +16072,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書",
       "title": "《漢書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:15.253836+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:56.112039+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.226445+00:00",
       "sha256": "bea76235d5fc0272d701cfb9b7c6563ea5a1b60052c6f73d374fbd2bb391e06c",
       "revisionId": 9458837
     },
@@ -15213,6 +16095,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷023",
       "title": "《漢書》卷23",
       "retrievedAt": "2026-11-02T17:20:16.387306+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.246024+00:00",
       "sha256": "2b30c963544d4c0671a070c0642a356e52e096d0571225332fc0a527a7ebdd7f",
       "revisionId": 7908643
     },
@@ -15220,6 +16103,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷024上",
       "title": "《漢書》卷24上",
       "retrievedAt": "2026-11-02T17:20:13.480548+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.253680+00:00",
       "sha256": "4fdb8c5a23d04fc0f7976c226eb787fc64ce8c16670593d8e4f012f1ed697554",
       "revisionId": 7498330
     },
@@ -15227,7 +16111,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷024下",
       "title": "《漢書》卷24下",
       "retrievedAt": "2026-10-06T12:19:36.461022+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:56.123370+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.277941+00:00",
       "sha256": "2e303149f586f695203a57aaeb4a037756753e86e58cd9dd70cae359e154035a",
       "revisionId": 7498330
     },
@@ -15242,6 +16126,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷030",
       "title": "《漢書》卷30",
       "retrievedAt": "2026-11-02T17:20:12.070312+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.336802+00:00",
       "sha256": "b48f803d9bc692be9cda9f833b17a3f03a9d51b290f3e3b51f6d6b5a5332abbe",
       "revisionId": 7908197
     },
@@ -15307,7 +16192,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷062",
       "title": "《漢書》卷62",
       "retrievedAt": "2026-10-06T12:19:34.568048+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:56.133652+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.408528+00:00",
       "sha256": "22d53655682718bb2aeb1b9d74c9b41795704ad69f46b4da95c715a4c40bfb30",
       "revisionId": 7904593
     },
@@ -15380,7 +16265,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷088",
       "title": "《漢書》卷88",
       "retrievedAt": "2026-10-06T15:44:13.153218+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:56.147947+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.435045+00:00",
       "sha256": "0b6b7b1154df6725c617e29f5875d3ee641bdc21a207dee780cfe12fb951c838",
       "revisionId": 2666364
     },
@@ -15403,6 +16288,7 @@
       "url": "https://zh.wikisource.org/wiki/漢書/卷096上",
       "title": "汉书西域传上",
       "retrievedAt": "2026-11-01T14:15:32.491774+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.463223+00:00",
       "sha256": "290b8a99b5a067b78433b7ff4a2197ec4c6f8dd9ac18b7292431bf346c8cb511",
       "revisionId": 7907037
     },
@@ -15501,7 +16387,7 @@
       "url": "https://zh.wikisource.org/wiki/王禎農書",
       "title": "《王禎農書》",
       "retrievedAt": "2026-10-06T12:23:19.134466+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.385506+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.487862+00:00",
       "sha256": "3b6e564bf8fdd039e13ca22812ea61d028f0ba1dfd311f0fc2d9503a84855345",
       "revisionId": 463219
     },
@@ -15516,6 +16402,7 @@
       "url": "https://zh.wikisource.org/wiki/琵琶行",
       "title": "《琵琶行并序》",
       "retrievedAt": "2026-10-25T17:15:30.306139+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.550765+00:00",
       "sha256": "8adb5b9b0abf629db4499e15890a1aee2efb56c1c735310d4d838075ad8d6482",
       "revisionId": 9685214
     },
@@ -15579,6 +16466,14 @@
       "revisionId": 5447188
     },
     {
+      "url": "https://zh.wikisource.org/wiki/石壕吏",
+      "title": "杜甫《石壕吏》",
+      "retrievedAt": "2026-11-14T03:21:52.063942+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.587507+00:00",
+      "sha256": "eb3a0c63cbab778d04d1cab4599f9aae956b7ce0f6bb854a7f9e29af35d71b7d",
+      "revisionId": 842581
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/石林燕語/卷8",
       "title": "《石林燕語》卷8",
       "error": "HTTP Error 404: Not Found",
@@ -15624,7 +16519,7 @@
       "url": "https://zh.wikisource.org/wiki/答司馬諫議書",
       "title": "王安石 · 答司马谏议书",
       "retrievedAt": "2026-11-01T09:30:36.012277+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.130234+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.664101+00:00",
       "sha256": "a210e06aef864d382881d1dd100f63e6da893e523096956b64d9f0db62e54aab",
       "revisionId": 10241441
     },
@@ -15732,6 +16627,13 @@
       "title": "《自敘帖》",
       "error": "HTTP Error 404: Not Found",
       "attemptedAt": "2026-11-02T17:53:26.368222+00:00"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/與范子豐二首（之一）",
+      "title": "苏轼《与范子丰二首》之一，元丰六年八月五日",
+      "retrievedAt": "2026-11-18T17:30:19.233644+00:00",
+      "sha256": "70de7dbbdda2080464e475fde61acff240ea9b77dce77281170a7e34b387cded",
+      "revisionId": 1235268
     },
     {
       "url": "https://zh.wikisource.org/wiki/興中會章程",
@@ -15860,7 +16762,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書",
       "title": "《舊唐書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:21.360716+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:20:58.441033+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.682646+00:00",
       "sha256": "0e9829dc1a9f8843e5ba088cbbb6b6fd8fc6b89bb232f776fd11856b2f18a4f5",
       "revisionId": 9685954
     },
@@ -15876,6 +16778,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷102",
       "title": "《舊唐書》卷102",
       "retrievedAt": "2026-11-02T17:53:10.579211+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.765605+00:00",
       "sha256": "0506986d0c9c835aa9c4ed3b45fc3a09f99cde9eb4a18a4bab8365c0c8c6afe3",
       "revisionId": 2606543
     },
@@ -15979,7 +16882,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷166",
       "title": "《舊唐書》卷166",
       "retrievedAt": "2026-10-06T12:19:53.528654+00:00",
-      "lastCacheCheckAt": "2026-10-08T18:12:49.947690+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.795885+00:00",
       "sha256": "7b0fe940737d17b0148679160110bbe5903644853bab9f66a789117e56135ea9",
       "revisionId": 2588799
     },
@@ -16015,7 +16918,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷190下",
       "title": "《舊唐書》卷190下",
       "retrievedAt": "2026-10-06T12:09:45.847459+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:32:20.164548+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.837789+00:00",
       "sha256": "450896ee644555277a7e30be8240a93a001357ff7f658169370331505be9c776",
       "revisionId": 2636533
     },
@@ -16198,6 +17101,7 @@
       "url": "https://zh.wikisource.org/wiki/舊唐書/卷73",
       "title": "《舊唐書》卷73",
       "retrievedAt": "2026-11-02T17:53:09.730057+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.874095+00:00",
       "sha256": "ef07e2173c4690076c1d9886f20fe3f21b71aa7291dfb4e984835365f5f8731f",
       "revisionId": 2164590
     },
@@ -16314,7 +17218,7 @@
       "url": "https://zh.wikisource.org/wiki/蘭亭集序",
       "title": "王羲之 ·《兰亭集序》",
       "retrievedAt": "2026-10-06T12:09:25.641215+00:00",
-      "lastCacheCheckAt": "2026-11-01T09:16:34.725376+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.931504+00:00",
       "sha256": "43766e712cfc8d7c0bdbbf4b081bc5f5b14fe58389ca398acbbacfa9fefeaccb",
       "revisionId": 9707499
     },
@@ -16330,6 +17234,13 @@
       "retrievedAt": "2026-11-02T17:52:32.883130+00:00",
       "sha256": "ca3607347a047648be839be1209fadd10af36077dd76f355f8189a34a9355622",
       "revisionId": 2644545
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/補註杜詩_(四庫全書本)/卷03",
+      "title": "《补注杜诗》卷三《石壕吏》诸家注，邺城、河阳与编年",
+      "retrievedAt": "2026-11-18T17:30:20.266867+00:00",
+      "sha256": "81498c12d8db92d03bf09c9c9aa7ddd7492879b63694b0e0412745e36126408d",
+      "revisionId": 792099
     },
     {
       "url": "https://zh.wikisource.org/wiki/補註杜詩_(四庫全書本)/卷06",
@@ -16349,7 +17260,7 @@
       "url": "https://zh.wikisource.org/wiki/記上海志士與革命運動",
       "title": "冯自由 · 记上海志士与革命运动",
       "retrievedAt": "2026-10-06T12:24:46.959985+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:21:03.200179+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:50.954934+00:00",
       "sha256": "7b6808a91c57bf559afcb237a90cbf62f7b6161de430dd4f46f6d5c77510d703",
       "revisionId": 2563794
     },
@@ -16408,6 +17319,13 @@
       "revisionId": 2413007
     },
     {
+      "url": "https://zh.wikisource.org/wiki/資治通鑑/卷221",
+      "title": "《资治通鉴》卷二百二十一，唐肃宗乾元二年三月相州战事",
+      "retrievedAt": "2026-11-18T17:30:21.681196+00:00",
+      "sha256": "1bf9f939f7adf5b38154b01912763a9315ea8c8e1628dde8960bbbc70916fe7a",
+      "revisionId": 982302
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/農書_(陳旉)",
       "title": "《農書_(陳旉)》",
       "error": "HTTP Error 404: Not Found",
@@ -16443,7 +17361,7 @@
       "url": "https://zh.wikisource.org/wiki/通典/卷34",
       "title": "《通典》卷34",
       "error": "HTTP Error 404: Not Found",
-      "attemptedAt": "2026-11-02T17:53:19.110523+00:00"
+      "attemptedAt": "2026-11-18T17:37:54.468124+00:00"
     },
     {
       "url": "https://zh.wikisource.org/wiki/通志",
@@ -16591,7 +17509,7 @@
       "url": "https://zh.wikisource.org/wiki/隋書",
       "title": "《隋書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:10:20.871347+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:21:03.241203+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:52.169958+00:00",
       "sha256": "c808adfa2825bc6ad533d30f9980219e47fcf98f1cc7dd7ef70725cd9c2e5d74",
       "revisionId": 2429385
     },
@@ -16613,7 +17531,7 @@
       "url": "https://zh.wikisource.org/wiki/隋書/卷03",
       "title": "《隋書》卷3",
       "retrievedAt": "2026-10-06T15:44:24.268681+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:21:03.251264+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:52.173498+00:00",
       "sha256": "a94637ad5e00ee83d487db704b410d02a172d59b438452edc1f27d9da73d2211",
       "revisionId": 2034222
     },
@@ -16758,6 +17676,13 @@
       "revisionId": 2608775
     },
     {
+      "url": "https://zh.wikisource.org/wiki/馬關條約",
+      "title": "《马关条约》中文本 · 第1、2、4条",
+      "retrievedAt": "2026-11-18T16:19:49.984046+00:00",
+      "sha256": "04da32341bc7f5f6124d5daa29e6911df20b1b3f3ce51d992ddaee4caf713606",
+      "revisionId": 2501858
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/高僧傳",
       "title": "《高僧傳》",
       "retrievedAt": "2026-11-02T17:52:34.869420+00:00",
@@ -16768,7 +17693,7 @@
       "url": "https://zh.wikisource.org/wiki/魏書",
       "title": "《魏書》· 本纪与相关传记",
       "retrievedAt": "2026-10-06T12:09:26.922825+00:00",
-      "lastCacheCheckAt": "2026-10-06T16:21:03.273720+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:52.198497+00:00",
       "sha256": "1ea0872457587bafa0119353786f887a98b0900cef45fa35fcd694df89a0f5e8",
       "revisionId": 2639604
     },
@@ -16813,6 +17738,7 @@
       "url": "https://zh.wikisource.org/wiki/魏書/卷7下",
       "title": "《魏書》卷7",
       "retrievedAt": "2026-10-06T16:21:05.375116+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:52.200017+00:00",
       "sha256": "53a90619802d2ffb7fd57347faf880913942db03adfab3abd757982ddabe94d8",
       "revisionId": 2460667
     },
@@ -16867,6 +17793,14 @@
       "lastCacheCheckAt": "2026-10-08T18:12:50.025940+00:00",
       "sha256": "2a43dc45959ba37a97d1bc630a8d807f4d49b8d238c3ac204afbf2cd4752707c",
       "revisionId": 364607
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hans/前赤壁賦",
+      "title": "苏轼《前赤壁赋》",
+      "retrievedAt": "2026-11-13T12:50:33.727134+00:00",
+      "lastCacheCheckAt": "2026-11-18T17:37:52.202005+00:00",
+      "sha256": "c7afa654ac9fe7cfb8db7b1c6c441891f9d57b625c31bbe3a9c88a55579e8028",
+      "revisionId": 10247882
     },
     {
       "url": "https://ztjy.ucass.edu.cn/info/1006/1949.htm",

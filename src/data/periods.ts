@@ -1,6 +1,5 @@
-import { topicTours } from './topics'
 import { expandedPlaceCities } from './place-expansion'
-import type { City, Period, Tour } from '../types'
+import type { City, Period } from '../types'
 
 export const periods: Period[] = [
   {
@@ -557,8 +556,6 @@ export const cities: City[] = [
   },
   ...expandedPlaceCities,
 ]
-
-export const tours: Tour[] = topicTours
 
 // Schematic connections between attested nodes, not a reconstruction of an itinerary.
 export const silkRoadCoordinates: [number, number][] = [

@@ -31,7 +31,7 @@ Natural Earth map data is in the public domain. Time Atlas simplifies these glob
 
 ## Historical reading references
 
-Editorial Chinese introductions of events, dynasties and people are project-authored drafts, including the individual backgrounds in `src/data/backgrounds.ts` and period learning guides in `src/data/learning.ts`. Reference links are supplied within each record in `src/data/content.ts`; they are not automatically imported article text. These drafts still require source-by-source historical review. Linked pages, editions, translations and images retain their respective rights. This project does not bundle portraits or other images from those sites.
+Editorial Chinese introductions of events, dynasties and people are project-authored drafts, including the individual backgrounds in `src/data/backgrounds.ts` and period learning guides in `src/data/learning.ts`. Reference links are supplied within each record in `src/data/content.ts`; they are not automatically imported article text. These drafts still require source-by-source historical review. Linked pages, editions, translations and images retain their respective rights. Reference-page images are not bundled unless separately catalogued and licensed, as with the Museum Open Access figures documented below.
 
 The Silk Road theme uses UNESCO's [Silk Roads: the Routes Network of Chang'an–Tianshan Corridor](https://whc.unesco.org/en/list/1442/) as contextual reading. The route drawn by the application is a project-authored schematic connection of nodes, rather than a UNESCO map or an exact itinerary.
 
@@ -61,3 +61,11 @@ The website publishes project-authored summaries, source links and a metadata-on
 The GitHub repository links use the Octicons `mark-github` icon from [primer/octicons](https://github.com/primer/octicons/blob/1dafaa68a1cef892168aa0fe3d16f0b406715c15/icons/mark-github-16.svg), copyright © 2026 GitHub Inc., under [MIT](LICENSES/Octicons-MIT.txt). Its original path is retained in `src/components/GitHubIcon.tsx`; only the React wrapper, display size and inherited color are adapted.
 
 React, Vite, TypeScript, MapLibre GL JS, Lucide, Playwright, Vitest, Prettier and Shapely remain subject to their respective upstream licenses. Installed package license files accompany the development dependencies; package versions are recorded in `package-lock.json` and `scripts/requirements.txt`.
+
+## Topic illustrations from The Metropolitan Museum of Art
+
+The topic covers and figures include Open Access photographs of public-domain objects from The Metropolitan Museum of Art. The Museum identifies these images as CC0 under its [Open Access policy](https://www.metmuseum.org/hubs/open-access). Each figure links to its object record and identifies the Museum; the Museum does not endorse this project.
+
+[data/article-images.json](data/article-images.json) records each object ID, title, date, artist where known, museum credit line, object and image URLs, dimensions, SHA-256, and license. Files under `public/images/articles/met-*.jpg` preserve the Museum's web-large image bytes without editing; display scaling does not alter the files. These images remain CC0 and are not relicensed as project-authored content.
+
+The other explanatory SVG figures are project-authored diagrams, not reproductions of historical objects or AI reconstructions. Their captions identify the illustrated relationship and limits.

@@ -20,7 +20,7 @@ for (const [width, height] of [
     await search.press('ArrowDown')
     await expect(options.first()).toHaveAttribute('aria-selected', 'true')
     await search.press('Enter')
-    await expect(page).toHaveURL(/person=zhouyu(?:&|$)/)
+    await expect(page).toHaveURL('/people/zhou-yu/')
     await expect(page.locator('.person-hero h2')).toHaveText('周瑜字 公瑾')
     await expect(page.locator('.search-results')).toBeHidden()
 

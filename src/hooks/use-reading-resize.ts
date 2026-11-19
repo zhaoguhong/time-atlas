@@ -23,13 +23,28 @@ export function useReadingResize(
         return
       }
       const box = panel.getBoundingClientRect()
-      for (const offset of [4, 16, 32, 48]) {
+      const center = box.left + box.width / 2
+      const contents = panel.querySelector('.topic-reader-tools')?.getBoundingClientRect()
+      const readingTop =
+        contents && contents.left <= center && contents.right >= center
+          ? Math.max(box.top, contents.bottom)
+          : box.top
+      for (const offset of [4, 16, 32, 48, 64, 80, 112, 144]) {
         if (offset >= box.height) break
         const element = document
-          .elementFromPoint(box.left + box.width / 2, box.top + offset)
+          .elementFromPoint(center, box.top + offset)
           ?.closest<HTMLElement>(readingBlock)
         if (!element || !panel.contains(element)) continue
+        if (element.closest('.topic-reader-tools')) continue
         const block = element.getBoundingClientRect()
+        // A few pixels of the preceding paragraph below the sticky menu are
+        // not a useful reading anchor; its reflow can hide the readable text.
+        if (
+          readingTop > box.top &&
+          Math.min(block.bottom, box.bottom) - Math.max(block.top, readingTop) <
+            Math.min(24, block.height)
+        )
+          continue
         anchor = { element, top: block.top - box.top, height: block.height }
         return
       }

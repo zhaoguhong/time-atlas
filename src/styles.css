@@ -381,7 +381,7 @@ svg {
   min-width: 0;
 }
 .map-area,
-.map-canvas {
+.map-area > .map-canvas {
   position: absolute;
   inset: 0;
 }
@@ -1461,7 +1461,7 @@ svg {
   margin-left: 10px;
   font-weight: 400;
 }
-.related-people > button {
+.related-people > :is(button, a.reading-link) {
   display: flex;
   align-items: center;
   gap: 11px;
@@ -1469,12 +1469,12 @@ svg {
   width: 100%;
   padding: 11px 0;
 }
-.related-people > button > .avatar {
+.related-people > :is(button, a.reading-link) > .avatar {
   width: 35px;
   height: 35px;
   font-size: 14px;
 }
-.related-people > button > span:nth-child(2) {
+.related-people > :is(button, a.reading-link) > span:nth-child(2) {
   flex: 1;
 }
 .related-people strong {
@@ -1488,10 +1488,10 @@ svg {
   color: #a0ab90;
   margin-top: 5px;
 }
-.related-people > button > svg {
+.related-people > :is(button, a.reading-link) > svg {
   color: #a7b297;
 }
-.related-people button:hover {
+.related-people :is(button, a.reading-link):hover {
   background: #f5f7ed;
   border-radius: 4px;
 }
@@ -1611,7 +1611,7 @@ svg {
   color: #6a805a;
   margin-bottom: 12px;
 }
-.person-events button {
+.person-events :is(button, a.reading-link) {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1626,7 +1626,7 @@ svg {
   width: 34px;
   font-variant-numeric: tabular-nums;
 }
-.person-events button > span:nth-child(2) {
+.person-events :is(button, a.reading-link) > span:nth-child(2) {
   flex: 1;
 }
 .person-events strong {
@@ -1640,10 +1640,10 @@ svg {
   display: block;
   margin-top: 6px;
 }
-.person-events button > svg {
+.person-events :is(button, a.reading-link) > svg {
   color: #a6b598;
 }
-.person-events button:hover {
+.person-events :is(button, a.reading-link):hover {
   background: #f4f8ec;
 }
 .uncertain-date {
@@ -2992,4 +2992,74 @@ svg {
   text-decoration: underline;
   text-underline-offset: 3px;
   color: var(--green);
+}
+
+/* Reading links retain their card presentation and support native browser navigation. */
+a.event-card,
+a.person-list-card {
+  color: inherit;
+  text-decoration: none;
+}
+a.event-card {
+  display: block;
+}
+.home-resume {
+  position: fixed;
+  top: 80px;
+  left: 22px;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(440px, calc(100vw - 44px));
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 3px 12px #0000000a;
+  font-size: 13px;
+}
+.home-resume span {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.home-resume strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.home-resume svg {
+  flex-shrink: 0;
+}
+@media (max-width: 700px), (max-height: 540px) {
+  .home-resume {
+    top: 70px;
+    left: 12px;
+    max-width: calc(100vw - 24px);
+    padding: 8px 10px;
+  }
+}
+
+/* Reading destinations preserve native link behavior and the existing card layout. */
+.reading-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.dynasty-list-card {
+  display: block;
+}
+
+.reader-return {
+  display: block;
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--green);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
 }

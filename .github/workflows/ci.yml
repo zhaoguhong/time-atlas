@@ -32,6 +32,7 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e:smoke
+      - run: npx playwright test --config playwright.seo.config.ts
       - run: npm run test:e2e:world -- --project chrome
       - run: npm run test:e2e:refinement -- --project chrome
 

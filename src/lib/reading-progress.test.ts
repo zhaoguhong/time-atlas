@@ -77,3 +77,16 @@ test('malformed progress and unavailable storage do not prevent reading', () => 
   expect(readProgress(original)).toEqual({ topics: {}, recent: [] })
   expect(() => writeProgress({ topics: {}, recent: [] }, original)).not.toThrow()
 })
+
+test('recent reading retains article paths and rejects network-path references', () => {
+  const entries = [
+    { key: 'topic:silk-road', title: '丝绸之路', hash: '/topics/silk-road/#year=741' },
+    { key: 'event:second', title: '事件', hash: '/#event=second&tour=topic&step=1' },
+  ]
+  writeProgress(
+    { topics: {}, recent: [...entries, { key: 'bad', title: 'bad', hash: '//example.com/' }] },
+    original,
+  )
+  expect(readProgress(original).recent).toEqual(entries)
+  expect(topicStepFromHash(original[0], entries[1].hash)).toBe(1)
+})

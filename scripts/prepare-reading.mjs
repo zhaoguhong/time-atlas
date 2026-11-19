@@ -1,3 +1,4 @@
+import { buildReadingRoutes } from './reading-routes.mjs'
 import { createHash } from 'node:crypto'
 import { constants } from 'node:fs'
 import {
@@ -104,7 +105,7 @@ async function writeChanged(path, text) {
   await writeFile(temporary, text)
   await rename(temporary, path)
 }
-async function prepareReading() {
+async function prepareReading({ catalogOnly }) {
   const server = await createServer({
     root,
     server: { middlewareMode: true, ws: false },
@@ -113,6 +114,13 @@ async function prepareReading() {
   })
   try {
     const { events, people } = await server.ssrLoadModule('/src/data/content.ts')
+    const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
+    const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
+    const { places } = await server.ssrLoadModule('/src/lib/exploration.ts')
+    await writeChanged(
+      resolve(root, 'src/data/generated/reading-routes.json'),
+      JSON.stringify(buildReadingRoutes(events, people, dynasties, worldPolities, places)),
+    )
     const catalog = { events: [], people: [] }
     const activePaths = new Set()
     for (const [kind, records] of Object.entries({ events, people })) {
@@ -122,8 +130,10 @@ async function prepareReading() {
         // Preserve source IDs and shared URLs while publishing ASCII filenames.
         const fileId = readingId(record.id)
         const readingPath = `data/reading/${kind}/${fileId}-${hash}.json`
-        await writeChanged(resolve(root, 'public', readingPath), text)
-        activePaths.add(readingPath)
+        if (!catalogOnly) {
+          await writeChanged(resolve(root, 'public', readingPath), text)
+          activePaths.add(readingPath)
+        }
         const index = { ...record, readingHash: hash }
         delete index.sources
         if (fileId !== record.id) index.readingId = fileId
@@ -150,8 +160,38 @@ async function prepareReading() {
         people: compactColumns(catalog.people),
       }),
     )
+    // Resolve authoring-time merges once. Browsers need current essays and navigation,
+    // not every superseded draft and its construction functions.
+    const { readingArticles, articleGuides, articleTourCatalog } =
+      await server.ssrLoadModule('/src/data/articles.ts')
+    const { topicTours } = await server.ssrLoadModule('/src/data/topics.ts')
+    const guides = articleGuides.map(
+      ({ article, introduction, conclusion, sources, ...guide }) => guide,
+    )
+    let articleJson = JSON.stringify({
+      readingArticles,
+      articleGuides: guides,
+      legacyTours: articleTourCatalog
+        .filter((t) => !guides.some((g) => g.id === t.id))
+        .map(({ id, name, steps }) => ({ id, name, steps })),
+      legacyTourSteps: topicTours.map(({ id, steps }) => ({ id, steps })),
+    })
+    for (const asset of new Set(
+      [...articleJson.matchAll(/"(\/src\/assets\/[^"?]+\.svg)"/g)].map((m) => m[1]),
+    )) {
+      const svg = await readFile(resolve(root, asset.slice(1)), 'utf8')
+      articleJson = articleJson.replaceAll(
+        JSON.stringify(asset),
+        JSON.stringify(`data:image/svg+xml,${encodeURIComponent(svg)}`),
+      )
+    }
+    await writeChanged(resolve(root, 'src/data/generated/article-runtime.json'), articleJson)
     // Publish both indexes only after all active articles exist, then retain obsolete
     // versions outside public so incremental builds cannot distribute old prose.
+    if (catalogOnly) {
+      console.log(`Reading catalog ready: ${events.length} events and ${people.length} people.`)
+      return
+    }
     const archived = await archiveUnusedReading(root, activePaths)
     console.log(
       `Reading ready: ${events.length} events and ${people.length} people; ${archived} previous articles archived.`,
@@ -162,5 +202,5 @@ async function prepareReading() {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  await prepareReading()
+  await prepareReading({ catalogOnly: process.argv.includes('--catalog-only') })
 }

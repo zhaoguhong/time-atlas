@@ -2,6 +2,7 @@ import { expandPillarOptions, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { installPillarClock } from './pillar-clock-helpers'
 import { setSheet } from './mobile-sheet-helpers'
+import { reloadExploration } from './reading-url-helpers'
 
 async function toggleAppearance(page: Page, name: string) {
   if (!(await page.locator('.color-mode-toggle').isVisible()))
@@ -55,7 +56,7 @@ async function readingState(page: Page) {
       span: stage.getAttribute('data-span'),
       side: document.querySelector('.time-pillar')!.getAttribute('data-side'),
       selected: document.querySelector('.pillar-card.selected')?.getAttribute('data-event-id'),
-      event: new URLSearchParams(location.hash.slice(1)).get('event'),
+      path: location.pathname,
     }
   })
 }
@@ -296,7 +297,7 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'observatory')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)
-  await page.reload()
+  await reloadExploration(page)
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'observatory')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)

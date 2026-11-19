@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-labelledby="title desc">
+  <title id="title">同一位问法者，两种名字</title><desc id="desc">罗什本多取人名的音作须菩提，玄奘本用意义作善现。两个汉语名字指向同一个发问者。</desc>
+  <style>text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243e36} .head {font-size:34px;font-weight:700} .body {font-size:27px} .label {font-size:23px} .line {fill:none;stroke:#62776b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round} .rule {stroke:#cbbfa6;stroke-width:2}</style>
+  <rect width="600" height="450" rx="12" fill="#f8f5eb"/>
+  <text class="head" x="30" y="52">同一位问法者，两种名字</text><path class="rule" d="M30 73H570"/>
+  <text x="300" y="135" text-anchor="middle" style="font-size:40px;font-family:Georgia,serif">Subhūti</text>
+  <path class="line" d="M300 152v26H150v35m150-35h150v35"/>
+  <rect x="35" y="215" width="235" height="132" rx="4" fill="#eee4cf"/><rect x="330" y="215" width="235" height="132" rx="4" fill="#e2ebe4"/>
+  <text class="label" x="152" y="253" text-anchor="middle">鸠摩罗什译本</text><text class="head" x="152" y="317" text-anchor="middle">须菩提</text>
+  <text class="label" x="448" y="253" text-anchor="middle">玄奘译本</text><text class="head" x="448" y="317" text-anchor="middle">善现</text>
+  <text class="body" x="152" y="401" text-anchor="middle">依读音译名</text><text class="body" x="448" y="401" text-anchor="middle">取名义译名</text>
+</svg>

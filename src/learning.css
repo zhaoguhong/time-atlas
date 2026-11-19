@@ -570,7 +570,7 @@
   flex-wrap: wrap;
   gap: 8px 15px;
 }
-.overview-people button {
+.overview-people :is(button, a.reading-link) {
   display: flex;
   align-items: center;
   gap: 7px;

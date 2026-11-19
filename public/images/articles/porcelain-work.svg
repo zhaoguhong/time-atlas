@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="448" viewBox="0 0 600 448" role="img" aria-labelledby="title desc">
+<title id="title">图样要经过哪几双手？</title>
+<desc id="desc">买家的图样先要适应弯曲的壶身，再由画工在瓷胎上施青料，经施釉烧成，纹样才固定在釉下。</desc>
+<rect width="600" height="448" rx="14" fill="#f8f5eb"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="32" y="60" font-size="35" fill="#233d37" font-weight="650" text-anchor="start">图样要经过哪几双手？</text>
+<path d="M32 85H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M55 147h100v105H55z" fill="none" stroke="#485d54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 162l48 0v28q-4 19 -24 31q-20 -12 -24 -31z" fill="none" stroke="#567083" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M249 160h49l-5 20q40 34 33 71q-4 13 -51 13q-47 0 -51 -13q-6 -34 31 -71z" fill="none" stroke="#485d54" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M255 201l36 -2v20q-2 12 -17 21q-16 -10 -18 -21z" fill="none" stroke="#567083" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M440 160h49l-5 20q40 34 33 71q-4 13 -51 13q-47 0 -51 -13q-6 -34 31 -71z" fill="none" stroke="#176454" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M447 201l36 -2v20q-2 12 -17 21q-16 -10 -18 -21z" fill="none" stroke="#245281" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171 210h37m-8 -8 8 8 -8 8" fill="none" stroke="#904625" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M351 210h37m-8 -8 8 8 -8 8" fill="none" stroke="#904625" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="104" y="318" font-size="29" fill="#233d37" font-weight="650" text-anchor="middle">纸上图样</text>
+<text x="274" y="318" font-size="29" fill="#233d37" font-weight="650" text-anchor="middle">胎上绘画</text>
+<text x="468" y="318" font-size="29" fill="#233d37" font-weight="650" text-anchor="middle">施釉烧成</text>
+<path d="M32 353H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="395" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">同一纹样落到鼓起的壶身上，</text>
+<text x="32" y="431" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">宽窄、朝向都得由画工判断。</text>
+</g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="472" viewBox="0 0 600 472" role="img" aria-labelledby="title desc">
+<title id="title">最后一份病例报告之后</title>
+<desc id="desc">时间线从1977年索马里最后一例自然感染，到继续搜寻和独立核查，再到1980年世界卫生大会确认根除天花。</desc>
+<rect width="600" height="472" rx="14" fill="#f8f5eb"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="32" y="60" font-size="35" fill="#233d37" font-weight="650" text-anchor="start">最后一份病例报告之后</text>
+<path d="M32 85H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 137V398" fill="none" stroke="#c6c7ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64" cy="151" r="12" fill="#176454"/>
+<text x="99" y="145" font-size="26" fill="#176454" font-weight="650" text-anchor="start">1977年 · 索马里</text>
+<text x="99" y="188" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">发现最后一例自然感染的天花。</text>
+<circle cx="64" cy="268" r="9" fill="#904625"/>
+<text x="99" y="258" font-size="26" fill="#904625" font-weight="650" text-anchor="start">继续查找与核实</text>
+<text x="99" y="300" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">有地方没报病例，是确实没有，</text>
+<text x="99" y="338" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">还是有人患病却一直未被发现？</text>
+<circle cx="64" cy="401" r="12" fill="#176454"/>
+<text x="99" y="397" font-size="26" fill="#176454" font-weight="650" text-anchor="start">1980年 · 世界卫生大会</text>
+<text x="99" y="443" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">正式确认全球根除天花。</text>
+</g>
+</svg>

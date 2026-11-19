@@ -19,6 +19,7 @@ coverage/
 
 # Private local tools, deployment configuration and backups
 .local/
+/.codex-attachments/
 .env*
 .npmrc
 .pypirc
@@ -52,3 +53,7 @@ test-results/
 .DS_Store
 ._*
 Thumbs.db
+
+/src/data/generated/reading-routes.json
+
+/src/data/generated/article-runtime.json

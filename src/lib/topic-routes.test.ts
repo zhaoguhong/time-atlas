@@ -41,3 +41,15 @@ describe('documented topic routes', () => {
       }
   })
 })
+
+it('splits article-map routes at the antimeridian instead of drawing across the world', async () => {
+  const { routeMapSegments } = await import('./topic-routes')
+  const segments = routeMapSegments(topicRouteById.get('first-circumnavigation')!)
+  expect(segments.some((s) => s.some((p) => p[0] === -180))).toBe(true)
+  expect(segments.some((s) => s.some((p) => p[0] === 180))).toBe(true)
+  for (const segment of segments) {
+    expect(segment.flat().every(Number.isFinite)).toBe(true)
+    expect(Math.abs(segment[1][0] - segment[0][0])).toBeLessThanOrEqual(180)
+    expect(segment.every((p) => Math.abs(p[0]) <= 180)).toBe(true)
+  }
+})

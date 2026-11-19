@@ -87,10 +87,12 @@
   background: var(--pillar-surface);
   border-radius: 3px;
 }
-.time-pillar .pillar-now,
+.time-pillar .pillar-now {
+  background: transparent;
+  color: var(--green);
+}
 :root[data-color-mode='dark'] .time-pillar .pillar-now {
-  background: var(--pillar-now-bg);
-  color: var(--pillar-now-ink);
+  color: var(--pillar-ink);
 }
 .time-pillar .pillar-gridline {
   stroke: var(--pillar-muted);
@@ -290,11 +292,6 @@
   background: repeating-linear-gradient(90deg, var(--pillar-rule) 0 3px, transparent 3px 6px);
   pointer-events: none;
 }
-.time-pillar[data-theme='scroll'] .pillar-now {
-  border-radius: 1px;
-  outline: 1px solid #c9a580;
-  outline-offset: 2px;
-}
 /* Ribbon: two geometric rails, straight connectors and rounded sans-serif labels. */
 .time-pillar[data-theme='ribbon'] {
   --world: #357966;
@@ -373,9 +370,6 @@
 .time-pillar[data-theme='ribbon'] .pillar-card strong {
   font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
   font-weight: 500;
-}
-.time-pillar[data-theme='ribbon'] .pillar-now {
-  border-radius: 14px;
 }
 /* Every shape adapts to the global night mode. */
 :root[data-color-mode='dark'] .time-pillar {

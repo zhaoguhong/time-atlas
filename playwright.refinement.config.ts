@@ -5,7 +5,12 @@ export default defineConfig({
   testMatch: [
     'product-refinement.spec.ts',
     'topic-articles.spec.ts',
+    'topic-reading-entries.spec.ts',
+    'consolidated-articles.spec.ts',
+    'independent-articles.spec.ts',
+    'article-visuals.spec.ts',
     'topic-routes.spec.ts',
+    'topic-map-gestures.spec.ts',
     'journey-refresh.spec.ts',
     'event-reading.spec.ts',
     'content-completeness.spec.ts',

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T03:47:58.359Z",
+  "generatedAt": "2026-11-18T17:42:31.625Z",
   "sources": [
     {
       "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
@@ -23,7 +23,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -71,19 +71,11 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -94,6 +86,17 @@
         {
           "kind": "world-polity",
           "id": "world-inca"
+        }
+      ]
+    },
+    {
+      "title": "江苏省计量科学研究院赵波等 · 从《长安十二时辰》浅谈时间计量",
+      "url": "https://amr.jining.gov.cn/art/2022/4/26/art_77206_2704724.html",
+      "note": "既有专题的来源记录：济宁市市场监督管理局转载的署名技术文章；本轮对照十二时辰、百刻与九十六刻的换算说明，未将某一划分办法写成历代唯一制度。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
         }
       ]
     },
@@ -151,11 +154,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -166,6 +169,16 @@
         {
           "kind": "world-polity",
           "id": "world-majapahit"
+        }
+      ]
+    },
+    {
+      "title": "Smithsonian · Porcelain Production at Jingdezhen（生产中心与海外竞争）",
+      "url": "https://asia-archive.si.edu/exhibition/porcelain-production-jingdezhen/",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
         }
       ]
     },
@@ -232,10 +245,6 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -269,6 +278,39 @@
         {
           "kind": "event",
           "id": "category-maxwell"
+        }
+      ]
+    },
+    {
+      "title": "玄奘译《大般若波罗蜜多经》卷五百七十七",
+      "url": "https://cbetaonline.dila.edu.tw/zh/T0220_577",
+      "note": "《大正藏》第7册第220号第九会能断金刚分，对读同一位问法者的另一种译名“善现”。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "buddhist-texts-and-networks"
+        }
+      ]
+    },
+    {
+      "title": "鸠摩罗什译《金刚般若波罗蜜经》",
+      "url": "https://cbetaonline.dila.edu.tw/zh/T0235_001",
+      "note": "《大正藏》第8册第235号。卷首问法者作“须菩提”。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "buddhist-texts-and-networks"
+        }
+      ]
+    },
+    {
+      "title": "僧叡《大品经序》 · 僧祐《出三藏记集》卷八",
+      "url": "https://cbetaonline.dila.edu.tw/zh/T2145_008",
+      "note": "《大正藏》第55册第2145号，第53页中栏。序文记逍遥园译讲、口宣秦言和姚兴对读旧译。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -413,6 +455,138 @@
       ]
     },
     {
+      "title": "英国科学博物馆集团 · 1861年“Cotton Is King!”政治宣传信封",
+      "url": "https://collection.sciencemuseumgroup.org.uk/documents/aa110050516/union-patriotic-envelope-no-2-cotton-is-king",
+      "note": "馆藏YA2001.353，见图像说明及馆方对兰开夏棉荒和当地工人立场的说明。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Jug with Portuguese arms",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/202581",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Cuneiform tablet: administrative account concerning the distribution of barley and emmer",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/327384",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "west-asian-urban-worlds"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Four-master and Two Three-masters Anchored near a Fortified Island, from \"The Sailing Vessels\"",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/338712",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Safe Conduct Pass (Paiza) with Inscription in Phakpa Script",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/39624",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · The Qianlong Emperor's Southern Inspection Tour, Scroll Six: Entering Suzhou along the Grand Canal",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/41493",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Astrolabe of ‘Umar ibn Yusuf ibn ‘Umar ibn ‘Ali ibn Rasul al-Muzaffari",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/444408",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Textile Fragment",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/447109",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Camel",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/49368",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · “The Historical Buddha Preaching,” a section from The Illustrated Sutra of Past and Present Karma (Kako genzai inga kyō emaki)",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/690059",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "buddhist-texts-and-networks"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Square-form vase with decoration of Su Shi’s first and second “Rhapsody on Red Cliff”",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/701291",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
+        }
+      ]
+    },
+    {
+      "title": "馆藏元数据 · Prince Kung. Emperor of China",
+      "url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/728348",
+      "note": "博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        }
+      ]
+    },
+    {
       "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
       "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
       "note": "道光二十一年亲到镇海备防、离镇海赴戍与改赴河南河工的次序；原历月份不直接视为公历月份。",
@@ -451,6 +625,17 @@
       ]
     },
     {
+      "title": "新加坡华族文化百科 · Zhang Huimei, Qiaopi: Remittance letters from Chinese migrants",
+      "url": "https://culturepaedia.singaporeccc.org.sg/communities/qiaopi-remittance-letters-from-chinese-migrants/",
+      "note": "新加坡华人社区中的代笔、方言和侨批用途。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "qiaopi-remittances"
+        }
+      ]
+    },
+    {
       "title": "南京市档案馆 · 侵华日军南京大屠杀档案",
       "url": "https://dag.nanjing.gov.cn/daggk/gzjs/",
       "note": "馆藏介绍中的专题档案，记1937年12月13日南京陷落后持续六周的暴行及调查材料。",
@@ -481,6 +666,17 @@
       ]
     },
     {
+      "title": "华盛顿大学 · Daniel C. Waugh, The Mongols",
+      "url": "https://depts.washington.edu/silkroad/exhibit/mongols/essay.html",
+      "note": "参照工匠强制迁徙和跨洲贸易利益分配；该页个别年代有误，未据其1271年灭宋等表述采用纪年。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
+        }
+      ]
+    },
+    {
       "title": "University of Washington · Sogdian Ancient Letters（书信译文与导读）",
       "url": "https://depts.washington.edu/silkroad/texts/sogdlet.html",
       "references": [
@@ -490,7 +686,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -505,7 +701,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -729,7 +925,7 @@
         },
         {
           "kind": "topic",
-          "id": "xuanzang-pilgrimage"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -834,7 +1030,18 @@
         },
         {
           "kind": "topic",
-          "id": "ganjin-crossing"
+          "id": "buddhist-texts-and-networks"
+        }
+      ]
+    },
+    {
+      "title": "牛津大学 Taylor Editions · Ein Sermon von Ablass und Gnade",
+      "url": "https://editions.mml.ox.ac.uk/editions/ablassgnade6/",
+      "note": "路德德语写作、早期印刷传播与论题的关系。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "reformation"
         }
       ]
     },
@@ -891,14 +1098,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -1097,15 +1296,11 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
           "id": "chinese-literature-and-performance"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
         }
       ]
     },
@@ -1121,10 +1316,17 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
-        },
+        }
+      ]
+    },
+    {
+      "title": "德国史文献与图像 · 施瓦本农民《十二条款》（1525年）",
+      "url": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/grievances-and-demands-the-twelve-articles-of-the-swabian-peasants-february-27-march-1-1525",
+      "note": "第1条提出村社选择牧师，第5条讨论林木的使用，第6条涉及劳役。",
+      "references": [
         {
           "kind": "topic",
-          "id": "longitude-and-clock"
+          "id": "reformation"
         }
       ]
     },
@@ -1136,6 +1338,10 @@
         {
           "kind": "event",
           "id": "depth-augsburg-peace"
+        },
+        {
+          "kind": "topic",
+          "id": "reformation"
         }
       ]
     },
@@ -1160,11 +1366,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -1191,6 +1397,17 @@
       ]
     },
     {
+      "title": "全国高等院校古籍整理研究工作委员会 · 装帧制度",
+      "url": "https://gwh.pku.edu.cn/info/1159/1222.htm",
+      "note": "既有专题的来源记录：本轮对照卷轴装、经折装、蝴蝶装、包背装和线装段；据实物图例说明不同装帧仍可并用，不采用某一装帧“唯一存世”等概括作为本文判断。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
+        }
+      ]
+    },
+    {
       "title": "湖北省博物馆 · 曾侯乙编钟",
       "url": "https://hbww.org.cn/zgzb/p/4695.html",
       "note": "馆藏编钟、钟架及楚惠王赠钟说明；前433年作为墓葬时代参照，不认定整套编钟均在同年铸成。",
@@ -1212,11 +1429,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -1232,6 +1445,16 @@
       ]
     },
     {
+      "title": "法国国家图书馆 · 海地独立赔款及相关债务",
+      "url": "https://heritage.bnf.fr/france-ameriques/dette-lindependance-dhaiti-lesclave-comme-unite-compte-1794-1922",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "constitutions-rights-and-participation"
+        }
+      ]
+    },
+    {
       "title": "UK Parliament · The Transatlantic Slave Trade",
       "url": "https://heritagecollections.parliament.uk/stories/the-transatlantic-slave-trade/",
       "note": "Slavery Abolition Act, 1833小节，生效年份、赔偿与学徒制；学徒制1838年结束另见议会研究报告。",
@@ -1242,11 +1465,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -1302,6 +1521,56 @@
         {
           "kind": "event",
           "id": "world-berlin-congress"
+        }
+      ]
+    },
+    {
+      "title": "巴黎和会记录，1919年4月30日中午，日本代表陈述山东问题立场",
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv05/d32",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "world-wars"
+        }
+      ]
+    },
+    {
+      "title": "巴黎和会记录，1919年6月下旬，中国代表提出保留山东条款",
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv06/d75",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "world-wars"
+        }
+      ]
+    },
+    {
+      "title": "《凡尔赛条约》山东条款第156—158条及1922年交接记录",
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch13subch8",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "world-wars"
+        }
+      ]
+    },
+    {
+      "title": "华盛顿会议记录，1922年山东交涉及胶济铁路赎回条件",
+      "url": "https://history.state.gov/historicaldocuments/frus1922v01/d88",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "world-wars"
+        }
+      ]
+    },
+    {
+      "title": "美国国务院历史办公室 · 海地革命与国际局势，1791—1804",
+      "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -1479,10 +1748,6 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -1512,11 +1777,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -1535,11 +1796,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -1550,6 +1807,26 @@
         {
           "kind": "event",
           "id": "kuahuqiao-canoe"
+        }
+      ]
+    },
+    {
+      "title": "英国图书馆国际敦煌项目 · 《金刚经》卷末题记（王玠施印缘起与纪年）",
+      "url": "https://idp.bl.uk/blog/the-diamond-sutra-on-display-text-panel-6-with-colophon/",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
+        }
+      ]
+    },
+    {
+      "title": "英国图书馆国际敦煌项目 · Or.8210/P.2《金刚经》（尺寸、材质与发现地点）",
+      "url": "https://idp.bl.uk/collection/51FDAEAFB4A24E2E9981692A98130BC8/",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -1658,6 +1935,17 @@
       ]
     },
     {
+      "title": "陈靖云、肖达顺 · 《“南海Ⅰ号”沉船遗址形成过程的考古学观察》",
+      "url": "https://img.dpm.org.cn/Uploads/file/2025/06/19/1750318605QEZMgXdaY260.pdf",
+      "note": "《故宫博物院院刊》2025年第3期。第4页讨论淳熙元宝、德化罐墨书与出航年代，第11页讨论网坠等后期遗物。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "nanhai-shipwreck"
+        }
+      ]
+    },
+    {
       "title": "印度国民大会党 · 1885—1895年创立时期",
       "url": "https://inc.in/brief-history-of-congress/1885-1895",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -1676,6 +1964,16 @@
         {
           "kind": "event",
           "id": "world-indian-national-congress"
+        }
+      ]
+    },
+    {
+      "title": "世界卫生组织公报 · Deria等记录索马里最后一例地方性天花的调查，1980，58卷，279—283页",
+      "url": "https://iris.who.int/bitstream/handle/10665/261900/PMC2395794.pdf",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "disease-medicine-public-health"
         }
       ]
     },
@@ -1905,7 +2203,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -1931,7 +2229,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -1946,7 +2244,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -1962,6 +2260,16 @@
       ]
     },
     {
+      "title": "法国佩皮尼昂大学法律文库 · 圣多明各1801年宪法全文，第1、3、14—16、28条",
+      "url": "https://mjp.univ-perp.fr/constit/ht1801.htm",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "constitutions-rights-and-participation"
+        }
+      ]
+    },
+    {
       "title": "International Mozarteum Foundation · Wolfgang Amadé Mozart",
       "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
       "note": "1756—1791年、音乐家庭、南内尔及家庭巡演；与父亲同页介绍的1756年小提琴教材不是他的作品。",
@@ -1969,6 +2277,28 @@
         {
           "kind": "person",
           "id": "category-person-mozart"
+        }
+      ]
+    },
+    {
+      "title": "广东海上丝绸之路博物馆 · “南海Ⅰ号”沉船考古发掘与保护",
+      "url": "https://msrmuseum.com/News/Detailed/59",
+      "note": "1987年发现、1989年调查命名及沉船上部堆积的早期清理记录。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "nanhai-shipwreck"
+        }
+      ]
+    },
+    {
+      "title": "Musée protestant · Martin Luther (1483–1546)",
+      "url": "https://museeprotestant.org/en/notice/martin-luther-1483-1546/",
+      "note": "与罗马决裂、诸侯保护及农民战争；有关钉门场景未按该页的确定表述采用。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "reformation"
         }
       ]
     },
@@ -2038,11 +2368,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -2076,11 +2402,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -2128,7 +2450,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -2166,6 +2488,17 @@
         {
           "kind": "topic",
           "id": "west-asian-urban-worlds"
+        }
+      ]
+    },
+    {
+      "title": "章永乐 · 重审辛亥革命中的南北议和（北京大学）",
+      "url": "https://oldnews.pku.edu.cn/wyyd/dslt/c27ffcd01d69482bbd40e9b5c3b05648.htm",
+      "note": "参照其关于军事、财政与国际条件如何影响议和的讨论。文中的具体解释属于研究观点。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "xinhai-revolution"
         }
       ]
     },
@@ -2233,7 +2566,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2248,15 +2581,11 @@
         },
         {
           "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "central-asian-oases"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
         }
       ]
     },
@@ -2389,6 +2718,16 @@
       ]
     },
     {
+      "title": "OpenStax · 14.2 Chinggis Khan and the Early Mongol Empire",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/14-2-chinggis-khan-and-the-early-mongol-empire",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
+        }
+      ]
+    },
+    {
       "title": "OpenStax · World History 1 · 14-3-the-mongol-empire-fragments",
       "url": "https://openstax.org/books/world-history-volume-1/pages/14-3-the-mongol-empire-fragments",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -2404,6 +2743,10 @@
         {
           "kind": "world-polity",
           "id": "world-chagatai"
+        },
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
         },
         {
           "kind": "topic",
@@ -2442,7 +2785,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2458,10 +2801,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -2598,15 +2937,11 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2637,15 +2972,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "translation-workshops"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2790,11 +3121,11 @@
         },
         {
           "kind": "topic",
-          "id": "american-urban-traditions"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2825,11 +3156,11 @@
         },
         {
           "kind": "topic",
-          "id": "american-urban-traditions"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2848,7 +3179,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -2872,14 +3203,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -2980,11 +3303,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -3003,15 +3326,11 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -3057,7 +3376,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -3072,7 +3391,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -3133,6 +3452,10 @@
         {
           "kind": "event",
           "id": "world-westphalia"
+        },
+        {
+          "kind": "topic",
+          "id": "reformation"
         }
       ]
     },
@@ -3168,14 +3491,6 @@
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "columbus-atlantic"
-        },
-        {
-          "kind": "topic",
-          "id": "gama-indian-ocean"
         }
       ]
     },
@@ -3205,11 +3520,15 @@
         },
         {
           "kind": "topic",
-          "id": "american-urban-traditions"
+          "id": "age-of-exploration"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
+        },
+        {
+          "kind": "topic",
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -3248,10 +3567,6 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -3297,11 +3612,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -3374,11 +3685,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -3401,19 +3708,11 @@
         },
         {
           "kind": "topic",
+          "id": "constitutions-rights-and-participation"
+        },
+        {
+          "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
         }
       ]
     },
@@ -4787,7 +5086,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -4840,10 +5139,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -4884,11 +5179,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -4914,6 +5205,17 @@
       ]
     },
     {
+      "title": "高龙 · 川绅路事主张分歧与四川保路运动的演变",
+      "url": "https://qsyj.ruc.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2948",
+      "note": "《清史研究》2026年第2期，第150—164页。参看川绅对保路、保款及国有换股的不同主张。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "xinhai-revolution"
+        }
+      ]
+    },
+    {
       "title": "印度尼西亚教育文化部文献库 · Nagarakertagama dan Trowulan",
       "url": "https://repositori.kemendikdasmen.go.id/9924/",
       "note": "普拉班查、1365年成文及特罗乌兰遗址之间关系的研究入口。",
@@ -4924,7 +5226,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -4950,11 +5252,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -4992,6 +5290,16 @@
         {
           "kind": "event",
           "id": "world-hundred-years-war"
+        }
+      ]
+    },
+    {
+      "title": "德累斯顿国家艺术收藏 · 中国瓷器生产与贸易",
+      "url": "https://royalporcelaincollection.skd.museum/catalogue/1/text/122",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
         }
       ]
     },
@@ -5039,11 +5347,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5069,7 +5377,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -5218,6 +5526,16 @@
       ]
     },
     {
+      "title": "英国博物馆 / Smarthistory · Chinese porcelain: production and export（胎釉、生产与外销）",
+      "url": "https://smarthistory.org/chinese-porcelain-production-and-export/",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
+        }
+      ]
+    },
+    {
       "title": "UNESCO / Smarthistory · Giant Buddha of Leshan",
       "url": "https://smarthistory.org/giant-buddha-leshan/",
       "note": "UNESCO合作条目的Artwork details明确713—803年。",
@@ -5334,7 +5652,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5371,7 +5689,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5386,7 +5704,7 @@
         },
         {
           "kind": "topic",
-          "id": "african-cities-and-networks"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5446,10 +5764,6 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
-        },
-        {
-          "kind": "topic",
-          "id": "longitude-and-clock"
         }
       ]
     },
@@ -5474,11 +5788,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -5503,7 +5813,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -5580,11 +5890,11 @@
         },
         {
           "kind": "topic",
-          "id": "american-urban-traditions"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5619,11 +5929,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -5647,11 +5953,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -5676,11 +5982,7 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
+          "id": "silk-road"
         },
         {
           "kind": "place",
@@ -5720,10 +6022,6 @@
         {
           "kind": "topic",
           "id": "silk-road"
-        },
-        {
-          "kind": "topic",
-          "id": "hexi-and-oases"
         }
       ]
     },
@@ -5738,10 +6036,6 @@
         {
           "kind": "topic",
           "id": "grand-canal"
-        },
-        {
-          "kind": "topic",
-          "id": "capital-and-grain"
         }
       ]
     },
@@ -5777,10 +6071,6 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
         }
       ]
     },
@@ -5794,19 +6084,11 @@
         },
         {
           "kind": "topic",
-          "id": "song-learning"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "indian-ocean-ports"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
+          "id": "tax-money-markets"
         },
         {
           "kind": "place",
@@ -5835,7 +6117,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         },
         {
           "kind": "place",
@@ -5890,6 +6172,16 @@
         {
           "kind": "place",
           "id": "florence"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · Jingdezhen Handicraft Porcelain Industry Sites（原料、工序及水运体系）",
+      "url": "https://whc.unesco.org/en/list/1765/",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
         }
       ]
     },
@@ -6008,11 +6300,11 @@
         },
         {
           "kind": "topic",
-          "id": "american-urban-traditions"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -6148,7 +6440,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         },
         {
           "kind": "place",
@@ -6177,7 +6469,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         },
         {
           "kind": "place",
@@ -6196,7 +6488,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -6219,7 +6511,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         },
         {
           "kind": "place",
@@ -6370,6 +6662,27 @@
       ]
     },
     {
+      "title": "圣多明各1801年宪法，法文文本另本",
+      "url": "https://wp.stu.ca/worldhistory/wp-content/uploads/sites/4/2015/07/Constitution-dHaiti-1801-French.pdf",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "constitutions-rights-and-participation"
+        }
+      ]
+    },
+    {
+      "title": "北京市文物局 · 大运河",
+      "url": "https://wwj.beijing.gov.cn/bjww/362771/362778/364359/",
+      "note": "遗产构成、通惠河北京段和澄清上闸遗址。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
       "title": "北京市文物局 · 京张铁路南口段至八达岭段",
       "url": "https://wwj.beijing.gov.cn/bjww/362771/362779/dqpqgzdwwbhdw/523544/index.html",
       "note": "文物保护单位说明，记1905年开工、1909年建成及人字形铁路、青龙桥车站等遗存。",
@@ -6398,6 +6711,17 @@
         {
           "kind": "event",
           "id": "modern-chernobyl"
+        }
+      ]
+    },
+    {
+      "title": "辛亥革命博物院 · 共和之基——辛亥革命历史陈列",
+      "url": "https://www.1911museum.cn/view_59.html",
+      "note": "武昌起义、各省响应与南京临时政府的基本进程。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "xinhai-revolution"
         }
       ]
     },
@@ -6465,11 +6789,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -6787,7 +7107,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -7329,11 +7649,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -7440,7 +7756,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -7885,11 +8201,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -8681,7 +8993,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -8701,10 +9013,6 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
-        },
-        {
-          "kind": "topic",
-          "id": "longitude-and-clock"
         }
       ]
     },
@@ -9307,23 +9615,19 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
+          "id": "constitutions-rights-and-participation"
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "writing-and-knowledge"
         },
         {
           "kind": "topic",
-          "id": "school-and-access"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -9760,11 +10064,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -10753,7 +11053,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -10834,11 +11134,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -11308,7 +11608,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -11852,11 +12152,11 @@
         },
         {
           "kind": "topic",
-          "id": "messages-distance-and-access"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "qin-conquest-and-government"
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -12260,11 +12560,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -12743,6 +13039,16 @@
       ]
     },
     {
+      "title": "Cambridge · The Manila correspondencia and the institutional underpinnings of the trans-Pacific silver trade（马尼拉与跨太平洋白银交换）",
+      "url": "https://www.cambridge.org/core/journals/revista-de-historia-economica-journal-of-iberian-and-latin-american-economic-history/article/manila-correspondencia-and-the-institutional-underpinnings-of-the-transpacific-silver-trade-in-the-long-eighteenth-century/E47FEA5FE9C9E0B73968B8F2E6581D8D",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        }
+      ]
+    },
+    {
       "title": "加拿大政府 · The history of Canada Day",
       "url": "https://www.canada.ca/en/canadian-heritage/campaigns/canada-day/about.html",
       "note": "史实、年代与地理背景参考；中文叙述由本站独立编写。",
@@ -12782,6 +13088,28 @@
         {
           "kind": "journey",
           "id": "zhenghe-record-last-longwan"
+        }
+      ]
+    },
+    {
+      "title": "美国疾控中心 · 天花史",
+      "url": "https://www.cdc.gov/smallpox/about/history.html",
+      "note": "核对马林在梅尔卡的职业、起初的判断、确诊与康复，以及伯明翰1978年事件。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "disease-medicine-public-health"
+        }
+      ]
+    },
+    {
+      "title": "成都博物馆 · 看展丨“钱眼”看成都",
+      "url": "https://www.cdmuseum.com/xinwen/202204/2721.html",
+      "note": "既有专题的来源记录：本轮对照“交子”小节：四川铁钱携带、私人票据转让，以及天圣元年（1023年）设交子务、次年正式发行的区分。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tax-money-markets"
         }
       ]
     },
@@ -12873,14 +13201,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -12905,14 +13225,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -12923,6 +13235,50 @@
         {
           "kind": "event",
           "id": "majiayao-pottery"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 王永红《五夜漏声催晓箭》",
+      "url": "https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_33123.shtml",
+      "note": "既有专题的来源记录：本轮对照青铜漏壶的浮箭、水压变化、调节流量及汉代滴漏报时制度段。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 蔡少明先生捐赠的侨批文物入藏国博",
+      "url": "https://www.chnmuseum.cn/zp/jzrgs/202203/t20220317_254392.shtml",
+      "note": "2021年入藏的文献有家信，也有总包、帮单、存根、收条和汇票。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "qiaopi-remittances"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 大明通行宝钞",
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_25374.shtml",
+      "note": "既有专题的来源记录：本轮对照藏品说明中的1375年印行、面额图文、比价规定及大量发行后贬值；不采用同页互有出入的机构设立年和停用年。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tax-money-markets"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 ·《农书》（成书、结构与农器图谱）",
+      "url": "https://www.chnmuseum.cn/zp/zpml/gjwxbt/202203/t20220301_254053.shtml",
+      "note": "既有专题的来源记录：馆藏介绍的编撰经过和三部分内容；本文不采用存在版本差异的卷数作统一概括。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -12947,15 +13303,11 @@
         },
         {
           "kind": "topic",
-          "id": "self-strengthening-course"
+          "id": "opium-wars"
         },
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -12970,7 +13322,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -12981,6 +13333,17 @@
         {
           "kind": "event",
           "id": "banpo-village"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 铜壶滴漏",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202010/t20201028_247937.shtml",
+      "note": "既有专题的来源记录：本轮对照1316年制造纪年、四壶次序、溢水稳流、受水浮箭及铜尺读数说明；正文仅以该藏品解释复式漏壶的一种结构。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
         }
       ]
     },
@@ -13015,6 +13378,17 @@
         {
           "kind": "dynasty",
           "id": "western-zhou"
+        }
+      ]
+    },
+    {
+      "title": "中国国家博物馆 · 日晷",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202110/t20211029_251999.shtml",
+      "note": "既有专题的来源记录：本轮对照馆藏说明中的汉代日晷刻线、昼夜百刻、日照观测与校准漏壶段；不据这件器物概括所有日晷的安装方式。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
         }
       ]
     },
@@ -13209,10 +13583,6 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
         }
       ]
     },
@@ -13239,10 +13609,6 @@
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "magellan-elcano"
         }
       ]
     },
@@ -13277,7 +13643,7 @@
         },
         {
           "kind": "topic",
-          "id": "ganjin-crossing"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -13370,6 +13736,10 @@
         {
           "kind": "person",
           "id": "q1822568"
+        },
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -13419,7 +13789,7 @@
       "references": [
         {
           "kind": "topic",
-          "id": "self-strengthening-course"
+          "id": "opium-wars"
         }
       ]
     },
@@ -13567,15 +13937,11 @@
         },
         {
           "kind": "topic",
-          "id": "first-sino-japanese"
+          "id": "opium-wars"
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -13697,11 +14063,11 @@
         },
         {
           "kind": "topic",
-          "id": "qing-state"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "tax-enters-household"
+          "id": "tax-money-markets"
         }
       ]
     },
@@ -13884,11 +14250,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -13903,11 +14265,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -13978,6 +14336,17 @@
       ]
     },
     {
+      "title": "福建省档案局 · 《福建省侨批档案保护与利用办法》解读",
+      "url": "https://www.fj.gov.cn/jdhy/zcjd/202110/P020211015373827252740.pdf",
+      "note": "“来批”“回批”与侨批档案的范围。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "qiaopi-remittances"
+        }
+      ]
+    },
+    {
       "title": "外交部 · 外交史上的今天（鉴真754年抵日）",
       "url": "https://www.fmprc.gov.cn/ziliao_674904/historytoday_674971/200301/t20030123_9284495.shtml",
       "note": "采用西历754年抵日，不据网页日期将太宰府活动与秋妻屋浦登陆混为同一日。",
@@ -13996,7 +14365,7 @@
         },
         {
           "kind": "topic",
-          "id": "ganjin-crossing"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -14008,6 +14377,17 @@
         {
           "kind": "person",
           "id": "category-person-shakespeare"
+        }
+      ]
+    },
+    {
+      "title": "福州市人民政府 · 船政创办的历史背景和发展过程",
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/zjrc/mdfc/lswh/201809/t20180928_2624963.htm",
+      "note": "核对左宗棠奏设船政、前后学堂分工，以及“万年清”“艺新”“平远”等船的先后与人员来源。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "opium-wars"
         }
       ]
     },
@@ -14147,6 +14527,17 @@
       ]
     },
     {
+      "title": "宋应星《天工开物》· 杀青（古腾堡计划原典录文）",
+      "url": "https://www.gutenberg.org/cache/epub/25273/pg25273-images.html",
+      "note": "既有专题的来源记录：正文《杀青第十三》中的《造竹纸》《造皮纸》段，对应原料处理、捣浆、抄纸与干燥。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
+        }
+      ]
+    },
+    {
       "title": "容闳 · My Life in China and America，第十三至十五章",
       "url": "https://www.gutenberg.org/cache/epub/54635/pg54635-images.html",
       "note": "自述中的机器采购与运送记载，和机构创办、后续生产分别理解。",
@@ -14164,64 +14555,48 @@
     {
       "title": "哥伦布首次航行日记及书信 · 1492—1493",
       "url": "https://www.gutenberg.org/files/18571/18571-h/18571-h.htm",
-      "note": "The Northmen, Columbus and Cabot, 985–1503（1906年编译本）中首次航行日记；原日记以拉斯·卡萨斯节录本传世，路线参照8月3日、10月12日及1493年2—3月条。",
+      "note": "既有专题的来源记录：The Northmen, Columbus and Cabot, 985–1503（1906年编译本）中首次航行日记；原日记以拉斯·卡萨斯节录本传世，路线参照8月3日、10月12日及1493年2—3月条。",
       "references": [
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "columbus-atlantic"
         }
       ]
     },
     {
       "title": "皮加费塔《首次环球航行记》· 1519—1521年航段",
       "url": "https://www.gutenberg.org/files/42884/42884-h/42884-h.htm",
-      "note": "The Philippine Islands, vol. XXXIII，意大利文及1906年英译；文中的宗教奇迹、异域传闻与殖民者称谓不作独立事实使用。",
+      "note": "既有专题的来源记录：The Philippine Islands, vol. XXXIII，意大利文及1906年英译；文中的宗教奇迹、异域传闻与殖民者称谓不作独立事实使用。",
       "references": [
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "magellan-elcano"
         }
       ]
     },
     {
       "title": "《达·伽马首次航行日记，1497—1499》",
       "url": "https://www.gutenberg.org/files/46440/46440-h/46440-h.htm",
-      "note": "随船者记录；E. G. Ravenstein 1898年英译本。路线据正文各港及日期，区别编者注与航海者记述。",
+      "note": "既有专题的来源记录：随船者记录；E. G. Ravenstein 1898年英译本。路线据正文各港及日期，区别编者注与航海者记述。",
       "references": [
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "gama-indian-ocean"
         }
       ]
     },
     {
       "title": "皮加费塔《首次环球航行记》· 返航部分",
       "url": "https://www.gutenberg.org/files/47927/47927-h/47927-h.htm",
-      "note": "The Philippine Islands, vol. XXXIV，续记帝汶、印度洋、好望角与1522年返抵西班牙。",
+      "note": "既有专题的来源记录：The Philippine Islands, vol. XXXIV，续记帝汶、印度洋、好望角与1522年返抵西班牙。",
       "references": [
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "magellan-elcano"
         }
       ]
     },
@@ -14303,6 +14678,17 @@
       ]
     },
     {
+      "title": "香港天文台 · 视太阳时",
+      "url": "https://www.hko.gov.hk/sc/gts/time/basicterms-apparentsolartime.htm",
+      "note": "既有专题的来源记录：本轮对照视太阳时的定义，以及日晷直接显示视太阳时的说明。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
       "title": "澳门文化局 · 回归贺礼陈列馆",
       "url": "https://www.icm.gov.mo/handovermuseum/en",
       "note": "馆方说明明确1999年12月20日交接场地与2003—2004年陈列馆建设，区分历史事件和纪念设施。",
@@ -14316,15 +14702,11 @@
     {
       "title": "西班牙国家地理研究所 · 首次环球航行图",
       "url": "https://www.ign.es/web/resources/expo/madrid2019/VueltaMundo_web.pdf",
-      "note": "1519—1522年主要航段与日期。地图上的虚线仅概括航向，不复制原图或声称精确复原。",
+      "note": "既有专题的来源记录：1519—1522年主要航段与日期。地图上的虚线仅概括航向，不复制原图或声称精确复原。",
       "references": [
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "magellan-elcano"
         }
       ]
     },
@@ -14383,7 +14765,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -14517,10 +14899,6 @@
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "columbus-atlantic"
         }
       ]
     },
@@ -14624,6 +15002,49 @@
       ]
     },
     {
+      "title": "路德 · 九十五条论题（Luther2017 原典）",
+      "url": "https://www.luther2017.de/de/martin-luther/texte-quellen/die-95-thesen/",
+      "note": "赎罪券争论的原典；不把后来的完整新教教义倒写到1517年的论题中。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "reformation"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 带葡萄牙王室纹章的执壶（藏品61.196）",
+      "url": "https://www.metmuseum.org/art/collection/search/202581",
+      "note": "馆藏辨识其景德镇胎釉、约1520—1540年的年代、器形来源和壶身倒置的纹章。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 约公元前3100—前2900年的谷物账板，1988.433.2（可能出自乌鲁克）",
+      "url": "https://www.metmuseum.org/art/collection/search/327384",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "west-asian-urban-worlds"
+        }
+      ]
+    },
+    {
+      "title": "图片来源 · 弗兰斯·许斯据老彼得·勃鲁盖尔的图样刻制，1561—1565年。四桅船旁还泊着两艘三桅船，后方的岛上建有防御工事和灯塔。",
+      "url": "https://www.metmuseum.org/art/collection/search/338712",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · Standing Buddha Offering Protection（5世纪马图拉佛像）",
       "url": "https://www.metmuseum.org/art/collection/search/38198",
       "note": "史实与年代参考；中文叙述由本站独立编写。",
@@ -14634,11 +15055,53 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 元代八思巴文铁牌，1993.256（形制、材料与牌文）",
+      "url": "https://www.metmuseum.org/art/collection/search/39624",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
+        }
+      ]
+    },
+    {
+      "title": "图片来源 · 徐扬1770年绘成《乾隆南巡图》第六卷，画的是乾隆1751年循运河进入苏州。截取的这一段里，带篷的长船在水面上行进，行列沿着河岸展开。",
+      "url": "https://www.metmuseum.org/art/collection/search/41493",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 1291年也门星盘",
+      "url": "https://www.metmuseum.org/art/collection/search/444408",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
+      "title": "图片来源 · 这块18世纪印花棉布据馆方判断产自印度。英国开始用机器纺纱时，商人和买家早已熟悉由印度织工和印染工制作的花布。",
+      "url": "https://www.metmuseum.org/art/collection/search/447109",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -14654,6 +15117,49 @@
       ]
     },
     {
+      "title": "图片来源 · 这件8世纪的唐三彩陶俑塑出了双峰驼昂首站立的姿态。商队借助驼力穿越绿洲之间的旱地，沿途仍要有人照料驼群。",
+      "url": "https://www.metmuseum.org/art/collection/search/49368",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        }
+      ]
+    },
+    {
+      "title": "图片来源 · 日本8世纪中叶《因果经》绘卷。上排画释迦说法，下排抄录经文，是鉴真生活的时代在日本流传佛教故事的一种形式。",
+      "url": "https://www.metmuseum.org/art/collection/search/690059",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "buddhist-texts-and-networks"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · 清康熙青花《赤壁赋》方瓶",
+      "url": "https://www.metmuseum.org/art/collection/search/701291",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
+        }
+      ]
+    },
+    {
+      "title": "图片来源 · 1860年，摄影师费利斯·比托为恭亲王奕訢拍下这张肖像。馆藏英文题名把他误称为皇帝，他当时以亲王身份参与交涉。",
+      "url": "https://www.metmuseum.org/art/collection/search/728348",
+      "note": "大都会艺术博物馆 · 开放获取（CC0）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · Bowl with peony design（2021.180）",
       "url": "https://www.metmuseum.org/art/collection/search/853977",
       "note": "馆藏标十五至十六世纪、西萨查那莱Ko Noi产地、釉下铁绘与对中国花卉装饰的转化。",
@@ -14661,6 +15167,20 @@
         {
           "kind": "event",
           "id": "completeness-sisatchanalai-ceramics"
+        }
+      ]
+    },
+    {
+      "title": "大都会艺术博物馆 · East and West: Chinese Export Porcelain",
+      "url": "https://www.metmuseum.org/essays/east-and-west-chinese-export-porcelain",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "age-of-exploration"
+        },
+        {
+          "kind": "topic",
+          "id": "porcelain-world"
         }
       ]
     },
@@ -14744,6 +15264,17 @@
       ]
     },
     {
+      "title": "大都会艺术博物馆 · The Legacy of Genghis Khan",
+      "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+      "note": "蒙古统治下的地方行政、驿传、工匠流动与艺术交流。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
+        }
+      ]
+    },
+    {
       "title": "大都会艺术博物馆 · The Origins of Writing（记账、表意符号与语音化）",
       "url": "https://www.metmuseum.org/essays/the-origins-of-writing",
       "references": [
@@ -14813,19 +15344,15 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "port-and-hinterland"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -14865,7 +15392,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -14911,7 +15438,7 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -14966,7 +15493,29 @@
         },
         {
           "kind": "topic",
-          "id": "southeast-asian-centres"
+          "id": "west-asian-urban-worlds"
+        }
+      ]
+    },
+    {
+      "title": "广东海上丝绸之路博物馆 · 从广州出发——“南海Ⅰ号”与海上丝绸之路",
+      "url": "https://www.msrmuseum.com/News/Detailed/1220",
+      "note": "博物馆展览以出水广东罐和窑址材料对读容器的生产、运输与使用。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "nanhai-shipwreck"
+        }
+      ]
+    },
+    {
+      "title": "广东海上丝绸之路博物馆 · 大事记（2018年修复档案）",
+      "url": "https://www.msrmuseum.com/News/Special/2",
+      "note": "“2018年”条按窑口列明498件已补配文物，含景德镇、龙泉、德化、磁灶、义窑。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "nanhai-shipwreck"
         }
       ]
     },
@@ -15399,6 +15948,28 @@
       ]
     },
     {
+      "title": "《古籍著录规则》GB/T 3792.7—2008",
+      "url": "https://www.nlc.cn/migrated/pcab.nlc.cn/gjbhzs/bm/201412/P020150309516939790893.pdf",
+      "note": "既有专题的来源记录：国家图书馆提供的标准文本；本轮对照3.26—3.30装帧术语、8.1.4正文卷数与8.5.1册数／卷轴数。作为术语和著录实例依据，不据此认定各装帧的最早出现年代。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
+        }
+      ]
+    },
+    {
+      "title": "宋晶 · 中国传统书籍装帧形式发展简述",
+      "url": "https://www.nlc.cn/migrated/www.nlc.cn/newhxjy/wjsy/wjls/wjqcsy/wjd77q/bhxf/202201/P020220128478508525288.pdf",
+      "note": "既有专题的来源记录：国家图书馆古籍馆作者发表于《文津流觞》的研究文章，印刷页53—58；本轮对照简册、卷轴、经折、蝴蝶、包背与线装各节，以及国图藏本与使用磨损的讨论。本文不把有争议的过渡装帧名称写成单一发展次序。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
+        }
+      ]
+    },
+    {
       "title": "U.S. National Library of Medicine · Vesalius: Author and Title",
       "url": "https://www.nlm.nih.gov/exhibition/historicalanatomies/vesalius_bio.html",
       "note": "1543年巴塞尔出版及解剖学背景；另见馆藏书目信息。",
@@ -15435,7 +16006,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -15488,10 +16059,17 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
+        }
+      ]
+    },
+    {
+      "title": "霍宏伟 · 隋唐洛阳城空间体系研究",
+      "url": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
+      "note": "既有专题的来源记录：项目负责人发表于国家社科基金专刊的研究介绍；整体与局部关系段说明洛阳城址由汉魏故城西移后营建新都。",
+      "references": [
         {
           "kind": "topic",
-          "id": "vaccine-to-eradication"
+          "id": "grand-canal"
         }
       ]
     },
@@ -15517,7 +16095,17 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
+        }
+      ]
+    },
+    {
+      "title": "美国国家公园管理局 · Lowell: The Industrial Revolution in England（水力棉纺厂与蒸汽动力）",
+      "url": "https://www.nps.gov/articles/lowell-handbook-industrial-revolution-in-england.htm",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -15554,10 +16142,6 @@
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
-        {
-          "kind": "topic",
-          "id": "columbus-atlantic"
         }
       ]
     },
@@ -15569,6 +16153,17 @@
         {
           "kind": "event",
           "id": "world-flight"
+        }
+      ]
+    },
+    {
+      "title": "中国华侨历史博物馆 · 馆藏黄宝世家信与新加坡长安旅店账册",
+      "url": "https://www.ocmuseum.cn/a/diancang/reservation/wenzhang/2024/0130/1208.html",
+      "note": "馆藏介绍录出港银三百元与五百五十元的两笔汇款，另引1952年和1974年的家信。几封信的年月分别叙述。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "qiaopi-remittances"
         }
       ]
     },
@@ -15645,11 +16240,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -15665,6 +16256,17 @@
       ]
     },
     {
+      "title": "英国议会 · The 1848 Public Health Act",
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/towns/tyne-and-wear-case-study/about-the-group/public-administration/the-1848-public-health-act/",
+      "note": "地方卫生机构的权限，以及排水、供水工程的借款和地方税费。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
+        }
+      ]
+    },
+    {
       "title": "UK Parliament · Parliament abolishes the slave trade",
       "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/overview/parliament-abolishes-the-slave-trade/",
       "note": "1807年法案提出及通过过程；禁止贸易与废除奴隶制度有别。",
@@ -15675,11 +16277,7 @@
         },
         {
           "kind": "topic",
-          "id": "labor-rights-citizenship"
-        },
-        {
-          "kind": "topic",
-          "id": "abolition-and-livelihood"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -15709,10 +16307,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -15763,15 +16357,11 @@
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "factory-city-sanitation"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -15867,6 +16457,36 @@
       ]
     },
     {
+      "title": "格林尼治皇家博物馆 · 经度委员会讨论支付奖励与公开制造原理的文书 BGN/9",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-478820",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
+      "title": "格林尼治皇家博物馆 · 肯德尔复制的 K1",
+      "url": "https://www.rmg.co.uk/sites/default/files/import/media/pdf/K1.pdf",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
+      "title": "格林尼治皇家博物馆 · 哈里森计时器与海上经度（含1761年试航）",
+      "url": "https://www.rmg.co.uk/stories/time/harrisons-clocks-longitude-problem",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "observing-sky-measuring-position"
+        }
+      ]
+    },
+    {
       "title": "Royal Shakespeare Company · Hamlet: Dates and sources",
       "url": "https://www.rsc.org.uk/hamlet/about-the-play/dates-and-sources",
       "note": "Dating the play小节，1601年推算、1602年登记及旧剧来源。",
@@ -15919,11 +16539,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -15961,6 +16577,10 @@
         {
           "kind": "event",
           "id": "category-trent"
+        },
+        {
+          "kind": "topic",
+          "id": "reformation"
         }
       ]
     },
@@ -15987,10 +16607,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -16093,10 +16709,6 @@
         {
           "kind": "topic",
           "id": "industry-transport-and-life"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
         }
       ]
     },
@@ -16149,14 +16761,6 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
-        },
-        {
-          "kind": "topic",
-          "id": "ganjin-crossing"
         }
       ]
     },
@@ -16182,11 +16786,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -16245,7 +16845,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -16293,7 +16893,7 @@
         },
         {
           "kind": "topic",
-          "id": "central-asian-oases"
+          "id": "silk-road"
         }
       ]
     },
@@ -16320,6 +16920,16 @@
         {
           "kind": "event",
           "id": "phil-marx-capital"
+        }
+      ]
+    },
+    {
+      "title": "UNESCO · About the Silk Roads（陆海网络、商旅与文化传播）",
+      "url": "https://www.unesco.org/en/silk-roads/about-silk-roads",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "silk-road"
         }
       ]
     },
@@ -16400,19 +17010,15 @@
         },
         {
           "kind": "topic",
-          "id": "indian-ocean-ports"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "south-asian-societies"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "port-and-hinterland"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -16465,10 +17071,16 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
+        }
+      ]
+    },
+    {
+      "title": "世界卫生组织 · 天花根除四十周年（1977年最后自然病例、1979年认证及1980年正式宣告）",
+      "url": "https://www.who.int/news-room/events/detail/2020/05/08/default-calendar/commemorating-the-40th-anniversary-of-smallpox-eradication",
+      "references": [
         {
           "kind": "topic",
-          "id": "vaccine-to-eradication"
+          "id": "disease-medicine-public-health"
         }
       ]
     },
@@ -16484,10 +17096,6 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
-        {
-          "kind": "topic",
-          "id": "vaccine-to-eradication"
         }
       ]
     },
@@ -16503,10 +17111,17 @@
         {
           "kind": "topic",
           "id": "disease-medicine-public-health"
-        },
+        }
+      ]
+    },
+    {
+      "title": "世界卫生组织 · 根除天花纪念碑揭幕说明",
+      "url": "https://www.who.int/news/item/17-05-2010-statue-commemorates-smallpox-eradication",
+      "note": "核对1967年加强计划、1977年索马里病例以后持续两年的查找及WHA33.3号决议。",
+      "references": [
         {
           "kind": "topic",
-          "id": "vaccine-to-eradication"
+          "id": "disease-medicine-public-health"
         }
       ]
     },
@@ -16554,11 +17169,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -16608,12 +17219,34 @@
       ]
     },
     {
+      "title": "张掖市林业和草原局 · 祁连山水资源现状特征及保护建议",
+      "url": "https://www.zhangye.gov.cn/lyj/dzdt/shyzl/202404/t20240410_1215842_ghb.html",
+      "note": "既有专题的来源记录：本轮对照祁连山水源涵养林研究院敬文茂访谈中降水、冰雪融水与出山径流的说明；仅用于现代自然地理背景，不据此复原汉代河道或绿洲边界。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "silk-road"
+        }
+      ]
+    },
+    {
       "title": "珠海博物馆 · 容闳",
       "url": "https://www.zhmuseum.org.cn/yanjiu/mrgsInfo?id=7",
       "references": [
         {
           "kind": "person",
           "id": "depth-ronghong"
+        }
+      ]
+    },
+    {
+      "title": "秘鲁卡拉尔考古区 · 《苏佩的卡拉尔圣城》发掘研究",
+      "url": "https://www.zonacaral.gob.pe/downloads/publicaciones/LA-CIUDAD-SAGRADA-DE-CARAL-SUPE-LOS-ORIGENES-DE-LA-CIVILIZACION-ANDINA-Y-LA-FORMACION-DEL-ESTADO-PRISTINO-EN-EL-ANTIGUO-PERU-2003.pdf",
+      "note": "参看第102—103页卡拉尔与沿海聚落、棉花、鱼类及其交换的讨论。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "west-asian-urban-worlds"
         }
       ]
     },
@@ -16664,10 +17297,6 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
-        },
-        {
-          "kind": "topic",
-          "id": "longitude-and-clock"
         }
       ]
     },
@@ -16718,10 +17347,16 @@
         {
           "kind": "topic",
           "id": "age-of-exploration"
-        },
+        }
+      ]
+    },
+    {
+      "title": "杨振红《秦汉公文书传达的“报”“重”“追”制》第二节，里耶简 J1(16)5、J1(16)6、9-2283",
+      "url": "https://xbbjb.ucass.edu.cn/__local/0/42/DD/7F8FAA0AB0D00177659EB143818_070B9074_144F63.pdf",
+      "references": [
         {
           "kind": "topic",
-          "id": "columbus-atlantic"
+          "id": "qin-unification"
         }
       ]
     },
@@ -16777,11 +17412,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -16850,11 +17481,7 @@
         },
         {
           "kind": "topic",
-          "id": "three-kingdoms"
-        },
-        {
-          "kind": "topic",
-          "id": "chibi-and-alliance"
+          "id": "qin-unification"
         },
         {
           "kind": "place",
@@ -17369,6 +17996,10 @@
         {
           "kind": "person",
           "id": "zhouyu"
+        },
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -17443,7 +18074,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -17644,15 +18275,11 @@
         },
         {
           "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
           "id": "grand-canal"
-        },
-        {
-          "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "capital-and-grain"
         }
       ]
     },
@@ -17667,6 +18294,10 @@
         {
           "kind": "person",
           "id": "genghis"
+        },
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
         }
       ]
     },
@@ -17706,6 +18337,10 @@
         {
           "kind": "person",
           "id": "reviewed-刘秉忠"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
         }
       ]
     },
@@ -17717,6 +18352,10 @@
         {
           "kind": "event",
           "id": "xiangyang-falls"
+        },
+        {
+          "kind": "topic",
+          "id": "mongol-conquests"
         }
       ]
     },
@@ -17813,11 +18452,18 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "《元史》卷一百零一《兵志四·站赤》",
+      "url": "https://zh.wikisource.org/wiki/元史/卷101",
+      "note": "至元二十四、二十五年关于徐扬水马并站与站户的记载，以及大德八年御史台奏议。",
+      "references": [
         {
           "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "mongol-conquests"
         }
       ]
     },
@@ -17833,6 +18479,10 @@
         {
           "kind": "person",
           "id": "reviewed-刘秉忠"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
         }
       ]
     },
@@ -17856,10 +18506,6 @@
         {
           "kind": "topic",
           "id": "observing-sky-measuring-position"
-        },
-        {
-          "kind": "topic",
-          "id": "longitude-and-clock"
         }
       ]
     },
@@ -17882,11 +18528,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -18052,15 +18694,7 @@
         },
         {
           "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "indian-ocean-ports"
-        },
-        {
-          "kind": "topic",
-          "id": "zheng-he-voyages"
+          "id": "silk-road"
         }
       ]
     },
@@ -18129,6 +18763,17 @@
         {
           "kind": "person",
           "id": "early-plus-person-yan-zhitui"
+        }
+      ]
+    },
+    {
+      "title": "《南京条约》中文本 · 第2—7、10条",
+      "url": "https://zh.wikisource.org/wiki/南京條約",
+      "note": "五口通商、香港岛、商欠与赔款，以及税则另议的原文。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "opium-wars"
         }
       ]
     },
@@ -18283,19 +18928,11 @@
         },
         {
           "kind": "topic",
-          "id": "silk-road"
-        },
-        {
-          "kind": "topic",
           "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "qin-conquest-and-government"
-        },
-        {
-          "kind": "topic",
-          "id": "hexi-and-oases"
+          "id": "silk-road"
         },
         {
           "kind": "place",
@@ -18498,23 +19135,15 @@
         },
         {
           "kind": "topic",
+          "id": "qin-unification"
+        },
+        {
+          "kind": "topic",
+          "id": "industry-transport-and-life"
+        },
+        {
+          "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "messages-distance-and-access"
-        },
-        {
-          "kind": "topic",
-          "id": "qin-conquest-and-government"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -18663,11 +19292,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -18695,14 +19320,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -18765,14 +19382,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -19630,6 +20239,10 @@
         {
           "kind": "person",
           "id": "huoqubing"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
         }
       ]
     },
@@ -19653,6 +20266,10 @@
         {
           "kind": "person",
           "id": "zhangqian"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
         }
       ]
     },
@@ -19708,14 +20325,6 @@
           "id": "tax-money-markets"
         },
         {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
-        },
-        {
           "kind": "place",
           "id": "yangzhou"
         }
@@ -19740,11 +20349,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -19759,11 +20364,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -19830,7 +20431,7 @@
         },
         {
           "kind": "topic",
-          "id": "north-south-unification"
+          "id": "qin-unification"
         }
       ]
     },
@@ -19948,11 +20549,11 @@
         },
         {
           "kind": "topic",
-          "id": "messages-distance-and-access"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "qin-conquest-and-government"
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -20035,7 +20636,7 @@
         },
         {
           "kind": "topic",
-          "id": "ganjin-crossing"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -20260,14 +20861,6 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
-        },
-        {
-          "kind": "topic",
-          "id": "xuanzang-pilgrimage"
         }
       ]
     },
@@ -20306,7 +20899,7 @@
         },
         {
           "kind": "topic",
-          "id": "xuanzang-pilgrimage"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -20329,7 +20922,7 @@
         },
         {
           "kind": "topic",
-          "id": "xuanzang-pilgrimage"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -20368,7 +20961,7 @@
         },
         {
           "kind": "topic",
-          "id": "xuanzang-pilgrimage"
+          "id": "buddhist-texts-and-networks"
         }
       ]
     },
@@ -20395,14 +20988,6 @@
         {
           "kind": "topic",
           "id": "buddhist-texts-and-networks"
-        },
-        {
-          "kind": "topic",
-          "id": "translation-workshops"
-        },
-        {
-          "kind": "topic",
-          "id": "xuanzang-pilgrimage"
         }
       ]
     },
@@ -20502,15 +21087,7 @@
         },
         {
           "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "indian-ocean-ports"
-        },
-        {
-          "kind": "topic",
-          "id": "zheng-he-voyages"
+          "id": "silk-road"
         }
       ]
     },
@@ -20547,6 +21124,10 @@
         {
           "kind": "person",
           "id": "q716217"
+        },
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -20981,11 +21562,11 @@
         },
         {
           "kind": "topic",
-          "id": "song-learning"
+          "id": "silk-road"
         },
         {
           "kind": "topic",
-          "id": "maritime-connections"
+          "id": "tax-money-markets"
         },
         {
           "kind": "place",
@@ -21192,11 +21773,11 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -21215,11 +21796,11 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -21305,6 +21886,17 @@
       ]
     },
     {
+      "title": "《宋史》卷一百七十六《食货志·常平》",
+      "url": "https://zh.wikisource.org/wiki/宋史/卷176",
+      "note": "常平仓本、青苗法条议和不同官员的争论。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tax-money-markets"
+        }
+      ]
+    },
+    {
       "title": "《宋史》卷181 · 食货志（益州交子务、发行额与换界）",
       "url": "https://zh.wikisource.org/wiki/宋史/卷181",
       "note": "古籍参考；事件简介、背景和影响为现代中文整理。",
@@ -21316,14 +21908,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -21459,11 +22043,11 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -21509,19 +22093,15 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
+          "id": "writing-and-knowledge"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -21556,19 +22136,15 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "grand-canal"
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -21689,11 +22265,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -21703,11 +22275,11 @@
       "references": [
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -22111,10 +22683,6 @@
         {
           "kind": "topic",
           "id": "silk-road"
-        },
-        {
-          "kind": "topic",
-          "id": "hexi-and-oases"
         }
       ]
     },
@@ -22200,11 +22768,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -22260,11 +22824,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -22288,6 +22848,10 @@
         {
           "kind": "person",
           "id": "reviewed-汉和帝"
+        },
+        {
+          "kind": "topic",
+          "id": "silk-road"
         }
       ]
     },
@@ -22347,11 +22911,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -22511,11 +23071,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -22542,7 +23098,7 @@
         },
         {
           "kind": "topic",
-          "id": "women-public-life"
+          "id": "constitutions-rights-and-participation"
         }
       ]
     },
@@ -22557,6 +23113,17 @@
         {
           "kind": "event",
           "id": "ganying"
+        }
+      ]
+    },
+    {
+      "title": "苏轼《后赤壁赋》",
+      "url": "https://zh.wikisource.org/wiki/後赤壁賦",
+      "note": "既有专题的来源记录：本轮对照原文的时令、登临、孤鹤与梦境段落；不据文学描写复原实际路线。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -22990,14 +23557,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -23190,15 +23749,11 @@
         },
         {
           "kind": "topic",
+          "id": "silk-road"
+        },
+        {
+          "kind": "topic",
           "id": "grand-canal"
-        },
-        {
-          "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "capital-and-grain"
         },
         {
           "kind": "place",
@@ -23523,19 +24078,7 @@
         },
         {
           "kind": "topic",
-          "id": "maritime-connections"
-        },
-        {
-          "kind": "topic",
-          "id": "indian-ocean-ports"
-        },
-        {
-          "kind": "topic",
-          "id": "port-and-hinterland"
-        },
-        {
-          "kind": "topic",
-          "id": "zheng-he-voyages"
+          "id": "silk-road"
         }
       ]
     },
@@ -23581,6 +24124,28 @@
         {
           "kind": "person",
           "id": "zhudi"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷7 · 成祖纪（运木、营建与正式迁都）",
+      "url": "https://zh.wikisource.org/wiki/明史/卷7",
+      "note": "既有专题的来源记录：永乐十五、十八、十九年记载，区分营建、迁都诏与在北京受朝贺。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "grand-canal"
+        }
+      ]
+    },
+    {
+      "title": "《明史》卷72 · 职官志（迁都后的南北官署）",
+      "url": "https://zh.wikisource.org/wiki/明史/卷72",
+      "note": "既有专题的来源记录：吏部条末关于迁都、留南京官属及后续称谓变化的记载。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "grand-canal"
         }
       ]
     },
@@ -23675,11 +24240,7 @@
         },
         {
           "kind": "topic",
-          "id": "three-kingdoms"
-        },
-        {
-          "kind": "topic",
-          "id": "chibi-and-alliance"
+          "id": "qin-unification"
         },
         {
           "kind": "place",
@@ -24044,11 +24605,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -24574,7 +25131,7 @@
         },
         {
           "kind": "topic",
-          "id": "late-qing-transition"
+          "id": "opium-wars"
         }
       ]
     },
@@ -24863,7 +25420,7 @@
         },
         {
           "kind": "topic",
-          "id": "qing-state"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
@@ -24871,35 +25428,15 @@
         },
         {
           "kind": "topic",
-          "id": "self-strengthening-course"
-        },
-        {
-          "kind": "topic",
-          "id": "first-sino-japanese"
-        },
-        {
-          "kind": "topic",
-          "id": "late-qing-transition"
-        },
-        {
-          "kind": "topic",
           "id": "industry-transport-and-life"
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "factory-city-sanitation"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         },
         {
           "kind": "place",
@@ -25211,11 +25748,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -25243,6 +25776,10 @@
         {
           "kind": "person",
           "id": "puyi"
+        },
+        {
+          "kind": "topic",
+          "id": "xinhai-revolution"
         }
       ]
     },
@@ -25594,10 +26131,6 @@
           "id": "qin-unification"
         },
         {
-          "kind": "topic",
-          "id": "qin-conquest-and-government"
-        },
-        {
           "kind": "place",
           "id": "changan"
         },
@@ -25660,11 +26193,11 @@
         },
         {
           "kind": "topic",
-          "id": "messages-distance-and-access"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "qin-conquest-and-government"
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -25712,14 +26245,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -25763,14 +26288,6 @@
         {
           "kind": "topic",
           "id": "tax-money-markets"
-        },
-        {
-          "kind": "topic",
-          "id": "tax-enters-household"
-        },
-        {
-          "kind": "topic",
-          "id": "paper-money-and-trust"
         }
       ]
     },
@@ -25947,11 +26464,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -26085,11 +26598,7 @@
         },
         {
           "kind": "topic",
-          "id": "schools-and-examinations"
-        },
-        {
-          "kind": "topic",
-          "id": "school-and-access"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -26301,6 +26810,10 @@
         {
           "kind": "event",
           "id": "wangzhen-agricultural-book"
+        },
+        {
+          "kind": "topic",
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -26330,11 +26843,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -26446,6 +26955,16 @@
       ]
     },
     {
+      "title": "杜甫《石壕吏》全诗",
+      "url": "https://zh.wikisource.org/wiki/石壕吏",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tang-turning-point"
+        }
+      ]
+    },
+    {
       "title": "《石林燕語》卷8",
       "url": "https://zh.wikisource.org/wiki/石林燕語/卷8",
       "note": "据原典相关篇章编写；本批沿用出处，未逐条重新抓取校勘。",
@@ -26525,11 +27044,11 @@
         },
         {
           "kind": "topic",
-          "id": "northern-song-reform-reversals"
+          "id": "tax-money-markets"
         },
         {
           "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -26701,6 +27220,16 @@
         {
           "kind": "event",
           "id": "early-plus-huaisu-autobiography"
+        }
+      ]
+    },
+    {
+      "title": "苏轼《与范子丰二首》之一，元丰六年八月五日",
+      "url": "https://zh.wikisource.org/wiki/與范子豐二首（之一）",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -27018,7 +27547,7 @@
         },
         {
           "kind": "topic",
-          "id": "north-south-unification"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
@@ -27080,11 +27609,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -27378,15 +27903,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
           "id": "chinese-literature-and-performance"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
         }
       ]
     },
@@ -27537,11 +28054,7 @@
         },
         {
           "kind": "topic",
-          "id": "tang-poets-lives"
-        },
-        {
-          "kind": "topic",
-          "id": "poetry-in-exile"
+          "id": "chinese-literature-and-performance"
         }
       ]
     },
@@ -27920,11 +28433,7 @@
         },
         {
           "kind": "topic",
-          "id": "how-history-is-written"
-        },
-        {
-          "kind": "topic",
-          "id": "history-and-commentary"
+          "id": "writing-and-knowledge"
         }
       ]
     },
@@ -28142,6 +28651,16 @@
       ]
     },
     {
+      "title": "《补注杜诗》卷三《石壕吏》诸家注，邺城、河阳与编年",
+      "url": "https://zh.wikisource.org/wiki/補註杜詩_(四庫全書本)/卷03",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tang-turning-point"
+        }
+      ]
+    },
+    {
       "title": "《补注杜诗》卷6 · 乾元中寓居同谷县作七首",
       "url": "https://zh.wikisource.org/wiki/補註杜詩_(四庫全書本)/卷06",
       "note": "本人寓居材料及乾元二年编年注；不据旧传夸张叙述推定家庭伤亡。",
@@ -28275,6 +28794,16 @@
       ]
     },
     {
+      "title": "《资治通鉴》卷二百二十一，唐肃宗乾元二年三月相州战事",
+      "url": "https://zh.wikisource.org/wiki/資治通鑑/卷221",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "tang-turning-point"
+        }
+      ]
+    },
+    {
       "title": "《農書_(陳旉)》",
       "url": "https://zh.wikisource.org/wiki/農書_(陳旉)",
       "note": "序；据原典相关篇章编写；本批沿用出处，未逐条重新抓取校勘。",
@@ -28344,11 +28873,11 @@
         },
         {
           "kind": "topic",
-          "id": "messages-distance-and-access"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
-          "id": "qin-conquest-and-government"
+          "id": "industry-transport-and-life"
         }
       ]
     },
@@ -28726,15 +29255,11 @@
         },
         {
           "kind": "topic",
-          "id": "north-south-unification"
+          "id": "qin-unification"
         },
         {
           "kind": "topic",
           "id": "grand-canal"
-        },
-        {
-          "kind": "topic",
-          "id": "capital-and-grain"
         },
         {
           "kind": "place",
@@ -28792,11 +29317,7 @@
         },
         {
           "kind": "topic",
-          "id": "water-food-cities"
-        },
-        {
-          "kind": "topic",
-          "id": "city-water-and-labor"
+          "id": "grand-canal"
         }
       ]
     },
@@ -29093,6 +29614,17 @@
       ]
     },
     {
+      "title": "《马关条约》中文本 · 第1、2、4条",
+      "url": "https://zh.wikisource.org/wiki/馬關條約",
+      "note": "朝鲜地位、割地与赔款。辽东交还另见后来安排。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "opium-wars"
+        }
+      ]
+    },
+    {
       "title": "《高僧傳》",
       "url": "https://zh.wikisource.org/wiki/高僧傳",
       "note": "原典卷13，从所链接的全书目录定位；据原典相关篇章编写；本批沿用出处，未逐条重新抓取校勘。",
@@ -29162,7 +29694,7 @@
         },
         {
           "kind": "topic",
-          "id": "north-south-unification"
+          "id": "qin-unification"
         },
         {
           "kind": "place",
@@ -29260,6 +29792,10 @@
         {
           "kind": "person",
           "id": "xiaowen"
+        },
+        {
+          "kind": "topic",
+          "id": "grand-canal"
         }
       ]
     },
@@ -29360,6 +29896,17 @@
         {
           "kind": "person",
           "id": "q6697537"
+        }
+      ]
+    },
+    {
+      "title": "苏轼《前赤壁赋》",
+      "url": "https://zh.wikisource.org/zh-hans/前赤壁賦",
+      "note": "既有专题的来源记录：本轮对照原文的泛舟、箫声、主客问答、水月之辩与清风明月等段落；相关阐释为本站对文本结构的阅读。",
+      "references": [
+        {
+          "kind": "topic",
+          "id": "chinese-literature-and-performance"
         }
       ]
     },

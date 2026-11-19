@@ -1,0 +1,77 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="800"
+  height="650"
+  viewBox="0 0 800 650"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">纸币在谁的手中流转</title>
+  <desc id="desc">
+    发行者向持有人发行纸币，持有人向收款人支付，收款人继续使用。兑换和回收安排随制度而异。
+  </desc>
+  <style>
+    text {
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      fill: #303e36;
+    }
+    .title {
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .label {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .small {
+      font-size: 20px;
+      fill: #5a685d;
+    }
+    .arrow {
+      fill: none;
+      stroke: #8b795b;
+      stroke-width: 3;
+      marker-end: url(#arrow);
+    }
+    .box {
+      fill: #edf0e5;
+      stroke: #9aa88b;
+      stroke-width: 2;
+    }
+  </style>
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto"
+    >
+      <path d="M0 0L10 5L0 10Z" fill="#8b795b" />
+    </marker>
+  </defs>
+  <rect width="800" height="650" rx="16" fill="#faf8f0" />
+  <text x="40" y="58" class="title">纸币在谁的手中流转</text>
+  <text x="40" y="98" class="small">每一次收下纸币，都包含对下一次支付的预期。</text>
+  <rect x="235" y="145" width="330" height="100" rx="12" class="box" />
+  <text x="290" y="188" class="label">发行者及管理安排</text>
+  <text x="275" y="221" class="small">数量、辨伪、兑换与回收</text>
+  <rect x="55" y="380" width="290" height="110" rx="12" class="box" />
+  <text x="90" y="426" class="label">持有人</text>
+  <text x="90" y="462" class="small">用纸币购买货物和服务</text>
+  <rect x="455" y="380" width="290" height="110" rx="12" class="box" />
+  <text x="490" y="426" class="label">收款人</text>
+  <text x="490" y="462" class="small">再支付、留存或兑换</text>
+  <path d="M290 245L180 367" class="arrow" />
+  <text x="145" y="297" class="small">发行</text>
+  <path d="M345 405H445" class="arrow" />
+  <text x="360" y="383" class="small">支付</text>
+  <path d="M655 372Q730 240 578 200" class="arrow" />
+  <text x="625" y="278" class="small">按制度兑换</text>
+  <text x="645" y="307" class="small">或回收</text>
+  <rect x="55" y="535" width="690" height="62" rx="10" fill="#eee4d1" />
+  <text x="86" y="575" class="small">能否继续花出去，影响人们愿意按什么价格接受它。</text>
+  <text x="40" y="628" font-size="17">关系示意 · 官交子与宝钞的具体发行、兑换制度各有不同</text>
+</svg>

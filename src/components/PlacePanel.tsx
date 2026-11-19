@@ -1,3 +1,5 @@
+import ReadingLink from './ReadingLink'
+import { eventUrl, personUrl } from '../lib/record-url'
 import { placeReading } from '../data/place-reading'
 import { MapPin, ArrowRight } from 'lucide-react'
 import type { HistoryEvent, Person, PersonJourney } from '../types'
@@ -87,14 +89,18 @@ export default function PlacePanel({
       {!visible.length && <p>此地暂未收录可关联的事件。地名标签本身不代表完整的地方史。</p>}
       <div className="archive-event-list">
         {visible.map((event) => (
-          <button key={event.id} onClick={() => onEvent(event.id)}>
+          <ReadingLink
+            href={eventUrl(event.id)}
+            key={event.id}
+            onNavigate={() => onEvent(event.id)}
+          >
             <small>
               {formatEventDate(event)} · {event.category}
             </small>
             <strong>{event.title}</strong>
             <span>{event.summary}</span>
             <small>{event.location}</small>
-          </button>
+          </ReadingLink>
         ))}
       </div>
       {!!peopleIds.length && (
@@ -103,9 +109,9 @@ export default function PlacePanel({
           <p className="person-relation-note">事件参与、决策等关系不证明本人曾到此地。</p>
           <div className="place-people">
             {peopleIds.map((id) => (
-              <button key={id} onClick={() => onPerson(id)}>
+              <ReadingLink href={personUrl(id)} key={id} onNavigate={() => onPerson(id)}>
                 {people.get(id)?.name}
-              </button>
+              </ReadingLink>
             ))}
           </div>
         </>
@@ -117,7 +123,9 @@ export default function PlacePanel({
         <div className="place-visits">
           {visits.map(({ person, node }) => (
             <div key={`${person.id}:${node.id}`}>
-              <button onClick={() => onPerson(person.id)}>{person.name}</button>
+              <ReadingLink href={personUrl(person.id)} onNavigate={() => onPerson(person.id)}>
+                {person.name}
+              </ReadingLink>
               <strong>
                 {compactYear(node.year)}年 · {node.kind} · {node.location}
               </strong>

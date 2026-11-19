@@ -677,16 +677,13 @@ export default function TimePillar(p: Props) {
           className="pillar-now"
           style={{ top: yFor(ordinal) }}
           aria-label={`前往年份，当前${year < 0 ? '公元前' : '公元'}${Math.abs(year)}年`}
-          title="点击选择年份或时期"
+          data-hint="跳转年份"
           onClick={(event) => {
             flush()
             openPanel('settings', event.currentTarget, true)
           }}
         >
-          <span>
-            {year < 0 && <small>公元前</small>}
-            {Math.abs(year)}年
-          </span>
+          <span>{compactYear(year)}年</span>
         </button>
         <div className="pillar-events">
           <div

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="478" viewBox="0 0 600 478" role="img" aria-labelledby="title desc">
+<title id="title">老妇说起的三个儿子</title>
+<desc id="desc">三个儿子都到邺城一带从军，一个儿子捎信，两人新近战死。诗末老妇又请往河阳准备早饭。</desc>
+<rect x="0" y="0" width="600" height="478" rx="0" fill="#fbf7ee"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="36" y="58" font-size="34" fill="#273c37" text-anchor="start" font-weight="650">老妇说起的三个儿子</text>
+<path d="M36 79H564" fill="none" stroke="#bfbda8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="37" y="133" font-size="35" fill="#1b6055" text-anchor="start" font-weight="600">“三男邺城戍”</text>
+<path d="M152 156v24h-41v32 M152 180h238v32" fill="none" stroke="#bfbda8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="36" y="216" width="210" height="103" rx="12" fill="#e5ebdf"/>
+<rect x="265" y="216" width="299" height="103" rx="12" fill="#efe1d4"/>
+<text x="60" y="259" font-size="30" fill="#1b6055" text-anchor="start" font-weight="650">一男</text>
+<text x="60" y="297" font-size="25" fill="#273c37" text-anchor="start" font-weight="400">捎来家书</text>
+<text x="289" y="259" font-size="30" fill="#99462f" text-anchor="start" font-weight="650">二男</text>
+<text x="289" y="297" font-size="25" fill="#273c37" text-anchor="start" font-weight="400">新近战死</text>
+<path d="M36 351H564" fill="none" stroke="#bfbda8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="36" y="399" font-size="30" fill="#99462f" text-anchor="start" font-weight="600">“急应河阳役，犹得备晨炊。”</text>
+<text x="36" y="445" font-size="24" fill="#535d54" text-anchor="start" font-weight="400">到河阳做早饭，是老妇为自己请的差役。</text>
+</g>
+</svg>

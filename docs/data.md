@@ -11,7 +11,8 @@
 | 人物基础身份           | [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing)，CC0，保留实体与 revision                                    | `data/people*-seeds.json`、`data/people.sources.json`、`src/data/generated/people.json` |
 | 事件与编辑人物介绍     | 逐条引用原典、博物馆、考古机构与研究文献，独立撰写中文摘要                                                                | `src/data/content.ts` 汇总各事件、人物和阅读内容集合                                    |
 | 中国朝代与世界政权档案 | 资料出处、编辑阅读范围与地图来源适用日期分别保留                                                                          | `src/data/dynasties.ts`、`dynasty-reading.ts`、`world-polities.ts`                      |
-| 专题与学习分期         | 使用既有记录 ID 组织有出处的导读、章节与地图问题                                                                          | `src/data/topics.ts`、`periods.ts`、`learning.ts`                                       |
+| 历史专题文章           | 按问题组织有出处的连续科普正文，章节按需关联图片、地图和史事                                                              | `src/data/article-essays/`、`article-groups.ts`、`articles.ts`                          |
+| 学习分期与兼容导览     | 使用既有记录 ID 组织有出处的导读、章节与地图问题                                                                          | `src/data/topics.ts`、`periods.ts`、`learning.ts`                                       |
 | 独立核对的活动年谱     | 有具体日期、地点和活动内容的本人记录                                                                                      | `src/data/journeys.ts`                                                                  |
 
 Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保留。Wikidata 身份数据与项目编辑讲解适用的许可不同；引用网页不意味着可以重新分发全文或图片。完整范围见[第三方声明](../THIRD_PARTY_NOTICES.md)和[许可说明](../LICENSE-CONTENT.md)。未导入 CHGIS 或 CBDB 原始整库，CBDB 的研究参考不能替代再分发许可。
@@ -29,13 +30,17 @@ Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保�
 
 ### 专题正文与分类
 
-`topics.ts` 汇总既有专题；`topic-articles.ts` 为这些专题维护独立讲解、分类和回应核心问题的结尾。`focused-topics.ts` 维护围绕具体问题展开的新专题，显式选择已有事件作为延伸章节，并保留所属专题的参考资料及出处说明。复用来源不表示本轮重新核验过网页。
+`article-essays/` 维护历史专题的权威长文，按篇提供导语与章节，逐篇决定是否设置结尾、史事入口和地图。`article-groups.ts` 声明主文章及其收入的旧专题；`articles.ts` 按这些对应关系生成 `ReadingArticle`、合并来源与事件导览，并把章节内图文位置转为阅读段落位置。新专题也可直接提供来源、分类与可选的明确事件 ID，无需依赖旧专题；导览只在存在关联事件时生成。文章必须有可定位来源，不能为进入目录而凑事件。写作与归并规则见[专题写作约定](topic-writing.md)。
 
-专题 `article` 保存连续正文、按段落索引定位的可选小标题与明确关联的事件 ID；可选 `mapStops` 把指定段落连接到本专题的一个章节。正文可先独立阅读，地图入口由读者点击后才定位，不随滚动或计时自动推进。新增地图入口必须引用实际章节，地点参照继续遵守地图年代与精度边界。分类用于专题目录，不改变事件类别和地图筛选。
+`topics.ts`、`topic-articles.ts`、`focused-topics.ts`、`deepened-essays.ts` 和 `standalone-articles.ts` 等保留归并前的来源与明确关联，作为旧地址和事件导览的兼容输入；主目录只展示归并后的文章。旧 `article` 地址和导读地址解析到对应主文，明确指向事件的旧导览链接继续阅读原事件；旧标题参与文章搜索。收藏按主文章 ID 合并，相关史事已读通过稳定事件 ID 归入合并导览。复用来源不表示本轮重新核验过网页。
+
+文章 `article` 保存连续正文与按段落索引定位的可选小标题；`relatedEventIds` 是独立可选的延伸史事，`guideId` 只在需要兼容事件导览时提供。可选 `mapStops` 引用真实事件，`maps` 明确提供插入位置、年份、中心、可选地点与图注，正文不因缺少这些字段而被拒绝。地图只由读者主动展开或进入，不随滚动和计时自动推进。分类只用于文章目录，不改变事件类别和地图筛选。
+
+`media` 明确记录插入段落、资源路径、替代文字、图注、尺寸与署名／来源；解释性SVG保存在 `src/assets/articles/` 或 `public/images/articles/`，作为原理或结构示意，不冒充文物照片或复原证据。AI配图使用 `aiGenerated` 标记并在图注中说明；真实文物、建筑细节和地理范围仍须可靠材料支持。图片与内嵌地图的来源一并进入公开来源索引和请求审校，原始参考资料继续只在本地留存。
 
 正文按问题选择叙述顺序与篇幅，不按统一字数扩写。宽泛的地区或时代专题保留总览作用，具体专题承担更集中的解释；结尾应回应正文提出的问题。新增论点需要对应的史料，新增路线或历史态势需要独立的地图依据，不能从章节坐标推断。
 
-`voyage-topics.ts` 维护远航与求法专题，`topic-routes.ts` 维护独立的路线记录。路线通过 `routeIds` 与专题关联，港口或区域坐标、年代说明、站点文字和来源必须显式提供。海上折点只是帮助阅读的绘图参照，不能当作新增停靠地；陆路网络不能冒充个人年谱。玄奘与鉴真的路线复用已核对的年谱节点，保留原来的日期争议和定位说明。路线来源合并到专题来源，纳入公开来源索引与缓存审校。
+`voyage-topics.ts` 保留远航与求法专题原有的事件关联和来源，`topic-routes.ts` 维护独立的路线记录。路线通过 `routeIds` 与归并后的文章关联，港口或区域坐标、年代说明、站点文字和来源必须显式提供。海上折点只是帮助阅读的绘图参照，不能当作新增停靠地；陆路网络不能冒充个人年谱。玄奘与鉴真的路线复用已核对的年谱节点，保留原来的日期争议和定位说明。路线来源合并到专题来源，纳入公开来源索引与缓存审校。
 
 ### 事件主题筛选
 
@@ -60,7 +65,7 @@ Cliopatria 的 CC BY 4.0 署名、来源、许可链接及修改说明必须保�
 
 `data/map-packs/` 是提交到 Git 的地图输入，包含按时期打包的 Brotli 文件及压缩包、原文件的 SHA-256 清单。包保存完整 GeoJSON 字节；存储压缩不重新简化几何，也不改变数字、字段或记录。
 
-`npm run data:prepare` 用 Node.js 内置 Brotli 离线恢复并校验数据。`npm run dev`、`npm test`、`npm run data:check` 和 `npm run build` 会自动调用它；直接执行 `vite` 或 `vitest` 前须自行准备。
+`npm run data:prepare` 用 Node.js 内置 Brotli 离线恢复并校验数据。`npm test` 和 `npm run data:check` 自动执行完整准备。`npm run dev` 和 `npm run build` 只还原网站用到的地图切片和自然地理图层。直接执行 `vite` 或 `vitest` 前须自行准备。
 
 - 完整时期归档还原到 `.cache/map-archives/`，用于审校与测试，不进入网站。
 - 浏览器切片还原到 `public/data/maps/`，自然地理图层还原到 `public/data/`。这些派生文件不入库，构建时纳入网站。
@@ -119,17 +124,19 @@ npm run data:audit:ci
 
 扩充的地点介绍、标签和别名集中在 `place-expansion.ts`；新增专题位于 `topic-expansion.ts`，复用稳定事件 ID。`journey-expansion.ts` 保存扩充的独立活动记录；`journey-literary.ts`、`journey-voyages.ts`、`journey-confucius.ts` 分别维护文人及官员、跨海活动与孔子周游记录，经 `journeys.ts` 统一汇入。资料仅覆盖一段生平时应在导读说明范围，不能称为完整年谱。跨海节点沿用记录先后的示意动画，连线不表示实际航线；郑和主船队与分遣船队的到访须分别核对，不能合并成个人足迹。
 
-事件可用 `placeIds` 明确关联一个或多个 `src/lib/exploration.ts` 中的地点档案。已填写时优先使用该字段，空数组表示明确不归入城市档案；尚未整理的旧记录继续按地名匹配。地点关联表达阅读关系，不证明所有人物到访，也不要求代表坐标落在每个相关城市。帝国名称、区域性传播和书中地名不能自动归入同名城市。地图城市标签的显示区间与建城、改名及政权首都纪年分别理解，地点正文及来源维护在 `place-reading.ts`。
+事件可用 `placeIds` 明确关联一个或多个 `src/lib/exploration.ts` 中的地点档案。已填写时优先使用该字段，空数组表示明确不归入城市档案；尚未整理的旧记录继续按地名匹配。地点关联表达阅读关系，不证明所有人物到访，也不要求代表坐标落在每个相关城市。帝国名称、区域性传播和书中地名不能自动归入同名城市。北宋开封和日本首都都称「东京」，只写「东京」的北宋事件通过 `placeIds` 关联开封档案。地图城市标签的显示区间与建城、改名及政权首都纪年分别理解，地点正文及来源维护在 `place-reading.ts`。
 
 ## 阅读目录与正文
 
 事件正文的语言、篇幅和叙述选择见[事件写作约定](event-writing.md)；人物、政权与导读遵守[介绍编辑约定](introduction-writing.md)。
 
-`scripts/prepare-reading.mjs` 从 `src/data/content.ts` 导出轻量目录 `src/data/generated/reading-catalog.json`、事件来源索引 `src/data/generated/reading-sources.json` 和 `public/data/reading/` 下的完整事件／人物正文。这些运行生成物由 Git 忽略，在数据准备时自动生成。来源索引供时期与地点等聚合页面按需加载，不进入首屏目录。
+`scripts/prepare-reading.mjs` 从 `src/data/content.ts` 导出轻量目录 `src/data/generated/reading-catalog.json`、事件来源索引 `src/data/generated/reading-sources.json`、公开路径映射 `src/data/generated/reading-routes.json`（也读取朝代、世界政权和地点目录） 和 `public/data/reading/` 下的完整事件／人物正文。另由同一准备过程生成 `src/data/generated/article-runtime.json`，预先完成专题归并并保留进度迁移所需的事件成员关系。这些运行生成物由 Git 忽略，在数据准备时自动生成。来源索引供时期与地点等聚合页面按需加载，不进入首屏目录。
 
-目录按列紧凑存储摘要、日期、检索和证据说明字段，省去重复字段名、空来源及与摘要相同的人物占位正文；`src/data/catalog.ts` 同步还原兼容的运行记录，保留缺失字段与明确未知生卒年的区别。正文保留完整原始记录与来源。文件名使用稳定的 ASCII 标识和内容哈希；目录仅保存哈希及必要的 ASCII 标识，运行时重建原有正文路径，不修改原始记录 ID 或分享链接。`src/lib/reading-catalog.test.ts` 检查完整记录、来源索引、哈希、路径和目录体积，浏览器请求由 `src/hooks/use-reading-record.ts` 管理。
+目录按列紧凑存储摘要、日期、检索和证据说明字段，省去重复字段名、空来源及与摘要相同的人物占位正文；`src/data/catalog.ts` 同步还原兼容的运行记录，保留缺失字段与明确未知生卒年的区别。正文保留完整原始记录与来源。文件名使用稳定的 ASCII 标识和内容哈希；目录仅保存哈希及必要的 ASCII 标识，运行时重建原有正文路径，不修改原始记录 ID。`src/lib/reading-catalog.test.ts` 检查完整记录、来源索引、哈希、路径和目录体积，浏览器请求由 `src/hooks/use-reading-record.ts` 管理。
 
-所有当前正文及索引写入成功后，生成器将已不被目录引用、且文件名与内容哈希验证一致的旧正文移至 `.cache/reading-archives/`，保留原始字节，避免重复构建继续分发旧版本。只处理已验证的生成文件，不移动其他文件或研究缓存，不跟随符号链接，也不覆盖冲突归档。线上发布仍应按托管环境需要保留旧资源一段时间，以兼容已经打开的旧页面；本地归档不属于新构建的发布内容。
+`scripts/reading-routes.mjs` 为人物姓名生成 ASCII 转写路径，为事件清理内部前缀并应用少量明确命名；同名路径使用记录 ID 区分，重复或不安全路径会中止数据准备。朝代、世界政权和地点采用简短 ASCII 名称；世界政权去除内部 `world-` 前缀，夏朝与西夏显式区分为 `xia` 与 `western-xia`。转写依赖只在构建阶段使用，客户端读取生成映射。`scripts/build-pages.mjs` 从权威记录输出人物、事件、专题、朝代、世界政权和地点 HTML、可抓取目录以及站点地图，保留正文、来源、年代与地点说明，不将简要人物记录扩写成传记。生产 HTML 还嵌入目录未包含的正文与来源字段，供地图工作区复用；`dist/data/reading/` 不再重复发布，`public/data/reading/` 继续用于开发与完整性校验。共享样式和压缩后的页面模板减少每篇页面的重复内容。生成物不可手改。
+
+开发和完整数据准备时，所有当前正文及索引写入成功后，生成器将已不被目录引用、且文件名与内容哈希验证一致的旧正文移至 `.cache/reading-archives/`，保留原始字节。只处理已验证的生成文件，不移动其他文件或研究缓存，不跟随符号链接，也不覆盖冲突归档。生产构建只生成索引和静态 HTML，跳过开发用正文 JSON 的写入和复制。线上发布仍应按托管环境需要保留旧资源一段时间，以兼容已经打开的旧页面；本地归档不属于新构建的发布内容。
 
 事件独立的 `narrative` 正文由 `src/data/event-narratives.ts` 汇总，具体文章可拆分到 `event-narratives-china.ts`、`event-narratives-world.ts` 等模块。`content.ts` 合并中国、世界及现代事件集合后，再由 `event-reading.ts` 的 `enrichEventNarrative` 汇入正文与来源。每篇按事件需要选择段落数量、篇幅和可选的小标题，也可连续叙述；不按类别规定固定结构或字数。采用独立正文时，详情页不再追加旧的经过、背景和影响三个分节；摘要及日期、地点说明仍保留。原有 `background`、`impact` 字段用于记录兼容，审校中的阅读字数按实际展示的独立正文统计。`narrative` 与 `details` 一样只进入按需加载的完整正文，不进入轻量目录，史料出处仍汇入事件的 `sources`。
 
@@ -140,6 +147,8 @@ npm run data:audit:ci
 普通贡献者与 CI 使用 `npm run data:audit:ci`：检查字段、纪年、关联、专题与来源元数据。存在的缓存会验证哈希，缺失文件明确统计为未核验；该命令不改写覆盖或审校报告。
 
 内容变更后的完整审校使用 `npm run data:audit`，要求已留存来源缓存存在且哈希一致，随后生成 `public/data/coverage.json` 和 `data/research/content-audit.json`，并从覆盖清单同步 README 的收录统计。`npm run data:docs` 可单独同步该统计区块，`data:audit:ci` 检查其一致性。覆盖清单中的 `events.byFilterCategory` 按实际筛选规则列出各类别的中外与地区分布；`periods[].byRegion` 和 `periods[].byFilterCategory` 分别列出各导航分期内的地区、主题数量，以事件起始年归入分期，不表示该分期的独有或完整历史。主题可交叉，不能将这些计数相加当作独立事件总量。失败抓取与成功快照分别记录；缓存缺失或损坏时不能当作完整审校通过。没有必要缓存的贡献者应说明限制，由持有缓存的维护者完成审校。
+
+专题实物图以 `data/article-images.json` 保存馆藏页面、官方元数据 API、许可及图片哈希。来源索引分别记录网页与 API 请求；网页拒绝自动抓取不改记为成功，官方 API 的成功快照也不冒充网页快照。完整审校同时校验随站点发布的图片字节与封面、正文图的对应关系。
 
 内容汇总时，`canonicalSources` 先规范原典卷次链接，再合并相同 URL 的引用，保留不同的出处说明。不同卷次、页面锚点或查询参数不自动合并；该处理不修改来源快照及抓取记录。
 

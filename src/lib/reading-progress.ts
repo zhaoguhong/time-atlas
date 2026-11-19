@@ -18,7 +18,7 @@ const legacyReadingKey = 'time-atlas:reading:v1'
 type TopicCatalog = readonly Pick<Tour, 'id' | 'steps'>[]
 
 export function topicStepFromHash(topic: Pick<Tour, 'steps'>, hash: string) {
-  const params = new URLSearchParams(hash.replace(/^#/, ''))
+  const params = new URLSearchParams(hash.slice(hash.indexOf('#') + 1))
   const eventStep = topic.steps.indexOf(params.get('event') ?? '')
   if (eventStep >= 0) return eventStep
   const step = params.get('step')
@@ -82,6 +82,29 @@ export function readProgress(catalog: TopicCatalog): ReadingProgress {
         }
       }
     }
+    // Buddhist chapters previously belonged to the Silk Road and then the combined
+    // religion article. Move stable event IDs before the new catalog is saved.
+    if (saved !== null) {
+      const target = byId.get('buddhist-texts-and-networks')
+      for (const priorId of ['silk-road', 'reformation']) {
+        const prior = value.topics?.[priorId]
+        const source = byId.get(priorId)
+        if (!source || !target || !Array.isArray(prior?.readEventIds)) continue
+        const moved: number[] = prior.readEventIds
+          .filter(
+            (id: unknown): id is string => typeof id === 'string' && !source.steps.includes(id),
+          )
+          .map((id: string) => target.steps.indexOf(id))
+          .filter((step: number) => step >= 0)
+        if (moved.length) {
+          const current = topics[target.id]
+          topics[target.id] = {
+            lastStep: current?.lastStep ?? Math.max(0, target.steps.indexOf(prior.lastEventId)),
+            read: [...new Set([...(current?.read ?? []), ...moved])],
+          }
+        }
+      }
+    }
     const recent = Array.isArray(value.recent)
       ? value.recent
           .filter(
@@ -90,7 +113,8 @@ export function readProgress(catalog: TopicCatalog): ReadingProgress {
               typeof item.key === 'string' &&
               typeof item.title === 'string' &&
               typeof item.hash === 'string' &&
-              item.hash.startsWith('#'),
+              (item.hash.startsWith('#') ||
+                (item.hash.startsWith('/') && !item.hash.startsWith('//'))),
           )
           .slice(0, 12)
       : []

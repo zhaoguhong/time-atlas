@@ -1,6 +1,11 @@
 import { expect, test, type Route } from '@playwright/test'
-import { tours } from '../src/data/periods'
 import { setSheet } from './mobile-sheet-helpers'
+import {
+  articleGuides as tours,
+  isReadingRequest,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 for (const width of [1440, 390]) {
   test(`a stalled article times out and retries without losing the selection at ${width}`, async ({
@@ -10,10 +15,14 @@ for (const width of [1440, 390]) {
     await page.clock.install({ time: new Date('2026-11-03T00:00:00Z') })
     await page.clock.pauseAt(new Date('2026-11-03T00:00:01Z'))
     let held: Route | undefined
-    await page.route('**/data/reading/events/**', (route) => {
-      held = route
+    const selector = /\/(?:events\/world-newton\/|data\/reading\/events\/.*)$/
+    const isNewton = (request: Parameters<typeof isReadingRequest>[0]) =>
+      isReadingRequest(request, 'events', 'world-newton')
+    await page.route(selector, (route) => {
+      if (isNewton(route.request())) held = route
+      else return route.continue()
     })
-    const requested = page.waitForRequest(/\/data\/reading\/events\//)
+    const requested = page.waitForRequest(isNewton)
     await page.goto('/#visual=pillar&year=1687&event=world-newton')
     await requested
     if (width < 700) await setSheet(page, 'reading')
@@ -22,7 +31,7 @@ for (const width of [1440, 390]) {
     await page.clock.fastForward(20_001)
     await expect(page.locator('.reading-status')).toContainText('正文暂未加载')
     await expect(page.locator('.event-detail > .detail-lead')).toContainText('牛顿')
-    await page.unroute('**/data/reading/events/**')
+    await page.unroute(selector)
     await held?.abort().catch(() => {})
     await page.clock.resume()
     await page.getByRole('button', { name: '重新加载正文', exact: true }).click()
@@ -53,8 +62,10 @@ for (const width of [1440, 390]) {
     )
     await page.goto('/#visual=pillar&year=750&view=tours')
     if (width < 700) await setSheet(page, 'reading')
-    await page.locator('.tours-panel .resume-reading button').click()
-    await expect(page).toHaveURL(new RegExp(`event=${eventId}`))
+    await page.locator('.topic-directory-resume button').click()
+    await expect(page.locator('.topic-introduction h2')).toHaveText(topic.name)
+    await page.getByRole('button', { name: `继续第 ${chapter + 1} 则史事`, exact: true }).click()
+    await expect(page).toHaveURL(recordPath('events', eventId))
     await expect(page.locator('.topic-chapter-context')).toContainText(`第 ${chapter + 1} /`)
     await expect(
       page.getByRole('button', { name: '本章已读 · 取消标记', exact: true }),
@@ -74,7 +85,7 @@ for (const width of [1440, 390]) {
     await expect(page.locator('.topic-chapter-context')).toContainText(`第 ${chapter + 1} /`)
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
     await page.getByRole('button', { name: '标记本章已读', exact: true }).click()
-    await page.reload()
+    await reloadExploration(page)
     if (width < 700) await setSheet(page, 'reading')
     await expect(page.locator('.topic-chapter-context')).toContainText(`第 ${chapter + 1} /`)
     await expect(

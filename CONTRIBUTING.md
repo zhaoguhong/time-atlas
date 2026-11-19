@@ -38,6 +38,7 @@ CI=1 npm run test:e2e:smoke
 CI=1 npm run test:e2e:pillar -- --project chrome
 CI=1 npm run test:e2e:world -- --project chrome
 CI=1 npm run test:e2e:refinement -- --project chrome
+npx playwright test --config playwright.seo.config.ts
 ```
 
 `CI=1` 是 sh/bash/zsh 写法；PowerShell 可先设置 `$env:CI = '1'`，再执行不带此前缀的命令。工作流的实际检查范围以 [ci.yml](.github/workflows/ci.yml) 为准；跳过的步骤不能记为通过。
@@ -50,6 +51,8 @@ CI=1 npm run test:e2e:refinement -- --project chrome
 | `test:e2e:refinement` | 阅读布局、专题路线、年谱、操作入口与失败恢复，生产预览端口 4184 |
 | `test:e2e:journeys`   | 人物轨迹、来源、播放与阅读回归，生产预览端口 4184               |
 | `test:e2e`            | 通用交互回归，使用开发服务端口 5173；不能代替生产包验证         |
+
+SEO 检查使用独立端口 4197，也可通过 `PLAYWRIGHT_PORT` 指定端口。测试覆盖专题、人物、事件、朝代、世界政权与地点的静态正文、目录、来源、规范地址与结构化数据，以及桌面和手机模拟下的地址导航、刷新、历史记录与独立事件页的续读链接。丝绸之路专题以 390 × 844 的冷缓存场景检查首屏脚本，预算为 gzip 后 200 KiB。阅读检查还覆盖地图按需加载、画布释放和正文位置恢复。
 
 这些生产检查要求先构建 `dist/`，测试配置会启动并关闭预览服务。使用 4184 的套件应顺序执行；它们可用 `PLAYWRIGHT_PORT` 指定其他端口，或用 `PLAYWRIGHT_BASE_URL` 指向已启动的待测环境。不要误连无关服务。软件 WebGL 下保持配置中的单 worker，避免争用渲染资源。CI 将时空柱用例拆成两个分片，在独立的运行机上执行，每个分片仍使用单 worker；基础校验及其他浏览器套件由另一运行机执行，避免共享端口或软件渲染器。
 
@@ -79,10 +82,11 @@ npm run test:e2e:pillar -- --project webkit
 `npm run build` 生成完整静态目录 `dist/`，可交给支持静态文件的托管服务。必须通过 HTTP/HTTPS 访问，不能直接双击 HTML。子目录部署时使用：
 
 ```sh
-npm run build -- --base=/time-atlas/
+npm exec vite build -- --base=/time-atlas/
+node scripts/build-pages.mjs
 ```
 
-应用使用 URL hash 保存阅读状态，无需服务端路由重写。使用自己的域名时，调整 `index.html` 中的站点 URL 元数据。更改资源路径后应重新检查生产预览。
+专题目录使用 `/topics/`，每篇专题使用 `/topics/:slug/`，人物、事件、朝代、世界政权和地点分别使用 `/people/:slug/`、`/events/:slug/`、`/dynasties/:slug/`、`/polities/:slug/`、`/places/:slug/`。构建脚本为首页、各目录和每篇记录生成包含正文及来源的 HTML，并生成 `sitemap.xml` 和 `robots.txt`。托管服务应优先提供目录下的 `index.html`，不存在的路径返回 404；无需 SPA 回退。使用反向代理时，检查补齐末尾斜杠的跳转仍指向公开 HTTPS 地址，不应暴露后端端口。所有阅读档案的分享只使用干净路径；默认首页保持纯主域名地址，主动调整的地图地址使用 URL hash 保存视野和筛选。专题路径在 `src/data/article-slugs.ts` 定义；其他档案路径由数据准备脚本生成，见[阅读数据流程](docs/data.md#阅读目录与正文)。静态构建和客户端共用对应映射。旧阅读 hash 地址不再作为公开入口。使用自己的域名时，调整 `index.html` 中的站点 URL 元数据。更改资源路径后应重新检查生产预览。
 
 仓库中的 CI 只检查代码、数据与本地生产预览，不发布网站。维护者个人服务器的部署脚本、账号、配置及运维记录不属于公开项目文档。
 

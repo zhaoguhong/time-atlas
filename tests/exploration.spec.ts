@@ -21,7 +21,7 @@ async function search(page: Page, text: string) {
 test('returns to a person with scroll position and supports browser forward', async ({ page }) => {
   await page.goto('/#year=1082')
   await search(page, '苏轼')
-  const event = page.locator('.person-events button').first()
+  const event = page.locator('.person-events a').first()
   await event.scrollIntoViewIfNeeded()
   const top = await page.locator('.panel-scroll').evaluate((element) => element.scrollTop)
   await event.click()
@@ -78,8 +78,11 @@ test('shares category, layers, fixed bounds and custom date range to a fresh con
 test('finds topics and stores explicit reading progress across reloads', async ({ page }) => {
   await page.goto('/#year=750')
   await search(page, '安史之乱与唐代转折')
-  await expect(page.locator('.topic-introduction h2')).toHaveText('安史之乱与唐代转折')
-  await page.getByRole('button', { name: '开始地图学习', exact: true }).click()
+  await expect(page.locator('.topic-introduction h2')).toHaveText(
+    '石壕村的这一夜：安史之乱怎样征人',
+  )
+  await page.locator('.topic-events-summary').click()
+  await page.locator('.topic-chapter-list li').first().getByRole('button').click()
   await page.getByRole('button', { name: '专题下一章', exact: true }).click()
   await page.getByRole('button', { name: '标记本章已读', exact: true }).click()
   await page.reload()
@@ -87,8 +90,8 @@ test('finds topics and stores explicit reading progress across reloads', async (
     page.getByRole('button', { name: '本章已读 · 取消标记', exact: true }),
   ).toHaveAttribute('aria-pressed', 'true')
   await page.getByRole('button', { name: '专题导读与目录', exact: true }).click()
-  await expect(page.locator('.topic-introduction')).toContainText('已读 1 /')
-  await page.getByRole('button', { name: /继续第 2 章/ }).click()
+  await expect(page.locator('.topic-related-events')).toContainText('已读 1 /')
+  await page.getByRole('button', { name: /继续第 2 则史事/ }).click()
   await expect(page.locator('.topic-chapter-context')).toContainText('第 2 /')
 })
 
@@ -100,7 +103,7 @@ test('opens a place archive, separates verified visits and returns from an event
   await expect(page.locator('.place-detail h2')).toContainText('杭州')
   await expect(page.locator('.place-visits')).toContainText('苏轼')
   await page.getByLabel('地点档案时期').selectOption('song')
-  await page.locator('.place-detail .archive-event-list button').first().click()
+  await page.locator('.place-detail .archive-event-list a').first().click()
   await expect(page.locator('.event-detail h2')).toBeVisible()
   await page.getByRole('button', { name: '返回地点', exact: true }).click()
   await expect(page.getByLabel('地点档案时期')).toHaveValue('song')
@@ -141,10 +144,18 @@ test('combines place, date and category filters and restores the expanded form',
 test('locates a shared place and keeps its label visible after switching phone views', async ({
   page,
 }) => {
-  await page.goto('/#year=1082&place=hangzhou&view=places')
+  await page.goto('/places/hangzhou/#year=1082&view=places')
   await expect(page.locator('.place-focus-label[data-visible="true"]')).toContainText('杭州一带')
   await expect
-    .poll(() => Number(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('lng')))
+    .poll(() =>
+      page.evaluate(() =>
+        Number(
+          new URLSearchParams(
+            JSON.parse(sessionStorage.getItem('time-atlas:reading-context')!).hash.slice(1),
+          ).get('lng'),
+        ),
+      ),
+    )
     .toBeCloseTo(120.16, 1)
   await page.setViewportSize({ width: 390, height: 844 })
   await setSheet(page, 'reading')

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="508" viewBox="0 0 600 508" role="img" aria-labelledby="title desc">
+<title id="title">清帝退位前后的两项安排</title>
+<desc id="desc">时间线分别标出南京临时政府成立、清帝退位和临时参议院选举袁世凯，区分皇位的终止与总统的产生。</desc>
+<rect width="600" height="508" rx="14" fill="#f8f5eb"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="32" y="60" font-size="35" fill="#233d37" font-weight="650" text-anchor="start">清帝退位前后的两项安排</text>
+<path d="M32 85H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M61 139V401" fill="none" stroke="#809384" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="61" cy="149" r="11" fill="#176454"/>
+<text x="98" y="145" font-size="25" fill="#176454" font-weight="650" text-anchor="start">1912年1月1日</text>
+<text x="98" y="188" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">孙中山在南京就任临时大总统。</text>
+<circle cx="61" cy="263" r="11" fill="#904625"/>
+<text x="98" y="259" font-size="25" fill="#904625" font-weight="650" text-anchor="start">2月12日 · 北京</text>
+<text x="98" y="302" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">清帝退位，皇位继承至此终止。</text>
+<circle cx="61" cy="380" r="11" fill="#176454"/>
+<text x="98" y="376" font-size="25" fill="#176454" font-weight="650" text-anchor="start">2月15日 · 南京</text>
+<text x="98" y="419" font-size="25" fill="#233d37" font-weight="400" text-anchor="start">临时参议院选袁世凯为临时大总统。</text>
+<path d="M32 454H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="490" font-size="24" fill="#485d54" font-weight="400" text-anchor="start">退位诏书与议院选举分别发生。</text>
+</g>
+</svg>

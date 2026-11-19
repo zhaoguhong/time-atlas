@@ -1,7 +1,7 @@
 import { openHeaderMenu } from './refinement-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
-import { tours } from '../src/data/periods'
+import { topicTours as tours } from '../src/data/topics'
 import { eventById } from '../src/data/content'
 import { MAX_YEAR, formatEventDate, formatYear } from '../src/lib/history'
 import { readFileSync } from 'node:fs'
@@ -75,9 +75,7 @@ test('opens detailed dynasty reading, filters its chronology and returns from an
   expect(await page.locator('.dynasty-chronology li').count()).toBeGreaterThan(80)
   await page.getByRole('textbox', { name: '筛选朝代大事' }).fill('鸦片')
   await expect(page.locator('.dynasty-chronology li')).toHaveCount(3)
-  const chapter = page
-    .locator('.dynasty-chronology button')
-    .filter({ hasText: '第二次鸦片战争开始' })
+  const chapter = page.locator('.dynasty-chronology a').filter({ hasText: '第二次鸦片战争开始' })
   await chapter.scrollIntoViewIfNeeded()
   const previousScroll = await page
     .locator('.panel-scroll')
@@ -91,27 +89,30 @@ test('opens detailed dynasty reading, filters its chronology and returns from an
     .poll(() => page.locator('.panel-scroll').evaluate((element) => element.scrollTop))
     .toBeCloseTo(previousScroll, 0)
   await page.getByRole('textbox', { name: '筛选朝代大事' }).fill('洋务')
-  await page.locator('.dynasty-chronology li button').click()
+  await page.locator('.dynasty-chronology li a').click()
   await expect(page.locator('.event-narrative')).toContainText('1894')
-  await page.locator('.related-people button').filter({ hasText: '李鸿章' }).click()
+  await page.locator('.related-people a').filter({ hasText: '李鸿章' }).click()
   await expect(page.locator('.person-biography p')).toHaveCount(2)
 })
 
 test('keeps topic context when selecting a map or timeline node', async ({ page }) => {
   await openTopics(page)
-  await page.locator('.tour-card').filter({ hasText: '安史之乱与唐代转折' }).click()
-  await page.getByRole('button', { name: '开始地图学习', exact: false }).click()
+  await page.locator('.tour-card').filter({ hasText: '石壕村的这一夜：安史之乱怎样征人' }).click()
+  await page.getByRole('button', { name: '查看专题地点', exact: true }).click()
   const marker = page.locator('.topic-marker[data-visible="true"]').first()
   await marker.click()
   if (await page.locator('.map-event-popup').isVisible())
     await page.locator('.map-event-choice').last().click()
-  await expect(page.locator('.topic-chapter-context')).toContainText('安史之乱与唐代转折')
+  await expect(page.locator('.topic-chapter-context')).toContainText(
+    '石壕村的这一夜：安史之乱怎样征人',
+  )
   await expect(page.locator('.tour-banner')).toBeVisible()
   await page.getByRole('button', { name: '专题导读与目录', exact: true }).click()
+  await page.locator('.topic-events-summary').click()
   await page.locator('.topic-chapter-list li').last().getByRole('button').click()
   await expect(page.locator('.event-detail h2')).toHaveText('唐昭宗被迫迁洛阳')
   await page.getByRole('button', { name: '专题上一章', exact: true }).click()
-  await expect(page.locator('.topic-chapter-context')).toContainText('第 7 / 8 章')
+  await expect(page.locator('.topic-chapter-context')).toContainText('第 8 / 9 章')
 })
 
 test('mobile reading, topic navigation and journey activity labels stay usable', async ({
@@ -180,7 +181,7 @@ test('keeps the current topic location visible in a short window and returns fro
   )
   await expect(page.getByRole('button', { name: '历史专题', exact: true })).toHaveClass('active')
   await expect(page.locator('.time-readout .eyebrow')).toContainText('专题时间轴')
-  const personLink = page.locator('.related-people button').filter({ hasText: '林则徐' })
+  const personLink = page.locator('.related-people a').filter({ hasText: '林则徐' })
   await personLink.scrollIntoViewIfNeeded()
   const previousScroll = await page
     .locator('.panel-scroll')
@@ -193,9 +194,7 @@ test('keeps the current topic location visible in a short window and returns fro
   await expect
     .poll(() => page.locator('.panel-scroll').evaluate((element) => element.scrollTop))
     .toBeCloseTo(previousScroll, 0)
-  await expect(
-    page.locator('.related-people button').filter({ hasText: '林则徐' }),
-  ).toBeInViewport()
+  await expect(page.locator('.related-people a').filter({ hasText: '林则徐' })).toBeInViewport()
 })
 
 test.beforeEach(async ({ page }) => {
@@ -228,7 +227,7 @@ test('searches an event, opens a person and returns to the event', async ({ page
   await page.locator('.search-results button').filter({ hasText: '赤壁之战' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('赤壁之战')
   await expect(page.locator('.year-title')).toHaveText(/208/)
-  await page.locator('.related-people button').filter({ hasText: '周瑜' }).click()
+  await page.locator('.related-people a').filter({ hasText: '周瑜' }).click()
   await expect(page.locator('.person-hero h2')).toContainText('周瑜')
   await page.getByRole('button', { name: '返回事件' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('赤壁之战')
@@ -417,7 +416,7 @@ test('renders sourced person journeys and distinguishes related events from pres
   await page.locator('.journey-node-list button').filter({ hasText: '驻五丈原' }).click()
   await expect(page.locator('.journey-active-card h4')).toHaveText('驻五丈原、病逝军中')
   await expect(page).toHaveURL(/journey=zhugeliang/)
-  await page.locator('.person-events button').filter({ hasText: '诸葛亮第一次北伐' }).click()
+  await page.locator('.person-events a').filter({ hasText: '诸葛亮第一次北伐' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('诸葛亮第一次北伐')
   await expect(page.locator('.journey-toolbar')).toHaveCount(0)
 })
@@ -470,7 +469,7 @@ test('fixes Kangxi’s map period and excludes others’ battlefield and treaty 
   const places = await page.locator('.journey-node-list button').allTextContents()
   expect(places.join(' ')).not.toMatch(/台湾|尼布楚|昭莫多/)
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-trail-arrows-rendered', 'true')
-  await page.locator('.person-events button').filter({ hasText: '尼布楚' }).click()
+  await page.locator('.person-events a').filter({ hasText: '尼布楚' }).click()
   await expect(page.locator('.event-detail h2')).toContainText('尼布楚')
   await expect(page.locator('.journey-toolbar')).toHaveCount(0)
 })
@@ -635,10 +634,10 @@ test('replays from the last journey record and exposes expanded founder events w
   await expect(page.locator('.journey-active-card h4')).toContainText('出生于眉山')
   await page.getByRole('button', { name: '暂停时间播放' }).click()
   await page.goto('/#year=960&person=zhaokuangyin')
-  expect(await page.locator('.person-events button').count()).toBeGreaterThanOrEqual(10)
+  expect(await page.locator('.person-events a').count()).toBeGreaterThanOrEqual(10)
   await expect(page.locator('.person-events')).toContainText('宋刑统')
   await expect(page.locator('.person-events')).toContainText('曹彬等执行')
-  await page.locator('.person-events button').filter({ hasText: '宋灭南唐' }).click()
+  await page.locator('.person-events a').filter({ hasText: '宋灭南唐' }).click()
   await expect(page.locator('.event-detail .detail-lead')).toContainText('李煜')
   await expect(page.locator('.related-people')).toContainText('部署伐南唐')
 })

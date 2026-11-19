@@ -417,7 +417,7 @@
   padding: 0;
   font-size: 9px;
   color: #65745d;
-  white-space: nowrap;
+  white-space: normal;
 }
 .named-event-title {
   grid-column: 2;

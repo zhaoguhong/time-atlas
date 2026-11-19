@@ -135,7 +135,7 @@
   margin: 12px 0;
   padding: 0;
 }
-.dynasty-chronology button {
+.dynasty-chronology :is(button, a.reading-link) {
   display: flex;
   gap: 12px;
   align-items: center;
@@ -146,13 +146,13 @@
   border-bottom: 1px solid #e8e1d5;
   background: transparent;
 }
-.dynasty-chronology button > span {
+.dynasty-chronology :is(button, a.reading-link) > span {
   font: 12px var(--sans);
   width: 42px;
   flex-shrink: 0;
   color: #847357;
 }
-.dynasty-chronology button > div {
+.dynasty-chronology :is(button, a.reading-link) > div {
   flex: 1;
   min-width: 0;
 }
@@ -167,7 +167,7 @@
   font-size: 13px;
   line-height: 1.6;
 }
-.dynasty-chronology button:hover,
+.dynasty-chronology :is(button, a.reading-link):hover,
 .topic-chapter-list button:hover {
   background: #f0eee3;
 }
@@ -346,6 +346,7 @@
   grid-column: 2;
   background: transparent;
   padding: 0;
+  white-space: normal;
 }
 .topic-marker-label {
   grid-column: 2;

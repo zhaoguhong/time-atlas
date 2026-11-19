@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import { expectExploration, explorationParams, recordPath } from './reading-url-helpers'
 
 const uncaught = new WeakMap<Page, string[]>()
 test.beforeEach(async ({ page }) => {
@@ -46,13 +47,13 @@ for (const [width, height] of [
       const archive = page.locator('.place-detail')
       await expect(archive.locator('h2')).toHaveText(name)
       await expect(archive.locator('.detail-lead')).toBeVisible()
-      const event = archive.locator('.archive-event-list button').first()
+      const event = archive.locator('.archive-event-list a').first()
       await expect(event).toBeVisible()
       const title = await event.locator('strong').innerText()
       await archive.getByRole('button', { name: '在地图上查看此地', exact: true }).click()
       await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
       await expect
-        .poll(() => Number(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('lat')))
+        .poll(async () => Number((await explorationParams(page)).lat))
         .toBeCloseTo(id === 'rome' ? 41.89 : 33.32, 1)
       await reading(page)
       await noHorizontalOverflow(page)
@@ -62,7 +63,7 @@ for (const [width, height] of [
       await expect(page.locator('.event-detail .reference-list a').first()).toBeAttached()
       await page.getByRole('button', { name: '返回地点', exact: true }).click()
       await expect(archive.locator('h2')).toHaveText(name)
-      await expect(archive.locator('.archive-event-list button').first()).toContainText(title)
+      await expect(archive.locator('.archive-event-list a').first()).toContainText(title)
     }
   })
 
@@ -71,13 +72,13 @@ for (const [width, height] of [
     await page.goto('/#visual=map&year=1918&person=luxun-writer')
     await reading(page)
     await expect(page.locator('.person-hero h2')).toContainText('鲁迅')
-    const work = page.locator('.person-events button').filter({ hasText: '鲁迅《狂人日记》发表' })
+    const work = page.locator('.person-events a').filter({ hasText: '鲁迅《狂人日记》发表' })
     await expect(work).toBeAttached()
     await work.click()
     await expect(page.locator('.event-detail h2')).toHaveText('鲁迅《狂人日记》发表')
     await expect(page.locator('.event-article p').first()).toBeAttached()
     await expect(page.locator('.event-detail .reference-list a').first()).toBeAttached()
-    await expect(page).toHaveURL(/event=modern-luxun-diary/)
+    await expect(page).toHaveURL(recordPath('events', 'modern-luxun-diary'))
     await noHorizontalOverflow(page)
     await page.screenshot({ path: info.outputPath(`luxun-work-${width}x${height}.png`) })
   })
@@ -104,8 +105,8 @@ for (const [width, height] of [
       'href',
       /徐霞客|%E5%BE%90/,
     )
-    await expect(page).toHaveURL(/journey=xuxiake/)
-    await expect(page).toHaveURL(/point=xuxiake-hengshan/)
+    await expect(page).toHaveURL(recordPath('people', 'xuxiake'))
+    await expectExploration(page, { journey: 'xuxiake', point: 'xuxiake-hengshan' })
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1633')
     await page.locator('.journey-active-card').scrollIntoViewIfNeeded()
     await noHorizontalOverflow(page)
@@ -113,9 +114,7 @@ for (const [width, height] of [
     await map(page)
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     await expect(page.locator('.journey-marker.selected[data-visible="true"]')).toBeVisible()
-    await expect
-      .poll(() => Number(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('lat')))
-      .toBeCloseTo(39.67, 1)
+    await expect.poll(async () => Number((await explorationParams(page)).lat)).toBeCloseTo(39.67, 1)
     await page.screenshot({ path: info.outputPath(`xuxiake-map-${width}x${height}.png`) })
   })
 }

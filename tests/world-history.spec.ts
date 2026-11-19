@@ -1,6 +1,12 @@
 import { openHeaderMenu, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
+import {
+  expectExploration,
+  explorationParams,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 test.use({ hasTouch: true })
 
@@ -93,35 +99,37 @@ async function singleWorldLabels(page: Page) {
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-longitude-wrapped', 'false')
   await mapReady(page)
   await expect
-    .poll(() =>
-      page.evaluate(() => {
-        const params = new URLSearchParams(location.hash.slice(1))
-        if (!params.has('lng') || !params.has('zoom')) return ['camera not committed']
-        const map = document.querySelector('.map-canvas')!.getBoundingClientRect()
-        const world = 512 * 2 ** Number(params.get('zoom'))
-        const left = map.width / 2 - ((Number(params.get('lng')) + 180) / 360) * world
-        const right = left + world
-        const labels = [
-          ...document.querySelectorAll<HTMLElement>(
-            '.polity-label[data-visible="true"],.polity-label[aria-label="查看美国疆域资料"]',
-          ),
-        ]
-        const problems: string[] = []
-        if (!labels.some((label) => label.getAttribute('aria-label') === '查看美国疆域资料'))
-          problems.push('missing USA map label')
-        for (const label of labels) {
-          const box = label.getBoundingClientRect()
-          // Labels may move by up to 90 px to avoid controls. Check their
-          // geographic anchor, removing that deliberate CSS-only displacement.
-          const offset = Number.parseFloat(getComputedStyle(label).translate) || 0
-          const anchor = box.left + box.width / 2 - offset - map.left
-          // The camera URL rounds zoom to 2 decimals, and fitBounds may use
-          // asymmetric side padding. Neither can explain a full world-copy drift.
-          if (anchor < left - 16 || anchor > right + 16)
-            problems.push(`${label.textContent}: ${anchor} outside ${left}—${right}`)
-        }
-        return problems
-      }),
+    .poll(async () =>
+      page.evaluate(
+        ({ lng, zoom }) => {
+          if (lng === undefined || zoom === undefined) return ['camera not committed']
+          const map = document.querySelector('.map-canvas')!.getBoundingClientRect()
+          const world = 512 * 2 ** Number(zoom)
+          const left = map.width / 2 - ((Number(lng) + 180) / 360) * world
+          const right = left + world
+          const labels = [
+            ...document.querySelectorAll<HTMLElement>(
+              '.polity-label[data-visible="true"],.polity-label[aria-label="查看美国疆域资料"]',
+            ),
+          ]
+          const problems: string[] = []
+          if (!labels.some((label) => label.getAttribute('aria-label') === '查看美国疆域资料'))
+            problems.push('missing USA map label')
+          for (const label of labels) {
+            const box = label.getBoundingClientRect()
+            // Labels may move by up to 90 px to avoid controls. Check their
+            // geographic anchor, removing that deliberate CSS-only displacement.
+            const offset = Number.parseFloat(getComputedStyle(label).translate) || 0
+            const anchor = box.left + box.width / 2 - offset - map.left
+            // The camera URL rounds zoom to 2 decimals, and fitBounds may use
+            // asymmetric side padding. Neither can explain a full world-copy drift.
+            if (anchor < left - 16 || anchor > right + 16)
+              problems.push(`${label.textContent}: ${anchor} outside ${left}—${right}`)
+          }
+          return problems
+        },
+        await explorationParams(page),
+      ),
     )
     .toEqual([])
 }
@@ -183,18 +191,17 @@ for (const [width, height] of [
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
     await expect(page.locator('.pillar-card.china')).toHaveCount(0)
     await expect(page.locator('.pillar-card[data-event-id="world-suez-canal"]')).toBeVisible()
-    await expect(page).toHaveURL(/region=africa/)
-    await expect(page).toHaveURL(/event=world-suez-canal/)
+    await expect(page).toHaveURL(recordPath('events', 'world-suez-canal'))
+    await expectExploration(page, { region: 'africa' })
     await page.screenshot({ path: info.outputPath(`world-event-pillar-${width}.png`) })
-    await page.reload()
+    await reloadExploration(page)
     await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
     await expect(page.locator('.event-detail h2')).toHaveText('苏伊士运河通航')
     await switchMode(page, '地图')
     await mapReady(page, 1869)
-    await expect(page).toHaveURL(/side=world/)
-    await expect(page).toHaveURL(/region=africa/)
-    await expect(page).toHaveURL(/event=world-suez-canal/)
-    await page.reload()
+    await expect(page).toHaveURL(recordPath('events', 'world-suez-canal'))
+    await expectExploration(page, { side: 'world', region: 'africa' })
+    await reloadExploration(page)
     await mapReady(page, 1869)
     await globalMapEvents(page)
     await switchMode(page, '时空柱')
@@ -291,15 +298,15 @@ test('a Chinese map label opens the sourced Roman world-polity profile without m
     /openstax\.org/,
   )
   await page.screenshot({ path: info.outputPath('roman-map-reading.png') })
-  await search(page, '罗马帝国')
+  await page.getByRole('link', { name: '阅读完整政权档案' }).click()
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
   await expect(page.locator('.dynasty-detail > .eyebrow')).toHaveText('世界政权档案')
   await expect(page.locator('.dynasty-detail .reference-list a').first()).toHaveAttribute(
     'href',
     /openstax\.org/,
   )
-  await expect(page).toHaveURL(/dynasty=world-roman-empire/)
-  await page.reload()
+  await expect(page).toHaveURL(/\/polities\/roman-empire\/$/)
+  await reloadExploration(page)
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
 })
 
@@ -307,11 +314,13 @@ test('an approximate Central Asian event retains date, location caveats and refe
   page,
 }, info) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto(
-    '/#year=101&side=world&region=central-asia&visual=pillar&span=350&event=world-kushan-networks',
-  )
+  await page.goto('/#year=101&side=world&region=central-asia&visual=pillar&span=350')
   await expect(page.locator('.pillar-stage')).toBeVisible()
   await sheet(page, 'reading')
+  await page
+    .getByRole('complementary', { name: '历史内容' })
+    .getByRole('link', { name: /贵霜连接中亚与北印度/ })
+    .click()
   const detail = page.locator('.event-detail')
   await expect(detail.locator('h2')).toHaveText('贵霜连接中亚与北印度')
   await expect(detail.locator('.detail-kicker')).toContainText('约2世纪')
@@ -325,10 +334,36 @@ test('an approximate Central Asian event retains date, location caveats and refe
   await sheet(page, 'reading')
   await expect(detail.locator('.detail-kicker')).toContainText('约2世纪')
   await expect(detail.locator('.evidence-note')).toContainText('具体纪年仍有争论')
-  await expect(page).toHaveURL(/side=world/)
-  await expect(page).toHaveURL(/region=central-asia/)
+  await expect(page).toHaveURL(/\/events\/world-kushan-networks\/$/)
   await page.screenshot({ path: info.outputPath('approximate-world-map-reading.png') })
+  await detail.getByRole('button', { name: '在时空柱中对照', exact: true }).click()
+  await sheet(page, 'split')
+  await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
+  await pillarSettings(page)
+  await expect(page.getByLabel('世界历史地区', { exact: true })).toHaveValue('central-asia')
 })
+
+for (const [width, height] of [
+  [1440, 900],
+  [390, 844],
+  [844, 390],
+]) {
+  test(`keeps the Oxford date qualifier on its map marker at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/events/depth-oxford-teaching/')
+    await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
+    await mapReady(page, 1096)
+    await sheet(page, 'split')
+    const marker = page.locator('.event-marker[data-active-event="depth-oxford-teaching"]')
+    await expect(marker).toHaveAttribute('data-visible', 'true')
+    await expect(marker.locator('small')).toContainText('至迟1096年')
+    await expect(marker.locator('small')).toBeInViewport({ ratio: 1 })
+    await noPageOverflow(page)
+    await page.screenshot({ path: info.outputPath('oxford-map-date.png') })
+  })
+}
 
 test('map searches read both histories without changing remembered pillar filters', async ({
   page,
@@ -339,20 +374,18 @@ test('map searches read both histories without changing remembered pillar filter
   await search(page, '秦统一六国')
   await expect(page.locator('.event-detail h2')).toHaveText('秦统一六国')
   await mapReady(page, -221)
-  await expect(page).toHaveURL(/side=world/)
-  await expect(page).toHaveURL(/region=africa/)
-  await expect(page).toHaveURL(/event=qin-unifies/)
+  await expect(page).toHaveURL(recordPath('events', 'qin-unifies'))
+  await expectExploration(page, { side: 'world', region: 'africa' })
   await expect(page.locator('.event-marker[data-event-ids~="qin-unifies"]')).toHaveCount(1)
   await search(page, '秦朝')
   await expect(page.locator('.dynasty-detail h2')).toHaveText('秦朝')
   await expect(page.locator('.dynasty-detail > .eyebrow')).toHaveText('朝代与政权档案')
-  await expect(page).not.toHaveURL(/dynasty=world-/)
-  await expect(page).toHaveURL(/side=world/)
-  await expect(page).toHaveURL(/region=africa/)
+  await expect(page).toHaveURL(recordPath('dynasties', 'qin'))
+  await expectExploration(page, { side: 'world', region: 'africa' })
   await search(page, '罗马帝国')
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
-  await expect(page).toHaveURL(/side=world/)
-  await expect(page).toHaveURL(/region=africa/)
+  await expect(page).toHaveURL(recordPath('polities', 'world-roman-empire'))
+  await expectExploration(page, { side: 'world', region: 'africa' })
   await switchMode(page, '时空柱')
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-side', 'world')
   await pillarSettings(page)
@@ -364,13 +397,13 @@ test('world archives persist in bookmarks and recent reading with their own star
   page,
 }, info) => {
   await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto('/#year=200&dynasty=world-roman-empire&lng=13&lat=40&zoom=2.2')
+  await page.goto('/#dynasty=world-roman-empire&year=200&lng=13&lat=40&zoom=2.2')
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
   // Exercise persistence from a loaded map. Reloading during WebKit's pending
   // module import reports the old document's cancelled dependency as a pageerror.
   await mapReady(page, 200)
   await page.getByRole('button', { name: '收藏', exact: true }).click()
-  await page.reload()
+  await reloadExploration(page)
   await expect(page.locator('.dynasty-detail h2')).toHaveText('罗马帝国')
   await openHeaderMenu(page)
   await page.getByRole('button', { name: '我的阅读', exact: true }).click()
@@ -380,8 +413,8 @@ test('world archives persist in bookmarks and recent reading with their own star
   await page.locator('.saved-panel .dynasty-list-card').click()
   await page.getByRole('button', { name: '查看阅读起始年代的地图', exact: true }).click()
   await mapReady(page, -27)
-  await expect(page).not.toHaveURL(/side=world|region=europe/)
-  await expect(page).toHaveURL(/year=-27/)
+  await expectExploration(page, { side: null, region: null, year: '-27' })
+  await expect(page.locator('.year-title')).toContainText('27')
   await page
     .getByRole('combobox', { name: '搜索历史事件、人物或地名', exact: true })
     .fill('Roman Empire')
@@ -449,7 +482,7 @@ test('an explicit Pacific camera shows Hawaii independently of pillar region pre
     await mapReady(page, 1893)
     await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
   }
-  await page.reload()
+  await reloadExploration(page)
   await mapReady(page, 1893)
   await sheet(page, 'split')
   await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
@@ -467,8 +500,8 @@ test('an explicit Pacific camera shows Hawaii independently of pillar region pre
   await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
   await search(page, '秦统一六国')
   await mapReady(page, -221)
-  await expect(page).toHaveURL(/side=world/)
-  await expect(page).toHaveURL(/region=africa/)
+  await expect(page).toHaveURL(recordPath('events', 'qin-unifies'))
+  await expectExploration(page, { side: 'world', region: 'africa' })
   await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
 })
 

@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test'
 import { journeys } from '../src/data/journeys'
 import { readingSourceUrl } from '../src/lib/source-links'
 import { setSheet } from './mobile-sheet-helpers'
+import { expectExploration, recordPath } from './reading-url-helpers'
 
 for (const [width, height] of [
   [1440, 900],
@@ -33,7 +34,8 @@ for (const [width, height] of [
       )
       await page.locator('.journey-step-controls button').filter({ hasText: '下一条' }).click()
       await expect(page.locator('.journey-active-card h4')).toHaveText(second.title)
-      await expect(page).toHaveURL(new RegExp(`point=${second.id}`))
+      await expect(page).toHaveURL(recordPath('people', journey.personId))
+      await expectExploration(page, { point: second.id })
       await expect(page.locator('.map-canvas')).toHaveAttribute(
         'data-map-year',
         String(second.year),

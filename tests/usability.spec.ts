@@ -185,7 +185,8 @@ test('plays topic chapters without losing the topic and stops at its final chapt
 
 test('retains the current topic label after resizing to a small phone', async ({ page }) => {
   await openTopics(page)
-  await page.locator('.tour-card').filter({ hasText: '两次鸦片战争与条约体系' }).click()
+  await page.locator('.tour-card').filter({ hasText: '鸦片战争与甲午：晚清改革的困局' }).click()
+  await page.locator('.topic-events-summary').click()
   await page.locator('.topic-chapter-list li').nth(6).getByRole('button').click()
   await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
   await page.setViewportSize({ width: 375, height: 667 })

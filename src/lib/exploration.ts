@@ -69,12 +69,10 @@ export function namesPlace(location: string, place: Place) {
   // Regional names and similarly named cities are not evidence of a city match.
   if (place.id === 'rome') return /(?<![东西])罗马(?!尼亚|帝国|共和国)/u.test(location)
   if (place.id === 'delhi') return /(?<!马)德里/u.test(location)
-  return place.names.some((name) => {
-    // 东京 can also refer to Japan; the stored location must identify the Chinese city.
-    if (name === '东京')
-      return /东京.*(?:开封|汴)|(?:开封|汴).*东京/.test(location) || location === '东京'
-    return location.includes(name)
-  })
+  // Keep Kaifeng's historical name visible without matching it to Japan's Tokyo.
+  return place.names.some(
+    (name) => !(place.id === 'kaifeng' && name === '东京') && location.includes(name),
+  )
 }
 
 /** Explicit associations take precedence, including an intentional empty list. */

@@ -1,5 +1,7 @@
 import { voyageTopics, addRouteReading } from './voyage-topics'
 import { deepenTopics } from './topic-articles'
+import { deepenSelectedEssays } from './deepened-essays'
+import { essayTopics } from './essay-topics'
 import { createFocusedTopics } from './focused-topics'
 import { continuityTopicTours } from './continuity-content'
 import { expandedTopicTours } from './topic-expansion'
@@ -1206,8 +1208,9 @@ const existingTopics: Tour[] = [
   ...connectedTopicTours,
 ]
 
-export const topicTours: Tour[] = [
+export const topicTours: Tour[] = deepenSelectedEssays([
   ...deepenTopics(existingTopics).map(addRouteReading),
   ...createFocusedTopics(existingTopics),
   ...voyageTopics,
-]
+  ...essayTopics,
+])
