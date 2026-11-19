@@ -181,36 +181,44 @@ export function layoutPillarWindow(
     const cards: PillarCard[] = []
     const anchor = (e: HistoryEvent) =>
       Math.max(0, Math.min(height, ((top - toOrdinal(e.year)) / (top - bottom)) * height))
-    const ranked = [...candidates].sort(
-      (a, b) =>
-        Number(b.id === selectedId) - Number(a.id === selectedId) ||
-        b.importance - a.importance ||
-        Number(landmarks.has(b.id)) - Number(landmarks.has(a.id)) ||
-        Math.abs(a.year - year) - Math.abs(b.year - year) ||
-        a.year - b.year ||
-        a.id.localeCompare(b.id),
-    )
+    const ranked = candidates
+      .map((event) => ({
+        event,
+        anchorY: anchor(event),
+        minimumDistance: Infinity,
+        baseScore:
+          Number(event.id === selectedId) * 10000 +
+          event.importance * 200 +
+          Number(landmarks.has(event.id)) * 20,
+      }))
+      .sort(
+        ({ event: a }, { event: b }) =>
+          Number(b.id === selectedId) - Number(a.id === selectedId) ||
+          b.importance - a.importance ||
+          Number(landmarks.has(b.id)) - Number(landmarks.has(a.id)) ||
+          Math.abs(a.year - year) - Math.abs(b.year - year) ||
+          a.year - b.year ||
+          a.id.localeCompare(b.id),
+      )
     const capacity = Math.max(1, Math.floor((height + gap) / (cardHeight + gap)))
-    while (ranked.length && cards.length < capacity) {
-      // Spread equally important landmarks across the window instead of filling
-      // the middle with one dense era. A lower importance cannot displace a higher one.
-      const score = (e: HistoryEvent) =>
-        Number(e.id === selectedId) * 10000 +
-        e.importance * 200 +
-        Number(landmarks.has(e.id)) * 20 +
-        (cards.length
-          ? (Math.min(...cards.map((c) => Math.abs(c.anchorY - anchor(e)))) / height) * 80
-          : 0)
+    // Scores only change when a card is accepted. Update the nearest anchor
+    // incrementally and keep the existing ranking when a proposal is rejected.
+    const sortRanked = () => {
+      const score = ({ baseScore, minimumDistance }: (typeof ranked)[number]) =>
+        baseScore + (cards.length ? (minimumDistance / height) * 80 : 0)
       ranked.sort(
         (a, b) =>
           score(b) - score(a) ||
-          Math.abs(a.year - year) - Math.abs(b.year - year) ||
-          a.id.localeCompare(b.id),
+          Math.abs(a.event.year - year) - Math.abs(b.event.year - year) ||
+          a.event.id.localeCompare(b.event.id),
       )
-      const event = ranked.shift()!
+    }
+    sortRanked()
+    while (ranked.length && cards.length < capacity) {
+      const { event, anchorY } = ranked.shift()!
       const proposed: PillarCard[] = [
         ...cards.map((c) => ({ ...c })),
-        { event, anchorY: anchor(event), y: 0, side: lane, hidden: [] },
+        { event, anchorY, y: 0, side: lane, hidden: [] },
       ].sort((a, b) => a.anchorY - b.anchorY || a.event.id.localeCompare(b.event.id))
       proposed.forEach((c, i) => {
         const desired = Math.max(cardHeight / 2, Math.min(height - cardHeight / 2, c.anchorY))
@@ -235,6 +243,13 @@ export function layoutPillarWindow(
         )
       ) {
         cards.splice(0, cards.length, ...proposed)
+        if (cards.length === capacity) break
+        for (const candidate of ranked)
+          candidate.minimumDistance = Math.min(
+            candidate.minimumDistance,
+            Math.abs(anchorY - candidate.anchorY),
+          )
+        sortRanked()
       }
     }
     const chosen = new Set(cards.map((c) => c.event.id))
