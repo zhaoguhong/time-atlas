@@ -51,6 +51,8 @@ export function useColorMode(): readonly [ColorMode, () => void] {
     }
     media.addEventListener('change', systemChange)
     window.addEventListener('storage', storageChange)
+    // The OS preference can change between the initial render and this subscription.
+    systemChange()
     return () => {
       media.removeEventListener('change', systemChange)
       window.removeEventListener('storage', storageChange)
