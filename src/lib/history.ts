@@ -3,16 +3,18 @@ import type { EventScope, HistoryEvent, Person, Preferences, Period } from '../t
 import { eventSearchMatch } from './search'
 
 export const MIN_YEAR = -10000
-// Historical borders stop at 1912; the pillar and reading chronology continue.
-export const MAX_YEAR = 1912
+export const TERRITORY_MAX_YEAR = 1912
+export const TRANSITION_MAX_YEAR = 1950
+export const MAX_YEAR =
+  import.meta.env?.MODE === 'public' ? TERRITORY_MAX_YEAR : TRANSITION_MAX_YEAR
 export const PILLAR_MAX_YEAR = 2000
 export const modernReadingPeriod: Period = {
   id: 'modern-reading',
   name: '20世纪',
   short: '20世纪',
-  from: 1913,
+  from: TRANSITION_MAX_YEAR + 1,
   to: PILLAR_MAX_YEAR,
-  focus: 1950,
+  focus: 1969,
   color: '#658a87',
   subtitle: '现代历史 · 事件阅读',
   summary: '沿已收录的思想、战争、社会、科学与文化节点阅读20世纪；这一分段不代表统一的政权时期。',
@@ -40,12 +42,13 @@ export function compactEventDate(event: HistoryEvent) {
 }
 export function eventHasCertainYear(event: HistoryEvent) {
   // A date note may qualify a single-year anchor even without a custom label.
+  const labelledYear = event.dateLabel
+    ?.replace(/\s+/g, '')
+    .match(/^(?:公元)?(前?\d+)年(?:\d{1,2}月(?:\d{1,2}(?:—\d{1,2})?日)?)?$/)?.[1]
   return (
     (event.endYear ?? event.year) === event.year &&
     !event.dateNote &&
-    (!event.dateLabel ||
-      event.dateLabel.replace(/\s+/g, '').replace(/^公元/, '').replace(/年$/, '') ===
-        compactYear(event.year))
+    (!event.dateLabel || labelledYear === compactYear(event.year))
   )
 }
 export function eventDateRelation(event: HistoryEvent, year: number) {
@@ -56,7 +59,7 @@ export const clampYear = (year: number, maximum = MAX_YEAR) =>
   Math.min(maximum, Math.max(MIN_YEAR, year === 0 ? 1 : Math.round(year)))
 export const clampPillarYear = (year: number) => clampYear(year, PILLAR_MAX_YEAR)
 export const periodAt = (year: number) =>
-  year > MAX_YEAR
+  year > TRANSITION_MAX_YEAR
     ? modernReadingPeriod
     : (periods.find((p) => year >= p.from && year <= p.to) ?? periods[0])
 export const lifeDates = (person: Person) =>

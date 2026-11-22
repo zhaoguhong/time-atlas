@@ -54,6 +54,26 @@ def now():
     return dt.datetime.now(dt.timezone.utc).isoformat()
 
 
+def read_response(response, deadline):
+    # urllib's timeout is per socket operation. A slowly streamed body can
+    # keep a single read() alive indefinitely.
+    expected = getattr(response, "length", None)
+    chunks = bytearray()
+    while time.monotonic() < deadline:
+        try:
+            chunk = response.read1(65536)
+        except http.client.IncompleteRead as error:
+            raise http.client.IncompleteRead(bytes(chunks) + error.partial, error.expected) from error
+        if not chunk:
+            if expected is not None and len(chunks) < expected:
+                raise http.client.IncompleteRead(bytes(chunks), expected - len(chunks))
+            if time.monotonic() < deadline:
+                return bytes(chunks)
+            break
+        chunks.extend(chunk)
+    raise TimeoutError("Reference response exceeded the request timeout")
+
+
 def collect(source, previous, attempts=3, timeout=35):
     url = source["url"]
     key = hashlib.sha256(url.encode()).hexdigest()[:24]
@@ -71,6 +91,7 @@ def collect(source, previous, attempts=3, timeout=35):
     encoded = urllib.parse.quote(url, safe=":/?&=%#@+;")
     for attempt in range(attempts):
         started_at = now()
+        deadline = time.monotonic() + timeout
         try:
             request = urllib.request.Request(encoded, headers={"User-Agent": "TimeAtlas/0.1 (local educational reference audit)"})
             with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -78,7 +99,7 @@ def collect(source, previous, attempts=3, timeout=35):
                 content_type = response.headers.get_content_type()
                 resolved = response.url
                 status = response.status
-                data = response.read()
+                data = read_response(response, deadline)
             if content_type == "application/pdf":
                 path = path.with_suffix('.pdf')
             path.write_bytes(data)
@@ -119,7 +140,7 @@ def collect(source, previous, attempts=3, timeout=35):
             if isinstance(error, urllib.error.HTTPError):
                 failure["status"] = error.code
                 try:
-                    body = error.read()
+                    body = read_response(error, deadline)
                     if body:
                         body_hash = hashlib.sha256(body).hexdigest()
                         failure_path = RAW / f"{key}-error-{error.code}-{body_hash[:12]}.html"

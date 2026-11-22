@@ -1,3 +1,4 @@
+import { choosePeriod } from './timeline-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test } from '@playwright/test'
 import { civilizationEvents } from '../src/data/civilizations'
@@ -71,7 +72,7 @@ for (const [width, height] of [
   }) => {
     await page.setViewportSize({ width, height })
     await page.goto('/#year=230')
-    await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('prehistory')
+    await choosePeriod(page, 'prehistory', '史前')
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true', {
       timeout: 15000,
     })
@@ -82,11 +83,12 @@ for (const [width, height] of [
     ).toBeInViewport({ ratio: 1 })
     await page
       .locator('.overview-steps')
-      .getByRole('button', { name: /库克：新几内亚高地的早期农业/ })
+      .getByRole('link')
+      .filter({ hasText: '库克：新几内亚高地的早期农业' })
       .click()
     await expect(page.locator('.event-detail h2')).toContainText('库克')
     await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')
-    await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('early-civilizations')
+    await choosePeriod(page, 'early-civilizations', '早期文明')
     await expect(page.locator('.period-overview')).toContainText('安第斯苏佩河谷城市')
     for (const id of ['caral-city', 'sannai-maruyama', 'skara-brae']) {
       // Inspect the geographic marker anchor, before label collision translations.
@@ -120,7 +122,8 @@ for (const [width, height] of [
     if (width < 600) await setSheet(page, 'split')
     await page
       .locator('.overview-steps')
-      .getByRole('button', { name: /卡拉尔：安第斯地区的广场与台基/ })
+      .getByRole('link')
+      .filter({ hasText: '卡拉尔：安第斯地区的广场与台基' })
       .click()
     await expect(page.locator('.event-detail h2')).toContainText('卡拉尔')
     await expect(page.locator('.event-marker.selected')).toHaveAttribute('data-visible', 'true')

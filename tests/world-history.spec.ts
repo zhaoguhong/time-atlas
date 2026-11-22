@@ -1,3 +1,4 @@
+import { choosePeriod } from './timeline-helpers'
 import { openHeaderMenu, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
@@ -55,16 +56,6 @@ async function noPageOverflow(page: Page) {
     vertical: document.documentElement.scrollHeight > innerHeight,
   }))
   expect(overflow).toEqual({ horizontal: false, vertical: false })
-}
-
-async function choosePeriod(page: Page, id: string, shortName: string) {
-  const picker = page.getByLabel('切换历史时期', { exact: true })
-  if (await picker.isVisible()) await picker.selectOption(id)
-  else
-    await page
-      .getByRole('navigation', { name: '历史时期导航', exact: true })
-      .getByRole('button', { name: shortName, exact: true })
-      .click()
 }
 
 async function pillarSettings(page: Page) {
@@ -221,7 +212,7 @@ for (const [width, height] of [
     await noPageOverflow(page)
   })
 
-  test(`legacy pillar filters do not restrict map chronology through 1912 at ${width}x${height}`, async ({
+  test(`legacy pillar filters do not restrict map chronology through 1950 at ${width}x${height}`, async ({
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
@@ -241,9 +232,9 @@ for (const [width, height] of [
     await mapReady(page, 1750)
     await page.locator('.year-title').click()
     const yearInput = page.getByRole('spinbutton', { name: '输入历史年份', exact: true })
-    await yearInput.fill('1912')
+    await yearInput.fill('1950')
     await yearInput.press('Enter')
-    await mapReady(page, 1912)
+    await mapReady(page, 1950)
     await expect(page.getByRole('button', { name: '下一个历史事件', exact: true })).toBeDisabled()
     const displayedYears = await page
       .locator('.event-marker[data-event-years]')
@@ -252,9 +243,9 @@ for (const [width, height] of [
           marker.getAttribute('data-event-years')!.split(',').map(Number),
         ),
       )
-    expect(displayedYears.every((year) => year <= 1912)).toBe(true)
+    expect(displayedYears.every((year) => year <= 1950)).toBe(true)
     await noPageOverflow(page)
-    await page.screenshot({ path: info.outputPath(`world-map-1912-${width}.png`) })
+    await page.screenshot({ path: info.outputPath(`world-map-1950-${width}.png`) })
   })
 }
 
@@ -471,7 +462,7 @@ test('an explicit Pacific camera shows Hawaii independently of pillar region pre
   await sheet(page, 'reading')
   await expect(page.locator('.event-detail h2')).toHaveText('夏威夷君主制被推翻')
   await expect(page.locator('.event-article')).toContainText(
-    '美国吞并到1898年才发生，王国被推翻与后来并吞是两个相接而不同的节点。',
+    /1893年.*成立临时政府.*1898年美国国会的联合决议/s,
   )
   await sheet(page, 'split')
   for (const [width, height] of [

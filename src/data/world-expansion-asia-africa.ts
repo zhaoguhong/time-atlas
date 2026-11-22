@@ -1052,7 +1052,7 @@ export const worldAsiaAfricaEvents: HistoryEvent[] = [
     endYear: 1600,
     dateLabel: '约15—16世纪',
     dateNote: '所示为学术与手稿文化繁荣阶段，不表示城市建于1400年。',
-    title: '通布图的学术与手稿文化',
+    title: '廷巴克图（通布图）的学术与手稿文化',
     category: '文化',
     region: 'africa',
     themes: ['西非', '城市与学术'],

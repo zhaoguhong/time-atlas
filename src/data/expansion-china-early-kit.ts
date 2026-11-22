@@ -44,6 +44,7 @@ const sites: Record<string, [string, [number, number]]> = {
   yongzhou: ['永州一带', [111.61, 26.42]],
   nanchang: ['洪州、滕王阁一带', [115.89, 28.69]],
   chaozhou: ['潮州韩江', [116.65, 23.66]],
+  shexian: ['歙地 · 今安徽歙县一带', [118.44, 29.87]],
   suizhou: ['随州曾侯乙墓一带', [113.38, 31.72]],
 }
 type ER = [
@@ -85,6 +86,11 @@ const eventMetadata: Record<
   },
 }
 const external = {
+  '@songmo-study': webSource(
+    '陈昭扬《宋人纪录中的金太祖诸子》',
+    'https://www.his.ntnu.edu.tw/publish01/downloadfile.php?issue_id=7&paper_id=12',
+    '见有关《松漠纪闻》的成书、1156年洪适编次及1173年补遗。',
+  ),
   '@zeng-bells': webSource(
     '湖北省博物馆 · 曾侯乙编钟',
     'https://hbww.org.cn/zgzb/p/4695.html',

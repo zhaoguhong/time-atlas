@@ -81,7 +81,7 @@ describe('historical chronology', () => {
     expect(eventRelation(230, 230)).toBe('当年')
     expect(scopeDescription(-1, 'nearby')).toBe('前6—5 · 前后五年')
     expect(scopeDescription(MIN_YEAR, 'nearby')).toBe('前10000—前9995 · 前后五年')
-    expect(scopeDescription(MAX_YEAR, 'nearby')).toBe('1907—1912 · 前后五年')
+    expect(scopeDescription(MAX_YEAR, 'nearby')).toBe('1945—1950 · 前后五年')
   })
   it('validates and restores comparison and scope parameters', () => {
     expect(parseHash('#year=230&scope=period&compare=-138')).toMatchObject({

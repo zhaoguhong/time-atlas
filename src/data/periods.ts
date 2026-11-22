@@ -1,4 +1,5 @@
 import { expandedPlaceCities } from './place-expansion'
+import { modernMapPlaces } from './modern-map-places'
 import type { City, Period } from '../types'
 
 export const periods: Period[] = [
@@ -230,6 +231,18 @@ export const periods: Period[] = [
     summary:
       '清廷以多种方式组织边疆和地方，人口增长与商业流通扩大社会联系。19世纪战争、内乱和改革交织，国家与社会在全球变化中重新定位。',
   },
+  {
+    id: 'early-modern-china',
+    name: '民国与新中国初年',
+    short: '近现代',
+    from: 1913,
+    to: 1950,
+    focus: 1945,
+    color: '#658a87',
+    subtitle: '抗日战争、战后接收与建国',
+    summary:
+      '清帝退位之后，新的政治制度在军阀割据、社会运动和战争中寻求立足。抗战胜利后，中国接收台湾和澎湖。1949年中华人民共和国成立，国家建设与战后治理在各地陆续展开。',
+  },
 ]
 
 export const cities: City[] = [
@@ -306,7 +319,7 @@ export const cities: City[] = [
     modern: '今江苏南京',
     coordinates: [118.78, 32.06],
     from: 1368,
-    to: 1912,
+    to: 1950,
     capitals: [[1368, 1420]],
   },
   {
@@ -387,8 +400,26 @@ export const cities: City[] = [
     modern: '今北京',
     coordinates: [116.4, 39.92],
     from: 1368,
-    to: 1912,
-    capitals: [[1421, 1912]],
+    to: 1927,
+    capitals: [[1421, 1927]],
+  },
+  {
+    id: 'beiping',
+    name: '北平',
+    modern: '今北京。1928年改称北平，1949年重新定都后改称北京。',
+    coordinates: [116.4, 39.92],
+    from: 1928,
+    to: 1948,
+    capitals: [],
+  },
+  {
+    id: 'beijing-prc',
+    name: '北京',
+    modern: '今北京',
+    coordinates: [116.4, 39.92],
+    from: 1949,
+    to: 1950,
+    capitals: [[1949, 1950]],
   },
   {
     id: 'dunhuang',
@@ -423,8 +454,11 @@ export const cities: City[] = [
     modern: '今朝鲜平壤',
     coordinates: [125.75, 39.03],
     from: 427,
-    to: 1912,
-    capitals: [[427, 668]],
+    to: 1950,
+    capitals: [
+      [427, 668],
+      [1948, 1950],
+    ],
   },
   {
     id: 'nara',
@@ -459,7 +493,7 @@ export const cities: City[] = [
     modern: '今西藏拉萨',
     coordinates: [91.13, 29.65],
     from: 850,
-    to: 1912,
+    to: 1950,
     capitals: [],
   },
   {
@@ -515,7 +549,7 @@ export const cities: City[] = [
     modern: '今埃及开罗',
     coordinates: [31.24, 30.04],
     from: 969,
-    to: 1912,
+    to: 1950,
     capitals: [],
   },
   {
@@ -555,6 +589,7 @@ export const cities: City[] = [
     capitals: [],
   },
   ...expandedPlaceCities,
+  ...modernMapPlaces,
 ]
 
 // Schematic connections between attested nodes, not a reconstruction of an itinerary.

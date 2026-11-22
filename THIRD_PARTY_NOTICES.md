@@ -13,7 +13,7 @@ Historical territory layers are adapted from **Cliopatria**, part of the **Sesha
 - Dataset archive and initial creator credits: <https://zenodo.org/records/13363121>
 - Methods paper: <https://doi.org/10.1038/s41597-025-04516-9>
 
-Time Atlas modifies the data by retaining POLITY records in the supported dates, repairing invalid geometry where needed, clipping only the Mercator polar limits, simplifying global geometry at different tolerances inside and outside the China-neighbor detail region, rounding coordinates, adding display labels and colors, and splitting data into period archives and 20-year runtime slices. Original polity names and temporal intervals are retained in the derived records. Additional display filtering and name adjustments are described in the README and disclosed in relevant polity details. These adaptations are by Time Atlas and do not imply endorsement by the original creators.
+Time Atlas modifies the data by retaining POLITY records in the supported dates, repairing invalid geometry where needed, clipping only the Mercator polar limits, simplifying global geometry at different tolerances inside and outside the China-neighbor detail region, rounding coordinates, adding display labels and colors, and splitting data into period archives and 20-year runtime slices. Original polity names and temporal intervals are retained in the derived records. The [data guide](docs/data.md#地图展示与来源纠偏) and relevant polity details document additional display filtering and name adjustments. These adaptations are by Time Atlas and do not imply endorsement by the original creators.
 
 The license applies to the historical map data and its adaptations. It is not a blanket license for all application source code or referenced works.
 
@@ -25,9 +25,9 @@ Made with **Natural Earth**. Primary authors **Tom Patterson and Nathaniel Vaugh
 - Terms: <https://www.naturalearthdata.com/about/terms-of-use/>
 - Source: <https://github.com/nvkelso/natural-earth-vector>
 - Source revision: `ca96624a56bd078437bca8184e78163e5039ad19`
-- Layers: `ne_50m_land`, `ne_50m_lakes`, `ne_50m_rivers_lake_centerlines`
+- Layers: `ne_50m_land`, `ne_50m_lakes`, `ne_50m_rivers_lake_centerlines`, `ne_10m_land`
 
-Natural Earth map data is in the public domain. Time Atlas simplifies these global land and water layers. They provide present-day physical geography and are not reconstructions of historical coastlines or watercourses.
+Natural Earth map data is in the public domain. Time Atlas simplifies the global land and water layers and extracts the main islands of Taiwan and Hainan and selected Penghu land polygons from the 1:10m land layer. These layers provide present-day physical geography for reference.
 
 ## Historical reading references
 
@@ -46,7 +46,7 @@ Person journeys now use separately curated, cited presence records in `src/data/
 
 Chinese Wikipedia's public API is used only to resolve entity identity, title conversion and redirects. No Wikipedia article prose is imported. Basic descriptions are derived from Wikidata's structured descriptions/occupation fields; richer introductions are independently written and referenced. Local raw responses and checksums support review and reproducibility; the browser uses bundled records and makes no third-party person API requests.
 
-CBDB, Peking University's visualization platforms, TimeMapper, Journey and Su Shi Journey were inspected as research references. No CBDB standalone database, project code, original narrative text or media was copied into the app. The CBDB academic download is CC BY-NC-SA 4.0; it is not treated as CC0 or assumed suitable for unrestricted commercial redistribution.
+CBDB, Peking University's visualization platforms, TimeMapper, Journey and Su Shi Journey were inspected as research references. No CBDB standalone database, project code, original narrative text or media was copied into the app. The [CBDB academic database download](https://cbdb.hsites.harvard.edu/download-cbdb-standalone-database) is licensed under CC BY-NC-SA 4.0.
 
 ## Local research retention
 

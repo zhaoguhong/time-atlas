@@ -176,7 +176,9 @@ import {
   fromOrdinal,
   lifeDates,
   MAX_YEAR,
+  TERRITORY_MAX_YEAR,
   MIN_YEAR,
+  modernReadingPeriod,
   eventsInScope,
   scopeDescription,
   parseHash,
@@ -607,8 +609,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
     context:
       '使用类别、地区与时间筛选比较已收录的现代历史记录，并在每条记录中核对日期、背景与来源。',
     focusReason: '这一分段用于组织现代事件阅读，不代表各地共同的政治分期。',
-    chronologyNote:
-      '时空柱和事件阅读延伸至2000年；现有历史疆域资料仍止于1912年，现代事件不能借用早期地图作为同期疆域。',
+    chronologyNote: `时空柱和事件阅读延伸至${PILLAR_MAX_YEAR}年，地图浏览至${MAX_YEAR}年。`,
     polities: [] as string[],
     people: [] as string[],
     steps: periodEvents.map((event) => event.id),
@@ -725,7 +726,9 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
   const selectedPerson = personReading.record ?? selectedPersonIndex
   const liveEvent = liveEventReading.record ?? currentYearEvents[0]
   const selectedPolity =
-    selection?.type === 'polity' ? polities.find((item) => item.name === selection.id) : undefined
+    year <= TERRITORY_MAX_YEAR && selection?.type === 'polity'
+      ? polities.find((item) => item.name === selection.id)
+      : undefined
   const selectedDynasty =
     selection?.type === 'dynasty'
       ? (dynastyById.get(selection.id) ?? worldPolityById.get(selection.id))
@@ -906,6 +909,24 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
     },
     [personJourney, changeYear],
   )
+  function jumpTimelineYear(value: number, span?: number) {
+    if (value <= MAX_YEAR) {
+      navigateYear(value)
+      return
+    }
+    rememberView()
+    changeYear(value)
+    setMode('events')
+    setScope('period')
+    setReaderCollapsed(false)
+    setPlaybackReading(false)
+    setMobileView((view) => (view === 'reading' ? 'split' : view))
+    if (span !== undefined) {
+      setPillarSpan(span)
+      setExploration(emptyExploration)
+      setCategory('全部')
+    }
+  }
   const openEvent = useCallback(
     (id: string, keepTour = false, keepTrail = false, keepPillarView = false) => {
       const event = eventById.get(id)
@@ -971,8 +992,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
       setExploration((old) =>
         old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
       )
-      if (year > MAX_YEAR)
-        setToast('历史疆域资料止于1912年，地图已切回1912年；现代事件仍可继续阅读。')
+      if (year > MAX_YEAR) setToast(`地图已切回${MAX_YEAR}年供地点参考，现代事件仍可继续阅读。`)
     } else if (value === 'pillar' && selection?.type === 'event') {
       const selected = eventById.get(selection.id)
       if (selected && selected.year > MAX_YEAR) setYear(selected.year)
@@ -1157,8 +1177,16 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
     setTrailPerson(null)
   }
   function jumpPeriod(id: string) {
-    rememberView()
     const world = worldPeriods.find((item) => item.id === id)
+    const value =
+      world ??
+      (id === modernReadingPeriod.id ? modernReadingPeriod : periods.find((p) => p.id === id))
+    if (!value) return
+    if (value.from > MAX_YEAR) {
+      jumpTimelineYear(value.focus, 2 * Math.max(value.focus - value.from, value.to - value.focus))
+      return
+    }
+    rememberView()
     if (world) {
       setExploration(emptyExploration)
       changeYear(world.focus)
@@ -1176,7 +1204,6 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
     setExploration(emptyExploration)
     setPlaybackReading(false)
     setReaderCollapsed(false)
-    const value = periods.find((item) => item.id === id)!
     const earlySites = value.from < -2070 ? eventsInPeriod(events, value.focus) : []
     changeYear(value.focus)
     setFocus(
@@ -1426,7 +1453,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
       value < MIN_YEAR ||
       value > MAX_YEAR
     ) {
-      setCompareError('请输入前10000年至1912年之间的年份，公元前用负数，没有0年。')
+      setCompareError(`请输入前10000年至${MAX_YEAR}年之间的年份，公元前用负数，没有0年。`)
       requestAnimationFrame(() => {
         const controls = comparisonControlsRef.current
         if (controls) controls.scrollTop = controls.scrollHeight
@@ -2531,8 +2558,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
           <div className="map-context-note" role="note" aria-label="地图年代说明">
             <Info size={16} aria-hidden="true" />
             <span>
-              地点参照 · 事件 {selectedEvent.year} 年 / 疆域 {year} 年
-              <small>所示疆域不代表事件当年</small>
+              地点参照 · 事件 {selectedEvent.year} 年 / 地图 {year} 年
             </span>
           </div>
         )}
@@ -2653,7 +2679,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
               </Suspense>
             </CanvasBoundary>
           )}
-          {compareYear !== null && (
+          {visualization === 'map' && compareYear !== null && (
             <div className="comparison-controls" ref={comparisonControlsRef}>
               <form
                 onSubmit={(event) => {
@@ -2662,11 +2688,11 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                 }}
               >
                 <span>
-                  <i className="current-key" />
+                  {year <= TERRITORY_MAX_YEAR && <i className="current-key" />}
                   当前 {compactYear(year)}年
                 </span>
                 <label>
-                  <i className="reference-key" />
+                  {compareYear <= TERRITORY_MAX_YEAR && <i className="reference-key" />}
                   参考{' '}
                   <input
                     type="number"
@@ -2685,8 +2711,10 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                 </button>
               </form>
               <p>
-                蓝色虚线：{formatYear(compareYear)}的疆域记录 ·{' '}
-                {worldBrowsing ? worldPeriodAt(compareYear).name : periodAt(compareYear).name}
+                {compareYear <= TERRITORY_MAX_YEAR
+                  ? `蓝色虚线表示${formatYear(compareYear)}的疆域记录`
+                  : `${compareYear}年疆界待补，可对照两年间的事件`}{' '}
+                · {worldBrowsing ? worldPeriodAt(compareYear).name : periodAt(compareYear).name}
               </p>
               <button className="comparison-read-button" onClick={() => navigateMode('comparison')}>
                 解读这段变化 <ArrowRight size={13} />
@@ -2807,7 +2835,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
               )}
             </div>
             <div className="map-legend" aria-label="政权图例">
-              {polities
+              {(year <= TERRITORY_MAX_YEAR ? polities : [])
                 .filter((item) => !mapBounds || insideBounds(item.label, mapBounds))
                 .sort((a, b) =>
                   worldBrowsing
@@ -2835,13 +2863,15 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                     {item.nameZh}
                   </button>
                 ))}
-              {polities.length === 0 && (
+              {(year > TERRITORY_MAX_YEAR || polities.length === 0) && (
                 <span className="legend-empty">
                   {mapLoadState === 'loading'
-                    ? '正在读取疆域资料'
+                    ? '正在读取地图资料'
                     : mapLoadState === 'error'
-                      ? '疆域资料加载失败，可在地图中重试'
-                      : '这一年暂无可用疆域轮廓；仍可阅读事件。'}
+                      ? '地图资料加载失败，可在地图中重试'
+                      : year > TERRITORY_MAX_YEAR
+                        ? '地点与事件 · 疆界待补'
+                        : '这一年暂无可用疆域轮廓。'}
                 </span>
               )}
             </div>
@@ -3081,7 +3111,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                   <p>{tour.description}</p>
                   {tour.steps.some((id) => eventById.get(id)!.year > MAX_YEAR) && (
                     <p className="topic-reading-help">
-                      地点按相关史事定位；1912年后的同期疆域不在地图收录范围内。
+                      地点按相关史事定位。{MAX_YEAR}年后的史事可在时空柱中查看。
                     </p>
                   )}
                   <button
@@ -3137,8 +3167,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                   <p className="detail-lead">{selectedEvent.summary}</p>
                   {visualization === 'map' && selectedEvent.year > MAX_YEAR && (
                     <p className="evidence-note modern-map-note" role="note">
-                      本事件发生于{selectedEvent.year}年，超出历史疆域资料范围。当前地图年份为{year}
-                      年，所示疆域不代表事件当年，地点仅供参照。
+                      本事件发生于{selectedEvent.year}年。当前地图为{year}年的地点参照。
                     </p>
                   )}
                   <button
@@ -3167,7 +3196,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                           setExploration((old) =>
                             old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
                           )
-                          setToast('历史疆域资料止于1912年，当前地图只供地点参考。')
+                          setToast(`地图已切回${MAX_YEAR}年供地点参考。`)
                         }
                       }
                       setScope(readScopePreferences(initial.preferences.scope)[nextMode])
@@ -3552,6 +3581,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
                   onAll={(allChanges) => setArchiveFilters((old) => ({ ...old, allChanges }))}
                   events={explorationEvents}
                   dynasties={historyDynasties}
+                  showChineseGeography={historySide !== 'world'}
                   scopeLabel={
                     historySide === 'china'
                       ? '中国历史'
@@ -4155,6 +4185,7 @@ export default function App({ topicAction }: { topicAction?: TopicAction }) {
             setPlaying(false)
           }}
           onYear={navigateYear}
+          onJumpYear={jumpTimelineYear}
           onPlay={togglePlayback}
           onEvent={trail ? selectJourneyNode : (id) => selectMap({ type: 'event', id })}
           onSpeed={setSpeed}

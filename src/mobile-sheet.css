@@ -163,14 +163,9 @@
   .time-readout > .eyebrow {
     display: none;
   }
-  .timeline .time-readout .year-title,
-  .timeline .time-readout form {
+  .timeline .time-readout .year-jump {
     grid-column: 1 / 3;
     grid-row: 1;
-    white-space: nowrap;
-  }
-  .time-readout form small {
-    display: none;
   }
   .timeline .timeline-period-select {
     grid-column: 2;
@@ -384,8 +379,7 @@
   .timeline .time-rail {
     margin-top: 3px;
   }
-  .timeline .time-readout .year-title,
-  .timeline .time-readout form {
+  .timeline .time-readout .year-jump {
     grid-column: 1;
   }
   .timeline .playback-speed {

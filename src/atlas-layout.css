@@ -69,12 +69,203 @@
   white-space: nowrap;
 }
 .dynasty-strip button:hover {
-  background: #f0f3e9;
+  background: var(--paper);
+  color: var(--ink);
 }
 .dynasty-strip [aria-current='true'] {
-  color: #294d37;
-  background: #e5eddc;
+  color: var(--green);
+  position: relative;
+  font-weight: 650;
+}
+.dynasty-strip [aria-current='true']::after {
+  content: '';
+  position: absolute;
+  inset: auto 18% 0;
+  height: 2px;
+  background: currentColor;
+}
+.dynasty-strip button[data-pillar-period] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+@media (min-width: 1001px) {
+  .timeline .timeline-period-select {
+    display: none;
+  }
+}
+.year-jump {
+  position: relative;
+  flex: 0 0 auto;
+  width: fit-content;
+}
+.timeline-continuation {
+  border: 1px solid color-mix(in srgb, var(--green) 28%, var(--line));
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--green) 7%, var(--white));
+  color: var(--green);
+}
+.timeline-continuation:hover {
+  background: color-mix(in srgb, var(--green) 14%, var(--white));
+}
+.year-jump-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: var(--green);
+  background: transparent;
+  white-space: nowrap;
+}
+.year-jump-trigger:is(:hover, :focus-visible, [aria-expanded='true']) {
+  background: color-mix(in srgb, var(--green) 9%, var(--white));
+}
+.year-jump-trigger:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.year-jump-trigger .year-title {
+  align-items: baseline;
+  gap: 3px;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.year-title strong {
+  font-size: 25px;
   font-weight: 600;
+}
+.year-title small {
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.year-jump-chevron {
+  color: var(--green);
+}
+.year-jump-trigger[aria-expanded='true'] .year-jump-chevron {
+  transform: rotate(180deg);
+}
+.year-jump-popover {
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: calc(100% + 9px);
+  z-index: 30;
+  display: grid;
+  gap: 8px;
+  width: min(270px, calc(100vw - 28px));
+  padding: 10px 12px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 5px 22px #18251f26;
+}
+.year-jump-header,
+.year-jump-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.year-jump-header {
+  font-weight: 650;
+}
+.year-jump-header button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+.year-jump-header button:hover {
+  background: var(--paper);
+}
+.year-jump-input-row input {
+  flex: 1;
+  width: 0;
+  min-height: 40px;
+  padding: 6px 9px;
+  border: 1px solid color-mix(in srgb, var(--green) 40%, var(--line));
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+}
+.year-jump-submit {
+  min-height: 40px;
+  padding-inline: 15px;
+  border-radius: 5px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 650;
+}
+.year-jump-popover p {
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.year-jump-popover [role='alert'] {
+  color: light-dark(#8a3030, #ffc3b5);
+}
+.timeline .time-rail[data-continues] {
+  --continuation-width: 94px;
+  margin-inline-end: calc(var(--continuation-width) + 10px);
+}
+.timeline .time-rail[data-continues='pillar'] {
+  --continuation-width: 72px;
+}
+.time-rail[data-continues='pillar'] .timeline-continuation {
+  border-color: transparent;
+  background: transparent;
+  min-height: 28px;
+  top: -4px;
+}
+.time-rail[data-continues='pillar'] .timeline-continuation:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.timeline-continuation {
+  position: absolute;
+  inset-inline-start: calc(100% + 10px);
+  top: 0;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 2px;
+  width: var(--continuation-width);
+  min-height: 42px;
+  padding: 4px;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.timeline-continuation span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+@media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
+  .year-jump-trigger {
+    min-height: 28px;
+    padding-block: 2px;
+  }
+}
+@media (max-width: 700px) {
+  .year-title strong {
+    font-size: 21px;
+  }
+  .year-jump-trigger {
+    gap: 4px;
+    padding-inline: 2px;
+  }
+  .year-title small {
+    font-size: 11px;
+  }
 }
 .era-band {
   display: none;
@@ -157,6 +348,34 @@
   max-width: 350px;
   padding: 0 10px 10px;
   line-height: 1.75;
+}
+.modern-geography-note > div {
+  box-sizing: border-box;
+  max-width: 25rem;
+  padding: 0.25rem 0.65rem 0.65rem;
+}
+.early-map-note.modern-geography-note > div {
+  max-height: min(32dvh, 22rem);
+  overflow: auto;
+}
+.modern-geography-note p {
+  margin: 0.15rem 0 0;
+  padding: 0;
+}
+.modern-geography-note ul {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.modern-geography-note li + li {
+  margin-top: 0.5rem;
+}
+.modern-geography-note a {
+  color: inherit;
+  text-decoration: underline;
+}
+.modern-geography-note a + a {
+  margin-inline-start: 0.6rem;
 }
 @media (min-width: 701px) and (min-height: 541px), (min-width: 1001px) {
   .atlas-app,
@@ -492,11 +711,11 @@
   .dynasty-strip {
     height: 29px;
     margin-bottom: 2px;
-    border-bottom-color: #e3e7dc;
+    border-bottom-color: var(--line);
   }
   .dynasty-strip button {
-    height: 25px;
-    font-size: 11px;
+    height: 27px;
+    font-size: 12px;
   }
   .timeline {
     padding-inline: 20px;
@@ -527,7 +746,10 @@
 @media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
   .atlas-app,
   .atlas-app:has(.journey-toolbar) {
-    grid-template-rows: 64px minmax(0, 1fr) 155px;
+    grid-template-rows: 64px minmax(0, 1fr) 126px;
+  }
+  .dynasty-strip {
+    display: none;
   }
   .play-controls {
     top: 36px;

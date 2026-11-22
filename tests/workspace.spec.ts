@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test'
+import { choosePeriod } from './timeline-helpers'
+import { dynastyReading } from '../src/data/dynasty-reading'
 
-const periodSelect = '切换历史时期'
 test('keeps a long traveler caption inside the small phone map while approaching a distant stop', async ({
   page,
 }) => {
@@ -55,7 +56,7 @@ test('merges period navigation into the clock and frees desktop map area', async
   await page.goto('/#year=230')
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
   await expect(page.locator('.period-sidebar')).toHaveCount(0)
-  await expect(page.locator('.dynasty-strip button')).toHaveCount(19)
+  await expect(page.locator('.dynasty-strip button')).toHaveCount(20)
   const sizes = await page.evaluate(() => {
     const map = document.querySelector('.map-canvas')!.getBoundingClientRect(),
       header = document.querySelector('.topbar')!.getBoundingClientRect(),
@@ -79,17 +80,19 @@ test('opens Xia through Spring and Autumn with sourced reading and honest approx
   page,
 }) => {
   await page.goto('/#year=230')
-  for (const [period, heading, year] of [
-    ['xia', '夏', '1800'],
-    ['shang', '商', '1250'],
-    ['western-zhou', '西周', '841'],
-    ['spring', '东周', '651'],
+  for (const [period, shortName, heading, year, archive] of [
+    ['xia', '夏', '夏', '1800', 'xia-early'],
+    ['shang', '商', '商', '1250', 'shang-early'],
+    ['western-zhou', '西周', '西周', '841', 'western-zhou'],
+    ['spring', '春秋', '东周', '651', 'eastern-zhou'],
   ]) {
-    await page.getByRole('combobox', { name: periodSelect }).selectOption(period)
+    await choosePeriod(page, period, shortName)
     await expect(page.locator('.dynasty-detail h2')).toHaveText(heading)
     await expect(page.locator('.year-title')).toContainText(year)
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-    await expect(page.locator('.dynasty-reading-section')).toHaveCount(2)
+    await expect(page.locator('.dynasty-context, .dynasty-reading-section p')).toHaveText(
+      dynastyReading[archive],
+    )
     await expect(page.locator('.early-map-note')).toBeVisible()
   }
   await page.goto('/#year=-1800&event=erlitou-centre')

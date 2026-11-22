@@ -1,4 +1,5 @@
 import type { HistoryEvent, Source } from '../types'
+import { modernMapSources } from './modern-map-sources'
 
 /** Base-event references are preserved by enrichEventNarrative. */
 export const modernChinaNarratives: Record<
@@ -1080,13 +1081,19 @@ export const modernChinaNarratives: Record<
         {
           title: '战争格局转为新的国家建设',
           paragraphs: [
-            '中国共产党在内战中取得决定性军事优势，国民党政权失去大陆多数地区，后来退往台湾。政权转移同时涉及接收城市、财政、工厂、官署和公共服务，宣告成立以后仍需要逐步落实治理。',
-            '1949年并不意味着所有地区战争当日结束，也不表示此后的制度在成立之初已经全部成形。土地、经济、社会及国家机构的重组继续展开，影响不同群体生活的政策也在后续阶段陆续形成。',
+            '国民党在内战中失去大陆多数地区，1949年末退往台湾。中华人民共和国成立后，中国政府对台湾作为中国领土一部分的立场延续。海峡两岸因内战延续和外部干涉逐渐形成长期政治对立。',
+            '宣告成立以后，各地接管仍分阶段推进。接收城市还涉及财政、工厂、官署和公共服务。海南岛全境在1950年5月解放，中央人民政府与西藏地方政府于1951年5月签署和平解放西藏的协议。',
           ],
         },
       ],
     },
-    sources: [],
+    sources: [
+      modernMapSources.founding,
+      modernMapSources.cppcc,
+      modernMapSources.taiwan,
+      modernMapSources.hainan,
+      modernMapSources.tibet,
+    ],
   },
   'modern-tang-spiritual-value-chinese-culture': {
     narrative: {

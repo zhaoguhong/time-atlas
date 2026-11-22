@@ -170,7 +170,7 @@ for (const [width, height] of [
     await page.screenshot({ path: info.outputPath(`settings-overview-${width}.png`) })
     await period.selectOption('all')
     await page.clock.runFor(368)
-    // The reading chronology reaches 2000; 1912 is only the map's boundary.
+    // The reading chronology reaches 2000, beyond the map's 1950 limit.
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-span', '11999')
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-motion', 'false')
     expect(errors).toEqual([])

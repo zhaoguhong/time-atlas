@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-11-18T17:42:33.897Z",
+  "generatedAt": "2026-11-20T15:10:17.655Z",
   "mapRange": {
+    "from": -10000,
+    "to": 1950
+  },
+  "territoryRange": {
     "from": -10000,
     "to": 1912
   },
@@ -9,65 +13,65 @@
     "to": 2000
   },
   "people": {
-    "total": 1504,
+    "total": 1523,
     "importedSnapshot": 591,
-    "curatedIntroductions": 1504,
+    "curatedIntroductions": 1523,
     "basicRecords": 0,
-    "unknownBirth": 424,
-    "unknownDeath": 290,
-    "noLinkedEvents": 618,
-    "oneLinkedEvent": 690,
-    "outsideMapRange": 50,
+    "unknownBirth": 430,
+    "unknownDeath": 292,
+    "noLinkedEvents": 547,
+    "oneLinkedEvent": 765,
+    "outsideMapRange": 1,
     "outsideReadingRange": 0
   },
   "events": {
-    "total": 2024,
-    "world": 1019,
+    "total": 2112,
+    "world": 1073,
     "byRegion": {
-      "china": 1005,
-      "europe": 425,
-      "west-asia": 99,
-      "central-asia": 26,
-      "south-asia": 104,
-      "east-asia": 72,
-      "southeast-asia": 49,
-      "africa": 107,
-      "americas": 104,
-      "oceania": 33
+      "china": 1039,
+      "europe": 432,
+      "west-asia": 101,
+      "central-asia": 35,
+      "south-asia": 105,
+      "east-asia": 76,
+      "southeast-asia": 59,
+      "africa": 113,
+      "americas": 107,
+      "oceania": 45
     },
     "byFilterCategory": {
       "战争": {
-        "total": 279,
-        "china": 170,
-        "world": 109,
+        "total": 290,
+        "china": 177,
+        "world": 113,
         "byRegion": {
-          "china": 170,
-          "europe": 29,
+          "china": 177,
+          "europe": 30,
           "west-asia": 20,
           "central-asia": 2,
           "south-asia": 9,
           "east-asia": 6,
-          "southeast-asia": 8,
+          "southeast-asia": 9,
           "africa": 16,
           "americas": 17,
-          "oceania": 2
+          "oceania": 4
         }
       },
       "政治": {
-        "total": 603,
-        "china": 288,
-        "world": 315,
+        "total": 646,
+        "china": 298,
+        "world": 348,
         "byRegion": {
-          "china": 288,
-          "europe": 80,
-          "west-asia": 43,
-          "central-asia": 9,
+          "china": 298,
+          "europe": 84,
+          "west-asia": 45,
+          "central-asia": 12,
           "south-asia": 25,
-          "east-asia": 24,
-          "southeast-asia": 29,
-          "africa": 40,
+          "east-asia": 28,
+          "southeast-asia": 36,
+          "africa": 45,
           "americas": 45,
-          "oceania": 20
+          "oceania": 28
         }
       },
       "哲学": {
@@ -88,9 +92,9 @@
         }
       },
       "宗教": {
-        "total": 157,
+        "total": 158,
         "china": 35,
-        "world": 122,
+        "world": 123,
         "byRegion": {
           "china": 35,
           "europe": 30,
@@ -98,7 +102,7 @@
           "central-asia": 3,
           "south-asia": 36,
           "east-asia": 8,
-          "southeast-asia": 5,
+          "southeast-asia": 6,
           "africa": 14,
           "americas": 5,
           "oceania": 0
@@ -190,66 +194,66 @@
         }
       },
       "文化": {
-        "total": 885,
-        "china": 390,
-        "world": 495,
+        "total": 904,
+        "china": 400,
+        "world": 504,
         "byRegion": {
-          "china": 390,
-          "europe": 248,
+          "china": 400,
+          "europe": 249,
           "west-asia": 38,
-          "central-asia": 12,
+          "central-asia": 15,
           "south-asia": 64,
           "east-asia": 36,
-          "southeast-asia": 12,
-          "africa": 36,
-          "americas": 41,
+          "southeast-asia": 13,
+          "africa": 37,
+          "americas": 44,
           "oceania": 8
         }
       },
       "交流": {
-        "total": 162,
+        "total": 165,
         "china": 67,
-        "world": 95,
+        "world": 98,
         "byRegion": {
           "china": 67,
-          "europe": 27,
+          "europe": 28,
           "west-asia": 6,
           "central-asia": 5,
           "south-asia": 5,
           "east-asia": 5,
-          "southeast-asia": 11,
+          "southeast-asia": 12,
           "africa": 19,
           "americas": 13,
-          "oceania": 4
+          "oceania": 5
         }
       },
       "社会": {
-        "total": 540,
-        "china": 249,
-        "world": 291,
+        "total": 552,
+        "china": 256,
+        "world": 296,
         "byRegion": {
-          "china": 249,
+          "china": 256,
           "europe": 100,
           "west-asia": 17,
-          "central-asia": 4,
-          "south-asia": 33,
+          "central-asia": 7,
+          "south-asia": 34,
           "east-asia": 23,
           "southeast-asia": 15,
           "africa": 39,
           "americas": 44,
-          "oceania": 16
+          "oceania": 17
         }
       }
     },
     "byCategory": {
-      "政治": 475,
-      "战争": 217,
-      "文化": 884,
-      "交流": 101,
-      "社会": 347
+      "政治": 518,
+      "战争": 228,
+      "文化": 903,
+      "交流": 104,
+      "社会": 359
     },
-    "withCuratedRelatedReading": 132,
-    "withExplicitPlaces": 102
+    "withCuratedRelatedReading": 195,
+    "withExplicitPlaces": 133
   },
   "dynasties": {
     "total": 53
@@ -276,13 +280,13 @@
     "uniqueWorldEvents": 125
   },
   "places": {
-    "total": 80,
-    "labels": 85,
-    "withLinkedEvents": 76
+    "total": 99,
+    "labels": 106,
+    "withLinkedEvents": 92
   },
   "journeys": {
-    "people": 15,
-    "nodes": 212,
+    "people": 20,
+    "nodes": 243,
     "records": [
       {
         "person": "苏轼",
@@ -373,6 +377,36 @@
         "nodes": 12,
         "from": -501,
         "to": -479
+      },
+      {
+        "person": "司马迁",
+        "nodes": 6,
+        "from": -126,
+        "to": -110
+      },
+      {
+        "person": "查尔斯·达尔文",
+        "nodes": 6,
+        "from": 1831,
+        "to": 1835
+      },
+      {
+        "person": "张骞",
+        "nodes": 8,
+        "from": -138,
+        "to": -115
+      },
+      {
+        "person": "弗雷德里克·道格拉斯",
+        "nodes": 6,
+        "from": 1838,
+        "to": 1872
+      },
+      {
+        "person": "弗洛伦斯·南丁格尔",
+        "nodes": 5,
+        "from": 1851,
+        "to": 1856
       }
     ]
   },
@@ -412,9 +446,9 @@
     {
       "id": "early-civilizations",
       "name": "早期文明",
-      "events": 31,
+      "events": 32,
       "byRegion": {
-        "china": 14,
+        "china": 15,
         "europe": 1,
         "west-asia": 6,
         "central-asia": 0,
@@ -437,7 +471,7 @@
         "工程建筑": 12,
         "文化": 7,
         "交流": 1,
-        "社会": 20
+        "社会": 21
       },
       "people": 0
     },
@@ -540,9 +574,9 @@
     {
       "id": "spring",
       "name": "春秋",
-      "events": 36,
+      "events": 37,
       "byRegion": {
-        "china": 15,
+        "china": 16,
         "europe": 5,
         "west-asia": 10,
         "central-asia": 0,
@@ -555,7 +589,7 @@
       },
       "byFilterCategory": {
         "战争": 9,
-        "政治": 15,
+        "政治": 16,
         "哲学": 4,
         "宗教": 2,
         "文学艺术": 5,
@@ -572,12 +606,12 @@
     {
       "id": "warring",
       "name": "战国",
-      "events": 65,
+      "events": 68,
       "byRegion": {
-        "china": 43,
+        "china": 45,
         "europe": 7,
         "west-asia": 3,
-        "central-asia": 0,
+        "central-asia": 1,
         "south-asia": 6,
         "east-asia": 1,
         "southeast-asia": 0,
@@ -595,9 +629,9 @@
         "教育学术": 13,
         "经济贸易": 5,
         "工程建筑": 6,
-        "文化": 21,
+        "文化": 23,
         "交流": 5,
-        "社会": 7
+        "社会": 8
       },
       "people": 56
     },
@@ -636,13 +670,13 @@
     {
       "id": "han",
       "name": "两汉",
-      "events": 125,
+      "events": 128,
       "byRegion": {
-        "china": 101,
+        "china": 103,
         "europe": 6,
         "west-asia": 2,
         "central-asia": 1,
-        "south-asia": 8,
+        "south-asia": 9,
         "east-asia": 0,
         "southeast-asia": 2,
         "africa": 2,
@@ -659,11 +693,11 @@
         "教育学术": 21,
         "经济贸易": 26,
         "工程建筑": 6,
-        "文化": 38,
+        "文化": 39,
         "交流": 11,
-        "社会": 37
+        "社会": 39
       },
-      "people": 112
+      "people": 114
     },
     {
       "id": "three",
@@ -700,15 +734,15 @@
     {
       "id": "jin",
       "name": "两晋 · 十六国",
-      "events": 45,
+      "events": 47,
       "byRegion": {
-        "china": 32,
+        "china": 33,
         "europe": 3,
         "west-asia": 2,
         "central-asia": 0,
         "south-asia": 2,
         "east-asia": 2,
-        "southeast-asia": 0,
+        "southeast-asia": 1,
         "africa": 3,
         "americas": 1,
         "oceania": 0
@@ -717,13 +751,13 @@
         "战争": 9,
         "政治": 11,
         "哲学": 4,
-        "宗教": 13,
+        "宗教": 14,
         "文学艺术": 9,
         "科技医学": 4,
         "教育学术": 7,
         "经济贸易": 3,
         "工程建筑": 2,
-        "文化": 22,
+        "文化": 24,
         "交流": 3,
         "社会": 8
       },
@@ -764,12 +798,12 @@
     {
       "id": "sui",
       "name": "隋",
-      "events": 26,
+      "events": 27,
       "byRegion": {
         "china": 22,
         "europe": 0,
         "west-asia": 0,
-        "central-asia": 0,
+        "central-asia": 1,
         "south-asia": 1,
         "east-asia": 1,
         "southeast-asia": 1,
@@ -787,7 +821,7 @@
         "教育学术": 3,
         "经济贸易": 3,
         "工程建筑": 5,
-        "文化": 5,
+        "文化": 6,
         "交流": 2,
         "社会": 8
       },
@@ -796,7 +830,7 @@
     {
       "id": "tang",
       "name": "唐",
-      "events": 146,
+      "events": 147,
       "byRegion": {
         "china": 103,
         "europe": 3,
@@ -804,14 +838,14 @@
         "central-asia": 4,
         "south-asia": 4,
         "east-asia": 10,
-        "southeast-asia": 3,
+        "southeast-asia": 4,
         "africa": 4,
         "americas": 2,
         "oceania": 0
       },
       "byFilterCategory": {
         "战争": 14,
-        "政治": 41,
+        "政治": 42,
         "哲学": 4,
         "宗教": 29,
         "文学艺术": 48,
@@ -860,9 +894,9 @@
     {
       "id": "song",
       "name": "宋 · 辽 · 金 · 西夏",
-      "events": 226,
+      "events": 229,
       "byRegion": {
-        "china": 166,
+        "china": 168,
         "europe": 8,
         "west-asia": 14,
         "central-asia": 6,
@@ -870,12 +904,12 @@
         "east-asia": 7,
         "southeast-asia": 5,
         "africa": 7,
-        "americas": 3,
+        "americas": 4,
         "oceania": 3
       },
       "byFilterCategory": {
         "战争": 35,
-        "政治": 51,
+        "政治": 52,
         "哲学": 15,
         "宗教": 20,
         "文学艺术": 39,
@@ -883,7 +917,7 @@
         "教育学术": 51,
         "经济贸易": 33,
         "工程建筑": 25,
-        "文化": 121,
+        "文化": 123,
         "交流": 17,
         "社会": 42
       },
@@ -892,21 +926,21 @@
     {
       "id": "yuan",
       "name": "元",
-      "events": 56,
+      "events": 59,
       "byRegion": {
-        "china": 38,
+        "china": 40,
         "europe": 4,
         "west-asia": 3,
         "central-asia": 0,
         "south-asia": 2,
         "east-asia": 1,
         "southeast-asia": 3,
-        "africa": 3,
+        "africa": 4,
         "americas": 1,
         "oceania": 1
       },
       "byFilterCategory": {
-        "战争": 5,
+        "战争": 7,
         "政治": 12,
         "哲学": 1,
         "宗教": 4,
@@ -915,31 +949,31 @@
         "教育学术": 6,
         "经济贸易": 10,
         "工程建筑": 5,
-        "文化": 28,
+        "文化": 29,
         "交流": 5,
         "社会": 19
       },
-      "people": 55
+      "people": 56
     },
     {
       "id": "ming",
       "name": "明",
-      "events": 187,
+      "events": 196,
       "byRegion": {
-        "china": 56,
+        "china": 62,
         "europe": 59,
         "west-asia": 7,
-        "central-asia": 4,
+        "central-asia": 5,
         "south-asia": 16,
-        "east-asia": 13,
-        "southeast-asia": 7,
+        "east-asia": 14,
+        "southeast-asia": 8,
         "africa": 13,
         "americas": 12,
         "oceania": 0
       },
       "byFilterCategory": {
         "战争": 26,
-        "政治": 51,
+        "政治": 53,
         "哲学": 11,
         "宗教": 25,
         "文学艺术": 34,
@@ -947,31 +981,31 @@
         "教育学术": 23,
         "经济贸易": 30,
         "工程建筑": 18,
-        "文化": 87,
+        "文化": 91,
         "交流": 19,
-        "社会": 29
+        "社会": 32
       },
-      "people": 151
+      "people": 158
     },
     {
       "id": "qing",
       "name": "清",
-      "events": 444,
+      "events": 459,
       "byRegion": {
-        "china": 122,
-        "europe": 202,
+        "china": 124,
+        "europe": 204,
         "west-asia": 5,
-        "central-asia": 3,
+        "central-asia": 5,
         "south-asia": 18,
         "east-asia": 16,
-        "southeast-asia": 11,
-        "africa": 20,
-        "americas": 35,
-        "oceania": 12
+        "southeast-asia": 15,
+        "africa": 21,
+        "americas": 36,
+        "oceania": 15
       },
       "byFilterCategory": {
         "战争": 71,
-        "政治": 116,
+        "政治": 123,
         "哲学": 30,
         "宗教": 13,
         "文学艺术": 49,
@@ -979,43 +1013,75 @@
         "教育学术": 65,
         "经济贸易": 31,
         "工程建筑": 18,
-        "文化": 205,
-        "交流": 23,
-        "社会": 89
+        "文化": 209,
+        "交流": 25,
+        "社会": 91
       },
-      "people": 496
+      "people": 503
+    },
+    {
+      "id": "early-modern-china",
+      "name": "民国与新中国初年",
+      "events": 232,
+      "byRegion": {
+        "china": 79,
+        "europe": 70,
+        "west-asia": 7,
+        "central-asia": 4,
+        "south-asia": 15,
+        "east-asia": 13,
+        "southeast-asia": 8,
+        "africa": 9,
+        "americas": 18,
+        "oceania": 9
+      },
+      "byFilterCategory": {
+        "战争": 29,
+        "政治": 86,
+        "哲学": 31,
+        "宗教": 8,
+        "文学艺术": 32,
+        "科技医学": 23,
+        "教育学术": 45,
+        "经济贸易": 14,
+        "工程建筑": 6,
+        "文化": 102,
+        "交流": 16,
+        "社会": 72
+      },
+      "people": 284
     },
     {
       "id": "modern-reading",
       "name": "20世纪",
-      "events": 420,
+      "events": 234,
       "byRegion": {
-        "china": 131,
-        "europe": 122,
-        "west-asia": 14,
+        "china": 67,
+        "europe": 57,
+        "west-asia": 9,
         "central-asia": 6,
-        "south-asia": 26,
-        "east-asia": 19,
-        "southeast-asia": 15,
-        "africa": 33,
-        "americas": 39,
+        "south-asia": 11,
+        "east-asia": 9,
+        "southeast-asia": 10,
+        "africa": 28,
+        "americas": 22,
         "oceania": 15
       },
       "byFilterCategory": {
-        "战争": 35,
-        "政治": 148,
-        "哲学": 55,
-        "宗教": 12,
-        "文学艺术": 46,
-        "科技医学": 64,
-        "教育学术": 77,
-        "经济贸易": 68,
-        "工程建筑": 21,
-        "文化": 182,
-        "交流": 47,
-        "社会": 193
+        "战争": 15,
+        "政治": 93,
+        "哲学": 24,
+        "宗教": 4,
+        "文学艺术": 14,
+        "科技医学": 41,
+        "教育学术": 32,
+        "经济贸易": 54,
+        "工程建筑": 15,
+        "文化": 82,
+        "交流": 32,
+        "社会": 124
       },
-      "people": 278
+      "people": 183
     }
   ],
   "checkedMajorPeople": [
@@ -1139,6 +1205,15 @@
       "explanation": "钱乙的儿科经验由阎孝忠等整理成书；钱乙1113年已去世，1119年为身后整理节点，不是本人定稿。"
     },
     {
+      "person": "洪皓",
+      "personId": "early-plus-person-hong-hao",
+      "event": "洪适整理父亲洪皓的《松漠纪闻》",
+      "eventId": "early-plus-songmo-notes",
+      "eventYear": 1156,
+      "deathYear": 1155,
+      "explanation": "洪皓记下被羁留期间所得见闻。1156年为他身后洪适整理和刊行的年份。"
+    },
+    {
       "person": "李时珍",
       "personId": "q698925",
       "event": "金陵版本草纲目问世",
@@ -1221,10 +1296,10 @@
     }
   ],
   "sourceRetention": {
-    "references": 2053,
-    "retained": 1323,
+    "references": 2228,
+    "retained": 1473,
     "unavailable": 0,
-    "failed": 730,
+    "failed": 755,
     "detailedAudit": "data/research/content-audit.json"
   },
   "importUnresolved": [

@@ -60,10 +60,14 @@ describe('detailed historical and twentieth-century reading', () => {
       expect(author?.recordKind, name).toBe('curated')
       expect(event.people, eventId).toContain(author.id)
       expect(event.peopleNotes?.[author.id], eventId).toBeTruthy()
-      expect(
-        journeys.some((journey) => journey.personId === author.id),
-        name,
-      ).toBe(false)
+      const journey = journeys.find((record) => record.personId === author.id)
+      if (eventId === 'world-darwin') {
+        expect(journey?.nodes[0]).toMatchObject({ year: 1831, kind: '出行' })
+        expect(journey?.nodes.at(-1)?.year).toBe(1835)
+        expect(journey?.nodes.every((node) => node.year < event.year)).toBe(true)
+      } else {
+        expect(journey, name).toBeUndefined()
+      }
     }
   })
 

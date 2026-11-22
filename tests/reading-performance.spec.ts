@@ -66,28 +66,38 @@ for (const viewport of [
       'aria-pressed',
       'true',
     )
-    await page.evaluate(() => window.scrollTo(0, 400))
-    await expect
-      .poll(() =>
-        page.evaluate(() =>
-          Number(localStorage.getItem('time-atlas:reader-position:/people/li-bai/')),
-        ),
-      )
-      .toBeGreaterThan(250)
-    await page.reload()
-    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(250)
-    await expect(page.getByRole('button', { name: '已收藏', exact: true })).toBeAttached()
     await page.context().grantPermissions(['clipboard-read', 'clipboard-write'])
     await page.getByRole('button', { name: '分享', exact: true }).click()
     expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
       new URL('/people/li-bai/', baseURL).href,
     )
+
+    // Use the reader's stable layout for position checks after dismissing the share status.
+    await page.reload()
+    const readingPosition = await page.evaluate(() => {
+      const scroller = document.scrollingElement!
+      const middle = Math.floor((scroller.scrollHeight - scroller.clientHeight) / 2)
+      window.scrollTo({ top: Math.min(middle, 400), behavior: 'instant' })
+      return window.scrollY
+    })
+    expect(readingPosition).toBeGreaterThan(0)
+    const savedPosition = () =>
+      page.evaluate(() =>
+        Number(localStorage.getItem('time-atlas:reader-position:/people/li-bai/')),
+      )
+    const expectRestoredPosition = () =>
+      expect.poll(() => page.evaluate(() => window.scrollY)).toBe(readingPosition)
+    await expect.poll(savedPosition).toBe(readingPosition)
+    await page.reload()
+    await expectRestoredPosition()
+    await expect(page.getByRole('button', { name: '已收藏', exact: true })).toBeAttached()
     await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
     await expect(page.locator('.person-biography')).toBeVisible()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     await expect(page).toHaveURL('/people/li-bai/')
     await page.reload()
     await expect(page.locator('.reader-body h1')).toHaveText('李白')
+    await expectRestoredPosition()
     await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
     await expect(page.locator('.person-biography')).toBeVisible()
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
@@ -104,7 +114,7 @@ for (const viewport of [
     await page.locator('.reader-return').click()
     await expect(page.locator('.reader-body h1')).toHaveText('李白')
     await expect(page.locator('canvas,.atlas-app')).toHaveCount(0)
-    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(250)
+    await expectRestoredPosition()
     await page.goto('/')
     await expect(page.locator('.home-resume')).toContainText('李白')
     await page.locator('.home-resume').click()

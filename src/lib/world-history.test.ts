@@ -15,7 +15,7 @@ import type { PolityFeature } from '../types'
 describe('shared world history', () => {
   it('covers the full navigation range without year zero or gaps', () => {
     expect(worldPeriods[0].from).toBe(-10000)
-    expect(worldPeriods.at(-1)!.to).toBe(1912)
+    expect(worldPeriods.at(-1)!.to).toBe(1950)
     worldPeriods.forEach((period, index) => {
       expect(period.focus).toBeGreaterThanOrEqual(period.from)
       expect(period.focus).toBeLessThanOrEqual(period.to)

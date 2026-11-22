@@ -3,6 +3,8 @@ import { expandedJourneys } from './journey-expansion'
 import { literaryJourneys } from './journey-literary'
 import { voyageJourneys } from './journey-voyages'
 import { confuciusJourney } from './journey-confucius'
+import { researcherJourneys } from './journey-researchers'
+import { publicLifeJourneys } from './journey-public-life'
 
 const suSource: Source = {
   title: '平顶山学院 · 伏牛山文化圈研究中心《苏轼年谱简编》',
@@ -933,5 +935,7 @@ export const journeys: PersonJourney[] = [
   ...literaryJourneys,
   ...voyageJourneys,
   confuciusJourney,
+  ...researcherJourneys,
+  ...publicLifeJourneys,
 ]
 export const journeyByPerson = new Map(journeys.map((journey) => [journey.personId, journey]))

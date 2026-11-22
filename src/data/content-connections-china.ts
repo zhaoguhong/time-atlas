@@ -1,6 +1,175 @@
 // Relationships follow the existing event narratives and person introductions.
 // Authorship, later reception and institutional roles are not personal itineraries.
 export const chinesePersonEventConnections: Record<string, Record<string, string>> = {
+  'wu-enters-ying': {
+    'early-plus-person-wu-zixu': '伍子胥参与吴国对楚行动。复仇叙事和吴国联军的进军过程分别考察。',
+  },
+  'early-plus-wen-remove-punishment': {
+    'early-plus-person-chunyu-yi': '淳于意获罪，女儿缇萦上书申诉，此案成为汉文帝调整刑罚的缘起。',
+  },
+  'zhaojun-marriage': {
+    q7232: '汉元帝主持朝廷一方的和亲决定，王昭君与呼韩邪单于此后离开汉地。',
+  },
+  'jin-founded': {
+    q532884: '司马昭积累了司马氏的政治权力。其死后，司马炎继位并受禅称帝。',
+  },
+  wagang: {
+    q708305: '王世充在次一阶段与李密争战并取胜，关联瓦岗力量后来的变化。',
+  },
+  'an-lushan': {
+    q1328480: '史思明后来控制叛军一部，关联叛乱发展阶段。',
+    q697728: '李光弼率唐军作战，关联起兵以后各地的抵抗与争夺。',
+  },
+  'li-gonglin-five-horses': {
+    q709460: '黄庭坚留下卷上题署，帮助辨识画中部分马匹。',
+  },
+  'early-plus-longxing-war': {
+    q7492: '宋孝宗支持出兵，是朝廷的决策者。',
+  },
+  'qing-enters': {
+    q310453: '顺治帝随清廷迁入北京，清政权在此建立中央统治。',
+  },
+  'kangxi-accession': {
+    q310453: '顺治帝于1661年身故，玄烨由此继承皇位。',
+  },
+  'exp-em-zhang-restoration': {
+    q699600: '张勋带兵进入北京并拥立溥仪，主持了这次短暂复辟。',
+    q706172: '段祺瑞等组织讨逆军，反对张勋拥立溥仪。',
+  },
+  'category-ganden': {
+    tsongkhapa: '宗喀巴主持甘丹寺兴建并任住持，由此组织当地的修学与传承活动。',
+  },
+  'exp-em-peking-reform': { q19796: '蔡元培出任北京大学校长，主持师资、课程与办学制度的调整。' },
+  'early-plus-fangla-revolt': { q3066393: '方腊在睦州一带起兵，成为这场东南起事的主要领导者。' },
+  'early-plus-tang-palace-713': {
+    q706438: '太平公主在皇位交接前后拥有政治影响，先天政变后被赐死。',
+  },
+  'yuan-huizong': { q8666: '妥懽帖睦尔于1333年即位，此后在位至元廷退出大都。' },
+  'early-plus-song-chu-peace': {
+    'early-plus-person-zouxin': '宋国向戌倡议并居间联络晋、楚，推动诸侯在宋会盟。',
+  },
+  'early-plus-li-kui-reform': {
+    'early-plus-person-li-kui': '《汉书·食货志》把尽地力与平籴的论说系于李悝。',
+  },
+  'han-wendi': {
+    'early-plus-person-zhou-bo': '周勃参与清除吕氏政治势力，随后与陈平等拥立代王刘恒。',
+  },
+  'early-plus-majun-machinery': {
+    'early-plus-person-ma-jun': '傅玄记马钧改进织机，并记下提水等装置的制作。',
+  },
+  'early-plus-huangfu-acupuncture': {
+    'early-plus-person-huangfu-mi': '皇甫谧汇集经脉、穴位和针灸文献，编成《针灸甲乙经》。',
+  },
+  'early-plus-weiheng-scripts': {
+    'early-plus-person-wei-heng': '卫恒撰《四体书势》，论述多种字体的流变和形势。',
+  },
+  'early-plus-zhanghua-bowu': {
+    'early-plus-person-zhang-hua': '《博物志》传统上署张华撰，现传篇章经历后世辑校。',
+  },
+  'early-plus-yanghu-tuntian': {
+    'early-plus-person-yang-hu': '羊祜出镇荆州，组织屯田和物资供给。',
+  },
+  'early-plus-jin-liuyi-criticism': {
+    'early-plus-person-liu-yi': '刘毅向晋廷陈述九品选官产生的弊端。',
+  },
+  'early-plus-peikai-chongyou': {
+    'early-plus-person-pei-wei': '裴頠作《崇有论》，回应重视贵无的论说。',
+  },
+  'early-plus-daian-catalogue': {
+    'early-plus-person-dao-an': '道安整理经本，辨认译者和来源，后世经录保存了他的目录工作。',
+  },
+  'early-plus-huiyuan-donglin': {
+    'early-plus-person-hui-yuan': '慧远在庐山主持僧团修学，并与译经僧和士人往来。',
+  },
+  'early-plus-chusanzang': {
+    'early-plus-person-seng-you': '僧祐编《出三藏记集》，汇集经录、序跋和译经者资料。',
+  },
+  'early-plus-daikui-sculpture': {
+    'early-plus-person-dai-kui': '传记记戴逵从事佛像塑造，并听取观者意见调整造像。',
+  },
+  'early-plus-taokan-governance': {
+    'early-plus-person-tao-kan': '陶侃统理长江中游军政，传记记载其管理军需和各项物资。',
+  },
+  'early-plus-yuanjia-calendar': {
+    'early-plus-person-he-chengtian': '何承天提出历法修订方案，以观测与推算调整历数。',
+  },
+  'early-plus-taohongjing-herbs': {
+    'early-plus-person-tao-hongjing': '陶弘景比对旧有药物记载，区分文献来源并加注。',
+  },
+  'early-plus-weishu-compilation': {
+    'early-plus-person-wei-shou': '魏收奉北齐朝廷之命编撰《魏书》。',
+  },
+  'early-plus-luoyang-temple-memory': {
+    'early-plus-person-yang-xuanzhi': '杨衒之以寺院为线索写《洛阳伽蓝记》，回忆与写作各有时点。',
+  },
+  'early-plus-yan-family': {
+    'early-plus-person-yan-zhitui': '颜之推在《颜氏家训》中写家庭教育、学问和士人处世。',
+  },
+  'early-plus-sui-turk-diplomacy': {
+    'early-plus-person-changsun-sheng': '长孙晟凭出使见闻向隋廷提出分别与突厥诸部交涉的建议。',
+  },
+  'early-plus-sui-western-map': {
+    'early-plus-person-pei-ju': '裴矩在河西向商旅了解西域，进而整理《西域图记》。',
+  },
+  'early-plus-huangji-calendar': { 'early-plus-person-liu-zhuo': '刘焯提出皇极历的计算方案。' },
+  'early-plus-sui-ritual-crafts': { 'early-plus-person-he-chou': '何稠在隋廷参与仪物和衣冠制作。' },
+  'early-plus-liuwa-story': {
+    'early-plus-person-bai-xingjian': '白行简为传奇《李娃传》的作者，故事地点属于文学叙述。',
+  },
+  'early-plus-nanke-story': {
+    'early-plus-person-li-gongzuo': '李公佐将淳于棼入梦的故事写为传奇，成文时间取约数。',
+  },
+  'early-plus-zhongzhong-dream': {
+    'early-plus-person-shen-jiji': '沈既济为《枕中记》作者，其中的邯郸属于故事设定。',
+  },
+  'early-plus-pilu-poems': {
+    'early-plus-person-pi-rixiu': '皮日休与陆龟蒙唱和，诗文保存了二人的交流。',
+  },
+  'early-plus-tanghuiyao': {
+    'early-plus-person-wang-pu': '王溥利用旧有材料编成《唐会要》并进呈朝廷。',
+  },
+  'early-plus-acupuncture-bronze': {
+    'early-plus-person-wang-weiyi': '王惟一奉命编写针灸图经并参与制作教学铜人。',
+  },
+  'early-plus-rumen': {
+    'early-plus-person-zhang-congzheng': '《儒门事亲》保存张从正的医论和经验，部分文字由门人整理。',
+  },
+  'early-plus-yinshan': { 'early-plus-person-hu-sihui': '忽思慧以饮膳太医身份编撰《饮膳正要》。' },
+  'early-plus-songmo-notes': {
+    'early-plus-person-hong-hao':
+      '洪皓记下被羁留期间所得见闻。1156年为他身后洪适整理和刊行的年份。',
+  },
+  'early-plus-yuhai': {
+    'early-plus-person-wang-yinglin': '王应麟按事类汇集典籍材料，编撰《玉海》。',
+  },
+  'early-plus-wenxian-tongkao': {
+    'early-plus-person-ma-duanlin': '马端临整理历代制度沿革，编成《文献通考》。',
+  },
+  'early-plus-mengliang': {
+    'early-plus-person-wu-zimu': '《梦粱录》署吴自牧撰，书中的临安街巷需要另证才能作为作者行迹。',
+  },
+  'early-plus-zhenla-record': {
+    'early-plus-person-zhou-daguan': '周达观随使团赴真腊，并将所见写成《真腊风土记》。',
+  },
+  'early-plus-daoyi-record': {
+    'early-plus-person-wang-dayuan': '汪大渊将航海及旅途中所获闻见整理为《岛夷志略》。',
+  },
+  'early-plus-qianli-landscape': {
+    'early-plus-person-wang-ximeng': '蔡京题跋记载王希孟受指导后进呈此卷，是作品年代和归属的依据。',
+  },
+  'early-plus-litang-landscape': {
+    'early-plus-person-li-tang': '《万壑松风图》有李唐的款署及宣和甲辰纪年。',
+  },
+  'early-plus-mayuan-water': {
+    'early-plus-person-ma-yuan': '马远以水边景物和留白安排空间，部分作品只能约略断代。',
+  },
+  'early-plus-xiagui-longscroll': {
+    'early-plus-person-xia-gui': '夏圭名下的南宋长卷以水墨经营连续山水，创作年取约数。',
+  },
+  'depth-honglou-chengjia': {
+    q182874:
+      '曹雪芹是作品的核心作者，身后由程伟元、高鹗整理刊刻一百二十回本，后四十回作者与形成过程仍有讨论。',
+  },
   'zheng-law': {
     'early-plus-person-zichan': '子产主持郑国铸刑书，将刑法条文以更公开的方式呈现。',
     'early-plus-person-shuxiang':
@@ -13,6 +182,7 @@ export const chinesePersonEventConnections: Record<string, Record<string, string
     'early-plus-person-zhou-yafu': '周亚夫统率汉军坚守营垒、截断吴楚军粮道，参与平定七国之乱。',
   },
   'early-plus-han-huoguang': {
+    q7227: '汉昭帝去世时无子，留下皇位继承问题。此后的废立由霍光等人主持。',
     'early-plus-person-huo-guang': '霍光主持废去昌邑王、迎立刘询，是这次皇位更替中的主要辅政大臣。',
   },
   'early-plus-liuxiang-books': {

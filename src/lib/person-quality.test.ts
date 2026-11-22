@@ -65,7 +65,10 @@ describe('source-supported person content', () => {
       ).toContain(sourceUrl)
       const linked = events.filter((event) => event.people.includes(personId))
       if (personId === 'mozi') {
-        expect(linked.map((event) => event.id)).toEqual(['east-mozi-inclusive-care'])
+        expect(linked.map((event) => event.id)).toEqual([
+          'east-mozi-inclusive-care',
+          'mozi-gongshu',
+        ])
         expect(linked[0]).toMatchObject({ year: -430, endYear: -300 })
         expect(linked[0].dateLabel).toContain('约')
         expect(linked[0].dateNote).toContain('跨越多代')
@@ -73,6 +76,9 @@ describe('source-supported person content', () => {
         expect(linked[0].sources.some((source) => source.url.includes('plato.stanford.edu'))).toBe(
           true,
         )
+        expect(linked[1].dateLabel).toContain('篇中故事')
+        expect(linked[1].dateNote).toContain('未标确年')
+        expect(linked[1].sources.map((source) => source.url)).toContain(sourceUrl)
       } else {
         expect(linked.map((event) => event.id)).toEqual(['early-plus-jinghao-landscape'])
         expect(linked[0]).toMatchObject({ year: 900, endYear: 930 })

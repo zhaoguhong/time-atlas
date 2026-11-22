@@ -36,7 +36,7 @@ const server = await createServer({
 try {
   const { events, people, personById } = await server.ssrLoadModule('/src/data/content.ts')
   const { eventRegion, historyRegions } = await server.ssrLoadModule('/src/lib/time-pillar.ts')
-  const { MIN_YEAR, MAX_YEAR, PILLAR_MAX_YEAR, modernReadingPeriod } =
+  const { MIN_YEAR, MAX_YEAR, TERRITORY_MAX_YEAR, PILLAR_MAX_YEAR, modernReadingPeriod } =
     await server.ssrLoadModule('/src/lib/history.ts')
   const { eventCategories, matchesEventCategory } = await server.ssrLoadModule(
     '/src/lib/event-categories.ts',
@@ -736,6 +736,7 @@ try {
   const report = {
     generatedAt,
     mapRange: { from: MIN_YEAR, to: MAX_YEAR },
+    territoryRange: { from: MIN_YEAR, to: TERRITORY_MAX_YEAR },
     readingRange: { from: MIN_YEAR, to: PILLAR_MAX_YEAR },
     people: {
       total: people.length,

@@ -1,9 +1,67 @@
 import type { Source } from '../types'
 import { expandedPlaceReading } from './place-expansion'
+import { modernMapSources as ref } from './modern-map-sources'
+import { transitionSources } from './modern-transition-sources'
 
 /** Regional introductions; labels and representative coordinates remain separate. */
 export const placeReading: Record<string, { text: string; sources: Source[] }> = {
   ...expandedPlaceReading,
+  taipei: {
+    text: '1945年10月25日，中国战区台湾省受降典礼在台北公会堂举行。台北也是接收委员会和台湾省行政长官公署开展战后接收的地点。',
+    sources: [ref.taiwanSurrender, ref.taiwan],
+  },
+  penghu: {
+    text: '澎湖列岛位于台湾海峡。《开罗宣言》把澎湖同台湾、东北等地一并列入应归还中国的领土。1945年，中国战区台湾区受降所列的日军包括澎湖守备队。',
+    sources: [ref.cairo, ref.taiwanSurrender],
+  },
+  haikou: {
+    text: '海口位于海南岛北部，隔琼州海峡与雷州半岛相望。1950年春，人民解放军渡过海峡，在岛上与琼崖纵队会合并展开作战。5月1日海南岛全境解放。',
+    sources: [ref.hainanCrossing, ref.hainan],
+  },
+  'hong-kong': {
+    text: '第二次世界大战期间，日军曾占领香港。1945年9月16日，驻港日军办理投降，英国恢复管治。根据《中英联合声明》，中华人民共和国于1997年7月1日对香港恢复行使主权。',
+    sources: [ref.hongKongSurrender, ref.hongKong],
+  },
+  macao: {
+    text: '澳门地区包括澳门半岛、氹仔岛和路环岛，是中国领土。澳门经历葡萄牙长期管治。根据《中葡联合声明》，中华人民共和国于1999年12月20日对澳门恢复行使主权。',
+    sources: [ref.macao],
+  },
+  diaoyu: {
+    text: '钓鱼岛及其附属岛屿位于台湾岛东北方向。根据中国政府白皮书，钓鱼岛及其附属岛屿是中国固有领土，早期航海文献已留下岛屿地名。1895年日本窃占有关岛屿，二战结束后的处置另见白皮书第三节。',
+    sources: [ref.diaoyu],
+  },
+  dongsha: {
+    text: '东沙岛位于南海北部，属于中国东沙群岛。二战结束后，中国政府恢复对包括东沙群岛在内的南海诸岛行使主权，并核定有关地名、编绘地图。',
+    sources: [ref.southChinaSea, ref.southChinaSeaCharts],
+  },
+  yongxing: {
+    text: '永兴岛在中国西沙群岛。1946年，中国政府派员赴西沙接收有关岛礁。次年，内政部公函提出以接收军舰的名称将武德岛更名为永兴岛。',
+    sources: [ref.southChinaSea, ref.southChinaSeaCharts],
+  },
+  huangyan: {
+    text: '黄岩岛位于南海中部，属于中国中沙群岛。1935年，中国政府公布的南海诸岛地名表称其为斯卡巴洛礁。1947年重新审定地名时，改称民主礁。1983年公布的标准名称为黄岩岛，民主礁作为副名保留。',
+    sources: [ref.huangyanNames, ref.southChinaSeaCharts],
+  },
+  'taiping-island': {
+    text: '太平岛在中国南沙群岛。1946年12月12日，中国海军太平舰、中业舰抵达南沙群岛，接收人员在岛上举行仪式并立碑。太平岛因太平舰得名。',
+    sources: [ref.taiping, ref.southChinaSeaCharts],
+  },
+  changdu: {
+    text: '昌都位于西藏东部。1950年10月，人民解放军在这里同西藏地方军队交战，10月19日昌都解放。1951年5月，中央人民政府和西藏地方政府就西藏和平解放另行达成协议。',
+    sources: [ref.changdu, ref.tibet],
+  },
+  shenyang: {
+    text: '沈阳旧称奉天，是张学良主持东北军政事务的中心之一。1928年东北易帜，次年奉天省改称辽宁省。1931年九一八事变在沈阳发生，日本关东军随即侵占东北多地。',
+    sources: [transitionSources.northeast, transitionSources.liaoning],
+  },
+  changchun: {
+    text: '日本侵占中国东北后把长春设为伪满洲国统治中心，1932年改称“新京”。当地保存的伪满皇宫等旧址见证了日本通过殖民机关控制东北的历史。',
+    sources: [transitionSources.changchun],
+  },
+  chongqing: {
+    text: '抗战期间，许多机关、学校和工厂迁往重庆。1945年，国共代表在这里谈判，10月10日在桂园签署《政府与中共代表会谈纪要》。地图标在渝中区，接近谈判涉及的多个地点。',
+    sources: [transitionSources.chongqing, transitionSources.chongqingAgreement],
+  },
   ...Object.fromEntries(
     [
       [

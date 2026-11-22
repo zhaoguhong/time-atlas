@@ -574,6 +574,16 @@ svg {
   background: #fffdf7;
   border-radius: 50%;
 }
+.city-label.modern-china-place .city-dot,
+.city-label.modern-occupied-place .city-dot {
+  width: 7px;
+  height: 7px;
+  border-color: #fffdf7;
+  background: #448178;
+}
+.city-label.modern-occupied-place .city-dot {
+  background: #9e7854;
+}
 .city-label.capital .city-dot {
   width: 8px;
   height: 12px;
@@ -1724,9 +1734,6 @@ svg {
   padding: 0;
   color: #425b38;
 }
-.year-title svg {
-  color: #a4b593;
-}
 .year-period {
   border: 1px solid #e5ebdc;
   color: #99ab84;
@@ -1734,23 +1741,6 @@ svg {
   border-radius: 3px;
   padding: 3px 6px;
   white-space: nowrap;
-}
-.time-readout form {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.time-readout input {
-  width: 95px;
-  border: 1px solid #c4d3b7;
-  color: #5a7646;
-  border-radius: 4px;
-  padding: 6px 7px;
-  background: #f8fbf3;
-}
-.time-readout small {
-  font-size: 9px;
-  color: #9baa90;
 }
 .play-controls {
   display: flex;
@@ -2834,9 +2824,6 @@ svg {
   .year-title {
     font-size: 20px;
     letter-spacing: 0;
-  }
-  .year-title svg {
-    width: 10px;
   }
   .play-controls {
     gap: 5px;

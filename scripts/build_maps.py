@@ -11,7 +11,7 @@ import io
 import json
 import urllib.request
 import zipfile
-from shapely.geometry import shape, mapping, box
+from shapely.geometry import shape, mapping, box, Point, MultiPolygon
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data' / 'raw'
@@ -134,6 +134,45 @@ def geometry_json(geom):
     result['coordinates'] = rounded(result['coordinates'])
     return result
 
+def build_island_land():
+    # Extract complete physical land polygons. The Penghu box selects islands;
+    # its edges never form part of the output geometry.
+    filename = 'ne_10m_land.geojson'
+    source = SOURCES[filename]
+    penghu = box(119.15, 23.1, 119.81, 23.88)
+    seeds = {'taiwan': Point(121.56, 25.043), 'hainan': Point(110.33, 20.04)}
+    groups = {name: [] for name in [*seeds, 'penghu']}
+    for feature in json.loads(download(filename))['features']:
+        geom = shape(feature['geometry'])
+        for part in geom.geoms if geom.geom_type == 'MultiPolygon' else [geom]:
+            if penghu.covers(part):
+                groups['penghu'].append(part)
+            for name, seed in seeds.items():
+                if part.covers(seed):
+                    groups[name].append(part)
+    if any(len(groups[name]) != 1 for name in seeds) or len(groups['penghu']) < 3:
+        raise ValueError('Expected Taiwan, Hainan and Penghu coastlines in locked Natural Earth source')
+    features = []
+    for name, parts in groups.items():
+        geom = MultiPolygon(parts).simplify(0.005, preserve_topology=True)
+        if not geom.is_valid or geom.is_empty:
+            raise ValueError(f'Invalid island land geometry: {name}')
+        features.append({
+            'type': 'Feature',
+            'properties': {'island': name},
+            'geometry': geometry_json(geom),
+        })
+    path = OUT / 'modern-island-land.geojson'
+    dump(path, {'type': 'FeatureCollection', 'features': features})
+    return {
+        'file': path.name,
+        'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
+        'url': source['url'],
+        'sourceSha256': source['sha256'],
+        'license': 'Public domain',
+        'transformations': 'Natural Earth 1:10m physical island land, simplified at 0.005 degrees. No administrative geometry.',
+    }
+
 source_url = SOURCES['cliopatria.geojson.zip']['url']
 blob = download('cliopatria.geojson.zip')
 with zipfile.ZipFile(io.BytesIO(blob)) as archive:
@@ -220,5 +259,6 @@ for layer in ['land', 'lakes', 'rivers_lake_centerlines']:
     dump(OUT / f'{layer}.geojson', {'type': 'FeatureCollection', 'features': features})
     natural_sources.append({'layer': layer, 'url': url, 'sha256': hashlib.sha256(raw).hexdigest(), 'license': 'Public domain'})
 manifest['naturalEarth'] = natural_sources
+manifest['modernIslandLand'] = build_island_land()
 dump(OUT / 'provenance.json', manifest)
 print('Built global maps:', sum(names.values()), 'records;', len(names), 'polities')

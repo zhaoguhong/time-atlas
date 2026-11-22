@@ -1,5 +1,5 @@
 import type { HistoryEvent, Period } from '../types'
-import { toOrdinal, MAX_YEAR, modernReadingPeriod } from './history'
+import { toOrdinal, TRANSITION_MAX_YEAR, modernReadingPeriod } from './history'
 
 // Navigation windows only: societies do not share a single historical periodization.
 export const worldPeriods: Period[] = [
@@ -11,6 +11,7 @@ export const worldPeriods: Period[] = [
   ['world-oceans', '跨洋联系', '跨洋联系', 1500, 1749, 1600],
   ['world-revolutions', '革命与工业', '革命与工业', 1750, 1849, 1800],
   ['world-transformations', '帝国与变革', '帝国与变革', 1850, 1912, 1900],
+  ['world-wars', '世界大战与战后重建', '两次世界大战', 1913, TRANSITION_MAX_YEAR, 1945],
 ].map(([id, name, short, from, to, focus]) => ({
   id: String(id),
   name: String(name),
@@ -25,7 +26,7 @@ export const worldPeriods: Period[] = [
 }))
 
 export const worldPeriodAt = (year: number) =>
-  year > MAX_YEAR
+  year > TRANSITION_MAX_YEAR
     ? modernReadingPeriod
     : (worldPeriods.find((period) => year >= period.from && year <= period.to) ?? worldPeriods[0])
 

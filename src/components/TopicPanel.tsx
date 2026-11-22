@@ -381,7 +381,7 @@ export default function TopicPanel({
               <p className="topic-reading-help">
                 继续阅读事件，可以查看相关人物、年代、地点与出处。
                 {related.some(({ event }) => event.year > MAX_YEAR) &&
-                  '1912年后的史事在时空柱中阅读；历史疆域地图仍止于1912年。'}
+                  `${MAX_YEAR}年后的史事可在时空柱中阅读。`}
               </p>
               <ol className="topic-chapter-list">
                 {related.map(({ event, step }) => (
