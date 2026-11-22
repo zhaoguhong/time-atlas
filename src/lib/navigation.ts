@@ -12,6 +12,7 @@ export interface ArchiveFilters {
   allChanges: boolean
 }
 export interface NavigationView {
+  canvasEnabled?: boolean
   visualization?: 'map' | 'pillar'
   pillarSide?: PillarSide
   pillarRegion?: string
@@ -26,6 +27,8 @@ export interface NavigationView {
   camera: Camera | null
   compareYear: number | null
   tourState: { id: string; step: number } | null
+  articleId?: string | null
+  topicEntrySelected?: boolean
   trailPerson: string | null
   trailPoint: string | null
   showFutureJourney: boolean

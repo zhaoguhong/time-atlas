@@ -3,6 +3,15 @@ import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { toOrdinal } from '../src/lib/history'
 import { installPillarClock } from './pillar-clock-helpers'
+import { matchesEventCategory } from '../src/lib/event-categories'
+import { eventRegion } from '../src/lib/time-pillar'
+import { events, eventById } from '../src/data/content'
+import {
+  expectExploration,
+  explorationParams,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 test.use({ hasTouch: true })
 async function ready(page: Page, hash = 'year=1500&span=900') {
@@ -23,6 +32,25 @@ async function settings(page: Page) {
 async function closeSettings(page: Page) {
   await page.getByRole('button', { name: '关闭时空柱面板', exact: true }).click()
   await expect(page.locator('.pillar-dialog')).not.toBeVisible()
+}
+async function completeEventArticle(page: Page, id: string) {
+  const event = eventById.get(id)
+  expect(event, `Selected event ${id} exists in the authoritative content`).toBeDefined()
+  const detail = page.locator('.event-detail')
+  await expect(detail.locator('h2')).toHaveText(event!.title)
+  if (event!.narrative) {
+    await expect(detail.locator('.event-article-section p')).toHaveText(
+      event!.narrative.sections.flatMap((section) => section.paragraphs),
+    )
+    if (event!.narrative.note)
+      await expect(detail.locator('.event-article-note')).toHaveText(event!.narrative.note)
+  } else {
+    if (event!.details)
+      await expect(detail.locator('.event-narrative p')).toHaveText(event!.details)
+    await expect(detail.getByText(event!.background, { exact: true })).toBeVisible()
+    await expect(detail.getByText(event!.impact, { exact: true })).toBeVisible()
+  }
+  await expect(detail.locator('.reading-status')).toHaveCount(0)
 }
 async function geometry(page: Page) {
   const problems = await page.evaluate(() => {
@@ -213,7 +241,9 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await page.locator('.pillar-cluster-list button').first().click()
   await expect(page.locator('.event-detail')).toBeVisible()
   const title = await page.locator('.event-detail h2').innerText()
-  await expect(page.locator('.event-narrative')).toBeVisible()
+  await expect(page).toHaveURL(/\/events\/[^/]+\/$/)
+  const selectedId = (await explorationParams(page)).event
+  await completeEventArticle(page, selectedId)
   expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
   await expect(page.locator('.event-relations')).toBeVisible()
   await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
@@ -222,7 +252,7 @@ test('clusters expose all hidden content, reading has relations and sources, map
   await page.getByRole('button', { name: '在时空柱中对照', exact: true }).click()
   await expect(page.locator('.time-pillar')).toBeVisible()
   await expect(page.locator('.event-detail h2')).toHaveText(title)
-  await page.reload()
+  await reloadExploration(page)
   await expect(page.locator('.event-detail h2')).toHaveText(title)
   await page.screenshot({ path: info.outputPath('detail-and-pillar.png') })
 })
@@ -269,7 +299,7 @@ test('mobile reading remains usable through rotation and supports split canvas',
   await page.setViewportSize({ width: 390, height: 844 })
   await setSheet(page, 'reading')
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
-  await expect(page).toHaveURL(/event=world-newton/)
+  await expect(page).toHaveURL(recordPath('events', 'world-newton'))
   await setSheet(page, 'map')
   await geometry(page)
 })
@@ -557,7 +587,7 @@ test('compact labels are the default, summaries are optional, and years use Chin
   await closeSettings(page)
   await expect(page.locator('.pillar-event p')).toHaveCount(0)
   await page.goto('/#visual=pillar&year=-221&span=800')
-  await expect(page.locator('.pillar-now')).toHaveText('公元前221年')
+  await expect(page.locator('.pillar-now')).toHaveText('前221年')
   expect(
     (await page.locator('.pillar-tick').allTextContents()).some((t) => t.startsWith('公元前')),
   ).toBe(true)
@@ -839,7 +869,7 @@ test('pillar reading stays in place while explicit map reading uses the event da
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1700')
   await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-  await expect(page).toHaveURL(/year=1687/)
+  await expectExploration(page, { year: '1687' })
   await expect(page.locator('.event-detail h2')).toContainText('牛顿')
 })
 
@@ -952,14 +982,28 @@ for (const viewport of [
     await expect(page.locator('.pillar-cluster-list')).toContainText('朱熹')
     await page.locator('.pillar-cluster-list button').filter({ hasText: '鹅湖之会' }).click()
     await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
-    await expect
-      .poll(() => new URLSearchParams(new URL(page.url()).hash.slice(1)).get('category'))
-      .toBe('哲学')
-    await page.reload()
+    await expectExploration(page, { category: '哲学' })
+    await reloadExploration(page)
     await expect(page.locator('.event-detail h2')).toHaveText('鹅湖之会')
     await settings(page)
     await expect(category).toHaveValue('哲学')
     await category.selectOption('经济贸易')
+    // The expanded Song collection includes economic records. Use a bounded
+    // interval with political events so clearing the filters must restore content.
+    const emptyRange = [-1047, -1045]
+    const economicEvents = events.filter(
+      (event) => eventRegion(event) === 'china' && matchesEventCategory(event, '经济贸易'),
+    )
+    expect(
+      economicEvents.filter(
+        (event) => event.year <= emptyRange[1] && (event.endYear ?? event.year) >= emptyRange[0],
+      ),
+    ).toHaveLength(0)
+    await page.getByLabel('时空柱起始年份', { exact: true }).fill(String(emptyRange[0]))
+    await page.getByLabel('时空柱结束年份', { exact: true }).fill(String(emptyRange[1]))
+    await page.getByRole('button', { name: '应用时空柱时间范围', exact: true }).click()
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '-1046')
+    await settings(page)
     await expect(page.locator('.pillar-category-summary')).toContainText('当前画布 0 件')
     await closeSettings(page)
     await expect(page.locator('.pillar-empty')).toContainText(
@@ -970,6 +1014,7 @@ for (const viewport of [
     await expect(category).toHaveValue('全部')
     await closeSettings(page)
     await expect(page.locator('.pillar-empty')).toHaveCount(0)
+    await expect(page.locator('.pillar-card[data-event-id="muye"]')).toBeVisible()
   })
 }
 
@@ -1004,7 +1049,10 @@ for (const viewport of [
     await page.setViewportSize(viewport)
     await ready(page, 'year=1785&span=50&scope=period&category=哲学&range=1770,1795')
     await settings(page)
-    await expect(page.locator('.pillar-category-summary')).toContainText('全部年代 128 件')
+    const philosophyCount = events.filter((event) => matchesEventCategory(event, '哲学')).length
+    await expect(page.locator('.pillar-category-summary')).toContainText(
+      `全部年代 ${philosophyCount} 件`,
+    )
     const overview = page.getByRole('button', { name: '展开“哲学”的全部年代', exact: true })
     await overview.evaluate((element) => element.scrollIntoView({ block: 'center' }))
     await page.screenshot({ path: info.outputPath(`${viewport.name}-philosophy-total.png`) })
@@ -1022,9 +1070,9 @@ for (const viewport of [
     await expect(page.locator('.pillar-cluster-list')).toContainText('实践理性批判')
     await page.locator('.pillar-cluster-list button').filter({ hasText: '纯粹理性批判' }).click()
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
-    await expect(page.locator('.event-narrative')).toBeVisible()
+    await completeEventArticle(page, 'phil-kant-pure-reason')
     expect(await page.locator('.event-detail .reference-list a').count()).toBeGreaterThan(0)
-    await page.reload()
+    await reloadExploration(page)
     await expect(page.locator('.event-detail h2')).toHaveText('康德《纯粹理性批判》第一版出版')
     await settings(page)
     await expect(page.getByLabel('时空柱事件类别', { exact: true })).toHaveValue('哲学')

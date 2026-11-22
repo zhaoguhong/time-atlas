@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { events, people } from '../data/content'
-import { periods, tours } from '../data/periods'
+import { periods } from '../data/periods'
+import { topicTours as tours } from '../data/topics'
 import { profiles, periodCourses } from '../data/learning'
 import {
   clampYear,
@@ -80,7 +81,7 @@ describe('historical chronology', () => {
     expect(eventRelation(230, 230)).toBe('当年')
     expect(scopeDescription(-1, 'nearby')).toBe('前6—5 · 前后五年')
     expect(scopeDescription(MIN_YEAR, 'nearby')).toBe('前10000—前9995 · 前后五年')
-    expect(scopeDescription(MAX_YEAR, 'nearby')).toBe('1907—1912 · 前后五年')
+    expect(scopeDescription(MAX_YEAR, 'nearby')).toBe('1945—1950 · 前后五年')
   })
   it('validates and restores comparison and scope parameters', () => {
     expect(parseHash('#year=230&scope=period&compare=-138')).toMatchObject({

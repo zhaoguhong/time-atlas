@@ -1,7 +1,7 @@
-import { formatEventDate, eventDateRelation } from '../lib/history'
 import type { ColorMode } from '../lib/color-mode'
 import { useEffect, useRef, useState } from 'react'
 import * as maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import type { FeatureCollection, LineString } from 'geojson'
 import { Minus, Plus, LocateFixed, Compass, AlertCircle, LoaderCircle, Globe2 } from 'lucide-react'
@@ -16,10 +16,33 @@ import type {
 } from '../types'
 import { placeForCity, placeById } from '../lib/exploration'
 import { cities, silkRoadCoordinates } from '../data/periods'
-import { compactYear, formatYear, periodAt, toOrdinal, fromOrdinal, MAX_YEAR } from '../lib/history'
+import {
+  modernMapPlaceLabel,
+  modernMapPlacesById,
+  taiwanReturnedByYearEnd,
+} from '../data/modern-map-places'
+import ModernMapNote from './ModernMapNote'
+import {
+  compactEventDate,
+  compactYear,
+  eventDateRelation,
+  formatEventDate,
+  formatYear,
+  fromOrdinal,
+  TERRITORY_MAX_YEAR,
+  periodAt,
+  toOrdinal,
+} from '../lib/history'
 import { groupMapEvents, intersects, type EventGroup } from '../lib/markers'
-import { activeMapFeatures, polityOrder } from '../lib/maps'
+import {
+  activeMapFeatures,
+  mapAttribution,
+  mapTerritorySlice,
+  polityOrder,
+  setModernIslandLand,
+} from '../lib/maps'
 import { eventsAtYear } from '../lib/current-events'
+import { fetchJson } from '../lib/fetch-json'
 import { journeySegments } from '../lib/journeys'
 import {
   interpolateJourneyCoordinates,
@@ -109,12 +132,9 @@ function applyMapPalette(instance: maplibregl.Map, mode: ColorMode) {
 }
 const cache = new Map<string, FeatureCollection>()
 const pending = new Map<string, Promise<FeatureCollection>>()
-function mapSlice(year: number) {
-  const period = periodAt(year)
-  return `${period.id}/${Math.floor((toOrdinal(year) - toOrdinal(period.from)) / 20)}`
-}
 const base = import.meta.env.BASE_URL
-async function loadCollection(id: string): Promise<FeatureCollection> {
+async function loadCollection(id: string | null): Promise<FeatureCollection> {
+  if (id === null) return empty
   const cached = cache.get(id)
   if (cached) {
     cache.delete(id)
@@ -124,9 +144,7 @@ async function loadCollection(id: string): Promise<FeatureCollection> {
   const existing = pending.get(id)
   if (existing) return existing
   const request = (async () => {
-    const response = await fetch(`${base}data/maps/${id}.geojson`)
-    if (!response.ok) throw new Error(String(response.status))
-    const data = (await response.json()) as FeatureCollection
+    const data = await fetchJson<FeatureCollection>(`${base}data/maps/${id}.geojson`, 30_000)
     if (data.type !== 'FeatureCollection') throw new Error('Invalid map')
     cache.set(id, data)
     while (cache.size > 4) cache.delete(cache.keys().next().value!)
@@ -146,6 +164,7 @@ interface MapLabel {
   element: HTMLElement
   priority: number
   capital?: boolean
+  fixedDot?: HTMLElement
   kind: 'polity' | 'city' | 'event'
 }
 
@@ -229,8 +248,9 @@ export default function HistoryMap(props: Props) {
   const [reload, setReload] = useState(0)
   const [city, setCity] = useState<City | null>(null)
   const [collection, setCollection] = useState<FeatureCollection | null>(null)
-  const [loadedPeriod, setLoadedPeriod] = useState('')
-  const slice = mapSlice(props.year)
+  const [loadedPeriod, setLoadedPeriod] = useState<string | null>()
+  const slice = mapTerritorySlice(props.year)
+  const modern = slice === null
   useEffect(() => {
     props.onLoadState?.(error ? 'error' : loading || loadedPeriod !== slice ? 'loading' : 'ready')
   }, [error, loading, loadedPeriod, slice, props.onLoadState])
@@ -247,6 +267,8 @@ export default function HistoryMap(props: Props) {
     try {
       const camera = current.current.initialCamera ?? defaultCamera(container.current)
       instance = new maplibregl.Map({
+        pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        maxTileCacheSize: 32,
         container: container.current,
         center: [camera.lng, camera.lat],
         zoom: camera.zoom,
@@ -277,14 +299,6 @@ export default function HistoryMap(props: Props) {
       return
     }
     map.current = instance
-    instance.addControl(
-      new maplibregl.AttributionControl({
-        compact: true,
-        customAttribution:
-          '<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria / Seshat</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>',
-      }),
-      'bottom-right',
-    )
     instance.on('load', () => {
       instance.addSource('land', { type: 'geojson', data: `${base}data/land.geojson` })
       instance.addLayer({
@@ -497,6 +511,9 @@ export default function HistoryMap(props: Props) {
           container.current.dataset.rendered = String(
             instance.isSourceLoaded('land') &&
               instance.isSourceLoaded('territories') &&
+              (current.current.year <= TERRITORY_MAX_YEAR ||
+                (Boolean(instance.getSource('modern-island-land')) &&
+                  instance.isSourceLoaded('modern-island-land'))) &&
               instance.queryRenderedFeatures({ layers: ['land'] }).length > 0,
           )
           container.current.dataset.referenceRendered = String(
@@ -597,9 +614,11 @@ export default function HistoryMap(props: Props) {
           rect.bottom <= viewport.bottom - 12 &&
           !occupied.some((other) => intersects(rect, other, 3))
         const movable = item.element.matches(
-          '.topic-marker.selected,.journey-marker.selected,.named-event.selected,.polity-label.major,.place-focus-label',
+          '.topic-marker.selected,.journey-marker.selected,.named-event.selected,.polity-label.major,.place-focus-label,.taiwan-map-label',
         )
         if (movable) item.element.style.translate = 'none'
+        let labelX = 0
+        let labelY = 0
         let rect = item.element.getBoundingClientRect()
         const anchor = instance.project(item.marker.getLngLat())
         const anchorInside =
@@ -613,6 +632,10 @@ export default function HistoryMap(props: Props) {
             Math.max(0, viewport.left + 8 - rect.left),
             viewport.right - 8 - rect.right,
           )
+          const verticalFit = Math.min(
+            Math.max(0, viewport.top + 8 - rect.top),
+            viewport.bottom - 12 - rect.bottom,
+          )
           const offsets = item.element.classList.contains('polity-label')
             ? [
                 [-90, 0],
@@ -624,23 +647,36 @@ export default function HistoryMap(props: Props) {
               ]
             : item.element.classList.contains('journey-marker')
               ? [
+                  [horizontalFit, 0],
+                  [horizontalFit, rect.height + 8],
                   [-70, 32],
                   [70, 32],
                   [-70, 52],
                   [70, 52],
+                  [horizontalFit, verticalFit],
+                  // A clustered label may start above a short mobile map.
+                  // Try the free space immediately below each fixed control.
+                  ...obstacles.map((obstacle) => [horizontalFit, obstacle.bottom + 6 - rect.top]),
                 ]
               : [
                   [horizontalFit, 0],
+                  ...(item.fixedDot ? [[horizontalFit, 10]] : []),
                   [0, rect.height + 8],
                   [-50, rect.height + 8],
                   [50, rect.height + 8],
                   [horizontalFit, rect.height + 8],
                 ]
           for (const [x, y] of offsets) {
+            labelX = x
+            labelY = y
             item.element.style.translate = `${x}px ${y}px`
             rect = item.element.getBoundingClientRect()
             if (fits(rect)) break
           }
+        }
+        if (item.fixedDot) {
+          // The label can move around an event card. Keep the dot at the projected city.
+          item.fixedDot.style.translate = labelX || labelY ? `${-labelX}px ${-labelY}px` : 'none'
         }
         const visible =
           anchorInside &&
@@ -648,7 +684,8 @@ export default function HistoryMap(props: Props) {
           !(
             item.kind === 'city' &&
             !item.capital &&
-            instance.getZoom() < 3.6 &&
+            instance.getZoom() <
+              (item.element.classList.contains('taiwan-map-label') ? 2.6 : 3.6) &&
             !current.current.showRoutes
           )
 
@@ -760,6 +797,22 @@ export default function HistoryMap(props: Props) {
     }
   }, [ready, props.colorMode])
 
+  const withTerritoryAttribution =
+    !modern || (props.compareYear !== null && props.compareYear <= TERRITORY_MAX_YEAR)
+  useEffect(() => {
+    const instance = map.current
+    if (!ready || !instance) return
+    const attribution = new maplibregl.AttributionControl({
+      compact: true,
+      customAttribution: mapAttribution(withTerritoryAttribution),
+    })
+    instance.addControl(attribution, 'bottom-right')
+    arrange.current()
+    return () => {
+      if (instance.hasControl(attribution)) instance.removeControl(attribution)
+    }
+  }, [ready, withTerritoryAttribution])
+
   useEffect(() => {
     let cancelled = false
     const id = slice
@@ -790,20 +843,31 @@ export default function HistoryMap(props: Props) {
   }, [slice, reload])
 
   useEffect(() => {
-    if (!props.playing) return
+    if (!props.playing || modern) return
     const period = periodAt(props.year)
     const chunk = Math.floor((toOrdinal(props.year) - toOrdinal(period.from)) / 20)
     const nextYear = fromOrdinal(
       Math.min(toOrdinal(period.to) + 1, toOrdinal(period.from) + (chunk + 1) * 20),
     )
-    if (nextYear <= MAX_YEAR) void loadCollection(mapSlice(nextYear)).catch(() => {})
-  }, [props.playing, slice])
+    if (nextYear <= TERRITORY_MAX_YEAR)
+      void loadCollection(mapTerritorySlice(nextYear)).catch(() => {})
+  }, [props.playing, slice, modern])
 
   useEffect(() => {
     const instance = map.current
-    if (!ready || !instance || !collection || loadedPeriod !== slice) return
-    if (container.current) container.current.dataset.mapYear = String(props.year)
-    const features = activeMapFeatures(collection.features as PolityFeature[], props.year)
+    if (!ready || !instance || (!modern && (!collection || loadedPeriod !== slice))) return
+    setModernIslandLand(instance, props.year, 'territories')
+    if (container.current) {
+      if (modern && container.current.dataset.mapYear !== String(props.year)) {
+        container.current.dataset.rendered = 'false'
+        instance.triggerRepaint()
+      }
+      container.current.dataset.mapYear = String(props.year)
+      container.current.dataset.territoryCoverage = modern ? 'locations' : 'historical'
+    }
+    const features = modern
+      ? []
+      : activeMapFeatures(collection!.features as PolityFeature[], props.year)
     const unique = new Map(features.map((feature) => [feature.properties.name, feature.properties]))
     current.current.onPolities([...unique.values()].sort(polityOrder))
     const visible = features.filter((f) => !props.hiddenPolities.includes(f.properties.name))
@@ -853,7 +917,16 @@ export default function HistoryMap(props: Props) {
     }
     previous.forEach((label) => label.marker.remove())
     arrange.current()
-  }, [ready, collection, loadedPeriod, slice, props.year, props.hiddenPolities, props.selection])
+  }, [
+    ready,
+    collection,
+    loadedPeriod,
+    slice,
+    modern,
+    props.year,
+    props.hiddenPolities,
+    props.selection,
+  ])
 
   useEffect(() => {
     const instance = map.current
@@ -899,13 +972,14 @@ export default function HistoryMap(props: Props) {
               eventsAtYear(group.events, current.current.year)[0] ??
               (single && (single.importance >= 5 || instance.getZoom() >= 4) ? single : null))
             : null
+        const present = !!single && eventDateRelation(single, current.current.year) === '当年'
         const key = [
           group.events.map((e) => e.id).join(','),
           selected,
           current.current.trail?.activeId ?? '',
           topicEvent?.id ?? '',
           namedEvent?.id ?? '',
-          single ? eventDateRelation(single, current.current.year) === '当年' : '',
+          present,
           single ? single.year > current.current.year : '',
         ].join('|')
         const retained = previous.get(key)
@@ -921,7 +995,7 @@ export default function HistoryMap(props: Props) {
         const relation = single
           ? eventDateRelation(single, current.current.year)
           : `${compactYear(group.events[0].year)}—${compactYear(group.events.at(-1)!.year)}`
-        element.className = `event-marker ${current.current.trail ? 'journey-marker' : current.current.topicSteps ? 'topic-marker' : namedEvent ? 'named-event' : ''} ${selected ? 'selected' : ''} ${single && single.year > current.current.year ? 'future' : ''} ${single && single.year === current.current.year ? 'present' : ''}`
+        element.className = `event-marker ${current.current.trail ? 'journey-marker' : current.current.topicSteps ? 'topic-marker' : namedEvent ? 'named-event' : ''} ${selected ? 'selected' : ''} ${single && single.year > current.current.year ? 'future' : ''} ${present ? 'present' : ''}`
         const dot = document.createElement('span')
         dot.className = 'event-marker-dot'
         dot.textContent =
@@ -940,7 +1014,7 @@ export default function HistoryMap(props: Props) {
                   : String(group.events.length)
         const date = document.createElement('small')
         date.textContent = single
-          ? compactYear(single.year)
+          ? compactEventDate(single)
           : current.current.trail
             ? '行迹'
             : '事件'
@@ -975,14 +1049,14 @@ export default function HistoryMap(props: Props) {
           const title = document.createElement('strong')
           title.className = 'topic-marker-label'
           title.textContent = topicEvent.title
-          date.textContent = `${compactYear(topicEvent.year)}${single ? '' : ` · 另 ${group.events.length - 1} 章`}`
+          date.textContent = `${compactEventDate(topicEvent)}${single ? '' : ` · 另 ${group.events.length - 1} 章`}`
           element.dataset.activeEvent = topicEvent.id
           element.append(title)
         } else if (namedEvent) {
           const title = document.createElement('strong')
           title.className = 'named-event-title'
           title.textContent = namedEvent.title
-          date.textContent = `${namedEvent.dateLabel ? '约' : ''}${compactYear(namedEvent.year)}${namedEvent.endYear ? '—' + compactYear(namedEvent.endYear) : ''} · ${namedEvent.category}${single ? '' : ` · 另${group.events.length - 1}件`}`
+          date.textContent = `${compactEventDate(namedEvent)} · ${namedEvent.category}${single ? '' : ` · 另${group.events.length - 1}件`}`
           element.dataset.activeEvent = namedEvent.id
           element.append(title)
         }
@@ -1062,7 +1136,10 @@ export default function HistoryMap(props: Props) {
     }
     for (const city of cities.filter((c) => c.from <= props.year && c.to >= props.year)) {
       const capital = city.capitals.some(([from, to]) => props.year >= from && props.year <= to)
-      const key = `${city.id}:${capital}`
+      const name = modernMapPlaceLabel(city.id, city.name, props.year)
+      const taiwan = city.id === 'taipei' || city.id === 'penghu'
+      const occupied = taiwan && !taiwanReturnedByYearEnd(props.year)
+      const key = `${city.id}:${capital}:${name}`
       const retained = previous.get(key)
       if (retained) {
         cityLabels.current.push(retained)
@@ -1071,13 +1148,16 @@ export default function HistoryMap(props: Props) {
       }
       const element = document.createElement('button')
       element.className = `city-label ${capital ? 'capital' : ''}`
+      if (taiwan) element.classList.add('taiwan-map-label')
+      if (modernMapPlacesById.has(city.id))
+        element.classList.add(occupied ? 'modern-occupied-place' : 'modern-china-place')
       const dot = document.createElement('span')
       dot.className = 'city-dot'
       dot.textContent = capital ? '✦' : ''
       const text = document.createElement('span')
-      text.textContent = city.name
+      text.textContent = name
       element.append(dot, text)
-      element.setAttribute('aria-label', `查看${city.name}古今地名`)
+      element.setAttribute('aria-label', `查看${name}古今地名`)
       element.addEventListener('click', () => {
         setEventGroup(null)
         setCity(city)
@@ -1092,6 +1172,7 @@ export default function HistoryMap(props: Props) {
         kind: 'city',
         priority: capital ? 100 : 55,
         capital,
+        fixedDot: taiwan ? dot : undefined,
       })
     }
     previous.forEach((label) => label.marker.remove())
@@ -1115,13 +1196,13 @@ export default function HistoryMap(props: Props) {
     setReferenceError(false)
     if (container.current) container.current.dataset.referenceRendered = 'false'
     ;(instance.getSource('reference-territories') as maplibregl.GeoJSONSource).setData(empty)
-    if (props.compareYear === null) {
+    if (props.compareYear === null || props.compareYear > TERRITORY_MAX_YEAR) {
       setReferenceLoading(false)
       return
     }
     setReferenceLoading(true)
     const referenceYear = props.compareYear
-    void loadCollection(mapSlice(referenceYear))
+    void loadCollection(mapTerritorySlice(referenceYear))
       .then((data) => {
         if (cancelled) return
         const features = activeMapFeatures(data.features as PolityFeature[], referenceYear)
@@ -1506,12 +1587,16 @@ export default function HistoryMap(props: Props) {
         role="region"
         aria-label={`${formatYear(props.year)}历史地图`}
       />
-      <div className="map-annotation">
-        <span className="annotation-line" />
-        全球历史疆域
-        <span className="annotation-dot" />
-        空白处暂缺资料
-      </div>
+      {modern ? (
+        <ModernMapNote year={props.year} />
+      ) : (
+        <div className="map-annotation">
+          <span className="annotation-line" />
+          全球历史疆域
+          <span className="annotation-dot" />
+          空白处暂缺资料
+        </div>
+      )}
       {props.year < -475 && (
         <details className="early-map-note">
           <summary>
@@ -1542,8 +1627,8 @@ export default function HistoryMap(props: Props) {
           <Minus size={19} />
         </button>
         <button
-          title="查看全球疆域"
-          aria-label="查看全球疆域"
+          title={modern ? '查看全球地点' : '查看全球疆域'}
+          aria-label={modern ? '查看全球地点' : '查看全球疆域'}
           onClick={() =>
             map.current?.fitBounds(
               [
@@ -1635,7 +1720,7 @@ export default function HistoryMap(props: Props) {
             ×
           </button>
           <span className="eyebrow">古今地名</span>
-          <h3>{city.name}</h3>
+          <h3>{modernMapPlaceLabel(city.id, city.name, props.year)}</h3>
           <p>{city.modern}</p>
           <button
             className="city-archive-link"

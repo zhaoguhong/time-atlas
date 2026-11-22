@@ -1,4 +1,5 @@
 import { cities } from '../data/periods'
+import { expandedPlaceAliases } from '../data/place-expansion'
 import type { City, ExplorationFilter, HistoryEvent, MapBounds } from '../types'
 import { toOrdinal } from './history'
 
@@ -27,8 +28,19 @@ const groups = [
     ids: ['daliang', 'tokyo'],
   },
   { id: 'hangzhou', name: '杭州一带', names: ['临安', '杭州'], ids: ['linan'] },
-  { id: 'beijing', name: '北京一带', names: ['大都', '北京'], ids: ['dadu', 'beijing'] },
+  {
+    id: 'beijing',
+    name: '北京一带',
+    names: ['大都', '北京', '北平'],
+    ids: ['dadu', 'beijing', 'beiping', 'beijing-prc'],
+  },
   { id: 'lhasa', name: '拉萨一带', names: ['逻些', '拉萨'], ids: ['lhasa', 'lhasa-later'] },
+  {
+    id: 'constantinople',
+    name: '君士坦丁堡 / 伊斯坦布尔',
+    names: ['君士坦丁堡', '伊斯坦布尔'],
+    ids: ['constantinople'],
+  },
 ]
 const groupedIds = new Set(groups.flatMap((group) => group.ids))
 export const places: Place[] = [
@@ -49,7 +61,7 @@ export const places: Place[] = [
       id: city.id,
       name: city.name,
       modern: city.modern,
-      names: [city.name],
+      names: expandedPlaceAliases[city.id] ?? [city.name],
       coordinates: city.coordinates,
       labels: [city],
     })),
@@ -59,12 +71,20 @@ export const placeForCity = (id: string) =>
   places.find((place) => place.labels.some((city) => city.id === id))
 
 export function namesPlace(location: string, place: Place) {
-  return place.names.some((name) => {
-    // 东京 can also refer to Japan; the stored location must identify the Chinese city.
-    if (name === '东京')
-      return /东京.*(?:开封|汴)|(?:开封|汴).*东京/.test(location) || location === '东京'
-    return location.includes(name)
-  })
+  // Regional names and similarly named cities are not evidence of a city match.
+  if (place.id === 'rome') return /(?<![东西])罗马(?!尼亚|帝国|共和国)/u.test(location)
+  if (place.id === 'delhi') return /(?<!马)德里/u.test(location)
+  // Keep Kaifeng's historical name visible without matching it to Japan's Tokyo.
+  return place.names.some(
+    (name) => !(place.id === 'kaifeng' && name === '东京') && location.includes(name),
+  )
+}
+
+/** Explicit associations take precedence, including an intentional empty list. */
+export function eventAtPlace(event: HistoryEvent, place: Place) {
+  return event.placeIds !== undefined
+    ? event.placeIds.includes(place.id)
+    : namesPlace(event.location, place)
 }
 
 export function insideBounds([lng, lat]: [number, number], [west, south, east, north]: MapBounds) {
@@ -86,7 +106,7 @@ export function filterExploration(events: HistoryEvent[], filter: ExplorationFil
       (!filter.range ||
         (toOrdinal(event.year) <= toOrdinal(filter.range[1]) &&
           toOrdinal(event.endYear ?? event.year) >= toOrdinal(filter.range[0]))) &&
-      (!place || namesPlace(event.location, place)) &&
+      (!place || eventAtPlace(event, place)) &&
       (!filter.bounds || insideBounds(event.coordinates, filter.bounds)),
   )
 }

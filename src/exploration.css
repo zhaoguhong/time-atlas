@@ -56,8 +56,7 @@
   .time-readout {
     display: contents;
   }
-  .time-readout .year-title,
-  .time-readout form {
+  .time-readout .year-jump {
     grid-column: 1;
     grid-row: 1;
   }
@@ -134,11 +133,9 @@
   .time-readout {
     display: contents;
   }
-  .time-readout .year-title,
-  .time-readout form {
+  .time-readout .year-jump {
     grid-column: 1;
     grid-row: 1;
-    white-space: nowrap;
   }
   .timeline-period-select {
     grid-column: 1;
@@ -256,8 +253,8 @@
   display: grid;
   gap: 12px;
 }
-.place-directory > button,
-.archive-event-list > button {
+.place-directory > :is(button, a.reading-link),
+.archive-event-list > :is(button, a.reading-link) {
   display: grid;
   gap: 8px;
   padding: 16px;
@@ -266,8 +263,8 @@
   text-align: left;
   background: #fffefb;
 }
-.place-directory > button:hover,
-.archive-event-list > button:hover {
+.place-directory > :is(button, a.reading-link):hover,
+.archive-event-list > :is(button, a.reading-link):hover {
   border-color: #91a183;
   background: #f2f5ec;
 }
@@ -321,7 +318,7 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-.place-people button,
+.place-people :is(button, a.reading-link),
 .comparison-years button {
   padding: 9px 12px;
   background: #edf2e5;
@@ -340,7 +337,7 @@
   font-size: 12px;
   line-height: 1.7;
 }
-.place-visits button,
+.place-visits :is(button, a.reading-link),
 .place-visits a {
   color: #345b48;
   text-decoration: underline;
@@ -498,14 +495,6 @@
   .topbar {
     gap: 4px;
   }
-  .main-nav {
-    margin-left: auto;
-    gap: 6px;
-  }
-  .main-nav button {
-    min-height: 44px;
-    font-size: 11px;
-  }
   .top-search:not(:focus-within):not([data-search-open='true']) {
     flex: 0 0 44px;
     width: 44px;
@@ -588,7 +577,7 @@
   .atlas-app[data-mobile-view='reading'] .panel-intro {
     margin-bottom: 16px;
   }
-  .place-directory > button {
+  .place-directory > :is(button, a.reading-link) {
     padding: 12px;
   }
   .exploration-filters input,
@@ -608,9 +597,6 @@
   }
   .brand > span:last-child {
     font-size: 15px;
-  }
-  .main-nav button {
-    font-size: 10px;
   }
 }
 

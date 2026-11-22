@@ -28,6 +28,8 @@ export interface HistoryEvent {
   aliases?: string[]
   location: string
   coordinates: [number, number]
+  /** Explicit reading-place links. An empty list deliberately excludes name-based matches. */
+  placeIds?: string[]
   summary: string
   background: string
   impact: string
@@ -38,6 +40,11 @@ export interface HistoryEvent {
   dateNote?: string
   peopleNotes?: Record<string, string>
   details?: string[]
+  /** Event-specific prose; untitled sections keep a continuous narrative. */
+  narrative?: {
+    sections: { title?: string; paragraphs: string[] }[]
+    note?: string
+  }
   /** Curated reading geography, not inferred from modern borders or marker coordinates. */
   region?: HistoryRegion
   themes?: string[]
@@ -130,8 +137,59 @@ export interface Tour {
   question?: string
   introduction?: string[]
   conclusion?: string
+  subject?: string
+  routeIds?: string[]
+  article?: {
+    paragraphs: string[]
+    headings?: Record<number, string>
+    eventIds: string[]
+    mapStops?: { afterParagraph: number; eventId: string; label: string }[]
+  }
   chapters?: { eventId: string; explanation: string; mapReading: string }[]
   sources?: Source[]
+}
+export interface ArticleMedia {
+  id: string
+  afterParagraph: number
+  src: string
+  alt: string
+  caption: string
+  credit?: string
+  sourceUrl?: string
+  aiGenerated?: boolean
+  width?: number
+  height?: number
+}
+export interface ArticleMap {
+  bounds?: [[number, number], [number, number]]
+  id: string
+  afterParagraph: number
+  title: string
+  year: number
+  center: [number, number]
+  zoom?: number
+  eventIds?: string[]
+  routeIds?: string[]
+  places?: { name: string; coordinates: [number, number] }[]
+  caption?: string
+  sources?: Source[]
+}
+/** An independent essay; events and geographic exploration are optional. */
+export interface ReadingArticle extends Omit<Tour, 'steps' | 'chapters' | 'article'> {
+  cover?: Omit<ArticleMedia, 'afterParagraph'>
+  legacyIds?: string[]
+  searchTerms?: string[]
+  guideId?: string
+  relatedEventIds?: string[]
+  relatedArticles?: { id: string; name: string }[]
+  mapOverview?: boolean
+  article: {
+    paragraphs: string[]
+    headings?: Record<number, string>
+    mapStops?: { afterParagraph: number; eventId: string; label: string }[]
+    media?: ArticleMedia[]
+    maps?: ArticleMap[]
+  }
 }
 export interface PeriodProfile {
   focusReason: string

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-labelledby="title desc">
+  <title id="title">一封信里的两笔钱</title><desc id="desc">黄宝世先托寄港银三百元，来信问是否收妥。本次又托寄五百五十元，供学费和家用。图为内容摘记。</desc>
+  <style>text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243e36} .head {font-size:34px;font-weight:700} .body {font-size:27px} .label {font-size:23px} .line {fill:none;stroke:#62776b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round} .rule {stroke:#cbbfa6;stroke-width:2}</style>
+  <rect width="600" height="450" rx="12" fill="#f8f5eb"/>
+  <text class="head" x="30" y="52">一封信里的两笔钱</text><path class="rule" d="M30 73H570"/>
+  <rect x="36" y="99" width="246" height="188" rx="4" fill="#f2e6d7" stroke="#a88663" stroke-width="2"/>
+  <rect x="318" y="99" width="246" height="188" rx="4" fill="#e5eee6" stroke="#618273" stroke-width="2"/>
+  <text class="label" x="58" y="140">上月托寄</text><text class="head" x="58" y="204">港银 300 元</text>
+  <text class="label" x="58" y="254">写信询问收妥没有</text>
+  <text class="label" x="340" y="140">这次再托寄</text><text class="head" x="340" y="204">港银 550 元</text>
+  <text class="label" x="340" y="254">用于学费和家用</text>
+  <path class="line" d="M156 309v29h285v-29M300 338v27"/>
+  <text class="body" x="300" y="408" text-anchor="middle">两次都由香港的世赞经手</text>
+</svg>

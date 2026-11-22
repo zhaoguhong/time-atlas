@@ -1,4 +1,11 @@
-import { compactYear, formatEventDate, toOrdinal } from '../lib/history'
+import { taiwanReturnedByYearEnd } from '../data/modern-map-places'
+import {
+  compactYear,
+  formatEventDate,
+  MAX_YEAR,
+  TERRITORY_MAX_YEAR,
+  toOrdinal,
+} from '../lib/history'
 import type { Dynasty, HistoryEvent } from '../types'
 
 export default function ComparisonPanel({
@@ -11,6 +18,7 @@ export default function ComparisonPanel({
   all,
   onAll,
   scopeLabel = '中外历史',
+  showChineseGeography = true,
 }: {
   year: number
   reference: number
@@ -21,6 +29,7 @@ export default function ComparisonPanel({
   all: boolean
   onAll: (value: boolean) => void
   scopeLabel?: string
+  showChineseGeography?: boolean
 }) {
   const from = Math.min(year, reference),
     to = Math.max(year, reference)
@@ -37,13 +46,21 @@ export default function ComparisonPanel({
         {compactYear(from)}—{compactYear(to)}年
       </h2>
       <p>
-        相隔 {Math.abs(toOrdinal(to) - toOrdinal(from))}{' '}
-        年。结合地图叠加与这段时期的记录，观察政治格局和社会生活的变化。
+        相隔 {Math.abs(toOrdinal(to) - toOrdinal(from))} 年。
+        {reference <= TERRITORY_MAX_YEAR
+          ? '可结合参考年份的疆域轮廓与史事阅读。'
+          : '参考年份提供地点与史事，疆界资料待补。'}
       </p>
       <div className="comparison-years">
         {[from, to].map((value, index) => (
           <section key={index}>
             <h3>{compactYear(value)}年</h3>
+            {showChineseGeography && value > TERRITORY_MAX_YEAR && value <= MAX_YEAR && (
+              <p>
+                台湾、澎湖年末状态 ·
+                {taiwanReturnedByYearEnd(value) ? ' 中国' : ' 仍处于日本殖民统治时期'}
+              </p>
+            )}
             <p>本版档案阅读区间包含此年的朝代 / 政权</p>
             {dynasties
               .filter((dynasty) => dynasty.from <= value && dynasty.to >= value)
@@ -80,9 +97,7 @@ export default function ComparisonPanel({
         ))}
       </div>
       <h3>这段时间的历史线索 · {interval.length} 件</h3>
-      <p>
-        遵循当前历史范围、地区和筛选条件，按时间排列；同时或先后发生不等于存在因果关系。未收录不代表没有历史活动。
-      </p>
+      <p>史事按年份排列，并随当前历史范围、地区和筛选条件更新。</p>
       <label className="check-label">
         <input type="checkbox" checked={all} onChange={(e) => onAll(e.target.checked)} />
         显示全部记录（默认主要节点）

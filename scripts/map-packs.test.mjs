@@ -56,6 +56,16 @@ test('cold restore, warm verification and repair preserve archive/public separat
   assert.deepEqual(await fs.readFile(slice), original)
 })
 
+test('runtime preparation skips period archives and full preparation can restore them later', async (t) => {
+  const { root } = await fixture(t)
+  assert.deepEqual(await prepareMaps(root, { includeArchives: false }), {
+    verified: 4,
+    restored: 4,
+  })
+  await assert.rejects(fs.access(outputPath(root, 'maps/three.geojson')), { code: 'ENOENT' })
+  assert.deepEqual(await prepareMaps(root), { verified: 5, restored: 1 })
+})
+
 test('rejects a damaged pack even when restored files are already cached', async (t) => {
   const { root } = await fixture(t)
   await prepareMaps(root)

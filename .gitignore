@@ -15,9 +15,11 @@ coverage/
 /public/data/rivers_lake_centerlines.geojson
 /public/data/reading/
 /src/data/generated/reading-catalog.json
+/src/data/generated/reading-sources.json
 
 # Private local tools, deployment configuration and backups
 .local/
+/.codex-attachments/
 .env*
 .npmrc
 .pypirc
@@ -51,3 +53,7 @@ test-results/
 .DS_Store
 ._*
 Thumbs.db
+
+/src/data/generated/reading-routes.json
+
+/src/data/generated/article-runtime.json

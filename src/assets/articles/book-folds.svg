@@ -1,0 +1,101 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="720"
+  height="700"
+  viewBox="0 0 720 700"
+  role="img"
+  aria-labelledby="book-title book-desc"
+>
+  <title id="book-title">蝴蝶装与包背装的折叶方向</title>
+  <desc id="book-desc">
+    纸叶截面示意。棕线表示单面印叶有文字的一面。蝴蝶装把有字面相对折在里面，折缝一侧粘连成书脊；包背装把无字面相对，文字留在外面，在折口相对的一侧固定。前者翻阅时会遇到空白面，后者可以连续翻阅有字的页面。
+  </desc>
+  <style>
+    text {
+      font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+      fill: #303e36;
+    }
+    .body {
+      font-size: 22px;
+    }
+    .small {
+      font-size: 18px;
+      fill: #58675b;
+    }
+    .paper {
+      fill: none;
+      stroke: #c7c8b9;
+      stroke-width: 15;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    .ink {
+      fill: none;
+      stroke: #9a6637;
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+    .leader {
+      fill: none;
+      stroke: #778373;
+      stroke-width: 2;
+    }
+  </style>
+  <rect width="720" height="700" rx="12" fill="#faf8f0" data-graph-role="background" />
+  <text x="36" y="49" font-size="29" font-weight="600">同一张单面印叶，两种折法</text>
+  <path d="M39 86H77" class="ink" />
+  <text x="91" y="93" font-size="21">有字的一面</text>
+  <path d="M312 86H350" class="paper" />
+  <text x="370" y="93" font-size="21">纸张厚度（示意）</text>
+  <rect
+    x="32"
+    y="118"
+    width="312"
+    height="514"
+    rx="10"
+    fill="#fffdf8"
+    stroke="#d9ddce"
+    stroke-width="1.5"
+    data-graph-role="container"
+  />
+  <rect
+    x="376"
+    y="118"
+    width="312"
+    height="514"
+    rx="10"
+    fill="#fffdf8"
+    stroke="#d9ddce"
+    stroke-width="1.5"
+    data-graph-role="container"
+  />
+  <text x="188" y="159" text-anchor="middle" font-size="28" font-weight="600">蝴蝶装</text>
+  <text x="532" y="159" text-anchor="middle" font-size="28" font-weight="600">包背装</text>
+  <text x="188" y="195" text-anchor="middle" class="body">有字的两面相对</text>
+  <text x="532" y="195" text-anchor="middle" class="body">无字的两面相对</text>
+  <text x="188" y="235" text-anchor="middle" class="small">单张书叶的截面</text>
+  <text x="532" y="235" text-anchor="middle" class="small">单张书叶的截面</text>
+  <g id="butterfly-section" data-graph-role="decoration">
+    <path d="M76 292L188 382L300 292" class="paper" />
+    <path d="M80 286L188 373L296 286" class="ink" />
+  </g>
+  <g id="wrapped-section" data-graph-role="decoration">
+    <path d="M420 382L532 292L644 382" class="paper" />
+    <path d="M416 376L532 283L648 376" class="ink" />
+  </g>
+  <text x="188" y="424" text-anchor="middle" class="small">折缝</text>
+  <path d="M188 401V392" class="leader" />
+  <text x="532" y="269" text-anchor="middle" class="small">折缝</text>
+  <path d="M532 274V279" class="leader" />
+  <path d="M55 450H321 M399 450H665" stroke="#e0e3d7" stroke-width="1.5" />
+  <text x="58" y="489" class="body">折缝一侧粘连，</text>
+  <text x="58" y="521" class="body">形成书脊。</text>
+  <text x="402" y="489" class="body">与折口相对的一侧固定，</text>
+  <text x="402" y="521" class="body">书衣包住书脊。</text>
+  <text x="58" y="570" class="body">翻到下一组文字前，</text>
+  <text x="58" y="602" class="body">会遇到空白面。</text>
+  <text x="402" y="570" class="body">有字面留在外侧，</text>
+  <text x="402" y="602" class="body">可以连续翻阅。</text>
+  <text x="36" y="662" class="small">结构示意：只比较折叶方向与翻阅差别，非古书照片。</text>
+  <text x="36" y="688" class="small">省略书衣、粘接及订纸捻的细节；纸张厚度为便于辨认而放大。</text>
+</svg>

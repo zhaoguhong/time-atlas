@@ -3,7 +3,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 const server = await createServer({
   configFile: false,
   logLevel: 'error',
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, ws: false },
+  optimizeDeps: { noDiscovery: true, include: [] },
   appType: 'custom',
 })
 try {
@@ -11,7 +12,10 @@ try {
   const { dynasties } = await server.ssrLoadModule('/src/data/dynasties.ts')
   const { worldPolities } = await server.ssrLoadModule('/src/data/world-polities.ts')
   const { journeys } = await server.ssrLoadModule('/src/data/journeys.ts')
-  const { topicTours } = await server.ssrLoadModule('/src/data/topics.ts')
+  const { readingArticles } = await server.ssrLoadModule('/src/data/articles.ts')
+  const { placeReading } = await server.ssrLoadModule('/src/data/place-reading.ts')
+  const imageManifest = JSON.parse(await readFile('data/article-images.json', 'utf8'))
+  const imagesBySource = new Map(imageManifest.images.map((image) => [image.sourceUrl, image]))
   const sources = new Map()
   for (const [kind, records] of [
     ['event', events],
@@ -19,14 +23,40 @@ try {
     ['dynasty', dynasties],
     ['world-polity', worldPolities],
     ['journey', journeys.flatMap((j) => j.nodes)],
-    ['topic', topicTours],
+    ['topic', readingArticles],
+    ['place', Object.entries(placeReading).map(([id, reading]) => ({ id, ...reading }))],
   ]) {
-    for (const record of records)
-      for (const source of record.sources) {
+    for (const record of records) {
+      const recordSources = [
+        ...(record.sources ?? []),
+        ...(record.article?.maps ?? []).flatMap((map) => map.sources ?? []),
+        ...(record.article?.media ?? [])
+          .filter((media) => media.sourceUrl)
+          .flatMap((media) => {
+            const image = imagesBySource.get(media.sourceUrl)
+            return [
+              { title: `图片来源 · ${media.caption}`, url: media.sourceUrl, note: media.credit },
+              ...(image
+                ? [
+                    {
+                      title: `馆藏元数据 · ${image.title}`,
+                      url: image.metadataUrl,
+                      note: '博物馆官方对象 API；核对年代、作品身份、图像地址及公版标记。网页请求与 API 请求分别记录。',
+                    },
+                  ]
+                : []),
+            ]
+          }),
+      ]
+      const indexed = new Set()
+      for (const source of recordSources) {
+        if (indexed.has(source.url)) continue
+        indexed.add(source.url)
         const entry = sources.get(source.url) ?? { ...source, references: [] }
         entry.references.push({ kind, id: record.id })
         sources.set(source.url, entry)
       }
+    }
   }
   await mkdir('data/research', { recursive: true })
   const generatedAt = new Date().toISOString()

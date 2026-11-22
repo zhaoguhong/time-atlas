@@ -13,7 +13,7 @@ Historical territory layers are adapted from **Cliopatria**, part of the **Sesha
 - Dataset archive and initial creator credits: <https://zenodo.org/records/13363121>
 - Methods paper: <https://doi.org/10.1038/s41597-025-04516-9>
 
-Time Atlas modifies the data by retaining POLITY records in the supported dates, repairing invalid geometry where needed, clipping only the Mercator polar limits, simplifying global geometry at different tolerances inside and outside the China-neighbor detail region, rounding coordinates, adding display labels and colors, and splitting data into period archives and 20-year runtime slices. Original polity names and temporal intervals are retained in the derived records. Additional display filtering and name adjustments are described in the README and disclosed in relevant polity details. These adaptations are by Time Atlas and do not imply endorsement by the original creators.
+Time Atlas modifies the data by retaining POLITY records in the supported dates, repairing invalid geometry where needed, clipping only the Mercator polar limits, simplifying global geometry at different tolerances inside and outside the China-neighbor detail region, rounding coordinates, adding display labels and colors, and splitting data into period archives and 20-year runtime slices. Original polity names and temporal intervals are retained in the derived records. The [data guide](docs/data.md#地图展示与来源纠偏) and relevant polity details document additional display filtering and name adjustments. These adaptations are by Time Atlas and do not imply endorsement by the original creators.
 
 The license applies to the historical map data and its adaptations. It is not a blanket license for all application source code or referenced works.
 
@@ -25,13 +25,13 @@ Made with **Natural Earth**. Primary authors **Tom Patterson and Nathaniel Vaugh
 - Terms: <https://www.naturalearthdata.com/about/terms-of-use/>
 - Source: <https://github.com/nvkelso/natural-earth-vector>
 - Source revision: `ca96624a56bd078437bca8184e78163e5039ad19`
-- Layers: `ne_50m_land`, `ne_50m_lakes`, `ne_50m_rivers_lake_centerlines`
+- Layers: `ne_50m_land`, `ne_50m_lakes`, `ne_50m_rivers_lake_centerlines`, `ne_10m_land`
 
-Natural Earth map data is in the public domain. Time Atlas simplifies these global land and water layers. They provide present-day physical geography and are not reconstructions of historical coastlines or watercourses.
+Natural Earth map data is in the public domain. Time Atlas simplifies the global land and water layers and extracts the main islands of Taiwan and Hainan and selected Penghu land polygons from the 1:10m land layer. These layers provide present-day physical geography for reference.
 
 ## Historical reading references
 
-Editorial Chinese introductions of events, dynasties and people are project-authored drafts, including the individual backgrounds in `src/data/backgrounds.ts` and period learning guides in `src/data/learning.ts`. Reference links are supplied within each record in `src/data/content.ts`; they are not automatically imported article text. These drafts still require source-by-source historical review. Linked pages, editions, translations and images retain their respective rights. This project does not bundle portraits or other images from those sites.
+Editorial Chinese introductions of events, dynasties and people are project-authored drafts, including the individual backgrounds in `src/data/backgrounds.ts` and period learning guides in `src/data/learning.ts`. Reference links are supplied within each record in `src/data/content.ts`; they are not automatically imported article text. These drafts still require source-by-source historical review. Linked pages, editions, translations and images retain their respective rights. Reference-page images are not bundled unless separately catalogued and licensed, as with the Museum Open Access figures documented below.
 
 The Silk Road theme uses UNESCO's [Silk Roads: the Routes Network of Chang'an–Tianshan Corridor](https://whc.unesco.org/en/list/1442/) as contextual reading. The route drawn by the application is a project-authored schematic connection of nodes, rather than a UNESCO map or an exact itinerary.
 
@@ -46,7 +46,7 @@ Person journeys now use separately curated, cited presence records in `src/data/
 
 Chinese Wikipedia's public API is used only to resolve entity identity, title conversion and redirects. No Wikipedia article prose is imported. Basic descriptions are derived from Wikidata's structured descriptions/occupation fields; richer introductions are independently written and referenced. Local raw responses and checksums support review and reproducibility; the browser uses bundled records and makes no third-party person API requests.
 
-CBDB, Peking University's visualization platforms, TimeMapper, Journey and Su Shi Journey were inspected as research references. No CBDB standalone database, project code, original narrative text or media was copied into the app. The CBDB academic download is CC BY-NC-SA 4.0; it is not treated as CC0 or assumed suitable for unrestricted commercial redistribution.
+CBDB, Peking University's visualization platforms, TimeMapper, Journey and Su Shi Journey were inspected as research references. No CBDB standalone database, project code, original narrative text or media was copied into the app. The [CBDB academic database download](https://cbdb.hsites.harvard.edu/download-cbdb-standalone-database) is licensed under CC BY-NC-SA 4.0.
 
 ## Local research retention
 
@@ -61,3 +61,11 @@ The website publishes project-authored summaries, source links and a metadata-on
 The GitHub repository links use the Octicons `mark-github` icon from [primer/octicons](https://github.com/primer/octicons/blob/1dafaa68a1cef892168aa0fe3d16f0b406715c15/icons/mark-github-16.svg), copyright © 2026 GitHub Inc., under [MIT](LICENSES/Octicons-MIT.txt). Its original path is retained in `src/components/GitHubIcon.tsx`; only the React wrapper, display size and inherited color are adapted.
 
 React, Vite, TypeScript, MapLibre GL JS, Lucide, Playwright, Vitest, Prettier and Shapely remain subject to their respective upstream licenses. Installed package license files accompany the development dependencies; package versions are recorded in `package-lock.json` and `scripts/requirements.txt`.
+
+## Topic illustrations from The Metropolitan Museum of Art
+
+The topic covers and figures include Open Access photographs of public-domain objects from The Metropolitan Museum of Art. The Museum identifies these images as CC0 under its [Open Access policy](https://www.metmuseum.org/hubs/open-access). Each figure links to its object record and identifies the Museum; the Museum does not endorse this project.
+
+[data/article-images.json](data/article-images.json) records each object ID, title, date, artist where known, museum credit line, object and image URLs, dimensions, SHA-256, and license. Files under `public/images/articles/met-*.jpg` preserve the Museum's web-large image bytes without editing; display scaling does not alter the files. These images remain CC0 and are not relicensed as project-authored content.
+
+The other explanatory SVG figures are project-authored diagrams, not reproductions of historical objects or AI reconstructions. Their captions identify the illustrated relationship and limits.

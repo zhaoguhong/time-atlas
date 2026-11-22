@@ -5,12 +5,13 @@ import path from 'node:path'
 import { brotliCompressSync, brotliDecompressSync, constants } from 'node:zlib'
 
 export const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex')
+const isMapArchive = (name) => /^maps\/[^/]+\.geojson$/.test(name)
 
 // Paths inside packs describe the original public files. Full-period archives
 // are restored outside public/ because the browser only requests time slices.
 export function outputPath(root, name) {
   assert.match(name, /^(?:maps\/[a-z-]+(?:\/\d+)?|land|lakes|rivers_lake_centerlines)\.geojson$/)
-  return /^maps\/[^/]+\.geojson$/.test(name)
+  return isMapArchive(name)
     ? path.join(root, '.cache/map-archives', path.basename(name))
     : path.join(root, 'public/data', name)
 }
@@ -107,7 +108,7 @@ export async function writeAtomic(target, bytes) {
   }
 }
 
-export async function prepareMaps(root) {
+export async function prepareMaps(root, { includeArchives = true } = {}) {
   const provenanceBytes = await fs.readFile(path.join(root, 'public/data/provenance.json'))
   const groups = packGroups(JSON.parse(provenanceBytes))
   const directory = path.join(root, 'data/map-packs')
@@ -135,6 +136,7 @@ export async function prepareMaps(root) {
     const missing = new Set()
     for (const file of metadata.files) {
       const target = outputPath(root, file.path)
+      if (!includeArchives && isMapArchive(file.path)) continue
       await assertSafeOutput(root, target)
       try {
         const bytes = await fs.readFile(target)

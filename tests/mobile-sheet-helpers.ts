@@ -1,6 +1,14 @@
 import { expect, type Page } from '@playwright/test'
 
 export async function setSheet(page: Page, view: 'map' | 'split' | 'reading') {
+  // The article library and reader fill the available page; they have no sheet.
+  if (
+    view === 'reading' &&
+    (await page.locator('.atlas-app').getAttribute('data-topic-reading')) === 'true'
+  ) {
+    await expect(page.locator('#history-reading-content')).toBeVisible()
+    return
+  }
   const handle = page.getByRole('button', { name: '调整资料面板高度', exact: true })
   const current = await page.locator('.atlas-app').getAttribute('data-mobile-view')
   if (current !== view) {

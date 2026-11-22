@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="485" viewBox="0 0 600 485" role="img" aria-labelledby="title desc">
+<title id="title">同一笔银税，要卖多少布？</title>
+<desc id="desc">四段长短相同的布，分成两组。布价高时卖出较少布匹便足以缴税，布价低时要卖得更多。</desc>
+<rect width="600" height="485" rx="14" fill="#f8f5eb"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="32" y="60" font-size="35" fill="#233d37" font-weight="650" text-anchor="start">同一笔银税，要卖多少布？</text>
+<path d="M32 85H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="136" font-size="27" fill="#233d37" font-weight="400" text-anchor="start">假设官府征收的银额不变。</text>
+<text x="32" y="212" font-size="31" fill="#176454" font-weight="650" text-anchor="start">布价较高</text>
+<text x="32" y="338" font-size="31" fill="#176454" font-weight="650" text-anchor="start">布价较低</text>
+<rect x="211" y="173" width="65" height="51" rx="10" fill="#bd805a"/>
+<text x="298" y="209" font-size="25" fill="#233d37" font-weight="400" text-anchor="start">换得足额银两</text>
+<rect x="211" y="300" width="65" height="51" rx="10" fill="#bd805a"/>
+<rect x="284" y="300" width="65" height="51" rx="10" fill="#bd805a"/>
+<rect x="357" y="300" width="65" height="51" rx="10" fill="#bd805a"/>
+<text x="211" y="394" font-size="25" fill="#233d37" font-weight="400" text-anchor="start">要多卖布，才能凑足银两。</text>
+<path d="M32 424H568" fill="none" stroke="#c6c7ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="466" font-size="26" fill="#485d54" font-weight="400" text-anchor="start">纳税人承受的还有换银时的市价。</text>
+</g>
+</svg>

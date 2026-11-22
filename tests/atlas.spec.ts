@@ -1,7 +1,10 @@
+import { choosePeriod } from './timeline-helpers'
 import { openHeaderMenu } from './refinement-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
-import { tours } from '../src/data/periods'
+import { topicTours as tours } from '../src/data/topics'
+import { eventById } from '../src/data/content'
+import { MAX_YEAR, formatEventDate, formatYear } from '../src/lib/history'
 import { readFileSync } from 'node:fs'
 const peopleCount = JSON.parse(readFileSync('public/data/coverage.json', 'utf8')).people.total
 
@@ -18,7 +21,7 @@ async function openTopics(page: Page) {
 }
 
 for (const topic of tours) {
-  test(`reads every chapter of ${topic.name} with the matching historical map`, async ({
+  test(`reads every chapter of ${topic.name} within its map or modern reading range`, async ({
     page,
   }) => {
     test.setTimeout(90000)
@@ -37,7 +40,15 @@ for (const topic of tours) {
     for (let index = 0; index < topic.steps.length; index++) {
       await expect(page.locator('.event-detail h2')).toHaveText(titles[index])
       await expect(page.locator('.event-detail h2')).toBeInViewport()
-      await expect(page.locator('.year-title')).toHaveText(dates[index])
+      const event = eventById.get(topic.steps[index])!
+      if (event.year > MAX_YEAR) {
+        await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', String(event.year))
+        await expect(page.locator('.map-canvas')).toHaveCount(0)
+      } else
+        await expect(page.locator('.year-title')).toHaveText(
+          formatYear(event.year).replace(/^公元 /, ''),
+        )
+      expect(dates[index]).toBe(formatEventDate(event))
       await expect(page).toHaveURL(new RegExp(`event=${topic.steps[index]}(?:&|$)`))
       await expect(page.locator('.topic-chapter-context')).toContainText(
         `第 ${index + 1} / ${topic.steps.length} 章`,
@@ -45,10 +56,12 @@ for (const topic of tours) {
       await expect(page.locator('.topic-map-reading')).toContainText(
         topic.chapters![index].mapReading,
       )
-      await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
-      await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
-      expect(await page.locator('.topic-marker').count()).toBeGreaterThan(0)
-      if (index < topic.steps.length - 1) await page.locator('.tour-next').click()
+      if (event.year <= MAX_YEAR) {
+        await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+        await expect(page.locator('.topic-marker.selected[data-visible="true"]')).toBeVisible()
+        expect(await page.locator('.topic-marker').count()).toBeGreaterThan(0)
+      }
+      if (index < topic.steps.length - 1) await page.locator('.tour-next:visible').click()
     }
     await page.getByRole('button', { name: '完成旅程', exact: false }).click()
     await expect(page.locator('.topic-introduction h2')).toBeInViewport()
@@ -66,9 +79,7 @@ test('opens detailed dynasty reading, filters its chronology and returns from an
   expect(await page.locator('.dynasty-chronology li').count()).toBeGreaterThan(80)
   await page.getByRole('textbox', { name: '筛选朝代大事' }).fill('鸦片')
   await expect(page.locator('.dynasty-chronology li')).toHaveCount(3)
-  const chapter = page
-    .locator('.dynasty-chronology button')
-    .filter({ hasText: '第二次鸦片战争开始' })
+  const chapter = page.locator('.dynasty-chronology a').filter({ hasText: '第二次鸦片战争开始' })
   await chapter.scrollIntoViewIfNeeded()
   const previousScroll = await page
     .locator('.panel-scroll')
@@ -82,27 +93,30 @@ test('opens detailed dynasty reading, filters its chronology and returns from an
     .poll(() => page.locator('.panel-scroll').evaluate((element) => element.scrollTop))
     .toBeCloseTo(previousScroll, 0)
   await page.getByRole('textbox', { name: '筛选朝代大事' }).fill('洋务')
-  await page.locator('.dynasty-chronology li button').click()
+  await page.locator('.dynasty-chronology li a').click()
   await expect(page.locator('.event-narrative')).toContainText('1894')
-  await page.locator('.related-people button').filter({ hasText: '李鸿章' }).click()
+  await page.locator('.related-people a').filter({ hasText: '李鸿章' }).click()
   await expect(page.locator('.person-biography p')).toHaveCount(2)
 })
 
 test('keeps topic context when selecting a map or timeline node', async ({ page }) => {
   await openTopics(page)
-  await page.locator('.tour-card').filter({ hasText: '安史之乱与唐代转折' }).click()
-  await page.getByRole('button', { name: '开始地图学习', exact: false }).click()
+  await page.locator('.tour-card').filter({ hasText: '石壕村的这一夜：安史之乱怎样征人' }).click()
+  await page.getByRole('button', { name: '查看专题地点', exact: true }).click()
   const marker = page.locator('.topic-marker[data-visible="true"]').first()
   await marker.click()
   if (await page.locator('.map-event-popup').isVisible())
     await page.locator('.map-event-choice').last().click()
-  await expect(page.locator('.topic-chapter-context')).toContainText('安史之乱与唐代转折')
+  await expect(page.locator('.topic-chapter-context')).toContainText(
+    '石壕村的这一夜：安史之乱怎样征人',
+  )
   await expect(page.locator('.tour-banner')).toBeVisible()
   await page.getByRole('button', { name: '专题导读与目录', exact: true }).click()
+  await page.locator('.topic-events-summary').click()
   await page.locator('.topic-chapter-list li').last().getByRole('button').click()
   await expect(page.locator('.event-detail h2')).toHaveText('唐昭宗被迫迁洛阳')
   await page.getByRole('button', { name: '专题上一章', exact: true }).click()
-  await expect(page.locator('.topic-chapter-context')).toContainText('第 7 / 8 章')
+  await expect(page.locator('.topic-chapter-context')).toContainText('第 8 / 9 章')
 })
 
 test('mobile reading, topic navigation and journey activity labels stay usable', async ({
@@ -171,7 +185,7 @@ test('keeps the current topic location visible in a short window and returns fro
   )
   await expect(page.getByRole('button', { name: '历史专题', exact: true })).toHaveClass('active')
   await expect(page.locator('.time-readout .eyebrow')).toContainText('专题时间轴')
-  const personLink = page.locator('.related-people button').filter({ hasText: '林则徐' })
+  const personLink = page.locator('.related-people a').filter({ hasText: '林则徐' })
   await personLink.scrollIntoViewIfNeeded()
   const previousScroll = await page
     .locator('.panel-scroll')
@@ -184,9 +198,7 @@ test('keeps the current topic location visible in a short window and returns fro
   await expect
     .poll(() => page.locator('.panel-scroll').evaluate((element) => element.scrollTop))
     .toBeCloseTo(previousScroll, 0)
-  await expect(
-    page.locator('.related-people button').filter({ hasText: '林则徐' }),
-  ).toBeInViewport()
+  await expect(page.locator('.related-people a').filter({ hasText: '林则徐' })).toBeInViewport()
 })
 
 test.beforeEach(async ({ page }) => {
@@ -204,12 +216,12 @@ test('loads real map data and preserves chronology when changing periods', async
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
   await expect(page.locator('.map-canvas canvas')).toBeVisible()
-  await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('han')
+  await choosePeriod(page, 'han', '汉')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('两汉')
   await expect(page.locator('.year-title')).toHaveText(/公元前 100 年/)
   await expect(page.locator('.polity-label').filter({ hasText: '汉朝' }).first()).toBeVisible()
   await page.locator('.dynasty-strip button').filter({ hasText: '唐' }).click()
-  await expect(page.locator('.year-title')).toHaveText(/公元 750 年/)
+  await expect(page.locator('.year-title')).toHaveText('750 年')
   await expect(page.locator('.polity-label').filter({ hasText: '唐朝' }).first()).toBeVisible()
   expect(errors).toEqual([])
 })
@@ -219,7 +231,7 @@ test('searches an event, opens a person and returns to the event', async ({ page
   await page.locator('.search-results button').filter({ hasText: '赤壁之战' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('赤壁之战')
   await expect(page.locator('.year-title')).toHaveText(/208/)
-  await page.locator('.related-people button').filter({ hasText: '周瑜' }).click()
+  await page.locator('.related-people a').filter({ hasText: '周瑜' }).click()
   await expect(page.locator('.person-hero h2')).toContainText('周瑜')
   await page.getByRole('button', { name: '返回事件' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('赤壁之战')
@@ -308,9 +320,19 @@ test('mobile layout stays within the viewport and supports the same detail flow'
 test('drags the timeline and steps between BCE and CE without a year zero', async ({ page }) => {
   const slider = page.getByRole('slider', { name: '拖动历史时间轴' })
   const box = (await slider.boundingBox())!
-  await page.mouse.move(box.x + 8 + (box.width - 16) / 6, box.y + 10)
+  const y = box.y + box.height / 2
+  const start = await slider.evaluate((control, row) => {
+    const { left, width } = control.getBoundingClientRect()
+    // Event markers are clickable above the track. Start where a drag reaches the slider.
+    for (let x = Math.ceil(left + width / 6); x < left + width / 3; x++) {
+      if (document.elementFromPoint(x, row) === control) return x
+    }
+    return null
+  }, y)
+  expect(start).not.toBeNull()
+  await page.mouse.move(start!, y)
   await page.mouse.down()
-  await page.mouse.move(box.x + 8 + (box.width - 16) * 0.75, box.y + 10, { steps: 12 })
+  await page.mouse.move(box.x + 8 + (box.width - 16) * 0.75, y, { steps: 12 })
   await page.mouse.up()
   const dragged = Number(await slider.inputValue()) + 1
   expect(dragged).toBeGreaterThan(255)
@@ -321,7 +343,7 @@ test('drags the timeline and steps between BCE and CE without a year zero', asyn
   await expect(page.locator('.year-title')).toHaveText(/公元前 1 年/)
   await slider.focus()
   await page.keyboard.press('ArrowRight')
-  await expect(page.locator('.year-title')).toHaveText(/公元 1 年/)
+  await expect(page.locator('.year-title')).toHaveText('1 年')
   await page.keyboard.press('ArrowLeft')
   await expect(page.locator('.year-title')).toHaveText(/公元前 1 年/)
 })
@@ -408,7 +430,7 @@ test('renders sourced person journeys and distinguishes related events from pres
   await page.locator('.journey-node-list button').filter({ hasText: '驻五丈原' }).click()
   await expect(page.locator('.journey-active-card h4')).toHaveText('驻五丈原、病逝军中')
   await expect(page).toHaveURL(/journey=zhugeliang/)
-  await page.locator('.person-events button').filter({ hasText: '诸葛亮第一次北伐' }).click()
+  await page.locator('.person-events a').filter({ hasText: '诸葛亮第一次北伐' }).click()
   await expect(page.locator('.event-detail h2')).toHaveText('诸葛亮第一次北伐')
   await expect(page.locator('.journey-toolbar')).toHaveCount(0)
 })
@@ -417,7 +439,7 @@ test('finds Su Shi by alias and preserves yearly journeys, same-year order and s
   page,
 }) => {
   await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('苏东坡')
-  await page.locator('.search-results button').filter({ hasText: '苏轼' }).click()
+  await page.getByRole('option', { name: /^苏轼 人物/ }).click()
   await expect(page.locator('.person-detail')).toContainText('眉山')
   await expect(page.locator('.year-title')).toContainText('1037')
   await page.getByRole('button', { name: '在地图上看人物经历' }).click()
@@ -453,7 +475,7 @@ test('fixes Kangxi’s map period and excludes others’ battlefield and treaty 
   page,
 }) => {
   await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('玄烨')
-  await page.locator('.search-results button').filter({ hasText: '康熙帝' }).click()
+  await page.getByRole('option', { name: /^康熙帝 人物/ }).click()
   await expect(page.locator('.year-title')).toContainText('1654')
   await page.getByRole('button', { name: '在地图上看人物经历' }).click()
   await page.locator('.journey-node-list button').filter({ hasText: '亲赴多伦' }).click()
@@ -461,12 +483,12 @@ test('fixes Kangxi’s map period and excludes others’ battlefield and treaty 
   const places = await page.locator('.journey-node-list button').allTextContents()
   expect(places.join(' ')).not.toMatch(/台湾|尼布楚|昭莫多/)
   await expect(page.locator('.map-canvas')).toHaveAttribute('data-trail-arrows-rendered', 'true')
-  await page.locator('.person-events button').filter({ hasText: '尼布楚' }).click()
+  await page.locator('.person-events a').filter({ hasText: '尼布楚' }).click()
   await expect(page.locator('.event-detail h2')).toContainText('尼布楚')
   await expect(page.locator('.journey-toolbar')).toHaveCount(0)
 })
 
-test('browses all people, finds literary figures by alias and does not fabricate an unreviewed route', async ({
+test('browses all people, finds literary aliases and keeps a retired journey unavailable', async ({
   page,
 }) => {
   await page.getByRole('button', { name: '人物', exact: true }).click()
@@ -476,9 +498,9 @@ test('browses all people, finds literary figures by alias and does not fabricate
   await expect(page.locator('.person-list-card')).toHaveCount(1)
   await page.locator('.person-list-card').click()
   await expect(page.locator('.person-hero h2')).toContainText('苏轼')
-  await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('李清照')
-  await page.locator('.search-results button').filter({ hasText: '李清照' }).first().click()
-  await expect(page.locator('.person-detail .detail-lead')).toContainText('词')
+  await page.getByRole('combobox', { name: '搜索历史事件、人物或地名' }).fill('柳宗元')
+  await page.locator('.search-results button').filter({ hasText: '柳宗元' }).first().click()
+  await expect(page.locator('.person-detail .detail-lead')).toContainText('永州')
   await expect(page.locator('.person-record-status')).toContainText('尚未整理可绘制的年谱')
   await expect(page.getByRole('button', { name: '在地图上看人物经历' })).toHaveCount(0)
   await expect(page.locator('.reference-list a').first()).toHaveAttribute('href', /^https:/)
@@ -542,9 +564,7 @@ test('fractional playback retains integer dates and skips year zero', async ({ p
   await expect
     .poll(() =>
       page.evaluate(() =>
-        (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles.includes(
-          '公元 1 年',
-        ),
+        (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles.includes('1 年'),
       ),
     )
     .toBe(true)
@@ -554,7 +574,7 @@ test('fractional playback retains integer dates and skips year zero', async ({ p
   )
   expect(
     labels.every((label) => {
-      const value = label.match(/^公元(?:前)? (\d+) 年$/)?.[1]
+      const value = label.match(/^(?:公元前 )?(\d+) 年$/)?.[1]
       return value !== undefined && Number(value) >= 1
     }),
   ).toBe(true)
@@ -626,10 +646,10 @@ test('replays from the last journey record and exposes expanded founder events w
   await expect(page.locator('.journey-active-card h4')).toContainText('出生于眉山')
   await page.getByRole('button', { name: '暂停时间播放' }).click()
   await page.goto('/#year=960&person=zhaokuangyin')
-  expect(await page.locator('.person-events button').count()).toBeGreaterThanOrEqual(10)
+  expect(await page.locator('.person-events a').count()).toBeGreaterThanOrEqual(10)
   await expect(page.locator('.person-events')).toContainText('宋刑统')
   await expect(page.locator('.person-events')).toContainText('曹彬等执行')
-  await page.locator('.person-events button').filter({ hasText: '宋灭南唐' }).click()
+  await page.locator('.person-events a').filter({ hasText: '宋灭南唐' }).click()
   await expect(page.locator('.event-detail .detail-lead')).toContainText('李煜')
   await expect(page.locator('.related-people')).toContainText('部署伐南唐')
 })

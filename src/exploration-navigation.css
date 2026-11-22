@@ -7,48 +7,60 @@
   flex-shrink: 0;
 }
 .atlas-app .topbar .main-nav {
-  height: auto;
+  --header-nav-bg: #e6eee1;
+  --header-nav-hover: #eff2ea;
+  --header-nav-line: #9eb4a4;
+  --header-nav-text: #536458;
+  display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   flex-shrink: 0;
 }
-.atlas-app .header-view-switch {
+.atlas-app .header-view-switch,
+.atlas-app .main-nav button {
   display: flex;
   align-items: center;
-  padding: 2px;
-  gap: 2px;
-  border: 1px solid #e1e7dd;
-  border-radius: 10px;
-  background: #f2f5ed;
 }
-.atlas-app .header-view-switch button {
-  display: flex;
-  align-items: center;
+.atlas-app .header-view-switch {
+  gap: 4px;
+}
+.atlas-app .main-nav button {
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
-  padding: 0 12px;
+  padding: 0 10px;
   gap: 6px;
   border-radius: 7px;
-  color: #617267;
+  color: var(--header-nav-text);
   font-size: 12px;
+  font-weight: 500;
   white-space: nowrap;
 }
-.atlas-app .header-view-switch [aria-pressed='true'] {
-  background: #36594e;
-  color: #fffef8;
-  box-shadow: 0 1px 3px #244c3320;
+@media (hover: hover) {
+  .atlas-app .main-nav button:hover {
+    background: var(--header-nav-hover);
+  }
 }
-.atlas-app .header-view-switch button:focus-visible,
+.atlas-app .main-nav button[aria-pressed='true'] {
+  background: var(--header-nav-bg);
+  color: var(--green);
+}
+.atlas-app .main-nav [aria-current='true'] {
+  color: var(--green);
+  box-shadow: inset 0 0 0 1px var(--header-nav-line);
+}
+:root[data-color-mode='dark'] .atlas-app .topbar .main-nav {
+  --header-nav-bg: #2e483f;
+  --header-nav-hover: var(--night-raised);
+  --header-nav-line: #63816e;
+  --header-nav-text: #c9ddca;
+}
+.atlas-app .main-nav button:focus-visible,
 .atlas-app .visualization-switch button:focus-visible {
   outline: 2px solid #367c9b;
   outline-offset: -2px;
 }
-.atlas-app .main-nav [data-main-topics] {
-  min-height: 44px;
-  padding-inline: 4px;
-}
-.atlas-app .header-actions > :is(.navigation-menu-entry, .topics-menu-entry) {
+.atlas-app .header-actions > .navigation-menu-entry {
   display: none;
 }
 .atlas-app .header-actions.mobile-open > .navigation-menu-entry {
@@ -138,9 +150,6 @@
   .atlas-app .topbar .brand {
     min-width: 114px;
   }
-  .atlas-app .topbar .main-nav {
-    gap: 12px;
-  }
 }
 @media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {
   .atlas-app .map-bottom-left:has(.layers-popover) {
@@ -164,52 +173,14 @@
     min-width: 0;
   }
   .atlas-app .topbar .main-nav {
-    margin-left: auto;
-    gap: 0;
+    gap: 8px;
   }
   .atlas-app .header-view-switch {
-    gap: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 24px;
-    background: #edf1ea;
-    box-shadow: inset 0 0 0 1px #dce4d8;
+    gap: 2px;
   }
-  .atlas-app .header-view-switch button {
-    position: relative;
-    isolation: isolate;
-    padding-inline: 10px;
-    gap: 5px;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 24px;
-    background: transparent;
-    box-shadow: none;
-    color: #66776a;
-  }
-  .atlas-app .header-view-switch [aria-pressed='true'] {
-    color: #2d5949;
-    background: transparent;
-    box-shadow: none;
-  }
-  .atlas-app .header-view-switch [aria-pressed='true']::before {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    border-radius: 20px;
-    background: #fffef9;
-    box-shadow: 0 1px 4px #2947351c;
-    z-index: -1;
-  }
-  .atlas-app .header-view-switch svg {
-    width: 14px;
-    height: 14px;
-  }
-  .atlas-app .main-nav [data-main-topics] {
-    display: none;
-  }
-  .atlas-app .header-actions.mobile-open > .topics-menu-entry {
-    display: inline-flex;
+  .atlas-app .main-nav button {
+    padding-inline: 8px;
+    gap: 4px;
   }
   .atlas-app .map-tools-row {
     gap: 6px;
@@ -220,12 +191,17 @@
     gap: 5px;
   }
 }
-@media (max-width: 350px) {
-  .atlas-app .topbar {
-    padding-inline: 8px;
-  }
-  .atlas-app .topbar .brand-mark {
+@media (max-width: 420px) {
+  .atlas-app .main-nav svg {
     display: none;
+  }
+}
+@media (max-width: 350px) {
+  .atlas-app .topbar .main-nav {
+    gap: 6px;
+  }
+  .atlas-app .main-nav button {
+    padding-inline: 6px;
   }
 }
 

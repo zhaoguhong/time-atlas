@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title description">
+  <title id="title">借一千文，按二分计息</title>
+  <desc id="description">春耕时借一千文。收获后还一千文本金和二百文利息，合计一千二百文。图中每格代表二百文。</desc>
+  <rect width="600" height="400" rx="12" fill="#f5efdd"/>
+  <g font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#302d27">
+    <text x="39" y="61" font-size="35" font-weight="650">借一千文，按二分计息</text>
+    <text x="40" y="106" fill="#605944" font-size="24">每格二百文</text>
+    <text x="39" y="166" font-size="28" font-weight="600">春耕借入</text>
+    <text x="558" y="166" text-anchor="end" font-size="30">一千文</text>
+    <g fill="#436559" stroke="#f5efdd" stroke-width="4">
+      <rect x="39" y="184" width="87" height="40"/><rect x="126" y="184" width="87" height="40"/><rect x="213" y="184" width="87" height="40"/><rect x="300" y="184" width="87" height="40"/><rect x="387" y="184" width="87" height="40"/>
+    </g>
+    <text x="39" y="280" font-size="28" font-weight="600">到期偿还</text>
+    <text x="558" y="280" text-anchor="end" font-size="30">一千二百文</text>
+    <g fill="#436559" stroke="#f5efdd" stroke-width="4">
+      <rect x="39" y="298" width="87" height="40"/><rect x="126" y="298" width="87" height="40"/><rect x="213" y="298" width="87" height="40"/><rect x="300" y="298" width="87" height="40"/><rect x="387" y="298" width="87" height="40"/><rect x="474" y="298" width="87" height="40" fill="#a35439"/>
+    </g>
+    <text x="255" y="373" text-anchor="middle" font-size="25" fill="#324f46">本金一千文</text>
+    <text x="517" y="373" text-anchor="middle" font-size="25" fill="#873e29">利息</text>
+  </g>
+</svg>

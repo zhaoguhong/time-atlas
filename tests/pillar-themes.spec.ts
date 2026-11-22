@@ -2,6 +2,13 @@ import { expandPillarOptions, pillarSideButton } from './refinement-helpers'
 import { expect, test, type Page } from '@playwright/test'
 import { installPillarClock } from './pillar-clock-helpers'
 import { setSheet } from './mobile-sheet-helpers'
+import { reloadExploration } from './reading-url-helpers'
+
+async function toggleAppearance(page: Page, name: string) {
+  if (!(await page.locator('.color-mode-toggle').isVisible()))
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
+  await page.getByRole('button', { name, exact: true }).click()
+}
 
 const storageKey = 'time-atlas:pillar-theme:v1'
 const themes = [
@@ -49,7 +56,7 @@ async function readingState(page: Page) {
       span: stage.getAttribute('data-span'),
       side: document.querySelector('.time-pillar')!.getAttribute('data-side'),
       selected: document.querySelector('.pillar-card.selected')?.getAttribute('data-event-id'),
-      event: new URLSearchParams(location.hash.slice(1)).get('event'),
+      path: location.pathname,
     }
   })
 }
@@ -186,18 +193,26 @@ for (const [width, height] of [
   [390, 844],
   [568, 320],
 ]) {
-  test(`seven themes preserve dense reading and state at ${width}x${height}`, async ({
-    page,
-  }, info) => {
-    await page.setViewportSize({ width, height })
-    await ready(page, true)
-    await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
-    const state = await readingState(page)
-    expect(state.selected).toBe('world-printing')
-    const cardIds = await page
-      .locator('.pillar-card')
-      .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-event-id')))
-    for (const [id, name] of themes) {
+  // Each theme gets its own timeout and trace; seven complete screenshot matrices
+  // in one test exhausted the shared 60-second budget on the CI renderer.
+  for (const [index, [id, name]] of themes.entries()) {
+    test(`${id} theme preserves dense reading and state at ${width}x${height}`, async ({
+      page,
+    }, info) => {
+      await page.setViewportSize({ width, height })
+      await ready(page, true)
+      await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'column')
+      const state = await readingState(page)
+      expect(state.selected).toBe('world-printing')
+      const cardIds = await page
+        .locator('.pillar-card')
+        .evaluateAll((cards) => cards.map((card) => card.getAttribute('data-event-id')))
+      // Preserve the original adjacent-theme transitions as well as a fresh
+      // default state. The first case also checks the cycle back from the last.
+      await openSettings(page)
+      await choose(page, themes[(index + themes.length - 1) % themes.length][1])
+      await closeSettings(page)
+      expect(await readingState(page)).toEqual(state)
       await openSettings(page)
       await choose(page, name)
       await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', id)
@@ -218,6 +233,16 @@ for (const [width, height] of [
       )
       if (['minimal', 'editorial', 'observatory'].includes(id)) await nightTextContrast(page)
       if (id === 'column') {
+        // Revealing the cylinder restarts its finite scaleY entrance animation.
+        // Measure the settled geometry, not a frame partway through that reveal.
+        await page.locator('.pillar-scenery').evaluate(async (element) => {
+          await Promise.all(
+            element
+              .getAnimations()
+              .filter((animation) => animation.effect?.getComputedTiming().iterations !== Infinity)
+              .map((animation) => animation.finished.catch(() => {})),
+          )
+        })
         const scene = (await page.locator('.pillar-scenery').boundingBox())!
         const chronology = (await page.locator('.pillar-events').boundingBox())!
         expect(scene.y + scene.height).toBeCloseTo(chronology.y + chronology.height, 0)
@@ -234,7 +259,7 @@ for (const [width, height] of [
       else await expect(page.locator('.pillar-scenery')).toBeVisible()
 
       await page.screenshot({ path: info.outputPath(`${id}-light-${width}x${height}.png`) })
-      await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+      await toggleAppearance(page, '切换到夜间模式')
       await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'dark')
       await compactGeometry(page)
       await nightTextContrast(page)
@@ -245,10 +270,10 @@ for (const [width, height] of [
       }
       expect(await readingState(page)).toEqual(state)
       await page.screenshot({ path: info.outputPath(`${id}-dark-${width}x${height}.png`) })
-      await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+      await toggleAppearance(page, '切换到白天模式')
       await expect(page.locator('html')).toHaveAttribute('data-color-mode', 'light')
-    }
-  })
+    })
+  }
 }
 
 test('appearance survives map navigation and reload, and radios support keyboard selection', async ({
@@ -272,7 +297,7 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'observatory')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)
-  await page.reload()
+  await reloadExploration(page)
   await expect(page.locator('.time-pillar')).toHaveAttribute('data-theme', 'observatory')
   await expect(page.locator('.pillar-card.selected')).toBeVisible()
   expect(await readingState(page)).toEqual(state)
@@ -291,12 +316,10 @@ test('appearance survives map navigation and reload, and radios support keyboard
   await expect(page.getByRole('button', { name: '时空柱筛选与设置', exact: true })).toBeFocused()
 })
 
-test('single-side browsing keeps every selected theme in both color modes', async ({
-  page,
-}, info) => {
-  await page.setViewportSize({ width: 390, height: 844 })
-  await ready(page)
-  for (const [id, name] of themes) {
+for (const [id, name] of themes) {
+  test(`single-side browsing keeps ${id} theme in both color modes`, async ({ page }, info) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await ready(page)
     await openSettings(page)
     await choose(page, name)
     await closeSettings(page)
@@ -305,8 +328,7 @@ test('single-side browsing keeps every selected theme in both color modes', asyn
       await pillarSideButton(page, side).click()
       await closeSettings(page)
       for (const mode of ['light', 'dark']) {
-        if (mode === 'dark')
-          await page.getByRole('button', { name: '切换到夜间模式', exact: true }).click()
+        if (mode === 'dark') await toggleAppearance(page, '切换到夜间模式')
         const surfaces = await page.evaluate(() => {
           const canvas = document.querySelector('.time-pillar')!
           const probe = document.createElement('span')
@@ -325,12 +347,12 @@ test('single-side browsing keeps every selected theme in both color modes', asyn
         if (mode === 'dark') {
           await nightTextContrast(page)
           await page.screenshot({ path: info.outputPath(`${id}-${side}-dark.png`) })
-          await page.getByRole('button', { name: '切换到白天模式', exact: true }).click()
+          await toggleAppearance(page, '切换到白天模式')
         }
       }
     }
-  }
-})
+  })
+}
 
 test('invalid saved themes recover and can be replaced with a valid selection', async ({
   page,

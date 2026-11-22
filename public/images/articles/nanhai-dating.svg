@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-labelledby="title desc">
+  <title id="title">船上的日期从哪里来</title><desc id="desc">铜钱年号淳熙元宝与德化瓷罐墨书癸卯合读，推得最早可出航年代为1183年。</desc>
+  <style>text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243e36} .head {font-size:34px;font-weight:700} .body {font-size:27px} .label {font-size:23px} .line {fill:none;stroke:#62776b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round} .rule {stroke:#cbbfa6;stroke-width:2}</style>
+  <rect width="600" height="450" rx="12" fill="#f8f5eb"/>
+  <text class="head" x="30" y="52">船上的日期从哪里来</text><path class="rule" d="M30 73H570"/>
+  <circle cx="133" cy="158" r="49" fill="#c3b281" stroke="#75643a" stroke-width="4"/><circle cx="133" cy="158" r="42" fill="none" stroke="#8c7c50" stroke-width="2"/><rect x="121" y="146" width="24" height="24" fill="#f8f5eb" stroke="#75643a" stroke-width="3"/>
+  <path d="M424 107h58l-3 18q30 21 27 51l-8 31q-43 14-89 0l-7-31q-3-30 25-51z" fill="#ede4d0" stroke="#897f66" stroke-width="4"/>
+  <path class="line" d="M423 114h60m-62 22q31 12 63 0"/>
+  <text class="body" x="134" y="254" text-anchor="middle">钱币 · 淳熙元宝</text><text class="body" x="454" y="254" text-anchor="middle">罐上墨书 · 癸卯</text>
+  <path class="line" d="M134 276v28h320v-28M294 304v25m-7-8 7 8 7-8"/>
+  <rect x="42" y="350" width="516" height="63" rx="4" fill="#e3ebdf"/>
+  <text class="body" x="300" y="391" text-anchor="middle">出航不早于淳熙十年（1183年）</text>
+</svg>

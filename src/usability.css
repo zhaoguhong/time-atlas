@@ -24,7 +24,6 @@
 .reference-list a {
   color: #596657;
 }
-.main-nav button,
 .panel-tabs button {
   color: #626e60;
 }
@@ -36,8 +35,7 @@
   font-size: 14px;
   line-height: 1.65;
 }
-.panel-tabs button,
-.main-nav button {
+.panel-tabs button {
   font-size: 12px;
 }
 .detail-section p,
@@ -232,12 +230,6 @@
   .topbar {
     padding: 0 10px;
     gap: 8px;
-  }
-  .main-nav {
-    gap: 10px;
-  }
-  .main-nav button {
-    font-size: 10px;
   }
   .top-search:is(:focus-within, [data-search-open='true']) input {
     font-size: 16px;

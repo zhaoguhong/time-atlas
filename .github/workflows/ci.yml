@@ -25,24 +25,21 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm run format:check
-      - run: npm test
-      - run: npm run data:check
-      - run: npm run data:audit:ci
-      - run: npm run build
+      - run: npm run check
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e:smoke
+      - run: npx playwright test --config playwright.seo.config.ts
       - run: npm run test:e2e:world -- --project chrome
-      - run: npm run test:e2e:refinement -- --project chrome
 
-  pillar:
-    name: Pillar ${{ matrix.shard }}/2
+  browser:
+    name: ${{ matrix.suite }} ${{ matrix.shard }}/3
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
-        shard: [1, 2]
+        suite: [pillar, refinement]
+        shard: [1, 2, 3]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -54,4 +51,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e:pillar -- --project chrome --shard=${{ matrix.shard }}/2
+      - run: npm run test:e2e:${{ matrix.suite }} -- --project chrome --fully-parallel --shard=${{ matrix.shard }}/3

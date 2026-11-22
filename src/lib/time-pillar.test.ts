@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { events } from '../data/content'
 import { worldEvents } from '../data/world-events'
-import { toOrdinal, PILLAR_MAX_YEAR } from './history'
+import { eventDateRelation, toOrdinal, PILLAR_MAX_YEAR } from './history'
 import { parseViewParams } from './navigation'
 import {
   clampSpan,
@@ -60,7 +60,41 @@ describe('time pillar chronology and disclosure', () => {
     expect(pillarDateLabel(events.find((event) => event.id === 'jericho-neolithic')!)).toBe(
       '约前第九—第八千纪',
     )
-    expect(pillarDateLabel({ ...events[0], year: -221, dateLabel: undefined })).toBe('前221年')
+    expect(pillarDateLabel(events.find((event) => event.id === 'qin-unifies')!)).toBe('前221年')
+    expect(pillarDateLabel(events.find((event) => event.id === 'depth-oxford-teaching')!)).toBe(
+      '至迟1096年',
+    )
+    expect(
+      pillarDateLabel(events.find((event) => event.id === 'region-persepolis-building')!),
+    ).toBe('约前518年起')
+  })
+  it('compares overlapping spans and reserves same-year comparisons for certain single years', () => {
+    const jiahu = events.find((event) => event.id === 'jiahu-settlement')!
+    const exams = events.find((event) => event.id === 'exams-end')!
+    const revolution = events.find((event) => event.id === 'world-russian-revolution-1905')!
+    expect(relatedReading(jiahu, events)).toContainEqual(
+      expect.objectContaining({
+        event: expect.objectContaining({ id: 'choirokoitia-village' }),
+        label: '年代范围重叠',
+      }),
+    )
+    const catalhoyuk = events.find((event) => event.id === 'catalhoyuk')!
+    expect(relatedReading(jiahu, [catalhoyuk])[0].label).toBe('年代范围重叠')
+    expect(relatedReading(exams, events)).toContainEqual(
+      expect.objectContaining({ event: revolution, label: '同年对照' }),
+    )
+    expect(eventDateRelation({ ...exams, dateLabel: '公元 1905 年' }, 1905)).toBe('当年')
+    const dujiangyan = events.find((event) => event.id === 'dujiangyan')!
+    expect(eventDateRelation(dujiangyan, dujiangyan.year)).toBe('约定纪年')
+    for (const revision of [
+      { endYear: 1907, dateLabel: '1905—1907年' },
+      { dateLabel: '约1905年' },
+      { dateLabel: '至迟1905年' },
+      { dateLabel: '1905年起' },
+      { dateNote: '采用1905年作为时间轴的参照。' },
+    ]) {
+      expect(relatedReading(exams, [{ ...revolution, ...revision }])[0].label).toBe('相近年代')
+    }
   })
   it('rejects malformed shared filters including inherited object properties', () => {
     for (const region of ['china', '__proto__', 'toString', 'unknown'])
@@ -86,8 +120,9 @@ describe('time pillar chronology and disclosure', () => {
     expect(clampSpan(Infinity)).toBe(600)
     expect(clampSpan(0)).toBe(4)
   })
-  it('packs cards without overlaps while retaining every in-range event in a cluster', () => {
-    for (const height of [48, 130, 350, 580])
+  it.each([48, 130, 350, 580])(
+    'packs cards without overlaps and retains all in-range events at height %i',
+    (height) => {
       for (const year of [-2500, -1, 800, 1500, 1900])
         for (const span of [8, 100, 900, MAX_SPAN])
           for (const [idealHeight, gap] of [
@@ -111,7 +146,7 @@ describe('time pillar chronology and disclosure', () => {
             )
             const ids = cards.flatMap((c) => [c.event.id, ...c.hidden.map((e) => e.id)])
             expect(new Set(ids).size).toBe(ids.length)
-            expect(new Set(ids)).toEqual(new Set(expected.map((e) => e.id)))
+            expect(ids.sort()).toEqual(expected.map((e) => e.id).sort())
             for (const lane of ['world', 'china']) {
               const laneCards = cards.filter((c) => c.side === lane).sort((a, b) => a.y - b.y)
               for (let i = 0; i < laneCards.length; i++) {
@@ -124,7 +159,8 @@ describe('time pillar chronology and disclosure', () => {
               }
             }
           }
-  })
+    },
+  )
   it('promotes the selected event and reveals previously clustered events on zoom', () => {
     const broad = layoutPillar(events, 1500, 1000, 550, 100, 'compare')
     const hidden = broad.flatMap((c) => c.hidden).find((e) => e.id === 'world-printing')!

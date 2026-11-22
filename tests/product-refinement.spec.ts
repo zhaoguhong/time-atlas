@@ -1,6 +1,16 @@
 import { expect, test, type Page } from '@playwright/test'
 import { setSheet } from './mobile-sheet-helpers'
 import { pillarSideButton } from './refinement-helpers'
+import { events } from '../src/data/content'
+import { recordFromHtml } from '../src/lib/record-html'
+import type { Person } from '../src/types'
+import {
+  articleGuides as tours,
+  expectExploration,
+  isReadingRequest,
+  recordPath,
+  reloadExploration,
+} from './reading-url-helpers'
 
 async function menu(page: Page) {
   await page.getByRole('button', { name: '更多操作', exact: true }).click()
@@ -29,7 +39,10 @@ for (const [width, height] of [
 ]) {
   test(`empty filters offer a usable recovery at ${width}x${height}`, async ({ page }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#visual=pillar&year=208&span=216&side=world&region=africa&category=哲学')
+    // A tiny open-ocean selection stays empty as regional subject coverage grows.
+    await page.goto(
+      '/#visual=pillar&year=208&span=216&side=world&region=africa&category=哲学&bounds=-140,0,-139.99,0.01',
+    )
     if (width <= 700 || height <= 540) await setSheet(page, 'map')
     const empty = page.locator('.pillar-empty')
     await expect(empty).toContainText('全部年代均无已收录事件')
@@ -48,6 +61,7 @@ for (const [width, height] of [
     await expect(page.locator('.pillar-card').first()).toBeVisible()
     await expect(page).toHaveURL(/side=world/)
     await expect(page).toHaveURL(/region=all/)
+    await expect(page).not.toHaveURL(/bounds=/)
   })
 }
 
@@ -73,7 +87,7 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#visual=pillar&year=1943&span=80&event=modern-sartre-being-nothingness')
+    await page.goto('/#visual=pillar&year=1969&span=80&event=modern-apollo11')
     if (width <= 700 || height <= 540) await setSheet(page, 'map')
     const actions = page.getByRole('group', { name: '时空柱工具' })
     await expect(actions.getByRole('button', { name: /^打开事件目录/ })).toHaveCount(0)
@@ -116,7 +130,7 @@ for (const [width, height] of [
     else await page.getByRole('button', { name: '收起历史资料', exact: true }).click()
     const context = page.getByRole('note', { name: '地图年代说明' })
     await expect(context).toBeInViewport({ ratio: 1 })
-    await expect(context).toContainText('事件 1943 年 / 疆域 1912 年')
+    await expect(context).toContainText('事件 1969 年 / 地图 1950 年')
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     await page.screenshot({ path: info.outputPath(`map-context-${width}.png`) })
   })
@@ -141,7 +155,8 @@ test('phone pillar titles use two lines with enough card height to read and open
   page,
 }, info) => {
   await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/#visual=pillar&year=1978&span=54')
+  // Select the fixture explicitly so denser content cannot cluster this title away.
+  await page.goto('/#visual=pillar&year=1978&span=54&event=modern-gaokao-restored')
   await setSheet(page, 'map')
   const card = page.getByRole('button', {
     name: '中国恢复高等学校统一招生考试，公元 1977 年',
@@ -242,8 +257,15 @@ test('continuing records are discoverable alongside a visible start node', async
   await expect(page.locator('.pillar-continuing-chip')).toHaveCount(0)
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await page.locator('.pillar-cluster').click()
-  await page.getByRole('checkbox', { name: '只看延续中的记录 · 5' }).check()
-  await expect(page.locator('.pillar-cluster-list button')).toHaveCount(5)
+  // The 200.06-year window is [-4046.03, -3845.97]; compare against source dates.
+  const continuing = events.filter(
+    (event) => event.year < -4046.03 && (event.endYear ?? event.year) >= -4046.03,
+  )
+  await page.getByRole('checkbox', { name: `只看延续中的记录 · ${continuing.length}` }).check()
+  await expect(page.locator('.pillar-cluster-list button')).toHaveCount(continuing.length)
+  expect((await page.locator('.pillar-cluster-list strong').allTextContents()).sort()).toEqual(
+    continuing.map((event) => event.title).sort(),
+  )
   await expect(page.locator('.pillar-cluster-list')).toContainText('仰韶')
   await page.screenshot({ path: info.outputPath('continuing-records.png') })
 })
@@ -259,6 +281,9 @@ test('directory search explains no matches and fits only matching records', asyn
   await page.getByRole('button', { name: '清空搜索', exact: true }).click()
   await expect(search).toBeFocused()
   await search.fill('牛顿')
+  await expect(page.locator('.pillar-cluster-list')).toContainText('牛顿《自然哲学的数学原理》出版')
+  await expect(page.locator('.pillar-cluster-list')).toContainText('牛顿《光学》出版')
+  await search.fill('自然哲学的数学原理')
   await expect(page.locator('.pillar-cluster-list button')).toHaveCount(1)
   await page.getByRole('button', { name: '查看搜索结果的时间范围' }).click()
   await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1687')
@@ -299,22 +324,31 @@ test('cold catalog loads no article and failed reading can retry without losing 
 }) => {
   const articles: string[] = []
   page.on('request', (request) => {
-    if (request.url().includes('/data/reading/')) articles.push(request.url())
+    const path = new URL(request.url()).pathname
+    if (request.resourceType() === 'fetch' && /^\/(events|people|data\/reading)\//.test(path))
+      articles.push(path)
   })
   await page.goto('/#visual=pillar&year=1687&span=200')
   await expect(page.locator('.pillar-stage')).toBeVisible()
   expect(articles).toHaveLength(0)
-  await page.route('**/data/reading/events/**', (route) =>
-    route.fulfill({ status: 503, headers: { 'Cache-Control': 'no-store' }, body: 'Unavailable' }),
+  const selector = /\/(?:events\/world-newton\/|data\/reading\/events\/.*)$/
+  await page.route(selector, (route) =>
+    isReadingRequest(route.request(), 'events', 'world-newton')
+      ? route.fulfill({
+          status: 503,
+          headers: { 'Cache-Control': 'no-store' },
+          body: 'Unavailable',
+        })
+      : route.continue(),
   )
   const card = page.locator('.pillar-card[data-event-id="world-newton"] .pillar-event')
   await card.click()
   await expect(page.locator('.event-detail > .detail-lead')).toContainText('牛顿')
   await expect(page.locator('.reading-status')).toContainText('正文暂未加载')
   const url = page.url()
-  await page.unroute('**/data/reading/events/**')
+  await page.unroute(selector)
   await page.getByRole('button', { name: '重新加载正文', exact: true }).click()
-  await expect(page.locator('.event-narrative')).toBeVisible()
+  await expect(page.locator('.event-article')).toContainText('哈雷协助处理伦敦的出版事务')
   await expect(page.locator('.event-detail .reference-list a').first()).toBeVisible()
   await expect(page).toHaveURL(url)
   await expect(page.locator('.reading-status')).toHaveCount(0)
@@ -329,7 +363,7 @@ for (const [visual, module, canvas] of [
     await page.route(chunk, (route) => route.fulfill({ status: 503, body: 'Unavailable' }))
     await page.goto(`/#visual=${visual}&year=1687&event=world-newton`)
     await expect(page.locator('.canvas-error')).toBeVisible()
-    await expect(page.locator('.event-narrative')).toBeVisible()
+    await expect(page.locator('.event-article')).toContainText('哈雷协助处理伦敦的出版事务')
     await page.unroute(chunk)
     await page.getByRole('button', { name: '重新加载画布', exact: true }).click()
     await expect(page.locator(canvas)).toBeVisible()
@@ -361,21 +395,132 @@ test('desktop actions use one menu and an empty map reports its actual state', a
 test('a non-ASCII person ID keeps its shared address and loads an ASCII article path', async ({
   page,
 }) => {
+  const id = 'reviewed-梁惠王'
+  const path = recordPath('people', id)
   const article = page.waitForResponse(
-    (response) =>
-      response.url().includes('/data/reading/people/record-') && response.status() === 200,
+    (response) => isReadingRequest(response.request(), 'people', id) && response.status() === 200,
   )
-  await page.goto(`/#visual=pillar&year=-350&person=${encodeURIComponent('reviewed-梁惠王')}`)
+  await page.goto(`/#visual=pillar&year=-350&person=${encodeURIComponent(id)}`)
   const response = await article
-  expect(new URL(response.url()).pathname).toMatch(
-    /^\/data\/reading\/people\/[a-zA-Z0-9_-]+\.json$/,
+  const responsePath = new URL(response.url()).pathname
+  const fromJson = responsePath.startsWith('/data/reading/')
+  expect(responsePath).toMatch(
+    fromJson
+      ? /^\/data\/reading\/people\/record-[a-f0-9]+-[a-f0-9]+\.json$/
+      : /^\/people\/[a-z0-9-]+\/$/,
   )
-  const record = await response.json()
-  expect(record.id).toBe('reviewed-梁惠王')
+  const record: Person = fromJson ? await response.json() : recordFromHtml(await response.text())
+  expect(record.id).toBe(id)
   await expect(page.locator('.person-hero h2')).toContainText('梁惠王')
   await expect(page.locator('.person-biography')).toHaveText(record.biography)
   await expect(page.locator('.person-detail .reference-list a').first()).toBeVisible()
-  expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('person')).toBe(
-    'reviewed-梁惠王',
-  )
+  await expect(page).toHaveURL(path)
 })
+
+for (const [width, height] of [
+  [1440, 900],
+  [390, 844],
+  [568, 320],
+]) {
+  test(`world topic introduction fits its distant chapter locations at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    await page.setViewportSize({ width, height })
+    await page.goto('/#visual=map&year=1082')
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+    const topics = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
+    if (await topics.isVisible()) await topics.click()
+    else {
+      await menu(page)
+      await page
+        .locator('.header-actions')
+        .getByRole('button', { name: '历史专题', exact: true })
+        .click()
+    }
+    await page.locator('.tour-card[href="/topics/silk-road/"]').click()
+    await expect(page.locator('.topic-introduction h2')).toHaveText(
+      '丝绸之路：陆海之间的贸易与文明交流',
+    )
+    await page.getByRole('button', { name: '查看专题地点', exact: true }).click()
+    // Check geographic anchors even when colliding labels are intentionally hidden.
+    // The old China-only overview leaves the East African chapter off screen.
+    for (const id of ['world-kilwa-trade', 'quanzhou-office']) {
+      const marker = page.locator(`.topic-marker[data-event-ids~="${id}"]`)
+      await expect(marker).toHaveCount(1)
+      await expect
+        .poll(async () =>
+          marker.evaluate((element) => {
+            const viewport = element.closest('.map-canvas')!.getBoundingClientRect()
+            const rect = element.getBoundingClientRect()
+            const x = rect.left + rect.width / 2
+            const y = rect.bottom
+            return (
+              x > viewport.left && x < viewport.right && y > viewport.top && y < viewport.bottom
+            )
+          }),
+        )
+        .toBe(true)
+    }
+    await page.screenshot({ path: info.outputPath(`world-topic-overview-${width}.png`) })
+  })
+}
+
+for (const [width, height] of [
+  [1440, 900],
+  [390, 844],
+]) {
+  test(`resuming a modern topic chapter restores its reading year at ${width}x${height}`, async ({
+    page,
+  }, info) => {
+    const topic = tours.find((item) => item.id === 'disease-medicine-public-health')!
+    const step = topic.steps.indexOf('modern-smallpox-eradication')
+    await page.setViewportSize({ width, height })
+    await page.addInitScript(
+      ({ topicId, step }) => {
+        localStorage.setItem(
+          'time-atlas:reading:v1',
+          JSON.stringify({
+            topics: { [topicId]: { lastStep: step, read: [] } },
+            recent: [],
+          }),
+        )
+      },
+      { topicId: topic.id, step },
+    )
+    await page.goto('/#visual=map&year=1082')
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
+    const topics = page.locator('.main-nav').getByRole('button', { name: '历史专题', exact: true })
+    if (await topics.isVisible()) await topics.click()
+    else {
+      await menu(page)
+      await page
+        .locator('.header-actions')
+        .getByRole('button', { name: '历史专题', exact: true })
+        .click()
+    }
+    await page.locator('.tour-card').filter({ hasText: topic.name }).click()
+    await page.locator('#topic-events summary').click()
+    await expect(page.locator('#topic-events details .topic-reading-help')).toContainText(
+      '1950年后的史事可在时空柱中阅读',
+    )
+    await page.getByRole('button', { name: `继续第 ${step + 1} 则史事`, exact: true }).click()
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
+    await expect(page).toHaveURL(recordPath('events', 'modern-smallpox-eradication'))
+    await expectExploration(page, { visual: 'pillar', tour: topic.id })
+    if (width <= 700) await setSheet(page, 'reading')
+    await expect(page.locator('.event-detail h2')).toHaveText('世界卫生组织宣布天花被根除')
+    await expect(page.locator('.topic-chapter-context')).toContainText(
+      `第 ${step + 1} / ${topic.steps.length} 章`,
+    )
+    await reloadExploration(page)
+    await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
+    if (width <= 700) await setSheet(page, 'reading')
+    await expect(page.locator('.event-detail h2')).toHaveText('世界卫生组织宣布天花被根除')
+    await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1950')
+    if (width <= 700) await setSheet(page, 'reading')
+    await expect(page.locator('.modern-map-note')).toContainText('本事件发生于1980年')
+    await expect(page.locator('.modern-map-note')).toContainText('当前地图为1950年的地点参照')
+    await page.screenshot({ path: info.outputPath(`modern-topic-resume-${width}.png`) })
+  })
+}

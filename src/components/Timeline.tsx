@@ -1,6 +1,7 @@
-import { formatEventDate } from '../lib/history'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
+  ArrowRight,
+  ArrowUpRight,
   ChevronLeft,
   ChevronRight,
   Pause,
@@ -18,11 +19,14 @@ import { periods as chinaPeriods } from '../data/periods'
 import type { HistoryEvent, Period } from '../types'
 import {
   compactYear,
+  formatEventDate,
   formatYear,
   fromOrdinal,
   MAX_YEAR,
   MIN_YEAR,
   periodAt,
+  PILLAR_MAX_YEAR,
+  TERRITORY_MAX_YEAR,
   toOrdinal,
 } from '../lib/history'
 import { groupTimelineEvents, timelineLabels, type TimelineGroup } from '../lib/markers'
@@ -40,6 +44,7 @@ interface Props {
   playing: boolean
   events: HistoryEvent[]
   onYear: (year: number) => void
+  onJumpYear: (year: number, span?: number) => void
   onPlay: () => void
   onEvent: (id: string) => void
   onSpeed: (speed: number) => void
@@ -79,6 +84,7 @@ export default function Timeline({
   playing,
   events,
   onYear,
+  onJumpYear,
   onPlay,
   onEvent,
   onSpeed,
@@ -103,6 +109,8 @@ export default function Timeline({
   const [width, setWidth] = useState(800)
   const [opened, setOpened] = useState<TimelineGroup | null>(null)
   const [optionsOpen, setOptionsOpen] = useState(false)
+  const yearEditor = useRef<HTMLDivElement>(null)
+  const yearTrigger = useRef<HTMLButtonElement>(null)
   const optionsRef = useRef<HTMLDivElement>(null)
   const optionsTrigger = useRef<HTMLButtonElement>(null)
   const railRef = useRef<HTMLDivElement>(null)
@@ -111,8 +119,16 @@ export default function Timeline({
   const menuTrigger = useRef<HTMLButtonElement | null>(null)
   const periods = historyPeriods ?? chinaPeriods
   const period = periods.find((item) => year >= item.from && year <= item.to) ?? periodAt(year)
-  const from = journey?.from ?? topic?.from ?? range?.[0] ?? (overview ? MIN_YEAR : period.from),
-    to = journey?.to ?? topic?.to ?? range?.[1] ?? (overview ? MAX_YEAR : period.to)
+  const from = Math.min(
+    MAX_YEAR,
+    journey?.from ?? topic?.from ?? range?.[0] ?? (overview ? MIN_YEAR : period.from),
+  )
+  const to = Math.min(
+    MAX_YEAR,
+    journey?.to ?? topic?.to ?? range?.[1] ?? (overview ? MAX_YEAR : period.to),
+  )
+  const continuesInPillar = to === MAX_YEAR && !journey && !topic
+  const continuesOnMap = to === TERRITORY_MAX_YEAR && to < MAX_YEAR && !journey && !topic && !range
   const min = toOrdinal(from),
     max = toOrdinal(to),
     value = toOrdinal(year)
@@ -158,7 +174,7 @@ export default function Timeline({
       ),
       behavior: 'auto',
     })
-  }, [period.id])
+  }, [period.id, width])
   function closeMenu() {
     setOpened(null)
     menuTrigger.current?.focus()
@@ -172,6 +188,14 @@ export default function Timeline({
   useEffect(() => {
     setOpened(null)
   }, [year, overview])
+  useEffect(() => {
+    if (!editing) return
+    const outside = (event: PointerEvent) => {
+      if (!yearEditor.current?.contains(event.target as Node)) setEditing(false)
+    }
+    document.addEventListener('pointerdown', outside)
+    return () => document.removeEventListener('pointerdown', outside)
+  }, [editing])
   useEffect(() => {
     if (!optionsOpen) return
     const outside = (event: PointerEvent) => {
@@ -213,15 +237,20 @@ export default function Timeline({
       document.removeEventListener('keydown', escape)
     }
   }, [opened])
-  function submitYear(blur = false) {
-    if (!/^-?\d+$/.test(draft) || !Number.isFinite(Number(draft)) || Number(draft) === 0) {
-      if (blur) setEditing(false)
-      else setInputError('没有0年，公元前请用负数。')
+  function closeYearEditor() {
+    setEditing(false)
+    yearTrigger.current?.focus({ preventScroll: true })
+  }
+  function submitYear() {
+    const value = Number(draft)
+    if (!/^-?\d+$/.test(draft) || value === 0 || value < MIN_YEAR || value > PILLAR_MAX_YEAR) {
+      setInputError(
+        `请输入前${Math.abs(MIN_YEAR)}年至${PILLAR_MAX_YEAR}年之间的整数。没有公元0年。`,
+      )
       return
     }
-    onYear(Number(draft))
-    setInputError('')
-    setEditing(false)
+    closeYearEditor()
+    onJumpYear(value)
   }
   return (
     <section className="timeline" aria-label="历史时间轴">
@@ -230,10 +259,13 @@ export default function Timeline({
           <button
             key={item.id}
             aria-current={period.id === item.id ? 'true' : undefined}
-            title={`${item.name} · ${compactYear(item.from)}—${compactYear(item.to)}；进入代表年份${compactYear(item.focus)}`}
+            aria-label={item.from > MAX_YEAR ? `${item.name}（时空柱）` : undefined}
+            data-pillar-period={item.from > MAX_YEAR || undefined}
+            title={`${item.name} · ${compactYear(item.from)}—${compactYear(item.to)}年${item.from > MAX_YEAR ? ' · 时空柱' : ''}`}
             onClick={() => onPeriod(item.id)}
           >
             {item.short}
+            {item.from > MAX_YEAR && <ArrowUpRight size={12} aria-hidden="true" />}
           </button>
         ))}
       </nav>
@@ -242,49 +274,100 @@ export default function Timeline({
           <span className="eyebrow">
             {journey ? `${journey.name} · 行迹时间轴` : topic ? '专题时间轴' : '此刻的历史'}
           </span>
-          {editing ? (
-            <form
-              onSubmit={(event) => {
-                event.preventDefault()
-                submitYear()
-              }}
-            >
-              <input
-                autoFocus
-                type="number"
-                min={MIN_YEAR}
-                max={MAX_YEAR}
-                value={draft}
-                onChange={(event) => setDraft(event.target.value)}
-                onBlur={() => submitYear(true)}
-                aria-label="输入历史年份"
-              />
-              <small>{inputError || '负数表示公元前'}</small>
-            </form>
-          ) : (
+          <div
+            className="year-jump"
+            ref={yearEditor}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setEditing(false)
+            }}
+            onKeyDown={(event) => {
+              if (editing && event.key === 'Escape') {
+                event.stopPropagation()
+                closeYearEditor()
+              }
+            }}
+          >
             <button
-              className="year-title"
-              title="点击输入年份"
+              ref={yearTrigger}
+              className="year-jump-trigger"
+              aria-label={`${formatYear(year)}，跳转年份`}
+              title="跳转年份"
+              aria-expanded={editing}
+              aria-controls={editing ? 'timeline-year-jump' : undefined}
               onClick={() => {
+                if (editing) {
+                  closeYearEditor()
+                  return
+                }
                 setDraft(String(year))
                 setInputError('')
                 setEditing(true)
               }}
             >
-              {formatYear(year)}
-              <ChevronDown size={13} />
+              <span className="year-title">
+                {year < 0 && <small>公元前 </small>}
+                <strong>{Math.abs(year)}</strong>
+                <small> 年</small>
+              </span>
+              <ChevronDown className="year-jump-chevron" size={15} aria-hidden="true" />
             </button>
-          )}
+            {editing && (
+              <form
+                id="timeline-year-jump"
+                className="year-jump-popover"
+                noValidate
+                onSubmit={(event) => {
+                  event.preventDefault()
+                  submitYear()
+                }}
+              >
+                <div className="year-jump-header">
+                  <label htmlFor="timeline-year-input">输入历史年份</label>
+                  <button type="button" aria-label="关闭年份跳转" onClick={closeYearEditor}>
+                    <X size={16} aria-hidden="true" />
+                  </button>
+                </div>
+                <div className="year-jump-input-row">
+                  <input
+                    autoFocus
+                    onFocus={(event) => event.currentTarget.select()}
+                    id="timeline-year-input"
+                    type="number"
+                    min={MIN_YEAR}
+                    max={PILLAR_MAX_YEAR}
+                    value={draft}
+                    aria-invalid={!!inputError}
+                    aria-describedby={inputError ? 'timeline-year-error' : 'timeline-year-help'}
+                    onChange={(event) => {
+                      setDraft(event.target.value)
+                      setInputError('')
+                    }}
+                  />
+                  <button className="year-jump-submit" type="submit">
+                    前往
+                  </button>
+                </div>
+                {inputError ? (
+                  <p id="timeline-year-error" role="alert">
+                    {inputError}
+                  </p>
+                ) : (
+                  <p id="timeline-year-help">公元前用负数。{MAX_YEAR}年后的史事在时空柱中查看。</p>
+                )}
+              </form>
+            )}
+          </div>
           <select
             className="timeline-period-select"
             aria-label="切换历史时期"
-            title={`选择时期后进入代表年份；${period.name}为${formatYear(period.focus)}`}
+            title={`切换历史时期 · 当前为${period.name}`}
             value={period.id}
             onChange={(event) => onPeriod(event.target.value)}
           >
             {periods.map((item) => (
               <option key={item.id} value={item.id}>
                 {item.name}
+                {item.from > MAX_YEAR && ` · ${item.from}—${item.to}年（时空柱）`}
               </option>
             ))}
           </select>
@@ -395,11 +478,13 @@ export default function Timeline({
           {!journey && !topic && !range && (
             <button
               onClick={() => setOverview((value) => !value)}
-              aria-label={overview ? '放大到当前时期' : '缩小到全部历史'}
-              title={overview ? '查看当前时期的详细时间轴' : '查看前10000年至1912年的完整时间轴'}
+              aria-label={overview ? '放大到当前时期' : '缩小到地图全时段'}
+              title={
+                overview ? '查看当前时期的详细时间轴' : `查看前10000年至${MAX_YEAR}年的地图时间轴`
+              }
             >
               {overview ? <Plus size={14} /> : <Minus size={14} />}
-              <span>{overview ? '看当前时期' : '看全部历史'}</span>
+              <span>{overview ? '看当前时期' : '看地图全时段'}</span>
             </button>
           )}
           <button
@@ -444,7 +529,11 @@ export default function Timeline({
           </span>
         </div>
       </div>
-      <div className="time-rail" ref={railRef}>
+      <div
+        className="time-rail"
+        ref={railRef}
+        data-continues={continuesOnMap ? 'map' : continuesInPillar ? 'pillar' : undefined}
+      >
         <div className="rail-track" />
         <div className="rail-progress" style={{ width: `${percent}%` }} />
         {groups.map((group, groupIndex) => {
@@ -530,6 +619,33 @@ export default function Timeline({
             </span>
           ))}
         </div>
+        {(continuesOnMap || continuesInPillar) && (
+          <button
+            className="timeline-continuation"
+            onClick={() => {
+              if (continuesOnMap) onJumpYear(to + 1)
+              else
+                onJumpYear(
+                  Math.round((MAX_YEAR + 1 + PILLAR_MAX_YEAR) / 2),
+                  PILLAR_MAX_YEAR - MAX_YEAR - 1,
+                )
+            }}
+            aria-label={
+              continuesOnMap
+                ? `在地图查看${to + 1}—${MAX_YEAR}年`
+                : `在时空柱查看${to + 1}—${PILLAR_MAX_YEAR}年`
+            }
+          >
+            {continuesOnMap && (
+              <span>
+                {to + 1}—{MAX_YEAR}年
+              </span>
+            )}
+            <span>
+              {continuesOnMap ? '地点地图' : '后续史事'} <ArrowRight size={13} aria-hidden="true" />
+            </span>
+          </button>
+        )}
       </div>
       <div className="era-band" aria-label="导航分期按时间长度显示">
         {journey ? (

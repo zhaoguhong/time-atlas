@@ -1,3 +1,25 @@
+import { breadcrumbData } from './lib/seo'
+import { mapUrl } from './lib/map-url'
+import { useRecordPosition } from './hooks/use-record-position'
+import ReadingLink from './components/ReadingLink'
+import { placeReading } from './data/place-reading'
+import {
+  dynastyUrl,
+  placeUrl,
+  eventUrl,
+  personUrl,
+  recordFromPath,
+  recordUrl,
+} from './lib/record-url'
+import {
+  articleUrl,
+  articleIdFromPath,
+  articleIdFromLegacyHash,
+  topicDirectoryUrl,
+  siteBase,
+  readingContextHash,
+  saveReadingContext,
+} from './lib/article-url'
 import {
   eventCategories as categories,
   matchesEventCategory,
@@ -5,7 +27,11 @@ import {
 } from './lib/event-categories'
 import { eventsAtYear } from './lib/current-events'
 import { formatEventDate, eventDateRelation } from './lib/history'
-import { readingSourceUrl } from './lib/source-links'
+import Sources from './components/Sources'
+import EventSources from './components/EventSources'
+import EventTopicPaths from './components/EventTopicPaths'
+import { indexTopicPaths } from './lib/topic-paths'
+import { eventSearchMatch, normalizeSearchText } from './lib/search'
 import {
   lazy,
   Suspense,
@@ -32,7 +58,6 @@ import {
   Search,
   Share2,
   Sparkles,
-  Swords,
   Route,
   Users,
   X,
@@ -68,6 +93,7 @@ const HistoryMap = lazy(() => import('./components/HistoryMap'))
 import Timeline from './components/Timeline'
 import MobileSheetHandle from './components/MobileSheetHandle'
 import DisplayControls from './components/DisplayControls'
+import EventNarrative from './components/EventNarrative'
 import { useReadingResize } from './hooks/use-reading-resize'
 import GitHubIcon from './components/GitHubIcon'
 import JourneyPanel from './components/JourneyPanel'
@@ -75,21 +101,45 @@ import DynastyPanel, { DynastyIntroduction } from './components/DynastyPanel'
 import ReadingText from './components/ReadingText'
 import PersonFurtherReading from './components/PersonFurtherReading'
 import TopicPanel from './components/TopicPanel'
+import AtlasNavigation from './components/AtlasNavigation'
+import type { TopicAction } from './lib/topic-action'
+import { topicRouteById } from './data/topic-routes'
+import TopicDirectory from './components/TopicDirectory'
 import PlacePanel from './components/PlacePanel'
 import ComparisonPanel from './components/ComparisonPanel'
 import ExplorationFilters from './components/ExplorationFilters'
 import {
   places,
   placeById,
-  namesPlace,
+  eventAtPlace,
   filterExploration,
   emptyExploration,
   insideBounds,
 } from './lib/exploration'
 import { parseViewParams, useNavigationHistory, type NavigationView } from './lib/navigation'
-import { readProgress, writeProgress, readingSelectionKey } from './lib/reading-progress'
+import {
+  readProgress,
+  writeProgress,
+  readingSelectionKey,
+  topicStepFromHash,
+} from './lib/reading-progress'
 import { events, eventById, people, personById } from './data/catalog'
-import { periods, tours } from './data/periods'
+import { periods } from './data/periods'
+import { combinedReligionSteps } from './data/article-groups'
+import { legacyTourSteps as tours } from './data/article-runtime'
+import {
+  readingArticles,
+  articleById,
+  articleGuides,
+  articleTourCatalog,
+  canonicalArticleId,
+} from './data/article-runtime'
+import {
+  consolidateArticleProgress,
+  consolidateBookmarks,
+  toggleArticleEventRead,
+} from './lib/article-migration'
+import { topicMatchesQuery } from './lib/topic-directory'
 import { profiles, periodCourses } from './data/learning'
 import { journeyByPerson } from './data/journeys'
 import { dynasties, dynastyById, dynastyForMap } from './data/dynasties'
@@ -112,7 +162,6 @@ import type {
   PanelMode,
   PolityProperties,
   Selection,
-  Source,
   JourneyView,
   MapBounds,
   ExplorationFilter,
@@ -124,20 +173,21 @@ import {
   compactYear,
   eventsInPeriod,
   formatYear,
-  matchesEvent,
   fromOrdinal,
   lifeDates,
   MAX_YEAR,
+  TERRITORY_MAX_YEAR,
   MIN_YEAR,
+  modernReadingPeriod,
   eventsInScope,
   scopeDescription,
   parseHash,
   periodAt,
   readPreferences,
+  defaultPreferences,
   toOrdinal,
   writePreferences,
 } from './lib/history'
-import './exploration-navigation.css'
 import { useReadingRecord } from './hooks/use-reading-record'
 import ReadingStatus from './components/ReadingStatus'
 import CanvasBoundary from './components/CanvasBoundary'
@@ -146,7 +196,16 @@ import { useColorMode } from './lib/color-mode'
 
 type MapFocus = Parameters<typeof HistoryMap>[0]['focus']
 type TourState = { id: string; step: number } | null
-const allTours = [...tours, ...periodCourses]
+
+function reloadCanvas() {
+  try {
+    window.history.replaceState({ ...window.history.state, retryAtlasCanvas: true }, '')
+  } finally {
+    window.location.reload()
+  }
+}
+const allTours = [...articleTourCatalog, ...periodCourses]
+const topicPathsByEvent = indexTopicPaths(articleGuides)
 const projectRepositoryUrl = 'https://github.com/zhaoguhong/time-atlas'
 const categoryColors: Record<string, string> = {
   战争: '#a76f58',
@@ -157,20 +216,41 @@ const categoryColors: Record<string, string> = {
 }
 
 function initialState() {
-  const preferences = readPreferences(),
-    hash = parseHash(window.location.hash)
-  const view = parseViewParams(window.location.hash)
-  let selection: Selection | null = null
-  if (hash.event && eventById.has(hash.event)) selection = { type: 'event', id: hash.event }
-  else if (hash.person && personById.has(hash.person))
-    selection = { type: 'person', id: hash.person }
-  else if (hash.dynasty && (dynastyById.has(hash.dynasty) || worldPolityById.has(hash.dynasty)))
-    selection = { type: 'dynasty', id: hash.dynasty }
-  else if (view.place && placeById.has(view.place)) selection = { type: 'place', id: view.place }
-  else if (view.polity) selection = { type: 'polity', id: view.polity }
+  const contextHash = readingContextHash()
+  const preferences = { ...readPreferences() },
+    hash = parseHash(contextHash)
+  const view = parseViewParams(contextHash)
+  if (window.location.pathname === topicDirectoryUrl) view.mode = 'tours'
+  let selection: Selection | null = recordFromPath(window.location.pathname)
+  const entry = window.history.state?.timeAtlas
+  const saved: NavigationView | undefined = entry?.version === 1 ? entry.view : undefined
+  const recordView =
+    selection && saved?.selection?.type === selection.type && saved.selection.id === selection.id
+      ? saved
+      : undefined
+  if (!selection) {
+    if (hash.event && eventById.has(hash.event)) selection = { type: 'event', id: hash.event }
+    else if (hash.person && personById.has(hash.person))
+      selection = { type: 'person', id: hash.person }
+    else if (hash.dynasty && (dynastyById.has(hash.dynasty) || worldPolityById.has(hash.dynasty)))
+      selection = { type: 'dynasty', id: hash.dynasty }
+    else if (view.place && placeById.has(view.place)) selection = { type: 'place', id: view.place }
+    else if (view.polity) selection = { type: 'polity', id: view.polity }
+  }
+  const freshHome = window.location.pathname === siteBase && !contextHash
+  if (freshHome) {
+    preferences.year = defaultPreferences.year
+    preferences.scope = defaultPreferences.scope
+  }
   let year =
     hash.year ??
     (selection?.type === 'event' ? eventById.get(selection.id)!.year : preferences.year)
+  if (selection?.type === 'dynasty' && hash.year === undefined) {
+    const dynasty = dynastyById.get(selection.id) ?? worldPolityById.get(selection.id)!
+    year = fromOrdinal(Math.round((toOrdinal(dynasty.from) + toOrdinal(dynasty.to)) / 2))
+  }
+  if (!view.mode && selection?.type === 'dynasty') view.mode = 'dynasties'
+  if (!view.mode && selection?.type === 'place') view.mode = 'places'
   const journey =
     hash.person && hash.journey === hash.person ? journeyByPerson.get(hash.person) : undefined
   if (journey) year = Math.min(journey.nodes.at(-1)!.year, Math.max(journey.nodes[0].year, year))
@@ -181,20 +261,62 @@ function initialState() {
       journeyByPerson.get(selection.id),
       view.visualization === 'pillar' ? PILLAR_MAX_YEAR : MAX_YEAR,
     )
-  const topic = allTours.find((item) => item.id === hash.tour)
+  // A retired topic's introduction has no event index. Resolve it before its
+  // legacy event guide can clamp step -1 to the first event.
+  const legacyIntro =
+    window.location.pathname === siteBase ? articleIdFromLegacyHash(contextHash) : null
+  const articleId = articleIdFromPath(window.location.pathname) ?? legacyIntro ?? null
+  const priorReligionEvent =
+    hash.tour === 'reformation'
+      ? (hash.event ??
+        (hash.step !== undefined && hash.step >= 0 ? combinedReligionSteps[hash.step] : undefined))
+      : undefined
+  const requestedGuide =
+    priorReligionEvent &&
+    allTours
+      .find((item) => item.id === 'buddhist-texts-and-networks')
+      ?.steps.includes(priorReligionEvent)
+      ? 'buddhist-texts-and-networks'
+      : hash.tour
+  const topic = articleId ? undefined : allTours.find((item) => item.id === requestedGuide)
+  const legacyTopic = hash.event ? undefined : tours.find((item) => item.id === hash.tour)
+  const legacyEvent =
+    hash.step !== undefined && hash.step >= 0
+      ? (priorReligionEvent ?? legacyTopic?.steps[hash.step])
+      : undefined
+  const linkedStep =
+    topic && hash.step !== -1
+      ? legacyEvent
+        ? topic.steps.indexOf(legacyEvent)
+        : topicStepFromHash(topic, contextHash)
+      : undefined
   const step = topic
-    ? Math.max(topic.chapters ? -1 : 0, Math.min(topic.steps.length - 1, hash.step ?? -1))
+    ? Math.max(
+        topic.chapters ? -1 : 0,
+        Math.min(topic.steps.length - 1, linkedStep ?? hash.step ?? -1),
+      )
     : -1
+  if (articleId) {
+    selection = null
+    year = hash.year ?? preferences.year
+  }
   if (topic) {
     selection = step < 0 ? null : { type: 'event', id: topic.steps[step] }
     year = eventById.get(topic.steps[Math.max(0, step)])!.year
   }
   return {
     preferences,
+    contextHash,
+    freshHome,
+    recordView,
     view,
     year: view.visualization === 'pillar' ? clampPillarYear(year) : clampYear(year),
     selection,
-    scope: hash.scope ?? readScopePreferences(preferences.scope)[view.visualization],
+    scope:
+      hash.scope ??
+      (freshHome
+        ? defaultPreferences.scope
+        : readScopePreferences(preferences.scope)[view.visualization]),
     compare: hash.compare ?? null,
     trail:
       !topic && hash.person && hash.journey === hash.person && journeyByPerson.has(hash.person)
@@ -202,11 +324,12 @@ function initialState() {
         : null,
     point: hash.point ?? null,
     future: hash.future,
+    articleId,
     tour: topic ? { id: topic.id, step } : null,
   }
 }
 function readCamera(): Camera | null {
-  const params = new URLSearchParams(window.location.hash.slice(1))
+  const params = new URLSearchParams(readingContextHash().slice(1))
   if (!['lng', 'lat', 'zoom'].every((key) => params.has(key))) return null
   const lng = Number(params.get('lng')),
     lat = Number(params.get('lat')),
@@ -222,26 +345,6 @@ function readCamera(): Camera | null {
     : null
 }
 
-function Sources({ sources }: { sources: Source[] }) {
-  if (!sources.length) return null
-  return (
-    <div className="reference-list">
-      <span className="eyebrow">继续阅读 · 参考资料</span>
-      {sources.map((source, i) => (
-        <a
-          key={`${source.url}-${i}`}
-          href={readingSourceUrl(source.url)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <BookOpen size={14} />
-          <span>{source.title}</span>
-          <ExternalLink size={12} />
-        </a>
-      ))}
-    </div>
-  )
-}
 function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large' }) {
   const person = personById.get(id)
   if (!person) return null
@@ -256,9 +359,14 @@ function Avatar({ id, size = 'normal' }: { id: string; size?: 'normal' | 'large'
   )
 }
 
-export default function App() {
+export default function App({ topicAction }: { topicAction?: TopicAction }) {
   const [colorMode, toggleColorMode] = useColorMode()
   const [initial] = useState(initialState)
+  const [canvasEnabled, setCanvasEnabled] = useState(
+    document.documentElement.dataset.atlasLaunch === 'map' ||
+      (initial.recordView?.canvasEnabled ?? (!initial.articleId && initial.view.mode !== 'tours')),
+  )
+  const [topicEntrySelected, setTopicEntrySelected] = useState(true)
   const [year, setYear] = useState(initial.year)
   const [visualization, setVisualization] = useState<'map' | 'pillar'>(initial.view.visualization)
   const [pillarSide, setPillarSide] = useState<PillarSide>(initial.view.pillarSide)
@@ -266,9 +374,22 @@ export default function App() {
   const [pillarSpan, setPillarSpan] = useState(initial.view.pillarSpan)
   const [selection, setSelection] = useState<Selection | null>(initial.selection)
   const [mode, setMode] = useState<PanelMode>(
-    initial.view.mode ?? (initial.tour ? 'tours' : 'events'),
+    initial.articleId
+      ? 'tours'
+      : (initial.view.mode ??
+          (initial.tour ? 'tours' : initial.selection?.type === 'person' ? 'people' : 'events')),
   )
-  const [mobileView, setMobileView] = useState<'split' | 'map' | 'reading'>('map')
+  const [mobileView, setMobileView] = useState<'split' | 'map' | 'reading'>(
+    document.documentElement.dataset.atlasLaunch === 'map'
+      ? 'split'
+      : (initial.recordView?.mobileView ??
+          (initial.articleId ||
+          !!recordFromPath(window.location.pathname) ||
+          initial.tour?.step === -1 ||
+          initial.view.mode === 'tours'
+            ? 'reading'
+            : 'map')),
+  )
   const [category, setCategory] = useState<EventCategoryFilter>(initial.view.category)
   const [scope, setScope] = useState<EventScope>(initial.scope)
   const [exploration, setExploration] = useState<ExplorationFilter>(initial.view.exploration)
@@ -276,12 +397,14 @@ export default function App() {
   const [mapBounds, setMapBounds] = useState<MapBounds | null>(null)
   const [playbackMode, setPlaybackMode] = useState<'years' | 'events'>(
     initial.view.visualization === 'pillar' &&
-      !new URLSearchParams(location.hash.slice(1)).has('play')
+      !new URLSearchParams(initial.contextHash.slice(1)).has('play')
       ? 'events'
       : initial.view.playbackMode,
   )
   const [archiveFilters, setArchiveFilters] = useState(initial.view.archiveFilters)
-  const [progress, setProgress] = useState(readProgress)
+  const [progress, setProgress] = useState(() =>
+    consolidateArticleProgress(readProgress(allTours), allTours, canonicalArticleId),
+  )
   const [moreOpen, setMoreOpen] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const focusEnterRef = useRef<HTMLButtonElement>(null)
@@ -314,7 +437,9 @@ export default function App() {
   const [showEvents, setShowEvents] = useState(
     initial.view.events ?? (initial.tour ? true : initial.preferences.events),
   )
-  const [bookmarks, setBookmarks] = useState(initial.preferences.bookmarks)
+  const [bookmarks, setBookmarks] = useState(() =>
+    consolidateBookmarks(initial.preferences.bookmarks, canonicalArticleId),
+  )
   const [polities, setPolities] = useState<PolityProperties[]>([])
   const [hiddenPolities, setHiddenPolities] = useState<string[]>(initial.view.hidden)
   const [focus, setFocus] = useState<MapFocus>(() =>
@@ -326,7 +451,14 @@ export default function App() {
             zoom: 5,
             token: Date.now(),
           }
-        : null,
+        : initial.selection?.type === 'dynasty' &&
+            worldPolityById.has(initial.selection.id) &&
+            !readCamera()
+          ? {
+              bounds: worldRegionBounds[worldPolityById.get(initial.selection.id)!.region],
+              token: Date.now(),
+            }
+          : null,
   )
   const [camera, setCamera] = useState<Camera | null>(readCamera)
   const [initialCamera] = useState(readCamera)
@@ -340,6 +472,7 @@ export default function App() {
   const layersPopoverRef = useRef<HTMLDivElement>(null)
   const comparisonControlsRef = useRef<HTMLDivElement>(null)
   const [tourState, setTourState] = useState<TourState>(initial.tour)
+  const [articleId, setArticleId] = useState<string | null>(initial.articleId)
   const showRoutes = tourState?.id === 'silk-road'
   const [toast, setToast] = useState('')
   const [dialog, setDialog] = useState<'sources' | 'share' | null>(null)
@@ -352,6 +485,7 @@ export default function App() {
     if (view === 'reading') setPlaying(false)
   }, [])
   const view: NavigationView = {
+    canvasEnabled,
     visualization,
     pillarSide,
     pillarRegion,
@@ -366,6 +500,8 @@ export default function App() {
     camera,
     compareYear,
     tourState,
+    articleId,
+    topicEntrySelected,
     trailPerson,
     trailPoint,
     showFutureJourney,
@@ -383,6 +519,7 @@ export default function App() {
     archiveFilters,
   }
   const navigation = useNavigationHistory(view, panelRef, (previous) => {
+    setCanvasEnabled(previous.canvasEnabled ?? (!previous.articleId && previous.mode !== 'tours'))
     pendingScroll.current = previous.scrollTop ?? 0
     setSelection(previous.selection)
     setMode(previous.mode)
@@ -402,7 +539,16 @@ export default function App() {
     setCamera(previous.camera)
     setCompareYear(previous.compareYear)
     setCompareDraft(String(previous.compareYear ?? 220))
-    setTourState(previous.tourState)
+    const restoredArticle =
+      previous.articleId ??
+      (previous.tourState?.step === -1 && articleById.has(previous.tourState.id)
+        ? previous.tourState.id
+        : null)
+    setTourState(restoredArticle ? null : previous.tourState)
+    setArticleId(restoredArticle)
+    setTopicEntrySelected(
+      previous.topicEntrySelected ?? (previous.mode === 'tours' || !!previous.tourState),
+    )
     setTrailPerson(previous.trailPerson)
     setTrailPoint(previous.trailPoint)
     setShowFutureJourney(previous.showFutureJourney)
@@ -428,6 +574,17 @@ export default function App() {
   const yearRef = useRef(year)
   yearRef.current = year
   const tour = allTours.find((item) => item.id === tourState?.id)
+  const readingArticle = articleId ? articleById.get(articleId) : undefined
+  const articleRoutes = useMemo(
+    () =>
+      (readingArticle?.routeIds ?? []).flatMap((id) => {
+        const route = topicRouteById.get(id)
+        return route ? [route] : []
+      }),
+    [readingArticle],
+  )
+  const topicReading =
+    topicEntrySelected && (!!readingArticle || (!selection && !tour && mode === 'tours'))
   const period = periodAt(year)
   // Side and world-region choices belong to the pillar. Map browsing always
   // includes both China and the rest of the world, even after a shared link.
@@ -446,14 +603,13 @@ export default function App() {
     [historySide, historyRegion],
   )
   const worldPeriod = worldPeriodAt(year)
-  const periodEvents = useMemo(() => eventsInPeriod(events, year), [year])
+  const periodEvents = useMemo(() => eventsInPeriod(events, period.from), [period.from])
   const profile = profiles[period.id] ?? {
     question: '怎样沿着事件、人物与思想阅读20世纪？',
     context:
       '使用类别、地区与时间筛选比较已收录的现代历史记录，并在每条记录中核对日期、背景与来源。',
     focusReason: '这一分段用于组织现代事件阅读，不代表各地共同的政治分期。',
-    chronologyNote:
-      '时空柱和事件阅读延伸至2000年；现有历史疆域资料仍止于1912年，现代事件不能借用早期地图作为同期疆域。',
+    chronologyNote: `时空柱和事件阅读延伸至${PILLAR_MAX_YEAR}年，地图浏览至${MAX_YEAR}年。`,
     polities: [] as string[],
     people: [] as string[],
     steps: periodEvents.map((event) => event.id),
@@ -551,7 +707,7 @@ export default function App() {
         (peopleDepth === 'all' ||
           (peopleDepth === 'journey'
             ? journeyByPerson.has(person.id)
-            : person.biographyLength >= 160)),
+            : person.recordKind === 'curated')),
     )
   }, [periodEvents, period.id, period.from, period.to, peopleRange, peopleQuery, peopleDepth])
   const selectedEventIndex = selection?.type === 'event' ? eventById.get(selection.id) : undefined
@@ -563,10 +719,16 @@ export default function App() {
     liveReading ? eventById.get(currentYearEvents[0]?.id) : undefined,
   )
   const selectedEvent = eventReading.record ?? selectedEventIndex
+  const relatedEvents = useMemo(
+    () => (selectedEventIndex ? relatedReading(selectedEventIndex, events, people) : []),
+    [selectedEventIndex],
+  )
   const selectedPerson = personReading.record ?? selectedPersonIndex
   const liveEvent = liveEventReading.record ?? currentYearEvents[0]
   const selectedPolity =
-    selection?.type === 'polity' ? polities.find((item) => item.name === selection.id) : undefined
+    year <= TERRITORY_MAX_YEAR && selection?.type === 'polity'
+      ? polities.find((item) => item.name === selection.id)
+      : undefined
   const selectedDynasty =
     selection?.type === 'dynasty'
       ? (dynastyById.get(selection.id) ?? worldPolityById.get(selection.id))
@@ -587,20 +749,27 @@ export default function App() {
       ? (dynastyForMap(selection.id, year) ?? worldPolityForMap(selection.id, year))
       : undefined
   const searchResults = useMemo(() => {
-    const text = query.toLowerCase().replace(/\s+/g, '')
-    const exact = (names: string[]) =>
-      names.some((name) => name.toLowerCase().replace(/\s+/g, '') === text)
+    const text = normalizeSearchText(query)
+    const exact = (names: string[]) => names.some((name) => normalizeSearchText(name) === text)
+    const namesMatch = (names: string[]) =>
+      names.some((name) => normalizeSearchText(name).includes(text))
     if (!text) return []
     return [
-      ...events
-        .filter((event) => matchesEvent(event, text))
-        .map((event) => ({
-          type: 'event' as const,
-          id: event.id,
-          title: event.title,
-          sub: `${formatEventDate(event)} · ${event.location}`,
-          exact: exact([event.title, ...(event.aliases ?? [])]),
-        })),
+      ...events.flatMap((event) => {
+        const match = eventSearchMatch(event, query, personById)
+        return match
+          ? [
+              {
+                type: 'event' as const,
+                id: event.id,
+                title: event.title,
+                sub: `${formatEventDate(event)} · ${event.location}`,
+                rank: match.rank,
+                reason: match.reason,
+              },
+            ]
+          : []
+      }),
       ...people
         .filter((person) => matchesPerson(person, text))
         .map((person) => ({
@@ -608,7 +777,11 @@ export default function App() {
           id: person.id,
           title: person.name,
           sub: person.role,
-          exact: exact([person.name, person.courtesy ?? '', ...(person.aliases ?? [])]),
+          rank: exact([person.name, person.courtesy ?? '', ...(person.aliases ?? [])])
+            ? 0
+            : namesMatch([person.name, person.courtesy ?? '', ...(person.aliases ?? [])])
+              ? 1
+              : 4,
         })),
       ...[...dynasties, ...worldPolities]
         .filter((dynasty) =>
@@ -621,7 +794,7 @@ export default function App() {
           id: dynasty.id,
           title: dynasty.name,
           sub: `${compactYear(dynasty.from)}—${compactYear(dynasty.to)} · ${dynasty.capital}`,
-          exact: exact([dynasty.name, ...dynasty.aliases]),
+          rank: exact([dynasty.name, ...dynasty.aliases]) ? 0 : 1,
         })),
       ...places
         .filter((place) =>
@@ -632,16 +805,16 @@ export default function App() {
           id: place.id,
           title: place.name,
           sub: place.modern,
-          exact: exact([place.name, ...place.names]),
+          rank: exact([place.name, ...place.names]) ? 0 : 2,
         })),
-      ...tours
-        .filter((topic) => `${topic.name}${topic.description}`.includes(text))
+      ...readingArticles
+        .filter((topic) => topicMatchesQuery(topic, text))
         .map((topic) => ({
           type: 'topic' as const,
           id: topic.id,
           title: topic.name,
-          sub: `${topic.steps.length} 章`,
-          exact: exact([topic.name]),
+          sub: `${topic.subject ?? '历史专题'} · 文章`,
+          rank: exact([topic.name]) ? 0 : namesMatch([topic.name]) ? 1 : 5,
         })),
       ...(/^-?\d+$/.test(text) &&
       Number(text) !== 0 &&
@@ -653,11 +826,11 @@ export default function App() {
               id: text,
               title: `前往${formatYear(Number(text))}`,
               sub: '切换观察年份',
-              exact: true,
+              rank: 0,
             },
           ]
         : []),
-    ].sort((a, b) => Number(b.exact) - Number(a.exact))
+    ].sort((a, b) => a.rank - b.rank)
   }, [query])
 
   function chooseSearchResult(result: (typeof searchResults)[number]) {
@@ -698,6 +871,7 @@ export default function App() {
   )
   const changeYear = useCallback(
     (value: number) => {
+      setCanvasEnabled(true)
       if (value > MAX_YEAR && visualization === 'map') {
         setVisualization('pillar')
         setScope(readScopePreferences(initial.preferences.scope).pillar)
@@ -735,10 +909,29 @@ export default function App() {
     },
     [personJourney, changeYear],
   )
+  function jumpTimelineYear(value: number, span?: number) {
+    if (value <= MAX_YEAR) {
+      navigateYear(value)
+      return
+    }
+    rememberView()
+    changeYear(value)
+    setMode('events')
+    setScope('period')
+    setReaderCollapsed(false)
+    setPlaybackReading(false)
+    setMobileView((view) => (view === 'reading' ? 'split' : view))
+    if (span !== undefined) {
+      setPillarSpan(span)
+      setExploration(emptyExploration)
+      setCategory('全部')
+    }
+  }
   const openEvent = useCallback(
     (id: string, keepTour = false, keepTrail = false, keepPillarView = false) => {
       const event = eventById.get(id)
       if (!event) return
+      setArticleId(null)
       if (!keepTour && !keepTrail) rememberView()
       setPlaybackReading(false)
       setReaderCollapsed(false)
@@ -778,6 +971,13 @@ export default function App() {
     [rememberView, visualization, pillarSide, pillarRegion, category, exploration.range],
   )
   function switchVisualization(value: 'map' | 'pillar') {
+    setCanvasEnabled(true)
+    setTopicEntrySelected(false)
+    if (topicReading) {
+      setArticleId(null)
+      setTourState(null)
+      setMode('events')
+    }
     if (value === visualization) {
       setMoreOpen(false)
       setMobileView((view) => (view === 'reading' ? 'split' : view))
@@ -792,8 +992,7 @@ export default function App() {
       setExploration((old) =>
         old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
       )
-      if (year > MAX_YEAR)
-        setToast('历史疆域资料止于1912年，地图已切回1912年；现代事件仍可继续阅读。')
+      if (year > MAX_YEAR) setToast(`地图已切回${MAX_YEAR}年供地点参考，现代事件仍可继续阅读。`)
     } else if (value === 'pillar' && selection?.type === 'event') {
       const selected = eventById.get(selection.id)
       if (selected && selected.year > MAX_YEAR) setYear(selected.year)
@@ -817,6 +1016,7 @@ export default function App() {
     }
   }
   function openPerson(id: string, backTo?: Selection) {
+    setArticleId(null)
     setPlaybackReading(false)
     setReaderCollapsed(false)
     const person = personById.get(id)
@@ -864,6 +1064,7 @@ export default function App() {
     setSearchOpen(false)
   }
   function openDynasty(id: string) {
+    setArticleId(null)
     setPlaybackReading(false)
     setReaderCollapsed(false)
     const dynasty = dynastyById.get(id) ?? worldPolityById.get(id)
@@ -886,9 +1087,15 @@ export default function App() {
       qing: 1750,
     }
     if (year < dynasty.from || year > dynasty.to)
-      setYear(clampYear(preferred[id] ?? Math.round((dynasty.from + dynasty.to) / 2)))
+      setYear(
+        clampYear(
+          preferred[id] ??
+            fromOrdinal(Math.round((toOrdinal(dynasty.from) + toOrdinal(dynasty.to)) / 2)),
+        ),
+      )
     setArchiveFilters((old) => ({ ...old, query: '' }))
     setSelection({ type: 'dynasty', id })
+    setMode('dynasties')
     setMobileView((view) => (view === 'map' ? 'split' : view))
     setSearchOpen(false)
     setTrailPerson(null)
@@ -917,6 +1124,7 @@ export default function App() {
     }
   }
   function openPlace(id: string) {
+    setArticleId(null)
     const place = placeById.get(id)
     if (!place) return
     rememberView()
@@ -955,6 +1163,8 @@ export default function App() {
     setToast(exists ? '已从收藏中移除' : '已收藏，下次回来继续探索')
   }
   function navigateMode(value: PanelMode) {
+    setArticleId(null)
+    setTopicEntrySelected(value === 'tours')
     rememberView()
     setMoreOpen(false)
     setPlaybackReading(false)
@@ -967,8 +1177,16 @@ export default function App() {
     setTrailPerson(null)
   }
   function jumpPeriod(id: string) {
-    rememberView()
     const world = worldPeriods.find((item) => item.id === id)
+    const value =
+      world ??
+      (id === modernReadingPeriod.id ? modernReadingPeriod : periods.find((p) => p.id === id))
+    if (!value) return
+    if (value.from > MAX_YEAR) {
+      jumpTimelineYear(value.focus, 2 * Math.max(value.focus - value.from, value.to - value.focus))
+      return
+    }
+    rememberView()
     if (world) {
       setExploration(emptyExploration)
       changeYear(world.focus)
@@ -986,7 +1204,6 @@ export default function App() {
     setExploration(emptyExploration)
     setPlaybackReading(false)
     setReaderCollapsed(false)
-    const value = periods.find((item) => item.id === id)!
     const earlySites = value.from < -2070 ? eventsInPeriod(events, value.focus) : []
     changeYear(value.focus)
     setFocus(
@@ -1021,7 +1238,31 @@ export default function App() {
       setSelection({ type: 'dynasty', id: archive ?? id })
     } else setMode('overview')
   }
+  function openArticle(id: string, remember = true) {
+    const article = articleById.get(canonicalArticleId.get(id) ?? id)
+    if (!article) return
+    if (remember) rememberView()
+    if (camera) setFocus({ camera, token: Date.now() })
+    setCanvasEnabled(false)
+    setArticleId(article.id)
+    setTopicEntrySelected(true)
+    setMode('tours')
+    setTourState(null)
+    setMobileView('reading')
+    setPlaybackReading(false)
+    setReaderCollapsed(false)
+    setPlaying(false)
+    setSearchOpen(false)
+    setMoreOpen(false)
+  }
   function startTour(id: string) {
+    if (canonicalArticleId.has(id)) openArticle(id)
+    else startMapTour(id)
+  }
+  function startMapTour(id: string, showCanvas = true) {
+    setCanvasEnabled(showCanvas)
+    setArticleId(null)
+    setTopicEntrySelected(true)
     rememberView()
     setScope(readScopePreferences(initial.preferences.scope).map)
     setVisualization('map')
@@ -1040,7 +1281,7 @@ export default function App() {
       setShowEvents(true)
       setCompareYear(null)
       setCategory('全部')
-      setFocus({ region: id === 'silk-road' ? 'silk' : 'china', token: Date.now() })
+      fitTopicMap(-1, item)
       return
     }
     setTourState({ id, step: 0 })
@@ -1053,30 +1294,70 @@ export default function App() {
       setFocus({ region: 'silk', token: Date.now() })
     }
   }
-  function resumeTopic(id: string, requestedStep?: number) {
+  function resumeTopic(id: string, requestedStep?: number, showCanvas = true) {
     const item = allTours.find((topic) => topic.id === id)
     if (!item) return
     const step = Math.max(
       0,
       Math.min(item.steps.length - 1, requestedStep ?? progress.topics[id]?.lastStep ?? 0),
     )
-    startTour(id)
+    startMapTour(id, showCanvas)
     setTourState({ id, step })
-    setSelection({ type: 'event', id: item.steps[step] })
-    setYear(eventById.get(item.steps[step])!.year)
+    openEvent(item.steps[step], true)
     setMobileView('split')
-    setFocus({
-      coordinates: eventById.get(item.steps[step])!.coordinates,
-      zoom: 4.6,
-      token: Date.now(),
-    })
+    fitTopicMap(step, item)
+  }
+  function openTopicEvent(id: string) {
+    const guide = allTours.find((item) => item.id === readingArticle?.guideId)
+    const step = guide?.steps.indexOf(id) ?? -1
+    if (guide && step >= 0) resumeTopic(guide.id, step, false)
+    else openEvent(id)
+  }
+  function openTopicOverview() {
+    const guide = allTours.find((item) => item.id === readingArticle?.guideId)
+    if (!guide) return
+    rememberView()
+    setCanvasEnabled(true)
+    setArticleId(null)
+    setSelection(null)
+    setTourState({ id: guide.id, step: -1 })
+    setTopicEntrySelected(false)
+    setVisualization('map')
+    setYear(clampYear(year))
+    setScope(readScopePreferences(initial.preferences.scope).map)
+    setExploration(emptyExploration)
+    setMobileView('map')
+    fitTopicMap(-1, guide)
+  }
+  function returnToExploration() {
+    navigateMode('events')
+    setCanvasEnabled(true)
+    setMobileView('split')
+  }
+  function goHome() {
+    setCanvasEnabled(true)
+    navigateMode('events')
+    setFocus({ region: 'china', token: Date.now() })
   }
   function continueReading(hash: string) {
-    const state = parseHash(hash),
-      shared = parseViewParams(hash)
-    if (state.tour)
-      resumeTopic(state.tour, state.step !== undefined && state.step >= 0 ? state.step : undefined)
-    else if (state.event) openEvent(state.event)
+    const address = new URL(hash, new URL(siteBase, window.location.origin))
+    const state = parseHash(address.hash),
+      shared = parseViewParams(address.hash)
+    const id = articleIdFromLegacyHash(address.hash) ?? articleIdFromPath(address.pathname)
+    const record = recordFromPath(address.pathname)
+    if (record?.type === 'event') openEvent(record.id)
+    else if (record?.type === 'person') openPerson(record.id)
+    else if (record?.type === 'dynasty') openDynasty(record.id)
+    else if (record?.type === 'place') openPlace(record.id)
+    else if (id && articleById.has(id)) {
+      openArticle(id)
+    } else if (state.tour) {
+      const topic = allTours.find((item) => item.id === state.tour)
+      const step =
+        !progress.topics[state.tour] && topic ? topicStepFromHash(topic, hash) : undefined
+      if (state.step === -1) startTour(state.tour)
+      else resumeTopic(state.tour, step)
+    } else if (state.event) openEvent(state.event)
     else if (state.person) openPerson(state.person)
     else if (state.dynasty) openDynasty(state.dynasty)
     else if (shared.place) openPlace(shared.place)
@@ -1084,45 +1365,28 @@ export default function App() {
   function markChapterRead() {
     if (!tourState || tourState.step < 0) return
     const { id, step } = tourState
-    setProgress((old) => {
-      const prior = old.topics[id] ?? { lastStep: step, read: [] }
-      return {
-        ...old,
-        topics: {
-          ...old.topics,
-          [id]: {
-            lastStep: step,
-            read: prior.read.includes(step)
-              ? prior.read.filter((n) => n !== step)
-              : [...prior.read, step],
-          },
-        },
-      }
-    })
+    setProgress((old) => toggleArticleEventRead(old, allTours, canonicalArticleId, id, step))
   }
   function openTourChapter(step: number, remember = true) {
     if (!tour || !tourState) return
     if (remember) rememberView()
     setMobileView('split')
     if (step < 0) {
-      setPlaying(false)
-      setTourState({ ...tourState, step: -1 })
-      setSelection(null)
+      openArticle(tour.id, false)
       return
     }
     setTourState({ ...tourState, step })
     openEvent(tour.steps[step], true)
     fitTopicMap(step)
   }
-  function fitTopicMap(step = tourState?.step ?? 0) {
-    if (!tour) return
-    if (tour.id === 'silk-road') {
+  function fitTopicMap(step = tourState?.step ?? 0, item = tour) {
+    if (!item) return
+    if (item.id === 'silk-road' && step >= 0) {
       setFocus({ region: 'silk', token: Date.now() })
       return
     }
-    const coordinates = tour.steps
-      .slice(Math.max(0, step - 1), step + 2)
-      .map((id) => eventById.get(id)!.coordinates)
+    const steps = step < 0 ? item.steps : item.steps.slice(Math.max(0, step - 1), step + 2)
+    const coordinates = steps.map((id) => eventById.get(id)!.coordinates)
     setFocus({
       bounds: [
         [
@@ -1142,8 +1406,7 @@ export default function App() {
     const step = tourState.step + offset
     if (step >= tour.steps.length) {
       if (tour.chapters) {
-        setTourState({ ...tourState, step: -1 })
-        setSelection(null)
+        openArticle(tour.id)
         setToast('专题已读完，可以回顾导读与各章，也可以选择新的专题')
         return
       }
@@ -1190,7 +1453,7 @@ export default function App() {
       value < MIN_YEAR ||
       value > MAX_YEAR
     ) {
-      setCompareError('请输入前10000年至1912年之间的年份，公元前用负数，没有0年。')
+      setCompareError(`请输入前10000年至${MAX_YEAR}年之间的年份，公元前用负数，没有0年。`)
       requestAnimationFrame(() => {
         const controls = comparisonControlsRef.current
         if (controls) controls.scrollTop = controls.scrollHeight
@@ -1201,6 +1464,7 @@ export default function App() {
     setCompareError('')
   }
   function startTrail(id: string) {
+    setCanvasEnabled(true)
     rememberView()
     setScope(readScopePreferences(initial.preferences.scope).map)
     setVisualization('map')
@@ -1346,15 +1610,15 @@ export default function App() {
       if (pillarRegion !== 'all') params.set('region', pillarRegion)
     }
     if (compareYear !== null) params.set('compare', String(compareYear))
-    if (tourState) {
+    if (!articleId && tourState) {
       params.set('tour', tourState.id)
       params.set('step', String(tourState.step))
     }
-    if (selection?.type === 'event') params.set('event', selection.id)
-    if (selection?.type === 'person') params.set('person', selection.id)
-    if (selection?.type === 'dynasty') params.set('dynasty', selection.id)
-    if (selection?.type === 'place') params.set('place', selection.id)
-    if (selection?.type === 'polity') params.set('polity', selection.id)
+    if (!articleId && selection?.type === 'event') params.set('event', selection.id)
+    if (!articleId && selection?.type === 'person') params.set('person', selection.id)
+    if (!articleId && selection?.type === 'dynasty') params.set('dynasty', selection.id)
+    if (!articleId && selection?.type === 'place') params.set('place', selection.id)
+    if (!articleId && selection?.type === 'polity') params.set('polity', selection.id)
     params.set('view', mode)
     params.set('category', category)
     params.set('cities', showCities ? '1' : '0')
@@ -1368,7 +1632,7 @@ export default function App() {
     if (archiveFilters.query) params.set('archiveQuery', archiveFilters.query)
     if (archiveFilters.period !== 'all') params.set('archivePeriod', archiveFilters.period)
     if (archiveFilters.allChanges) params.set('changes', '1')
-    if (trail) {
+    if (!articleId && trail) {
       params.set('journey', trail.personId)
       if (trail.activeId) params.set('point', trail.activeId)
       if (showFutureJourney) params.set('future', '1')
@@ -1383,7 +1647,17 @@ export default function App() {
       params.set('lat', String(camera.lat))
       params.set('zoom', String(camera.zoom))
     }
-    navigation.setUrl(`#${params}`, immediate)
+    const path = articleId
+      ? articleUrl(articleId)
+      : recordUrl(selection)
+        ? recordUrl(selection)!
+        : mode === 'tours' && !tourState
+          ? topicDirectoryUrl
+          : siteBase
+    if (path !== siteBase) {
+      saveReadingContext(path, `#${params}`)
+      navigation.setUrl(path, true)
+    } else navigation.setUrl(mapUrl(path, params), immediate || window.location.pathname !== path)
   }, [
     year,
     visualization,
@@ -1397,6 +1671,7 @@ export default function App() {
     trail,
     showFutureJourney,
     tourState,
+    articleId,
     mode,
     category,
     showCities,
@@ -1409,8 +1684,14 @@ export default function App() {
   ])
   useEffect(() => {
     const topic = allTours.find((item) => item.id === tourState?.id)
-    const key = tourState ? `topic:${tourState.id}` : readingSelectionKey(selection)
+    const article = articleId ? articleById.get(articleId) : undefined
+    const key = article
+      ? `topic:${article.id}`
+      : tourState
+        ? `topic:${tourState.id}`
+        : readingSelectionKey(selection)
     const title =
+      article?.name ??
       topic?.name ??
       (selection?.type === 'event'
         ? eventById.get(selection.id)?.title
@@ -1422,7 +1703,8 @@ export default function App() {
               ? placeById.get(selection.id)?.name
               : undefined)
     if (!key || !title) return
-    const hash = new URL(navigation.url()).hash
+    const address = new URL(navigation.url())
+    const hash = address.pathname + address.hash
     setProgress((old) => ({
       topics:
         topic && tourState && tourState.step >= 0
@@ -1433,8 +1715,86 @@ export default function App() {
           : old.topics,
       recent: [{ key, title, hash }, ...old.recent.filter((item) => item.key !== key)].slice(0, 12),
     }))
-  }, [selection, tourState])
-  useEffect(() => writeProgress(progress), [progress])
+  }, [selection, tourState, articleId])
+  useEffect(() => {
+    const article = articleId ? articleById.get(articleId) : undefined
+    const record =
+      selection?.type === 'event'
+        ? eventById.get(selection.id)
+        : selection?.type === 'person'
+          ? personById.get(selection.id)
+          : selection?.type === 'dynasty'
+            ? (dynastyById.get(selection.id) ?? worldPolityById.get(selection.id))
+            : selection?.type === 'place'
+              ? {
+                  ...placeById.get(selection.id)!,
+                  summary:
+                    placeReading[selection.id]?.text ??
+                    `${placeById.get(selection.id)?.name}的历史事件、地名与已核对行迹。`,
+                }
+              : undefined
+    const recordTitle = record && ('title' in record ? record.title : record.name)
+    const directory = !article && !record && mode === 'tours' && !tourState
+    const title = article
+      ? `${article.name} · 山河纪`
+      : recordTitle
+        ? `${recordTitle} · 山河纪`
+        : directory
+          ? '历史专题 · 山河纪'
+          : '山河纪 · Time Atlas'
+    const description =
+      article?.description ??
+      record?.summary ??
+      '山河纪（Time Atlas）：在地图上读历史，在时间中看山河。沿时间探索历史疆域、事件、人物与有出处的行迹。'
+    const path = article
+      ? articleUrl(article.id)
+      : (recordUrl(selection) ?? (directory ? topicDirectoryUrl : siteBase))
+    const url = new URL(
+      path,
+      document.querySelector<HTMLLinkElement>('link[rel="canonical"]')!.href,
+    ).href
+    document.title = title
+    for (const [selector, content] of [
+      ['meta[name="description"]', description],
+      ['meta[property="og:title"]', title],
+      ['meta[property="og:description"]', description],
+      ['meta[property="og:url"]', url],
+      ['meta[property="og:type"]', article || record ? 'article' : 'website'],
+    ])
+      document.querySelector(selector)?.setAttribute('content', content)
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', url)
+    let structured = document.querySelector<HTMLScriptElement>('#article-structured-data')
+    if (article || record) {
+      if (!structured) {
+        structured = document.createElement('script')
+        structured.id = 'article-structured-data'
+        structured.type = 'application/ld+json'
+        document.head.appendChild(structured)
+      }
+      structured.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article?.name ?? recordTitle,
+        description,
+        url,
+        mainEntityOfPage: url,
+        inLanguage: 'zh-CN',
+      })
+    } else structured?.remove()
+    let breadcrumb = document.querySelector<HTMLScriptElement>('#breadcrumb-structured-data')
+    if (path !== siteBase) {
+      if (!breadcrumb) {
+        breadcrumb = document.createElement('script')
+        breadcrumb.id = 'breadcrumb-structured-data'
+        breadcrumb.type = 'application/ld+json'
+        document.head.appendChild(breadcrumb)
+      }
+      breadcrumb.textContent = JSON.stringify(
+        breadcrumbData(path, title.replace(/ · 山河纪$/, ''), new URL(siteBase, url).href),
+      )
+    } else breadcrumb?.remove()
+  }, [articleId, mode, tourState, selection])
+  useEffect(() => writeProgress(progress, allTours), [progress])
   useEffect(() => {
     function hashChanged() {
       if (navigation.consumeHashChange()) return
@@ -1454,12 +1814,17 @@ export default function App() {
       setCompareDraft(String(next.compare ?? 220))
       setSelection(next.selection)
       setTourState(next.tour)
+      setArticleId(next.articleId)
+      setCanvasEnabled(!next.articleId && next.view.mode !== 'tours')
+      setTopicEntrySelected(!!next.articleId || next.view.mode === 'tours' || !!next.tour)
       setTrailPerson(next.tour ? null : next.trail)
       setTrailPoint(next.point)
       setShowFutureJourney(next.future)
       setMode(
-        next.view.mode ??
-          (next.tour ? 'tours' : next.selection?.type === 'person' ? 'people' : 'events'),
+        next.articleId
+          ? 'tours'
+          : (next.view.mode ??
+              (next.tour ? 'tours' : next.selection?.type === 'person' ? 'people' : 'events')),
       )
       setCategory(next.view.category)
       setExploration(next.view.exploration)
@@ -1535,7 +1900,13 @@ export default function App() {
   useEffect(() => {
     function keydown(event: KeyboardEvent) {
       const target = event.target as HTMLElement
-      if (target.closest('input,textarea,select,button,a,dialog') || dialog) return
+      if (
+        target.closest('input,textarea,select,button,a,dialog') ||
+        dialog ||
+        topicReading ||
+        !canvasEnabled
+      )
+        return
       if (event.code === 'Space' && visualization === 'map') {
         event.preventDefault()
         togglePlayback()
@@ -1549,7 +1920,7 @@ export default function App() {
     }
     window.addEventListener('keydown', keydown)
     return () => window.removeEventListener('keydown', keydown)
-  }, [navigateYear, dialog, togglePlayback, visualization])
+  }, [navigateYear, dialog, togglePlayback, visualization, topicReading, canvasEnabled])
   useEffect(() => {
     if (!toast) return
     const timeout = window.setTimeout(() => setToast(''), 3000)
@@ -1563,8 +1934,18 @@ export default function App() {
   useLayoutEffect(() => {
     panelRef.current?.scrollTo({ top: pendingScroll.current ?? 0 })
     pendingScroll.current = null
-  }, [selection, mode, tourState?.id, tourState?.step])
+  }, [selection, mode, tourState?.id, tourState?.step, articleId])
+  useRecordPosition(
+    panelRef,
+    recordUrl(selection),
+    selection?.type === 'event'
+      ? !!eventReading.record
+      : selection?.type === 'person'
+        ? !!personReading.record
+        : selection?.type === 'dynasty' || selection?.type === 'place',
+  )
   useReadingResize(panelRef, [
+    articleId,
     selection,
     mode,
     tourState?.id,
@@ -1791,7 +2172,16 @@ export default function App() {
 
   function eventCard(event: HistoryEvent) {
     return (
-      <button className="event-card" key={event.id} onClick={() => openEvent(event.id)}>
+      <a
+        className="event-card"
+        href={eventUrl(event.id)}
+        key={event.id}
+        onClick={(click) => {
+          if (click.metaKey || click.ctrlKey || click.shiftKey || click.altKey) return
+          click.preventDefault()
+          openEvent(event.id)
+        }}
+      >
         <div className="event-card-meta">
           <span className="category-badge" style={{ color: categoryColors[event.category] }}>
             <span style={{ background: categoryColors[event.category] }} />
@@ -1818,9 +2208,49 @@ export default function App() {
             ))}
           </span>
         </div>
-      </button>
+      </a>
     )
   }
+
+  const pendingTopicAction = useRef(topicAction)
+  useEffect(() => {
+    const action = pendingTopicAction.current
+    if (!action) return
+    pendingTopicAction.current = undefined
+    switch (action.type) {
+      case 'map':
+      case 'pillar':
+        if (action.type === visualization) rememberView()
+        switchVisualization(action.type)
+        break
+      case 'explore':
+        returnToExploration()
+        break
+      case 'home':
+        goHome()
+        break
+      case 'saved':
+        navigateMode('saved')
+        break
+      case 'sources':
+        setDialog('sources')
+        break
+      case 'overview':
+        openTopicOverview()
+        break
+      case 'event':
+        openTopicEvent(action.id)
+        break
+      case 'resume':
+        if (readingArticle?.guideId) resumeTopic(readingArticle.guideId)
+        break
+      case 'search':
+        setQuery(action.query)
+        setSearchOpen(true)
+        searchRef.current?.querySelector('input')?.focus({ preventScroll: true })
+        break
+    }
+  }, [])
 
   return (
     <div
@@ -1830,6 +2260,11 @@ export default function App() {
       data-focus-mode={focusMode}
       data-visualization={visualization}
       data-reading-detail={!!selection}
+      data-canvas-enabled={canvasEnabled}
+      data-topic-reading={topicReading || !canvasEnabled}
+      data-topic-overview={
+        topicReading || !canvasEnabled || (tour?.chapters && tourState?.step === -1)
+      }
     >
       {focusMode && (
         <button
@@ -1843,45 +2278,14 @@ export default function App() {
         </button>
       )}
       <header className="topbar" inert={focusMode}>
-        <a
-          className="brand"
-          href="#"
-          aria-label="山河纪 · Time Atlas，返回自由探索"
-          onClick={(event) => {
-            event.preventDefault()
-            navigateMode('events')
-            setFocus({ region: 'china', token: Date.now() })
-          }}
-        >
-          <span className="brand-mark">
-            <Compass size={23} strokeWidth={1.4} />
-          </span>
-          <span>
-            山河纪<small>TIME ATLAS</small>
-          </span>
-        </a>
-        <nav className="main-nav" aria-label="主导航">
-          <div className="header-view-switch" role="group" aria-label="探索模式">
-            {(['map', 'pillar'] as const).map((value) => (
-              <button
-                key={value}
-                aria-pressed={visualization === value}
-                onClick={() => switchVisualization(value)}
-              >
-                {value === 'map' ? <MapIcon size={15} /> : <Layers3 size={15} />}
-                <span>{value === 'map' ? '地图' : '时空柱'}</span>
-              </button>
-            ))}
-          </div>
-          <button
-            data-main-topics
-            className={mode === 'tours' || tour?.chapters ? 'active' : ''}
-            onClick={() => navigateMode('tours')}
-          >
-            历史专题
-            <span className="nav-dot" />
-          </button>
-        </nav>
+        <AtlasNavigation
+          base={siteBase}
+          visualization={!topicReading && canvasEnabled ? visualization : undefined}
+          topicsActive={topicEntrySelected && (mode === 'tours' || !!tour?.chapters)}
+          onHome={goHome}
+          onVisualization={switchVisualization}
+          onTopics={() => navigateMode('tours')}
+        />
         <div className="top-search" ref={searchRef} data-search-open={searchOpen && !!query.trim()}>
           <Search size={16} />
           <input
@@ -1942,6 +2346,15 @@ export default function App() {
           ) : (
             <kbd>探索</kbd>
           )}
+          <button
+            className="search-dismiss"
+            onClick={(event) => {
+              setSearchOpen(false)
+              event.currentTarget.blur()
+            }}
+          >
+            取消搜索
+          </button>
           {searchOpen && query.trim() && (
             <div className="search-results" id="history-search-results">
               <span className="eyebrow">找到 {searchResults.length} 项结果</span>
@@ -1984,6 +2397,7 @@ export default function App() {
                           }{' '}
                           · {result.sub}
                         </small>
+                        {'reason' in result && result.reason && <small>{result.reason}</small>}
                       </span>
                       <ChevronRight size={14} />
                     </button>
@@ -2014,18 +2428,26 @@ export default function App() {
           <button
             className="icon-button navigation-menu-entry"
             aria-label="返回自由探索"
-            onClick={() => navigateMode('events')}
+            onClick={returnToExploration}
           >
             <Compass size={18} />
           </button>
-          <button
-            className="icon-button topics-menu-entry"
-            aria-label="历史专题"
-            onClick={() => navigateMode('tours')}
-          >
-            <BookOpen size={18} />
-          </button>
           <span className="menu-group-label">显示方式</span>
+          <button
+            className="icon-button color-mode-menu-entry"
+            aria-label={colorMode === 'light' ? '切换到夜间模式' : '切换到白天模式'}
+            aria-pressed={colorMode === 'dark'}
+            onClick={() => {
+              setMoreOpen(false)
+              toggleColorMode()
+            }}
+          >
+            {colorMode === 'light' ? (
+              <Moon size={18} aria-hidden="true" />
+            ) : (
+              <Sun size={18} aria-hidden="true" />
+            )}
+          </button>
           <DisplayControls onAction={() => setMoreOpen(false)} onFocusMode={enterFocusMode} />
           <button
             ref={focusEnterRef}
@@ -2136,127 +2558,128 @@ export default function App() {
           <div className="map-context-note" role="note" aria-label="地图年代说明">
             <Info size={16} aria-hidden="true" />
             <span>
-              地点参照 · 事件 {selectedEvent.year} 年 / 疆域 {year} 年
-              <small>所示疆域不代表事件当年</small>
+              地点参照 · 事件 {selectedEvent.year} 年 / 地图 {year} 年
             </span>
           </div>
         )}
         <div className="map-stage">
-          <CanvasBoundary key={visualization} onRetry={() => window.location.reload()}>
-            <Suspense
-              fallback={
-                <div className="map-loading" role="status">
-                  {visualization === 'pillar' ? '正在展开时空柱…' : '正在载入历史地图…'}
-                </div>
-              }
-            >
-              {visualization === 'pillar' ? (
-                <TimePillar
-                  focused={focusMode}
-                  year={year}
-                  span={pillarSpan}
-                  side={pillarSide}
-                  region={pillarRegion}
-                  category={category}
-                  events={explorationEvents}
-                  allCategoryEvents={allCategoryEvents}
-                  hasSpatialFilter={!!exploration.place || !!exploration.bounds}
-                  onClearSpatial={() => {
-                    setExploration((old) => ({ ...old, place: '', bounds: null }))
-                    setPlaying(false)
-                  }}
-                  selectedId={selection?.type === 'event' ? selection.id : undefined}
-                  playing={playing}
-                  range={exploration.range}
-                  onNavigate={(value, span) => {
-                    setYear(clampPillarYear(value))
-                    setPillarSpan(span)
-                    setPlaying(false)
-                    setPlaybackReading(false)
-                  }}
-                  onPause={() => setPlaying(false)}
-                  onBrowseStart={() => {
-                    setTourState(null)
-                    setTrailPerson(null)
-                    setPlaying(true)
-                    setPlaybackReading(false)
-                    setSelection(null)
-                    setMode('events')
-                  }}
-                  onBrowseNavigate={(value, span) => {
-                    setYear(clampPillarYear(value))
-                    setPillarSpan(span)
-                  }}
-                  onSide={(value) => {
-                    setPillarSide(value)
-                    setPlaying(false)
-                  }}
-                  onRegion={(value) => {
-                    setPillarRegion(value)
-                    setPlaying(false)
-                  }}
-                  onCategory={(value) => {
-                    setCategory(value)
-                    setPlaying(false)
-                  }}
-                  onRange={(range) => {
-                    setExploration((old) => ({ ...old, range }))
-                    setPlaying(false)
-                  }}
-                  onEvent={(id) => openEvent(id, false, false, true)}
-                  readerCollapsed={readerCollapsed}
-                  onToggleReader={() => {
-                    setReaderCollapsed(false)
-                    requestAnimationFrame(() =>
-                      document.querySelector<HTMLButtonElement>('.reader-toggle')?.focus(),
-                    )
-                  }}
-                />
-              ) : (
-                <HistoryMap
-                  colorMode={colorMode}
-                  wrapLongitude
-                  year={clampYear(year)}
-                  events={mapEvents}
-                  showCities={showCities}
-                  showEvents={showEvents}
-                  showRoutes={showRoutes}
-                  hiddenPolities={hiddenPolities}
-                  selection={selection}
-                  focus={focus}
-                  initialCamera={initialCamera}
-                  onSelect={selectMap}
-                  onPolities={onPolities}
-                  onLoadState={setMapLoadState}
-                  onBounds={setMapBounds}
-                  onCamera={onCamera}
-                  compareYear={compareYear}
-                  trail={trail}
-                  topicSteps={tour?.chapters ? tour.steps : undefined}
-                  journeyResetToken={journeyResetToken}
-                  playing={playing}
-                  speed={speed}
-                  followSpotlight={playing || liveReading}
-                  spotlightId={
-                    !trail && !tour
-                      ? selection?.type === 'event' && !playing && !playbackReading
-                        ? selection.id
-                        : currentYearEvents[0]?.id
-                      : undefined
-                  }
-                  onJourneyArrival={(id) => {
-                    const node = personJourney?.nodes.find((item) => item.id === id)
-                    if (!node) return
-                    setYear(node.year)
-                    setTrailPoint(node.id)
-                    if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
-                  }}
-                  onJourneyNode={selectJourneyNode}
-                />
-              )}
-            </Suspense>
-          </CanvasBoundary>
-          {compareYear !== null && (
+          {!topicReading && canvasEnabled && (
+            <CanvasBoundary key={visualization} onRetry={reloadCanvas}>
+              <Suspense
+                fallback={
+                  <div className="map-loading" role="status">
+                    {visualization === 'pillar' ? '正在展开时空柱…' : '正在载入历史地图…'}
+                  </div>
+                }
+              >
+                {visualization === 'pillar' ? (
+                  <TimePillar
+                    focused={focusMode}
+                    year={year}
+                    span={pillarSpan}
+                    side={pillarSide}
+                    region={pillarRegion}
+                    category={category}
+                    events={explorationEvents}
+                    allCategoryEvents={allCategoryEvents}
+                    hasSpatialFilter={!!exploration.place || !!exploration.bounds}
+                    onClearSpatial={() => {
+                      setExploration((old) => ({ ...old, place: '', bounds: null }))
+                      setPlaying(false)
+                    }}
+                    selectedId={selection?.type === 'event' ? selection.id : undefined}
+                    playing={playing}
+                    range={exploration.range}
+                    onNavigate={(value, span) => {
+                      setYear(clampPillarYear(value))
+                      setPillarSpan(span)
+                      setPlaying(false)
+                      setPlaybackReading(false)
+                    }}
+                    onPause={() => setPlaying(false)}
+                    onBrowseStart={() => {
+                      setTourState(null)
+                      setTrailPerson(null)
+                      setPlaying(true)
+                      setPlaybackReading(false)
+                      setSelection(null)
+                      setMode('events')
+                    }}
+                    onBrowseNavigate={(value, span) => {
+                      setYear(clampPillarYear(value))
+                      setPillarSpan(span)
+                    }}
+                    onSide={(value) => {
+                      setPillarSide(value)
+                      setPlaying(false)
+                    }}
+                    onRegion={(value) => {
+                      setPillarRegion(value)
+                      setPlaying(false)
+                    }}
+                    onCategory={(value) => {
+                      setCategory(value)
+                      setPlaying(false)
+                    }}
+                    onRange={(range) => {
+                      setExploration((old) => ({ ...old, range }))
+                      setPlaying(false)
+                    }}
+                    onEvent={(id) => openEvent(id, false, false, true)}
+                    readerCollapsed={readerCollapsed}
+                    onToggleReader={() => {
+                      setReaderCollapsed(false)
+                      requestAnimationFrame(() =>
+                        document.querySelector<HTMLButtonElement>('.reader-toggle')?.focus(),
+                      )
+                    }}
+                  />
+                ) : (
+                  <HistoryMap
+                    colorMode={colorMode}
+                    wrapLongitude
+                    year={clampYear(year)}
+                    events={mapEvents}
+                    showCities={showCities}
+                    showEvents={showEvents}
+                    showRoutes={showRoutes}
+                    hiddenPolities={hiddenPolities}
+                    selection={selection}
+                    focus={focus}
+                    initialCamera={camera ?? initialCamera}
+                    onSelect={selectMap}
+                    onPolities={onPolities}
+                    onLoadState={setMapLoadState}
+                    onBounds={setMapBounds}
+                    onCamera={onCamera}
+                    compareYear={compareYear}
+                    trail={trail}
+                    topicSteps={tour?.chapters ? tour.steps : undefined}
+                    journeyResetToken={journeyResetToken}
+                    playing={playing}
+                    speed={speed}
+                    followSpotlight={playing || liveReading}
+                    spotlightId={
+                      !trail && !tour
+                        ? selection?.type === 'event' && !playing && !playbackReading
+                          ? selection.id
+                          : currentYearEvents[0]?.id
+                        : undefined
+                    }
+                    onJourneyArrival={(id) => {
+                      const node = personJourney?.nodes.find((item) => item.id === id)
+                      if (!node) return
+                      setYear(node.year)
+                      setTrailPoint(node.id)
+                      if (node.id === personJourney?.nodes.at(-1)?.id) setPlaying(false)
+                    }}
+                    onJourneyNode={selectJourneyNode}
+                  />
+                )}
+              </Suspense>
+            </CanvasBoundary>
+          )}
+          {visualization === 'map' && compareYear !== null && (
             <div className="comparison-controls" ref={comparisonControlsRef}>
               <form
                 onSubmit={(event) => {
@@ -2265,11 +2688,11 @@ export default function App() {
                 }}
               >
                 <span>
-                  <i className="current-key" />
+                  {year <= TERRITORY_MAX_YEAR && <i className="current-key" />}
                   当前 {compactYear(year)}年
                 </span>
                 <label>
-                  <i className="reference-key" />
+                  {compareYear <= TERRITORY_MAX_YEAR && <i className="reference-key" />}
                   参考{' '}
                   <input
                     type="number"
@@ -2288,8 +2711,10 @@ export default function App() {
                 </button>
               </form>
               <p>
-                蓝色虚线：{formatYear(compareYear)}的疆域记录 ·{' '}
-                {worldBrowsing ? worldPeriodAt(compareYear).name : periodAt(compareYear).name}
+                {compareYear <= TERRITORY_MAX_YEAR
+                  ? `蓝色虚线表示${formatYear(compareYear)}的疆域记录`
+                  : `${compareYear}年疆界待补，可对照两年间的事件`}{' '}
+                · {worldBrowsing ? worldPeriodAt(compareYear).name : periodAt(compareYear).name}
               </p>
               <button className="comparison-read-button" onClick={() => navigateMode('comparison')}>
                 解读这段变化 <ArrowRight size={13} />
@@ -2410,7 +2835,7 @@ export default function App() {
               )}
             </div>
             <div className="map-legend" aria-label="政权图例">
-              {polities
+              {(year <= TERRITORY_MAX_YEAR ? polities : [])
                 .filter((item) => !mapBounds || insideBounds(item.label, mapBounds))
                 .sort((a, b) =>
                   worldBrowsing
@@ -2438,13 +2863,15 @@ export default function App() {
                     {item.nameZh}
                   </button>
                 ))}
-              {polities.length === 0 && (
+              {(year > TERRITORY_MAX_YEAR || polities.length === 0) && (
                 <span className="legend-empty">
                   {mapLoadState === 'loading'
-                    ? '正在读取疆域资料'
+                    ? '正在读取地图资料'
                     : mapLoadState === 'error'
-                      ? '疆域资料加载失败，可在地图中重试'
-                      : '这一年暂无可用疆域轮廓；仍可阅读事件。'}
+                      ? '地图资料加载失败，可在地图中重试'
+                      : year > TERRITORY_MAX_YEAR
+                        ? '地点与事件 · 疆界待补'
+                        : '这一年暂无可用疆域轮廓。'}
                 </span>
               )}
             </div>
@@ -2452,7 +2879,48 @@ export default function App() {
         </div>
       </main>
 
-      <aside className="story-panel" aria-label="历史内容">
+      {!selection &&
+        !articleId &&
+        !tourState &&
+        mode === 'events' &&
+        progress.recent.find(
+          (item) =>
+            articleIdFromPath(new URL(item.hash, window.location.href).pathname) ||
+            recordFromPath(new URL(item.hash, window.location.href).pathname),
+        ) &&
+        (() => {
+          const latest = progress.recent.find(
+            (item) =>
+              articleIdFromPath(new URL(item.hash, window.location.href).pathname) ||
+              recordFromPath(new URL(item.hash, window.location.href).pathname),
+          )!
+          return (
+            <a className="home-resume" href={latest.hash}>
+              <span>继续上次阅读</span>
+              <strong>{latest.title}</strong>
+              <ArrowRight size={16} />
+            </a>
+          )
+        })()}
+
+      <aside
+        className="story-panel"
+        role={topicReading || !canvasEnabled ? 'main' : undefined}
+        aria-label="历史内容"
+      >
+        {recordUrl(selection) && (
+          <a
+            className="reader-return"
+            href={recordUrl(selection)!}
+            onClick={(event) => {
+              if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+              event.preventDefault()
+              window.location.replace(recordUrl(selection)!)
+            }}
+          >
+            {canvasEnabled ? '专注阅读 · 关闭地图' : '打开独立阅读页'}
+          </a>
+        )}
         <MobileSheetHandle
           view={mobileView}
           title={
@@ -2575,7 +3043,7 @@ export default function App() {
             </section>
           ) : (
             <>
-              {selection && (
+              {selection && !readingArticle && (
                 <div className="detail-navigation">
                   <button onClick={back}>
                     <ArrowLeft size={14} />
@@ -2598,14 +3066,70 @@ export default function App() {
                   <div>{selection.type !== 'polity' && saveButton(selection)}</div>
                 </div>
               )}
-              {tour?.chapters && tourState?.step === -1 ? (
+              {readingArticle ? (
                 <TopicPanel
-                  topic={tour}
+                  key={readingArticle.id}
+                  topic={readingArticle}
+                  routes={articleRoutes}
                   eventById={eventById}
-                  onChapter={openTourChapter}
-                  progress={progress.topics[tour.id]}
-                  onResume={() => resumeTopic(tour.id)}
+                  onEvent={openTopicEvent}
+                  progress={
+                    readingArticle.guideId ? progress.topics[readingArticle.guideId] : undefined
+                  }
+                  onResume={
+                    readingArticle.guideId ? () => resumeTopic(readingArticle.guideId!) : undefined
+                  }
+                  panelRef={panelRef}
+                  onLibrary={() => {
+                    if (
+                      navigation.previous?.mode === 'tours' &&
+                      !navigation.previous.articleId &&
+                      !navigation.previous.tourState &&
+                      !navigation.previous.selection
+                    )
+                      back()
+                    else navigateMode('tours')
+                  }}
+                  bookmarked={bookmarks.includes(`topic:${readingArticle.id}`)}
+                  onBookmark={() => {
+                    const key = `topic:${readingArticle.id}`
+                    setBookmarks((old) =>
+                      old.includes(key) ? old.filter((item) => item !== key) : [...old, key],
+                    )
+                  }}
+                  onShare={share}
+                  onMapOverview={
+                    readingArticle.mapOverview && readingArticle.guideId
+                      ? openTopicOverview
+                      : undefined
+                  }
                 />
+              ) : tour?.chapters && tourState?.step === -1 ? (
+                <article className="topic-map-summary">
+                  <span className="eyebrow">历史专题 · 地点一览</span>
+                  <h2>{tour.name}</h2>
+                  <p>{tour.description}</p>
+                  {tour.steps.some((id) => eventById.get(id)!.year > MAX_YEAR) && (
+                    <p className="topic-reading-help">
+                      地点按相关史事定位。{MAX_YEAR}年后的史事可在时空柱中查看。
+                    </p>
+                  )}
+                  <button
+                    className="outline-action"
+                    onClick={() => {
+                      openArticle(tour.id)
+                    }}
+                  >
+                    <BookOpen size={16} />
+                    返回专题文章
+                    <ArrowRight size={15} />
+                  </button>
+                  <button className="outline-action" onClick={() => openTourChapter(0)}>
+                    <Compass size={16} />
+                    开始地图学习
+                    <ArrowRight size={15} />
+                  </button>
+                </article>
               ) : selectedPlace ? (
                 <PlacePanel
                   key={selectedPlace.id}
@@ -2618,6 +3142,7 @@ export default function App() {
                   onEvent={openEvent}
                   onPerson={(id) => openPerson(id, { type: 'place', id: selectedPlace.id })}
                   onLocate={() => {
+                    setCanvasEnabled(true)
                     setMobileView('split')
                     setFocus({ coordinates: selectedPlace.coordinates, zoom: 5, token: Date.now() })
                   }}
@@ -2642,8 +3167,7 @@ export default function App() {
                   <p className="detail-lead">{selectedEvent.summary}</p>
                   {visualization === 'map' && selectedEvent.year > MAX_YEAR && (
                     <p className="evidence-note modern-map-note" role="note">
-                      本事件发生于{selectedEvent.year}年，超出历史疆域资料范围。当前地图年份为{year}
-                      年，所示疆域不代表事件当年，地点仅供参照。
+                      本事件发生于{selectedEvent.year}年。当前地图为{year}年的地点参照。
                     </p>
                   )}
                   <button
@@ -2672,7 +3196,7 @@ export default function App() {
                           setExploration((old) =>
                             old.range && old.range[1] > MAX_YEAR ? { ...old, range: null } : old,
                           )
-                          setToast('历史疆域资料止于1912年，当前地图只供地点参考。')
+                          setToast(`地图已切回${MAX_YEAR}年供地点参考。`)
                         }
                       }
                       setScope(readScopePreferences(initial.preferences.scope)[nextMode])
@@ -2713,6 +3237,21 @@ export default function App() {
                       <div className="topic-chapter-links">
                         <button onClick={() => fitTopicMap()}>重新定位专题地点</button>
                         <button onClick={() => openTourChapter(-1)}>专题导读与目录</button>
+                        {visualization === 'pillar' && (
+                          <>
+                            <button
+                              aria-label="专题上一章"
+                              disabled={tourState.step === 0}
+                              onClick={() => tourStep(-1)}
+                            >
+                              上一章
+                            </button>
+                            <button className="tour-next" onClick={() => tourStep(1)}>
+                              {tourState.step === tour.steps.length - 1 ? '完成旅程' : '下一章'}
+                            </button>
+                            <button onClick={stopTour}>退出导览</button>
+                          </>
+                        )}
                         <button
                           className="chapter-read"
                           aria-pressed={!!progress.topics[tour.id]?.read.includes(tourState.step)}
@@ -2726,7 +3265,10 @@ export default function App() {
                     </section>
                   )}
                   <ReadingStatus {...eventReading} />
-                  {selectedEvent.details && (
+                  {selectedEvent.narrative && (
+                    <EventNarrative narrative={selectedEvent.narrative} />
+                  )}
+                  {!selectedEvent.narrative && selectedEvent.details && (
                     <section className="detail-section event-narrative">
                       <span className="section-number">01</span>
                       <h3>事情是怎样发生的？</h3>
@@ -2735,7 +3277,7 @@ export default function App() {
                       ))}
                     </section>
                   )}
-                  {eventReading.record && (
+                  {!selectedEvent.narrative && eventReading.record && (
                     <>
                       <div className="detail-section">
                         <span className="section-number">
@@ -2753,23 +3295,31 @@ export default function App() {
                       </div>
                     </>
                   )}
-                  {relatedReading(selectedEvent, events, people).length > 0 && (
-                    <section className="event-relations">
-                      <span className="eyebrow">沿着线索，继续读</span>
-                      <h3>历史不是孤立的时刻</h3>
-                      {relatedReading(selectedEvent, events, people).map((relation, index) => (
-                        <button
-                          key={`${relation.event.id}-${index}`}
-                          onClick={() => openEvent(relation.event.id)}
-                        >
-                          <span>
-                            {relation.label} · {formatEventDate(relation.event)}
-                          </span>
-                          <strong>{relation.event.title}</strong>
-                          <small>{relation.note}</small>
-                          <ChevronRight size={15} />
-                        </button>
-                      ))}
+                  <EventTopicPaths
+                    paths={topicPathsByEvent.get(selectedEvent.id) ?? []}
+                    activeTopicId={tour?.id}
+                    onRead={resumeTopic}
+                  />
+                  {relatedEvents.length > 0 && (
+                    <section className="event-relations" aria-labelledby="event-relations-heading">
+                      <h3 id="event-relations-heading">相关事件</h3>
+                      <ul role="list">
+                        {relatedEvents.map((relation, index) => (
+                          <li key={`${relation.event.id}-${index}`}>
+                            <ReadingLink
+                              href={eventUrl(relation.event.id)}
+                              onNavigate={() => openEvent(relation.event.id)}
+                            >
+                              <span className="event-relation-meta">
+                                {relation.label} · {formatEventDate(relation.event)}
+                              </span>
+                              <strong>{relation.event.title}</strong>
+                              {relation.note && <small>{relation.note}</small>}
+                              <ChevronRight size={15} aria-hidden="true" />
+                            </ReadingLink>
+                          </li>
+                        ))}
+                      </ul>
                     </section>
                   )}
                   {selectedEvent.people.length > 0 && (
@@ -2780,9 +3330,12 @@ export default function App() {
                       {selectedEvent.people.map((id) => {
                         const person = personById.get(id)!
                         return (
-                          <button
+                          <ReadingLink
+                            href={personUrl(id)}
                             key={id}
-                            onClick={() => openPerson(id, { type: 'event', id: selectedEvent.id })}
+                            onNavigate={() =>
+                              openPerson(id, { type: 'event', id: selectedEvent.id })
+                            }
                           >
                             <Avatar id={id} />
                             <span>
@@ -2790,26 +3343,27 @@ export default function App() {
                               <small>{selectedEvent.peopleNotes?.[id] ?? person.role}</small>
                             </span>
                             <ChevronRight size={14} />
-                          </button>
+                          </ReadingLink>
                         )
                       })}
                     </div>
                   )}
-                  {places.some((place) => namesPlace(selectedEvent.location, place)) && (
+                  {places.some((place) => eventAtPlace(selectedEvent, place)) && (
                     <section className="related-places">
                       <h3>继续探索这个地方</h3>
                       {places
-                        .filter((place) => namesPlace(selectedEvent.location, place))
+                        .filter((place) => eventAtPlace(selectedEvent, place))
                         .map((place) => (
-                          <button
+                          <ReadingLink
+                            href={placeUrl(place.id)}
                             className="outline-action"
                             key={place.id}
-                            onClick={() => openPlace(place.id)}
+                            onNavigate={() => openPlace(place.id)}
                           >
                             <MapPin size={15} />
                             {place.name} · 历代记录
                             <ArrowRight size={14} />
-                          </button>
+                          </ReadingLink>
                         ))}
                     </section>
                   )}
@@ -2903,7 +3457,11 @@ export default function App() {
                     {events
                       .filter((event) => event.people.includes(selectedPerson.id))
                       .map((event) => (
-                        <button key={event.id} onClick={() => openEvent(event.id)}>
+                        <ReadingLink
+                          href={eventUrl(event.id)}
+                          key={event.id}
+                          onNavigate={() => openEvent(event.id)}
+                        >
                           <span className="person-event-year">
                             {event.dateLabel ?? compactYear(event.year)}
                           </span>
@@ -2915,7 +3473,7 @@ export default function App() {
                             </span>
                           </span>
                           <ArrowRight size={14} />
-                        </button>
+                        </ReadingLink>
                       ))}
                   </div>
                   {(selectedPerson.birth === null || selectedPerson.death === null) && (
@@ -2949,7 +3507,18 @@ export default function App() {
                   />
                   <h2>{polityDynasty?.name ?? selectedPolity?.nameZh ?? selection.id}</h2>
                   <p className="polity-english">{selectedPolity?.name}</p>
-                  {polityDynasty && <DynastyIntroduction dynasty={polityDynasty} />}
+                  {polityDynasty && (
+                    <>
+                      <DynastyIntroduction dynasty={polityDynasty} />
+                      <ReadingLink
+                        className="outline-action"
+                        href={dynastyUrl(polityDynasty.id)}
+                        onNavigate={() => openDynasty(polityDynasty.id)}
+                      >
+                        阅读完整政权档案 <ArrowRight size={14} />
+                      </ReadingLink>
+                    </>
+                  )}
                   {selectedPolity ? (
                     <>
                       <div className="polity-facts">
@@ -3012,6 +3581,7 @@ export default function App() {
                   onAll={(allChanges) => setArchiveFilters((old) => ({ ...old, allChanges }))}
                   events={explorationEvents}
                   dynasties={historyDynasties}
+                  showChineseGeography={historySide !== 'world'}
                   scopeLabel={
                     historySide === 'china'
                       ? '中国历史'
@@ -3029,15 +3599,18 @@ export default function App() {
                   <p>按现有记录中的地名汇集事件与已核对行迹。古今同一地区不等于古城范围相同。</p>
                   <div className="place-directory">
                     {places.map((place) => (
-                      <button key={place.id} onClick={() => openPlace(place.id)}>
+                      <ReadingLink
+                        href={placeUrl(place.id)}
+                        key={place.id}
+                        onNavigate={() => openPlace(place.id)}
+                      >
                         <strong>{place.name}</strong>
                         <small>{place.modern}</small>
                         <span>
-                          {events.filter((event) => namesPlace(event.location, place)).length}{' '}
-                          件相关事件
+                          {events.filter((event) => eventAtPlace(event, place)).length} 件相关事件
                         </span>
                         <ArrowRight size={15} />
-                      </button>
+                      </ReadingLink>
                     ))}
                   </div>
                 </section>
@@ -3090,98 +3663,35 @@ export default function App() {
                     {profile.steps.map((id, index) => {
                       const event = eventById.get(id)!
                       return (
-                        <button key={id} onClick={() => openEvent(id)}>
+                        <ReadingLink href={eventUrl(id)} key={id} onNavigate={() => openEvent(id)}>
                           <span>{String(index + 1).padStart(2, '0')}</span>
                           <div>
                             <small>{formatEventDate(event)}</small>
                             <strong>{event.title}</strong>
                           </div>
                           <ArrowRight size={14} />
-                        </button>
+                        </ReadingLink>
                       )
                     })}
                   </div>
                   {profile.people.length > 0 && <h3>相关人物</h3>}
                   <div className="overview-people">
                     {profile.people.map((id) => (
-                      <button key={id} onClick={() => openPerson(id)}>
+                      <ReadingLink href={personUrl(id)} key={id} onNavigate={() => openPerson(id)}>
                         <Avatar id={id} />
                         {personById.get(id)!.name}
-                      </button>
+                      </ReadingLink>
                     ))}
                   </div>
-                  <Sources
-                    sources={[
-                      ...new Map(
-                        profile.steps
-                          .flatMap((id) => eventById.get(id)!.sources)
-                          .map((source) => [source.url, source]),
-                      ).values(),
-                    ].slice(0, 6)}
-                  />
+                  <EventSources eventIds={profile.steps} initialLimit={6} />
                 </article>
               ) : mode === 'tours' ? (
-                <div className="tours-panel">
-                  <span className="eyebrow">跟随历史的线索</span>
-                  <h2>走一段历史旅程</h2>
-                  <p className="panel-intro">从一个问题出发，把时间、地点和人物连接起来。</p>
-                  {progress.recent.some((item) => item.key.startsWith('topic:')) && (
-                    <section className="resume-reading">
-                      <h3>继续上次的专题</h3>
-                      {progress.recent
-                        .filter((item) => item.key.startsWith('topic:'))
-                        .slice(0, 1)
-                        .map((item) => (
-                          <button key={item.key} onClick={() => continueReading(item.hash)}>
-                            {item.title}
-                            <ArrowRight size={15} />
-                          </button>
-                        ))}
-                    </section>
-                  )}
-                  {tours.map((item) => (
-                    <button
-                      key={item.id}
-                      className="tour-card"
-                      style={{ '--tour-color': item.color } as React.CSSProperties}
-                      onClick={() => startTour(item.id)}
-                    >
-                      <div className="tour-card-art">
-                        {item.icon === 'swords' ? (
-                          <Swords size={46} strokeWidth={1} />
-                        ) : (
-                          <Route size={46} strokeWidth={1} />
-                        )}
-                        <span className="tour-art-circle" />
-                        <span className="tour-art-small-circle" />
-                        <span className="tour-card-number">
-                          {String(tours.indexOf(item) + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-                      <div className="tour-card-body">
-                        <span className="eyebrow">{item.subtitle}</span>
-                        <h3>{item.name}</h3>
-                        {progress.topics[item.id] && (
-                          <small className="topic-reading-progress">
-                            已读{' '}
-                            {
-                              progress.topics[item.id].read.filter(
-                                (step) => step < item.steps.length,
-                              ).length
-                            }{' '}
-                            / {item.steps.length} 章 · 上次停在第{' '}
-                            {Math.min(item.steps.length, progress.topics[item.id].lastStep + 1)} 章
-                          </small>
-                        )}
-                        <p>{item.description}</p>
-                        <span className="tour-card-action">
-                          阅读导读与地图章节
-                          <ArrowRight size={15} />
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+                <TopicDirectory
+                  topics={readingArticles}
+                  progress={progress}
+                  onOpen={startTour}
+                  onResume={startTour}
+                />
               ) : mode === 'saved' ? (
                 <div className="saved-panel">
                   <h2>我的阅读</h2>
@@ -3221,15 +3731,32 @@ export default function App() {
                     bookmarks.map((key) => {
                       const [type, ...rest] = key.split(':')
                       const id = rest.join(':')
+                      const topic = articleById.get(id)
+                      if (type === 'topic' && topic)
+                        return (
+                          <button
+                            key={key}
+                            className="person-list-card"
+                            onClick={() => startTour(id)}
+                          >
+                            <BookOpen size={18} />
+                            <span>
+                              <strong>{topic.name}</strong>
+                              <small>{topic.subject}</small>
+                            </span>
+                            <ArrowRight size={15} />
+                          </button>
+                        )
                       const event = eventById.get(id),
                         person = personById.get(id)
                       if (type === 'event' && event) return eventCard(event)
                       if (type === 'person' && person)
                         return (
-                          <button
+                          <ReadingLink
+                            href={personUrl(id)}
                             key={key}
                             className="person-list-card"
-                            onClick={() => openPerson(id)}
+                            onNavigate={() => openPerson(id)}
                           >
                             <Avatar id={id} />
                             <span>
@@ -3237,37 +3764,39 @@ export default function App() {
                               <small>{person.role}</small>
                             </span>
                             <ArrowRight size={15} />
-                          </button>
+                          </ReadingLink>
                         )
                       const place = placeById.get(id)
                       if (type === 'place' && place)
                         return (
-                          <button
+                          <ReadingLink
+                            href={placeUrl(id)}
                             key={key}
                             className="person-list-card"
-                            onClick={() => openPlace(id)}
+                            onNavigate={() => openPlace(id)}
                           >
                             <MapPin size={18} />
                             <span>
                               <strong>{place.name}</strong>
                               <small>{place.modern}</small>
                             </span>
-                          </button>
+                          </ReadingLink>
                         )
                       const dynasty = dynastyById.get(id) ?? worldPolityById.get(id)
                       if (type === 'dynasty' && dynasty)
                         return (
-                          <button
+                          <ReadingLink
+                            href={dynastyUrl(id)}
                             key={key}
                             className="dynasty-list-card"
-                            onClick={() => openDynasty(id)}
+                            onNavigate={() => openDynasty(id)}
                           >
                             <strong>{dynasty.name}</strong>
                             <small>
                               {compactYear(dynasty.from)}—{compactYear(dynasty.to)}
                             </small>
                             <p>{dynasty.summary}</p>
-                          </button>
+                          </ReadingLink>
                         )
                       return null
                     })
@@ -3301,10 +3830,11 @@ export default function App() {
                           dynasty.to >= (worldBrowsing ? worldPeriod.from : period.from)),
                     )
                     .map((dynasty) => (
-                      <button
+                      <ReadingLink
+                        href={dynastyUrl(dynasty.id)}
                         key={dynasty.id}
                         className="dynasty-list-card"
-                        onClick={() => openDynasty(dynasty.id)}
+                        onNavigate={() => openDynasty(dynasty.id)}
                       >
                         <strong>{dynasty.name}</strong>
                         <small>
@@ -3314,7 +3844,7 @@ export default function App() {
                         <span>
                           阅读档案 <ArrowRight size={12} />
                         </span>
-                      </button>
+                      </ReadingLink>
                     ))}
                 </div>
               ) : mode === 'people' ? (
@@ -3356,7 +3886,7 @@ export default function App() {
                     {(
                       [
                         { id: 'all', label: '全部档案' },
-                        { id: 'reading', label: '较完整介绍' },
+                        { id: 'reading', label: '人物介绍' },
                         { id: 'journey', label: '可播放行迹' },
                       ] as const
                     ).map(({ id, label }) => (
@@ -3379,10 +3909,16 @@ export default function App() {
                   </p>
                   {periodPeople.length ? (
                     periodPeople.slice(0, peopleLimit).map((person) => (
-                      <button
+                      <a
                         key={person.id}
                         className="person-list-card"
-                        onClick={() => openPerson(person.id)}
+                        href={personUrl(person.id)}
+                        onClick={(event) => {
+                          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+                            return
+                          event.preventDefault()
+                          openPerson(person.id)
+                        }}
                       >
                         <Avatar id={person.id} />
                         <span>
@@ -3394,13 +3930,13 @@ export default function App() {
                           <span className="person-depth">
                             {journeyByPerson.has(person.id)
                               ? '可播放行迹'
-                              : person.biographyLength >= 160
-                                ? '较完整介绍'
+                              : person.recordKind === 'curated'
+                                ? '人物介绍'
                                 : '简要档案'}
                           </span>
                         </span>
                         <ChevronRight size={15} />
-                      </button>
+                      </a>
                     ))
                   ) : (
                     <div className="empty-state">
@@ -3649,6 +4185,7 @@ export default function App() {
             setPlaying(false)
           }}
           onYear={navigateYear}
+          onJumpYear={jumpTimelineYear}
           onPlay={togglePlayback}
           onEvent={trail ? selectJourneyNode : (id) => selectMap({ type: 'event', id })}
           onSpeed={setSpeed}
@@ -3809,11 +4346,9 @@ export default function App() {
               </a>
             </div>
             <p className="coverage-note">
-              当前收录 {dynasties.length} 个朝代与政权档案、{journeyByPerson.size} 份详细行迹。其中{' '}
-              {people.filter((person) => person.recordKind === 'catalog').length}{' '}
-              份人物档案仅有基本身份，
-              {people.filter((person) => person.biographyLength >= 160).length}{' '}
-              份有较完整介绍。数量不等于历史资料完整，年谱仍按史料逐人核对。
+              当前收录 {dynasties.length} 个中国朝代与政权档案、{journeyByPerson.size} 份详细行迹。
+              {people.filter((person) => person.recordKind === 'curated').length}{' '}
+              份人物档案有编辑介绍。 简介不等于完整传记，年谱仍按史料逐人核对。
             </p>
             <p className="source-attribution">
               疆域资料：Cliopatria / Seshat，数据编辑 Ed Chalstrey、James Bennett、Erin Mutch
@@ -3844,7 +4379,7 @@ export default function App() {
                 <strong>{people.length}</strong>人物档案
               </span>
               <span>
-                <strong>{tours.length}</strong>主题旅程
+                <strong>{readingArticles.length}</strong>专题文章
               </span>
               <span>
                 <strong>{periods.length}</strong>历史时期

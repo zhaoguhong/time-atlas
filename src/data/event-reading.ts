@@ -5,6 +5,7 @@ import { middleEventReading } from './event-reading-middle'
 import { lateEventReading } from './event-reading-late'
 import { addedEventReading } from './event-reading-additions'
 import { bookUrl } from './sources'
+import { eventNarratives } from './event-narratives'
 
 const eventAliases: Record<string, string[]> = {
   'opium-war': ['第一次鸦片战争', '中英鸦片战争'],
@@ -36,9 +37,6 @@ const primaryReferences: Record<string, [string, string]> = {
 const readings: Record<string, string[]> = {
   'three-jin': [
     '韩、赵、魏早已掌握晋国内部的重要土地和军队，周王承认三家为诸侯，是长期权力变化获得名分的节点。地方贵族的实力与王室授予的合法性在此分离又重新组合。前403年并不是晋国全部政治活动立即消失的年份，残余晋君和旧有社会关系仍有延续。',
-  ],
-  shangyang: [
-    '改革把军功、户口、农业生产与国家奖惩更紧密地结合起来，目的是让君主能够直接掌握更多人口和粮食。措施并非只靠商鞅个人主张，还依赖秦孝公支持和地方执行。商鞅后来被杀与制度是否全部废除是两个问题；多项组织方式仍继续影响秦的发展。',
   ],
   guiling: [
     '魏军进攻赵国时，齐并未只从正面与围城军对抗，而是威胁魏的重要地区，迫使其调整兵力。后世“围魏救赵”用简洁成语概括这一策略，但实际调兵、行军与交战经历多个环节。桂陵的地望和部分纪年存在讨论，不能把现代地图点当作无争议的精确战场。',
@@ -82,9 +80,6 @@ const readings: Record<string, string[]> = {
   'zhou-ends': [
     '西周君所在小国与周天子的政治名义相互联系，但并不等于周已拥有实际统一统治。秦迫其降服后，另一支东周君封国仍持续到前249年。不同称谓容易混淆，学习时应区分王朝名义、封国和后世东周分期。',
   ],
-  dujiangyan: [
-    '工程利用岷江来水进行分流、排沙和灌溉，使成都平原农业获得较稳定水源。它是长期修建、维护和调整的体系，不能只当作一次完工仪式。具体始建年与李冰任职年存在考定，本版年份只作常用约年节点。',
-  ],
   'qin-han-state': [
     '韩国处在秦向东方推进的重要方向，资源与军事实力已受到长期压力。灭韩之后设置郡县，将兼并结果转为行政安排；地方组织与居民生活仍需持续整合。后续灭赵、魏、楚的顺序能帮助理解统一并非同时发生。',
   ],
@@ -96,9 +91,6 @@ const readings: Record<string, string[]> = {
   ],
   'qin-chu': [
     '楚国地域广阔，秦的战争并非一次进军即告成功，前后兵力、策略和战线都有调整。寿春等中心失守后，楚地仍在秦末反抗中发挥重要作用。政权灭亡不能理解为地方认同和社会网络一并消失。',
-  ],
-  'qin-unifies': [
-    '皇帝称号和郡县安排把胜利转为新的政治体系，统一措施则进入文字、交易和物资管理。秦的治理建立在长期战国制度发展上，并非全部凭空创设。控制核心地区与经营边疆的强度也不同，近似疆域不能替代地方行政材料。',
   ],
   'qin-south': [
     '秦与岭南地方力量的战争伴随交通和补给工程，随后在部分地区设置郡县。岭南山地、河流和人口分布影响治理，不能按现代广东省界推断当时实际控制。秦亡后南越等政权又延续区域历史。',
@@ -141,9 +133,6 @@ const readings: Record<string, string[]> = {
   ],
   'seven-states': [
     '诸侯王国与朝廷围绕封地、司法和资源发生冲突，削藩措施成为叛乱的重要触发。中央调兵平乱后继续改变王国权限，而非立刻取消所有诸侯。后来推恩令则用另一种方式进一步分割力量。',
-  ],
-  zhangqian: [
-    '出使原计划联系大月氏以对抗匈奴，但张骞被长期扣留，回国时任务和信息价值发生不同结果。获得的地理、物产与政治知识扩大汉廷视野。不能把未达成联盟的任务简单称为失败，也不能将后世丝路网络全部归为一次出使的创造。',
   ],
   'zhangqian-first-return': [
     '回国报告把大宛、大月氏、大夏等地的信息带入汉朝决策，军事与外交计划随之调整。出发、被拘留和归来的日期有不同记载层次，路线节点需要独立年谱依据。此处是使节回国的事件，不复原途中全部经历。',
@@ -196,9 +185,6 @@ const readings: Record<string, string[]> = {
   ganying: [
     '甘英奉命向西探索大秦，最终停在海边，没有可证的到达罗马本城记录。原典对海路和商人信息的叙述需要解释，海的具体对应也有讨论。地图采用相关地区参照，不虚构一条已经走通的东西直线。',
   ],
-  paper: [
-    '植物纤维纸在蔡伦以前已有材料证据，105年上奏反映工艺改进和官方评价的重要节点。原料、加工、成本与传播共同决定纸的作用，不能把造纸史压成一个人从无到有的一次发明。简牍和帛此后仍继续使用。',
-  ],
   zhangheng: [
     '候风地动仪见于史书记载，原器没有留存，现代模型包含不同复原解释。张衡还研究天文和历算，其知识活动与朝廷机构相关。应区分古代文献确认的描述、现代结构推测和尚不能验证的具体性能。',
   ],
@@ -216,12 +202,6 @@ const readings: Record<string, string[]> = {
   ],
   xuchang: [
     '迎献帝到许使曹操获得以朝廷名义发布命令的政治资源，同时保障其军政中心。汉帝的正式身份与曹操的实际权力并不相同；制度名分、屯田粮食和军事胜利一起支持曹氏扩张。',
-  ],
-  guandu: [
-    '曹操与袁绍之间的竞争涉及河北、许县等资源和政治网络，战中粮食、情报和内部协调十分关键。胜利之后北方仍经历多年整合，不能把官渡直接称作曹操已统一全国，也不能用史书兵力数字作绝对精确对比。',
-  ],
-  chibi: [
-    '曹操取得荆州后南下，孙权与刘备方面在危机中合作抵抗。水战、疫病、补给和军队适应都影响结果，火攻叙事只是其中一层。此战限制当次南下，却没有立即产生三个正式帝国，后来益州、荆州与称帝仍有多次变化。',
   ],
   yizhou: [
     '刘备进入益州后的合作与冲突逐步演变，最终取得成都及核心地区。新军与地方官员、旧有社会网络需要协调。四川盆地的资源和北方通道决定其后汉中争夺，但不能把取得益州解释为全部居民无条件支持。',
@@ -305,4 +285,17 @@ export function enrichEventReading(events: HistoryEvent[]): HistoryEvent[] {
             : event.details),
     }
   })
+}
+
+/** Apply after regional collections are combined so world and modern articles participate. */
+export function enrichEventNarrative(event: HistoryEvent): HistoryEvent {
+  const article = eventNarratives[event.id]
+  return article
+    ? {
+        ...event,
+        narrative: article.narrative,
+        details: undefined,
+        sources: [...article.sources, ...event.sources],
+      }
+    : event
 }

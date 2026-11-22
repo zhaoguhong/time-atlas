@@ -1,0 +1,31 @@
+.source-note {
+  margin: -4px 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+.source-status {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.source-expand {
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 12px var(--sans);
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.reference-list > a > svg {
+  flex-shrink: 0;
+}
+.reference-list > a > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

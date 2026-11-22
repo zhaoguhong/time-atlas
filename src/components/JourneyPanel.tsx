@@ -1,9 +1,9 @@
-import { readingSourceUrl } from '../lib/source-links'
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 import type { ReactNode } from 'react'
 import type { JourneyView, PersonJourney } from '../types'
 import { compactYear, formatYear } from '../lib/history'
 import ReadingText from './ReadingText'
+import { SourceCitation } from './Sources'
 
 export default function JourneyPanel({
   journey,
@@ -29,6 +29,9 @@ export default function JourneyPanel({
       <h3>
         有据可查的生平行迹 <small>{view.nodes.length} 条</small>
       </h3>
+      <p className="journey-reading-note">
+        动画按记录先后示意，连线不表示真实道路或航线；两条记录之间的行程与停留未作推断。
+      </p>
       {active && (
         <div className="journey-active-card" aria-live="polite">
           <span className="eyebrow">
@@ -49,15 +52,7 @@ export default function JourneyPanel({
           {active.dateNote && <p className="journey-date-note">{active.dateNote}</p>}
           <p className="journey-date-note">{active.locationNote}</p>
           {active.sources.map((source) => (
-            <a
-              className="journey-citation"
-              key={source.url}
-              href={readingSourceUrl(source.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {source.title}
-            </a>
+            <SourceCitation className="journey-citation" key={source.url} source={source} />
           ))}
           <div className="journey-step-controls">
             <button onClick={() => onStep(-1)} disabled={index <= 0}>
@@ -76,9 +71,6 @@ export default function JourneyPanel({
         <summary>人物简介与行迹说明</summary>
         <ReadingText className="detail-lead" text={biography} />
         <p className="journey-introduction">{journey.introduction}</p>
-        <div className="journey-reading-note">
-          箭头表示两条记录的先后顺序，省略中间行程，不表示实际道路。未收录的年份与地点不作推断。
-        </div>
       </details>
       <ol className="journey-node-list">
         {view.nodes.map((node, i) => (

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 365" aria-labelledby="title description" role="img">
+  <title id="title">从卷首到卷尾</title>
+  <desc id="description">七张纸分段刷印后相接。读者从右端的卷首说法图向左读，到最后一张的经文与施印题记。</desc>
+  <defs>
+    <pattern id="columns" width="12" height="90" patternUnits="userSpaceOnUse"><path d="M5 0v90" stroke="#817353" stroke-width="3" stroke-dasharray="3 3"/></pattern>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0l7 3.5-7 3.5z" fill="#526a58"/></marker>
+  </defs>
+  <rect width="600" height="365" rx="12" fill="#f5efdd"/>
+  <g font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#302d27">
+    <text x="32" y="52" font-size="33" font-weight="650">从卷首到卷尾</text>
+    <text x="33" y="94" fill="#605944" font-size="24">七张纸分段刷印，再接成长卷</text>
+    <rect x="34" y="158" width="532" height="95" fill="#e8d4a6" stroke="#826d4f" stroke-width="2"/>
+    <rect x="40" y="168" width="442" height="75" fill="url(#columns)"/>
+    <g stroke="#9d8055" stroke-width="2" fill="none">
+      <path d="M110 158v95m76-95v95m76-95v95m76-95v95m76-95v95m76-95v95"/>
+      <rect x="498" y="168" width="60" height="75"/>
+    </g>
+    <g fill="#614d30" text-anchor="middle" font-size="23"><text x="528" y="198">说法</text><text x="528" y="226">图</text></g>
+    <g fill="#304f42" font-size="23" text-anchor="middle">
+      <text x="77" y="142">题记</text><text x="299" y="142">经文</text><text x="525" y="142">卷首</text>
+    </g>
+    <path d="M534 287H57" fill="none" stroke="#526a58" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="300" y="330" text-anchor="middle" fill="#324f46" font-size="25">从右向左展开</text>
+  </g>
+</svg>

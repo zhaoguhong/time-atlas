@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450" role="img" aria-labelledby="title desc">
+  <title id="title">1525年，村社要求什么</title><desc id="desc">施瓦本农民十二条款的第1条主张选择牧师，第5条涉及林木，第6条涉及新增劳役。按内容摘意。</desc>
+  <style>text {font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243e36} .head {font-size:34px;font-weight:700} .body {font-size:27px} .label {font-size:23px} .line {fill:none;stroke:#62776b;stroke-width:3;stroke-linecap:round;stroke-linejoin:round} .rule {stroke:#cbbfa6;stroke-width:2}</style>
+  <rect width="600" height="450" rx="12" fill="#f8f5eb"/>
+  <text class="head" x="30" y="52">1525年，村社要求什么</text><path class="rule" d="M30 73H570"/>
+  <g><path class="line" d="M53 108h64v74H53zM65 128h41m-41 14h41m-41 14h29"/>
+  <text class="label" x="145" y="131">第1条</text><text class="body" x="145" y="171">由村社选自己的牧师</text></g>
+  <path class="rule" d="M35 202h529"/><g><path class="line" d="M82 216l-23 34h12l-23 28h29v14h11v-14h29l-23-28h12z"/>
+  <text class="label" x="145" y="239">第5条</text><text class="body" x="145" y="281">争取取用柴薪与木材</text></g>
+  <path class="rule" d="M35 308h529"/><g><path class="line" d="M52 395l46-54m-20 3 31 26m-31-42 40 33-9 9-40-33z"/>
+  <text class="label" x="145" y="348">第6条</text><text class="body" x="145" y="390">请求减轻加重的劳役</text></g>
+</svg>

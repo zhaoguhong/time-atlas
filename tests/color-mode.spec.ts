@@ -35,6 +35,8 @@ async function readingContrast(page: Page, selector: string) {
   expect(ratios.every((ratio) => ratio >= 4.5)).toBe(true)
 }
 async function toggle(page: Page, target: 'dark' | 'light') {
+  if (!(await page.locator('.color-mode-toggle').isVisible()))
+    await page.getByRole('button', { name: '更多操作', exact: true }).click()
   await page
     .getByRole('button', {
       name: target === 'dark' ? '切换到夜间模式' : '切换到白天模式',
@@ -149,7 +151,12 @@ test('night pillar preferences migrate to a global dark mode and the default cyl
   await page.getByRole('button', { name: '时空柱筛选与设置', exact: true }).click()
   await expandPillarOptions(page, '外观与简介')
   await readingContrast(page, '.pillar-dialog-head h2')
-  await expect(page.getByRole('radio')).toHaveCount(4)
+  const appearance = page.getByRole('group', { name: '时空柱主题', exact: true })
+  const themeNames = ['琉璃时柱', '素笺编年', '山河长卷', '经纬织带', '留白', '大事记', '观测站']
+  await expect(appearance.getByRole('radio')).toHaveCount(themeNames.length)
+  for (const name of themeNames)
+    await expect(appearance.getByRole('radio', { name, exact: true })).toBeVisible()
+  await expect(appearance.getByRole('radio', { name: '琉璃时柱', exact: true })).toBeChecked()
   await expect(page.getByRole('radio', { name: '星夜时柱', exact: true })).toHaveCount(0)
 })
 test('both modes remain usable without local storage', async ({ page }) => {
@@ -181,12 +188,12 @@ for (const [width, height] of [
   }, info) => {
     await page.setViewportSize({ width, height })
     await page.addInitScript((key) => localStorage.setItem(key, 'dark'), key)
-    for (const [name, hash, selector] of [
-      ['person', 'person=sushi&year=1082', '.person-biography'],
-      ['dynasty', 'dynasty=xia-early&year=-1800', '.dynasty-detail'],
-      ['topic', 'tour=opium-wars&step=-1&year=1839', '.topic-introduction'],
+    for (const [name, url, selector] of [
+      ['person', '/#person=sushi&year=1082', '.person-biography'],
+      ['dynasty', '/#dynasty=xia-early&year=-1800', '.dynasty-detail'],
+      ['topic', '/topics/late-qing-reforms/', '.topic-introduction'],
     ]) {
-      await page.goto(`/#${hash}`)
+      await page.goto(url)
       if (width < 700) await setSheet(page, 'reading')
       await expect(page.locator(selector)).toBeVisible()
       if (await page.locator('.reference-list a').count())

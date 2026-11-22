@@ -1,11 +1,21 @@
 import { describe, expect, it } from 'vitest'
-import { events } from '../data/content'
-import { filterExploration, insideBounds, namesPlace, placeById } from './exploration'
+import { eventById, events } from '../data/content'
+import { eventAtPlace, filterExploration, insideBounds, namesPlace, placeById } from './exploration'
 import { parseViewParams } from './navigation'
 import { eventPlaybackYears } from './playback'
 import { groupTimelineEvents } from './markers'
 
 describe('exploration contracts', () => {
+  it('connects Timbuktu records under both Chinese spellings without changing record titles', () => {
+    const place = placeById.get('timbuktu')!
+    const event = events.find((record) => record.id === 'world-timbuktu-learning')!
+    expect(event.location).toBe('通布图')
+    expect(place.name).toBe('廷巴克图')
+    expect(eventAtPlace(event, place)).toBe(true)
+    expect(filterExploration([event], { place: place.id, range: null, bounds: null })).toEqual([
+      event,
+    ])
+  })
   it('handles wrapped map bounds and global bounds', () => {
     expect(insideBounds([179, 10], [170, -20, -170, 20])).toBe(true)
     expect(insideBounds([-179, 10], [170, -20, -170, 20])).toBe(true)
@@ -15,8 +25,57 @@ describe('exploration contracts', () => {
   it('matches city labels without confusing Tokyo in Japan with Kaifeng', () => {
     const place = placeById.get('kaifeng')!
     expect(namesPlace('东京（今河南开封）', place)).toBe(true)
+    expect(namesPlace('东京', place)).toBe(false)
     expect(namesPlace('日本东京', place)).toBe(false)
     expect(namesPlace('京都', place)).toBe(false)
+  })
+  it('keeps the Northern Song records and excludes Japan’s Tokyo records at Kaifeng', () => {
+    const kaifeng = placeById.get('kaifeng')!
+    const japaneseTokyo = [
+      'region-sankin-kotai',
+      'region-nishiki-e',
+      'world-meiji',
+      'region-meiji-school-system',
+      'depth-tokyo-university',
+      'region-tsuda-college',
+      'region-soseki-cat',
+      'region-kanto-earthquake',
+      'region-japan-women-suffrage',
+      'region-japan-constitution',
+    ]
+    const northernSong = ['song-founded', 'wanganshi', 'jingkang', 'early-plus-menghua-record'].map(
+      (id) => eventById.get(id)!,
+    )
+    const records = [...northernSong, ...japaneseTokyo.map((id) => eventById.get(id)!)]
+
+    expect(records.filter((event) => eventAtPlace(event, kaifeng))).toEqual(northernSong)
+    expect(filterExploration(records, { place: kaifeng.id, bounds: null, range: null })).toEqual(
+      northernSong,
+    )
+  })
+  it('distinguishes world cities from similarly named regions and other cities', () => {
+    const rome = placeById.get('rome')!
+    const delhi = placeById.get('delhi')!
+    const constantinople = placeById.get('constantinople')!
+    expect(namesPlace('罗马', rome)).toBe(true)
+    expect(namesPlace('东罗马帝国', rome)).toBe(false)
+    expect(namesPlace('罗马尼亚', rome)).toBe(false)
+    expect(namesPlace('马德里', delhi)).toBe(false)
+    expect(namesPlace('德里', delhi)).toBe(true)
+    expect(namesPlace('君士坦丁堡', constantinople)).toBe(true)
+    expect(namesPlace('伊斯坦布尔', constantinople)).toBe(true)
+  })
+  it('uses explicit place associations consistently for reading and filtering', () => {
+    const place = placeById.get('rome')!
+    const original = events.find((event) => event.id === 'world-roman-republic')!
+    const associated = { ...original, location: '意大利半岛的政治中心', placeIds: ['rome'] }
+    const excluded = { ...original, placeIds: [] }
+    expect(eventAtPlace(associated, place)).toBe(true)
+    expect(eventAtPlace(excluded, place)).toBe(false)
+    expect(eventAtPlace({ ...original, placeIds: undefined }, place)).toBe(true)
+    expect(
+      filterExploration([associated, excluded], { place: 'rome', range: null, bounds: null }),
+    ).toEqual([associated])
   })
   it('keeps ranged archaeological records overlapping the chosen interval', () => {
     const record = events.find((event) => event.endYear && event.endYear > event.year)!

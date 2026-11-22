@@ -130,10 +130,6 @@
   font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
   font-weight: 500;
 }
-.time-pillar[data-theme='minimal'] .pillar-now {
-  box-shadow: none;
-  border-radius: 3px;
-}
 
 /* Editorial: a printed rule, prominent date and contrasting serif headline. */
 .time-pillar[data-theme='editorial'] .pillar-spine {
@@ -156,10 +152,6 @@
   color: var(--pillar-ink);
   font-family: Georgia, 'Songti SC', serif;
   font-size: 20px;
-}
-.time-pillar[data-theme='editorial'] .pillar-now {
-  border-radius: 0;
-  box-shadow: none;
 }
 .time-pillar[data-theme='editorial'] .pillar-tick {
   font-family: Georgia, 'Songti SC', serif;
@@ -213,6 +205,8 @@
 }
 .time-pillar[data-theme='observatory'] :is(.pillar-tick, .pillar-now) {
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.time-pillar[data-theme='observatory'] .pillar-tick {
   border-radius: 0;
   box-shadow: 0 0 0 1px var(--pillar-rule);
 }

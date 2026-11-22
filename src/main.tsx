@@ -1,23 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import 'maplibre-gl/dist/maplibre-gl.css'
-import './styles.css'
-import './learning.css'
-import './journeys.css'
-import './experience.css'
-import './reading.css'
-import './usability.css'
-import './atlas-layout.css'
-import './exploration.css'
-import './mobile-sheet.css'
-import './focus-mode.css'
-import './time-pillar.css'
-import './color-mode.css'
-import './product-refinement.css'
+import { setupReader } from './reader'
+import './reader.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const reader = document.querySelector<HTMLElement>('[data-static-reader]')
+const topic = document.querySelector<HTMLScriptElement>('#reading-topic')
+const startAtlas = async () => (await import('./app-entry')).mountAtlas()
+const { retryAtlasCanvas, ...historyState } = history.state ?? {}
+if (retryAtlasCanvas) history.replaceState(historyState, '')
+if (reader) {
+  if (retryAtlasCanvas) void startAtlas().catch(() => setupReader(reader, startAtlas))
+  else setupReader(reader, startAtlas)
+} else if (topic) void import('./topic-entry').then(({ mountTopic }) => mountTopic(topic))
+else void startAtlas()

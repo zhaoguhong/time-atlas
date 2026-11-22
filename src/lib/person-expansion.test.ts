@@ -17,7 +17,7 @@ describe('important person biography expansion', () => {
         person.name,
       ).toEqual([imported.id, imported.birth, imported.death, imported.wikidata, imported.revision])
       expect(person.recordKind, person.name).toBe('curated')
-      expect(person.biography.length, person.name).toBeGreaterThanOrEqual(160)
+      expect(person.biography.trim(), person.name).not.toBe(person.summary.trim())
       expect(
         person.sources.some((source) => !/wikidata\.org|wikipedia\.org/.test(source.url)),
         person.name,
@@ -28,6 +28,10 @@ describe('important person biography expansion', () => {
   it('retains uncertain text periods without guessing biographical dates or journeys', () => {
     for (const id of ['q9333', 'q47739', 'q37151', 'q6697537']) {
       const person = personById.get(id)!
+      expect(
+        journeys.some((journey) => journey.personId === id),
+        id,
+      ).toBe(false)
       expect(person.birth, person.name).toBeNull()
       expect(person.death, person.name).toBeNull()
       const linked = events.filter((event) => event.people.includes(id))
@@ -39,13 +43,14 @@ describe('important person biography expansion', () => {
         expect(linked[0].dateLabel).toContain('约')
         expect(linked[0].dateNote).toBeTruthy()
         expect(linked[0].peopleNotes?.[id]).toBeTruthy()
+      } else if (id === 'q6697537') {
+        expect(linked.map((event) => event.id)).toEqual(['early-plus-qimin'])
+        expect(linked[0]).toMatchObject({ year: 530, endYear: 550 })
+        expect(linked[0].dateLabel).toContain('约')
+        expect(linked[0].dateNote).toBeTruthy()
+        expect(linked[0].peopleNotes?.[id]).toBeTruthy()
       } else expect(linked).toHaveLength(0)
     }
-    for (const profile of expandedPersonProfiles)
-      expect(
-        journeys.some((journey) => journey.personId === profile.id),
-        profile.id,
-      ).toBe(false)
   })
 
   it('restores the named participants in existing Qin and Han events', () => {

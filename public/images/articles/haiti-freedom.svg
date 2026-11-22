@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="452" viewBox="0 0 600 452" role="img" aria-labelledby="title desc">
+<title id="title">1801年，同一部宪法的两面</title>
+<desc id="desc">1801年圣多明各宪法第三条废除奴隶制，第十四至十六条要求维持种植园生产，并限制耕作者自由迁居。</desc>
+<rect x="0" y="0" width="600" height="452" rx="0" fill="#fbf7ee"/>
+<g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="36" y="58" font-size="34" fill="#273c37" text-anchor="start" font-weight="650">1801年，同一部宪法的两面</text>
+<path d="M36 79H564" fill="none" stroke="#bfbda8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="36" y="112" width="528" height="115" rx="12" fill="#e1eadf"/>
+<text x="58" y="156" font-size="27" fill="#1b6055" text-anchor="start" font-weight="650">第三条</text>
+<text x="58" y="202" font-size="26" fill="#273c37" text-anchor="start" font-weight="400">在当地出生、居住的人皆为自由人。</text>
+<rect x="36" y="246" width="528" height="146" rx="12" fill="#efe4d5"/>
+<text x="58" y="289" font-size="27" fill="#99462f" text-anchor="start" font-weight="650">第十四至十六条</text>
+<text x="58" y="335" font-size="26" fill="#273c37" text-anchor="start" font-weight="400">当局要维持种植园的生产，</text>
+<text x="58" y="372" font-size="26" fill="#273c37" text-anchor="start" font-weight="400">对耕作者迁居仍加限制。</text>
+<text x="36" y="430" font-size="24" fill="#535d54" text-anchor="start" font-weight="400">1801年 · 圣多明各仍属法国</text>
+</g>
+</svg>

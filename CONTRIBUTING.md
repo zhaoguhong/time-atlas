@@ -16,17 +16,13 @@
 
 ## 验证
 
-依赖安装后，按 CI 的顺序运行基础检查：
+依赖安装后，运行与 CI 相同的基础检查。
 
 ```sh
-npm run format:check
-npm test
-npm run data:check
-npm run data:audit:ci
-npm run build
+npm run check
 ```
 
-`npm test` 包含应用单元测试和地图包测试。`data:audit:ci` 检查结构、日期、关联与来源元数据；存在的缓存仍校验哈希，缺失缓存明确报告为未核验。它不改写审校报告，也不等同于维护者的完整缓存审校。
+`npm run check` 依次检查格式、准备数据、运行单元与脚本测试、校验数据、审校来源元数据并生成生产包。一轮检查只准备一次数据，单独执行原有命令时仍会自动准备各自需要的数据。`data:audit:ci` 会校验本机已有缓存的哈希，并报告缺失的快照。审校报告由维护者的完整缓存审校生成。
 
 ### 生产浏览器检查
 
@@ -38,19 +34,25 @@ CI=1 npm run test:e2e:smoke
 CI=1 npm run test:e2e:pillar -- --project chrome
 CI=1 npm run test:e2e:world -- --project chrome
 CI=1 npm run test:e2e:refinement -- --project chrome
+npx playwright test --config playwright.seo.config.ts
 ```
 
 `CI=1` 是 sh/bash/zsh 写法；PowerShell 可先设置 `$env:CI = '1'`，再执行不带此前缀的命令。工作流的实际检查范围以 [ci.yml](.github/workflows/ci.yml) 为准；跳过的步骤不能记为通过。
 
-| 测试命令              | 范围与运行方式                                                |
-| --------------------- | ------------------------------------------------------------- |
-| `test:e2e:smoke`      | 桌面／手机地图与阅读，生产预览端口 4175                       |
-| `test:e2e:pillar`     | 时空柱、运动、筛选、主题与共享导航，生产预览端口 4184         |
-| `test:e2e:world`      | 世界历史、政权档案、地图与时空柱状态隔离，生产预览端口 4184   |
-| `test:e2e:refinement` | 阅读布局、操作入口、独立范围与加载失败恢复，生产预览端口 4184 |
-| `test:e2e`            | 通用交互回归，使用开发服务端口 5173；不能代替生产包验证       |
+| 测试命令              | 范围与运行方式                                                  |
+| --------------------- | --------------------------------------------------------------- |
+| `test:e2e:smoke`      | 桌面／手机地图与阅读，生产预览端口 4175                         |
+| `test:e2e:pillar`     | 时空柱、运动、筛选、主题与共享导航，生产预览端口 4184           |
+| `test:e2e:world`      | 世界历史、政权档案、地图与时空柱状态隔离，生产预览端口 4184     |
+| `test:e2e:refinement` | 阅读布局、专题路线、年谱、操作入口与失败恢复，生产预览端口 4184 |
+| `test:e2e:journeys`   | 人物轨迹、来源、播放与阅读回归，生产预览端口 4184               |
+| `test:e2e`            | 通用交互回归，使用开发服务端口 5173；不能代替生产包验证         |
 
-这些生产检查要求先构建 `dist/`，测试配置会启动并关闭预览服务。三个使用 4184 的套件应顺序执行；它们可用 `PLAYWRIGHT_PORT` 指定其他端口，或用 `PLAYWRIGHT_BASE_URL` 指向已启动的待测环境。不要误连无关服务。软件 WebGL 下保持配置中的单 worker，避免争用渲染资源。CI 将时空柱用例拆成两个分片，在独立的运行机上执行，每个分片仍使用单 worker；基础校验及其他浏览器套件由另一运行机执行，避免共享端口或软件渲染器。
+SEO 检查使用独立端口 4197，也可通过 `PLAYWRIGHT_PORT` 指定端口。测试覆盖专题、人物、事件、朝代、世界政权与地点的静态正文、目录、来源、规范地址与结构化数据，以及桌面和手机模拟下的地址导航、刷新、历史记录与独立事件页的续读链接。丝绸之路专题以 390 × 844 的冷缓存场景检查首屏脚本，预算为 gzip 后 200 KiB。阅读检查还覆盖地图按需加载、画布释放和正文位置恢复。
+
+这些生产检查共用同一份 `dist/`。修改运行代码后重新构建，改动限于测试时可复用已有构建。使用 4184 的套件应顺序执行，也可用 `PLAYWRIGHT_PORT` 指定其他端口，或用 `PLAYWRIGHT_BASE_URL` 指向已启动的待测环境。软件 WebGL 下保持单 worker，避免争用渲染资源。
+
+CI 将时空柱和综合回归各拆成三个分片。在独立运行机上按用例分片，每个分片串行执行。基础检查、烟雾测试、SEO 和世界地图检查走独立任务。
 
 时空柱、世界历史和专项套件在未设置 `CI` 时，`chrome` 项目使用已安装的 Google Chrome；在 CI 模式下使用 Playwright Chromium，项目名仍叫 `chrome`。通用 `test:e2e` 的浏览器通道可通过 `PLAYWRIGHT_CHANNEL=chrome` 选择。
 
@@ -61,7 +63,7 @@ npx playwright install webkit
 npm run test:e2e:pillar -- --project webkit
 ```
 
-可用 `--grep` 选择相关用例，或加 `--trace on` 留存成功和失败的过程。默认失败 trace 位于被忽略的 `test-results/`，可用 `npx playwright show-trace <trace.zip>` 本地查看；不要直接提交原始 trace。
+本地先用文件名或 `--grep` 选择受改动影响的场景。修复失败后复跑对应文件或场景，改到共享入口时再扩大验证范围。默认失败 trace 位于被忽略的 `test-results/`，可用 `npx playwright show-trace <trace.zip>` 查看。需要留存成功过程时可加 `--trace on`，原始 trace 留在本地。
 
 ### 按变更选择检查
 
@@ -75,13 +77,15 @@ npm run test:e2e:pillar -- --project webkit
 
 ## 静态托管
 
-`npm run build` 生成完整静态目录 `dist/`，可交给支持静态文件的托管服务。必须通过 HTTP/HTTPS 访问，不能直接双击 HTML。子目录部署时使用：
+`npm run build:public` 生成可托管的静态目录 `dist/`。公开构建的历史地图截至 1912 年，时空柱与档案阅读至 2000 年。`npm run build` 用于验证含 1913—1950 年地点地图的预览。静态站点通过 HTTP/HTTPS 访问。发布到子目录时使用以下命令。
 
 ```sh
-npm run build -- --base=/time-atlas/
+npm run prebuild
+npm exec vite build -- --mode public --base=/time-atlas/
+node scripts/build-pages.mjs
 ```
 
-应用使用 URL hash 保存阅读状态，无需服务端路由重写。使用自己的域名时，调整 `index.html` 中的站点 URL 元数据。更改资源路径后应重新检查生产预览。
+专题目录使用 `/topics/`，每篇专题使用 `/topics/:slug/`，人物、事件、朝代、世界政权和地点分别使用 `/people/:slug/`、`/events/:slug/`、`/dynasties/:slug/`、`/polities/:slug/`、`/places/:slug/`。构建脚本为首页、各目录和每篇记录生成包含正文及来源的 HTML，并生成 `sitemap.xml` 和 `robots.txt`。托管服务应优先提供目录下的 `index.html`，不存在的路径返回 404；无需 SPA 回退。使用反向代理时，检查补齐末尾斜杠的跳转仍指向公开 HTTPS 地址，不应暴露后端端口。所有阅读档案的分享只使用干净路径；默认首页保持纯主域名地址，主动调整的地图地址使用 URL hash 保存视野和筛选。专题路径在 `src/data/article-slugs.ts` 定义；其他档案路径由数据准备脚本生成，见[阅读数据流程](docs/data.md#阅读目录与正文)。静态构建和客户端共用对应映射。旧阅读 hash 地址不再作为公开入口。使用自己的域名时，调整 `index.html` 中的站点 URL 元数据。更改资源路径后应重新检查生产预览。
 
 仓库中的 CI 只检查代码、数据与本地生产预览，不发布网站。维护者个人服务器的部署脚本、账号、配置及运维记录不属于公开项目文档。
 

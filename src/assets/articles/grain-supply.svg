@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="650" viewBox="0 0 800 650" role="img" aria-labelledby="title desc">
+  <title id="title">粮食怎样抵达都城</title>
+  <desc id="desc">农户交粮，仓吏计量登记，船户和脚夫转运，京仓复核并接收。沿途还要有人修船、疏河和守闸。</desc>
+  <style>
+    text { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #303e36; }
+    .stage { font-size: 47px; font-weight: 650; }
+    .task { font-size: 41px; }
+    .arrow { fill: none; stroke: #667760; stroke-width: 5; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#667760" />
+    </marker>
+  </defs>
+  <rect width="800" height="650" rx="16" fill="#faf8f0" />
+  <text x="44" y="83" font-size="57" font-weight="650">粮食怎样抵达都城</text>
+  <path d="M46 111H751" stroke="#b1b9aa" stroke-width="2" />
+  <g fill="#dfe8da" stroke="#72866c" stroke-width="3">
+    <circle cx="61" cy="175" r="15" /><circle cx="61" cy="283" r="15" />
+    <circle cx="61" cy="391" r="15" /><circle cx="61" cy="499" r="15" />
+  </g>
+  <path d="M61 199v54" class="arrow" /><path d="M61 307v54" class="arrow" /><path d="M61 415v54" class="arrow" />
+  <g>
+    <text x="105" y="190" class="stage">田间征收</text><text x="356" y="190" class="task">农户交粮</text>
+    <text x="105" y="298" class="stage">收进漕仓</text><text x="356" y="298" class="task">仓吏计量、登记</text>
+    <text x="105" y="406" class="stage">水陆转运</text><text x="356" y="406" class="task">船户运，脚夫搬</text>
+    <text x="105" y="514" class="stage">京仓交付</text><text x="356" y="514" class="task">复核实到的粮数</text>
+  </g>
+  <path d="M46 548H751" stroke="#b1b9aa" stroke-width="2" />
+  <text x="44" y="612" font-size="42">沿途还要有人修船、疏河、守闸。</text>
+</svg>
