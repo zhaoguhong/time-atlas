@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-18T17:42:31.625Z",
-  "totalSourceLinks": 3706,
-  "referenceDocuments": 2053,
-  "successfulSnapshots": 1323,
+  "generatedAt": "2026-11-20T15:10:12.980Z",
+  "totalSourceLinks": 3880,
+  "referenceDocuments": 2228,
+  "successfulSnapshots": 1473,
   "unavailable": [
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
@@ -65,6 +65,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://dangshi.people.com.cn/gb/n1/2018/0418/c85037-29934504.html",
+      "attemptedAt": "2026-11-20T04:53:35.953910+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'dangshi.people.com.cn'. (_ssl.c:1010)>"
+    },
+    {
       "url": "https://dergipark.org.tr/en/pub/asobid/article/937743",
       "attemptedAt": "2026-11-18T17:36:55.736182+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
@@ -83,6 +88,11 @@
       "url": "https://dmcb.dila.edu.tw/dmcb/Xiong_Shili_%E7%86%8A%E5%8D%81%E5%8A%9B",
       "attemptedAt": "2026-10-25T17:23:07.929542+00:00",
       "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRev.105.1413",
+      "attemptedAt": "2026-11-19T17:28:16.623094+00:00",
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "url": "https://doi.org/10.7312/columbia/9780231153973.003.0016",
@@ -160,6 +170,21 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://iqh.ruc.edu.cn/old/zglsdlyj/lsdl_lzjj/xqzmddlyj/dded866f7c324445a702a1994a308e2b.htm",
+      "attemptedAt": "2026-11-20T03:34:01.993011+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://journal.uia.gov.kg/index.php/main/en/article/view/772",
+      "attemptedAt": "2026-11-20T04:53:44.629381+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://journals.ncl.edu.tw/files/%E9%A6%AC%E7%91%AE%E6%95%99%E6%8E%88%E6%91%98%E8%A6%81.pdf",
+      "attemptedAt": "2026-11-19T17:28:20.172873+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
       "url": "https://kaogu.cssn.cn/xwzx/bszx/xsjz/202301/t20230106_5963427.shtml",
       "attemptedAt": "2026-10-07T06:45:34.830974+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
@@ -170,13 +195,38 @@
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://m.ccdi.gov.cn/content/bf/ed/5404.html",
+      "attemptedAt": "2026-11-20T05:48:48.818869+00:00",
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "url": "https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/3713/3mon-lich-su-lop-11-ban-chinh-thuc-chot-ngay-30-8-2024signed.pdf",
+      "attemptedAt": "2026-11-20T03:34:05.619432+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://mpe.gov.to/?tribe_events=tupou-1-day",
+      "attemptedAt": "2026-11-20T03:34:08.114113+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://mzzj.yn.gov.cn/html/2015/minjianxinyang_0629/9703.html",
       "attemptedAt": "2026-10-25T17:16:53.064052+00:00",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
     },
     {
+      "url": "https://nzhistory.govt.nz/black-saturday-nz-police-open-fire-on-mau-protestors-in-apia-nine-samoans-killed",
+      "attemptedAt": "2026-11-20T05:48:48.928844+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://nzhistory.govt.nz/media/interactive/king-movement-map",
       "attemptedAt": "2026-10-25T16:46:51.355054+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://nzhistory.govt.nz/media/photo/postal-service-samoa",
+      "attemptedAt": "2026-11-20T05:48:49.060454+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -235,9 +285,19 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://teara.govt.nz/en/biographies/2m30/mangakahia-meri-te-tai/print",
+      "attemptedAt": "2026-11-19T17:25:37.913547+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
       "attemptedAt": "2026-10-23T06:54:35.535937+00:00",
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/gdc/gdcfindingaidpdfs/ms000009/ms000009.pdf",
+      "attemptedAt": "2026-11-20T03:34:16.878520+00:00",
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
@@ -272,6 +332,11 @@
     {
       "url": "https://www.amsterdam.nl/stadsarchief/stukken/handel/omwisselen/",
       "attemptedAt": "2026-10-25T17:16:36.453723+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.aps.org/funding-recognition/historic-sites/nbs",
+      "attemptedAt": "2026-11-19T17:28:17.742170+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2815,6 +2880,16 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.counsellor.gov.cn/2021-05/28/c_1211176146.htm",
+      "attemptedAt": "2026-11-20T04:53:44.718218+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.counsellor.gov.cn'. (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.counsellor.gov.cn/2021-07/07/c_1211231118.htm",
+      "attemptedAt": "2026-11-20T04:53:44.746693+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.counsellor.gov.cn'. (_ssl.c:1010)>"
+    },
+    {
       "url": "https://www.cppcc.gov.cn/2011/06/27/ARTI1309159125046101.shtml",
       "attemptedAt": "2026-10-25T17:33:19.065007+00:00",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cppcc.gov.cn'. (_ssl.c:1010)>"
@@ -2842,6 +2917,11 @@
     {
       "url": "https://www.iwm.org.uk/sites/default/files/files/2023-10/second_world_war_galleries_large_print.pdf",
       "attemptedAt": "2026-10-25T17:24:17.111472+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.iwm.org.uk/sites/default/files/press-release/dunkirk_film_2017_fact_sheet_and_iwm_resources_available.pdf",
+      "attemptedAt": "2026-11-20T05:48:53.196439+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -2875,6 +2955,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.loc.gov/collections/islamic-manuscripts-from-mali/about-this-collection/",
+      "attemptedAt": "2026-11-19T17:25:56.730911+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.loc.gov/exhibits/exploring-the-early-americas/pizarro-and-the-incas.html",
       "attemptedAt": "2026-10-23T06:54:51.970592+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -2900,6 +2985,16 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
+      "url": "https://www.loc.gov/item/92000507/",
+      "attemptedAt": "2026-11-20T04:53:44.965245+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/item/sn84026365/1847-12-03/ed-1/",
+      "attemptedAt": "2026-11-20T03:34:25.826339+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
       "url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/complete-national-recording-registry-listing/",
       "attemptedAt": "2026-10-25T17:24:21.093265+00:00",
       "error": "HTTP Error 403: Forbidden"
@@ -2907,6 +3002,11 @@
     {
       "url": "https://www.loc.gov/resource/gdcwdl.wdl_07353/",
       "attemptedAt": "2026-10-23T06:54:43.413272+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/resource/mss11879.03001/?sp=2&st=list",
+      "attemptedAt": "2026-11-20T03:34:26.055770+00:00",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -3050,6 +3150,11 @@
       "error": "HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan",
+      "attemptedAt": "2026-11-20T03:34:26.337168+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
       "attemptedAt": "2026-10-23T06:46:48.444811+00:00",
       "error": "HTTP Error 429: Too Many Requests"
@@ -3113,6 +3218,21 @@
       "url": "https://www.musee-orsay.fr/fr/ressources/repertoire-artistes-personnalites/marie-curie-203740",
       "attemptedAt": "2026-10-25T17:38:09.760420+00:00",
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.naa.gov.au/explore-collection/first-australians/other-resources-about-first-australians/1967-referendum",
+      "attemptedAt": "2026-11-20T03:34:37.703690+00:00",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/soevereiniteitsoverdracht-indonesie-1949",
+      "attemptedAt": "2026-11-20T04:53:46.992894+00:00",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/education/resources/florence-nightingale/",
+      "attemptedAt": "2026-11-20T03:34:28.983158+00:00",
+      "error": "HTTP Error 410: Gone"
     },
     {
       "url": "https://www.ncl.edu.tw/information_236_15182.html",
@@ -3653,9 +3773,21 @@
       "url": "https://zh.wikisource.org/wiki/類證活人書",
       "attemptedAt": "2026-11-02T17:53:03.567653+00:00",
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://zjdy.zjdafw.gov.cn/art/2017/12/27/art_15_45723.html",
+      "attemptedAt": "2026-11-20T04:53:48.014288+00:00",
+      "error": "HTTP Error 405: Not Allowed"
     }
   ],
   "sources": [
+    {
+      "url": "https://1997-2001.state.gov/background_notes/southkorea_0006_bgn.html",
+      "title": "美国国务院历史存档 · Background Notes: Korea",
+      "retrievedAt": "2026-11-20T04:53:35.857699+00:00",
+      "sha256": "359e3b8b6b844d69fa29bd39c40f970af1586af0500dcda1f98a302721eafe1d",
+      "revisionId": null
+    },
     {
       "url": "https://academic.oup.com/edited-volume/61663/chapter-abstract/553500140?login=false",
       "title": "Oxford Research Encyclopedia · Slavery and the Slave Trade in the Sokoto Caliphate（作者摘要）",
@@ -3696,6 +3828,13 @@
       "revisionId": null
     },
     {
+      "url": "https://ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1988/1988-0002/ConstitutionofTonga.pdf_3.pdf",
+      "title": "汤加总检察长办公室 · 汤加宪法",
+      "retrievedAt": "2026-11-20T03:34:01.866948+00:00",
+      "sha256": "197f1dcaf64c3267e589354aafdc2783dae7fac9f4d3b296808d21d45f7004de",
+      "revisionId": null
+    },
+    {
       "url": "https://americanindian.si.edu/nk360/inka-water/timeline/timeline",
       "title": "史密森尼美洲印第安人博物馆 · 印加道路历史年表",
       "error": "HTTP Error 403: Forbidden",
@@ -3727,6 +3866,13 @@
       "title": "Archives du Sénat · Victor Hugo, écrivain et sénateur",
       "retrievedAt": "2026-10-25T17:37:59.976181+00:00",
       "sha256": "fdb0d100d77f86c43cd195af0ab1365b1db933ba218bf8460e3287bd269912e7",
+      "revisionId": null
+    },
+    {
+      "url": "https://archives.snnu.edu.cn/info/2294/13939.htm",
+      "title": "陕西师范大学档案馆 · 《风追司马 史记千秋》",
+      "retrievedAt": "2026-11-19T17:25:23.170363+00:00",
+      "sha256": "0b921a33c20229372ac93fcb83594c979197ce1545d836d3b2dc99134e8858c2",
       "revisionId": null
     },
     {
@@ -3776,6 +3922,13 @@
       "revisionId": null
     },
     {
+      "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-20-issue-2-jul-sep-2024-men-surrender-singapore-japanese-occupation/",
+      "title": "新加坡国家图书馆 BiblioAsia · 签署新加坡投降文件的代表",
+      "retrievedAt": "2026-11-20T05:48:46.311612+00:00",
+      "sha256": "4b88b9bc3d43ecff017f664006128ee9f7ad07063a31a247da4ac705976c5974",
+      "revisionId": null
+    },
+    {
       "url": "https://blog.scienceandindustrymuseum.org.uk/langworthy-brothers/",
       "title": "英国科学与工业博物馆 · Langworthy Brothers（曼彻斯特棉业与奴隶制联系）",
       "retrievedAt": "2026-11-01T09:32:00.611519+00:00",
@@ -3791,10 +3944,24 @@
       "revisionId": null
     },
     {
+      "url": "https://blog.tepapa.govt.nz/2014/08/29/german-samoa-captured-by-new-zealand-troops-august-1914/",
+      "title": "新西兰蒂帕帕国家博物馆 · 德属萨摩亚被新西兰军队占领",
+      "retrievedAt": "2026-11-20T05:53:55.010997+00:00",
+      "sha256": "c6f5905a33e37adea35689b01bf7d72bf507cb7f80a80b7e0c792201cda1a756",
+      "revisionId": null
+    },
+    {
       "url": "https://blogs.bodleian.ox.ac.uk/oxfordtrainees/wp-content/uploads/sites/133/2021/09/Exhibition-Handlist-Illustrating-Dantes-Divine-Comedy-October-2020.pdf",
       "title": "牛津大学博德利图书馆 · Illustrating Dante’s Divine Comedy",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
       "attemptedAt": "2026-10-25T16:51:11.484635+00:00"
+    },
+    {
+      "url": "https://buxdu.uz/ru/166-muzey/8153/8153-ya-xoll-6-ekspozitsiya-respublika-buxarskaya-narodnie-soveti/",
+      "title": "布哈拉国立大学博物馆 · 布哈拉人民苏维埃共和国展厅",
+      "retrievedAt": "2026-11-20T05:53:07.876502+00:00",
+      "sha256": "f522ce7e3db705fcd350f31c5ed8390e2e17274106746f6af4f5e1e6506e8077",
+      "revisionId": null
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb306255232",
@@ -3871,6 +4038,13 @@
       "title": "CiNii Books · 东京大学藏《论道》题录",
       "retrievedAt": "2026-10-25T17:33:10.401038+00:00",
       "sha256": "aec8bdecf4b18f2ac39fe64d73bd192a68220a6d337e30d1629bd7fc777276ce",
+      "revisionId": null
+    },
+    {
+      "url": "https://ci.nii.ac.jp/ncid/BA90656251",
+      "title": "日本国立信息学研究所 CiNii Books · 《何应钦大传》书目",
+      "retrievedAt": "2026-11-20T04:53:36.109732+00:00",
+      "sha256": "043aad3fef653824fefbaac537fb1ae7cd8254706820debdb9f314e00b32aef4",
       "revisionId": null
     },
     {
@@ -3971,6 +4145,27 @@
       "revisionId": null
     },
     {
+      "url": "https://content.www.wellcomecollection.org/works/tjqq6j65",
+      "title": "惠康收藏 · 南丁格尔在克里米亚战争期间致比特森的书信",
+      "retrievedAt": "2026-11-20T03:34:01.672803+00:00",
+      "sha256": "7b414c29aa47af084ad7a9c00e3b9636db21c0769041548959f46218926ca9d9",
+      "revisionId": null
+    },
+    {
+      "url": "https://contents.history.go.kr/front/kc/printViewPopup.do?levelId=kc_i502100",
+      "title": "韩国国史编纂委员会 · 韩国史年表",
+      "retrievedAt": "2026-11-20T04:53:36.433337+00:00",
+      "sha256": "f2d9d0c5e702c74cdec6902ed674393ae873e9dd9f90d62436feef2df29e9be2",
+      "revisionId": null
+    },
+    {
+      "url": "https://corporate.nas.gov.sg/former-ford-factory/overview/",
+      "title": "新加坡国家档案馆 · 旧福特汽车厂常设展",
+      "retrievedAt": "2026-11-20T05:48:46.738024+00:00",
+      "sha256": "35b7d753b3ebb046a830f397884f4b0d779bfdded831d0f0b597bd955fdc6598",
+      "revisionId": null
+    },
+    {
       "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201803/hxwhyj_24g/202011/t20201126_13966983.html",
       "title": "湖南省文史研究馆 · 民族英雄林则徐的湖湘缘",
       "retrievedAt": "2026-11-04T16:19:03.239634+00:00",
@@ -4006,6 +4201,33 @@
       "revisionId": null
     },
     {
+      "url": "https://daj.nantong.gov.cn/ntsdaj/ntlssdjt/content/14d33aed-a5b0-4d74-a8a7-5c4ab644f9a6.html",
+      "title": "南通市档案馆 · 张謇生平与地方大事",
+      "retrievedAt": "2026-11-20T03:33:58.687105+00:00",
+      "sha256": "961864a152b4570f9294c70b2e9198be77b2b8cbb4d56d1e366b783af293fb12",
+      "revisionId": null
+    },
+    {
+      "url": "https://dangshi.people.com.cn/gb/n1/2018/0418/c85037-29934504.html",
+      "title": "人民网党史频道 · 傅作义的北平谈判与水利工作",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'dangshi.people.com.cn'. (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T04:53:35.953910+00:00"
+    },
+    {
+      "url": "https://darwin-online.org.uk/content/contentblock?basepage=1&itemID=EH88202366&viewtype=text",
+      "title": "达尔文《小猎犬号日记》手稿转录",
+      "retrievedAt": "2026-11-19T17:25:25.322229+00:00",
+      "sha256": "8f1c1ce00fa4d447010e4f3221ce8bef334c38430cc7bf213b60c96101e5f6b8",
+      "revisionId": null
+    },
+    {
+      "url": "https://darwin-online.org.uk/converted/Ancillary/Rookmaaker_Beagle_Itinerary_A575.html",
+      "title": "Darwin Online · Kees Rookmaaker 整理的达尔文航行日程",
+      "retrievedAt": "2026-11-19T17:25:24.198876+00:00",
+      "sha256": "cda29e40fe8e4612a5c7636ad9ee53a41e48501bd73c10bc33061f8ed5c25102",
+      "revisionId": null
+    },
+    {
       "url": "https://depts.washington.edu/silkroad/exhibit/mongols/essay.html",
       "title": "华盛顿大学 · Daniel C. Waugh, The Mongols",
       "retrievedAt": "2026-11-13T16:19:39.547121+00:00",
@@ -4027,10 +4249,31 @@
       "attemptedAt": "2026-11-18T17:36:55.736182+00:00"
     },
     {
+      "url": "https://dfz.cq.gov.cn/zqlswh/rwby_417819/202312/t20231215_12710760.html",
+      "title": "重庆市地方志办公室 · 重庆谈判期间的毛泽东",
+      "retrievedAt": "2026-11-20T04:53:36.240211+00:00",
+      "sha256": "d37a2fa7118d4cc32bc8590196af3fe68f9f979a4489401c6a0fa1e6bf4f13cb",
+      "revisionId": null
+    },
+    {
+      "url": "https://dfz.jl.gov.cn/jgdg/201701/t20170106_5218987.html",
+      "title": "吉林省地方志 · 东北沦陷时期的吉林",
+      "retrievedAt": "2026-11-20T04:53:36.999803+00:00",
+      "sha256": "db89b02815d848aa8a613aeff90d71f03b7a1fdbf0c6d5af243490f7e1a4f525",
+      "revisionId": null
+    },
+    {
       "url": "https://dfz.nanjing.gov.cn/gzdt/202406/t20240613_4690079.html",
       "title": "南京市地方志工作办公室 · “官爱江南为六朝”——林则徐与南京",
       "retrievedAt": "2026-11-04T16:12:42.975418+00:00",
       "sha256": "1fb2fc21f9246529fc5f4ed4afff6284ce978aab8cb10d67938a26ad5f8c1909",
+      "revisionId": null
+    },
+    {
+      "url": "https://dfz.nanjing.gov.cn/gzdt/202508/t20250815_5628715.html",
+      "title": "南京市地方志工作办公室 · 抗战胜利南京受降仪式",
+      "retrievedAt": "2026-11-20T04:53:36.609674+00:00",
+      "sha256": "4e3e75553b04f359c002685663c7d696cc4db70c42bc8f09e0bda38320d02e77",
       "revisionId": null
     },
     {
@@ -4039,6 +4282,13 @@
       "retrievedAt": "2026-10-07T06:33:41.603600+00:00",
       "lastCacheCheckAt": "2026-10-07T06:45:07.104098+00:00",
       "sha256": "b58ec07ff7e5a1703cb5251ca99eb28c74ef4a9891a6b3e35b13c35a995523f5",
+      "revisionId": null
+    },
+    {
+      "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923619800839565.pdf",
+      "title": "《陕西省志》相关纪事 · 司马迁南游",
+      "retrievedAt": "2026-11-19T17:25:56.469906+00:00",
+      "sha256": "6fd0843067accb2bb6298b2bebd74d9b66b536d24625a78d27e1faa109c5ba78",
       "revisionId": null
     },
     {
@@ -4083,6 +4333,20 @@
       "revisionId": null
     },
     {
+      "url": "https://digitallibrary.un.org/record/229464",
+      "title": "联合国新闻部 · 《联合国与厄立特里亚独立》",
+      "retrievedAt": "2026-11-20T05:48:47.497505+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
+      "url": "https://digitallibrary.un.org/record/670401",
+      "title": "联合国大会 · 第390（V）号决议",
+      "retrievedAt": "2026-11-20T05:48:47.438315+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
       "url": "https://direzionemuseiroma.cultura.gov.it/pantheon/",
       "title": "意大利文化部罗马国家博物馆管理局 · Pantheon",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
@@ -4110,10 +4374,23 @@
       "revisionId": null
     },
     {
+      "url": "https://doi.org/10.1103/PhysRev.105.1413",
+      "title": "吴健雄等 · Experimental Test of Parity Conservation in Beta Decay",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-19T17:28:16.623094+00:00"
+    },
+    {
       "url": "https://doi.org/10.7312/columbia/9780231153973.003.0016",
       "title": "Columbia University Press · Waiting for the Dawn",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T16:50:03.669392+00:00"
+    },
+    {
+      "url": "https://drc.xizang.gov.cn/gfdy/gfdy_zzzl/202401/t20240112_398368.html",
+      "title": "西藏自治区国防动员办公室 · 百团大战",
+      "retrievedAt": "2026-11-20T05:48:48.438479+00:00",
+      "sha256": "c1e938ca84c23b20bb2f3f905beb581d9aba1ef81ae8b0ef63d1bce3b873f754",
+      "revisionId": null
     },
     {
       "url": "https://duomo.firenze.it/en/40/dome",
@@ -4148,6 +4425,13 @@
       "retrievedAt": "2026-11-04T16:12:45.074948+00:00",
       "lastCacheCheckAt": "2026-11-18T17:36:43.773733+00:00",
       "sha256": "336910c3fe2487736edd5abe25ecefc799b5a4e22681f977494aa3cf7c550807",
+      "revisionId": null
+    },
+    {
+      "url": "https://ecommons.cornell.edu/bitstreams/9ae9d05d-a62c-4d8a-b26f-ff83b2be2c77/download",
+      "title": "Adrienne Lynn Edgar · Borders in Red",
+      "retrievedAt": "2026-11-20T03:34:13.869296+00:00",
+      "sha256": "e0046bc5e40208ae9a72d6647f1d14a85285962031ee123f400db3a421972543",
       "revisionId": null
     },
     {
@@ -4188,6 +4472,13 @@
       "revisionId": null
     },
     {
+      "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/traces_of_buddhism_in_sumatra_an_archaeological_perspective.pdf",
+      "title": "联合国教科文组织丝路项目 · 苏门答腊佛教的考古证据",
+      "retrievedAt": "2026-11-19T17:25:30.365593+00:00",
+      "sha256": "b756fdba8768afb0c5a17968cc677649d2dc02824d7e45dc8266add09db711e9",
+      "revisionId": null
+    },
+    {
       "url": "https://english.sse.com.cn/aboutsse/overview/",
       "title": "上海证券交易所 · Overview",
       "retrievedAt": "2026-11-02T15:55:31.977336+00:00",
@@ -4214,6 +4505,13 @@
       "retrievedAt": "2026-10-06T12:09:55.310114+00:00",
       "lastCacheCheckAt": "2026-11-18T17:36:43.819625+00:00",
       "sha256": "4f500c72002061ab0076b30a9c351363f8be6ec94014bf41fd53f789ce01214a",
+      "revisionId": null
+    },
+    {
+      "url": "https://gaj.beijing.gov.cn/jcbwg/yjcg/jsyj/202006/t20200628_1933167.html",
+      "title": "北京市公安局警察博物馆 · 北平解放前后的公安机构",
+      "retrievedAt": "2026-11-20T04:53:36.801299+00:00",
+      "sha256": "9979664c18d86e67e56cf88363ea0e286190a4abf3d4f3fd1a0626c0bed454fe",
       "revisionId": null
     },
     {
@@ -4369,6 +4667,27 @@
       "revisionId": null
     },
     {
+      "url": "https://history.state.gov/historicaldocuments/frus1943v04/d115",
+      "title": "美国国务院外交文书 · 1943年埃塞俄比亚备忘录",
+      "retrievedAt": "2026-11-20T04:53:38.159073+00:00",
+      "sha256": "0cd3fef09d3f6317283773ab8c04496b40b5156889a9eb6e513ba28a3b280c72",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1946v08/d683",
+      "title": "美国国务院《美国对外关系文件》1946年第八卷 · 对菲律宾独立的承认",
+      "retrievedAt": "2026-11-20T05:48:48.641288+00:00",
+      "sha256": "67d796f7cfa50449e3ef7977a71b484518617be7502897974496aa49beea95e1",
+      "revisionId": null
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1950v03/d676",
+      "title": "美国国务院外交文书 · 印度尼西亚与荷兰新几内亚问题",
+      "retrievedAt": "2026-11-20T04:56:28.746971+00:00",
+      "sha256": "5d14c5b621796d565314eb26f70f89fb2367d65e885e05ecf722b7c2cffe50d1",
+      "revisionId": null
+    },
+    {
       "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
       "title": "美国国务院历史办公室 · The United States and the Haitian Revolution, 1791–1804",
       "retrievedAt": "2026-11-13T16:19:40.786230+00:00",
@@ -4489,6 +4808,20 @@
       "revisionId": null
     },
     {
+      "url": "https://home.nps.gov/puhe/learn/historyculture/kamehameha.htm",
+      "title": "美国国家公园管理局 · 卡美哈梅哈一世",
+      "retrievedAt": "2026-11-19T17:25:34.407625+00:00",
+      "sha256": "a2c3b36bb141172e64eb4333017a9385eb3d0f27e79411988ffb5ded66e1a465",
+      "revisionId": null
+    },
+    {
+      "url": "https://humas.gowakab.go.id/peringatan-kelahiran-sultan-hasananuddin-di-gowa/",
+      "title": "印度尼西亚戈瓦县 · 哈桑丁生平",
+      "retrievedAt": "2026-11-19T17:25:36.835120+00:00",
+      "sha256": "f794af30557fd0a321b74e4fd7dd8c362b0b6ac674022f59573182340e581ac1",
+      "revisionId": null
+    },
+    {
       "url": "https://hushih.mh.sinica.edu.tw/Hushih_Content?mid=116",
       "title": "中央研究院胡适纪念馆 · 传略（著述年表）",
       "retrievedAt": "2026-10-25T17:33:10.607868+00:00",
@@ -4579,6 +4912,13 @@
       "revisionId": null
     },
     {
+      "url": "https://imes.nwu.edu.cn/patiyadongfangzhanzheng.pdf",
+      "title": "西北大学丝绸之路研究院 · 《西域研究》2026年第1期相关研究",
+      "retrievedAt": "2026-11-20T03:34:05.178136+00:00",
+      "sha256": "6d0565fd7eb235fa49422ba47d7c99ac4bfd7c2267be36a90c7a286492be1bcb",
+      "revisionId": null
+    },
+    {
       "url": "https://img.cjyun.org.cn/a/10695/202303/76adee32725a5022b1ed8a5e15c15640.pdf?202102191717216666=",
       "title": "湖北考古年度报告 · 屈家岭遗址中心坐标",
       "retrievedAt": "2026-10-07T06:45:28.531022+00:00",
@@ -4605,6 +4945,12 @@
       "retrievedAt": "2026-10-23T06:45:50.357262+00:00",
       "sha256": "3036e6677419d768b488a0050fe0ec63aa637f272bae71aa11f8fecb45d50c06",
       "revisionId": null
+    },
+    {
+      "url": "https://iqh.ruc.edu.cn/old/zglsdlyj/lsdl_lzjj/xqzmddlyj/dded866f7c324445a702a1994a308e2b.htm",
+      "title": "中国人民大学清史研究所 · 历史地理：张骞两次出使考",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T03:34:01.993011+00:00"
     },
     {
       "url": "https://iris.who.int/bitstream/handle/10665/261900/PMC2395794.pdf",
@@ -4635,6 +4981,18 @@
       "lastCacheCheckAt": "2026-10-07T06:45:13.899623+00:00",
       "sha256": "5d3e6561c71f331d3531d6355247cc076897ce86c512f4a3f9544cbb41fd956c",
       "revisionId": null
+    },
+    {
+      "url": "https://journal.uia.gov.kg/index.php/main/en/article/view/772",
+      "title": "吉尔吉斯斯坦国际创新大学《学报》 · 1916年起义的开端与领导者",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T04:53:44.629381+00:00"
+    },
+    {
+      "url": "https://journals.ncl.edu.tw/files/%E9%A6%AC%E7%91%AE%E6%95%99%E6%8E%88%E6%91%98%E8%A6%81.pdf",
+      "title": "台湾国家图书馆 · 马瑛《清代女学人王贞仪及其历算成就初探》摘要",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-19T17:28:20.172873+00:00"
     },
     {
       "url": "https://kalliope.staatsbibliothek-berlin.de/ead?ead.id=DE-2060-BE-71-471226",
@@ -4677,6 +5035,13 @@
       "revisionId": null
     },
     {
+      "url": "https://lishiwenhua.snnu.edu.cn/info/1901/19231.htm",
+      "title": "陕西师范大学 · 张骞生平",
+      "retrievedAt": "2026-11-20T03:34:02.285813+00:00",
+      "sha256": "556be9454fbc9d133113002f266fd0013c550fe991afbd3974de18118e21fdb5",
+      "revisionId": null
+    },
+    {
       "url": "https://literarymaps.nijl.ac.jp/en/resources/567554dddddddddddddddd01/",
       "title": "日本国文学研究资料馆 · 古今和歌集",
       "retrievedAt": "2026-10-25T16:50:44.342476+00:00",
@@ -4698,6 +5063,12 @@
       "lastCacheCheckAt": "2026-10-07T06:45:07.126951+00:00",
       "sha256": "dd931ebc022a7f849f77c71de0b961d506eb583ac210fc821699727ceb514aeb",
       "revisionId": null
+    },
+    {
+      "url": "https://m.ccdi.gov.cn/content/bf/ed/5404.html",
+      "title": "中央纪委监察部网站 · 百团大战",
+      "error": "Remote end closed connection without response",
+      "attemptedAt": "2026-11-20T05:48:48.818869+00:00"
     },
     {
       "url": "https://maa.cam.ac.uk/schools/resources/african-collections-schools-resources/kingdom-benin",
@@ -4780,6 +5151,20 @@
       "revisionId": null
     },
     {
+      "url": "https://memorials.iwm.org.uk/memorial/100768",
+      "title": "英国帝国战争博物馆战争纪念物登记册 · 发电机行动纪念碑",
+      "retrievedAt": "2026-11-20T05:53:02.657018+00:00",
+      "sha256": "4f08b2f4051faefe0f74a3a0e2b47fccba93ef56b4873d60b7fec21b6991e966",
+      "revisionId": null
+    },
+    {
+      "url": "https://memory.nhcp.gov.ph/wp-content/uploads/2024/01/Ladislao-Diwa-at-ang-Katipunan.pdf",
+      "title": "菲律宾国家历史委员会 · Ladislao Diwa at ang Katipunan",
+      "retrievedAt": "2026-11-20T03:34:16.159135+00:00",
+      "sha256": "04a15c6e24cd7731b13f441ae67eaedcef5247a019faa063283084a19995f07b",
+      "revisionId": null
+    },
+    {
       "url": "https://mendelmuseum.muni.cz/o-muzeu/gregor-johann-mendel",
       "title": "Masaryk University Mendel Museum · Gregor Johann Mendel",
       "retrievedAt": "2026-10-25T17:16:09.117577+00:00",
@@ -4794,11 +5179,23 @@
       "revisionId": null
     },
     {
+      "url": "https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/3713/3mon-lich-su-lop-11-ban-chinh-thuc-chot-ngay-30-8-2024signed.pdf",
+      "title": "越南教育培训部 · 11年级历史教学材料",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T03:34:05.619432+00:00"
+    },
+    {
       "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
       "title": "International Mozarteum Foundation · Wolfgang Amadé Mozart",
       "retrievedAt": "2026-10-25T17:38:01.246791+00:00",
       "sha256": "6a6d4154a24657fc60f31acbf52d77d8e9e11a0a196076861f71b65360e525fd",
       "revisionId": null
+    },
+    {
+      "url": "https://mpe.gov.to/?tribe_events=tupou-1-day",
+      "title": "汤加公共企业部 · 图普一世纪念日及生平",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T03:34:08.114113+00:00"
     },
     {
       "url": "https://msrmuseum.com/News/Detailed/59",
@@ -4865,6 +5262,27 @@
       "revisionId": null
     },
     {
+      "url": "https://news.uestc.edu.cn/info/1002/1287.htm",
+      "title": "电子科技大学 · 王贞仪生平",
+      "retrievedAt": "2026-11-19T17:28:15.570368+00:00",
+      "sha256": "0704fd93aecc4233a1e1e3eb2c6901961ee675af3ceca768926b1d68adb0c1d9",
+      "revisionId": null
+    },
+    {
+      "url": "https://newyork.china-consulate.gov.cn/jbwzlm/zt/3/201211/t20121106_5434835.htm",
+      "title": "国务院新闻办 · 《钓鱼岛是中国的固有领土》",
+      "retrievedAt": "2026-11-20T04:19:50.727245+00:00",
+      "sha256": "f05ee0bc5271a48fc8788efb9fcf0e5b56129ce3971ae0ed26e0492338359fc2",
+      "revisionId": null
+    },
+    {
+      "url": "https://npgallery.nps.gov/GetAsset/13028e15-be57-4528-8404-8d8d349bd154",
+      "title": "美国国家公园管理局 · 卡瓜纳遗址登记档案",
+      "retrievedAt": "2026-11-19T17:25:36.989078+00:00",
+      "sha256": "6364cb272e86e945fabe8ce59095f31ee7a4ea57bf502bdb3d78b82b5b4c43b1",
+      "revisionId": null
+    },
+    {
       "url": "https://nrp.jining.gov.cn/art/2017/3/23/art_60575_2508723.html",
       "title": "济宁市自然资源和规划局 · 轻舟已过万重山",
       "retrievedAt": "2026-11-04T16:12:43.609222+00:00",
@@ -4873,10 +5291,22 @@
       "revisionId": null
     },
     {
+      "url": "https://nzhistory.govt.nz/black-saturday-nz-police-open-fire-on-mau-protestors-in-apia-nine-samoans-killed",
+      "title": "新西兰文化与遗产部 NZ History · 萨摩亚的“黑色星期六”",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T05:48:48.928844+00:00"
+    },
+    {
       "url": "https://nzhistory.govt.nz/media/interactive/king-movement-map",
       "title": "New Zealand Ministry for Culture and Heritage · The search for a king",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T16:46:51.355054+00:00"
+    },
+    {
+      "url": "https://nzhistory.govt.nz/media/photo/postal-service-samoa",
+      "title": "新西兰文化与遗产部 NZ History · 萨摩亚的邮政与电报分队",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T05:48:49.060454+00:00"
     },
     {
       "url": "https://nzhistory.govt.nz/people/james-cook",
@@ -5377,10 +5807,24 @@
       "revisionId": null
     },
     {
+      "url": "https://oq.gov.kz/en/abai/abai-45",
+      "title": "哈萨克斯坦语言资源平台 · 阿拜《箴言录》",
+      "retrievedAt": "2026-11-20T03:34:11.812229+00:00",
+      "sha256": "61a76ff5345ede4107e83e8a9be8561bc9656de928c1b66279bd33f44fe531fb",
+      "revisionId": null
+    },
+    {
       "url": "https://oumnh.ox.ac.uk/learn-marie-curie",
       "title": "Oxford University Museum of Natural History · Marie Curie",
       "retrievedAt": "2026-10-25T17:38:02.257865+00:00",
       "sha256": "6979cb584cfc0a65295c24751fb785cfe54306ea1cb03ac8d7921162f8bc86d5",
+      "revisionId": null
+    },
+    {
+      "url": "https://oxis.org/downloads/bulbek-and-caldwell-2020.pdf",
+      "title": "David Bulbeck、Ian Caldwell · 南苏拉威西本土防御建筑研究",
+      "retrievedAt": "2026-11-19T17:30:55.238057+00:00",
+      "sha256": "34bde2502e78d3a1c6506b45836716ddd3e4a5bb1112933323aae66646e25c43",
       "revisionId": null
     },
     {
@@ -5398,6 +5842,13 @@
       "revisionId": null
     },
     {
+      "url": "https://parliament.gov.to/en/about-parliament/history",
+      "title": "汤加议会 · 议会史",
+      "retrievedAt": "2026-11-20T03:34:14.691646+00:00",
+      "sha256": "b1f6f928df962a4e6be1314de6ac4afc6436f2fe92d933f39e0d4573a87239fe",
+      "revisionId": null
+    },
+    {
       "url": "https://peacekeeping.un.org/en/node/109340",
       "title": "United Nations · Ghanaian peacekeepers mark Independence Day",
       "retrievedAt": "2026-10-25T17:23:26.885617+00:00",
@@ -5409,6 +5860,20 @@
       "title": "United Nations · UNGOMAP background",
       "retrievedAt": "2026-10-25T17:23:26.446040+00:00",
       "sha256": "75ac35f274f237cd96c6e22902cdebb34f06cc3c0fe2e76b4c1081c323c6814f",
+      "revisionId": null
+    },
+    {
+      "url": "https://ph.china-embassy.gov.cn/chn/zgxw/201206/t20120608_1221827.htm",
+      "title": "中国驻菲律宾大使馆 · 黄岩岛主权属于中国",
+      "retrievedAt": "2026-11-20T15:10:11.521389+00:00",
+      "sha256": "660b4f8994ac3590853b490aaf3de3f37ed9aeaff405f8105329921956e25715",
+      "revisionId": null
+    },
+    {
+      "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/la-liga-filipina/",
+      "title": "菲律宾国家历史委员会 · La Liga Filipina 历史标识",
+      "retrievedAt": "2026-11-20T03:34:19.311368+00:00",
+      "sha256": "fd01b30b4b6b076abebe130faacdf42504400569c78361c25e5e5e2fc009f4ad",
       "revisionId": null
     },
     {
@@ -6011,10 +6476,31 @@
       "revisionId": null
     },
     {
+      "url": "https://preview.wellcomecollection.org/works/gvb7d7cz/items?canvas=518&manifest=2&page=87&shouldScrollToCanvas=true",
+      "title": "惠康收藏 · Edward Cook《南丁格尔传》年表",
+      "retrievedAt": "2026-11-20T03:34:15.521787+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11624101/",
+      "title": "《中华医史杂志》 · 明代女医家谈允贤及其《女医杂言》",
+      "retrievedAt": "2026-11-19T17:25:38.691931+00:00",
+      "sha256": "c07fa86814c27f56421b1656ae8b5181c2565229c3682ecf79776bc56c0c4bb0",
+      "revisionId": null
+    },
+    {
       "url": "https://pusdipres.anri.go.id/presidenpedia/",
       "title": "Arsip Nasional Republik Indonesia · Presidenpedia",
       "retrievedAt": "2026-10-25T17:23:46.838107+00:00",
       "sha256": "355455fa3bf6a7e93d9cd7daca335a44ae94ea1f0c9c7fa4c7e69ffde81db6a6",
+      "revisionId": null
+    },
+    {
+      "url": "https://qionghai.hainan.gov.cn/rdzt/qhtx/2142/202410/t20241014_3747838.html",
+      "title": "琼海市人民政府 · 《琼东县城和嘉积市的解放》",
+      "retrievedAt": "2026-11-20T04:53:38.580763+00:00",
+      "sha256": "2126eb46a4370127e6d3b0a513c1d38826ff8ba7605330a6f2f03436dcab8332",
       "revisionId": null
     },
     {
@@ -6055,6 +6541,20 @@
       "title": "The Metropolitan Museum of Art · Roman Art: A Resource for Educators",
       "retrievedAt": "2026-10-25T16:46:08.754898+00:00",
       "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "revisionId": null
+    },
+    {
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Gandhara_in_The_Metropolitan_Museum_of_Art.pdf",
+      "title": "大都会艺术博物馆 · The Art of Gandhara",
+      "retrievedAt": "2026-11-20T03:34:16.224289+00:00",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "revisionId": null
+    },
+    {
+      "url": "https://rhc.jo/en/king-abdullah-bin-al-hussein-1882-1951",
+      "title": "约旦王室 · 阿卜杜拉一世",
+      "retrievedAt": "2026-11-20T05:53:04.317840+00:00",
+      "sha256": "b8248298898b63e157143ab18ddb6f75d709ede18bb387fbe4b8d30597c93c5c",
       "revisionId": null
     },
     {
@@ -6146,10 +6646,31 @@
       "revisionId": null
     },
     {
+      "url": "https://shandong-chorography.org/database/bc/section/13/article/109/",
+      "title": "山东地情档案 · 莱芜市情手册文物古迹",
+      "retrievedAt": "2026-11-19T17:33:32.824861+00:00",
+      "sha256": "ad3f4001389ff259b3dd738171024c3f97ec4bb7f790041d7ded226ea0ec6c14",
+      "revisionId": null
+    },
+    {
       "url": "https://shandong-chorography.org/database/c34/section/8/article/672/",
       "title": "后李 · 考古与机构资料",
       "retrievedAt": "2026-11-02T17:52:27.725851+00:00",
       "sha256": "f39598ae3bb78fc36ea4502c1abf04d5407617f613cb82a41c79cd734fe247e5",
+      "revisionId": null
+    },
+    {
+      "url": "https://shandong-chorography.org/database/cga/section/5/article/39/",
+      "title": "山东地情档案 · 临沭县夹谷山",
+      "retrievedAt": "2026-11-19T17:33:32.414064+00:00",
+      "sha256": "ff6c3fdf3db3b494c47544db0d896a4b4dfe5e95028cf7eb8d27799a83671427",
+      "revisionId": null
+    },
+    {
+      "url": "https://shandong-chorography.org/database/f063/section/26/article/119/",
+      "title": "山东地情档案 · 齐宣王",
+      "retrievedAt": "2026-11-19T17:33:32.460561+00:00",
+      "sha256": "392f5d6d24ac7b9d8f2eac0fa4ac63fde914a1cb161cdbdaecb398d79c7b6487",
       "revisionId": null
     },
     {
@@ -6175,10 +6696,24 @@
       "revisionId": null
     },
     {
+      "url": "https://sirismm.si.edu/EADpdfs/EEPA.2004-001.pdf",
+      "title": "史密森学会国家非洲艺术博物馆 · 布鲁米特档案目录",
+      "retrievedAt": "2026-11-20T04:53:39.631531+00:00",
+      "sha256": "56e54c7a70554600552963bc651c28115ba1f2a051f9169e882a2116a4d943d5",
+      "revisionId": null
+    },
+    {
       "url": "https://sjfw.mct.gov.cn/site/dataservice/culdetails?curId=10&id=35049",
       "title": "文化和旅游部数据服务 · 乐山大佛（713—803年营造）",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-11-01T15:20:16.546684+00:00"
+    },
+    {
+      "url": "https://slkgycbh.nwu.edu.cn/info/1017/1006.htm",
+      "title": "丝绸之路考古与遗产保护 · 甘肃庆阳南佐遗址（2024年度发掘）",
+      "retrievedAt": "2026-11-19T17:25:37.499804+00:00",
+      "sha256": "d7350ba3298cf670d728e561f7e1c6a16ed1f3aec8b11d38804685acd0cad7f0",
+      "revisionId": null
     },
     {
       "url": "https://smarthistory.org/chinese-porcelain-production-and-export/",
@@ -6230,10 +6765,29 @@
       "revisionId": null
     },
     {
+      "url": "https://tdllib.sjtu.edu.cn/lzd/rwjs/dsj.htm",
+      "title": "上海交通大学李政道图书馆 · 李政道大事记",
+      "retrievedAt": "2026-11-19T17:28:15.946612+00:00",
+      "sha256": "34fbcc83a9380af9bd172e4bf951a5aae2b1b70b93e21e74c8302ea252cd25a4",
+      "revisionId": null
+    },
+    {
+      "url": "https://teara.govt.nz/en/biographies/2m30/mangakahia-meri-te-tai/print",
+      "title": "新西兰国家传记辞典 · Meri Te Tai Mangakāhia",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-19T17:25:37.913547+00:00"
+    },
+    {
       "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ru/russiacountrystu00curt/russiacountrystu00curt.pdf",
       "title": "美国国会图书馆 · 俄罗斯国别研究（历史章节）",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-23T06:54:35.535937+00:00"
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/gdc/gdcfindingaidpdfs/ms000009/ms000009.pdf",
+      "title": "美国国会图书馆 · Frederick Douglass Papers 档案目录与年表",
+      "error": "HTTP Error 404: Not Found",
+      "attemptedAt": "2026-11-20T03:34:16.878520+00:00"
     },
     {
       "url": "https://tile.loc.gov/storage-services/service/ll/llglrd/2020714996/2020714996.pdf",
@@ -6260,6 +6814,27 @@
       "title": "United Nations Treaty Series · France and Algeria, No.7395",
       "retrievedAt": "2026-10-25T17:23:54.135939+00:00",
       "sha256": "b20f1f320271a6f78b81ab855f4dd0986b7a3ed6b1886e8b0a7edc907bc7221f",
+      "revisionId": null
+    },
+    {
+      "url": "https://treaty.mfa.gov.cn/tykfiles/20180718/1531876373704.pdf",
+      "title": "外交部条约数据库 · 关于中国长春铁路、旅顺口及大连的协定",
+      "retrievedAt": "2026-11-20T04:22:18.503290+00:00",
+      "sha256": "848ca1173807a6e3a1bb8215f4012c32479d5af1cd07e685b81e7f9201289c67",
+      "revisionId": null
+    },
+    {
+      "url": "https://treaty.mfa.gov.cn/tykfiles/20180718/1531876578136.pdf",
+      "title": "外交部条约数据库 · 《中英联合声明》",
+      "retrievedAt": "2026-11-20T04:19:51.151563+00:00",
+      "sha256": "300a47af857fe58d29c13b63ef925a5e796c995678dbce9ebe07fb93ff7f1ef9",
+      "revisionId": null
+    },
+    {
+      "url": "https://tyt.hainan.gov.cn/twjr/jnss1/202003/5aa5deed7757421d817abb77edb7ff88.shtml",
+      "title": "海南省退役军人事务厅 · 五指山革命根据地纪念园",
+      "retrievedAt": "2026-11-20T04:19:51.098053+00:00",
+      "sha256": "cdb149fc8338cfea6a48143cd7a77d97cb4699ce4087d5df1baf042be547e618",
       "revisionId": null
     },
     {
@@ -6306,10 +6881,45 @@
       "revisionId": null
     },
     {
+      "url": "https://vietnamtourism.gov.vn/en/post/17725",
+      "title": "越南国家旅游局 · 蓝京遗址",
+      "retrievedAt": "2026-11-20T03:34:17.042504+00:00",
+      "sha256": "8657aa388285bbb5734c0f0b6ce5035633c7be7b025214ec64a2431a6b040678",
+      "revisionId": null
+    },
+    {
+      "url": "https://web.english.upenn.edu/~cavitch/pdf-library/Douglass_Narrative_1845_edition.pdf",
+      "title": "弗雷德里克·道格拉斯 · 1845年《自传》初版扫描",
+      "retrievedAt": "2026-11-20T03:34:22.297181+00:00",
+      "sha256": "3113379faa6850d9c12a4a5aba94c70149a21bb0a861f1f3827426c76528366d",
+      "revisionId": null
+    },
+    {
+      "url": "https://wellcomecollection.org/works/uv8bkctt/items?canvas=19&page=4&shouldScrollToCanvas=true",
+      "title": "惠康收藏 · Marion Holmes《南丁格尔小传》",
+      "retrievedAt": "2026-11-20T03:34:18.567229+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/archive/2014/whc14-38com-inf8B1-en.pdf",
+      "title": "联合国教科文组织 · ICOMOS 丝路遗产评估（2014）",
+      "retrievedAt": "2026-11-19T17:25:48.703661+00:00",
+      "sha256": "a8d78f433d2cffa00166ce8775ae6c09e841dc839d43d4610de7b89398007f43",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/archive/advisory_body_evaluation/250bis.pdf",
       "title": "ICOMOS · Great Living Chola Temples 评估",
       "retrievedAt": "2026-10-23T06:45:36.708396+00:00",
       "sha256": "ed5a7bfd8640398dcb0524860232c77031904217016ca332644038b4fe6de181",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/document/103167",
+      "title": "马六甲与乔治市遗产申报档案 · 乔治市",
+      "retrievedAt": "2026-11-19T17:25:54.861662+00:00",
+      "sha256": "bb03177def7e0365c0c758dfa0aa4d04a68d3d57c1b8c4df02a722924d39ad05",
       "revisionId": null
     },
     {
@@ -6325,6 +6935,27 @@
       "title": "ICOMOS · 莫高窟世界遗产评估",
       "retrievedAt": "2026-10-25T16:51:36.655225+00:00",
       "sha256": "972b8d64642dd534abfdbac6217ad40af6e37aff2dbc20b0368beb3238080075",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/document/174278",
+      "title": "联合国教科文组织 · 廷巴克图遗产保护研究",
+      "retrievedAt": "2026-11-20T03:34:21.474095+00:00",
+      "sha256": "681106e0a8247706795a88f9928aa0e0bc17690d601bf5352e3b769054d86efe",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/document/216186",
+      "title": "塔克西拉遗产地定期报告 · 第三周期",
+      "retrievedAt": "2026-11-19T17:25:49.843867+00:00",
+      "sha256": "657a100be29b28ebdf37e6dd304a3211650a34f7282cf93e8c81c059f21d5341",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/decisions/8394",
+      "title": "联合国教科文组织 · 45 COM 8B.13 泽拉夫尚—卡拉库姆走廊",
+      "retrievedAt": "2026-11-19T17:25:51.012967+00:00",
+      "sha256": "88495568e292c97e159b8f7586ee5a821cbfee8573d66c20c2a1fbc331f95ac9",
       "revisionId": null
     },
     {
@@ -6348,6 +6979,13 @@
       "retrievedAt": "2026-10-23T06:44:56.149871+00:00",
       "lastCacheCheckAt": "2026-11-18T17:36:56.031532+00:00",
       "sha256": "20a8853291a4535ee4ea255ed61a39e53085e41d12b5d8062ced73f6b1f5c149",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1103/",
+      "title": "联合国教科文组织 · 艾哈迈德·亚萨维陵寝",
+      "retrievedAt": "2026-11-20T03:34:20.374194+00:00",
+      "sha256": "07d8051b938aea8a5fc1db28a828d61e74ef40942064377c2793fafbebf284b9",
       "revisionId": null
     },
     {
@@ -6428,6 +7066,13 @@
       "retrievedAt": "2026-10-06T18:33:46.119648+00:00",
       "lastCacheCheckAt": "2026-11-18T17:36:56.129459+00:00",
       "sha256": "534e6424d812c6e18e858276ee3eaab76c55ca0eabc35033e7ffae3314314867",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/139/",
+      "title": "联合国教科文组织 · 塔克西拉",
+      "retrievedAt": "2026-11-19T17:25:52.282295+00:00",
+      "sha256": "e5109044f2db8d661b7ef459e6e01df735c14e393c6e946cc7ce6edf63cc36da",
       "revisionId": null
     },
     {
@@ -6635,6 +7280,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/323/",
+      "title": "联合国教科文组织 · 阿波美王宫",
+      "retrievedAt": "2026-11-19T17:25:53.942516+00:00",
+      "sha256": "71377f4f4adb7df3cced1847f4d5c1e4c511df2f5d7bab0102d3e4697b6381c0",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/list/356/",
       "title": "UNESCO · 伊斯坦布尔历史地区",
       "retrievedAt": "2026-11-02T15:55:56.365014+00:00",
@@ -6689,6 +7341,13 @@
       "title": "UNESCO · Historic Centre of Saint Petersburg and Related Groups of Monuments",
       "retrievedAt": "2026-10-23T06:50:25.174655+00:00",
       "sha256": "bfd6ad8d1e8d1976d142d9179ad25417395fafcbae71517c6f3f7be70854bbfe",
+      "revisionId": null
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/543/",
+      "title": "联合国教科文组织 · 希瓦内城 Itchan Kala",
+      "retrievedAt": "2026-11-20T03:34:21.355910+00:00",
+      "sha256": "efc430d49271b3a7d2c6c449326bd5f8b4ffbcb2ee0bcbb3c69fda9ee3c95474",
       "revisionId": null
     },
     {
@@ -6818,6 +7477,13 @@
       "revisionId": null
     },
     {
+      "url": "https://whc.unesco.org/en/list/949/",
+      "title": "联合国教科文组织 · 美山圣地",
+      "retrievedAt": "2026-11-20T03:34:22.090575+00:00",
+      "sha256": "2aee1b0ab5e12ce49119c66b6eba48f88450cb4a74a3866117b6a3345e6adf93",
+      "revisionId": null
+    },
+    {
       "url": "https://whc.unesco.org/en/tentativelists/5803/",
       "title": "UNESCO预备清单 · Wooden Structures of Liao Dynasty",
       "retrievedAt": "2026-10-25T16:51:39.674223+00:00",
@@ -6893,10 +7559,30 @@
       "attemptedAt": "2026-10-25T17:16:36.453723+00:00"
     },
     {
+      "url": "https://www.aps.org/funding-recognition/historic-sites/nbs",
+      "title": "美国物理学会 · 国家标准局物理史迹",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-19T17:28:17.742170+00:00"
+    },
+    {
+      "url": "https://www.archives.gov/education/lessons/hawaii-petition",
+      "title": "美国国家档案馆 · 反对兼并夏威夷的请愿书",
+      "retrievedAt": "2026-11-19T17:25:55.588061+00:00",
+      "sha256": "e446f871adf56e2c77e854bfb945371648befdc7516f305c06a434ab7ffae021",
+      "revisionId": null
+    },
+    {
       "url": "https://www.archives.gov/exhibits/featured-documents/treaty-of-kanagawa",
       "title": "美国国家档案馆 · The Treaty of Kanagawa",
       "retrievedAt": "2026-10-23T06:46:20.326591+00:00",
       "sha256": "82a09ee6b82e3a39661f9abddc5f983d6feaa0c98b24b555b0008591ebce2874",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.gov/federal-register/codification/proclamations/02695.html",
+      "title": "美国国家档案馆 · 杜鲁门第2695号总统公告",
+      "retrievedAt": "2026-11-20T05:48:49.687291+00:00",
+      "sha256": "1ceb0237eeb97e01e0f72261e94898fe8ac5e414d024a3b5f38500c38dfd3b19",
       "revisionId": null
     },
     {
@@ -6936,6 +7622,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.archives.gov/milestone-documents/joint-resolution-for-annexing-the-hawaiian-islands",
+      "title": "美国国家档案馆 · 兼并夏威夷联合决议与抗议书",
+      "retrievedAt": "2026-11-19T17:25:55.292012+00:00",
+      "sha256": "a339067418ad17e1f8e44d5e2875a1d0961a13c845c0f02d8709811ed7c7b3bf",
+      "revisionId": null
+    },
+    {
       "url": "https://www.archives.gov/milestone-documents/louisiana-purchase-treaty",
       "title": "美国国家档案馆 · Louisiana Purchase Treaty (1803)",
       "retrievedAt": "2026-10-23T06:50:46.531068+00:00",
@@ -6950,10 +7643,24 @@
       "revisionId": null
     },
     {
+      "url": "https://www.archives.gov/milestone-documents/surrender-of-japan",
+      "title": "美国国家档案馆 · 日本投降书原件",
+      "retrievedAt": "2026-11-20T04:28:19.167447+00:00",
+      "sha256": "b978fb14552d3379ad99a7eae3610bebd9cfa26477b75d7a6899ae29e51047e4",
+      "revisionId": null
+    },
+    {
       "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
       "title": "美国国家档案馆 · Treaty of Guadalupe Hidalgo (1848)",
       "retrievedAt": "2026-10-23T06:50:42.937540+00:00",
       "sha256": "e00fd84e286e0dfd8786f99ed2b449a32fdaa727f04c05d83d3db3b9864d25fc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.archives.govt.nz/discover-our-stories/the-rise-of-the-mau-and-the-fall-of-colonial-rule-in-samoa",
+      "title": "新西兰国家档案馆 · 萨摩亚毛乌运动与殖民统治的结束",
+      "retrievedAt": "2026-11-20T05:53:03.569686+00:00",
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
       "revisionId": null
     },
     {
@@ -6968,6 +7675,13 @@
       "title": "Auschwitz-Birkenau Memorial · Day of liberation",
       "retrievedAt": "2026-10-25T17:23:57.667254+00:00",
       "sha256": "064be1bbb462f060266376246c777c49b4ee58adf029f40651f63e2eaecfa1af",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.awm.gov.au/articles/encyclopedia/air_raids/darwin",
+      "title": "澳大利亚战争纪念馆 · 达尔文空袭",
+      "retrievedAt": "2026-11-20T05:48:49.853058+00:00",
+      "sha256": "5760421ec233e37b25d7a8a1674ca934b16b522ae58dd25a3252e1b8ec6c904d",
       "revisionId": null
     },
     {
@@ -10044,6 +10758,20 @@
       "revisionId": null
     },
     {
+      "url": "https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/doppelte-staatsgruendung-1949/",
+      "title": "德国联邦档案馆 · 1949年两次建国档案",
+      "retrievedAt": "2026-11-20T04:22:20.400043+00:00",
+      "sha256": "2d4dab887b35731bd713b8dde1f78db6b9b7089909f881e1b0562514f9f48461",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.bunka.go.jp/seisaku/bunkazai/rekishibunka/pdf/93522312_01.pdf",
+      "title": "日本文化厅 · 琉球王国时代与地方治理资料",
+      "retrievedAt": "2026-11-19T17:26:02.068337+00:00",
+      "sha256": "5801a2bb08f5e3f75b94487007a3105f99bfe21bf8679804e920c45ae4d4fa64",
+      "revisionId": null
+    },
+    {
       "url": "https://www.cambridge.org/core/books/abs/cambridge-companion-to-spinozas-ethics/textual-history-of-spinozas-ethics/DB85086DF14DD34231AC1D56270DBD3F",
       "title": "Cambridge University Press · The Textual History of Spinoza’s Ethics",
       "retrievedAt": "2026-10-25T16:51:46.417338+00:00",
@@ -10055,6 +10783,13 @@
       "title": "剑桥蒙古帝国史 · 蒙古中亚：察合台与窝阔台诸系",
       "retrievedAt": "2026-10-23T06:54:52.555532+00:00",
       "sha256": "5414a3268cad36c3186b07f06d96b72365a5b6a1343776f53cbdc72de9657f56",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/central-asian-revolt-of-1916/refugees-resettlement-and-revolutionary-violence-in-semireche-after-the-1916-revolt/3AE048618F9306B3082593862070146D",
+      "title": "Aminat Chokobaeva · 1916年起义后七河地区的难民、安置与暴力",
+      "retrievedAt": "2026-11-20T04:53:44.650725+00:00",
+      "sha256": "b3fa0caacc1aa4f737cd890d6678bfdfeccc01a2182831ef6d9badab7a510d9b",
       "revisionId": null
     },
     {
@@ -10137,6 +10872,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.chinanews.com/cul/2016/02-26/7773969.shtml",
+      "title": "吴中地方志研究者潘小平 · 谈允贤家世与《女医杂言》",
+      "retrievedAt": "2026-11-19T17:25:55.790957+00:00",
+      "sha256": "6b6ee65fa3b913e1d6c88fa8e6309020a30a46d2cf5bdec421adf1183cd521a7",
+      "revisionId": null
+    },
+    {
       "url": "https://www.chncpa.org/cgyl_278/yszl/wqzl/201508/t20150819_158895.shtml",
       "title": "国家大剧院 · 跨越世纪的经典——《雷雨》的前生今世",
       "retrievedAt": "2026-11-02T15:56:01.215265+00:00",
@@ -10156,6 +10898,13 @@
       "title": "河南博物院 · 仰韶文化与彩陶",
       "retrievedAt": "2026-10-06T18:33:47.313276+00:00",
       "sha256": "4148e3e57feec57df999b3857fd888d260ac946c16d92ee4ed734f87188005fc",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/Portals/0/web/zt/20181228hsxf/",
+      "title": "中国国家博物馆、河北博物院 · 满城汉墓发掘五十周年特展",
+      "retrievedAt": "2026-11-19T17:28:17.089514+00:00",
+      "sha256": "d43c8a20f883af9715a8f3a72bd61adb44e3ea88a962005a14a3bbade90ed3e8",
       "revisionId": null
     },
     {
@@ -10226,6 +10975,13 @@
       "retrievedAt": "2026-11-13T12:50:31.884377+00:00",
       "lastCacheCheckAt": "2026-11-18T17:37:23.144062+00:00",
       "sha256": "2e520cd9c07122b70d3a3fc89c89a2fb0090af94197b5bc9393d6981381dfa48",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.chnmuseum.cn/zp/zpml/201812/t20181218_26237.shtml",
+      "title": "中国国家博物馆 · 《万历九年清丈鱼鳞清册》",
+      "retrievedAt": "2026-11-19T17:25:56.202221+00:00",
+      "sha256": "54a1b8f86633700ba197cceb532dffd3356133f03e8780192cfa19b33facf3f9",
       "revisionId": null
     },
     {
@@ -10333,6 +11089,18 @@
       "revisionId": null
     },
     {
+      "url": "https://www.counsellor.gov.cn/2021-05/28/c_1211176146.htm",
+      "title": "国务院参事室 · 新中国成立初期党对水利工作的领导",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.counsellor.gov.cn'. (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T04:53:44.718218+00:00"
+    },
+    {
+      "url": "https://www.counsellor.gov.cn/2021-07/07/c_1211231118.htm",
+      "title": "国务院参事室 · 王卓然与张学良",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.counsellor.gov.cn'. (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T04:53:44.746693+00:00"
+    },
+    {
       "url": "https://www.cp.com.cn/book/3bf46e31-0.html",
       "title": "商务印书馆 · 《论道》内容简介",
       "retrievedAt": "2026-10-25T17:33:12.572427+00:00",
@@ -10412,6 +11180,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.customs.gov.hk/hcms/filemanager/en/content_274/Customs_PDF_05_CH04.pdf",
+      "title": "香港海关 · 《香港海关百年史》第四章",
+      "retrievedAt": "2026-11-20T04:19:59.323071+00:00",
+      "sha256": "059ce2e094b985e4cfa3f821825853b2a546da7ae996dae192e87e6ccfb68d5d",
+      "revisionId": null
+    },
+    {
       "url": "https://www.damingsi.com/jzview1.asp?id=9&lbid=4",
       "title": "扬州大明寺 · 鉴真年表",
       "retrievedAt": "2026-11-04T16:12:45.539005+00:00",
@@ -10453,6 +11228,20 @@
       "title": "新西兰自然保护部 · New Zealand Wars",
       "retrievedAt": "2026-10-23T06:50:57.974670+00:00",
       "sha256": "2802350c7075385a42cf6b701d82ac32da48708dc1f6014b8c7413c5cbbd4d41",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.doi.gov/oia/islands/marshallislands",
+      "title": "美国内政部 · 马绍尔群岛",
+      "retrievedAt": "2026-11-20T03:34:23.007388+00:00",
+      "sha256": "c6e8cbc296490890bdc7934504072ed62c84213b295b4c56bdea434a0e4ea23d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.doi.gov/sites/default/files/elips/documents/575-dm-1.pdf",
+      "title": "美国内政部 · 575 DM 1 联邦自由联系沿革",
+      "retrievedAt": "2026-11-20T03:34:23.712355+00:00",
+      "sha256": "874f9296207be329ea47511ae519bcef8545c7bc24ec6ff1a67c071d840b87ac",
       "revisionId": null
     },
     {
@@ -10614,6 +11403,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.dpm.org.cn/lemmas/244026.html",
+      "title": "故宫博物院 · 宗喀巴",
+      "retrievedAt": "2026-11-20T03:34:22.798675+00:00",
+      "sha256": "a53cf18b2540da233b4a5f9b0df96ac60e4b19a15c90dd1e325df554f3c2190c",
+      "revisionId": null
+    },
+    {
       "url": "https://www.dpm.org.cn/lemmas/244533.html",
       "title": "故宫博物院 · 李诫",
       "retrievedAt": "2026-10-06T12:10:24.854510+00:00",
@@ -10714,10 +11510,38 @@
       "revisionId": null
     },
     {
+      "url": "https://www.finearts.go.th/storage/contents/2021/06/file/EiwJGL4IEMd1qFTvC2dDVNVRA0FDfDY33DYY5N6v.pdf",
+      "title": "泰国艺术厅 · Bangkok Period",
+      "retrievedAt": "2026-11-20T03:34:44.333649+00:00",
+      "sha256": "ba7597b472d3a6dec6a905d93fc7f344ed0acad1cf09467655548ae5ecbc6213",
+      "revisionId": null
+    },
+    {
       "url": "https://www.fj.gov.cn/jdhy/zcjd/202110/P020211015373827252740.pdf",
       "title": "福建省档案局 · 《福建省侨批档案保护与利用办法》解读",
       "retrievedAt": "2026-11-18T17:30:14.934882+00:00",
       "sha256": "a212ad8b02ff32f71db24c685e82115b49ad70dfeb636c389f22554bdfc830b1",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.florence-nightingale.co.uk/about-florence-nightingale/",
+      "title": "伦敦弗洛伦斯·南丁格尔博物馆 · 南丁格尔生平",
+      "retrievedAt": "2026-11-20T03:34:25.284298+00:00",
+      "sha256": "e89fbe14c5d4093bcfaf6e1113248f7ef23dd6e537018a0db49b15fcda8f82f2",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/diaoyudao/chn/flfg/gjty/201510/t20151009_8560602.html",
+      "title": "外交部 · 《日本投降书》",
+      "retrievedAt": "2026-11-20T04:19:51.351262+00:00",
+      "sha256": "265fd3626e5d6029e5efb48813a4ba6c7ecea99415963d99540487d9880f72db",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/web/ziliao_674904/zt_674979/dnzt_674981/qtzt/twwt/zylswj/202206/t20220606_10699034.html",
+      "title": "外交部 · 《开罗宣言》",
+      "retrievedAt": "2026-11-20T04:19:51.324067+00:00",
+      "sha256": "8baa69150b120a42b845852614108a5588259dc509eb383e9fae0845ff1dd445",
       "revisionId": null
     },
     {
@@ -10726,6 +11550,13 @@
       "retrievedAt": "2026-11-04T16:12:45.742565+00:00",
       "lastCacheCheckAt": "2026-11-18T17:37:24.675469+00:00",
       "sha256": "bb9008dfabdefda3e5879769c775d8285c29dd722125c5c3e0a431a4413a63d5",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.fmprc.gov.cn/ziliao_674904/zt_674979/dnzt_674981/qtzt/twwt/zylswj/202206/t20220606_10699035.html",
+      "title": "外交部 · 《波茨坦公告》",
+      "retrievedAt": "2026-11-20T04:19:51.544328+00:00",
+      "sha256": "34a0c319cda14c7ee4fe7bcce4919ef9202e170e9950ee99f08f5927285fa765",
       "revisionId": null
     },
     {
@@ -10806,6 +11637,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gov.kz/org/mfa-baku/press/article/details/7902?lang=ru",
+      "title": "哈萨克斯坦外交部 · 阿拜·库南巴耶夫生平",
+      "retrievedAt": "2026-11-20T03:34:27.165773+00:00",
+      "sha256": "88e511403c40f03d65f3ed69feaa510079345b40d13ba996890fb5ba01be4a2f",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gov.za/about-sa/history",
       "title": "南非政府 · History",
       "retrievedAt": "2026-10-23T06:46:54.415234+00:00",
@@ -10875,6 +11713,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.gwytb.gov.cn/m/headline/202208/t20220810_12459870.htm",
+      "title": "国务院台办、国务院新闻办 · 《台湾问题与新时代中国统一事业》",
+      "retrievedAt": "2026-11-20T04:19:51.796576+00:00",
+      "sha256": "fd775c15f25ad8105455584e826c26ad3da1d216a1d5447e974de0e20937ea48",
+      "revisionId": null
+    },
+    {
       "url": "https://www.gzszx.gov.cn/gzzxb/web/doc/detail/d_1301040519446560",
       "title": "二里头遗址 · 考古发现与许宏访谈",
       "retrievedAt": "2026-10-06T17:35:46.682296+00:00",
@@ -10919,6 +11764,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.his.ntnu.edu.tw/publish01/downloadfile.php?issue_id=7&paper_id=12",
+      "title": "陈昭扬《宋人纪录中的金太祖子嗣及其相关问题》",
+      "retrievedAt": "2026-11-20T03:37:28.839148+00:00",
+      "sha256": "96dde87e1715e67f54af957a1394af5d081a0d9e0cb5249ddf9c9f98f718d6ce",
+      "revisionId": null
+    },
+    {
       "url": "https://www.historicenvironment.scot/visit/all/skara-brae/history-and-stories/",
       "title": "苏格兰历史环境局 · 斯卡拉布雷村落",
       "retrievedAt": "2026-10-07T06:33:45.994199+00:00",
@@ -10947,6 +11799,13 @@
       "retrievedAt": "2026-11-06T03:24:28.022246+00:00",
       "lastCacheCheckAt": "2026-11-18T17:37:25.116805+00:00",
       "sha256": "3344a9643ec306d1f52ffa8b0b0c2e2db02dfcdb09b60a9359597c726b3e1bc3",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ihchina.cn/Article/Index/detail?id=28467",
+      "title": "中国非物质文化遗产网 · 中国珠算的历史溯源与当代价值研究",
+      "retrievedAt": "2026-11-19T17:30:51.851278+00:00",
+      "sha256": "d71d06377b5f55fd54af9f3fac14948378639a667a534615861b483db499642e",
       "revisionId": null
     },
     {
@@ -10997,6 +11856,12 @@
       "attemptedAt": "2026-10-25T17:24:17.111472+00:00"
     },
     {
+      "url": "https://www.iwm.org.uk/sites/default/files/press-release/dunkirk_film_2017_fact_sheet_and_iwm_resources_available.pdf",
+      "title": "英国帝国战争博物馆 · 敦刻尔克撤退资料",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T05:48:53.196439+00:00"
+    },
+    {
       "url": "https://www.jinshasitemuseum.com/node/174",
       "title": "金沙 · 考古与机构资料",
       "error": "HTTP Error 405: Not Allowed",
@@ -11027,6 +11892,13 @@
       "attemptedAt": "2026-11-02T17:52:28.939257+00:00"
     },
     {
+      "url": "https://www.legislation.govt.nz/act/public/1964/0069/latest/DLM354260.html",
+      "title": "新西兰立法网 · Cook Islands Constitution Act 1964",
+      "retrievedAt": "2026-11-20T03:34:25.605515+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
       "url": "https://www.lib.pku.edu.cn/portal/cn/news/0000001085",
       "title": "北京大学图书馆 · 新文化运动与北京大学百年展",
       "retrievedAt": "2026-10-25T17:33:16.376781+00:00",
@@ -11034,10 +11906,37 @@
       "revisionId": null
     },
     {
+      "url": "https://www.library.manchester.ac.uk/aiu-race-centre/collections/archives/",
+      "title": "曼彻斯特大学图书馆 · Ahmed Iqbal Ullah 种族研究中心档案",
+      "retrievedAt": "2026-11-20T05:48:55.775715+00:00",
+      "sha256": "3c4da03b2b00bd98b046d05e04012faf8c9b3d1d1517eabca585a8246e6b93ff",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.library.pref.okinawa.jp/archive/contents/cat39/map-knowledge.html",
+      "title": "冲绳县立图书馆 · 首里古地图与三山时期",
+      "retrievedAt": "2026-11-19T17:25:57.742036+00:00",
+      "sha256": "04c1e72d6878e0b42c357037a8e04ab8771d981c2e314ccd59ced7f741bd5b4b",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.ln.gov.cn/web/sqgk/lsyg/index.shtml",
+      "title": "辽宁省人民政府 · 历史沿革",
+      "retrievedAt": "2026-11-20T04:53:45.112101+00:00",
+      "sha256": "daf6a1ff87f776d3e4ca2821755cbc2d6fb919af8ee4e8f57f962b979cefc351",
+      "revisionId": 3246
+    },
+    {
       "url": "https://www.loc.gov/collections/daguerreotypes/articles-and-essays/timeline-of-the-daguerreotype-era/",
       "title": "Library of Congress · Timeline of the Daguerreotype Era",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-25T17:16:24.041662+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/collections/islamic-manuscripts-from-mali/about-this-collection/",
+      "title": "美国国会图书馆 · 马里伊斯兰手稿馆藏",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-19T17:25:56.730911+00:00"
     },
     {
       "url": "https://www.loc.gov/exhibits/1492/columbus.html",
@@ -11078,6 +11977,18 @@
       "attemptedAt": "2026-10-23T06:50:23.251988+00:00"
     },
     {
+      "url": "https://www.loc.gov/item/92000507/",
+      "title": "美国国会图书馆 · Ethiopia: A Country Study",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T04:53:44.965245+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/item/sn84026365/1847-12-03/ed-1/",
+      "title": "美国国会图书馆 · 《北极星报》1847年12月3日创刊号",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T03:34:25.826339+00:00"
+    },
+    {
       "url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/complete-national-recording-registry-listing/",
       "title": "Library of Congress · National Recording Registry",
       "error": "HTTP Error 403: Forbidden",
@@ -11088,6 +11999,12 @@
       "title": "美国国会图书馆 · 宽永行幸记",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-23T06:54:43.413272+00:00"
+    },
+    {
+      "url": "https://www.loc.gov/resource/mss11879.03001/?sp=2&st=list",
+      "title": "美国国会图书馆 · 道格拉斯通信，1845年9月16日",
+      "error": "HTTP Error 403: Forbidden",
+      "attemptedAt": "2026-11-20T03:34:26.055770+00:00"
     },
     {
       "url": "https://www.londonmuseum.org.uk/collections/london-stories/timeline-roman-london-londinium/",
@@ -11109,6 +12026,27 @@
       "title": "路德 · 九十五条论题（Luther2017 原典）",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
       "attemptedAt": "2026-11-13T16:19:58.170189+00:00"
+    },
+    {
+      "url": "https://www.manchester.ac.uk/about/news/manchesters-role-in-the-african-independence-movement/",
+      "title": "曼彻斯特大学 · 第五次泛非大会和非洲独立运动",
+      "retrievedAt": "2026-11-20T05:48:56.259292+00:00",
+      "sha256": "f99df2b140092359dfdca287bb57f5425b4efed9f183c95e034f36c32f4ba4d2",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.marxists.org/history/ussr/government/constitution/1936/1936-constitution.pdf",
+      "title": "苏联第八次非常苏维埃代表大会 · 1936年《苏联宪法》",
+      "retrievedAt": "2026-11-20T05:49:00.653545+00:00",
+      "sha256": "70a71f0eff4a72cbf0249e9e2a21f959abc53a0802bbb52243df112cf0ed6797",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.mem.gov.cn/xw/ztzl/2021/dsxxjy/xxfd/202103/t20210329_382261.shtml",
+      "title": "中华人民共和国应急管理部 · 1948：风卷残云如卷席",
+      "retrievedAt": "2026-11-20T05:53:03.769862+00:00",
+      "sha256": "3ec488290fa3e37b0d3bc53863748a1a378db0b81b5a4b725fe22f06dd0dcee8",
+      "revisionId": null
     },
     {
       "url": "https://www.metmuseum.org/art/collection/search/202581",
@@ -11273,6 +12211,12 @@
       "attemptedAt": "2026-10-23T06:54:51.649562+00:00"
     },
     {
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/afghanistan",
+      "title": "大都会艺术博物馆 · Afghanistan: Hidden Treasures from the National Museum, Kabul",
+      "error": "HTTP Error 429: Too Many Requests",
+      "attemptedAt": "2026-11-20T03:34:26.337168+00:00"
+    },
+    {
       "url": "https://www.metmuseum.org/it/essays/christianity-kongo-visual-culture",
       "title": "大都会艺术博物馆 · Christianity and Kongo Visual Culture",
       "error": "HTTP Error 429: Too Many Requests",
@@ -11339,6 +12283,41 @@
       "attemptedAt": "2026-10-22T08:49:34.403575+00:00"
     },
     {
+      "url": "https://www.mfa.gov.cn/web/wjb_673085/zzjg_673183/tyfls_674667/xwlb_674669/201412/t20141207_7670243.shtml",
+      "title": "外交部 · 南海仲裁案管辖权问题立场文件",
+      "retrievedAt": "2026-11-20T04:19:51.844585+00:00",
+      "sha256": "a5bbe964272bd0ab957dddfe4334c87dbfaf16ba3f059dd4dbe7f3d41741fa86",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.mfa.gov.cn/web/ziliao_674904/historytoday_674971/200312/t20031212_7949226.shtml",
+      "title": "外交部 · 1946年中国海军赴南沙群岛宣示主权",
+      "retrievedAt": "2026-11-20T04:19:52.007049+00:00",
+      "sha256": "0e32d09cc2fe68f4eb5e849ead525eeb75bd256be712db68776892cb98fbb702",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.mfa.gov.cn/web/ziliao_674904/wjs_674919/2159_674923/200011/t20001107_7950025.shtml",
+      "title": "外交部 · 新中国外交历史回顾",
+      "retrievedAt": "2026-11-20T04:22:18.422889+00:00",
+      "sha256": "88951f42044213c2124a0b35174edf822b0c5dee6baaebd9627ab119d0693723",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.mfa.gov.cn/ziliao_674904/1179_674909/200306/t20030626_7946856.shtml",
+      "title": "外交部 · 《中葡联合声明》",
+      "retrievedAt": "2026-11-20T04:19:52.039910+00:00",
+      "sha256": "30e6bba1a97e0e297c6c3fcb6893c64d1414a9b81db5a08eeec353e8acd21c81",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.mfat.govt.nz/assets/Countries-and-Regions/Pacific/Cook-Islands/Cook-Islands-2001-Joint-Centenary-Declaration-signed.pdf",
+      "title": "新西兰外交贸易部 · 新西兰与库克群岛百年联合声明",
+      "retrievedAt": "2026-11-20T03:34:27.425814+00:00",
+      "sha256": "ea27f68757c15bbc76a526d871ff044ef355bfb93ec1d1cec645350ace765d34",
+      "revisionId": null
+    },
+    {
       "url": "https://www.moma.org/collection/works/79802",
       "title": "Museum of Modern Art · The Starry Night",
       "error": "HTTP Error 403: Forbidden",
@@ -11401,6 +12380,12 @@
       "revisionId": null
     },
     {
+      "url": "https://www.naa.gov.au/explore-collection/first-australians/other-resources-about-first-australians/1967-referendum",
+      "title": "澳大利亚国家档案馆 · The 1967 Referendum",
+      "error": "The read operation timed out",
+      "attemptedAt": "2026-11-20T03:34:37.703690+00:00"
+    },
+    {
       "url": "https://www.nam.ac.uk/explore/battle-waterloo",
       "title": "英国国家陆军博物馆 · Battle of Waterloo",
       "retrievedAt": "2026-10-23T06:50:28.552756+00:00",
@@ -11426,6 +12411,13 @@
       "title": "英国国家陆军博物馆 · Crimean War",
       "retrievedAt": "2026-10-23T06:50:29.925571+00:00",
       "sha256": "75c0c6840326f9157abd27ca457c6dfb83c31d38abf7115180240c8607c18371",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nanhai.org.cn/images_c/6/4.html",
+      "title": "中国南海研究院 · 南海历史地图、档案",
+      "retrievedAt": "2026-11-20T04:19:52.652566+00:00",
+      "sha256": "0789663b27ffa02bede6e548c3bd8f497b78845d4d9732f57dd2074d2844e1db",
       "revisionId": null
     },
     {
@@ -11491,6 +12483,18 @@
       "retrievedAt": "2026-10-23T06:46:32.795222+00:00",
       "sha256": "f1ec0314b3716651924f2a2addd179e6ef1374d93b1e7bee766f166baa90ef65",
       "revisionId": null
+    },
+    {
+      "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/soevereiniteitsoverdracht-indonesie-1949",
+      "title": "荷兰国家档案馆 · 印度尼西亚主权移交文件（1949）",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>",
+      "attemptedAt": "2026-11-20T04:53:46.992894+00:00"
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/education/resources/florence-nightingale/",
+      "title": "英国国家档案馆 · Florence Nightingale",
+      "error": "HTTP Error 410: Gone",
+      "attemptedAt": "2026-11-20T03:34:28.983158+00:00"
     },
     {
       "url": "https://www.nationalarchives.gov.uk/education/teaching-resources/magna-carta-1214-1225/",
@@ -11614,6 +12618,27 @@
       "attemptedAt": "2026-10-25T17:15:52.315910+00:00"
     },
     {
+      "url": "https://www.nhm.ac.uk/CalmView/Record.aspx?id=WP%2F7%2F9&src=CalmView.Catalog",
+      "title": "英国自然史博物馆 · 1858年林奈学会论文校样及重印本",
+      "retrievedAt": "2026-11-19T17:25:59.233504+00:00",
+      "sha256": "67a531ce05bd6d98063ad098281ac5a417370cdbcdccecc956e29024b023f06f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/who-was-alfred-russel-wallace.html",
+      "title": "英国自然史博物馆 · 华莱士生平",
+      "retrievedAt": "2026-11-19T17:30:51.904565+00:00",
+      "sha256": "d1996ebde26cc343834743fdeaa6b038f29e31bbe40224b1c1e97ad867709224",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nist.gov/pml/fall-parity",
+      "title": "美国国家标准与技术研究院 · The Fall of Parity",
+      "retrievedAt": "2026-11-19T17:28:18.397771+00:00",
+      "sha256": "38acf1c2b306cbf511551263872f30054df8dec23becc6607034b22f984530aa",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nlc.cn/migrated/pcab.nlc.cn/gjbhzs/bm/201412/P020150309516939790893.pdf",
       "title": "《古籍著录规则》GB/T 3792.7—2008",
       "retrievedAt": "2026-11-13T13:38:00.182468+00:00",
@@ -11641,6 +12666,13 @@
       "title": "澳大利亚国家博物馆 · Defining moments timeline",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-22T08:49:35.598235+00:00"
+    },
+    {
+      "url": "https://www.nma.gov.au/defining-moments/resources/first-nations-peoples-census",
+      "title": "澳大利亚国家博物馆 · First Nations peoples counted in Census",
+      "retrievedAt": "2026-11-20T03:34:30.073005+00:00",
+      "sha256": "318fdf25f266a646eea6a5e1b290c69feb134b664f28f1fc697eb0bdd4de5726",
+      "revisionId": null
     },
     {
       "url": "https://www.nobelprize.org/prizes/lists/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/",
@@ -11680,6 +12712,20 @@
       "revisionId": null
     },
     {
+      "url": "https://www.nobelprize.org/uploads/2018/06/lee-lecture.pdf",
+      "title": "李政道 · 1957年诺贝尔物理学奖演讲",
+      "retrievedAt": "2026-11-19T17:28:18.762629+00:00",
+      "sha256": "5b8febd0e358fdf2d3823a59b6072e3baf413694b7be004ad3684ac84b36d088",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nobelprize.org/uploads/2018/06/yang-lecture.pdf",
+      "title": "杨振宁 · 1957年诺贝尔物理学奖演讲",
+      "retrievedAt": "2026-11-19T17:28:19.105133+00:00",
+      "sha256": "c4b6559d0f114d383be3a9b760c0f9d1c66966b9575758c11656981a1d45998b",
+      "revisionId": null
+    },
+    {
       "url": "https://www.nopss.gov.cn/n1/2024/0904/c458483-40313012.html",
       "title": "霍宏伟 · 隋唐洛阳城空间体系研究",
       "retrievedAt": "2026-11-13T12:50:31.565669+00:00",
@@ -11714,6 +12760,13 @@
       "title": "美国国家公园管理局 · The Civil War: Overview",
       "retrievedAt": "2026-10-22T08:49:43.765631+00:00",
       "sha256": "b847405e8c3f5e939dd43ebe88e3c7fdbcecf3d6554a6766d4c2f12b8bb0197f",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm",
+      "title": "美国国家公园管理局 · 弗雷德里克·道格拉斯生平纪事",
+      "retrievedAt": "2026-11-20T03:34:30.901177+00:00",
+      "sha256": "04399186d0d82dcbf2d11a077a6fb7208c3c38a3ce0263f6c932e01fa640dbb1",
       "revisionId": null
     },
     {
@@ -11852,10 +12905,24 @@
       "revisionId": null
     },
     {
+      "url": "https://www.pref.okinawa.jp/_res/projects/default_project/_page_/001/009/660/2018-06-01.pdf",
+      "title": "冲绳县文化财资料 · 冲绳县埋藏文化财篇",
+      "retrievedAt": "2026-11-19T17:26:03.304244+00:00",
+      "sha256": "f1c0523aded74d773edd0c6303401ad9cdfc20773746079ca43ab444bbd46fd0",
+      "revisionId": null
+    },
+    {
       "url": "https://www.princeton.edu/~elman/documents/Rethinking_the_Twentieth_Century_Denigration.pdf",
       "title": "Princeton University · Rethinking the Twentieth Century Denigration",
       "retrievedAt": "2026-10-25T17:24:28.892601+00:00",
       "sha256": "1bb3ecf462d0086a5545af70f377001226314370bd23cd69e696c680aa2849bd",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.pumch.cn/detail/27615.html",
+      "title": "北京协和医院 · 林巧稚诞辰纪念与院史资料",
+      "retrievedAt": "2026-11-20T03:34:32.018939+00:00",
+      "sha256": "6f7896dfbb140e14dfa9398f17d134459d62fbf481b50353cbd9ceda789452a4",
       "revisionId": null
     },
     {
@@ -11944,10 +13011,59 @@
       "revisionId": null
     },
     {
+      "url": "https://www.saac.gov.cn/daj/gqzt/05.html",
+      "title": "国家档案局 · 中国人民政治协商会议第一届全体会议档案",
+      "retrievedAt": "2026-11-20T04:31:32.690898+00:00",
+      "sha256": "e34154512cb84e89817cabedfcd368baafcdf81c2da8a44072ae79154781d04d",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saac.gov.cn/daj/gqzt/06.html",
+      "title": "国家档案局 · 从“五一口号”到开国大典",
+      "retrievedAt": "2026-11-20T04:19:52.491499+00:00",
+      "sha256": "991c4efa9d2348b7c3d8dc24c2a6ff2876f40154b262556d11bfbda594fecf28",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saac.gov.cn/daj/gqzt/content/05/05_68.html",
+      "title": "国家档案局 · 《中国人民政治协商会议共同纲领》原件",
+      "retrievedAt": "2026-11-20T04:28:18.425167+00:00",
+      "sha256": "33799cfb0422a7ca3ed4f3709a5d7498e59084f6808376e98aee90a440b618d6",
+      "revisionId": null
+    },
+    {
       "url": "https://www.saac.gov.cn/mowcn/cn/c100513/202109/a20df84efbe9428187c1d3462973da28/files/c3101558946944cbac352f0aceef7b16.pdf",
       "title": "中国国家档案局 · Huangdi Neijing世界记忆申报材料",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
       "attemptedAt": "2026-10-25T16:52:03.599339+00:00"
+    },
+    {
+      "url": "https://www.saac.gov.cn/zt/2014-08/22/content_63601_2.htm",
+      "title": "国家档案局 · 《档案里的中国抗战》卢沟桥事变",
+      "retrievedAt": "2026-11-20T04:53:45.317163+00:00",
+      "sha256": "a58cc726eb9c09106420d490fcfa46e5ce9d92bf3a366d6dc5dcb23cf93cf0b3",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saac.gov.cn/zt/2014-08/26/content_64057.htm",
+      "title": "国家档案局 · 《中国受降档案》第十四集",
+      "retrievedAt": "2026-11-20T04:53:45.519765+00:00",
+      "sha256": "86205c4f5b9da891143742d5df435f0ab7b5112470280b69496d4fef6e2026f2",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saac.gov.cn/zt/2014-09/03/content_65320_2.htm",
+      "title": "国家档案局 · 《中国受降档案》第二十三集",
+      "retrievedAt": "2026-11-20T04:19:52.888093+00:00",
+      "sha256": "608f0950a70dbf3eb41b4bea99a242f5bc8bfd93f5c5ad1033217ac7e6d5697e",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.saac.gov.cn/zt/mzd_5.htm",
+      "title": "国家档案局 · 档案天天看毛泽东系列",
+      "retrievedAt": "2026-11-20T04:53:45.711614+00:00",
+      "sha256": "26e2221488dca29b6b2785aa53c78369ccdde90a03c3cff45808f2e1d5f76e32",
+      "revisionId": null
     },
     {
       "url": "https://www.saet.ac.uk/Buddhism/Dogen",
@@ -12001,6 +13117,48 @@
       "revisionId": null
     },
     {
+      "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/P00004998",
+      "title": "上海博物馆 · 董其昌《秋兴八景图册》",
+      "retrievedAt": "2026-11-20T03:34:32.472764+00:00",
+      "sha256": "e8743f642c744eff3e5fb330f90649e970107f51599632bafc04bab42e5195d0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shidianguji.com/book/CD0022/chapter/1libo2ipw6nfu",
+      "title": "王贞仪《德风亭初集》 · 月食解",
+      "retrievedAt": "2026-11-19T17:28:19.656852+00:00",
+      "sha256": "eafe340866e7d3f76588dfaa32639e78e24f36b8a1a4a65819493de30dde84d6",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shidianguji.com/mid-page/7537439118268547098",
+      "title": "程大位《算法统宗》卷十一 · 方程",
+      "retrievedAt": "2026-11-19T17:26:02.671919+00:00",
+      "sha256": "79ecea416e03c24a95bbd989f0266994f651090b825a34f352e4b99577e32d80",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shidianguji.com/mid-page/7569723858027479067",
+      "title": "王贞仪《德风亭初集》 · 演示日地月关系原文",
+      "retrievedAt": "2026-11-19T17:30:52.211998+00:00",
+      "sha256": "3fcfed5a14e07e7f3067e7dda56ad5a75c0fa05d48c4368130b94a3231d8b3f0",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shidianguji.com/zh/book/CADAL02094083/chapter/1lcmvidreab0f",
+      "title": "程大位《新编直指算法统宗》卷一",
+      "retrievedAt": "2026-11-19T17:26:03.267870+00:00",
+      "sha256": "70adc957dd2cc1cd637c3707e94c3604b74a32c4f13ae119d92c05bce0c6abc6",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.shidianguji.com/zh/book/NA11930/chapter/1m2x1lddm95vt",
+      "title": "谈允贤《女医杂言序》，见《续玉台文苑》卷三",
+      "retrievedAt": "2026-11-19T17:26:04.053170+00:00",
+      "sha256": "4c956c2ddb35a577648d65da4358a851e297750398a0f446883a83e9e7e277b6",
+      "revisionId": null
+    },
+    {
       "url": "https://www.shqp.gov.cn/zhaox/yzjs/20181203/419702.html",
       "title": "崧泽 · 考古与机构资料",
       "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
@@ -12018,6 +13176,13 @@
       "title": "圣路易斯艺术博物馆 · 明治时代",
       "error": "HTTP Error 403: Forbidden",
       "attemptedAt": "2026-10-23T06:54:25.307099+00:00"
+    },
+    {
+      "url": "https://www.spc.int/sites/default/files/resources/2018-05/The_Pacific_Community_Governance_Compendium_2018.pdf",
+      "title": "太平洋共同体 · 治理文件汇编《堪培拉协定》",
+      "retrievedAt": "2026-11-20T05:48:58.122708+00:00",
+      "sha256": "d1537da1255fa2d606643127150a09c0aa2ecabfd46f34f7718957053dab5625",
+      "revisionId": null
     },
     {
       "url": "https://www.ssq.gov.cn/zjss/ssgk/lswh/202304/t20230428_2044850.html",
@@ -12056,6 +13221,20 @@
       "attemptedAt": "2026-11-02T15:58:07.203070+00:00"
     },
     {
+      "url": "https://www.tepapa.govt.nz/digital-museum/explore-digital-museum/treaty-waitangi/treaty-close/full-text-te-tiriti-o",
+      "title": "新西兰国家博物馆 Te Papa · 怀唐伊条约双语原文",
+      "retrievedAt": "2026-11-19T17:30:52.260666+00:00",
+      "sha256": "914c1c77aa012a7186c4fd0ffd7ff7573382a217dca46b3496cfdf984bccf1db",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.tnm.jp/common/fckeditor/editor/filemanager/connectors/php/transfer.php?file=%2FPublications%2Fuid000276_E4BBA4E5928C33E5B9B4E5BAA6E38080E69DB1E4BAACE59BBDE7AB8BE58D9AE789A9E9A4A8E69687E58C96E8B2A1E4BFAEE79086E5A0B1E5918AE69BB8E3808032332E706466",
+      "title": "东京国立博物馆 · 《五马图卷》文化财修理报告",
+      "retrievedAt": "2026-11-20T03:34:36.015235+00:00",
+      "sha256": "4cb2044a6611af8cac3c396a47eef88bcdb11fb4afcc76a1426aa5bd6feddda9",
+      "revisionId": null
+    },
+    {
       "url": "https://www.toshodaiji.jp/ganjin.html",
       "title": "唐招提寺 · 鉴真大和上（六次东渡、753年抵日及传戒）",
       "retrievedAt": "2026-11-01T15:20:21.293296+00:00",
@@ -12092,6 +13271,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.un.org/dppa/decolonization/sites/www.un.org.dppa.decolonization/files/decon_num_15-1.pdf",
+      "title": "联合国去殖民化事务 · 吉尔伯特群岛档案",
+      "retrievedAt": "2026-11-20T03:34:36.693860+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "revisionId": null
+    },
+    {
       "url": "https://www.un.org/en/chronicle/article/independence-long-term-stability-united-nations-efforts-africa",
       "title": "United Nations · From Independence to Long-term Stability",
       "retrievedAt": "2026-10-25T17:24:31.053966+00:00",
@@ -12103,6 +13289,20 @@
       "title": "United Nations · Millennium Declaration, Resolution 55/2",
       "retrievedAt": "2026-10-25T17:33:26.964032+00:00",
       "sha256": "d2647c114c25afb21fb8e20f8c7ddc7cd3785a2d1499ec17853ad77c20bea203",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.un.org/oceancapacity/sites/www.un.org.oceancapacity/files/files/Projects/Norad/OGS/kiribati_ogs_final.pdf",
+      "title": "联合国海洋事务和海洋法司 · 基里巴斯海洋治理研究",
+      "retrievedAt": "2026-11-20T03:34:38.515039+00:00",
+      "sha256": "004b3d9774fa1b89a156285af536975def52f8dfd91bc4a851e5cd325fff9b14",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.un.org/unispal/document/auto-insert-176218/",
+      "title": "国际联盟资料 · 委任统治制度（联合国存档）",
+      "retrievedAt": "2026-11-20T04:53:48.173019+00:00",
+      "sha256": "cbc13051253d57751854aa096b874d1d500716aab63888a8be674f652d4908d7",
       "revisionId": null
     },
     {
@@ -12228,6 +13428,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www.waitangitribunal.govt.nz/assets/Annual-Reports/Annual-Report-2023-24-English.pdf",
+      "title": "怀唐伊裁判所 · 2023—24年度报告",
+      "retrievedAt": "2026-11-20T03:34:40.749481+00:00",
+      "sha256": "2e1ecc34160edb763b7414d2c6322e47ddfb292c7782069d614c6192e6eebb8e",
+      "revisionId": null
+    },
+    {
       "url": "https://www.wallacecollection.org/explore/explore-in-depth/the-sikh-empire/punjab-land-of-the-five-rivers/historical-context/",
       "title": "华莱士收藏馆 · Punjab: Historical Context：卡尔萨的形成",
       "retrievedAt": "2026-10-23T06:59:34.747894+00:00",
@@ -12302,6 +13509,27 @@
       "revisionId": null
     },
     {
+      "url": "https://www.xinhuanet.com/2021-05/21/c_1127472252.htm",
+      "title": "国务院新闻办 · 《西藏和平解放与繁荣发展》",
+      "retrievedAt": "2026-11-20T04:28:18.671981+00:00",
+      "sha256": "6d76ab69d118953eb732e80e18af7c8802902e37c6b2226288c09d3239b43083",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.xizang.gov.cn/xwzx_406/ztzl_416/gdzt/66zn/dsj/201901/t20190117_51822.html",
+      "title": "西藏自治区人民政府 · 1950年昌都战役",
+      "retrievedAt": "2026-11-20T04:19:53.444305+00:00",
+      "sha256": "20c2fded8330b29880396d47d9e98a420d830bed13f783d67002873067eb9d9b",
+      "revisionId": null
+    },
+    {
+      "url": "https://www.xjpcsc.gov.cn/article/cf8e2d68dc274dd587fc868b63b27d76",
+      "title": "新疆维吾尔自治区人大常委会 · 新疆和平解放史料",
+      "retrievedAt": "2026-11-20T04:22:19.552320+00:00",
+      "sha256": "baa035ef4c75fb4d287bdbec41e4c5a4c35634f74270afc9bd63538107d4ac1b",
+      "revisionId": null
+    },
+    {
       "url": "https://www.xjyl.gov.cn/xjylz/c112431/202212/751ebaa462b746ca8d1755f1d00529c7.shtml",
       "title": "伊犁州人民政府 · 格登山色伊江水——纪念林则徐遣戍新疆180周年",
       "retrievedAt": "2026-11-04T16:12:47.246965+00:00",
@@ -12352,6 +13580,13 @@
       "revisionId": null
     },
     {
+      "url": "https://www1.ihp.sinica.edu.tw/storage/publish3L/3-1.pdf",
+      "title": "中央研究院历史语言研究所 · 《居延汉简中的日常生活》",
+      "retrievedAt": "2026-11-19T17:26:14.866923+00:00",
+      "sha256": "726f38d92c7b4b345faa075bf650406fc563fbeb724c4afc44fb517e32de9fb4",
+      "revisionId": null
+    },
+    {
       "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/4184hnGgNFN.pdf",
       "title": "林语堂 · 平心论高鹗（中研院史语所保存）",
       "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
@@ -12370,6 +13605,13 @@
       "retrievedAt": "2026-10-25T16:52:10.471571+00:00",
       "lastCacheCheckAt": "2026-11-18T17:37:42.679971+00:00",
       "sha256": "8285772a4d2e9434f0710abf1bfee97bf53360cbae2d08040cc60fb006fff20a",
+      "revisionId": null
+    },
+    {
+      "url": "https://www3.parliament.nz/en/get-involved/features/suffrage-day-19-september-celebrating-women-s-right-to-vote/",
+      "title": "新西兰议会 · 9月19日妇女参政纪念日",
+      "retrievedAt": "2026-11-19T17:30:54.380156+00:00",
+      "sha256": "8033c2a74ba7d1144941a52265cb3abab208329d666dcbe43d7645417116378e",
       "revisionId": null
     },
     {
@@ -12439,10 +13681,24 @@
       "revisionId": null
     },
     {
+      "url": "https://xsg.tsinghua.edu.cn/info/1004/3806.htm",
+      "title": "清华大学校史馆 · 追记杨振宁先生",
+      "retrievedAt": "2026-11-19T17:28:19.589682+00:00",
+      "sha256": "9c8ab818e574ffdb8b44e83fddb7968e878f994262e42d00b985601358494aa2",
+      "revisionId": null
+    },
+    {
       "url": "https://ylj.suzhou.gov.cn/szsylj/ylwh/201604/4c21f7192a50467fa863edd7683f17d6.shtml",
       "title": "苏州市园林和绿化管理局 · 白公祠",
       "retrievedAt": "2026-11-04T16:12:47.528584+00:00",
       "sha256": "e4fde57d85a422d13a8eb296765d7f39d0147cbb9b59993ba472017f763be703",
+      "revisionId": null
+    },
+    {
+      "url": "https://yllhj.beijing.gov.cn/ztxx/lhysh/st/202107/t20210713_2435588.shtml",
+      "title": "北京市园林绿化局 · 景福阁内曾处理过渡时期军政事宜",
+      "retrievedAt": "2026-11-20T04:53:47.678947+00:00",
+      "sha256": "e5f6107cf76d7e3ba278a44b02e7e3d9ea28d9dbb1b52f621359f90703f107c3",
       "revisionId": null
     },
     {
@@ -13350,6 +14606,13 @@
       "retrievedAt": "2026-11-02T17:20:29.809297+00:00",
       "sha256": "a66d59e847d8d352e760e39aababfb787db69a5b700a46fee5eb252a01c402cd",
       "revisionId": 1569360
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/史記/卷059",
+      "title": "《史記》卷59",
+      "retrievedAt": "2026-11-19T17:28:20.377547+00:00",
+      "sha256": "27ad95f1b1672c1a78d5dbc75954be352b387d43c2699f18b4a707507e86e962",
+      "revisionId": 2621125
     },
     {
       "url": "https://zh.wikisource.org/wiki/史記/卷062",
@@ -14723,6 +15986,13 @@
       "revisionId": 2457393
     },
     {
+      "url": "https://zh.wikisource.org/wiki/後漢書/卷80上",
+      "title": "《後漢書》卷80上",
+      "retrievedAt": "2026-11-20T03:34:39.312726+00:00",
+      "sha256": "5edf4f531793511d66f96776b0920f0b7cbd67c757ab6919e53ab82c7ec926f0",
+      "revisionId": 2458089
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/後漢書/卷84",
       "title": "《后汉书》卷84 · 列女传班昭",
       "retrievedAt": "2026-10-08T18:04:07.125874+00:00",
@@ -15037,6 +16307,13 @@
       "revisionId": 2594665
     },
     {
+      "url": "https://zh.wikisource.org/wiki/明史/卷123",
+      "title": "《明史》卷123",
+      "retrievedAt": "2026-11-20T03:35:24.737889+00:00",
+      "sha256": "4bd3a4c59ba5434384c05fa63a4eaf21ce34dc497bd5611df788f2f161d54d1c",
+      "revisionId": 2607463
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/明史/卷125",
       "title": "《明史》卷125 · 徐达传",
       "retrievedAt": "2026-10-08T18:03:08.016789+00:00",
@@ -15059,6 +16336,13 @@
       "lastCacheCheckAt": "2026-10-06T16:20:39.126755+00:00",
       "sha256": "749601b51008d3eac5d9302b65985b3ac490fdd187e646645d27ffb624c9dab2",
       "revisionId": 2594767
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/明史/卷153",
+      "title": "《明史》卷153",
+      "retrievedAt": "2026-11-19T17:26:04.807236+00:00",
+      "sha256": "f6d7cb679b2394397025be213895e9b7cfbc58cdfcf95d176cf4b87d381970e7",
+      "revisionId": 2594773
     },
     {
       "url": "https://zh.wikisource.org/wiki/明史/卷170",
@@ -15217,6 +16501,13 @@
       "retrievedAt": "2026-11-02T17:20:11.246947+00:00",
       "sha256": "a7345d3ac265eaeb340e0df69c3ae8093422499a585c52ccb75debc38062ebda",
       "revisionId": 2589318
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/春秋左氏傳/定公",
+      "title": "《春秋左氏传》 · 定公十年",
+      "retrievedAt": "2026-11-19T17:33:33.089351+00:00",
+      "sha256": "2bb4595e498681a647e54d4abea1dec9b4315056d4828abcfe70b8f452e749be",
+      "revisionId": 2371915
     },
     {
       "url": "https://zh.wikisource.org/wiki/晉書",
@@ -15650,6 +16941,13 @@
       "attemptedAt": "2026-11-02T17:52:31.144962+00:00"
     },
     {
+      "url": "https://zh.wikisource.org/wiki/楚辭章句/卷01",
+      "title": "王逸《楚辞章句》卷一 · 离骚经序及章句",
+      "retrievedAt": "2026-11-20T03:34:40.619343+00:00",
+      "sha256": "c628168d5a6a0ed9bb77a923e079662753d4b6b419a5303cde38f14a6873f96d",
+      "revisionId": 2396569
+    },
+    {
       "url": "https://zh.wikisource.org/wiki/樂府雅詞",
       "title": "《樂府雅詞》",
       "error": "HTTP Error 404: Not Found",
@@ -15721,6 +17019,13 @@
       "lastCacheCheckAt": "2026-11-18T17:37:50.188187+00:00",
       "sha256": "0769a40f507a5c48264e9f46ab943154849269d659f17491982d09dff8e4a4fc",
       "revisionId": 424048
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/歸園田居",
+      "title": "陶渊明《归园田居》",
+      "retrievedAt": "2026-11-19T17:33:33.620338+00:00",
+      "sha256": "b74bf29eeda5a7287c434acd2db3161b417a7ddc4cfb527a4d33e4d7d4126ae9",
+      "revisionId": 3702704
     },
     {
       "url": "https://zh.wikisource.org/wiki/水經注",
@@ -16120,6 +17425,13 @@
       "title": "《漢書》卷28上",
       "retrievedAt": "2026-11-02T17:20:26.174591+00:00",
       "sha256": "f86f87d18002d79d238b303cf34c30f103bb738261726d2eb27175942bb4a130",
+      "revisionId": 2605705
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/漢書/卷028下",
+      "title": "《漢書》卷028下",
+      "retrievedAt": "2026-11-19T17:26:05.724465+00:00",
+      "sha256": "d819a35b4f4011c1236048431bdec6eb191dc888b97ba52b80368bc79255d253",
       "revisionId": 2605705
     },
     {
@@ -17803,6 +19115,12 @@
       "revisionId": 10247882
     },
     {
+      "url": "https://zjdy.zjdafw.gov.cn/art/2017/12/27/art_15_45723.html",
+      "title": "浙江省档案馆 · 民国人物图库中的何应钦",
+      "error": "HTTP Error 405: Not Allowed",
+      "attemptedAt": "2026-11-20T04:53:48.014288+00:00"
+    },
+    {
       "url": "https://ztjy.ucass.edu.cn/info/1006/1949.htm",
       "title": "中国社会科学院大学 · 建党之前：陈独秀在上海",
       "retrievedAt": "2026-10-25T17:33:17.679917+00:00",
@@ -17814,6 +19132,13 @@
       "title": "淮安政协文史网 · 林则徐治水记述",
       "retrievedAt": "2026-11-04T16:12:52.580016+00:00",
       "sha256": "7567656946c289238f0616a2418c52f811e5f0f398dfd4c222369d6e89425821",
+      "revisionId": null
+    },
+    {
+      "url": "https://zx.nantong.gov.cn/ntszx/wxzl/content/c035edd8-8260-4049-b4b6-a3ef24598e5f.html",
+      "title": "南通市政协文史资料 · 江海关十年报告所见大生纱厂",
+      "retrievedAt": "2026-11-20T03:34:41.065549+00:00",
+      "sha256": "7905c35ffb0d8555135099f1eb358faf0f0c55220bb35520c7e706214aac319d",
       "revisionId": null
     }
   ],

@@ -66,10 +66,10 @@
 }
 @media (min-width: 701px) and (max-width: 1000px) and (min-height: 541px) {
   .atlas-app[data-mobile-view] {
-    grid-template-rows: calc(64px + env(safe-area-inset-top, 0px)) minmax(0, 1fr) 155px;
+    grid-template-rows: calc(64px + env(safe-area-inset-top, 0px)) minmax(0, 1fr) 126px;
   }
   .atlas-app[data-focus-mode='true'] {
-    grid-template-rows: env(safe-area-inset-top, 0px) minmax(0, 1fr) 155px;
+    grid-template-rows: env(safe-area-inset-top, 0px) minmax(0, 1fr) 126px;
   }
 }
 @media (max-width: 700px), (max-width: 1000px) and (max-height: 540px) {

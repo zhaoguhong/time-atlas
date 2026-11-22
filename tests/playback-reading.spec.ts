@@ -1,3 +1,4 @@
+import { choosePeriod } from './timeline-helpers'
 import { expect, test } from '@playwright/test'
 
 test('names the current event, synchronizes reading, and keeps fixed reading across pause', async ({
@@ -88,7 +89,7 @@ for (const [width, height] of [
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true', {
       timeout: 15000,
     })
-    await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('early-civilizations')
+    await choosePeriod(page, 'early-civilizations', '早期文明')
     await expect(page.locator('.year-title')).toContainText('3000')
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '-3000')
     const search = page.getByRole('combobox', { name: '搜索历史事件、人物或地名' })
@@ -130,7 +131,7 @@ test('fits the civilization overview after mobile playback without accumulating 
   await page.getByRole('button', { name: '播放时间', exact: true }).click()
   await expect(page.locator('.named-event.selected')).toHaveAttribute('data-visible', 'true')
   await page.getByRole('button', { name: '暂停时间播放', exact: true }).click()
-  await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('early-civilizations')
+  await choosePeriod(page, 'early-civilizations', '早期文明')
   await expect
     .poll(() => Number(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('zoom')))
     .toBeLessThan(1.25)

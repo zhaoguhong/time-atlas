@@ -62,7 +62,7 @@ async function expectTimelineControls(page: Page) {
   await options.tap()
   for (const option of [
     page.getByRole('combobox', { name: '播放方式', exact: true }),
-    page.getByRole('button', { name: '缩小到全部历史', exact: true }),
+    page.getByRole('button', { name: '缩小到地图全时段', exact: true }),
     page.getByRole('button', { name: '查看时代背景', exact: true }),
     page.getByRole('button', { name: '年份对比', exact: true }),
   ]) {
@@ -319,9 +319,9 @@ test('keeps search, the More menu and time controls usable on a narrow landscape
   await expect(page.locator('.search-results')).toBeHidden()
   const more = page.getByRole('button', { name: '更多操作', exact: true })
   await more.tap()
-  await expect(page.getByRole('button', { name: '分享此刻', exact: true })).toBeInViewport({
-    ratio: 1,
-  })
+  const share = page.getByRole('button', { name: '分享此刻', exact: true })
+  await share.scrollIntoViewIfNeeded()
+  await expect(share).toBeInViewport({ ratio: 1 })
   await page.keyboard.press('Escape')
   await expect(more).toHaveAttribute('aria-expanded', 'false')
   await expect(page.locator('.timeline')).toBeInViewport({ ratio: 1 })
@@ -339,7 +339,7 @@ test('returns keyboard focus to the timeline options trigger after an action or 
   await expect(trigger).toHaveAttribute('aria-expanded', 'true')
   await page.keyboard.press('Tab')
   await expect(page.getByRole('combobox', { name: '播放方式', exact: true })).toBeFocused()
-  const allHistory = page.getByRole('button', { name: '缩小到全部历史', exact: true })
+  const allHistory = page.getByRole('button', { name: '缩小到地图全时段', exact: true })
   // WebKit on macOS uses Option-Tab to include buttons in keyboard navigation.
   await page.keyboard.press(browserName === 'webkit' ? 'Alt+Tab' : 'Tab')
   await expect(allHistory).toBeFocused()

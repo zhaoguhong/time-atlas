@@ -9,7 +9,7 @@ const cityReference = (name: string) =>
     `https://zh.wikipedia.org/wiki/${name}`,
     '基础城市史参考；介绍由本站独立编写，未声称本轮逐项重新核验。',
   )
-type PlaceEntry = [string, string, string, [number, number], number, string, Source[]]
+type PlaceEntry = [string, string, string, [number, number], number, string, Source[], number?]
 
 // Display windows select a phase useful to this atlas, not an exact foundation date.
 const entries: PlaceEntry[] = [
@@ -471,23 +471,92 @@ const entries: PlaceEntry[] = [
     1394,
     '朝鲜王朝以汉城为都后，宫殿、官署、学校与市场逐步组织都城生活。汉江交通联系周围生产地区，战争和重建又多次改变空间。近现代的殖民统治、朝鲜战争与城市扩张留下不同层次的经历，历史宫城范围远小于今天的首尔都市。',
     [heritage(816, '昌德宫建筑群'), cityReference('首尔')],
+    1950,
+  ],
+  [
+    'ancient-panjakent',
+    '古彭吉肯特',
+    '今塔吉克斯坦彭吉肯特旁的古城遗址',
+    [67.62, 39.48],
+    500,
+    '泽拉夫尚河谷为这座粟特城市提供水源和沿河交通。住宅、庙宇和壁画保留下来，使来客怎样进入居所、什么图像绘在会客空间等问题可以和建筑一起研究。古城址与今天的彭吉肯特城区相邻，两者在地图上各有不同的历史范围。',
+    [
+      webSource(
+        '联合国教科文组织 · 泽拉夫尚—卡拉库姆走廊',
+        'https://whc.unesco.org/en/decisions/8394',
+        '见河谷交通和古城所属组成遗产。',
+      ),
+    ],
+    750,
+  ],
+  [
+    'makassar',
+    '望加锡',
+    '今印度尼西亚南苏拉威西省望加锡',
+    [119.41, -5.14],
+    1500,
+    '望加锡位于苏拉威西西南海岸，戈瓦等当地政权利用此处港湾参加群岛贸易。十七世纪后半叶，原由戈瓦掌握的乌戎潘当堡交予荷兰东印度公司，公司将它改名鹿特丹堡。港湾与堡垒留下了港市从当地王权到公司统治发生变化的地点。',
+    [
+      webSource(
+        'David Bulbeck、Ian Caldwell · 南苏拉威西本土防御建筑研究',
+        'https://oxis.org/downloads/bulbek-and-caldwell-2020.pdf',
+        '见 Fort Rotterdam 段的条约交割与戈瓦—塔洛时期堡垒的讨论。',
+      ),
+    ],
+  ],
+  [
+    'khiva',
+    '希瓦',
+    '今乌兹别克斯坦希瓦',
+    [60.36, 41.38],
+    1700,
+    '希瓦内城列于花剌子模绿洲商路。城墙里的宫殿、清真寺和经学院各有用处，木柱和砖石遗存还保留了重建、补修的痕迹。从城门走向内城的街巷，商旅、居民和王室各自使用的空间逐渐显出来。',
+    [heritage(543, '希瓦内城 Itchan Kala')],
+  ],
+  [
+    'turkestan-yasi',
+    '突厥斯坦城 / 亚西',
+    '今哈萨克斯坦突厥斯坦市',
+    [68.27, 43.3],
+    1389,
+    '历史上的亚西位于锡尔河流域北侧。苏菲学者艾哈迈德·亚萨维的墓地吸引人们前来访谒，帖木儿时期在其上兴建陵寝。殿堂、礼拜空间与墓室保存了由地方墓地发展出大型宗教建筑的线索。这里的突厥斯坦是具体城市，史料中的同名区域另有范围。',
+    [heritage(1103, '艾哈迈德·亚萨维陵寝')],
+  ],
+  [
+    'nukualofa',
+    '努库阿洛法',
+    '今汤加塔布岛努库阿洛法',
+    [-175.2, -21.14],
+    1875,
+    '努库阿洛法位于汤加塔布岛北岸，是汤加王国的首都。十九世纪形成的成文宪法把王位继承、行政和议会活动纳入同一套制度。都城的王室与议会活动也同其他岛屿保持联系。',
+    [
+      webSource(
+        '汤加议会 · 议会史',
+        'https://parliament.gov.to/en/about-parliament/history',
+        '见王国成文宪法与议会沿革。',
+      ),
+    ],
   ],
 ]
 
-export const expandedPlaceCities: City[] = entries.map(([id, name, modern, coordinates, from]) => ({
-  id,
-  name,
-  modern,
-  coordinates,
-  from,
-  to: 1912,
-  capitals: [],
-}))
+export const expandedPlaceCities: City[] = entries.map(
+  ([id, name, modern, coordinates, from, , , to = 1912]) => ({
+    id,
+    name,
+    modern,
+    coordinates,
+    from,
+    to,
+    capitals: [],
+  }),
+)
 export const expandedPlaceReading = Object.fromEntries(
   entries.map(([id, , , , , text, sources]) => [id, { text, sources }]),
 )
 export const expandedPlaceAliases: Record<string, string[]> = {
   timbuktu: ['廷巴克图', '通布图'],
+  'ancient-panjakent': ['彭吉肯特', '片治肯特', 'Panjakent', 'Penjikent'],
+  makassar: ['望加锡', '乌戎潘当', 'Makassar'],
   ningbo: ['宁波', '明州'],
   wuhan: ['武汉', '武昌', '汉口'],
   patna: ['华氏城', '波吒厘子城', '巴特那'],

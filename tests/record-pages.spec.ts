@@ -37,12 +37,10 @@ test('all generated record pages contain source text, sources, canonical metadat
 test('directories and sample pages work without JavaScript', async ({ browser, baseURL }) => {
   const context = await browser.newContext({ baseURL, javaScriptEnabled: false })
   const page = await context.newPage()
-  for (const [kind, count] of [
-    ['people', 1504],
-    ['events', 2024],
-  ] as const) {
+  const coverage = JSON.parse(await readFile('public/data/coverage.json', 'utf8'))
+  for (const kind of ['people', 'events'] as const) {
     await page.goto(`/${kind}/`)
-    await expect(page.locator(`li a[href^="/${kind}/"]`)).toHaveCount(count)
+    await expect(page.locator(`li a[href^="/${kind}/"]`)).toHaveCount(coverage[kind].total)
   }
   await page.goto('/people/li-bai/')
   await expect(page.locator('article h1')).toHaveText('李白')

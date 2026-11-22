@@ -5,6 +5,9 @@ import { completenessEvents, completenessPeople } from './completeness-events'
 import { newExpandedEvents, newExpandedPeople } from './expansion-content'
 import { modernPhilosophyEvents, modernPhilosophyPeople } from './philosophy-modern'
 import { modernWorldEvents } from './world-modern'
+import { modernMapEvents } from './modern-map-events'
+import { modernTransitionEvents, modernTransitionPeople } from './modern-transition-records'
+import { modernEraCoverageEvents } from './modern-era-coverage'
 import { categoryDepthEvents } from './category-depth'
 import { categoryPeople, categoryEventPeople, categoryPeopleNotes } from './category-people'
 import { westernPhilosophyEvents, westernPhilosophyPeople } from './philosophy-west'
@@ -2120,6 +2123,7 @@ export const people: Person[] = enrichCatalogReading(
     westernPhilosophyPeople,
     easternPhilosophyPeople,
     modernPhilosophyPeople,
+    modernTransitionPeople,
     categoryPeople,
     completenessPeople,
     continuityPeople,
@@ -2152,6 +2156,9 @@ export const events: HistoryEvent[] = linkExpandedPersonEvents(
     worldMilestoneEvents,
     modernPhilosophyEvents,
     modernWorldEvents,
+    modernMapEvents,
+    modernTransitionEvents,
+    modernEraCoverageEvents,
     categoryDepthEvents,
     completenessEvents,
     continuityEvents,

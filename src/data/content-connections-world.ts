@@ -1,6 +1,19 @@
 // These links use the existing event and person records and their cited sources.
 // They describe specific roles, not inferred attendance or new journey records.
 export const worldPersonEventConnections: Record<string, Record<string, string>> = {
+  'world-nz-suffrage': {
+    'region-person-sheppard':
+      '谢泼德参与组织跨地区联署，把请愿送到议会。签署选举法属于随后展开的立法程序。',
+  },
+  'exp-em-uranus': {
+    'exp-em-caroline-herschel': '卡罗琳协助威廉·赫歇尔研究和巡天，天王星的首次观测归于威廉。',
+  },
+  'world-hawaiian-kingdom': {
+    'kamehameha-i': '与考艾岛统治者卡乌穆阿利达成协议，群岛政治统一达到关键节点。',
+  },
+  'world-hawaiian-overthrow': {
+    'region-person-liliuokalani': '任夏威夷女王，在政变压力下交出权力并提出抗议。',
+  },
   'world-hammurabi': {
     'region-person-hammurabi': '汉谟拉比下令将法律裁决刻石，以王权和神授正义解释统治秩序。',
   },

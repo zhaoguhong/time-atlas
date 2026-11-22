@@ -56,10 +56,11 @@ test('archive directories and reading links work with JavaScript disabled', asyn
 }) => {
   const context = await browser.newContext({ baseURL, javaScriptEnabled: false })
   const page = await context.newPage()
+  const coverage = JSON.parse(await readFile('public/data/coverage.json', 'utf8'))
   for (const [kind, count] of [
-    ['dynasties', 53],
-    ['polities', 55],
-    ['places', 80],
+    ['dynasties', coverage.dynasties.total],
+    ['polities', coverage.worldPolities.total],
+    ['places', coverage.places.total],
   ] as const) {
     await page.goto(`/${kind}/`)
     await expect(page.locator(`li a[href^="/${kind}/"]`)).toHaveCount(count)

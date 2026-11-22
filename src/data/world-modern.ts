@@ -410,6 +410,18 @@ export const modernWorldEvents: HistoryEvent[] = [
       '正面战场、敌后战争与平民的逃难、劳动和生存经验需要同时呈现。1945年的胜利也不意味着中国内部政治冲突结束。',
     ],
     impact: '中国战场是亚洲战争的重要组成部分，对日本军力部署、战后政治和社会记忆产生长期影响。',
+    relatedEvents: [
+      {
+        id: 'modern-lugou-bridge-incident',
+        label: '卢沟桥事变如何发生',
+        note: '1937年7月卢沟桥、宛平城一带的交战。',
+      },
+      {
+        id: 'modern-nanjing-surrender-1945',
+        label: '中国战区在南京受降',
+        note: '1945年9月9日的中国战区总受降仪式。',
+      },
+    ],
     sources: [
       textbook(
         '13.2 Theaters of War',
@@ -699,6 +711,13 @@ export const modernWorldEvents: HistoryEvent[] = [
       '1945年8月17日宣言不等于荷兰立即承认独立。随后武装冲突与外交谈判持续，1949年主权移交属于另一阶段。',
     ],
     impact: '独立进程改变东南亚殖民格局，也带出群岛范围内政治整合与多元社会治理的问题。',
+    relatedEvents: [
+      {
+        id: 'modern-indonesia-sovereignty-transfer',
+        label: '荷兰移交主权',
+        note: '经过战事和谈判，荷兰于1949年承认印度尼西亚的主权。',
+      },
+    ],
     sources: [
       ref(
         'Arsip Nasional Republik Indonesia · Presidenpedia',
@@ -835,6 +854,7 @@ export const modernWorldEvents: HistoryEvent[] = [
   item({
     id: 'modern-prc-founded',
     year: 1949,
+    dateLabel: '1949年10月1日',
     title: '中华人民共和国成立',
     category: '政治',
     region: 'china',
@@ -846,8 +866,17 @@ export const modernWorldEvents: HistoryEvent[] = [
       '中华人民共和国于1949年10月1日在北京宣告成立，国共内战中的军事与政治格局发生重大变化。',
     background:
       '抗日战争结束后，国共谈判未能防止全面内战。军事动员、地方治理、土地问题和经济危机共同影响战争结果。',
-    details: [
-      '建国宣告与其后国家制度建设是不同过程，1949年也不表示所有地区同时完成治理交接。相关档案需结合各自立场阅读。',
+    relatedEvents: [
+      {
+        id: 'modern-first-cppcc',
+        label: '开国前的制度筹备',
+        note: '政协第一届全体会议通过《共同纲领》等文件，并选出中央人民政府委员会。',
+      },
+      {
+        id: 'modern-hainan-reunification',
+        label: '海南岛的接管',
+        note: '海南岛全境解放发生于1950年5月。',
+      },
     ],
     impact: '新政权重塑中国国家与社会制度，并对东亚和冷战国际关系产生深远影响。',
     sources: [
@@ -903,6 +932,18 @@ export const modernWorldEvents: HistoryEvent[] = [
       '战线多次南北推进，平民遭受轰炸、流离和长期分离。停战后的军事分界线也不能简单当作战前边界的原样恢复。',
     ],
     impact: '战争巩固半岛分裂与东亚军事对抗，对参战国家的政治、社会与记忆产生长期影响。',
+    relatedEvents: [
+      {
+        id: 'modern-republic-of-korea-government-1948',
+        label: '1948年南部建政',
+        note: '大韩民国政府在汉城成立。',
+      },
+      {
+        id: 'modern-dprk-founded-1948',
+        label: '1948年北部建政',
+        note: '朝鲜民主主义人民共和国在平壤成立。',
+      },
+    ],
     sources: [
       ref(
         'Eisenhower Presidential Library · Korean War',

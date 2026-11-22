@@ -1,5 +1,63 @@
 import type { PolityFeature, PolityProperties } from '../types'
+import type { FillLayerSpecification, Map as MapInstance } from 'maplibre-gl'
 import { worldPolityForMap } from '../data/world-polities'
+import { taiwanReturnedByYearEnd } from '../data/modern-map-places'
+import { periodAt, TERRITORY_MAX_YEAR, toOrdinal } from './history'
+
+export function mapTerritorySlice(year: number) {
+  if (year > TERRITORY_MAX_YEAR) return null
+  const period = periodAt(year)
+  return `${period.id}/${Math.floor((toOrdinal(year) - toOrdinal(period.from)) / 20)}`
+}
+
+export const chinaPlaceColor = '#448178'
+export const occupiedPlaceColor = '#9e7854'
+
+export function mapAttribution(withTerritories: boolean) {
+  const naturalEarth =
+    '<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a>'
+  const cliopatria =
+    '<a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria / Seshat</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>'
+  return withTerritories ? `${naturalEarth} · ${cliopatria}` : naturalEarth
+}
+
+/** The physical land layer remains separate from selectable historical borders. */
+export function setModernIslandLand(map: MapInstance, year: number, before: string) {
+  const id = 'modern-island-land'
+  const exists = map.getLayer(id)
+  if (year <= TERRITORY_MAX_YEAR) {
+    if (exists) map.setLayoutProperty(id, 'visibility', 'none')
+    return
+  }
+  const color: NonNullable<FillLayerSpecification['paint']>['fill-color'] = [
+    'case',
+    ['==', ['get', 'island'], 'hainan'],
+    chinaPlaceColor,
+    taiwanReturnedByYearEnd(year) ? chinaPlaceColor : occupiedPlaceColor,
+  ]
+  if (exists) {
+    map.setPaintProperty(id, 'fill-color', color)
+    map.setLayoutProperty(id, 'visibility', 'visible')
+    return
+  }
+  map.addSource(id, {
+    type: 'geojson',
+    data: `${import.meta.env.BASE_URL}data/${id}.geojson`,
+  })
+  map.addLayer(
+    {
+      id,
+      source: id,
+      type: 'fill',
+      paint: {
+        'fill-color': color,
+        'fill-color-transition': { duration: 0, delay: 0 },
+        'fill-opacity': 0.56,
+      },
+    },
+    before,
+  )
+}
 
 const primary = new Set([
   'Shang Dynasty',

@@ -69,6 +69,23 @@ for (const name of ['land', 'lakes', 'rivers_lake_centerlines']) {
   const layer = await read(`${name}.geojson`)
   assert.ok(layer.features.length > 0)
 }
+const islands = manifest.modernIslandLand
+const islandSource = locked.sources.find((source) => source.filename === 'ne_10m_land.geojson')
+assert.equal(islands.url, islandSource.url)
+assert.equal(islands.sourceSha256, islandSource.sha256)
+const islandFile = await fs.readFile(path.join(root, 'public/data', islands.file))
+assert.equal(createHash('sha256').update(islandFile).digest('hex'), islands.sha256)
+const islandFeatures = JSON.parse(islandFile).features
+assert.deepEqual(islandFeatures.map((feature) => feature.properties.island).sort(), [
+  'hainan',
+  'penghu',
+  'taiwan',
+])
+const penghu = islandFeatures.find((feature) => feature.properties.island === 'penghu').geometry
+assert.equal(penghu.type, 'MultiPolygon')
+assert.ok(penghu.coordinates.length > 3)
+const coverage = await read('coverage.json')
+assert.deepEqual(coverage.territoryRange, { from: manifest.range[0], to: manifest.range[1] })
 const peopleLock = JSON.parse(
   await fs.readFile(path.join(root, 'data/people.sources.json'), 'utf8'),
 )

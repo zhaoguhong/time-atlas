@@ -105,6 +105,20 @@ describe('evidence-based person journeys', () => {
       ),
     ).toBe(true)
   })
+  it('keeps Zhang Qian’s same-year visits in source order and excludes his deputies’ destinations', () => {
+    const nodes = journeyByPerson.get('zhangqian')!.nodes
+    expect(nodes.filter((node) => node.year === -128).map((node) => node.id)).toEqual([
+      'zhangqian-dayuan',
+      'zhangqian-kangju',
+      'zhangqian-yuezhi',
+      'zhangqian-daxia',
+    ])
+    expect(nodes.filter((node) => node.year >= -119).map((node) => node.id)).toEqual([
+      'zhangqian-wusun',
+      'zhangqian-second-return',
+    ])
+    expect(nodes.map((node) => node.location).join(' ')).not.toMatch(/身毒|安息/)
+  })
   it('requires source citations, chronological ordering and lifetime-compatible nodes', () => {
     for (const journey of journeys) {
       const person = personById.get(journey.personId)!

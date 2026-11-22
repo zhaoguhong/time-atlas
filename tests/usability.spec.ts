@@ -38,7 +38,11 @@ for (const [width, height] of [
     await expect(page.getByRole('button', { name: '播放时间', exact: true })).toBeInViewport({
       ratio: 1,
     })
-    await expect(page.getByRole('combobox', { name: '切换历史时期' })).toBeInViewport({ ratio: 1 })
+    const periods =
+      width > 1000
+        ? page.getByRole('navigation', { name: '历史时期导航' })
+        : page.getByRole('combobox', { name: '切换历史时期' })
+    await expect(periods).toBeInViewport({ ratio: 1 })
     const dimensions = await page.evaluate(() => ({
       w: document.documentElement.scrollWidth,
       h: document.documentElement.scrollHeight,

@@ -344,6 +344,34 @@ export const profiles: Record<string, PeriodProfile> = {
       'abdication',
     ],
   },
+  'early-modern-china': {
+    focusReason: '选择1945年，从抗战胜利与台湾光复读到战后接收和新中国成立。',
+    question: '抗战胜利后，中国怎样展开接收和重建？',
+    context:
+      '抗日战争把中国的战时动员与盟国的战后安排联系起来。日本投降后，中国在台湾、澎湖和南海岛礁相继办理接收。内战又改变了各地的治理，1949年中华人民共和国成立，接管和建设继续在各地展开。',
+    chronologyNote: '地图提供年末地点参照。战时宣言、受降仪式、建国和各地交接的日期见各条史事。',
+    polities: [],
+    people: [],
+    steps: [
+      'modern-may-fourth',
+      'modern-northeast-flag-replacement',
+      'modern-manchukuo-puppet-regime',
+      'modern-lugou-bridge-incident',
+      'modern-china-war',
+      'modern-cairo-declaration',
+      'modern-potsdam-proclamation',
+      'modern-japanese-surrender-instrument',
+      'modern-nanjing-surrender-1945',
+      'modern-chongqing-talks-agreement',
+      'exp-em-taiwan-retrocession',
+      'modern-south-china-sea-reception',
+      'modern-beiping-peaceful-liberation',
+      'modern-first-cppcc',
+      'modern-prc-founded',
+      'modern-hainan-reunification',
+      'modern-changdu-1950',
+    ],
+  },
 }
 
 export const periodCourses: Tour[] = periods.map((period) => ({

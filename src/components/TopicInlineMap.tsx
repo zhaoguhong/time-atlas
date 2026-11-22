@@ -6,15 +6,15 @@ import type { FeatureCollection } from 'geojson'
 import { LocateFixed, Minus, Plus } from 'lucide-react'
 import type { ArticleMap, PolityFeature, PolityProperties } from '../types'
 import type { TopicEvent } from '../lib/topic-reading-presentation'
-import { activeMapFeatures, polityOrder } from '../lib/maps'
 import {
-  clampYear,
-  formatEventDate,
-  formatYear,
-  MAX_YEAR,
-  periodAt,
-  toOrdinal,
-} from '../lib/history'
+  activeMapFeatures,
+  mapAttribution,
+  mapTerritorySlice,
+  polityOrder,
+  setModernIslandLand,
+} from '../lib/maps'
+import { clampYear, formatEventDate, formatYear, MAX_YEAR } from '../lib/history'
+import ModernMapNote from './ModernMapNote'
 import Sources from './Sources'
 import { topicRouteById } from '../data/topic-routes'
 import { routeMapSegments } from '../lib/topic-routes'
@@ -88,6 +88,7 @@ export default function TopicInlineMap({
   const darkRef = useRef(dark)
   darkRef.current = dark
   const mapYear = clampYear(figure.year)
+  const territorySlice = mapTerritorySlice(mapYear)
   const events = useMemo(
     () =>
       (figure.eventIds ?? []).flatMap((id) => {
@@ -150,8 +151,6 @@ export default function TopicInlineMap({
       fail()
       return
     }
-    const period = periodAt(mapYear)
-    const slice = Math.floor((toOrdinal(mapYear) - toOrdinal(period.from)) / 20)
     async function setup(container: HTMLDivElement) {
       instance = new maplibregl.Map({
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
@@ -197,8 +196,7 @@ export default function TopicInlineMap({
       instance.addControl(
         new maplibregl.AttributionControl({
           compact: true,
-          customAttribution:
-            '<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> · <a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria / Seshat</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>',
+          customAttribution: mapAttribution(territorySlice !== null),
         }),
         'bottom-right',
       )
@@ -206,11 +204,13 @@ export default function TopicInlineMap({
       resize = new ResizeObserver(() => instance?.resize())
       resize.observe(container)
       const [territories] = await Promise.all([
-        collection(`maps/${period.id}/${slice}`, controller.signal),
+        territorySlice ? collection(`maps/${territorySlice}`, controller.signal) : undefined,
         instance.once('load'),
       ])
       if (disposed || loadFailed) return
-      const features = activeMapFeatures(territories.features as PolityFeature[], mapYear)
+      const features = territories
+        ? activeMapFeatures(territories.features as PolityFeature[], mapYear)
+        : []
       const byName = new Map<string, PolityProperties>()
       for (const feature of [...features].sort((a, b) => polityOrder(a.properties, b.properties)))
         if (!byName.has(feature.properties.name))
@@ -238,6 +238,7 @@ export default function TopicInlineMap({
         source: 'inline-territories',
         paint: { 'fill-color': ['get', 'color'], 'fill-opacity': 0.7 },
       })
+      setModernIslandLand(instance, mapYear, 'inline-territories')
       instance.addLayer({
         id: 'inline-borders',
         type: 'line',
@@ -407,6 +408,7 @@ export default function TopicInlineMap({
     figure.center,
     figure.zoom,
     mapYear,
+    territorySlice,
     events,
     routes,
     figure.places,
@@ -449,6 +451,7 @@ export default function TopicInlineMap({
       role="group"
       aria-label={figure.title}
       data-map-year={mapYear}
+      data-territory-coverage={territorySlice ? 'historical' : 'locations'}
       data-ready={ready && !failed}
     >
       <header className="topic-inline-map-heading">
@@ -540,10 +543,11 @@ export default function TopicInlineMap({
       {figure.year > MAX_YEAR && (
         <p className="topic-inline-map-note">
           本段涉及{formatYear(figure.year)}
-          ，历史疆域资料止于1912年；图中1912年疆域仅作地点参照，不代表事件当年。
+          ，地图年份为{MAX_YEAR}年，地点标记供阅读参照。
         </p>
       )}
-      {emptyYear && !failed && (
+      {!territorySlice && <ModernMapNote year={mapYear} inline />}
+      {territorySlice && emptyYear && !failed && (
         <p className="topic-inline-map-note">
           这一年暂无可用疆域轮廓，保留已有地点与自然地理参照。
         </p>

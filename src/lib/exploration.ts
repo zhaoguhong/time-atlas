@@ -28,7 +28,12 @@ const groups = [
     ids: ['daliang', 'tokyo'],
   },
   { id: 'hangzhou', name: '杭州一带', names: ['临安', '杭州'], ids: ['linan'] },
-  { id: 'beijing', name: '北京一带', names: ['大都', '北京'], ids: ['dadu', 'beijing'] },
+  {
+    id: 'beijing',
+    name: '北京一带',
+    names: ['大都', '北京', '北平'],
+    ids: ['dadu', 'beijing', 'beiping', 'beijing-prc'],
+  },
   { id: 'lhasa', name: '拉萨一带', names: ['逻些', '拉萨'], ids: ['lhasa', 'lhasa-later'] },
   {
     id: 'constantinople',

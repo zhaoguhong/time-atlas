@@ -87,7 +87,7 @@ for (const [width, height] of [
     page,
   }, info) => {
     await page.setViewportSize({ width, height })
-    await page.goto('/#visual=pillar&year=1943&span=80&event=modern-sartre-being-nothingness')
+    await page.goto('/#visual=pillar&year=1969&span=80&event=modern-apollo11')
     if (width <= 700 || height <= 540) await setSheet(page, 'map')
     const actions = page.getByRole('group', { name: '时空柱工具' })
     await expect(actions.getByRole('button', { name: /^打开事件目录/ })).toHaveCount(0)
@@ -130,7 +130,7 @@ for (const [width, height] of [
     else await page.getByRole('button', { name: '收起历史资料', exact: true }).click()
     const context = page.getByRole('note', { name: '地图年代说明' })
     await expect(context).toBeInViewport({ ratio: 1 })
-    await expect(context).toContainText('事件 1943 年 / 疆域 1912 年')
+    await expect(context).toContainText('事件 1969 年 / 地图 1950 年')
     await expect(page.locator('.map-canvas')).toHaveAttribute('data-rendered', 'true')
     await page.screenshot({ path: info.outputPath(`map-context-${width}.png`) })
   })
@@ -501,7 +501,7 @@ for (const [width, height] of [
     await page.locator('.tour-card').filter({ hasText: topic.name }).click()
     await page.locator('#topic-events summary').click()
     await expect(page.locator('#topic-events details .topic-reading-help')).toContainText(
-      '1912年后的史事在时空柱中阅读',
+      '1950年后的史事可在时空柱中阅读',
     )
     await page.getByRole('button', { name: `继续第 ${step + 1} 则史事`, exact: true }).click()
     await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', '1980')
@@ -517,10 +517,10 @@ for (const [width, height] of [
     if (width <= 700) await setSheet(page, 'reading')
     await expect(page.locator('.event-detail h2')).toHaveText('世界卫生组织宣布天花被根除')
     await page.getByRole('button', { name: '在地图中查看', exact: true }).click()
-    await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1912')
+    await expect(page.locator('.map-canvas')).toHaveAttribute('data-map-year', '1950')
     if (width <= 700) await setSheet(page, 'reading')
     await expect(page.locator('.modern-map-note')).toContainText('本事件发生于1980年')
-    await expect(page.locator('.modern-map-note')).toContainText('所示疆域不代表事件当年')
+    await expect(page.locator('.modern-map-note')).toContainText('当前地图为1950年的地点参照')
     await page.screenshot({ path: info.outputPath(`modern-topic-resume-${width}.png`) })
   })
 }

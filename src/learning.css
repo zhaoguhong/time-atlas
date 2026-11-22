@@ -901,17 +901,4 @@
     max-width: calc(100% - 30px);
     padding: 12px;
   }
-  .time-readout form {
-    position: absolute;
-    left: 20px;
-    bottom: calc(100% + 9px);
-    padding: 12px;
-    background: var(--white);
-    border: 1px solid #dae3cf;
-    border-radius: 6px;
-    box-shadow: 0 5px 20px #40574020;
-  }
-  .time-readout input {
-    font-size: 16px;
-  }
 }

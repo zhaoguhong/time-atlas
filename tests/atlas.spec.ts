@@ -1,3 +1,4 @@
+import { choosePeriod } from './timeline-helpers'
 import { openHeaderMenu } from './refinement-helpers'
 import { setSheet } from './mobile-sheet-helpers'
 import { expect, test, type Page } from '@playwright/test'
@@ -43,7 +44,10 @@ for (const topic of tours) {
       if (event.year > MAX_YEAR) {
         await expect(page.locator('.pillar-stage')).toHaveAttribute('data-year', String(event.year))
         await expect(page.locator('.map-canvas')).toHaveCount(0)
-      } else await expect(page.locator('.year-title')).toHaveText(formatYear(event.year))
+      } else
+        await expect(page.locator('.year-title')).toHaveText(
+          formatYear(event.year).replace(/^公元 /, ''),
+        )
       expect(dates[index]).toBe(formatEventDate(event))
       await expect(page).toHaveURL(new RegExp(`event=${topic.steps[index]}(?:&|$)`))
       await expect(page.locator('.topic-chapter-context')).toContainText(
@@ -212,12 +216,12 @@ test('loads real map data and preserves chronology when changing periods', async
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
   await expect(page.locator('.map-canvas canvas')).toBeVisible()
-  await page.getByRole('combobox', { name: '切换历史时期' }).selectOption('han')
+  await choosePeriod(page, 'han', '汉')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('两汉')
   await expect(page.locator('.year-title')).toHaveText(/公元前 100 年/)
   await expect(page.locator('.polity-label').filter({ hasText: '汉朝' }).first()).toBeVisible()
   await page.locator('.dynasty-strip button').filter({ hasText: '唐' }).click()
-  await expect(page.locator('.year-title')).toHaveText(/公元 750 年/)
+  await expect(page.locator('.year-title')).toHaveText('750 年')
   await expect(page.locator('.polity-label').filter({ hasText: '唐朝' }).first()).toBeVisible()
   expect(errors).toEqual([])
 })
@@ -316,9 +320,19 @@ test('mobile layout stays within the viewport and supports the same detail flow'
 test('drags the timeline and steps between BCE and CE without a year zero', async ({ page }) => {
   const slider = page.getByRole('slider', { name: '拖动历史时间轴' })
   const box = (await slider.boundingBox())!
-  await page.mouse.move(box.x + 8 + (box.width - 16) / 6, box.y + 10)
+  const y = box.y + box.height / 2
+  const start = await slider.evaluate((control, row) => {
+    const { left, width } = control.getBoundingClientRect()
+    // Event markers are clickable above the track. Start where a drag reaches the slider.
+    for (let x = Math.ceil(left + width / 6); x < left + width / 3; x++) {
+      if (document.elementFromPoint(x, row) === control) return x
+    }
+    return null
+  }, y)
+  expect(start).not.toBeNull()
+  await page.mouse.move(start!, y)
   await page.mouse.down()
-  await page.mouse.move(box.x + 8 + (box.width - 16) * 0.75, box.y + 10, { steps: 12 })
+  await page.mouse.move(box.x + 8 + (box.width - 16) * 0.75, y, { steps: 12 })
   await page.mouse.up()
   const dragged = Number(await slider.inputValue()) + 1
   expect(dragged).toBeGreaterThan(255)
@@ -329,7 +343,7 @@ test('drags the timeline and steps between BCE and CE without a year zero', asyn
   await expect(page.locator('.year-title')).toHaveText(/公元前 1 年/)
   await slider.focus()
   await page.keyboard.press('ArrowRight')
-  await expect(page.locator('.year-title')).toHaveText(/公元 1 年/)
+  await expect(page.locator('.year-title')).toHaveText('1 年')
   await page.keyboard.press('ArrowLeft')
   await expect(page.locator('.year-title')).toHaveText(/公元前 1 年/)
 })
@@ -550,9 +564,7 @@ test('fractional playback retains integer dates and skips year zero', async ({ p
   await expect
     .poll(() =>
       page.evaluate(() =>
-        (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles.includes(
-          '公元 1 年',
-        ),
+        (window as Window & { atlasPlaybackTitles: string[] }).atlasPlaybackTitles.includes('1 年'),
       ),
     )
     .toBe(true)
@@ -562,7 +574,7 @@ test('fractional playback retains integer dates and skips year zero', async ({ p
   )
   expect(
     labels.every((label) => {
-      const value = label.match(/^公元(?:前)? (\d+) 年$/)?.[1]
+      const value = label.match(/^(?:公元前 )?(\d+) 年$/)?.[1]
       return value !== undefined && Number(value) >= 1
     }),
   ).toBe(true)

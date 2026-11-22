@@ -79,6 +79,11 @@ const sourcesById: Record<string, Source[]> = {
   ],
   'world-hawaiian-kingdom': [
     {
+      title: '美国国家公园管理局 · 卡美哈梅哈一世',
+      url: 'https://home.nps.gov/puhe/learn/historyculture/kamehameha.htm',
+      note: '见1810年考艾谈判、卡乌穆阿利继续治理与统一经过。',
+    },
+    {
       title: '美国国务院历史办公室 · Hawaii: Recognition and Diplomatic Relations',
       url: 'https://history.state.gov/countries/hawaii',
       note: '史实、年代与地理背景参考；中文叙述由本站独立编写。',
@@ -223,6 +228,11 @@ const sourcesById: Record<string, Source[]> = {
     },
   ],
   'world-waitangi': [
+    {
+      title: '新西兰国家博物馆 Te Papa · 怀唐伊条约双语原文',
+      url: 'https://www.tepapa.govt.nz/digital-museum/explore-digital-museum/treaty-waitangi/treaty-close/full-text-te-tiriti-o',
+      note: '见毛利语与英语原文及签署日期。',
+    },
     {
       title: '新西兰文化与遗产部 · Signing the treaty',
       url: 'https://nzhistory.govt.nz/politics/treaty/making-the-treaty/signing-the-treaty',
@@ -609,12 +619,27 @@ const sourcesById: Record<string, Source[]> = {
   ],
   'world-nz-suffrage': [
     {
+      title: '新西兰议会 · 9月19日妇女参政纪念日',
+      url: 'https://www3.parliament.nz/en/get-involved/features/suffrage-day-19-september-celebrating-women-s-right-to-vote/',
+      note: '见1893年请愿、9月选举法、毛利议会动议及1919年参选资格。',
+    },
+    {
       title: '新西兰文化与遗产部 · Women win the right to vote',
       url: 'https://nzhistory.govt.nz/womens-suffrage-day',
       note: '史实与年代参考；中文叙述由本站独立编写。',
     },
   ],
   'world-hawaiian-overthrow': [
+    {
+      title: '美国国家档案馆 · 反对兼并夏威夷的请愿书',
+      url: 'https://www.archives.gov/education/lessons/hawaii-petition',
+      note: '见1893年政变经过、驻夏公使与赴美请愿。',
+    },
+    {
+      title: '美国国家档案馆 · 兼并夏威夷联合决议与抗议书',
+      url: 'https://www.archives.gov/milestone-documents/joint-resolution-for-annexing-the-hawaiian-islands',
+      note: '见莉莉乌奥卡拉尼的抗议书与1898年联合决议。',
+    },
     {
       title: '美国国家公园管理局 · Hawaiian History',
       url: 'https://www.nps.gov/locations/hawaii/history.htm',
@@ -1338,9 +1363,8 @@ export const modernWorldNarratives: Record<
       sections: [
         {
           paragraphs: [
-            '1810年，考艾岛统治者承认卡美哈梅哈一世的宗主地位，夏威夷群岛的政治统一达到关键节点。此前卡美哈梅哈已通过战争与联盟控制多个岛屿，但考艾的纳入主要通过协商完成。',
-            '群岛联合使王权能够更集中地处理军事、贸易和对外交往，同时仍需协调不同岛屿首领及地方关系。王国后来逐步发展成文制度和外交网络，成为具有自身政治主体性的国家。',
-            '1810年的统一不能用今天美国一州的身份倒看，也不表示各岛在同一年都经历相同的征服。后来王国被推翻与美国吞并，是另外的历史过程。',
+            '考艾岛在十八世纪末仍由自己的首领统治。卡美哈梅哈一世经过多年战争和结盟，已掌握几处主要岛屿。1810年，考艾岛统治者卡乌穆阿利承认卡美哈梅哈的宗主地位，自己继续在当地治理。',
+            '这项安排把考艾纳入王国，又保留了地方首领的地位，让群岛的统一可以通过既有的岛上权力关系实行。夏威夷王国后来逐渐发展自己的对外关系和成文制度。',
           ],
         },
       ],
@@ -1609,9 +1633,9 @@ export const modernWorldNarratives: Record<
       sections: [
         {
           paragraphs: [
-            '1840年，英国代表与部分毛利首领在怀唐伊签署条约，签署活动随后扩展到新西兰其他地区。殖民政府希望据此建立权威，毛利首领则关心保护土地、贸易和自身政治地位。',
-            '英语与毛利语文本对治理权、主权和首领权威的表达存在重要差别，签署者对让出了什么、保留了什么，并不必然具有同一理解；也不是所有首领都参与签署。',
-            '此后殖民扩张与土地争议使条约成为长期冲突的中心，也成为毛利主张权利的重要依据。理解这次签署，必须把文本、翻译与各方实际期待一同考虑。',
+            '1840年2月6日，英国代表与到场的毛利首领开始在怀唐伊签署条约。此后不同文本副本传往各地，供更多首领签署；另有首领拒绝签字。部分首领希望约束定居者的行为、保护土地与贸易，英国政府则试图为建立殖民管治取得依据。',
+            '两种文本第一条用词不同。英文写的是割让主权，毛利语使用 kāwanatanga，一般联系于管治权。第二条英文确认土地和财产等权利，毛利语文本又保证 tino rangatiratanga，涉及毛利首领和群体对自己事务的权威。翻译差异因此会影响首领对保留哪些权力的理解。',
+            '此后土地买卖、征收与殖民政府扩张把这些差异变成实际争议。阅读条约须把两种文本放在一起，并区分当时的签署过程与后来的殖民行动。',
           ],
         },
       ],
@@ -2315,9 +2339,8 @@ export const modernWorldNarratives: Record<
       sections: [
         {
           paragraphs: [
-            '1893年，新西兰修改选举法，妇女取得议会选举投票权，其中包括毛利妇女。改革来自多年组织、宣传和大规模请愿，支持者把分散的要求转为议员无法忽视的公共压力。',
-            '投票权使妇女能够直接参与选择国会代表，却没有同时开放全部参选资格和政治职位。不同群体在土地、收入与社会地位上的不平等，也仍影响实际参与。',
-            '这项改变成为国际妇女参政运动的重要例证。它显示权利既需要法律承认，也需要持续组织和制度调整，才能在日常政治中真正使用。',
+            '凯特·谢泼德等人在不同地区组织联署，先后把请愿送到新西兰殖民地议会。1893年的请愿汇集了三万余个签名。9月19日，《选举法》获得总督批准，成年妇女可在国会选举中投票，其中也包括毛利妇女。当年11月，妇女参加大选投票。',
+            '争取国会投票权与争取实际当选是两步。1893年的法律开放了投票，女性取得国会议员参选资格还要等到1919年。毛利议会当年也听取了梅里·特泰·芒阿卡希娅关于投票与担任议员的诉求，面对的是殖民地国会之外的另一套议会制度。',
           ],
         },
       ],
@@ -2329,9 +2352,8 @@ export const modernWorldNarratives: Record<
       sections: [
         {
           paragraphs: [
-            '1893年，种植园主、商人及其政治盟友推翻夏威夷莉莉乌欧卡拉尼女王，建立临时政府。冲突涉及王权、宪法和土地经济，也与美国在群岛的商业及战略利益相连。',
-            '美国驻当地力量对政变的支持改变了双方处境。女王在压力下退让，并不等于夏威夷人民通过自由共同决定放弃国家，原住民和王国支持者此后继续表达反对。',
-            '美国吞并到1898年才发生，王国被推翻与后来并吞是两个相接而不同的节点。把它们区分开，才能看到主权被破坏的过程，而非将其写成一次自愿加入。',
+            '1893年1月，夏威夷女王莉莉乌奥卡拉尼寻求调整限制王权的宪法。种植园主、商人及其盟友组织起来反对。美国驻夏威夷公使调来军舰上的人员登陆，政变者于1月17日宣布成立临时政府。',
+            '女王在压力下交出权力，同时提出抗议，把美国军事力量的介入写进声明。临时政府随后推进并入美国的谈判。夏威夷爱国团体仍组织反对活动，后来把群岛居民的联署交至美国参议院。将政变、反兼并请愿与1898年美国国会的联合决议分开，可以看到王国失权以后群岛居民怎样继续表达立场。',
           ],
         },
       ],
