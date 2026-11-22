@@ -462,7 +462,7 @@ test('an explicit Pacific camera shows Hawaii independently of pillar region pre
   await sheet(page, 'reading')
   await expect(page.locator('.event-detail h2')).toHaveText('夏威夷君主制被推翻')
   await expect(page.locator('.event-article')).toContainText(
-    '美国吞并到1898年才发生，王国被推翻与后来并吞是两个相接而不同的节点。',
+    /1893年.*成立临时政府.*1898年美国国会的联合决议/s,
   )
   await sheet(page, 'split')
   for (const [width, height] of [
