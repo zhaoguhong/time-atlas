@@ -450,7 +450,9 @@ for (const [width, height] of [
       await expect
         .poll(async () =>
           marker.evaluate((element) => {
-            const viewport = element.closest('.map-canvas')!.getBoundingClientRect()
+            const canvas = element.closest('.map-canvas')
+            if (!canvas) return false
+            const viewport = canvas.getBoundingClientRect()
             const rect = element.getBoundingClientRect()
             const x = rect.left + rect.width / 2
             const y = rect.bottom
